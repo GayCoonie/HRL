@@ -1,0 +1,28 @@
+{
+  "name": "hrl-color-space",
+  "version": "1.0.0",
+  "description": "Standalone JavaScript reference implementation of HRL R15-D Release 1",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "color",
+    "colorspace",
+    "colour",
+    "hrl",
+    "srgb",
+    "rec2020"
+  ]
+}

@@ -1,0 +1,2704 @@
+{
+  "baseline": {
+    "COMB": 31.9264921655469,
+    "BFD-P": 32.04124815013527,
+    "LEEDS": 31.87231307204626,
+    "RIT-DuPont": 33.67114886899347,
+    "WITT": 29.433258153009707
+  },
+  "pairs": 3331,
+  "candidates": {
+    "D": {
+      "cap": 0.35,
+      "power": 2,
+      "anchorFractionA": 0.3,
+      "coefficientBound": 0.035,
+      "parameters": [
+        -0.028771951000921198,
+        0.035,
+        0.018998748507010013,
+        0.035,
+        -0.0165513065987095,
+        0.035,
+        -0.004892524022574839,
+        0.03499999999999999,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.035,
+        0.03380406557685023,
+        0.035,
+        0.034999999999999996,
+        0.018389587215105495,
+        -0.02870099066610888,
+        0.03499999999999999,
+        0.035,
+        0.035,
+        -0.015355653298852082,
+        0.034999999999999996,
+        -0.034999999999999996,
+        0.020175090242022683,
+        -0.035,
+        0.035,
+        -0.0309294241799522,
+        0.035,
+        -0.035,
+        -0.02855762094149313,
+        -0.03420018773109874
+      ],
+      "STRESS": {
+        "COMB": 32.023204491993305,
+        "BFD-P": 31.899812094199675,
+        "LEEDS": 32.54071380546975,
+        "RIT-DuPont": 33.730029222680564,
+        "WITT": 29.670647470714183
+      },
+      "inverse": {
+        "iterations": 5,
+        "maxError": 1.9797952166555888e-10
+      },
+      "minimumDeterminant": 0.5072054874321422,
+      "outsideTriangle": 0,
+      "optimizer": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 69
+      },
+      "seconds": 44.56051969528198,
+      "history": [
+        {
+          "COMB": 32.5351990363959,
+          "objective": 0.1059270236738702,
+          "minimumDeterminant": 0.5471716370670463,
+          "wrongPhysicalDirections": 11
+        },
+        {
+          "COMB": 32.23302262744772,
+          "objective": 0.10457802804696571,
+          "minimumDeterminant": 0.5395564858154666,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 32.19522852976618,
+          "objective": 0.10384179393567256,
+          "minimumDeterminant": 0.5382713400667927,
+          "wrongPhysicalDirections": 16
+        },
+        {
+          "COMB": 32.137652747713204,
+          "objective": 0.10346887412662442,
+          "minimumDeterminant": 0.5304459988379837,
+          "wrongPhysicalDirections": 17
+        },
+        {
+          "COMB": 31.96947814155774,
+          "objective": 0.10260270803361618,
+          "minimumDeterminant": 0.497922282694809,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.921680949025838,
+          "objective": 0.10234179143329263,
+          "minimumDeterminant": 0.4841058959980026,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.906066117978142,
+          "objective": 0.10225460651680578,
+          "minimumDeterminant": 0.4826192554957343,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.898339931996954,
+          "objective": 0.10221338987834942,
+          "minimumDeterminant": 0.48184504627881336,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.88936523892022,
+          "objective": 0.10225573313458282,
+          "minimumDeterminant": 0.48363062840894055,
+          "wrongPhysicalDirections": 28
+        },
+        {
+          "COMB": 31.875025539107316,
+          "objective": 0.10208919447491752,
+          "minimumDeterminant": 0.4827433914663036,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.867661120017786,
+          "objective": 0.10201678685155438,
+          "minimumDeterminant": 0.48178025316267326,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.85772867258686,
+          "objective": 0.10194447160558509,
+          "minimumDeterminant": 0.4837633364314003,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.852775599205398,
+          "objective": 0.10191209886645648,
+          "minimumDeterminant": 0.48726689214064933,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.851061107265448,
+          "objective": 0.10190814321212735,
+          "minimumDeterminant": 0.48968870126878244,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.84677529813597,
+          "objective": 0.10189973627553227,
+          "minimumDeterminant": 0.49156629305349286,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.845392835738274,
+          "objective": 0.1018997378433807,
+          "minimumDeterminant": 0.4934313873722213,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.845968089047606,
+          "objective": 0.10189807775100473,
+          "minimumDeterminant": 0.4923392680021852,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.846457497381326,
+          "objective": 0.10189589015532009,
+          "minimumDeterminant": 0.49266078307825684,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.8477879497859,
+          "objective": 0.10189187697527279,
+          "minimumDeterminant": 0.49410879524832707,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.848434101584694,
+          "objective": 0.10189072418678066,
+          "minimumDeterminant": 0.4956921028630334,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.84843486710644,
+          "objective": 0.10189038703213063,
+          "minimumDeterminant": 0.4958677386491183,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.84845778376418,
+          "objective": 0.10188924779137278,
+          "minimumDeterminant": 0.49657028179345786,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.84712129476099,
+          "objective": 0.10188692914083364,
+          "minimumDeterminant": 0.49989606215588384,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.84578260598792,
+          "objective": 0.10188523123598062,
+          "minimumDeterminant": 0.5005014906155961,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.834131204674627,
+          "objective": 0.10191533520867399,
+          "minimumDeterminant": 0.5077951575447689,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.84292493278721,
+          "objective": 0.10188308322729123,
+          "minimumDeterminant": 0.5018320674080733,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.843231098042722,
+          "objective": 0.10188295114722665,
+          "minimumDeterminant": 0.502058122864134,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84362573466269,
+          "objective": 0.10188276380097923,
+          "minimumDeterminant": 0.5024629449235068,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.843390893762052,
+          "objective": 0.10188284542204078,
+          "minimumDeterminant": 0.5022256907419356,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84503745332279,
+          "objective": 0.10188433289967153,
+          "minimumDeterminant": 0.5037526530123667,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.843553981859596,
+          "objective": 0.10188272087044609,
+          "minimumDeterminant": 0.5024190387686364,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844240301439612,
+          "objective": 0.10188336675711226,
+          "minimumDeterminant": 0.5030460760195988,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84362063302615,
+          "objective": 0.10188273484625872,
+          "minimumDeterminant": 0.502487546255155,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84357263827447,
+          "objective": 0.10188270755598809,
+          "minimumDeterminant": 0.5024410739391681,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.845230262341328,
+          "objective": 0.1018846624402228,
+          "minimumDeterminant": 0.5044622521953345,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84373383178314,
+          "objective": 0.10188283472967083,
+          "minimumDeterminant": 0.5026480541136749,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.8435950310477,
+          "objective": 0.10188271613265334,
+          "minimumDeterminant": 0.5024718578188724,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.843577150467077,
+          "objective": 0.10188270572770612,
+          "minimumDeterminant": 0.5024480918885924,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84368681845041,
+          "objective": 0.10188262386377603,
+          "minimumDeterminant": 0.5031856203665611,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84385104964786,
+          "objective": 0.10188258966658353,
+          "minimumDeterminant": 0.5033020769119552,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.8457785251255,
+          "objective": 0.1018824462818675,
+          "minimumDeterminant": 0.5064436000239408,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84534805473976,
+          "objective": 0.1018822439069286,
+          "minimumDeterminant": 0.5065563539867781,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844647596108377,
+          "objective": 0.10188260424420642,
+          "minimumDeterminant": 0.511011344250476,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.845046014314594,
+          "objective": 0.10188199332772316,
+          "minimumDeterminant": 0.5081507408681403,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844263650258526,
+          "objective": 0.10188202340934119,
+          "minimumDeterminant": 0.5077519764027034,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84474989082688,
+          "objective": 0.10188195913097882,
+          "minimumDeterminant": 0.5080022007868416,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844724704648268,
+          "objective": 0.10188194390370416,
+          "minimumDeterminant": 0.5078507659177165,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84458181051167,
+          "objective": 0.10188185750044652,
+          "minimumDeterminant": 0.5069662077213699,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84457815387049,
+          "objective": 0.10188176897632184,
+          "minimumDeterminant": 0.5073907794574722,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844648760822253,
+          "objective": 0.10188173888106039,
+          "minimumDeterminant": 0.5073448698412099,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844751655314575,
+          "objective": 0.10188171180432054,
+          "minimumDeterminant": 0.5074565305564186,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844685391197135,
+          "objective": 0.10188170893840455,
+          "minimumDeterminant": 0.5074801764744199,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844721696695387,
+          "objective": 0.10188170144327262,
+          "minimumDeterminant": 0.507463587811217,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84468354637976,
+          "objective": 0.10188170029495339,
+          "minimumDeterminant": 0.5073703459555842,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844573371403186,
+          "objective": 0.10188170132929526,
+          "minimumDeterminant": 0.5070077642096771,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844641708183307,
+          "objective": 0.1018816986590174,
+          "minimumDeterminant": 0.5072334254224928,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.84461953762538,
+          "objective": 0.10188169736254105,
+          "minimumDeterminant": 0.5071100546660551,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844617246911422,
+          "objective": 0.10188169473554626,
+          "minimumDeterminant": 0.5071350481852797,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844616547348075,
+          "objective": 0.10188169400833219,
+          "minimumDeterminant": 0.5071511508686685,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844572539317355,
+          "objective": 0.10188169066383651,
+          "minimumDeterminant": 0.5071237700056846,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844485852981443,
+          "objective": 0.10188168712180036,
+          "minimumDeterminant": 0.5070564976137362,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844262496509934,
+          "objective": 0.1018817019350877,
+          "minimumDeterminant": 0.5073329213728623,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844421385496386,
+          "objective": 0.10188168441946807,
+          "minimumDeterminant": 0.5071355149472532,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844404051413207,
+          "objective": 0.10188168116143655,
+          "minimumDeterminant": 0.5072442070134043,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844469772173937,
+          "objective": 0.10188167466695391,
+          "minimumDeterminant": 0.5075484014754035,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844454361369834,
+          "objective": 0.10188166847670614,
+          "minimumDeterminant": 0.5075223898415544,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844392871076323,
+          "objective": 0.1018816218285587,
+          "minimumDeterminant": 0.5073295481721313,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84418953248817,
+          "objective": 0.10188193727310942,
+          "minimumDeterminant": 0.5065581814944389,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844353773578817,
+          "objective": 0.10188161924925586,
+          "minimumDeterminant": 0.507199101754567,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844381320057224,
+          "objective": 0.10188162790008452,
+          "minimumDeterminant": 0.5072104559590198,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84436212817115,
+          "objective": 0.10188161150933642,
+          "minimumDeterminant": 0.5072031261744705,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844535915531814,
+          "objective": 0.1018816631065971,
+          "minimumDeterminant": 0.5071654268622832,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84438616182917,
+          "objective": 0.10188161128552813,
+          "minimumDeterminant": 0.5071977393046423,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84450988472643,
+          "objective": 0.10188161403079202,
+          "minimumDeterminant": 0.5073167369229881,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844440208655595,
+          "objective": 0.10188160557019858,
+          "minimumDeterminant": 0.5072504447665496,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84439795671674,
+          "objective": 0.10188160481544935,
+          "minimumDeterminant": 0.5073000972422298,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844369492070257,
+          "objective": 0.10188160297522307,
+          "minimumDeterminant": 0.5072845086167429,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84436738390924,
+          "objective": 0.1018816023294969,
+          "minimumDeterminant": 0.5072309296611552,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844368430184044,
+          "objective": 0.10188160162296236,
+          "minimumDeterminant": 0.5072611020659727,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84336986147356,
+          "objective": 0.10188189167414995,
+          "minimumDeterminant": 0.5045482158639155,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.844348338671857,
+          "objective": 0.10188160138909327,
+          "minimumDeterminant": 0.507208042486965,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844352994057296,
+          "objective": 0.1018816068852578,
+          "minimumDeterminant": 0.5071006738115279,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434881978912,
+          "objective": 0.10188160132244659,
+          "minimumDeterminant": 0.5071944836817801,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434851725741,
+          "objective": 0.10188160120644839,
+          "minimumDeterminant": 0.5072023380676449,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844348620385755,
+          "objective": 0.10188160112012497,
+          "minimumDeterminant": 0.507199118778818,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844372375906076,
+          "objective": 0.1018816008967087,
+          "minimumDeterminant": 0.5072095186901336,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844109083455724,
+          "objective": 0.10188172778424773,
+          "minimumDeterminant": 0.5070154073645616,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 31.84436617610399,
+          "objective": 0.10188160103454785,
+          "minimumDeterminant": 0.5072051715290832,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84437042161336,
+          "objective": 0.10188160086139135,
+          "minimumDeterminant": 0.5072081566106993,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.853876899556692,
+          "objective": 0.10193450848442111,
+          "minimumDeterminant": 0.5293713914590538,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 31.844381440058612,
+          "objective": 0.10188160411899723,
+          "minimumDeterminant": 0.5072643397607437,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844370934243983,
+          "objective": 0.10188160082775087,
+          "minimumDeterminant": 0.5072109212438808,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84437785908984,
+          "objective": 0.10188160291811543,
+          "minimumDeterminant": 0.5072461774650102,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844371231771042,
+          "objective": 0.1018816008413349,
+          "minimumDeterminant": 0.507212498288004,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84437104480633,
+          "objective": 0.10188160082070222,
+          "minimumDeterminant": 0.5072115174056784,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844371164875657,
+          "objective": 0.10188160081311831,
+          "minimumDeterminant": 0.5072121647880132,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84437106603432,
+          "objective": 0.10188160081934944,
+          "minimumDeterminant": 0.5072116318646349,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844371139690107,
+          "objective": 0.10188160081470088,
+          "minimumDeterminant": 0.5072120289977968,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844371164875657,
+          "objective": 0.10188160081311831,
+          "minimumDeterminant": 0.5072121647880132,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844376946681674,
+          "objective": 0.10188160081468388,
+          "minimumDeterminant": 0.50720250462471,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844373333517556,
+          "objective": 0.10188160078664887,
+          "minimumDeterminant": 0.5072085358214874,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844363940302106,
+          "objective": 0.10188160093453105,
+          "minimumDeterminant": 0.5071359308625552,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84436991728838,
+          "objective": 0.10188160068064822,
+          "minimumDeterminant": 0.507182310611138,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844197580498502,
+          "objective": 0.10188165322197423,
+          "minimumDeterminant": 0.5074981042800043,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844366427675592,
+          "objective": 0.10188160064251588,
+          "minimumDeterminant": 0.5071885294787213,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844314687777448,
+          "objective": 0.10188160832057237,
+          "minimumDeterminant": 0.5071721529550244,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84436148422901,
+          "objective": 0.10188160053636425,
+          "minimumDeterminant": 0.5071870020523392,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844295342465124,
+          "objective": 0.10188162108926631,
+          "minimumDeterminant": 0.5072425196936557,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844359799360376,
+          "objective": 0.10188160049136806,
+          "minimumDeterminant": 0.5071883505486126,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434462270887,
+          "objective": 0.10188160057047556,
+          "minimumDeterminant": 0.5072005454544876,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844354839701683,
+          "objective": 0.10188160045633433,
+          "minimumDeterminant": 0.5071923306746602,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84431948550771,
+          "objective": 0.10188160716169764,
+          "minimumDeterminant": 0.5072545335942894,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844353095907113,
+          "objective": 0.10188160042178794,
+          "minimumDeterminant": 0.5071953038944021,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844330587271013,
+          "objective": 0.10188160274298577,
+          "minimumDeterminant": 0.5072343954963278,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434895070116,
+          "objective": 0.10188160034800751,
+          "minimumDeterminant": 0.5072023725608387,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844309177620687,
+          "objective": 0.10188161347422939,
+          "minimumDeterminant": 0.507227632901842,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844348067428346,
+          "objective": 0.10188160032174731,
+          "minimumDeterminant": 0.5072029040514692,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844322227626282,
+          "objective": 0.10188160783299244,
+          "minimumDeterminant": 0.5072192250927153,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434717447484,
+          "objective": 0.10188160029576732,
+          "minimumDeterminant": 0.507203441393574,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844345596941682,
+          "objective": 0.10188160025463697,
+          "minimumDeterminant": 0.507204391070353,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84431724815284,
+          "objective": 0.10188161299587961,
+          "minimumDeterminant": 0.5072099112973888,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434510552653,
+          "objective": 0.10188160023927323,
+          "minimumDeterminant": 0.5072044801203629,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84432659487999,
+          "objective": 0.10188160781329844,
+          "minimumDeterminant": 0.5072080646972,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844344650357577,
+          "objective": 0.10188160022524478,
+          "minimumDeterminant": 0.5072045626051102,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84433709225499,
+          "objective": 0.10188160182437933,
+          "minimumDeterminant": 0.5072059841809995,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844344032382583,
+          "objective": 0.10188160020653328,
+          "minimumDeterminant": 0.5072046745977671,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84433933988583,
+          "objective": 0.10188160055798019,
+          "minimumDeterminant": 0.5072055389227005,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844342451231576,
+          "objective": 0.10188160016032081,
+          "minimumDeterminant": 0.5072049611648964,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340347577532,
+          "objective": 0.10188160010270181,
+          "minimumDeterminant": 0.507205342485047,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844326831797737,
+          "objective": 0.10188161807112682,
+          "minimumDeterminant": 0.5072377551756566,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340114076036,
+          "objective": 0.10188160034690034,
+          "minimumDeterminant": 0.5072058835358121,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340339958055,
+          "objective": 0.10188160010204815,
+          "minimumDeterminant": 0.5072053574465413,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340186023267,
+          "objective": 0.10188160023272337,
+          "minimumDeterminant": 0.50720570466546,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340333171356,
+          "objective": 0.10188160010146204,
+          "minimumDeterminant": 0.5072053707728404,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.8443403033198,
+          "objective": 0.10188160009890412,
+          "minimumDeterminant": 0.507205429389551,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340241387737,
+          "objective": 0.1018816001448909,
+          "minimumDeterminant": 0.5072055670275056,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434029989497,
+          "objective": 0.10188160009861302,
+          "minimumDeterminant": 0.5072054361146128,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340259292323,
+          "objective": 0.10188160011650275,
+          "minimumDeterminant": 0.507205522517122,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.84434029397392,
+          "objective": 0.10188160009810934,
+          "minimumDeterminant": 0.5072054477413054,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340269519307,
+          "objective": 0.1018816001002756,
+          "minimumDeterminant": 0.5072054970933444,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340283311666,
+          "objective": 0.10188160009719373,
+          "minimumDeterminant": 0.5072054686780437,
+          "wrongPhysicalDirections": 26
+        },
+        {
+          "COMB": 31.844340273405646,
+          "objective": 0.10188160009411401,
+          "minimumDeterminant": 0.5072054874321422,
+          "wrongPhysicalDirections": 26
+        }
+      ],
+      "constraintEnforcement": [
+        {
+          "pass": 0,
+          "activeDirections": 31,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 21,
+          "seconds": 4.841352462768555,
+          "minimumActiveSlack": -4.080595971299995e-12
+        },
+        {
+          "pass": 1,
+          "activeDirections": 33,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 19,
+          "seconds": 5.231237411499023,
+          "minimumActiveSlack": -5.4683747520814404e-12
+        }
+      ],
+      "physicalDirectionViolations": 0,
+      "minimumPhysicalDerivative": 0.0,
+      "enforcedPhysicalPoints": 6348
+    },
+    "E": {
+      "cap": 0.5,
+      "power": 2,
+      "anchorFractionA": 0.65,
+      "coefficientBound": 0.045,
+      "parameters": [
+        -0.038660696968137974,
+        0.04499999999999999,
+        0.029979011198740003,
+        0.045,
+        -0.01385939887156674,
+        0.04288792522317249,
+        -0.0046327171018503395,
+        0.03940752504820804,
+        0.044999999999999984,
+        0.04499999999999999,
+        0.044999999999999984,
+        0.045,
+        0.045,
+        0.02064795553936106,
+        0.045,
+        0.01780451702872994,
+        0.014100358354473121,
+        -0.03135834421707566,
+        0.044999999999999984,
+        0.04499999999999998,
+        0.045,
+        0.0043727703109221324,
+        0.026740161953340523,
+        -0.045,
+        0.007027076026685544,
+        -0.045,
+        0.045,
+        -0.038237825707637466,
+        0.041001922441261655,
+        -0.02287577366382725,
+        -0.03631170018655354,
+        -0.026829827324745308
+      ],
+      "STRESS": {
+        "COMB": 32.28943934568317,
+        "BFD-P": 32.18530620763636,
+        "LEEDS": 32.58015435957246,
+        "RIT-DuPont": 33.82819348563783,
+        "WITT": 30.11138102166337
+      },
+      "inverse": {
+        "iterations": 5,
+        "maxError": 1.9968926512348162e-10
+      },
+      "minimumDeterminant": 0.42630771327309236,
+      "outsideTriangle": 0,
+      "optimizer": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 46
+      },
+      "seconds": 48.510809898376465,
+      "history": [
+        {
+          "COMB": 32.75470113418721,
+          "objective": 0.10741460373677246,
+          "minimumDeterminant": 0.4648810183056848,
+          "wrongPhysicalDirections": 15
+        },
+        {
+          "COMB": 32.48885908098026,
+          "objective": 0.10674540056872867,
+          "minimumDeterminant": 0.46701744997308176,
+          "wrongPhysicalDirections": 32
+        },
+        {
+          "COMB": 32.46820724164249,
+          "objective": 0.10569441472774338,
+          "minimumDeterminant": 0.4703159327479554,
+          "wrongPhysicalDirections": 20
+        },
+        {
+          "COMB": 32.36067135622208,
+          "objective": 0.10544331505124485,
+          "minimumDeterminant": 0.46390006606782286,
+          "wrongPhysicalDirections": 27
+        },
+        {
+          "COMB": 32.287983345311865,
+          "objective": 0.10468616388980585,
+          "minimumDeterminant": 0.4597213336828482,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 32.189866127472776,
+          "objective": 0.10418514806606813,
+          "minimumDeterminant": 0.44467229109502704,
+          "wrongPhysicalDirections": 25
+        },
+        {
+          "COMB": 32.159694049896444,
+          "objective": 0.10387317683229715,
+          "minimumDeterminant": 0.4396728051121429,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 32.10953966053956,
+          "objective": 0.10358353483285462,
+          "minimumDeterminant": 0.43521312564372017,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.92857314057398,
+          "objective": 0.10366873606910915,
+          "minimumDeterminant": 0.3888182265274375,
+          "wrongPhysicalDirections": 39
+        },
+        {
+          "COMB": 32.00257230284625,
+          "objective": 0.10323209281421994,
+          "minimumDeterminant": 0.41464567300309507,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.963415424652037,
+          "objective": 0.10297542936453503,
+          "minimumDeterminant": 0.40756337310248636,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.961938162518344,
+          "objective": 0.10278788731675322,
+          "minimumDeterminant": 0.42126232047128903,
+          "wrongPhysicalDirections": 30
+        },
+        {
+          "COMB": 31.95295522651526,
+          "objective": 0.10274034895616141,
+          "minimumDeterminant": 0.4241863706715956,
+          "wrongPhysicalDirections": 31
+        },
+        {
+          "COMB": 31.945193812498,
+          "objective": 0.10270387398475879,
+          "minimumDeterminant": 0.4285973122895503,
+          "wrongPhysicalDirections": 32
+        },
+        {
+          "COMB": 31.9400162014713,
+          "objective": 0.102671471774529,
+          "minimumDeterminant": 0.4353495888987333,
+          "wrongPhysicalDirections": 32
+        },
+        {
+          "COMB": 31.935134392278474,
+          "objective": 0.10264199457198958,
+          "minimumDeterminant": 0.4393762509883952,
+          "wrongPhysicalDirections": 33
+        },
+        {
+          "COMB": 31.933976730644765,
+          "objective": 0.10261441894922403,
+          "minimumDeterminant": 0.4360039749295406,
+          "wrongPhysicalDirections": 33
+        },
+        {
+          "COMB": 31.93253993640103,
+          "objective": 0.102604123831857,
+          "minimumDeterminant": 0.4303258025303007,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.931743106372267,
+          "objective": 0.10260159170908206,
+          "minimumDeterminant": 0.42921994930185875,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.930342751592143,
+          "objective": 0.10259994072081464,
+          "minimumDeterminant": 0.42856178853901933,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.925897656627715,
+          "objective": 0.10259457860284787,
+          "minimumDeterminant": 0.42837251070212595,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92506994310385,
+          "objective": 0.102590739575289,
+          "minimumDeterminant": 0.42820960028986377,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923794810720267,
+          "objective": 0.10258598916043939,
+          "minimumDeterminant": 0.430658970661118,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92532163099388,
+          "objective": 0.10258422960968681,
+          "minimumDeterminant": 0.43222665266532156,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.926049302904747,
+          "objective": 0.10258324797640533,
+          "minimumDeterminant": 0.43112068314182456,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92554663618682,
+          "objective": 0.10258271258433249,
+          "minimumDeterminant": 0.43023627073342674,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924607909819457,
+          "objective": 0.10258381545290933,
+          "minimumDeterminant": 0.42989755808898755,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.925118669827153,
+          "objective": 0.10258227790876054,
+          "minimumDeterminant": 0.43009081883944406,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924849337902568,
+          "objective": 0.10258210157989418,
+          "minimumDeterminant": 0.4292687296328376,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.925066766987797,
+          "objective": 0.10258213546841957,
+          "minimumDeterminant": 0.4299496580538569,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923356878526736,
+          "objective": 0.10258622019264314,
+          "minimumDeterminant": 0.42069246434326973,
+          "wrongPhysicalDirections": 33
+        },
+        {
+          "COMB": 31.924644437864362,
+          "objective": 0.10258409870831303,
+          "minimumDeterminant": 0.4281843347260677,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924956367337675,
+          "objective": 0.10258188064851435,
+          "minimumDeterminant": 0.4295059246769365,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923341839106673,
+          "objective": 0.10258430571665363,
+          "minimumDeterminant": 0.42600979520222687,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92478351125016,
+          "objective": 0.10258169182272406,
+          "minimumDeterminant": 0.42914368822191307,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923427786918175,
+          "objective": 0.10258416921862608,
+          "minimumDeterminant": 0.4254574286930054,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92464578450475,
+          "objective": 0.10258190442601954,
+          "minimumDeterminant": 0.42878467775819096,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924743278379697,
+          "objective": 0.10258164022168502,
+          "minimumDeterminant": 0.4290389815825386,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924678959313074,
+          "objective": 0.10258169536187238,
+          "minimumDeterminant": 0.4288711410584691,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92471795107487,
+          "objective": 0.10258160829597728,
+          "minimumDeterminant": 0.42897295221629267,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92469220680263,
+          "objective": 0.10258161608353418,
+          "minimumDeterminant": 0.428905756852129,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924705218972516,
+          "objective": 0.10258159239710932,
+          "minimumDeterminant": 0.42893973220197446,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924696629839666,
+          "objective": 0.10258159023192623,
+          "minimumDeterminant": 0.4289173084710765,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923663819677085,
+          "objective": 0.10258085193013447,
+          "minimumDeterminant": 0.4264393394693794,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92358592255065,
+          "objective": 0.10258079741221598,
+          "minimumDeterminant": 0.42645943461002317,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92332493999539,
+          "objective": 0.10258071468781406,
+          "minimumDeterminant": 0.42646181070701195,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923232129481494,
+          "objective": 0.1025806499053243,
+          "minimumDeterminant": 0.4260892098380809,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92367057424389,
+          "objective": 0.10258065527231644,
+          "minimumDeterminant": 0.4259669815266171,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923396669652966,
+          "objective": 0.10258063630661332,
+          "minimumDeterminant": 0.42604307100565275,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923752999985332,
+          "objective": 0.10258056436991649,
+          "minimumDeterminant": 0.4262571023769479,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924089660697636,
+          "objective": 0.10258068346189034,
+          "minimumDeterminant": 0.4263616013508943,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923831539398517,
+          "objective": 0.10258055690088878,
+          "minimumDeterminant": 0.42628204106797624,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92443057378634,
+          "objective": 0.10258106428937569,
+          "minimumDeterminant": 0.4267762970584944,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923892387542068,
+          "objective": 0.10258053603352058,
+          "minimumDeterminant": 0.4263346686594756,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923986948290416,
+          "objective": 0.10258062864886588,
+          "minimumDeterminant": 0.426307177669541,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923904143813566,
+          "objective": 0.10258052930971467,
+          "minimumDeterminant": 0.4263311526264716,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92395836872998,
+          "objective": 0.10258058192476419,
+          "minimumDeterminant": 0.42631532915489745,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923910694604572,
+          "objective": 0.10258052566111714,
+          "minimumDeterminant": 0.426329194363884,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923941878617924,
+          "objective": 0.10258055588698299,
+          "minimumDeterminant": 0.42632004332595286,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923914415072108,
+          "objective": 0.1025805234300697,
+          "minimumDeterminant": 0.42632808248853044,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391783030662,
+          "objective": 0.10258052176694915,
+          "minimumDeterminant": 0.4263270620268807,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.9239296045885,
+          "objective": 0.10258053686668832,
+          "minimumDeterminant": 0.4263235526764168,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923918840853162,
+          "objective": 0.10258052264671119,
+          "minimumDeterminant": 0.42632676011411164,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391783030662,
+          "objective": 0.10258052176694915,
+          "minimumDeterminant": 0.4263270620268807,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92411427210956,
+          "objective": 0.10258162747835588,
+          "minimumDeterminant": 0.42578936116081934,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92392797330793,
+          "objective": 0.10258056526921855,
+          "minimumDeterminant": 0.42629212565768454,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923918611998065,
+          "objective": 0.10258052448265617,
+          "minimumDeterminant": 0.42632406773881093,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391791539685,
+          "objective": 0.10258052167968663,
+          "minimumDeterminant": 0.42632673605427446,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391785993813,
+          "objective": 0.1025805217033454,
+          "minimumDeterminant": 0.4263269485104799,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169494,
+          "minimumDeterminant": 0.42632681043090975,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917902741433,
+          "objective": 0.10258052162884916,
+          "minimumDeterminant": 0.42632678453549483,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169494,
+          "minimumDeterminant": 0.42632681043090975,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92395125476983,
+          "objective": 0.10258271721546743,
+          "minimumDeterminant": 0.4252665840456236,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391452122966,
+          "objective": 0.10258059410540728,
+          "minimumDeterminant": 0.4262607359015121,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917384520006,
+          "objective": 0.10258052674828758,
+          "minimumDeterminant": 0.42632078656535366,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917841833276,
+          "objective": 0.10258052214478094,
+          "minimumDeterminant": 0.4263261728607483,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391789024425,
+          "objective": 0.10258052165921526,
+          "minimumDeterminant": 0.4263267428766912,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895373734,
+          "objective": 0.10258052160778873,
+          "minimumDeterminant": 0.42632680327179073,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391789593924,
+          "objective": 0.10258052160212325,
+          "minimumDeterminant": 0.42632680993022043,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391789597882,
+          "objective": 0.10258052160172265,
+          "minimumDeterminant": 0.4263268103960078,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981564,
+          "objective": 0.10258052160169968,
+          "minimumDeterminant": 0.42632681042835574,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169649,
+          "minimumDeterminant": 0.42632681043080933,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169231,
+          "minimumDeterminant": 0.4263268104309092,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981774,
+          "objective": 0.10258052160169279,
+          "minimumDeterminant": 0.42632681043085924,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981766,
+          "objective": 0.10258052160169372,
+          "minimumDeterminant": 0.4263268104309088,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169231,
+          "minimumDeterminant": 0.4263268104309092,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981774,
+          "objective": 0.10258052160169175,
+          "minimumDeterminant": 0.426326810430909,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923917895981763,
+          "objective": 0.10258052160169381,
+          "minimumDeterminant": 0.42632681043090886,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.920921890168735,
+          "objective": 0.10258464644155811,
+          "minimumDeterminant": 0.4253948739732253,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92349039940533,
+          "objective": 0.10258076263500261,
+          "minimumDeterminant": 0.42620016783855763,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92383601362721,
+          "objective": 0.10258054595565472,
+          "minimumDeterminant": 0.42630328587611765,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923898224535836,
+          "objective": 0.10258052383239805,
+          "minimumDeterminant": 0.42632130635309834,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923911615806077,
+          "objective": 0.10258052010314013,
+          "minimumDeterminant": 0.4263251478976664,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390962285086,
+          "objective": 0.10258051824044608,
+          "minimumDeterminant": 0.4263245842855129,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923909261589785,
+          "objective": 0.10258051820221178,
+          "minimumDeterminant": 0.4263244251444347,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923907816621217,
+          "objective": 0.10258051805007067,
+          "minimumDeterminant": 0.4263237885801217,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390203795853,
+          "objective": 0.10258051745446846,
+          "minimumDeterminant": 0.4263212423228697,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92387894282176,
+          "objective": 0.10258051527999588,
+          "minimumDeterminant": 0.4263110572938622,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92374144316953,
+          "objective": 0.10258057302874309,
+          "minimumDeterminant": 0.42599330613220593,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923850057819948,
+          "objective": 0.1025805215131525,
+          "minimumDeterminant": 0.4262462111922551,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923871095017407,
+          "objective": 0.10258051560427774,
+          "minimumDeterminant": 0.42629389995713024,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92387649073638,
+          "objective": 0.10258051533360292,
+          "minimumDeterminant": 0.4263057122539843,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923878134510836,
+          "objective": 0.10258051524689227,
+          "minimumDeterminant": 0.42630931258157717,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923974944543136,
+          "objective": 0.10258055955750695,
+          "minimumDeterminant": 0.42630982014979224,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923884206626468,
+          "objective": 0.10258051469086264,
+          "minimumDeterminant": 0.42630934728894254,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923942329169346,
+          "objective": 0.10258053270246657,
+          "minimumDeterminant": 0.42630965937710336,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.9238915561587,
+          "objective": 0.10258051405423733,
+          "minimumDeterminant": 0.4263093892794757,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924017165582498,
+          "objective": 0.10258061824489617,
+          "minimumDeterminant": 0.42629778123890844,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923896058252815,
+          "objective": 0.10258051333330316,
+          "minimumDeterminant": 0.4263089013910273,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923974900980035,
+          "objective": 0.10258057469729022,
+          "minimumDeterminant": 0.4263015620906289,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923899137953377,
+          "objective": 0.10258051285097974,
+          "minimumDeterminant": 0.4263085677767792,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92394829102982,
+          "objective": 0.10258054772150572,
+          "minimumDeterminant": 0.42630394402391997,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390130904433,
+          "objective": 0.10258051251624399,
+          "minimumDeterminant": 0.4263083326530019,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92393164680118,
+          "objective": 0.10258053142496128,
+          "minimumDeterminant": 0.4263054361578078,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923902996984637,
+          "objective": 0.10258051225902155,
+          "minimumDeterminant": 0.4263081498895917,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923921628192854,
+          "objective": 0.10258052311782583,
+          "minimumDeterminant": 0.42630635882661433,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923903921032853,
+          "objective": 0.10258051211932541,
+          "minimumDeterminant": 0.42630804985081644,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391547708912,
+          "objective": 0.10258051853711073,
+          "minimumDeterminant": 0.4263069337748431,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390453733588,
+          "objective": 0.10258051202658766,
+          "minimumDeterminant": 0.42630798313426543,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923911661520282,
+          "objective": 0.10258051570758425,
+          "minimumDeterminant": 0.42630729055704664,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923904964408194,
+          "objective": 0.10258051196253673,
+          "minimumDeterminant": 0.42630793690496005,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390931190227,
+          "objective": 0.10258051396972728,
+          "minimumDeterminant": 0.4263075103153372,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923905280156468,
+          "objective": 0.10258051191528861,
+          "minimumDeterminant": 0.4263079027274575,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923907885606727,
+          "objective": 0.10258051291647846,
+          "minimumDeterminant": 0.42630764373545815,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923905543763624,
+          "objective": 0.1025805118759116,
+          "minimumDeterminant": 0.4263078741947101,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390704803309,
+          "objective": 0.10258051229856832,
+          "minimumDeterminant": 0.42630772209160384,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923905543763624,
+          "objective": 0.1025805118759116,
+          "minimumDeterminant": 0.4263078741947101,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.924085087555497,
+          "objective": 0.10258072184434099,
+          "minimumDeterminant": 0.42627064134131776,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92391200355637,
+          "objective": 0.1025805168542358,
+          "minimumDeterminant": 0.4263064427960866,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390586897523,
+          "objective": 0.10258051179554059,
+          "minimumDeterminant": 0.42630778907582456,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923909898461723,
+          "objective": 0.10258051501013814,
+          "minimumDeterminant": 0.42630690053119746,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390606043796,
+          "objective": 0.10258051174829522,
+          "minimumDeterminant": 0.42630773896555985,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923908587706585,
+          "objective": 0.10258051386364457,
+          "minimumDeterminant": 0.42630718559888064,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906177421845,
+          "objective": 0.10258051175891643,
+          "minimumDeterminant": 0.42630770990648037,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390611051029,
+          "objective": 0.10258051173594421,
+          "minimumDeterminant": 0.42630772586071675,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92411176329942,
+          "objective": 0.10258069928529726,
+          "minimumDeterminant": 0.42623051684912105,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923914617425837,
+          "objective": 0.10258052002372003,
+          "minimumDeterminant": 0.4263045975436557,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.92390661778549,
+          "objective": 0.10258051219548495,
+          "minimumDeterminant": 0.426307536983976,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906137963314,
+          "objective": 0.10258051172600331,
+          "minimumDeterminant": 0.42630771327309236,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906116816912,
+          "objective": 0.10258051173366238,
+          "minimumDeterminant": 0.4263077229690251,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906133026357,
+          "objective": 0.1025805117277968,
+          "minimumDeterminant": 0.4263077155367512,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906136812125,
+          "objective": 0.1025805117264117,
+          "minimumDeterminant": 0.42630771380092924,
+          "wrongPhysicalDirections": 34
+        },
+        {
+          "COMB": 31.923906137963314,
+          "objective": 0.10258051172600331,
+          "minimumDeterminant": 0.42630771327309236,
+          "wrongPhysicalDirections": 34
+        }
+      ],
+      "constraintEnforcement": [
+        {
+          "pass": 0,
+          "activeDirections": 30,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 56,
+          "seconds": 27.37462329864502,
+          "minimumActiveSlack": 8.274037104434226e-14
+        },
+        {
+          "pass": 1,
+          "activeDirections": 47,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 43,
+          "seconds": 20.15967297554016,
+          "minimumActiveSlack": -5.4683747520814404e-12
+        }
+      ],
+      "physicalDirectionViolations": 0,
+      "minimumPhysicalDerivative": -4.8436443744748196e-05,
+      "enforcedPhysicalPoints": 6348
+    },
+    "F": {
+      "cap": 0.45,
+      "power": 3,
+      "anchorFractionA": 0.45,
+      "coefficientBound": 0.04,
+      "parameters": [
+        -0.0375638379320642,
+        0.04,
+        0.02568277102254273,
+        0.02892545113626964,
+        -0.012012189068892535,
+        0.035936136726470086,
+        -0.008730907060137804,
+        0.036511704220962705,
+        0.04,
+        0.04,
+        0.04,
+        0.04,
+        0.038519729487581,
+        0.023237857067336647,
+        0.026912396693692057,
+        0.032200292985436134,
+        0.010949178408527549,
+        -0.026047327787121963,
+        0.04,
+        0.04,
+        0.04,
+        -0.009466096167145333,
+        0.025546410951015102,
+        -0.04,
+        0.008572150582428,
+        -0.04,
+        0.04,
+        -0.03694837203306683,
+        0.03491017808255216,
+        -0.03216325242587942,
+        -0.03577790859246984,
+        -0.03676248339887383
+      ],
+      "STRESS": {
+        "COMB": 31.926492008937142,
+        "BFD-P": 31.890071347906336,
+        "LEEDS": 32.65191677740042,
+        "RIT-DuPont": 33.73316425846552,
+        "WITT": 29.231542011958574
+      },
+      "inverse": {
+        "iterations": 5,
+        "maxError": 1.9827356423363085e-10
+      },
+      "minimumDeterminant": 0.48642903669922705,
+      "outsideTriangle": 0,
+      "optimizer": {
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "iterations": 80
+      },
+      "seconds": 37.88011026382446,
+      "history": [
+        {
+          "COMB": 32.586272503743956,
+          "objective": 0.10620351786716868,
+          "minimumDeterminant": 0.510128573757602,
+          "wrongPhysicalDirections": 7
+        },
+        {
+          "COMB": 32.27197145610532,
+          "objective": 0.10509550465598282,
+          "minimumDeterminant": 0.50481846547677,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 32.26655798522535,
+          "objective": 0.10426950730556139,
+          "minimumDeterminant": 0.5124821473583266,
+          "wrongPhysicalDirections": 10
+        },
+        {
+          "COMB": 32.135329773757505,
+          "objective": 0.10361977993225985,
+          "minimumDeterminant": 0.4980142003237343,
+          "wrongPhysicalDirections": 18
+        },
+        {
+          "COMB": 32.01116614035429,
+          "objective": 0.10285712216771599,
+          "minimumDeterminant": 0.4850068743836742,
+          "wrongPhysicalDirections": 20
+        },
+        {
+          "COMB": 31.950681043374008,
+          "objective": 0.10244694014998831,
+          "minimumDeterminant": 0.46677091032582685,
+          "wrongPhysicalDirections": 17
+        },
+        {
+          "COMB": 31.91763678038785,
+          "objective": 0.10220601842728208,
+          "minimumDeterminant": 0.46903605023145545,
+          "wrongPhysicalDirections": 17
+        },
+        {
+          "COMB": 31.876878671406622,
+          "objective": 0.10232216349416985,
+          "minimumDeterminant": 0.47902114510467836,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.871306085808786,
+          "objective": 0.10195302905216655,
+          "minimumDeterminant": 0.47353468683313327,
+          "wrongPhysicalDirections": 20
+        },
+        {
+          "COMB": 31.84962962997357,
+          "objective": 0.10182750393083569,
+          "minimumDeterminant": 0.4715968034445445,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.843057135225646,
+          "objective": 0.10192980981046275,
+          "minimumDeterminant": 0.44285269013250506,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.829358732707902,
+          "objective": 0.10171494631543891,
+          "minimumDeterminant": 0.46081553104834977,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.78545122217323,
+          "objective": 0.10154425872900252,
+          "minimumDeterminant": 0.46447904068960705,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.780159926773337,
+          "objective": 0.10145307065195623,
+          "minimumDeterminant": 0.4695381642949052,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.78044961055255,
+          "objective": 0.10136826560539332,
+          "minimumDeterminant": 0.46741538409342914,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.778071837918,
+          "objective": 0.10133607284717715,
+          "minimumDeterminant": 0.4655947181501143,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.77418704336829,
+          "objective": 0.10131855138035599,
+          "minimumDeterminant": 0.4648664727289351,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.7592868014735,
+          "objective": 0.1012876044642265,
+          "minimumDeterminant": 0.46362363774916043,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.75904877752212,
+          "objective": 0.10127365636731844,
+          "minimumDeterminant": 0.46468433691204813,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.756899783799362,
+          "objective": 0.10126816293022041,
+          "minimumDeterminant": 0.4682203352166437,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.756113447703537,
+          "objective": 0.10126649867910996,
+          "minimumDeterminant": 0.4682680810910212,
+          "wrongPhysicalDirections": 21
+        },
+        {
+          "COMB": 31.754714921944565,
+          "objective": 0.10126529110881911,
+          "minimumDeterminant": 0.46949771484888064,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.75376704737654,
+          "objective": 0.10126454152508745,
+          "minimumDeterminant": 0.4709057569519365,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.749693921067845,
+          "objective": 0.10126494165882428,
+          "minimumDeterminant": 0.47981696057271767,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75175060831128,
+          "objective": 0.1012632660543664,
+          "minimumDeterminant": 0.47503705792618584,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75227943074532,
+          "objective": 0.10126238843959307,
+          "minimumDeterminant": 0.4754700043107653,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.756483532821715,
+          "objective": 0.10126111876965495,
+          "minimumDeterminant": 0.47890731421423766,
+          "wrongPhysicalDirections": 22
+        },
+        {
+          "COMB": 31.754033794357756,
+          "objective": 0.10125945336091553,
+          "minimumDeterminant": 0.48066920147329406,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752419004474135,
+          "objective": 0.10125911290703452,
+          "minimumDeterminant": 0.48430859339833116,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752903158837732,
+          "objective": 0.10125888501423098,
+          "minimumDeterminant": 0.4836113898196363,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75304265944387,
+          "objective": 0.10125873558651559,
+          "minimumDeterminant": 0.48482352504633003,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752867814997433,
+          "objective": 0.10125866367728756,
+          "minimumDeterminant": 0.4848568936486534,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75074063220698,
+          "objective": 0.10126005935080522,
+          "minimumDeterminant": 0.4829068370171909,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752524294497853,
+          "objective": 0.10125865196390811,
+          "minimumDeterminant": 0.48456544497517773,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752599321803103,
+          "objective": 0.10125856754677903,
+          "minimumDeterminant": 0.4844719387166823,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752535585422535,
+          "objective": 0.10125850634575323,
+          "minimumDeterminant": 0.4840399519185182,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75254844133858,
+          "objective": 0.10125844047455414,
+          "minimumDeterminant": 0.483849821934095,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75285187414297,
+          "objective": 0.1012583929236974,
+          "minimumDeterminant": 0.4836853626838555,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75288322455782,
+          "objective": 0.1012582897090802,
+          "minimumDeterminant": 0.4840552255673568,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752867071725614,
+          "objective": 0.10125823061069197,
+          "minimumDeterminant": 0.4850063529433619,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75315807596163,
+          "objective": 0.10125821989248034,
+          "minimumDeterminant": 0.4864697975925789,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752989721095346,
+          "objective": 0.10125816150930193,
+          "minimumDeterminant": 0.48567048018698966,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.753201746102427,
+          "objective": 0.10125820352059932,
+          "minimumDeterminant": 0.4866809156382699,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.753050008668875,
+          "objective": 0.10125811792677954,
+          "minimumDeterminant": 0.4859936622828462,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.753026491434237,
+          "objective": 0.10125809030858775,
+          "minimumDeterminant": 0.485645261184531,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75297430964998,
+          "objective": 0.10125802262034513,
+          "minimumDeterminant": 0.48588865256832253,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75290966108484,
+          "objective": 0.1012580354906414,
+          "minimumDeterminant": 0.4858470468604649,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752948212849695,
+          "objective": 0.10125800481100783,
+          "minimumDeterminant": 0.4858735482381635,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75289764581027,
+          "objective": 0.10125809752300034,
+          "minimumDeterminant": 0.48569152367471,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752940615680096,
+          "objective": 0.10125800972850167,
+          "minimumDeterminant": 0.48584736193392974,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75294662823186,
+          "objective": 0.10125800538926513,
+          "minimumDeterminant": 0.4858682212946461,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752947785238128,
+          "objective": 0.10125800474596032,
+          "minimumDeterminant": 0.48587221727342556,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752960385694255,
+          "objective": 0.1012580009798453,
+          "minimumDeterminant": 0.48592584154092644,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752965642692743,
+          "objective": 0.10125799247675489,
+          "minimumDeterminant": 0.4858823925963208,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75299479044676,
+          "objective": 0.1012579959782213,
+          "minimumDeterminant": 0.48562312719776446,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752975882423094,
+          "objective": 0.1012579913863425,
+          "minimumDeterminant": 0.4857902227065177,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752979169722025,
+          "objective": 0.10125798406046886,
+          "minimumDeterminant": 0.48576046810577445,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75299278382407,
+          "objective": 0.10125796459459382,
+          "minimumDeterminant": 0.4857200117428685,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75300684766412,
+          "objective": 0.10125795390160842,
+          "minimumDeterminant": 0.4857386088215611,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752967622494076,
+          "objective": 0.10125794114611804,
+          "minimumDeterminant": 0.4857845252348231,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752942701304633,
+          "objective": 0.10125792808190376,
+          "minimumDeterminant": 0.48581883900218475,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75293025862996,
+          "objective": 0.10125792679969518,
+          "minimumDeterminant": 0.48582366501770863,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75293612485111,
+          "objective": 0.10125792539378595,
+          "minimumDeterminant": 0.4858212976650488,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75293935822524,
+          "objective": 0.1012579359699597,
+          "minimumDeterminant": 0.48586867173591963,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752936150102578,
+          "objective": 0.10125792285199066,
+          "minimumDeterminant": 0.4858318781984158,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752948514827228,
+          "objective": 0.10125796857605789,
+          "minimumDeterminant": 0.4860273399946629,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75293680609112,
+          "objective": 0.10125792107620801,
+          "minimumDeterminant": 0.48585815183336717,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752936354387284,
+          "objective": 0.10125792099265638,
+          "minimumDeterminant": 0.4858455738987893,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752930702181576,
+          "objective": 0.10125795353803918,
+          "minimumDeterminant": 0.48600498251855456,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752935219005117,
+          "objective": 0.1012579222062568,
+          "minimumDeterminant": 0.4858667219814379,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752935917952644,
+          "objective": 0.10125792040335455,
+          "minimumDeterminant": 0.4858511011572399,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75291069636171,
+          "objective": 0.10125794187804531,
+          "minimumDeterminant": 0.4860101173576277,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752930719340437,
+          "objective": 0.10125791991743154,
+          "minimumDeterminant": 0.48588080577414094,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75296765296192,
+          "objective": 0.10125791878565193,
+          "minimumDeterminant": 0.4859655579608034,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752975839838683,
+          "objective": 0.10125791538481359,
+          "minimumDeterminant": 0.4859702074884936,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752963107930928,
+          "objective": 0.10125791033592864,
+          "minimumDeterminant": 0.48597704161395305,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75294441562443,
+          "objective": 0.1012579156135275,
+          "minimumDeterminant": 0.486000978092449,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75295913932739,
+          "objective": 0.10125791049678037,
+          "minimumDeterminant": 0.4859819852013407,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752961626046783,
+          "objective": 0.10125790993948863,
+          "minimumDeterminant": 0.4859788014064037,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752962285937304,
+          "objective": 0.10125790709361514,
+          "minimumDeterminant": 0.48602870311165897,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752963082536628,
+          "objective": 0.1012579019562907,
+          "minimumDeterminant": 0.486222670757165,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752955724206767,
+          "objective": 0.10125790144155633,
+          "minimumDeterminant": 0.4862186325765438,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752949382953382,
+          "objective": 0.10125790183271584,
+          "minimumDeterminant": 0.48622793251772367,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752953595403483,
+          "objective": 0.10125790139679623,
+          "minimumDeterminant": 0.486221727638534,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752949379934936,
+          "objective": 0.10125790055204323,
+          "minimumDeterminant": 0.48620404784720445,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752946948965132,
+          "objective": 0.10125790004692983,
+          "minimumDeterminant": 0.4862081659335309,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752945423804263,
+          "objective": 0.1012579000525337,
+          "minimumDeterminant": 0.4862460272043316,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752946154815863,
+          "objective": 0.10125789977350519,
+          "minimumDeterminant": 0.48622685774103463,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75281711002035,
+          "objective": 0.1012580976540584,
+          "minimumDeterminant": 0.48633009043202086,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752942342085483,
+          "objective": 0.10125789955656778,
+          "minimumDeterminant": 0.4862295224994111,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75293911086388,
+          "objective": 0.10125789939991302,
+          "minimumDeterminant": 0.4862370344959045,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752938010214166,
+          "objective": 0.1012578989217297,
+          "minimumDeterminant": 0.48624048870958875,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752938584989376,
+          "objective": 0.1012578980994286,
+          "minimumDeterminant": 0.48625888944909607,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.752933704485415,
+          "objective": 0.10125789689307642,
+          "minimumDeterminant": 0.48627836307325056,
+          "wrongPhysicalDirections": 24
+        },
+        {
+          "COMB": 31.75290585426555,
+          "objective": 0.10125789408993704,
+          "minimumDeterminant": 0.4863966852707555,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752887219181865,
+          "objective": 0.1012578931468061,
+          "minimumDeterminant": 0.48640214545291327,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752882843249036,
+          "objective": 0.10125789275512603,
+          "minimumDeterminant": 0.4864042025145597,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75287600183091,
+          "objective": 0.1012578932384625,
+          "minimumDeterminant": 0.4863889500097021,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752881110248442,
+          "objective": 0.10125789266990042,
+          "minimumDeterminant": 0.48640040404045665,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.75287632438804,
+          "objective": 0.10125789257722069,
+          "minimumDeterminant": 0.48641378149734493,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752843990895112,
+          "objective": 0.10125789402542437,
+          "minimumDeterminant": 0.48650322346567615,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752871456987485,
+          "objective": 0.10125789258396578,
+          "minimumDeterminant": 0.48642718792638406,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752874386876716,
+          "objective": 0.10125789255255854,
+          "minimumDeterminant": 0.4864191076003255,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752863547671645,
+          "objective": 0.10125789259456948,
+          "minimumDeterminant": 0.48645036542915554,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752870440883118,
+          "objective": 0.10125789252444918,
+          "minimumDeterminant": 0.486430473768956,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752849898432633,
+          "objective": 0.10125789288803665,
+          "minimumDeterminant": 0.4864628953744082,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752866219618742,
+          "objective": 0.10125789248571426,
+          "minimumDeterminant": 0.4864371138568538,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752863823641675,
+          "objective": 0.10125789250067938,
+          "minimumDeterminant": 0.48643754623230817,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752865213966246,
+          "objective": 0.10125789247181678,
+          "minimumDeterminant": 0.48643729477621517,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752866562858706,
+          "objective": 0.10125789244984355,
+          "minimumDeterminant": 0.48643200525212393,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752870480613275,
+          "objective": 0.10125789247007062,
+          "minimumDeterminant": 0.4864218385247449,
+          "wrongPhysicalDirections": 23
+        },
+        {
+          "COMB": 31.752867705516024,
+          "objective": 0.1012578924453507,
+          "minimumDeterminant": 0.48642903669922705,
+          "wrongPhysicalDirections": 23
+        }
+      ],
+      "constraintEnforcement": [
+        {
+          "pass": 0,
+          "activeDirections": 43,
+          "success": false,
+          "message": "Iteration limit reached",
+          "iterations": 80,
+          "seconds": 78.61369824409485,
+          "minimumActiveSlack": -2.212172012145879e-11
+        },
+        {
+          "pass": 1,
+          "activeDirections": 44,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "iterations": 32,
+          "seconds": 9.642253160476685,
+          "minimumActiveSlack": 8.274037104434226e-14
+        }
+      ],
+      "physicalDirectionViolations": 0,
+      "minimumPhysicalDerivative": -8.000000661922968e-05,
+      "enforcedPhysicalPoints": 6348,
+      "beforeFinalConvergence": {
+        "parameters": [
+          -0.03738725361957595,
+          0.039999999999999994,
+          0.025530683218466892,
+          0.028845535977713277,
+          -0.011966186460608683,
+          0.035896204507464904,
+          -0.008751154744315235,
+          0.03651597614238808,
+          0.04,
+          0.04,
+          0.04,
+          0.039999999999999994,
+          0.03865872763360096,
+          0.023133822303559086,
+          0.026766532534427036,
+          0.032130255968559514,
+          0.010848963050660158,
+          -0.02577156602612995,
+          0.039999999999999994,
+          0.04,
+          0.04,
+          -0.009414827057918969,
+          0.025522077736339622,
+          -0.04,
+          0.008675265502858772,
+          -0.04,
+          0.04,
+          -0.036314654064635014,
+          0.034727105214750184,
+          -0.031898332138236216,
+          -0.03564191433083708,
+          -0.036577447931885054
+        ],
+        "STRESS": {
+          "COMB": 31.92825115250138,
+          "BFD-P": 31.891350661422297,
+          "LEEDS": 32.657271880965375,
+          "RIT-DuPont": 33.73222685745782,
+          "WITT": 29.233810272939415
+        }
+      },
+      "finalFeasibility": {
+        "success": false,
+        "message": "Iteration limit reached",
+        "iterations": 80,
+        "maximumCoefficientChange": 0.0006337179684318128,
+        "scores": {
+          "COMB": 31.926492008937142,
+          "BFD-P": 31.890071347906336,
+          "LEEDS": 32.65191677740042,
+          "RIT-DuPont": 33.73316425846552,
+          "WITT": 29.231542011958574
+        },
+        "physicalViolations": 0,
+        "minimumConstraintSlack": -6.6192296733829856e-12
+      }
+    }
+  }
+}
