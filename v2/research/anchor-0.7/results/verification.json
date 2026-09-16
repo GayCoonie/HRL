@@ -1,0 +1,191 @@
+{
+  "id": "OPAL-0.7-gamut-anchor",
+  "seed": "0x0a7c0de",
+  "samples_per_profile": 20000,
+  "quick": false,
+  "profiles": {
+    "srgb-balanced": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 1.2636140050981126e-10
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.656760153051871e-11
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.2274695910496,
+      "warp_inverse_error": 4.996003610813204e-16
+    },
+    "srgb-metric": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 7.628449261165571e-11
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.6762845681916876e-11
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.2274695910496,
+      "warp_inverse_error": 6.030054506389724e-16
+    },
+    "srgb-conservative": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 5.6398906378429814e-11
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.6600123941565063e-11
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.2274695910496,
+      "warp_inverse_error": 5.155369359468229e-16
+    },
+    "full-balanced": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 1.4011014570769476e-13
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.7632377738007227e-13
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.04802798323199653,
+      "warp_inverse_error": 1.35185610337382e-15
+    },
+    "full-metric": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 1.3644640972643174e-13
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.3912326679122274e-13
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.04802798323199653,
+      "warp_inverse_error": 2.479778562580539e-15
+    },
+    "full-conservative": {
+      "rgb16": {
+        "samples": 20000,
+        "mismatches": 0,
+        "max_error": 1.361133428190442e-13
+      },
+      "continuous": {
+        "samples": 20000,
+        "max_error": 1.4630296498843526e-13
+      },
+      "hue_identity": {
+        "samples": 20000,
+        "max_difference": 0
+      },
+      "boundaries": {
+        "neutral_error": 6.661338147750939e-16,
+        "neutral_opal_difference": 0,
+        "vivid_error": 0,
+        "black_error": 0
+      },
+      "carrier": {
+        "samples": 1000,
+        "max_difference": 0
+      },
+      "anchor_normalization_error": 4.3864911702939935e-13,
+      "atlas_minimum_slope": 0.04802798323199653,
+      "warp_inverse_error": 6.730369402342475e-16
+    }
+  },
+  "limits": {
+    "rgb16_error": 0.000007629510948348211,
+    "native_error": 3e-7
+  },
+  "note": "Random and grid tests, not an exhaustive 16-bit cube enumeration. Positive 2-D orientation follows from triangular compositions of strictly increasing one-dimensional maps.",
+  "cross_gamut": {
+    "samples": 5000,
+    "max_native_error": 1.2029184568531682e-11,
+    "note": "Preserves physical XYZ, not identical gamut-relative H/R/L values or distances."
+  },
+  "gray16": {
+    "samples": 65536,
+    "mismatches": 0,
+    "max_error": 4.440892098500626e-16
+  }
+}

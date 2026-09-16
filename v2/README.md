@@ -136,3 +136,7 @@ No font files, private chat transcripts, or credentials are part of this additio
 ## Later research candidates
 
 [Equal-Span 0.5 and OPAL 0.6](research/equal-span/README.md) are implemented separately in `lib/research.mjs`. BASR 0.4 and this original definition are preserved. The [new benchmark record](research/equal-span/BENCHMARKS.md) supersedes the old pending status above with measured, explicitly scoped baselines.
+
+## OPAL 0.7 gamut-anchor research
+
+[Open the 0.7 comparison picker](opal-anchor.html) · [Methods, source intake and scores](research/anchor-0.7/README.md). The default balances direct COMBVD fitting against the accepted OPAL 0.6 layout. Its own-gamut anchor controls normalization throughout the R/L construction. OPAL 0.6 and Release 1 are preserved. These are explicitly in-sample research fits, not an accepted Release 2.

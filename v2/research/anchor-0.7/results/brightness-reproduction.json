@@ -1,0 +1,4 @@
+{
+  "max_selected_coefficient_difference": 2.9641490095766443e-09,
+  "note": "Repeat constrained optimization from the shipped renotation subset; SLSQP is not guaranteed bit-identical. Frozen published coefficients restored; regenerate atlas and refit R/L for a deliberate recalibration."
+}

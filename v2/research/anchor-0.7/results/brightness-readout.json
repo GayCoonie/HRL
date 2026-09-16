@@ -1,0 +1,660 @@
+{
+  "id": "OPAL0.7-Nayatani-Corney-readout",
+  "selected": {
+    "ridge": 0.01,
+    "coefficients": [
+      0.5516401057911433,
+      -0.11312376497947865,
+      -0.2239825149226395,
+      0.2388935220592695,
+      -0.08946428009357356,
+      0.20204134382220884,
+      -0.11316895398696132,
+      -0.10587739531483721,
+      -0.07602587090587143
+    ],
+    "harmonics": 4,
+    "log_equivalent_Y_rmse": 0.25981351875881453,
+    "legacy_rmse": 1.797138895379414,
+    "success": true
+  },
+  "sensitivity": [
+    {
+      "ridge": 0.001,
+      "coefficients": [
+        0.5647889168225451,
+        -0.11465826220638699,
+        -0.2034955531438352,
+        0.28990367464510475,
+        -0.07033682602100678,
+        0.2705299075586995,
+        -0.14472112187198394,
+        -0.133292116687676,
+        -0.12099609484579134
+      ],
+      "harmonics": 4,
+      "log_equivalent_Y_rmse": 0.2673619437225623,
+      "legacy_rmse": 1.797138895379414,
+      "success": true
+    },
+    {
+      "ridge": 0.01,
+      "coefficients": [
+        0.5516401057911433,
+        -0.11312376497947865,
+        -0.2239825149226395,
+        0.2388935220592695,
+        -0.08946428009357356,
+        0.20204134382220884,
+        -0.11316895398696132,
+        -0.10587739531483721,
+        -0.07602587090587143
+      ],
+      "harmonics": 4,
+      "log_equivalent_Y_rmse": 0.25981351875881453,
+      "legacy_rmse": 1.797138895379414,
+      "success": true
+    },
+    {
+      "ridge": 0.05,
+      "coefficients": [
+        0.48374017212554904,
+        -0.09590830516846836,
+        -0.22103998983806744,
+        0.11195758833681507,
+        -0.1136587976918878,
+        0.11391751161145038,
+        -0.02837847087835584,
+        -0.0625168733204466,
+        -0.011457428770319656
+      ],
+      "harmonics": 4,
+      "log_equivalent_Y_rmse": 0.2992259970461083,
+      "legacy_rmse": 1.797138895379414,
+      "success": true
+    }
+  ],
+  "pairs": [
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5PB",
+        5,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.1867520631045997,
+        0.19171224763154837,
+        0.5105311381365
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5G",
+        4.85,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.09100380123151854,
+        0.1812272408237284,
+        0.12755669081325482
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5GY",
+        6.77,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.2874087786067296,
+        0.3904320615179484,
+        0.07422315384419274
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5YR",
+        6.56,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.42565966331753974,
+        0.36051918586236137,
+        0.10060802168977426
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5R",
+        5.83,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.3745077036125666,
+        0.27323050966293655,
+        0.17340342297058833
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 1,
+      "observers": 24,
+      "reference": [
+        "5Y",
+        8,
+        10
+      ],
+      "sample": [
+        "5RP",
+        5.63,
+        10
+      ],
+      "xyz1": [
+        0.5371776445522144,
+        0.5780475806131748,
+        0.11960982926124122
+      ],
+      "xyz2": [
+        0.3482158664332656,
+        0.25154104762897883,
+        0.3011339484998163
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5G",
+        4.13,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.05707688136226453,
+        0.12632644532842893,
+        0.08628099526757892
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5GY",
+        5.5,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.1705740777158312,
+        0.24114568547084267,
+        0.030321957807262576
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5Y",
+        6.54,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.33865521100350743,
+        0.3591661296035138,
+        0.049198195389376545
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5YR",
+        5.35,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.27702977600737766,
+        0.224714261830325,
+        0.045071393584046236
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5R",
+        4.54,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.2317793918647586,
+        0.1541940692255062,
+        0.08521226781203875
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 2,
+      "observers": 24,
+      "reference": [
+        "5PB",
+        4,
+        10
+      ],
+      "sample": [
+        "5RP",
+        4.21,
+        10
+      ],
+      "xyz1": [
+        0.11561823671172652,
+        0.11615802112597198,
+        0.3637054340145068
+      ],
+      "xyz2": [
+        0.19975009837516713,
+        0.12976317222400477,
+        0.16890748102704747
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5P",
+        4.85,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.2200814984461459,
+        0.17886267324881872,
+        0.35263234999413495
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5PB",
+        4.53,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.14928676372688338,
+        0.15348099415127264,
+        0.37368865989574657
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5B",
+        4.61,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.11646318056089341,
+        0.1603425697025019,
+        0.3414190378206345
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5BG",
+        4.58,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.0928171783651051,
+        0.15867593290280632,
+        0.21122415352714033
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5G",
+        4.93,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.10918967940670285,
+        0.1878161537573707,
+        0.1416967793918684
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5GY",
+        6.16,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.2362135265834065,
+        0.3129185146060772,
+        0.08323631983175477
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5YR",
+        5.89,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.32551149832540605,
+        0.280746276191615,
+        0.09809740295137089
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5R",
+        5.23,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.28094614680279756,
+        0.2127442135803339,
+        0.14529133080666823
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "experiment": 3,
+      "observers": 4,
+      "reference": [
+        "5Y",
+        7,
+        8
+      ],
+      "sample": [
+        "5RP",
+        5.13,
+        8
+      ],
+      "xyz1": [
+        0.3936210368329058,
+        0.42105588107718217,
+        0.11089389391797072
+      ],
+      "xyz2": [
+        0.2711570339018011,
+        0.20321555076239314,
+        0.24158004146144435
+      ],
+      "quantity": "equal perceived lightness; not equal HRL Level",
+      "study": "Nayatani2011"
+    },
+    {
+      "study": "Corney2009",
+      "experiment": 0,
+      "xyz1": [
+        3.742056074766355,
+        2.6,
+        17.957009345794393
+      ],
+      "xyz2": [
+        2.7727659574468086,
+        3.6,
+        1.2868085106382983
+      ]
+    },
+    {
+      "study": "Corney2009",
+      "experiment": 0,
+      "xyz1": [
+        3.742056074766355,
+        2.6,
+        17.957009345794393
+      ],
+      "xyz2": [
+        4.865333333333333,
+        4.1,
+        18.368
+      ]
+    }
+  ],
+  "formula": "Yeq=Y*exp(3*rho*k(theta)), k Fourier series constrained nonnegative at 720 angular grid points through harmonic 4; B=Lstar(Yeq)/100. Four-study weights 1,1,1,0.5, then normalized.",
+  "note": "HK readout calibration only. Equal perceived lightness does NOT impose equal native Level.",
+  "between_grid_minimum_probe": {
+    "theta_degrees": 70.54369625799248,
+    "k": -4.0541001322669246e-07,
+    "note": "Finite-grid nonnegativity is not a global analytic guarantee. Retain the frozen coefficients, without silently clipping this small lobe."
+  }
+}

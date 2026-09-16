@@ -1,0 +1,41 @@
+{
+  "engine": "Chromium / Playwright",
+  "url": "about:blank, supplied local HTML content",
+  "page_errors": [],
+  "checks": [
+    {
+      "variant": "balanced",
+      "hex": "#385B97",
+      "status": "Exact hue-sheet samples \u00b7 native gamut \u00b7 no clipping"
+    },
+    {
+      "variant": "conservative",
+      "hex": "#385B97",
+      "status": "Exact hue-sheet samples \u00b7 native gamut \u00b7 no clipping"
+    },
+    {
+      "variant": "metric",
+      "hex": "#385B97",
+      "status": "Exact hue-sheet samples \u00b7 native gamut \u00b7 no clipping"
+    },
+    {
+      "variant": "opal0.6",
+      "hex": "#385B97",
+      "status": "Exact hue-sheet samples \u00b7 native gamut \u00b7 no clipping"
+    },
+    {
+      "variant": "anchor-control",
+      "hex": "#385B97",
+      "status": "Exact hue-sheet samples \u00b7 native gamut \u00b7 no clipping"
+    },
+    {
+      "gallery_canvases": 9
+    }
+  ],
+  "white": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+  ],
+  "note": "Offline browser test; separate from live Pages deployment verification."
+}

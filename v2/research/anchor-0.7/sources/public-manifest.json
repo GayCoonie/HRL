@@ -1,0 +1,50 @@
+[
+  {
+    "name": "thresholds.csv",
+    "url": "https://zenodo.org/records/14892898/files/thresholds.csv?download=1",
+    "bytes": 11733,
+    "sha256": "c2fa15822584f82309fbbb61ebfd5e25c4afc0f206ff21208510cb69d3b58a95",
+    "published_md5": "bf900a0007d0db48245234f9160e4177",
+    "ok": true
+  },
+  {
+    "name": "PSEs.csv",
+    "url": "https://zenodo.org/records/14892898/files/PSEs.csv?download=1",
+    "bytes": 1805,
+    "sha256": "a3774c73df489ecf71e8c1a3c5b4e7af6353bb17331a6a325208a3ccd5090313",
+    "published_md5": "3070a356b2c677d6138b819df3c79bcd",
+    "ok": true
+  },
+  {
+    "name": "detection_thresholds.csv",
+    "url": "https://zenodo.org/records/14892898/files/detection_thresholds.csv?download=1",
+    "bytes": 537,
+    "sha256": "1297ff9c1e89dbfcec303fab51ce51990cb48f7fb6ca538c5b6270dd0529c05f",
+    "published_md5": "d5cf0523b711a00e853817edac77b8c5",
+    "ok": true
+  },
+  {
+    "name": "munsell-real.py",
+    "url": "https://raw.githubusercontent.com/colour-science/colour/v0.4.6/colour/notation/datasets/munsell/real.py",
+    "bytes": 174455,
+    "sha256": "e3656c76f164d6e124d2c56a8449274ac3605390862066a5ab12a46a9cfdde1e",
+    "published_md5": null,
+    "ok": true
+  },
+  {
+    "name": "munsell-all.py",
+    "url": "https://raw.githubusercontent.com/colour-science/colour/v0.4.6/colour/notation/datasets/munsell/all.py",
+    "bytes": 317272,
+    "sha256": "934edacc4c8d13644ef788654c3bab61d06bd3469bff2e13582f1d4a2aaf48e5",
+    "published_md5": null,
+    "ok": true
+  },
+  {
+    "name": "colour-LICENSE",
+    "url": "https://raw.githubusercontent.com/colour-science/colour/v0.4.6/LICENSE",
+    "bytes": 1465,
+    "sha256": "cd9efcd4b6ac5218189d90ffc25f9766f8411e62c5526c452145e1cc8b19baf7",
+    "published_md5": null,
+    "ok": true
+  }
+]

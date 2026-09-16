@@ -1,0 +1,53 @@
+{
+  "note": "User-provided primary papers. This manifest preserves input identity; PDFs are NOT republished in the repository.",
+  "files": [
+    {
+      "name": "nayatani2011.pdf",
+      "sha256": "1fc1ad88078dc55b300be796e71329f4c75102642b405d1021cc9bcdd93593c0",
+      "bytes": 278084
+    },
+    {
+      "name": "rogers2016.pdf",
+      "sha256": "898492e9a7fb2653535ac44ff56818e1772a7d421a59f18d977f90cca533a112",
+      "bytes": 3504017
+    },
+    {
+      "name": "Importance_of_hue_the_effect_of_saturation_on_hue-.pdf",
+      "sha256": "0925ee095dfcce6a7e14a3e63cf9358b2b4af9b04d3b4145c0eaee311ec30a1c",
+      "bytes": 754700
+    },
+    {
+      "name": "ColConstIII.pdf",
+      "sha256": "71f753b5d86585fddae0e6e10b5b3d95b7917097cf6bffcfc1b30084ce7a4850",
+      "bytes": 1751900
+    },
+    {
+      "name": "The_Elements_of_Colour_II_The_Attributes.pdf",
+      "sha256": "b1c9ce754141720dc561c03f96a58befc93b4c0bc8d43f6844fe221b2e655794",
+      "bytes": 1978473
+    },
+    {
+      "name": "1-s2.0-S0042698999000851-main.pdf",
+      "sha256": "19d1ab59dfe2d19506f866c473c7e79d6c1a6dc181604fd20af0039873faa7f7",
+      "bytes": 477226
+    },
+    {
+      "name": "oe-25-13-15131.pdf",
+      "sha256": "51fc21196663a218182f8411c75ac0f4c3100fb06d4e6df3a7bc168d861f2f07",
+      "bytes": 4146016
+    },
+    {
+      "name": "oe-30-25-44896.pdf",
+      "sha256": "28a0b98031bd5da63eab0ef421c06a4b39f385e2d2bb59d6c575e894244e61ba",
+      "bytes": 3910088
+    }
+  ],
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "torch": "2.10.0+cpu",
+    "pandas": "2.2.3",
+    "node": "22.16.0"
+  }
+}

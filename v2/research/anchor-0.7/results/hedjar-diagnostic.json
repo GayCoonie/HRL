@@ -1,0 +1,92 @@
+{
+  "source": "Hedjar, Toscani & Gegenfurtner 2025, DOI 10.1364/JOSAA.544641; data DOI 10.5281/zenodo.14892898",
+  "role": "Study-coordinate diagnostic and motivation for separate discrimination fitting, NOT numerical HRL training",
+  "rows": {
+    "thresholds": 384,
+    "saturation_PSEs": 96,
+    "detection": 40
+  },
+  "S_axis_factor": 2.9239071775499186,
+  "mean_observer_Q4_scaling": 0.9251041574336312,
+  "geometric_mean_observer_Q4_scaling": 0.9157394279875707,
+  "observer_scaling": {
+    "01": 1.2251847090417352,
+    "04": 0.8236488933780008,
+    "05": 0.876041891931927,
+    "07": 1.1503671488277265,
+    "08": 1.146082838768584,
+    "09": 0.9231874940156763,
+    "107": 0.9563986684291148,
+    "F01": 0.8809550363811275,
+    "F02": 0.7202567709592564,
+    "F04": 0.7862967957080012,
+    "F06": 0.8403209495669683,
+    "F07": 0.8855040867892662,
+    "F08": 0.830984766740859,
+    "F09": 0.9461395007882695,
+    "F10": 0.977068612879942,
+    "F11": 0.8332283547316449
+  },
+  "threshold_summary": [
+    {
+      "radius": 3.24,
+      "quadrant": 1,
+      "observers": 16,
+      "mean_chroma_jnd": 1.4037,
+      "mean_hue_jnd": 1.20131875,
+      "mean_individual_chroma_to_hue_ratio": 1.1863316190166098,
+      "geometric_mean_ratio": 1.170210274271103
+    },
+    {
+      "radius": 3.24,
+      "quadrant": 4,
+      "observers": 16,
+      "mean_chroma_jnd": 1.4081781249999998,
+      "mean_hue_jnd": 0.840834375,
+      "mean_individual_chroma_to_hue_ratio": 1.688793038662009,
+      "geometric_mean_ratio": 1.670240612361981
+    },
+    {
+      "radius": 6.48,
+      "quadrant": 1,
+      "observers": 16,
+      "mean_chroma_jnd": 1.9137250000000001,
+      "mean_hue_jnd": 1.856871875,
+      "mean_individual_chroma_to_hue_ratio": 1.0367350366331398,
+      "geometric_mean_ratio": 1.0165201159153172
+    },
+    {
+      "radius": 6.48,
+      "quadrant": 4,
+      "observers": 16,
+      "mean_chroma_jnd": 1.7480625,
+      "mean_hue_jnd": 1.128225,
+      "mean_individual_chroma_to_hue_ratio": 1.6423223472331172,
+      "geometric_mean_ratio": 1.5930471698509
+    },
+    {
+      "radius": 9.18,
+      "quadrant": 1,
+      "observers": 16,
+      "mean_chroma_jnd": 2.275903125,
+      "mean_hue_jnd": 2.21428125,
+      "mean_individual_chroma_to_hue_ratio": 1.0395717226831573,
+      "geometric_mean_ratio": 1.029233339991468
+    },
+    {
+      "radius": 9.18,
+      "quadrant": 4,
+      "observers": 16,
+      "mean_chroma_jnd": 1.9474624999999999,
+      "mean_hue_jnd": 1.2824718750000001,
+      "mean_individual_chroma_to_hue_ratio": 1.5732803158920066,
+      "geometric_mean_ratio": 1.5454946626220605
+    }
+  ],
+  "cautions": [
+    "The published results table contains a reversed Q1/Q4 sentence on PDF p6; the raw data, figures and principal conclusion agree on larger chroma:hue ratios in Q4.",
+    "Calibrations are identified as Judd-corrected in the paper, not explicitly Judd-Vos. A stimulus-specific translation is required before direct HRL scoring.",
+    "These are processed per-observer threshold and PSE estimates, not the original trial-level choices.",
+    "The paper reports 0.91. Released CSV gives arithmetic mean of observer geometric factors 0.9251 and across-observer geometric mean about 0.917. This is not an exact replication of the authors pipeline."
+  ]
+}
