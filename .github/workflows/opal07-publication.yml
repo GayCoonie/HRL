@@ -1,0 +1,71 @@
+name: Build OPAL 0.7 gamut-anchored research publication
+on:
+  push:
+    branches: ['research/opal-0.7-publication-20260916']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify sources and preserve published parent
+        shell: bash
+        run: |
+          cat .hrl-opal07/payload-*.part > "$RUNNER_TEMP/opal07-sources.tar.xz"
+          echo "bd2051cd95568a5477b717602d8baff01dec5036bb07140470fc10a62b332a87  $RUNNER_TEMP/opal07-sources.tar.xz" | sha256sum --check
+          git checkout --detach 2853c987e5be01491ab99a5e9e079d8fa2f4ca90
+          python3 - <<'PY'
+          import os,pathlib,tarfile
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'opal07-sources.tar.xz'
+          with tarfile.open(p) as archive:
+              for m in archive.getmembers():
+                  q=pathlib.PurePosixPath(m.name)
+                  if q.is_absolute() or '..' in q.parts or not m.isfile() or not m.name.startswith('v2/'):
+                      raise RuntimeError('Unexpected archive member: '+m.name)
+                  if q.suffix.lower() in ('.pdf','.ttf','.otf','.woff','.woff2'):
+                      raise RuntimeError('Publication excludes papers and fonts: '+m.name)
+              archive.extractall('.',filter='data')
+          PY
+      - name: Rebuild own-anchor maps and verify exact benchmark scores
+        shell: bash
+        run: |
+          node v2/research/anchor-0.7/code/build-anchor.mjs
+          node v2/research/anchor-0.7/code/evaluate-control.mjs
+          node v2/research/anchor-0.7/code/prepare-fit.mjs
+          node v2/research/anchor-0.7/code/benchmark.mjs
+          node v2/research/anchor-0.7/code/report.mjs
+          node v2/research/anchor-0.7/code/verify.mjs
+          node v2/research/anchor-0.7/code/build-viewer.mjs
+          node v2/research/anchor-0.7/code/link-pages.mjs
+          node --test test/reference.test.mjs
+          git diff --exit-code -- src package.json test v2/lib/research.mjs v2/lib/hue-field.mjs v2/lib/srgb-triangles.mjs v2/lib/basr.mjs v2/data v2/opal.html v2/basr.html v2/equal-span.html
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          root=pathlib.Path('v2/research/anchor-0.7')
+          paths=[p for p in root.rglob('*') if p.is_file() and p.name!='source-hashes.json' and '__pycache__' not in p.parts]
+          paths += [pathlib.Path('v2/lib/opal-anchor.mjs'),pathlib.Path('v2/source/opal-anchor-template.html'),pathlib.Path('v2/opal-anchor.html')]
+          hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+          (root/'results/source-hashes.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - name: Commit to a reviewable result branch, not main
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          for line in subprocess.check_output(['git','status','--porcelain','--untracked-files=all'],text=True).splitlines():
+              p=line[3:]
+              if p not in ('index.html','README.md','v2/index.html','v2/README.md','v2/opal-anchor.html','v2/lib/opal-anchor.mjs','v2/source/opal-anchor-template.html') and not p.startswith('v2/research/anchor-0.7/'):
+                  raise RuntimeError('Unexpected changed path: '+p)
+          PY
+          git config user.name 'HRL research builder'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- v2 index.html README.md
+          git commit -m 'Add OPAL 0.7 own-gamut anchor calibration, joint R/L fits and reproducible COMBVD comparisons'
+          test "$(git rev-parse HEAD^)" = 2853c987e5be01491ab99a5e9e079d8fa2f4ca90
+          git push origin HEAD:refs/heads/research/opal-0.7-built-20260916
+          echo "Built commit: $(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
+          git diff --stat HEAD^ HEAD >> "$GITHUB_STEP_SUMMARY"
