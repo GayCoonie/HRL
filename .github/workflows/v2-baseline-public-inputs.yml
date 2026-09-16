@@ -1,0 +1,56 @@
+name: HRL v2 public benchmark inputs
+on:
+  push:
+    branches: ['research/v2-baseline-public-inputs-20260916']
+    paths: ['.github/workflows/v2-baseline-public-inputs.yml']
+permissions:
+  contents: read
+jobs:
+  public-inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Download and verify public research inputs
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, json, pathlib, urllib.request
+          root = pathlib.Path('public-inputs')
+          root.mkdir()
+          ds = '8641f4e8ebd9d85a34dc0fedc116fa0e58493190'
+          cb = '12b2de215cc5020682e3d245a8c78bce5f0ebbc9'
+          base = f'https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/{ds}/'
+          files = [
+              ('combvd.xlsx', base+'datasets/combvd/raw/combvd.xlsx', '98ee28b9dfefc5d354f64e2ebcc1e9ae757fdfac'),
+              ('combvd_pairs.json', base+'datasets/combvd/raw/combvd_pairs.json', '56a733623ee6d57300d71dc72c7701bcfd8a86fc'),
+              ('combvd-canonical.csv', base+'datasets/combvd/canonical.csv', '8953f81bd4ff675b27fefa247a9bb9235e31edf0'),
+              ('combvd-meta.yaml', base+'datasets/combvd/meta.yaml', 'eef49acde38c44abc0df067fe07251f5e7c09f0a'),
+              ('colorbench_metric_eval.py', f'https://raw.githubusercontent.com/Grkmyldz148/colorbench/{cb}/core/metric_eval.py', None),
+              ('coloria-data.zip', 'https://api.github.com/repos/coloria-dev/color-data/zipball/c8637b034b03c0a67509ae8c37414528426ffeac', None),
+          ]
+          def fetch(item):
+              name,url,expected=item
+              request=urllib.request.Request(url,headers={'User-Agent':'HRL-baseline-research','Accept':'*/*'})
+              with urllib.request.urlopen(request,timeout=60) as response:
+                  data=response.read()
+              gitsha=hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+              if expected and gitsha!=expected:
+                  raise RuntimeError(f'Git blob hash mismatch: {name}')
+              (root/name).write_bytes(data)
+              return dict(file=name,url=url,bytes=len(data),git_blob_sha1=gitsha,sha256=hashlib.sha256(data).hexdigest())
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+              records=list(executor.map(fetch,files))
+          metric=next(r for r in records if r['file']=='colorbench_metric_eval.py')
+          if metric['sha256']!='018aa8b8c208047242d83e3aa6d99f8e852ad0c856755ce6c410fc34f3fd3835':
+              raise RuntimeError('ColorBench source differs from archived Release 1 source identity')
+          manifest=dict(purpose='Public input retrieval only. No HRL model or user data uploaded. No deployment.',dataset_commit=ds,colorbench_commit=cb,files=records)
+          (root/'MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          print(json.dumps(manifest,indent=2))
+          PY
+      - name: Make public inputs downloadable for local evaluation
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: hrl-v2-combvd-pinned-public-inputs
+          path: public-inputs/
+          retention-days: 7
+          if-no-files-found: error
