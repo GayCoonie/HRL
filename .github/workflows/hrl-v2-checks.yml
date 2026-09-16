@@ -1,0 +1,20 @@
+name: HRL v2 prototype checks
+on:
+  push:
+    branches: [main]
+    paths: ['v2/**', '.github/workflows/hrl-v2-checks.yml']
+  pull_request:
+    paths: ['v2/**', '.github/workflows/hrl-v2-checks.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check prototype and rebuild standalone pages
+        run: |
+          node v2/test/test.mjs --quick
+          node v2/build.mjs
+          git diff --exit-code -- v2/basr.html v2/native-0.2.html v2/hue-field-0.1.html
