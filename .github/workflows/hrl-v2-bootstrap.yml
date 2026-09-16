@@ -1,0 +1,62 @@
+name: Build authorized HRL v2 BASR publication
+on:
+  push:
+    branches: ['research/v2-basr-publish-20260916']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify and retain publication sources
+        shell: bash
+        run: |
+          cat .hrl-publish/payload-*.part > "$RUNNER_TEMP/hrl-v2.tar.xz"
+          echo "44082bb2fc40595b217b3ab670a881f8756759564af9c2727b67490c035f1f4b  $RUNNER_TEMP/hrl-v2.tar.xz" | sha256sum --check
+          git checkout --detach 77bfa09375ba8814f5caea3c3b05b2a9c96d1081
+          python3 - <<'PY'
+          import os, pathlib, tarfile
+          path=pathlib.Path(os.environ['RUNNER_TEMP'])/'hrl-v2.tar.xz'
+          with tarfile.open(path) as archive:
+              chosen=[]
+              for member in archive.getmembers():
+                  name=pathlib.PurePosixPath(member.name)
+                  if name.is_absolute() or '..' in name.parts or not member.isfile():
+                      raise RuntimeError('Invalid archive entry: '+member.name)
+                  if member.name=='.github/workflows/hrl-v2-checks.yml':
+                      continue
+                  if not member.name.startswith('v2/'):
+                      raise RuntimeError('Unexpected publication path: '+member.name)
+                  chosen.append(member)
+              archive.extractall('.',members=chosen,filter='data')
+          PY
+      - name: Rebuild pages and execute numerical tests
+        run: |
+          node v2/build.mjs --link-root
+          node v2/test/test.mjs
+          node --test test/reference.test.mjs
+          git diff --exit-code -- src package.json test
+          node v2/build.mjs --link-root
+      - name: Commit to a reviewable result branch, never main
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          names=subprocess.check_output(['git','status','--porcelain','--untracked-files=all'],text=True).splitlines()
+          for line in names:
+              path=line[3:]
+              if path not in ('index.html','README.md') and not path.startswith('v2/'):
+                  raise RuntimeError('Unexpected changed path: '+path)
+          PY
+          git config user.name 'HRL research builder'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- v2 index.html README.md
+          git commit -m 'Add HRL v2 BASR 0.4 pages and libraries alongside Release 1'
+          test "$(git rev-parse HEAD^)" = 77bfa09375ba8814f5caea3c3b05b2a9c96d1081
+          git push origin HEAD:refs/heads/research/v2-basr-built-20260916
+          echo "Built commit: $(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
+          git diff --stat HEAD^ HEAD >> "$GITHUB_STEP_SUMMARY"
