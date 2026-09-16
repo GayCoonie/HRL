@@ -1,0 +1,143 @@
+{
+  "candidates": [
+    {
+      "regularization": 0.2,
+      "direct_source_scores": {
+        "Ebner-Fairchild": {
+          "n": 306,
+          "mae_degrees": 2.225522438904344,
+          "rms_degrees": 2.839341619989685,
+          "p95_degrees": 5.748410712774103,
+          "max_degrees": 9.191435119769295,
+          "mean_delta_uv": 0.004371150886604477
+        },
+        "Hung-Berns CL": {
+          "n": 36,
+          "mae_degrees": 2.7885574258078214,
+          "rms_degrees": 3.3373417386089526,
+          "p95_degrees": 6.083240944108283,
+          "max_degrees": 7.501571529618531,
+          "mean_delta_uv": 0.004709330932744807
+        },
+        "Hung-Berns VL": {
+          "n": 88,
+          "mae_degrees": 4.051749704886033,
+          "rms_degrees": 6.25012198396858,
+          "p95_degrees": 13.80104577617811,
+          "max_degrees": 22.141449651452575,
+          "mean_delta_uv": 0.006987336783808363
+        },
+        "Munsell subset": {
+          "n": 104,
+          "mae_degrees": 2.2187612848821976,
+          "rms_degrees": 3.243404565307307,
+          "p95_degrees": 7.3164467696966256,
+          "max_degrees": 11.380294580908526,
+          "mean_delta_uv": 0.004515072211569609
+        }
+      },
+      "Ayama_marginalized_label_residual_rms": 9.189702610743533,
+      "global_slope_bounds": [
+        0.4000000000926017,
+        2.115406669860899
+      ],
+      "seconds": 8.600470066070557,
+      "solver": {
+        "iterations": 91,
+        "primal_residual": 0.0,
+        "barrier_duality_gap_bound": 0.00013369344,
+        "method": "feasible log-barrier Newton convex quadratic solver"
+      }
+    },
+    {
+      "regularization": 1.0,
+      "direct_source_scores": {
+        "Ebner-Fairchild": {
+          "n": 306,
+          "mae_degrees": 2.190209915297732,
+          "rms_degrees": 2.788611748544271,
+          "p95_degrees": 5.82725742865415,
+          "max_degrees": 8.829033743028674,
+          "mean_delta_uv": 0.0040843189002599065
+        },
+        "Hung-Berns CL": {
+          "n": 36,
+          "mae_degrees": 3.2199200757535604,
+          "rms_degrees": 4.017019345068737,
+          "p95_degrees": 7.965860107734024,
+          "max_degrees": 9.906358319000901,
+          "mean_delta_uv": 0.005488164922153037
+        },
+        "Hung-Berns VL": {
+          "n": 88,
+          "mae_degrees": 4.9953095632959315,
+          "rms_degrees": 7.369132932165356,
+          "p95_degrees": 16.456601844331622,
+          "max_degrees": 23.900703871488872,
+          "mean_delta_uv": 0.0091138280629219
+        },
+        "Munsell subset": {
+          "n": 104,
+          "mae_degrees": 2.069174781976613,
+          "rms_degrees": 3.0168367401552136,
+          "p95_degrees": 6.963347727294947,
+          "max_degrees": 11.195899531831344,
+          "mean_delta_uv": 0.004154824497328874
+        }
+      },
+      "Ayama_marginalized_label_residual_rms": 10.518222728640382,
+      "global_slope_bounds": [
+        0.40000000099048905,
+        1.6811037449482118
+      ],
+      "seconds": 16.226523637771606,
+      "solver": {
+        "iterations": 86,
+        "primal_residual": 0.0,
+        "barrier_duality_gap_bound": 0.00013369344,
+        "method": "feasible log-barrier Newton convex quadratic solver"
+      }
+    }
+  ],
+  "selected": 1.0,
+  "selection_rule": "Smoother declared candidate (lambda=1), not chosen by COMBVD or picture tuning.",
+  "untouched_holdout": false,
+  "baseline_source_scores": {
+    "Ebner-Fairchild": {
+      "n": 306,
+      "mae_degrees": 1.8469599378834647,
+      "rms_degrees": 2.4035938887205153,
+      "p95_degrees": 4.370526187531922,
+      "max_degrees": 12.20199771501916,
+      "mean_delta_uv": 0.0036482583237853632
+    },
+    "Hung-Berns CL": {
+      "n": 36,
+      "mae_degrees": 1.8389423388913917,
+      "rms_degrees": 2.2467301059165017,
+      "p95_degrees": 4.329906016790332,
+      "max_degrees": 5.639020908258203,
+      "mean_delta_uv": 0.0024805412082851757
+    },
+    "Hung-Berns VL": {
+      "n": 88,
+      "mae_degrees": 2.9948910465816927,
+      "rms_degrees": 4.576607293722768,
+      "p95_degrees": 9.044947048272517,
+      "max_degrees": 19.28194077513797,
+      "mean_delta_uv": 0.005452883234796508
+    },
+    "Munsell subset": {
+      "n": 104,
+      "mae_degrees": 1.820547471259675,
+      "rms_degrees": 2.4821211919851693,
+      "p95_degrees": 5.3614576112288255,
+      "max_degrees": 8.966490287624111,
+      "mean_delta_uv": 0.0030049318459856103
+    }
+  },
+  "publication_selection": {
+    "lambda": 0.2,
+    "reason": "Lower legacy observer residuals than lambda=1, same structural constraints; both remove diagnosed dark-blue excursion. Retrospective choice, not held-out validation."
+  }
+}

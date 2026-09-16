@@ -1,0 +1,14 @@
+{
+  "original_direct_XYZ_pairs": 534,
+  "ayama_marginalized_shape_priors": 315,
+  "ayama_relative_total_weight": 0.3,
+  "raw_ayama_points": 413,
+  "legacy_exclusions_retained": 8,
+  "scope": "Three retinal-illuminance conditions retained as separate shape-prior groups; common magnitude marginalized, not assigned to relative Level.",
+  "conversion": "Inverse Vos chromaticity formula Eq 3 in Vienot et al 1999; table-convergence white xprime=yprime=1/3 assumed, Bradford to D65; Pe=1 and out-of-cone cells excluded rather than clipped.",
+  "source_gaps": [
+    "Zhao-Luo 2020 complete match records not recovered.",
+    "Wang 2022 underlying observations explicitly not public; no synthetic substitutes admitted.",
+    "Pridmore low-luminance numerical track records not recovered."
+  ]
+}

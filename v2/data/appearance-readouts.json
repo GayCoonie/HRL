@@ -1,0 +1,188 @@
+{
+  "brightness": {
+    "id": "Corney-HK-readout-0.6",
+    "source_doi": "10.1371/journal.pone.0005091",
+    "page": 11,
+    "formula": "Y_equivalent=Y*exp(3*rho*(k0+k1*cos(2theta)+k2*sin(2theta))); brightness readout uses CIE L* of that equivalent relative Y, extended above 1 for readout only.",
+    "choice": {
+      "ridge": 0.001,
+      "coefficients": [
+        0.4277494741545068,
+        -0.4269125491035203,
+        0.026744869739690584
+      ],
+      "log_brightness_residuals": [
+        6.346243871625801e-05,
+        -0.0024966926930416744
+      ],
+      "converged": true,
+      "predicted_matching_Y": [
+        3.6006854595874707,
+        4.069405400876557
+      ]
+    },
+    "sensitivity": [
+      {
+        "ridge": 0.0001,
+        "coefficients": [
+          0.4343050399292262,
+          -0.4336459736190348,
+          0.02391730068227583
+        ],
+        "log_brightness_residuals": [
+          7.072324853613088e-06,
+          -0.000253949297136874
+        ],
+        "converged": true,
+        "predicted_matching_Y": [
+          3.6000763819187127,
+          4.096877613188143
+        ]
+      },
+      {
+        "ridge": 0.001,
+        "coefficients": [
+          0.4277494741545068,
+          -0.4269125491035203,
+          0.026744869739690584
+        ],
+        "log_brightness_residuals": [
+          6.346243871625801e-05,
+          -0.0024966926930416744
+        ],
+        "converged": true,
+        "predicted_matching_Y": [
+          3.6006854595874707,
+          4.069405400876557
+        ]
+      },
+      {
+        "ridge": 0.01,
+        "coefficients": [
+          0.3731281967008778,
+          -0.3698177802612049,
+          0.049592948852917054
+        ],
+        "log_brightness_residuals": [
+          3.642793696148616e-05,
+          -0.02137567282976474
+        ],
+        "converged": true,
+        "predicted_matching_Y": [
+          3.6003934432172797,
+          3.8453320387885648
+        ]
+      }
+    ],
+    "stimuli": {
+      "names": [
+        "blue standard",
+        "brightness-matched yellow",
+        "brightness-matched lower-purity blue"
+      ],
+      "xy": [
+        [
+          0.154,
+          0.107
+        ],
+        [
+          0.362,
+          0.47
+        ],
+        [
+          0.178,
+          0.15
+        ]
+      ],
+      "Y_cd_m2": [
+        2.6,
+        3.6,
+        4.1
+      ]
+    },
+    "limitations": [
+      "Only two aggregate brightness matches available in paper; not dense observer calibration.",
+      "The model structure and ridge regularization are explicit priors.",
+      "No fMRI response magnitude or synthetic ideal-observer sample is treated as a measured color-distance target.",
+      "Reference D65 chromaticity used for transferred readout; original source does not supply a matching neutral-white luminance.",
+      "Equivalent readout can exceed reference white; HRL bicone remains fully bounded because every path is normalized to its own endpoints."
+    ]
+  },
+  "saturation": {
+    "id": "Schiller-saturation-readout-0.6",
+    "source_doi": "10.1016/j.visres.2017.04.012",
+    "data_doi": "10.5281/zenodo.572983",
+    "raw_n": 103500,
+    "participants_by_experiment": {
+      "1": 10,
+      "2": 12,
+      "3": 9
+    },
+    "trials_by_experiment": {
+      "1": 36000,
+      "2": 43200,
+      "3": 24300
+    },
+    "white_xy_source": [
+      0.331,
+      0.339
+    ],
+    "fit": "Raw-response logistic likelihood; source/observer-balanced; regularized Fourier angular readout and signed-contrast terms; radial log-distance baseline fixed because ordinal comparisons do not identify a cardinal saturation scale.",
+    "predictor": "log S=log(r_uv)+harmonic(theta)+b9*r/.25+b10*(r/.25)^2+contrast*harmonic12(theta)",
+    "coefficients": [
+      1.0,
+      -0.026193069370901226,
+      -0.026524057577841854,
+      -0.07607941170855995,
+      0.024422591534545728,
+      -0.040036355661940595,
+      -0.01653198295074653,
+      -0.010770544354044048,
+      -0.025004478431609904,
+      0.0,
+      0.0,
+      0.34953381876483636,
+      -0.07552617291629089,
+      0.06093668940804459,
+      -0.017337312207920775
+    ],
+    "logistic_slope": 4.395194764062057,
+    "context_variable": "(Y_patch-Y_background)/(Y_patch+Y_background)",
+    "reference_context": 0.0,
+    "raw_trial_logloss": 0.4772138471367981,
+    "raw_trial_accuracy": 0.8019710144927537,
+    "grouped_cv": [
+      {
+        "fold": 0,
+        "n": 36900,
+        "logloss": 0.43806343483743254,
+        "accuracy": 0.8112466124661246,
+        "converged": true
+      },
+      {
+        "fold": 1,
+        "n": 33300,
+        "logloss": 0.5857083648679874,
+        "accuracy": 0.7795195195195195,
+        "converged": true
+      },
+      {
+        "fold": 2,
+        "n": 33300,
+        "logloss": 0.45427591972401155,
+        "accuracy": 0.8051651651651651,
+        "converged": true
+      }
+    ],
+    "converged": true,
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "limitations": [
+      "Readout for perceived saturation, not unnormalized HRL Reach.",
+      "Exp1 all supplied records; Exp2 all supplied records rather than guessing two excluded observer IDs; Exp3 excluded 2 and 10 as explicitly stated in paper.",
+      "Individual trial likelihood, not claimed reproduction of psignifit Bayesian PSE/JND method.",
+      "Neutral surrounding contrast kappa=0 is an explicit reference-profile choice. Background dependence is retained in readout and diagnostics, not silently treated as an intrinsic change of HRL color.",
+      "No inference about absolute Hunt-effect size across experiments from within-condition matches.",
+      "An arbitrary monotonic rescaling of saturation preserves the matching contours; the radius-linear convention fixes that otherwise unidentified gauge."
+    ]
+  }
+}

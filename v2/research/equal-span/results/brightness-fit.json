@@ -1,0 +1,109 @@
+{
+  "id": "Corney-HK-readout-0.6",
+  "source_doi": "10.1371/journal.pone.0005091",
+  "page": 11,
+  "formula": "Y_equivalent=Y*exp(3*rho*(k0+k1*cos(2theta)+k2*sin(2theta))); brightness readout uses CIE L* of that equivalent relative Y, extended above 1 for readout only.",
+  "choice": {
+    "ridge": 0.001,
+    "coefficients": [
+      0.4277494741545068,
+      -0.4269125491035203,
+      0.026744869739690584
+    ],
+    "log_brightness_residuals": [
+      6.346243871625801e-05,
+      -0.0024966926930416744
+    ],
+    "converged": true,
+    "predicted_matching_Y": [
+      3.6006854595874707,
+      4.069405400876557
+    ]
+  },
+  "sensitivity": [
+    {
+      "ridge": 0.0001,
+      "coefficients": [
+        0.4343050399292262,
+        -0.4336459736190348,
+        0.02391730068227583
+      ],
+      "log_brightness_residuals": [
+        7.072324853613088e-06,
+        -0.000253949297136874
+      ],
+      "converged": true,
+      "predicted_matching_Y": [
+        3.6000763819187127,
+        4.096877613188143
+      ]
+    },
+    {
+      "ridge": 0.001,
+      "coefficients": [
+        0.4277494741545068,
+        -0.4269125491035203,
+        0.026744869739690584
+      ],
+      "log_brightness_residuals": [
+        6.346243871625801e-05,
+        -0.0024966926930416744
+      ],
+      "converged": true,
+      "predicted_matching_Y": [
+        3.6006854595874707,
+        4.069405400876557
+      ]
+    },
+    {
+      "ridge": 0.01,
+      "coefficients": [
+        0.3731281967008778,
+        -0.3698177802612049,
+        0.049592948852917054
+      ],
+      "log_brightness_residuals": [
+        3.642793696148616e-05,
+        -0.02137567282976474
+      ],
+      "converged": true,
+      "predicted_matching_Y": [
+        3.6003934432172797,
+        3.8453320387885648
+      ]
+    }
+  ],
+  "stimuli": {
+    "names": [
+      "blue standard",
+      "brightness-matched yellow",
+      "brightness-matched lower-purity blue"
+    ],
+    "xy": [
+      [
+        0.154,
+        0.107
+      ],
+      [
+        0.362,
+        0.47
+      ],
+      [
+        0.178,
+        0.15
+      ]
+    ],
+    "Y_cd_m2": [
+      2.6,
+      3.6,
+      4.1
+    ]
+  },
+  "limitations": [
+    "Only two aggregate brightness matches available in paper; not dense observer calibration.",
+    "The model structure and ridge regularization are explicit priors.",
+    "No fMRI response magnitude or synthetic ideal-observer sample is treated as a measured color-distance target.",
+    "Reference D65 chromaticity used for transferred readout; original source does not supply a matching neutral-white luminance.",
+    "Equivalent readout can exceed reference white; HRL bicone remains fully bounded because every path is normalized to its own endpoints."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "source": "https://opg.optica.org/josaa/abstract.cfm?uri=josaa-4-6-1136",
+  "tables": [
+    2,
+    3
+  ],
+  "n_points": 413,
+  "method": "Manual transcription of publisher machine-readable numerical tables; not figure digitization.",
+  "notes": [
+    "MA 100 Td yellow endpoint HTML 0:538 normalized to decimal 0.538; explicitly recorded punctuation normalization.",
+    "TN 10 Td green Pe=.3 original x=.343 retained, flagged in model intake as discontinuous anomalous point.",
+    "No missing cells imputed.",
+    "Retinal illuminance retained as condition, never equated to HRL Level."
+  ]
+}

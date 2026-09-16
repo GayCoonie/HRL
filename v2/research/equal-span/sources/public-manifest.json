@@ -1,0 +1,108 @@
+[
+  {
+    "file": "schiller-record.json",
+    "url": "https://zenodo.org/api/records/572983",
+    "final_url": "https://zenodo.org/api/records/572983",
+    "content_type": "application/json",
+    "bytes": 4924,
+    "sha256": "85455d55e13261a4a09b8d64fee300d12bec26e7956636a5c36e26e81fea6c42",
+    "ok": true
+  },
+  {
+    "file": "schiller-page.html",
+    "url": "https://zenodo.org/records/572983",
+    "final_url": "https://zenodo.org/records/572983",
+    "content_type": "text/html; charset=utf-8",
+    "bytes": 72734,
+    "sha256": "b4125f18653658912f488f2900a7319f13d87dce506fb3893439d95c876b2f8c",
+    "ok": true
+  },
+  {
+    "file": "hrl-published.zip",
+    "url": "https://api.github.com/repos/GayCoonie/HRL/zipball/69c58e41ee107c5e1a215552655f619addca4258",
+    "final_url": "https://codeload.github.com/GayCoonie/HRL/legacy.zip/69c58e41ee107c5e1a215552655f619addca4258",
+    "content_type": "application/zip",
+    "bytes": 2123312,
+    "sha256": "da7db6b4a28348b8f88db96699f47273178331b0c73adb54970db957fc2ec2a3",
+    "ok": true
+  },
+  {
+    "file": "cie1931.csv",
+    "url": "https://files.cie.co.at/CIE_xyz_1931_2deg.csv",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "cie1931-metadata.json",
+    "url": "https://files.cie.co.at/CIE_xyz_1931_2deg.csv_metadata.json",
+    "ok": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "ayama1987.pdf",
+    "url": "https://opg.optica.org/josaa/viewmedia.cfm?uri=josaa-4-6-1136&seq=0",
+    "final_url": "https://opg.optica.org/josaa/viewmedia.cfm?uri=josaa-4-6-1136&seq=0",
+    "content_type": "text/html;charset=UTF-8",
+    "bytes": 595,
+    "sha256": "7c3fbec95c9757403b9ff6076604a2d68b1a7d9c996aae9adc7dc61b35cfb4fa",
+    "ok": true
+  },
+  {
+    "file": "wang2022.pdf",
+    "url": "https://ira.lib.polyu.edu.hk/bitstream/10397/105929/1/oe-30-25-44896.pdf",
+    "final_url": "https://ira.lib.polyu.edu.hk/bitstream/10397/105929/1/oe-30-25-44896.pdf",
+    "content_type": "application/pdf",
+    "bytes": 4057380,
+    "sha256": "7813637e2c72ed2f28d18022df0e30dea46d80eebe3ec5e14fcea9bd68fbd545",
+    "ok": true
+  },
+  {
+    "file": "combvd.xlsx",
+    "url": "https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/8641f4e8ebd9d85a34dc0fedc116fa0e58493190/datasets/combvd/raw/combvd.xlsx",
+    "final_url": "https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/8641f4e8ebd9d85a34dc0fedc116fa0e58493190/datasets/combvd/raw/combvd.xlsx",
+    "content_type": "application/octet-stream",
+    "bytes": 1475807,
+    "sha256": "ddc24cccc42b9120a29064da15521def2355972719c8c8e7ee94531ed264cc9e",
+    "ok": true
+  },
+  {
+    "file": "combvd_pairs.json",
+    "url": "https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/8641f4e8ebd9d85a34dc0fedc116fa0e58493190/datasets/combvd/raw/combvd_pairs.json",
+    "final_url": "https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/8641f4e8ebd9d85a34dc0fedc116fa0e58493190/datasets/combvd/raw/combvd_pairs.json",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 723725,
+    "sha256": "7a5c6081874fdad626e4cd9198fb977ea538c89161b24f2a19b6b0fab4f291b9",
+    "ok": true
+  },
+  {
+    "file": "colorbench_metric_eval.py",
+    "url": "https://raw.githubusercontent.com/Grkmyldz148/colorbench/12b2de215cc5020682e3d245a8c78bce5f0ebbc9/core/metric_eval.py",
+    "final_url": "https://raw.githubusercontent.com/Grkmyldz148/colorbench/12b2de215cc5020682e3d245a8c78bce5f0ebbc9/core/metric_eval.py",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 29690,
+    "sha256": "018aa8b8c208047242d83e3aa6d99f8e852ad0c856755ce6c410fc34f3fd3835",
+    "ok": true
+  },
+  {
+    "file": "schiller-ReadMe.pdf",
+    "url": "https://zenodo.org/api/records/572983/files/ReadMe.pdf/content",
+    "final_url": "https://zenodo.org/api/records/572983/files/ReadMe.pdf/content",
+    "content_type": "application/octet-stream",
+    "bytes": 249348,
+    "sha256": "2a74b5a123a45b6c480e74685b3285d071af141a4956ec3636990c86df2561d1",
+    "ok": true,
+    "published_checksum": "md5:8754b0d51d8042e8ccb6447318a8d07e",
+    "published_checksum_verified": true
+  },
+  {
+    "file": "schiller-Data.zip",
+    "url": "https://zenodo.org/api/records/572983/files/Data.zip/content",
+    "final_url": "https://zenodo.org/api/records/572983/files/Data.zip/content",
+    "content_type": "application/octet-stream",
+    "bytes": 1334272,
+    "sha256": "2c7ac3517569faac6d2da93f29d1e4bed80690235e9388407e1c0d9b4ffe4e28",
+    "ok": true,
+    "published_checksum": "md5:069dc6f1344d69adf143f28b7eaf9472",
+    "published_checksum_verified": true
+  }
+]

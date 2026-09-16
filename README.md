@@ -75,3 +75,7 @@ The root picker and `src/` library remain **R15-D Release 1**. New research page
 - [V2 library and reproducibility](v2/README.md).
 
 Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1 entry point is unchanged.
+
+## Equal-Span and OPAL research candidates
+
+[OPAL 0.6](https://gaycoonie.github.io/HRL/v2/opal.html) and [Equal-Span 0.5](https://gaycoonie.github.io/HRL/v2/equal-span.html) are additional experimental pages. [Their separate library and numerical evidence](v2/research/equal-span/README.md) preserve the current v1 implementation and BASR 0.4. These candidates change path parameterization; OPAL additionally uses an experimental hue refit. They are not an across-the-board improvement on observer or COMBVD scores.

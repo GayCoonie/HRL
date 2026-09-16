@@ -1,0 +1,10 @@
+{
+  "browser": "Chromium Playwright",
+  "errors": [],
+  "gallery_canvases": 6,
+  "hex_imports": [
+    "#6D00FF in each of 3 variants"
+  ],
+  "status": "Native gamut \u00b7 no display clipping",
+  "title": "HRL v2 \u00b7 OPAL / Equal-Span laboratory"
+}

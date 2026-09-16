@@ -1,0 +1,133 @@
+# HRL v2: Equal-Span 0.5 and OPAL 0.6
+
+Design: Coonie / Adam. Research and implementation: collaborative ChatGPT work, 16 September 2026. Both additions preserve Release 1 and BASR 0.4. They are exploratory prototypes, not an accepted Release 2.
+
+## The two candidates
+
+**Equal-Span (ESP) 0.5** removes the full carrier's channel-sum dependency, retains the original observer hue field and BASR nonblack response, and distributes Reach by normalized CIE 1931 xy curve length on the actual gamut-derived sheet. This is a geometric baseline, not a claim that xy is perceptually uniform.
+
+**OPAL 0.6: Observer-Parameterized Arms and Levels** additionally fits an experimental shared hue field with new numerical purity-trajectory evidence, fits separate brightness and saturation readouts, and uses those readouts to distribute positions along paths. No direct identity Level=brightness or Reach=saturation is imposed. It is not an across-the-board improvement: legacy hue residuals and native COMBVD worsen, despite removal of the diagnosed large dark-blue cyan excursion.
+
+Pages: [OPAL](../../opal.html), [Equal-Span](../../equal-span.html), [BASR reference](../../basr.html). Both new pages contain all data for offline rendering and a three-way comparison. Full-domain colors remain distinct from their sRGB previews.
+
+## Fixed geometry and semantics
+
+Native coordinates satisfy 0 <= R <= L <= 1. Public chromaticness is R, inverse blackness is L, and neutral share is L-R. They are coordinate attributes, not a literal decomposition into fixed XYZ lights. Metric embedding remains:
+
+```
+E(H,R,L) = [L-R/2, sqrt(3)*R*cos(H)/2, sqrt(3)*R*sin(H)/2]
+```
+
+Each white-vivid, black-vivid, and black-white edge has unit native length. Gamut changes the physical realization through boundary intersections, not the regular native geometry. Black is zero light. D65 and the straight neutral-axis locus are shared. Its tonal convention remains XYZ=Q(L)*W, where Q is inverse normalized CIE L*.
+
+A constant-hue sheet determines a path, not its unique cardinal step scale. Equal arc length in a selected readout is a declared construction. Different physical total path lengths are normalized to the same coordinate span. Consequently the approach can preserve useful near-vivid coverage without claiming that all physical vivid colors have the same unnormalized distance from white. Particular green/yellow sampling-density outcomes must be inspected, not deduced from a colored chromaticity illustration alone.
+
+## Carrier independence
+
+Full-domain working coordinates now use s=rho and a=white-completion gauge. Native sRGB uses its actual gamut shell, with a=max(linear RGB) and s=(max-min)/max. The field's own magnitude remains its full-domain white-completion gauge when hue is evaluated; these two chart roles are not confused.
+
+The old full-domain formula `rho=u*sigma/(3*(1-u)+u*sigma)` is NOT used. In the new full base, `rho=R/L` and `a=L` before path parameterization. The independent carrier uses:
+
+```
+a = max(pseudoRGB)
+s = (max-min)/max
+t = six-edge position of the normalized vivid triple
+XYZ = fittedSheet(carrierLabel(t), s, a)
+```
+
+Its inverse is `pseudoRGB=a*((1-rho)+rho*edge(t))`. No sum of channel values affects HRL Reach. The carrier can be replaced or rotated without changing XYZ at any fixed HRL coordinate. The regression test exercises that replacement.
+
+The requested fake primaries are selected geometrically from the declared spectral polygon: the two endpoints of its purple closure and the vertex with maximum CIE y. The closure is the longest polygon edge. Current xy landmarks are red (0.7346900233,0.2653099767), green (0.0743024248,0.8338030913), and violet (0.1755602318,0.0052938370). These correspond to the retained 700, 520, and 360 nm hull vertices in the 5 nm table; the red end is not truncated at 700 nm. Near-redundant long-wavelength chromaticities are resolved by the declared convex envelope. Earlier 780/380/520 numbers were a description of the intended layout, not a new wavelength cutoff.
+
+The full 16-bit cube still has 393,210 distinct vivid-edge integer codes. Pseudo channels are nonlinear coordinates, not fixed physical additive primaries. Changes of carrier change codes and quantization, not the continuous HRL mapping.
+
+## OPAL parameterization
+
+Let C_H(s,a) be the gamut's fitted hue-sheet chart. Start with l on [0,1] and a=Q(l). A separate appearance vector is declared:
+
+```
+A(XYZ) = [B(XYZ), B(XYZ)*S(XYZ)/0.25]
+```
+
+B is the sparse HK-informed brightness readout; S is the context-aware saturation readout at reference contrast kappa=0. The factor 0.25 and Euclidean combination are explicit construction choices. They are not observer-derived universal DeltaE weights.
+
+First, at fixed H,s, accumulate A-path length from black to the a=1 boundary and normalize it to define public L=f(H,s,l). On the neutral axis f is explicitly identity, retaining the shared Q convention. Second, at fixed H,L, invert f to recover a as s varies; accumulate and normalize A-path length along that contour to define U=g(H,L,s). Public Reach is R=L*U.
+
+Forward: invert g for s, then invert f for l, then decode C_H(s,Q(l)). Inverse: locate the physical chart, evaluate f for L, evaluate g for U, and return R=L*U. This triangular composition is invertible. No iteration through a guessed R/L inverse and no interpolation of XYZ colors is used.
+
+Each cumulative map has 0.1% identity mixed in to ensure strictly increasing rows. Runtime tables have 72 hue samples, 33 secondary-coordinate samples, and 65 path samples. Periodic hue and convex secondary interpolation preserve row monotonicity; inversion uses the same interpolated row. Resolution is part of this prototype definition. A grid-convergence study remains to be done before claiming resolution-independent path spacing.
+
+The hue solver has a new safeguarded Newton/bisection subclass that forces bracket contraction. One refitted vivid hue (around H=287) exposed stalling in the original permissive Newton safeguard. The old solver and old models remain unchanged.
+
+## What new evidence actually enters
+
+### Schiller, Valsecchi, Gegenfurtner
+
+Paper: *An evaluation of different measures of color saturation*, DOI 10.1016/j.visres.2017.04.012 (2017 online, Vision Research 151, 2018). Raw data DOI 10.5281/zenodo.572983, CC BY 4.0. Numerical input is 103,500 nonpractice 2AFC trials: Exp1 ten supplied observers, Exp2 all twelve supplied observers, Exp3 nine after excluding IDs 2 and 10 as the paper explicitly states. Two Exp2 exclusions were not guessed; this is not an exact replication of the article's selected population.
+
+The fitted response likelihood uses log radial distance in u'v' plus four angular Fourier harmonics and two signed-luminance-contrast harmonics, with source/observer-balanced regularization. Radial slope is fixed to choose a cardinal convention: equal-saturation matches alone do not identify an absolute saturation scale. The learned logistic slope is 4.39519; raw-trial training accuracy 80.197%, log loss 0.477214. Observer-grouped retrospective cross-validation is retained in the result JSON. These are response-prediction statistics, not a validation of HRL Reach.
+
+The experiment's source white is xy=(.331,.339). Runtime transfer uses analogous neutral-centered u'v' offsets around D65. That is a declared reference adaptation approximation. The learned contrast dependence is retained in the readout API, but changing the viewer surround does not silently change HRL coordinates. No claim is made about absolute Hunt-effect strength across experiments; the article says its within-condition design cannot determine that.
+
+### Corney, Haynes, Rees, Lotto
+
+Paper: *The Brightness of Colour*, DOI 10.1371/journal.pone.0005091 (2009). Only the two reported aggregate brightness matches on page 11 enter numerical calibration. Blue xy=(.154,.107), Y=2.6 is matched by yellow xy=(.362,.470), Y=3.6 and lower-purity blue xy=(.178,.150), Y=4.1.
+
+A nonnegative second-harmonic chromatic lift is fitted with ridge regularization:
+
+```
+Yeq = Y * exp(3*rho*(k0+k1*cos(2theta)+k2*sin(2theta)))
+B = normalized CIE L*(Yeq), with an extended readout only
+```
+
+Selected coefficients and three regularization sensitivities are recorded. Predicted matching luminances are 3.60069 and 4.06941. Two aggregate matches do not identify a full human brightness model. The smooth harmonic structure, D65 reference transfer, and regularizer are priors. No synthetic Bayesian scene, fMRI BOLD amplitude, or image-derived guessed color is counted as a new human match. The readout can exceed one; the normalized HRL bicone and physical carrier cannot.
+
+### Ayama, Nakatsue, Kaiser
+
+Paper: *Constant hue loci of unique and binary balanced hues at 10, 100, and 1000 Td*, DOI 10.1364/JOSAA.4.001136 (1987). Numerical Tables 2 and 3 yield 413 points across two observers and three retinal illuminances. The inverse projective Vos transform (Vienot, Brettel, Mollon 1999, Eq.3) translates Judd-Vos chromaticities to a CIE1931 approximation. White x'=y'=1/3 is explicitly a table-convergence normalization assumption, not a recovered apparatus measurement.
+
+After exclusions, 315 within-track purity relationships enter as magnitude-marginalized shape priors. Each relationship is averaged over three common relative-Y scales. Retinal illuminance is NOT equated to HRL Level or to an invented absolute luminance. The three Td conditions remain distinct source groups. Total weight is 0.3 times the old direct-XYZ relationships. Pe=1 boundary points and out-of-cone converted points are not clipped into training; the original table anomaly TN/10/G/Pe=.3 is preserved and excluded explicitly.
+
+The original 534 direct-XYZ same-hue relationships remain present with their original preprocessing and magenta-red quarantine. Global field ordering and complete sRGB shell-conditioning constraints apply across hues, not just blue. Two regularization candidates are retained. Lambda=0.2 was selected retrospectively for lower legacy-data error under identical constraints. This is not a blind holdout selection.
+
+Legacy mean angular reconstruction error rises from EF 1.847 to 2.226 degrees, HB CL 1.839 to 2.789, HB VL 2.995 to 4.052, and Munsell 1.821 to 2.219. These are the same fixed geometric comparison-chart errors as before, not native HRL degrees. The fit improves the diagnosed physical dark-blue path but is not declared a more accurate general hue model.
+
+### Not numerically admitted
+
+Zhao-Luo 2020 complete hue-match records and Pridmore's complete low-luminance track records were not recovered. Wang et al. 2022 explicitly state that their underlying data are not public. These sources inform interpretation and identify needed evidence; they do not appear as fabricated training pairs. CIE1964-to1931 display transforms can be used when relevant numerical stimuli arrive, but none is silently applied to missing records.
+
+## Reproduction
+
+JavaScript runtime needs no external dependencies:
+
+```js
+import {createHRLResearch} from './v2/lib/research.mjs';
+const native = await createHRLResearch({gamut:'srgb',variant:'opal'});
+const full = await createHRLResearch({gamut:'full',variant:'opal'});
+const q = native.fromRGB([0.2,0.3,0.8]);
+const original = native.toRGB(q);
+const sameStimulus = full.fromXYZ(native.toXYZ(q));
+const pseudo16 = full.carrier.encode16(native.toXYZ(q));
+```
+
+```sh
+node v2/research/equal-span/code/build-atlases.mjs
+node v2/research/equal-span/code/test-research.mjs
+python v2/research/equal-span/code/prepare-benchmark-inputs.py combvd_pairs.json
+node v2/research/equal-span/code/benchmark.mjs
+node v2/research/equal-span/code/build-viewers.mjs
+```
+
+Python refitting needs NumPy, SciPy and pandas. `intake_ayama.py` recreates the declared transcription. `fit_extended_hue.py` reproduces candidate fits using the included small original observer tables. `fit_saturation.py /path/to/unzipped/Schiller/Data` fits the official raw trials; `fit_brightness.py` recreates the two-match readout. Sources, choices, exclusions, and sensitivity fits are retained under this directory. The original public data URLs and checksums are in `sources/public-manifest.json`. No font files or private chat transcripts are included.
+
+## Verification and scope
+
+Executed for each candidate: 20,000 random RGB16 native round trips, 10,000 pseudo-RGB16 full round trips, 5,000 continuous bicone round trips per profile, 1,000 carrier-layout-invariance probes per profile, neutral/vivid checks, and every atlas row's monotonicity. Zero tested integer mismatches, zero tested out-of-gamut outputs. A separate 86,016-position sRGB shell-order audit found zero reversals. This is not an exhaustive cube census or proof of continuous sRGB-shell ordering everywhere.
+
+The browser smoke check exercised embedded HTML through Playwright `set_content`, because file/HTTP navigation is blocked by this environment. It found no JavaScript errors and verified imports in all three models plus six comparison canvases. Module operation was checked separately in Node; live HTTP behavior requires the deployment check.
+
+The visible full domain remains the declared 5 nm CIE1931 convex-envelope approximation. Unmeasured high-purity and dark-end continuation remains model-dependent. The new hue field plus both R/L atlases require further visual and observer evaluation.
+
+## Baselines
+
+See [BENCHMARKS.md](BENCHMARKS.md) for every subdataset and weighting, and `results/combvd-baseline.json` for row-level retention. No COMBVD differences informed these fits. All scores use the public regular bicone, not raw H/R/L Cartesian distance and not the pre-remap chart.

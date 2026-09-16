@@ -132,3 +132,7 @@ The requested COMBVD baseline for native/full profiles, individual subdatasets, 
 - `docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.md` preserves the original dataset audit and distinctions between experiment, fitting, and continuation.
 
 No font files, private chat transcripts, or credentials are part of this addition. The visual theme references locally installed fonts only. The v1 source and data are not modified.
+
+## Later research candidates
+
+[Equal-Span 0.5 and OPAL 0.6](research/equal-span/README.md) are implemented separately in `lib/research.mjs`. BASR 0.4 and this original definition are preserved. The [new benchmark record](research/equal-span/BENCHMARKS.md) supersedes the old pending status above with measured, explicitly scoped baselines.
