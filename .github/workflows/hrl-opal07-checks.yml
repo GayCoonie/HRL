@@ -1,0 +1,24 @@
+name: OPAL 0.7 reference checks
+on:
+  push:
+    branches: [main]
+    paths: ['v2/lib/**', 'v2/data/**', 'v2/research/anchor-0.7/**', 'v2/source/opal-anchor-template.html', 'v2/opal-anchor.html', '.github/workflows/hrl-opal07-checks.yml']
+  pull_request:
+    paths: ['v2/lib/**', 'v2/data/**', 'v2/research/anchor-0.7/**', 'v2/source/opal-anchor-template.html', 'v2/opal-anchor.html', '.github/workflows/hrl-opal07-checks.yml']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check numerical invariants and reproducible references
+        shell: bash
+        run: |
+          node v2/research/anchor-0.7/code/verify.mjs --quick
+          node v2/research/anchor-0.7/code/benchmark.mjs
+          node v2/research/anchor-0.7/code/report.mjs
+          node v2/research/anchor-0.7/code/build-viewer.mjs
+          node --test test/reference.test.mjs
+          git diff --exit-code -- v2/opal-anchor.html v2/research/anchor-0.7/BENCHMARKS.md v2/research/anchor-0.7/results/benchmarks.json v2/research/anchor-0.7/results/pair-distances.json v2/research/anchor-0.7/results/benchmark-summary.csv
