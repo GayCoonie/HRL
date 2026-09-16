@@ -1,0 +1,77 @@
+name: Build HRL Equal-Span and OPAL research publication
+on:
+  push:
+    branches: ['research/opal-0.6-publication-20260916']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Verify publication payload and preserve v1 parent
+        shell: bash
+        run: |
+          cat .hrl-opal/payload-*.part > "$RUNNER_TEMP/opal-sources.tar.xz"
+          echo "53564043ff88e4e87422b3a5e0763b75d175c308e3ce47ca651147317c16f4fb  $RUNNER_TEMP/opal-sources.tar.xz" | sha256sum --check
+          git checkout --detach 69c58e41ee107c5e1a215552655f619addca4258
+          python3 - <<'PY'
+          import os,pathlib,tarfile
+          p=pathlib.Path(os.environ['RUNNER_TEMP'])/'opal-sources.tar.xz'
+          with tarfile.open(p) as archive:
+              for m in archive.getmembers():
+                  q=pathlib.PurePosixPath(m.name)
+                  if q.is_absolute() or '..' in q.parts or not m.isfile() or not m.name.startswith('v2/'):
+                      raise RuntimeError('Unexpected archive member: '+m.name)
+              archive.extractall('.',filter='data')
+          PY
+      - name: Fetch pinned public COMBVD input
+        shell: bash
+        run: |
+          python3 -m pip install numpy==2.2.6
+          python3 - <<'PY'
+          import os,pathlib,urllib.request,hashlib
+          url='https://raw.githubusercontent.com/Grkmyldz148/color-perception-datasets/8641f4e8ebd9d85a34dc0fedc116fa0e58493190/datasets/combvd/raw/combvd_pairs.json'
+          with urllib.request.urlopen(url,timeout=60) as r: data=r.read()
+          assert hashlib.sha256(data).hexdigest()=='7a5c6081874fdad626e4cd9198fb977ea538c89161b24f2a19b6b0fab4f291b9'
+          (pathlib.Path(os.environ['RUNNER_TEMP'])/'combvd_pairs.json').write_bytes(data)
+          PY
+          python3 v2/research/equal-span/code/prepare-benchmark-inputs.py "$RUNNER_TEMP/combvd_pairs.json"
+      - name: Rebuild models, run checks and calculate baselines
+        shell: bash
+        run: |
+          node v2/research/equal-span/code/build-atlases.mjs
+          node v2/research/equal-span/code/test-research.mjs
+          node v2/research/equal-span/code/benchmark.mjs
+          node v2/research/equal-span/code/build-viewers.mjs
+          node v2/research/equal-span/code/link-pages.mjs
+          node --test test/reference.test.mjs
+          git diff --exit-code -- src package.json test
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          root=pathlib.Path('v2/research/equal-span')
+          paths=[p for p in root.rglob('*') if p.is_file() and p.name!='source-hashes.json' and '__pycache__' not in p.parts]
+          hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+          (root/'results/source-hashes.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - name: Commit results to a reviewable branch, never main
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import subprocess
+          for line in subprocess.check_output(['git','status','--porcelain','--untracked-files=all'],text=True).splitlines():
+              p=line[3:]
+              if p not in ('index.html','README.md') and not p.startswith('v2/'):
+                  raise RuntimeError('Unexpected changed path: '+p)
+          PY
+          git config user.name 'HRL research builder'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- v2 index.html README.md
+          git commit -m 'Add Equal-Span 0.5 and OPAL 0.6 research pages, independent spectral carrier, and COMBVD baselines'
+          test "$(git rev-parse HEAD^)" = 69c58e41ee107c5e1a215552655f619addca4258
+          git push origin HEAD:refs/heads/research/opal-0.6-built-20260916
+          echo "Built commit: $(git rev-parse HEAD)" | tee -a "$GITHUB_STEP_SUMMARY"
+          git diff --stat HEAD^ HEAD >> "$GITHUB_STEP_SUMMARY"
