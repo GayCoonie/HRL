@@ -1,0 +1,45 @@
+name: OPAL gamut-anchor research inputs
+on:
+  push:
+    branches: ['research/opal-anchor-inputs-20260916']
+    paths: ['.github/workflows/opal-anchor-inputs.yml']
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Retrieve published observer data and renotation source
+        run: |
+          python3 - <<'PY'
+          import urllib.request,json,pathlib,hashlib,concurrent.futures
+          root=pathlib.Path('public-inputs');root.mkdir()
+          sources=[
+            ('thresholds.csv','https://zenodo.org/records/14892898/files/thresholds.csv?download=1','bf900a0007d0db48245234f9160e4177'),
+            ('PSEs.csv','https://zenodo.org/records/14892898/files/PSEs.csv?download=1','3070a356b2c677d6138b819df3c79bcd'),
+            ('detection_thresholds.csv','https://zenodo.org/records/14892898/files/detection_thresholds.csv?download=1','d5cf0523b711a00e853817edac77b8c5'),
+            ('munsell-real.py','https://raw.githubusercontent.com/colour-science/colour/v0.4.6/colour/notation/datasets/munsell/real.py',None),
+            ('munsell-all.py','https://raw.githubusercontent.com/colour-science/colour/v0.4.6/colour/notation/datasets/munsell/all.py',None),
+            ('colour-LICENSE','https://raw.githubusercontent.com/colour-science/colour/v0.4.6/LICENSE',None)
+          ]
+          def get(row):
+              name,url,md5=row
+              try:
+                  req=urllib.request.Request(url,headers={'User-Agent':'HRL colour research; public data retrieval'})
+                  with urllib.request.urlopen(req,timeout=50) as r:data=r.read(2000001)
+                  if len(data)>2000000:raise RuntimeError('Input exceeds 2MB limit')
+                  if md5 and hashlib.md5(data).hexdigest()!=md5:raise RuntimeError('Published MD5 mismatch')
+                  (root/name).write_bytes(data)
+                  return dict(name=name,url=url,bytes=len(data),sha256=hashlib.sha256(data).hexdigest(),published_md5=md5,ok=True)
+              except Exception as e:return dict(name=name,url=url,ok=False,error=str(e))
+          with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:results=list(pool.map(get,sources))
+          (root/'MANIFEST.json').write_text(json.dumps(results,indent=2))
+          print(json.dumps(results,indent=2))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: opal-anchor-public-inputs
+          path: public-inputs/
+          retention-days: 7
+          if-no-files-found: error
