@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL v2 · Observer hue lab</title>
+<style>:root{color-scheme:dark;font:16px system-ui,sans-serif;background:#110d1a;color:#efe9fa}body{max-width:1080px;margin:auto;padding:24px}h1{font-size:32px;color:#e4b8ff;margin-bottom:4px}p{line-height:1.5;color:#cbbfdc}section{padding:20px;border:1px solid #654279;border-radius:15px;background:#1d152b;margin:18px 0}label{display:block;margin:12px 0;color:#99dfcb}input{width:80%;accent-color:#dc8cff}button{background:#413053;color:#f3dcff;border:1px solid #9b6bb1;border-radius:8px;padding:9px;margin:4px;cursor:pointer}canvas{max-width:100%;height:auto;border:1px solid #776284;border-radius:8px;background:#fff}.row{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:750px){.row{grid-template-columns:1fr}}small{color:#c4b5d1}code{color:#a2e7d3}a{color:#ceabfa}.tag{font-size:13px;letter-spacing:1px;color:#92d5c0}.note{border-left:3px solid #ad75d4;padding-left:14px}pre{white-space:pre-wrap;overflow-wrap:anywhere;color:#a2e7d3}</style>
+<nav aria-label="HRL versions" style="display:flex;gap:16px;flex-wrap:wrap;margin:0 0 22px;font-size:13px"><a href="../index.html" style="color:#8ee5c4">Release 1 picker</a><a href="index.html" style="color:#bd99ec">V2 research</a><a href="basr.html" style="color:#f08ac8">BASR 0.4</a><a href="native-0.2.html" style="color:#8ee5c4">Native 0.2</a><a href="README.md" style="color:#bd99ec">Library &amp; notes</a></nav><h1>HRL v2 · Observer hue lab</h1><div class="tag">COMPUTED RESEARCH FIELD 0.1 · OFFLINE VIEWER</div>
+<p>One smooth, invertible family of hue sheets. Both chromatic arms follow its distortion; the black–D65 axis remains straight. This viewer has the fitted coefficients embedded and makes no network requests.</p>
+<section><div id="seeds"></div><label>Field label φ: <strong id="hv"></strong>° <small>(an arbitrary label, not the Release 1 HRL angle)</small><br><input id="h" type="range" min="0" max="359.999" step="0.05"></label><label>Magnitude a for the chromaticity curve: <strong id="av"></strong><br><input id="a" type="range" min="0.01" max="1" step="0.01" value="1"></label></section>
+<div class="row"><section><h2>Constant-hue curve in xy</h2><canvas id="plot" width="500" height="520"></canvas><p>The closed outline is the declared 5 nm spectral/purple-boundary approximation. Dashed: sRGB. The highlighted curve keeps φ constant at the selected magnitude; it does not re-space the full ring.</p></section><section><h2>Equilateral sheet preview</h2><canvas id="sheet" width="400" height="370"></canvas><p>White top-left, black bottom-left, vivid right. Every sampled point is on the same fitted hue sheet. The R/L distribution is a carrier convention, not a perceptually fitted R/L model.</p><p class="note">The preview clips out-of-sRGB colors for your screen. Clipping does not change the underlying XYZ values. It is not a demonstration of how spectral colors actually look.</p></section></div>
+<section><h2>Selected full-domain vivid endpoint</h2><pre id="xyz"></pre><p>Both chromaticity and magnitude are reconstructed through the same field. The source datasets do not directly measure the whole outer boundary; that continuation remains a model estimate.</p></section>
+<section><h2>What was fitted</h2><p>306 Ebner–Fairchild matches, 36 Hung–Berns constant-lightness matches, 88 uncontested variable-lightness matches, and 104 same-hue relationships from a declared Munsell renotation subset. Eight suspect Hung–Berns rows remain quarantined and supplied in the source data.</p><p>Release 1 angular calibration is separate. The package includes a pinned-source extractor and a <code>ReleaseRing</code> adapter. The older accepted calibration table has not been substituted for the actual released ring.</p><p>This is the preserved 0.1 observer-field inspector. Its labels are not HRL angles. Later native 0.2 and BASR 0.4 pages attach the actual Release 1 angles. See <a href="README.md">the v2 notes</a> and <a href="docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.md">source audit</a>.</p></section>
+<script>__SOURCE__
+const field=new HueField(__RECORD__);
+const h=document.querySelector('#h'),a=document.querySelector('#a');
+const M=[[.4123907992659595,.357584339383878,.1804807884018343],[.2126390058715104,.715168678767756,.0721923153607337],[.0193308187155919,.119194779794626,.9505321522496607]];
+const MI=[[3.2409699419045226,-1.537383177570094,-.4986107602930034],[-.9692436362808796,1.8759675015077202,.0415550574071756],[.0556300796969937,-.2039769588889765,1.0569715142428786]];
+const mul=(m,x)=>m.map(r=>dot(r,x));
+for(const [name,rgb] of [['Red',[1,0,0]],['Orange',[1,.5,0]],['Yellow',[1,1,0]],['Green',[0,1,0]],['Cyan',[0,1,1]],['Blue',[0,0,1]],['Magenta',[1,0,1]]]){
+ const b=document.createElement('button');b.textContent=name;b.onclick=()=>{const linear=rgb.map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);h.value=field.label(mul(M,linear));update();};document.querySelector('#seeds').append(b);
+}
+h.value=field.label(mul(M,[0,0,1]));
+function drawPath(ctx,points,style,width=2,dashed=false){ctx.strokeStyle=style;ctx.lineWidth=width;ctx.setLineDash(dashed?[7,5]:[]);ctx.beginPath();points.forEach(([x,y],i)=>{const px=35+x/0.8*440,py=480-y/.85*440;if(i)ctx.lineTo(px,py);else ctx.moveTo(px,py)});ctx.stroke();ctx.setLineDash([]);}
+function update(){
+ const label=+h.value,mag=+a.value;document.querySelector('#hv').textContent=label.toFixed(2);document.querySelector('#av').textContent=mag.toFixed(2);
+ const ctx=document.querySelector('#plot').getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,500,520);
+ const bound=field.xyBoundary.concat([field.xyBoundary[0]]);drawPath(ctx,bound,'#36313d',2);drawPath(ctx,[[.64,.33],[.30,.60],[.15,.06],[.64,.33]],'#85818a',1.5,true);
+ const curve=Array.from({length:250},(_,i)=>{const xyz=field.sample(label,i/249,mag),sum=xyz.reduce((s,x)=>s+x,0);return [xyz[0]/sum,xyz[1]/sum];});drawPath(ctx,curve,'#9f28b6',3);
+ ctx.fillStyle='#332a3e';ctx.font='14px system-ui';ctx.fillText('CIE x',425,510);ctx.fillText('CIE y',8,23);ctx.fillText('D65',35+.3127/.8*440+8,480-.329/.85*440-6);
+ const output=document.querySelector('#sheet'),out=output.getContext('2d');out.fillStyle='#fff';out.fillRect(0,0,400,370);
+ const off=document.createElement('canvas');off.width=180;off.height=180;const oc=off.getContext('2d'),image=oc.createImageData(180,180);
+ for(let y=0;y<180;y++)for(let x=0;x<180;x++){
+   const R=(x-20)/(Math.sqrt(3)/2*154),z=(167-y)/154,L=z+R/2,index=4*(y*180+x);image.data[index+3]=255;
+   if(R<0||R>L||L>1){image.data[index]=image.data[index+1]=image.data[index+2]=255;continue;}
+   const xyz=field.triangle(label,R,L),lin=mul(MI,xyz);
+   for(let j=0;j<3;j++){const v=clamp(lin[j],0,1),encoded=v<=.0031308?12.92*v:1.055*v**(1/2.4)-.055;image.data[index+j]=Math.round(encoded*255);}
+ }
+ oc.putImageData(image,0,0);out.drawImage(off,0,0,360,360);out.fillStyle='#332a3e';out.font='14px system-ui';out.fillText('White',40,18);out.fillText('Black',40,355);out.fillText('Vivid',311,186);
+ const xyz=field.sample(label,1,1),sum=xyz.reduce((s,x)=>s+x,0);document.querySelector('#xyz').textContent=JSON.stringify({field_label:label,XYZ:xyz,xy:xyz.slice(0,2).map(x=>x/sum),pseudo_rgb16:field.encode16(xyz)},null,2);
+}
+let timer;function schedule(){clearTimeout(timer);timer=setTimeout(update,90)}h.oninput=schedule;a.oninput=schedule;update();
+</script></html>

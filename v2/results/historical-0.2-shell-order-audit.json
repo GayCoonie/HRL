@@ -1,0 +1,15 @@
+{
+  "sampled_shells": 1320,
+  "samples": 1900800,
+  "angular_samples_per_shell": 1440,
+  "minimum_total_shell_derivative_degrees_per_edge_parameter": 1.1162071704595773,
+  "maximum_total_shell_derivative": 268.51043456551014,
+  "minimum_consecutive_label_step_degrees": 0.004658561244355042,
+  "nonpositive_derivatives": 0,
+  "worst_location": {
+    "R": 1,
+    "L": 1,
+    "t": 3.941666666666667
+  },
+  "scope": "Dense finite audit, not an interval-arithmetic proof over the continuum. R/L extremes down to 1e-10 in both Level and R/L ratio included."
+}

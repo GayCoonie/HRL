@@ -63,3 +63,15 @@ npm test
 The test suite checks both profiles, the exact triangle corners, RGB/HRL and XYZ/HRL round trips, in-gamut output, and the regular-bicone metric.
 
 The Rec.2020 transfer is executable and invertible, but Release 1's observer fitting data was sRGB-based; wide-gamut observer accuracy has not yet been independently validated.
+
+
+<!-- HRL V2 RESEARCH -->
+## HRL v2 research (separate from Release 1)
+
+The root picker and `src/` library remain **R15-D Release 1**. New research pages and libraries live under `v2/`; they do not replace v1.
+
+- [BASR 0.4 picker](https://gaycoonie.github.io/HRL/v2/basr.html): Black-Anchored Semantic Remap.
+- [V2 research hub](https://gaycoonie.github.io/HRL/v2/): native 0.2 and observer 0.1 comparisons, version notes, and module links.
+- [V2 library and reproducibility](v2/README.md).
+
+Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1 entry point is unchanged.

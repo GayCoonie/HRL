@@ -1,0 +1,25 @@
+{
+  "scope": "Chromium set_content on standalone viewers. File/HTTP navigation is administratively blocked. V1 header layout checked without executing its unchanged scripts.",
+  "page_errors": [],
+  "missing_local_requests": [],
+  "BASR_gray_midpoint": "#777777",
+  "native_0_2_gray_midpoint": "#BCBCBC",
+  "imports": {
+    "#000000": "#000000",
+    "#FFFFFF": "#FFFFFF",
+    "#808080": "#808080",
+    "#FF0000": "#FF0000",
+    "#00FFFF": "#00FFFF",
+    "#0000FF": "#0000FF",
+    "#9A53C7": "#9A53C7"
+  },
+  "comparison": "72,980 samples \u00b7 0 out of gamut \u00b7 no clipping",
+  "desktop_horizontal_overflow": false,
+  "mobile_horizontal_overflow": false,
+  "v1_mobile_horizontal_overflow": false,
+  "v1_badge": "sRGB \u00b7 Release 1",
+  "module_check": {
+    "status": "Node module tests executed separately; browser module-loading not tested because navigation is administratively blocked"
+  },
+  "pass": true
+}

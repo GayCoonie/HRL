@@ -1,0 +1,78 @@
+{
+  "id": "HRL-v2-sRGB-native-0.2",
+  "field_sha256": "4b5c6af4bf3996275f39ddf99024d6d8357502f9be7782a4a0634a39f5a745d3",
+  "field_coefficients_changed": false,
+  "release_source": "77bfa09375ba8814f5caea3c3b05b2a9c96d1081",
+  "tests": {
+    "all_16bit_vivid_edges": {
+      "samples": 393210,
+      "max_encoded_channel_error": 1.4581904850263783e-9,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 5.986156199999999
+    },
+    "all_16bit_grays": {
+      "samples": 65536,
+      "max_encoded_channel_error": 2.220446049250313e-16,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 0.08794343500000014
+    },
+    "random_RGB8": {
+      "samples": 100000,
+      "max_encoded_channel_error": 1.364643127665932e-9,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 1.4885632759999998
+    },
+    "random_RGB16": {
+      "samples": 30000,
+      "max_encoded_channel_error": 7.111546074245467e-10,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 0.457447862
+    },
+    "random_continuous": {
+      "samples": 30000,
+      "max_encoded_channel_error": 3.711775331538547e-10,
+      "integer_mismatches": null,
+      "out_of_gamut": 0,
+      "seconds": 0.440395724
+    },
+    "all_unique_RGB8_boundary": {
+      "samples": 390152,
+      "max_encoded_channel_error": 1.3074572743909663e-9,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 6.8498199500000005
+    },
+    "release_anchors": {
+      "samples": 1530,
+      "max_encoded_channel_error": 1.148161878072873e-9,
+      "max_H_error": 7.73070496506989e-11,
+      "max_native_to_full_label_error": 2.7284841053187847e-12
+    },
+    "arms_and_interiors": {
+      "samples": 14040,
+      "defined_hue_samples": 13824,
+      "max_field_label_drift": 1.9906565285054967e-10,
+      "out_of_gamut": 0,
+      "neutral_axis_error": 0
+    },
+    "random_triangle_to_RGB_to_triangle": {
+      "samples": 30000,
+      "min_linear_channel": 0.000001933929113295818,
+      "max_linear_channel": 0.999913995154202,
+      "max_bicone_distance_error": 1.4775789666624726e-10
+    },
+    "equilateral_edges": [
+      1,
+      1,
+      1
+    ],
+    "out_of_gamut_imports_rejected": {
+      "trials": 3,
+      "rejected": 3
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "training_sources": {
+    "Ebner-Fairchild": {
+      "n": 306,
+      "mae_degrees": 1.8469599378834647,
+      "rms_degrees": 2.4035938887205153,
+      "p95_degrees": 4.370526187531922,
+      "max_degrees": 12.20199771501916,
+      "mean_delta_uv": 0.0036482583237853632
+    },
+    "Hung-Berns CL": {
+      "n": 36,
+      "mae_degrees": 1.8389423388913917,
+      "rms_degrees": 2.2467301059165017,
+      "p95_degrees": 4.329906016790332,
+      "max_degrees": 5.639020908258203,
+      "mean_delta_uv": 0.0024805412082851757
+    },
+    "Hung-Berns VL": {
+      "n": 88,
+      "mae_degrees": 2.9948910465816927,
+      "rms_degrees": 4.576607293722768,
+      "p95_degrees": 9.044947048272517,
+      "max_degrees": 19.28194077513797,
+      "mean_delta_uv": 0.005452883234796508
+    },
+    "Munsell subset": {
+      "n": 104,
+      "mae_degrees": 1.820547471259675,
+      "rms_degrees": 2.4821211919851693,
+      "p95_degrees": 5.3614576112288255,
+      "max_degrees": 8.966490287624111,
+      "mean_delta_uv": 0.0030049318459856103
+    }
+  },
+  "straight_ray_baseline": {
+    "Ebner-Fairchild": {
+      "n": 306,
+      "mae_degrees": 3.133405909006244,
+      "rms_degrees": 4.21571744805849,
+      "p95_degrees": 9.3562070866248,
+      "max_degrees": 13.16466090071674,
+      "mean_delta_uv": 0.005590231048236609
+    },
+    "Hung-Berns CL": {
+      "n": 36,
+      "mae_degrees": 4.519741719127293,
+      "rms_degrees": 5.764088713023839,
+      "p95_degrees": 12.424820450707308,
+      "max_degrees": 16.170539213859144,
+      "mean_delta_uv": 0.008002628275088743
+    },
+    "Hung-Berns VL": {
+      "n": 88,
+      "mae_degrees": 8.948275275865926,
+      "rms_degrees": 12.442707140558674,
+      "p95_degrees": 27.248016641177436,
+      "max_degrees": 38.30171001975688,
+      "mean_delta_uv": 0.015985064507174095
+    },
+    "Munsell subset": {
+      "n": 104,
+      "mae_degrees": 2.518454699351222,
+      "rms_degrees": 3.098167809035404,
+      "p95_degrees": 5.901561062850735,
+      "max_degrees": 8.78966699088599,
+      "mean_delta_uv": 0.004095830188184412
+    }
+  },
+  "whole_family_cv": [
+    {
+      "regularization": 0.01,
+      "balanced_rms_degrees": 4.799615933699451,
+      "mae_degrees": 2.856973900942342
+    },
+    {
+      "regularization": 0.05,
+      "balanced_rms_degrees": 4.709512200566346,
+      "mae_degrees": 2.8115411051339554
+    },
+    {
+      "regularization": 0.2,
+      "balanced_rms_degrees": 4.780211771549561,
+      "mae_degrees": 2.768149873286948
+    },
+    {
+      "regularization": 1.0,
+      "balanced_rms_degrees": 4.9822647157615485,
+      "mae_degrees": 2.848917354365695
+    }
+  ],
+  "chosen_regularization": 0.05,
+  "global_slope_bounds": [
+    0.3500000000502508,
+    2.538900439573262
+  ],
+  "optimizer": [
+    {
+      "iterations": 89,
+      "primal_residual": 0.0,
+      "barrier_duality_gap_bound": 4.718592e-05,
+      "method": "feasible log-barrier Newton convex quadratic solver"
+    },
+    {
+      "iterations": 91,
+      "primal_residual": 0.0,
+      "barrier_duality_gap_bound": 4.718592e-05,
+      "method": "feasible log-barrier Newton convex quadratic solver"
+    },
+    {
+      "iterations": 83,
+      "primal_residual": 0.0,
+      "barrier_duality_gap_bound": 4.718592e-05,
+      "method": "feasible log-barrier Newton convex quadratic solver"
+    },
+    {
+      "iterations": 87,
+      "primal_residual": 0.0,
+      "barrier_duality_gap_bound": 4.718592e-05,
+      "method": "feasible log-barrier Newton convex quadratic solver"
+    }
+  ],
+  "leave_experiment_out": {
+    "Ebner-Fairchild": {
+      "Ebner-Fairchild": {
+        "n": 306,
+        "mae_degrees": 3.040503084166126,
+        "rms_degrees": 4.054561123464169,
+        "p95_degrees": 7.652776786226099,
+        "max_degrees": 18.480692389719678,
+        "mean_delta_uv": 0.006124896957976168
+      },
+      "Hung-Berns CL": {
+        "n": 36,
+        "mae_degrees": 1.8303864381537325,
+        "rms_degrees": 2.23586930576878,
+        "p95_degrees": 4.015229093411655,
+        "max_degrees": 5.379821571324953,
+        "mean_delta_uv": 0.0027277633753225784
+      },
+      "Hung-Berns VL": {
+        "n": 88,
+        "mae_degrees": 2.1788559943140986,
+        "rms_degrees": 3.1903300303984645,
+        "p95_degrees": 7.538212238627295,
+        "max_degrees": 10.207777225989929,
+        "mean_delta_uv": 0.004441118752977669
+      },
+      "Munsell subset": {
+        "n": 104,
+        "mae_degrees": 2.1832238339376344,
+        "rms_degrees": 2.9121079322952683,
+        "p95_degrees": 5.947632366977375,
+        "max_degrees": 10.415142592537308,
+        "mean_delta_uv": 0.0033082304603976455
+      }
+    },
+    "Hung-Berns": {
+      "Ebner-Fairchild": {
+        "n": 306,
+        "mae_degrees": 1.4806105648128685,
+        "rms_degrees": 1.8687906577442521,
+        "p95_degrees": 3.64076075509049,
+        "max_degrees": 7.133326088441805,
+        "mean_delta_uv": 0.0028773561091255404
+      },
+      "Hung-Berns CL": {
+        "n": 36,
+        "mae_degrees": 3.2018622706517004,
+        "rms_degrees": 4.098191353974188,
+        "p95_degrees": 8.535184650384636,
+        "max_degrees": 9.721869996561736,
+        "mean_delta_uv": 0.0047737226301626905
+      },
+      "Hung-Berns VL": {
+        "n": 88,
+        "mae_degrees": 5.704377407417534,
+        "rms_degrees": 8.304034468443312,
+        "p95_degrees": 18.73608842687443,
+        "max_degrees": 23.723296627541856,
+        "mean_delta_uv": 0.010670180105681047
+      },
+      "Munsell subset": {
+        "n": 104,
+        "mae_degrees": 1.3245293689354478,
+        "rms_degrees": 1.745278574841449,
+        "p95_degrees": 3.40675423316163,
+        "max_degrees": 5.382232092227753,
+        "mean_delta_uv": 0.00220863035970084
+      }
+    },
+    "Munsell": {
+      "Ebner-Fairchild": {
+        "n": 306,
+        "mae_degrees": 1.8618243733470377,
+        "rms_degrees": 2.4500924803582076,
+        "p95_degrees": 4.814454219146974,
+        "max_degrees": 11.29695126022716,
+        "mean_delta_uv": 0.003527899623259579
+      },
+      "Hung-Berns CL": {
+        "n": 36,
+        "mae_degrees": 1.7275396240832634,
+        "rms_degrees": 2.1184279752859063,
+        "p95_degrees": 3.875485676410925,
+        "max_degrees": 5.266493236098825,
+        "mean_delta_uv": 0.0024611293705447245
+      },
+      "Hung-Berns VL": {
+        "n": 88,
+        "mae_degrees": 2.7627922320439295,
+        "rms_degrees": 4.32344669554265,
+        "p95_degrees": 9.073198300699325,
+        "max_degrees": 19.27110055128398,
+        "mean_delta_uv": 0.004902952259354326
+      },
+      "Munsell subset": {
+        "n": 104,
+        "mae_degrees": 2.4280041815335807,
+        "rms_degrees": 3.230671329303311,
+        "p95_degrees": 6.697119641075763,
+        "max_degrees": 10.905549701583652,
+        "mean_delta_uv": 0.00390710141592975
+      }
+    }
+  },
+  "cat16_refit": {
+    "Ebner-Fairchild": {
+      "n": 306,
+      "mae_degrees": 1.8384905746059725,
+      "rms_degrees": 2.347363145357926,
+      "p95_degrees": 4.25671702263962,
+      "max_degrees": 10.719985839620449,
+      "mean_delta_uv": 0.003623474303132482
+    },
+    "Hung-Berns CL": {
+      "n": 36,
+      "mae_degrees": 1.823429177561567,
+      "rms_degrees": 2.2295252843932403,
+      "p95_degrees": 4.356888212724158,
+      "max_degrees": 5.513368495407917,
+      "mean_delta_uv": 0.002434989980980598
+    },
+    "Hung-Berns VL": {
+      "n": 88,
+      "mae_degrees": 2.960656771366978,
+      "rms_degrees": 4.569901818528352,
+      "p95_degrees": 9.86952234022886,
+      "max_degrees": 18.579027448455093,
+      "mean_delta_uv": 0.00533748709516959
+    },
+    "Munsell subset": {
+      "n": 104,
+      "mae_degrees": 1.8402664914626048,
+      "rms_degrees": 2.4872703863484187,
+      "p95_degrees": 5.354306790321886,
+      "max_degrees": 8.764776165406602,
+      "mean_delta_uv": 0.0030120620726413676
+    }
+  },
+  "quarantine": {
+    "Hung-Berns VL": {
+      "n": 8,
+      "mae_degrees": 4.799709977570487,
+      "rms_degrees": 6.771487796071546,
+      "p95_degrees": 12.749595288552914,
+      "max_degrees": 13.873466448432339,
+      "mean_delta_uv": 0.0071314397751126805
+    }
+  },
+  "seconds": 33.45684313774109,
+  "fit_data_xyz_min_planes": 0.0040533361455734355
+}

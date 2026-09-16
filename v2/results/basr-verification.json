@@ -1,0 +1,95 @@
+{
+  "id": "HRL-v2-BASR-0.4",
+  "test_mode": "extended",
+  "field_sha256": "4b5c6af4bf3996275f39ddf99024d6d8357502f9be7782a4a0634a39f5a745d3",
+  "coefficients_changed": false,
+  "release_source": "77bfa09375ba8814f5caea3c3b05b2a9c96d1081",
+  "tests": {
+    "level_curve": {
+      "samples": 10001,
+      "max_inverse_error": 1.1102230246251565e-16,
+      "minimum_forward_step": 0.000011070564598791507,
+      "midpoint_linear": 0.18418651851244416
+    },
+    "remap_inverse": {
+      "samples": 20000,
+      "max_coordinate_error": 1.1102230246251565e-16,
+      "max_share_sum_error": 2.220446049250313e-16
+    },
+    "RGB8_random": {
+      "samples": 30000,
+      "max_encoded_channel_error": 3.753981500653758e-10,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 0.497371102
+    },
+    "RGB16_random": {
+      "samples": 30000,
+      "max_encoded_channel_error": 4.324411384537541e-10,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 0.4333540350000001
+    },
+    "continuous_srgb": {
+      "samples": 10000,
+      "max_encoded_channel_error": 1.6687434767348464e-10,
+      "integer_mismatches": null,
+      "out_of_gamut": 0,
+      "seconds": 0.14820017099999996
+    },
+    "RGB16_all_grays": {
+      "samples": 65536,
+      "max_encoded_channel_error": 4.440892098500626e-16,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 0.08551551900000004
+    },
+    "RGB16_all_vivid": {
+      "samples": 393210,
+      "max_encoded_channel_error": 1.4581904850263783e-9,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 5.436050697000001
+    },
+    "RGB8_all_unique_boundary": {
+      "samples": 390152,
+      "max_encoded_channel_error": 1.3074572743909663e-9,
+      "integer_mismatches": 0,
+      "out_of_gamut": 0,
+      "seconds": 5.601001097
+    },
+    "release_anchors": {
+      "samples": 1530,
+      "max_encoded_channel_error": 1.148161878072873e-9,
+      "max_H_error": 7.73070496506989e-11,
+      "unchanged_vs_parent": true
+    },
+    "arms": {
+      "boundary_points": 2352,
+      "neutral_axis_error": 0,
+      "min_channel_black_arm": 0,
+      "max_channel_white_arm_error": 0,
+      "max_defined_hue_label_error": 1.9804247131105512e-10
+    },
+    "full_domain": {
+      "triangle_roundtrips": 5000,
+      "pseudo_RGB16_roundtrips": 5000,
+      "max_bicone_error": 9.320551167612748e-13,
+      "integer_mismatches": 0
+    },
+    "edges": [
+      1,
+      1,
+      1
+    ],
+    "invalid_inputs": {
+      "rejected": 7
+    }
+  },
+  "limitations": [
+    "Computational tests, not new observer accuracy or COMBVD measurements.",
+    "No exhaustive test of the whole RGB8 cube or 2^48 full carrier.",
+    "0.2 shell-order audit is inherited under the invertible R/L remap."
+  ],
+  "pass": true
+}
