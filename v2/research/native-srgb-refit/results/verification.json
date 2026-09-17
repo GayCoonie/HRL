@@ -1,0 +1,65 @@
+{
+  "construction": "native sRGB own-anchor source atlas; shared physical hue field/ring; independently fitted native coefficients; no clipped full-domain mapping",
+  "hashes": {
+    "../../a-smooth/source-srgb.json": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5",
+    "../../data/hue-field-0.6.json": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+    "../../data/release1-angles.json": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+    "../rl-c1/atlas.mjs": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+    "../relative-domain/geometry.mjs": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+    "../relative-domain/context.mjs": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+    "../relative-refit/results/balanced.json": "eba7d8fe0a577a1c077f4fef3342acbc14ba22f518213202e02ff811e9114fc7",
+    "../relative-refit/results/metric.json": "489a8bb02195e92d698632c873135d5613727edef4e4275c239f209011a13e78"
+  },
+  "models": {
+    "balanced": {
+      "weighted_stress": 26.156618166169306,
+      "unweighted_stress": 27.735136201422623,
+      "pairs": 3331,
+      "mask_sha256": "c968b71d1718ee7ba973e4fc5a76aea31fc74856a35f0d369042449338384fdb",
+      "mapped_inputs": 0,
+      "record_sha256": "324ecd9c88bbfd0a19897e7df493bfde150680bd99b6956cd41f3b55f09acd1a",
+      "random_triangles": 8192,
+      "max_embedding_roundtrip_error": 1.3922807351463007e-11,
+      "max_hue_change_degrees": 0,
+      "unchanged_vivid_samples": 720,
+      "max_neutral_change": 0,
+      "integer16_tests": 4096,
+      "integer16_errors": 0,
+      "gray8_tests": 256,
+      "min_encoded_channel": 2.4980164594451305e-9,
+      "max_encoded_channel": 0.999876984236879,
+      "max_change_vs_old_native": 0.29591215838084095,
+      "referenceWhite100vs300MaxDifference": 0
+    },
+    "metric": {
+      "weighted_stress": 25.272446083259087,
+      "unweighted_stress": 26.976822009263934,
+      "pairs": 3331,
+      "mask_sha256": "c968b71d1718ee7ba973e4fc5a76aea31fc74856a35f0d369042449338384fdb",
+      "mapped_inputs": 0,
+      "record_sha256": "6920d121fae4ccd91ff1c77f2bb8ea9790f07f8693289f80f3d42d432d992e06",
+      "random_triangles": 8192,
+      "max_embedding_roundtrip_error": 2.4689417177370387e-11,
+      "max_hue_change_degrees": 0,
+      "unchanged_vivid_samples": 720,
+      "max_neutral_change": 0,
+      "integer16_tests": 4096,
+      "integer16_errors": 0,
+      "gray8_tests": 256,
+      "min_encoded_channel": 6.300529887394756e-8,
+      "max_encoded_channel": 0.999898629807647,
+      "max_change_vs_old_native": 0.4005857953111549,
+      "referenceWhite100vs300MaxDifference": 0
+    }
+  },
+  "fullProfilesPreserved": {
+    "balanced": {
+      "samples": 1024,
+      "maxXYZChange": 0
+    },
+    "metric": {
+      "samples": 1024,
+      "maxXYZChange": 0
+    }
+  }
+}

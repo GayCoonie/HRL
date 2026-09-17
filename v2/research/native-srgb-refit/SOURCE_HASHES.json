@@ -1,0 +1,15 @@
+{
+  "v2/a-smooth/index.mjs": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+  "v2/a-smooth/source-srgb.json": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5",
+  "v2/a-smooth/rl-core.mjs": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+  "v2/data/hue-field-0.6.json": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+  "v2/data/release1-angles.json": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+  "v2/lib/srgb-triangles.mjs": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+  "v2/lib/research.mjs": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+  "v2/research/rl-c1/atlas.mjs": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+  "v2/research/relative-domain/geometry.mjs": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+  "v2/research/relative-domain/context.mjs": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+  "v2/research/relative-refit/index.mjs": "12f28047fde56084c63bd52b430eb38d0b53c88a4b71bddfcf7f4342b3f27f32",
+  "v2/research/relative-refit/results/balanced.json": "eba7d8fe0a577a1c077f4fef3342acbc14ba22f518213202e02ff811e9114fc7",
+  "v2/research/relative-refit/results/metric.json": "489a8bb02195e92d698632c873135d5613727edef4e4275c239f209011a13e78"
+}

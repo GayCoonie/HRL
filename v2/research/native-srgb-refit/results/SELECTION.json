@@ -1,0 +1,24 @@
+{
+  "id": "native-sRGB-refit-selection",
+  "selected_before_scored_evaluation": true,
+  "selection_rule": "Same regularization-strength distinction as full counterparts: balanced strength 0.2, metric-leaning strength 0.1. Both improve exact generated native paths against previous C1. Pure metric-only control is not selected because ramps regress.",
+  "full_profiles_unchanged": true,
+  "sources": {
+    "v2/a-smooth/source-srgb.json": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5",
+    "v2/data/hue-field-0.6.json": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+    "v2/data/release1-angles.json": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+    "v2/research/rl-c1/atlas.mjs": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9"
+  },
+  "models": {
+    "balanced": {
+      "trial": "native_smooth20",
+      "sha256": "324ecd9c88bbfd0a19897e7df493bfde150680bd99b6956cd41f3b55f09acd1a",
+      "weighted_fit_STRESS": 26.156618166167693
+    },
+    "metric": {
+      "trial": "native_smooth10",
+      "sha256": "6920d121fae4ccd91ff1c77f2bb8ea9790f07f8693289f80f3d42d432d992e06",
+      "weighted_fit_STRESS": 25.272446083257922
+    }
+  }
+}

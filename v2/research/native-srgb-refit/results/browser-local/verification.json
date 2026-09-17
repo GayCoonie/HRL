@@ -1,0 +1,15 @@
+{
+  "baseURL": "http://127.0.0.1:8765/",
+  "liveGitHubPages": false,
+  "rootNavigationChecked": true,
+  "panels": 3,
+  "nativeTrianglesUnclipped": true,
+  "bothGamutsRendered": true,
+  "hexImport": true,
+  "metricColorJSONExport": true,
+  "measurementRows": 16,
+  "maskSwitch": true,
+  "mobileNoOverflow": true,
+  "errors": [],
+  "chromium": "143.0.7499.4"
+}

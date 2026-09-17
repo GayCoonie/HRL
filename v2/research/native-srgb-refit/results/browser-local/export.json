@@ -1,0 +1,23 @@
+{
+  "profile": "HRL-0.9-dual-gamut-refits",
+  "gamut": "srgb",
+  "checkpoint": "metric",
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.4401674612129321,
+    "L": 0.45410921425365425
+  },
+  "relativeXYZ": [
+    0.24407517578540694,
+    0.12410726600766839,
+    0.7267794130780022
+  ],
+  "displaySRGB8": [
+    134,
+    45,
+    225
+  ],
+  "displayClipped": false
+}

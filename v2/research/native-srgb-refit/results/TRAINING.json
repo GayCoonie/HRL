@@ -1,0 +1,189 @@
+{
+  "versions": {
+    "torch": "2.10.0+cpu",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "trials": {
+    "native_metric": {
+      "parent": "native sRGB C1 with own sRGB B/W/V source atlas",
+      "fit": {
+        "iterations": 700,
+        "mode": "metric",
+        "fine": false,
+        "start": "baseline",
+        "layers": 3,
+        "strength": 0,
+        "name": "native_metric"
+      },
+      "frozen": [
+        "carrier",
+        "physical solid",
+        "hue field and high-magnitude continuation",
+        "hue ring",
+        "native sRGB source atlas",
+        "full-gamut definitions",
+        "neutral shift"
+      ],
+      "human_training": [
+        "COMBVD"
+      ],
+      "not_used_for_training": [
+        "OSA-UCS",
+        "MacAdam1974",
+        "Xiao",
+        "threshold/tolerance data"
+      ],
+      "proxy": "Oklab of exact source XYZ cached on 48x161x161 grid; bilinear interpolation only in optimization regularizer, never production runtime",
+      "cache_sha256": "9ef155d4a57f185844dca64082488712cd6fea2c9192c66ff7ac3473c634468f",
+      "metrics": {
+        "weighted_stress": 24.609360206368844,
+        "cv2": 0.0,
+        "rough2": 0.0,
+        "tail2": 0.0,
+        "monoY": 0.0,
+        "monoC": 0.0,
+        "coefficient_penalty": 2.028600072292686e-05,
+        "visual": 0.0,
+        "loss": 0.06058234697740397
+      },
+      "evaluations": 707,
+      "seconds": 7.260134717
+    },
+    "native_smooth03": {
+      "parent": "native sRGB C1 with own sRGB B/W/V source atlas",
+      "fit": {
+        "iterations": 600,
+        "mode": "visual",
+        "fine": true,
+        "start": "results/native_metric.json",
+        "layers": 3,
+        "strength": 0.03,
+        "name": "native_smooth03"
+      },
+      "frozen": [
+        "carrier",
+        "physical solid",
+        "hue field and high-magnitude continuation",
+        "hue ring",
+        "native sRGB source atlas",
+        "full-gamut definitions",
+        "neutral shift"
+      ],
+      "human_training": [
+        "COMBVD"
+      ],
+      "not_used_for_training": [
+        "OSA-UCS",
+        "MacAdam1974",
+        "Xiao",
+        "threshold/tolerance data"
+      ],
+      "proxy": "Oklab of exact source XYZ cached on 48x161x161 grid; bilinear interpolation only in optimization regularizer, never production runtime",
+      "cache_sha256": "9ef155d4a57f185844dca64082488712cd6fea2c9192c66ff7ac3473c634468f",
+      "metrics": {
+        "weighted_stress": 24.780623382908487,
+        "cv2": 0.2172003551479039,
+        "rough2": 0.00919372508771782,
+        "tail2": 0.02614577462372241,
+        "monoY": 0.014241695862747641,
+        "monoC": 0.019665393576574017,
+        "coefficient_penalty": 2.92710312625043e-05,
+        "visual": 0.25416144530478746,
+        "loss": 0.06906204391496122
+      },
+      "evaluations": 608,
+      "seconds": 36.421783155000014
+    },
+    "native_smooth10": {
+      "parent": "native sRGB C1 with own sRGB B/W/V source atlas",
+      "fit": {
+        "iterations": 850,
+        "mode": "visual",
+        "fine": true,
+        "start": "results/native_smooth03.json",
+        "layers": 3,
+        "strength": 0.1,
+        "name": "native_smooth10"
+      },
+      "frozen": [
+        "carrier",
+        "physical solid",
+        "hue field and high-magnitude continuation",
+        "hue ring",
+        "native sRGB source atlas",
+        "full-gamut definitions",
+        "neutral shift"
+      ],
+      "human_training": [
+        "COMBVD"
+      ],
+      "not_used_for_training": [
+        "OSA-UCS",
+        "MacAdam1974",
+        "Xiao",
+        "threshold/tolerance data"
+      ],
+      "proxy": "Oklab of exact source XYZ cached on 48x161x161 grid; bilinear interpolation only in optimization regularizer, never production runtime",
+      "cache_sha256": "9ef155d4a57f185844dca64082488712cd6fea2c9192c66ff7ac3473c634468f",
+      "metrics": {
+        "weighted_stress": 25.272446083257922,
+        "cv2": 0.1421392854538892,
+        "rough2": 0.006997326429591952,
+        "tail2": 0.0144456003150843,
+        "monoY": 0.0028479428605817296,
+        "monoC": 0.002778751159801399,
+        "coefficient_penalty": 2.257714288801347e-05,
+        "visual": 0.16186399761208542,
+        "loss": 0.08007863000721444
+      },
+      "evaluations": 869,
+      "seconds": 51.73047889099999
+    },
+    "native_smooth20": {
+      "parent": "native sRGB C1 with own sRGB B/W/V source atlas",
+      "fit": {
+        "iterations": 850,
+        "mode": "visual",
+        "fine": true,
+        "start": "results/native_smooth03.json",
+        "layers": 3,
+        "strength": 0.2,
+        "name": "native_smooth20"
+      },
+      "frozen": [
+        "carrier",
+        "physical solid",
+        "hue field and high-magnitude continuation",
+        "hue ring",
+        "native sRGB source atlas",
+        "full-gamut definitions",
+        "neutral shift"
+      ],
+      "human_training": [
+        "COMBVD"
+      ],
+      "not_used_for_training": [
+        "OSA-UCS",
+        "MacAdam1974",
+        "Xiao",
+        "threshold/tolerance data"
+      ],
+      "proxy": "Oklab of exact source XYZ cached on 48x161x161 grid; bilinear interpolation only in optimization regularizer, never production runtime",
+      "cache_sha256": "9ef155d4a57f185844dca64082488712cd6fea2c9192c66ff7ac3473c634468f",
+      "metrics": {
+        "weighted_stress": 26.156618166167693,
+        "cv2": 0.10500237254902789,
+        "rough2": 0.005851234825584191,
+        "tail2": 0.010354027620129977,
+        "monoY": 0.0016013516465414907,
+        "monoC": 0.003950620837256103,
+        "coefficient_penalty": 2.404940678301413e-05,
+        "visual": 0.12108168013781354,
+        "loss": 0.0926572528234151
+      },
+      "evaluations": 890,
+      "seconds": 52.839470121999994
+    }
+  }
+}

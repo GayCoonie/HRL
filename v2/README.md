@@ -1,5 +1,21 @@
 # HRL v2 research: Black-Anchored Semantic Remap
 
+<!-- HRL DUAL REFITS START -->
+## Current v2 refits: native sRGB and full gamut
+
+[Open the live refit lab](https://gaycoonie.github.io/HRL/v2/refits.html) · [Native construction and fitting](research/native-srgb-refit/README.md) · [Native scored report](research/native-srgb-refit/results/REPORT.md) · [Full scored report](research/relative-refit/results/REPORT.md).
+
+Both balanced/smoother and metric-leaning profiles now have genuine native-sRGB calibrations. The native vivid endpoints and source maps belong to sRGB, not a clipped full solid. The full-gamut refits are unchanged. The new page defaults to native sRGB, includes a gamut switch, color selection/export, and both scored benchmark tables. These are named research checkpoints, not a replacement of Release 1 or the approved A Smooth prototype.
+
+```js
+import {createHRLRefits} from './refits.mjs';
+const native = await createHRLRefits({gamut:'srgb', checkpoint:'balanced'});
+const metric = await createHRLRefits({gamut:'srgb', checkpoint:'metric'});
+const full = await createHRLRefits({gamut:'full', checkpoint:'balanced'});
+```
+
+<!-- HRL DUAL REFITS END -->
+
 <!-- HRL A SMOOTH APPROVED -->
 ## Approved v2 prototype: A Smooth
 
