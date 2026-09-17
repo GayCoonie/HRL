@@ -1,0 +1,22 @@
+{
+  "srgb-parent": {
+    "n": 3331,
+    "weighted_stress": 27.904984430692874,
+    "max_roundtrip_error": 4.5094483702712296e-12
+  },
+  "srgb-smooth": {
+    "n": 3331,
+    "weighted_stress": 28.1714765392707,
+    "max_roundtrip_error": 6.989395173739865e-12
+  },
+  "full-parent": {
+    "n": 3813,
+    "weighted_stress": 28.61658373782997,
+    "max_roundtrip_error": 8.01581023779363e-14
+  },
+  "full-smooth": {
+    "n": 3813,
+    "weighted_stress": 28.968100133546905,
+    "max_roundtrip_error": 7.11826431132323e-14
+  }
+}

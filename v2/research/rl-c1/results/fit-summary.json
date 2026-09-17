@@ -1,0 +1,539 @@
+{
+  "2p0": {
+    "strength": 2.0,
+    "profiles": {
+      "srgb": {
+        "weighted_stress": 27.608976563266925,
+        "grid_rms": 0.007381517748077813,
+        "grid_max": 0.04193309863576483,
+        "relative_gradient_rms": 0.03877327491604389,
+        "relative_curvature_rms": 0.5163525368726926,
+        "geometry_penalty": 0.00046587866640197616
+      },
+      "full": {
+        "weighted_stress": 28.489587944394685,
+        "grid_rms": 0.006958067029126746,
+        "grid_max": 0.04042187333193131,
+        "relative_gradient_rms": 0.044184679662493176,
+        "relative_curvature_rms": 0.514092915351506,
+        "geometry_penalty": 0.0004523106833914944
+      }
+    },
+    "seconds": 2.3667891210000107,
+    "evaluations": 124,
+    "trace": [
+      {
+        "call": 1,
+        "loss": 0.08164735602107934,
+        "profiles": [
+          {
+            "weighted_stress": 28.171476539268745,
+            "grid_rms": 0.00012613822112071682,
+            "grid_max": 0.0026746484095138134,
+            "relative_gradient_rms": 0.0024115868029897345,
+            "relative_curvature_rms": 0.060499817783991154,
+            "geometry_penalty": 2.1422982664197303e-06
+          },
+          {
+            "weighted_stress": 28.9681001335461,
+            "grid_rms": 0.0003120161393975478,
+            "grid_max": 0.018385898047791838,
+            "relative_gradient_rms": 0.005393347922320958,
+            "relative_curvature_rms": 0.09399613713438416,
+            "geometry_penalty": 6.0679353267638784e-06
+          }
+        ]
+      },
+      {
+        "call": 21,
+        "loss": 0.08020283452678757,
+        "profiles": [
+          {
+            "weighted_stress": 27.756966458408016,
+            "grid_rms": 0.0067337136467768635,
+            "grid_max": 0.043793589583285886,
+            "relative_gradient_rms": 0.03268317110490159,
+            "relative_curvature_rms": 0.3873196908454785,
+            "geometry_penalty": 0.00034445035578115437
+          },
+          {
+            "weighted_stress": 28.655028789290988,
+            "grid_rms": 0.005909825663624942,
+            "grid_max": 0.03329227130481954,
+            "relative_gradient_rms": 0.03166683760314224,
+            "relative_curvature_rms": 0.3617524679561618,
+            "geometry_penalty": 0.0002801741650597382
+          }
+        ]
+      },
+      {
+        "call": 41,
+        "loss": 0.07986931018139655,
+        "profiles": [
+          {
+            "weighted_stress": 27.688567169252064,
+            "grid_rms": 0.006929158115655556,
+            "grid_max": 0.03916926482564387,
+            "relative_gradient_rms": 0.034367436712491206,
+            "relative_curvature_rms": 0.429002428777203,
+            "geometry_penalty": 0.0003793325311546294
+          },
+          {
+            "weighted_stress": 28.55524614208493,
+            "grid_rms": 0.006819526686141784,
+            "grid_max": 0.037066974648232276,
+            "relative_gradient_rms": 0.03908096292368213,
+            "relative_curvature_rms": 0.42976347669755327,
+            "geometry_penalty": 0.00038597091058827256
+          }
+        ]
+      },
+      {
+        "call": 61,
+        "loss": 0.079746336305755,
+        "profiles": [
+          {
+            "weighted_stress": 27.656639876331923,
+            "grid_rms": 0.0070712766252294425,
+            "grid_max": 0.040536645120235526,
+            "relative_gradient_rms": 0.03557727840484331,
+            "relative_curvature_rms": 0.4478504455900607,
+            "geometry_penalty": 0.00040092948590801864
+          },
+          {
+            "weighted_stress": 28.53528386415089,
+            "grid_rms": 0.006616998467175923,
+            "grid_max": 0.036679704104327415,
+            "relative_gradient_rms": 0.04054380952926889,
+            "relative_curvature_rms": 0.45010466928029336,
+            "geometry_penalty": 0.0003859724698728291
+          }
+        ]
+      },
+      {
+        "call": 81,
+        "loss": 0.07968566455159637,
+        "profiles": [
+          {
+            "weighted_stress": 27.639905352623796,
+            "grid_rms": 0.007123632122090176,
+            "grid_max": 0.040997425918256114,
+            "relative_gradient_rms": 0.03630814208139234,
+            "relative_curvature_rms": 0.47045508782498024,
+            "geometry_penalty": 0.0004171259151406828
+          },
+          {
+            "weighted_stress": 28.51345864496291,
+            "grid_rms": 0.006720927440113483,
+            "grid_max": 0.03807643145486167,
+            "relative_gradient_rms": 0.04218580316920757,
+            "relative_curvature_rms": 0.49017649680401537,
+            "geometry_penalty": 0.00041717650684712526
+          }
+        ]
+      },
+      {
+        "call": 101,
+        "loss": 0.07964214534871834,
+        "profiles": [
+          {
+            "weighted_stress": 27.625109780784168,
+            "grid_rms": 0.007174353914717344,
+            "grid_max": 0.04161069811127671,
+            "relative_gradient_rms": 0.03720667532396762,
+            "relative_curvature_rms": 0.49244475066362325,
+            "geometry_penalty": 0.00043398115424270504
+          },
+          {
+            "weighted_stress": 28.50286900605526,
+            "grid_rms": 0.006779401425474089,
+            "grid_max": 0.0391431881079885,
+            "relative_gradient_rms": 0.04279027955156358,
+            "relative_curvature_rms": 0.49835734367322176,
+            "geometry_penalty": 0.0004272217603991538
+          }
+        ]
+      },
+      {
+        "call": 121,
+        "loss": 0.07962033505310522,
+        "profiles": [
+          {
+            "weighted_stress": 27.61272611476604,
+            "grid_rms": 0.007312939000140326,
+            "grid_max": 0.04179860808969821,
+            "relative_gradient_rms": 0.038368130239524734,
+            "relative_curvature_rms": 0.5114279052074447,
+            "geometry_penalty": 0.00045705917193438985
+          },
+          {
+            "weighted_stress": 28.49077853864434,
+            "grid_rms": 0.006937775202340535,
+            "grid_max": 0.04024806416642901,
+            "relative_gradient_rms": 0.04412382634910564,
+            "relative_curvature_rms": 0.513537584547113,
+            "geometry_penalty": 0.00045040053122973896
+          }
+        ]
+      }
+    ]
+  },
+  "0p5": {
+    "strength": 0.5,
+    "profiles": {
+      "srgb": {
+        "weighted_stress": 27.39982658329515,
+        "grid_rms": 0.013211309174802763,
+        "grid_max": 0.09413074744934885,
+        "relative_gradient_rms": 0.07667632254418859,
+        "relative_curvature_rms": 1.1124435405392952,
+        "geometry_penalty": 0.0017266291035609575
+      },
+      "full": {
+        "weighted_stress": 28.202909089723626,
+        "grid_rms": 0.014973184614450227,
+        "grid_max": 0.0937472709845234,
+        "relative_gradient_rms": 0.0996389700787551,
+        "relative_curvature_rms": 1.2053265247341851,
+        "geometry_penalty": 0.002244504277440141
+      }
+    },
+    "seconds": 2.3816003609999825,
+    "evaluations": 127,
+    "trace": [
+      {
+        "call": 1,
+        "loss": 0.08164119834588446,
+        "profiles": [
+          {
+            "weighted_stress": 28.171476539268745,
+            "grid_rms": 0.00012613822112071682,
+            "grid_max": 0.0026746484095138134,
+            "relative_gradient_rms": 0.0024115868029897345,
+            "relative_curvature_rms": 0.060499817783991154,
+            "geometry_penalty": 2.1422982664197303e-06
+          },
+          {
+            "weighted_stress": 28.9681001335461,
+            "grid_rms": 0.0003120161393975478,
+            "grid_max": 0.018385898047791838,
+            "relative_gradient_rms": 0.005393347922320958,
+            "relative_curvature_rms": 0.09399613713438416,
+            "geometry_penalty": 6.0679353267638784e-06
+          }
+        ]
+      },
+      {
+        "call": 21,
+        "loss": 0.07944386697582602,
+        "profiles": [
+          {
+            "weighted_stress": 27.6613311473768,
+            "grid_rms": 0.010780335829299813,
+            "grid_max": 0.07579447435662146,
+            "relative_gradient_rms": 0.05500382569505214,
+            "relative_curvature_rms": 0.6505620942226302,
+            "geometry_penalty": 0.0009137105558257608
+          },
+          {
+            "weighted_stress": 28.51851689138597,
+            "grid_rms": 0.012416574587773115,
+            "grid_max": 0.06966766733161411,
+            "relative_gradient_rms": 0.0628805036145355,
+            "relative_curvature_rms": 0.692032318990112,
+            "geometry_penalty": 0.001168469297124786
+          }
+        ]
+      },
+      {
+        "call": 41,
+        "loss": 0.07898599254488839,
+        "profiles": [
+          {
+            "weighted_stress": 27.56802876503587,
+            "grid_rms": 0.011133778574789564,
+            "grid_max": 0.0690498365992403,
+            "relative_gradient_rms": 0.062287554943797716,
+            "relative_curvature_rms": 0.8436194871096224,
+            "geometry_penalty": 0.0011308416263128315
+          },
+          {
+            "weighted_stress": 28.411408790359598,
+            "grid_rms": 0.012623101242841444,
+            "grid_max": 0.056376978048116366,
+            "relative_gradient_rms": 0.07244679117052136,
+            "relative_curvature_rms": 0.8455790570007921,
+            "geometry_penalty": 0.0013641568977905056
+          }
+        ]
+      },
+      {
+        "call": 61,
+        "loss": 0.07866639976159646,
+        "profiles": [
+          {
+            "weighted_stress": 27.49813822216388,
+            "grid_rms": 0.012236916597868257,
+            "grid_max": 0.08644955917983871,
+            "relative_gradient_rms": 0.06573165429096932,
+            "relative_curvature_rms": 0.8751403718930356,
+            "geometry_penalty": 0.001304471989407559
+          },
+          {
+            "weighted_stress": 28.32555327683048,
+            "grid_rms": 0.013892202272383455,
+            "grid_max": 0.0748994258725793,
+            "relative_gradient_rms": 0.08094953455878265,
+            "relative_curvature_rms": 0.9155069868938123,
+            "geometry_penalty": 0.0016461560272211155
+          }
+        ]
+      },
+      {
+        "call": 81,
+        "loss": 0.07851507626083307,
+        "profiles": [
+          {
+            "weighted_stress": 27.46570380337981,
+            "grid_rms": 0.012318588187800324,
+            "grid_max": 0.07601268046317389,
+            "relative_gradient_rms": 0.06732387193270983,
+            "relative_curvature_rms": 0.9193013808372185,
+            "geometry_penalty": 0.0013625957383881534
+          },
+          {
+            "weighted_stress": 28.28001430484314,
+            "grid_rms": 0.014144901351474504,
+            "grid_max": 0.08597987551657194,
+            "relative_gradient_rms": 0.08796124494719647,
+            "relative_curvature_rms": 1.0387699912521748,
+            "geometry_penalty": 0.0018493999430841757
+          }
+        ]
+      },
+      {
+        "call": 101,
+        "loss": 0.07840893153957215,
+        "profiles": [
+          {
+            "weighted_stress": 27.43672673066947,
+            "grid_rms": 0.012570434405242057,
+            "grid_max": 0.08374187676463796,
+            "relative_gradient_rms": 0.07070107528076935,
+            "relative_curvature_rms": 0.9894554563223252,
+            "geometry_penalty": 0.0014795358375397573
+          },
+          {
+            "weighted_stress": 28.256253662634716,
+            "grid_rms": 0.013948240556823192,
+            "grid_max": 0.0845282775556419,
+            "relative_gradient_rms": 0.08996539469672349,
+            "relative_curvature_rms": 1.088241889030742,
+            "geometry_penalty": 0.0018886531673931255
+          }
+        ]
+      },
+      {
+        "call": 121,
+        "loss": 0.07833044770002816,
+        "profiles": [
+          {
+            "weighted_stress": 27.40844454735283,
+            "grid_rms": 0.012975209325126235,
+            "grid_max": 0.09458133321027201,
+            "relative_gradient_rms": 0.07544075262616069,
+            "relative_curvature_rms": 1.0901651012122997,
+            "geometry_penalty": 0.0016636625453768888
+          },
+          {
+            "weighted_stress": 28.210242925931865,
+            "grid_rms": 0.01504535806066336,
+            "grid_max": 0.09317793104684258,
+            "relative_gradient_rms": 0.09808681068661604,
+            "relative_curvature_rms": 1.1768447849157981,
+            "geometry_penalty": 0.0022091367169864776
+          }
+        ]
+      }
+    ]
+  },
+  "0p125": {
+    "strength": 0.125,
+    "profiles": {
+      "srgb": {
+        "weighted_stress": 27.32121989725912,
+        "grid_rms": 0.018280791674180296,
+        "grid_max": 0.12957531295266672,
+        "relative_gradient_rms": 0.12014788265222903,
+        "relative_curvature_rms": 1.7729452201413836,
+        "geometry_penalty": 0.0038200246462175395
+      },
+      "full": {
+        "weighted_stress": 27.99982901831014,
+        "grid_rms": 0.024221474363958873,
+        "grid_max": 0.14651459199565353,
+        "relative_gradient_rms": 0.16663078219880265,
+        "relative_curvature_rms": 2.1473709952852733,
+        "geometry_penalty": 0.00634963290056321
+      }
+    },
+    "seconds": 2.600451698000029,
+    "evaluations": 127,
+    "trace": [
+      {
+        "call": 1,
+        "loss": 0.08163965892708573,
+        "profiles": [
+          {
+            "weighted_stress": 28.171476539268745,
+            "grid_rms": 0.00012613822112071682,
+            "grid_max": 0.0026746484095138134,
+            "relative_gradient_rms": 0.0024115868029897345,
+            "relative_curvature_rms": 0.060499817783991154,
+            "geometry_penalty": 2.1422982664197303e-06
+          },
+          {
+            "weighted_stress": 28.9681001335461,
+            "grid_rms": 0.0003120161393975478,
+            "grid_max": 0.018385898047791838,
+            "relative_gradient_rms": 0.005393347922320958,
+            "relative_curvature_rms": 0.09399613713438416,
+            "geometry_penalty": 6.0679353267638784e-06
+          }
+        ]
+      },
+      {
+        "call": 21,
+        "loss": 0.07907784247540235,
+        "profiles": [
+          {
+            "weighted_stress": 27.65542481766421,
+            "grid_rms": 0.013514131701820146,
+            "grid_max": 0.09401529300793993,
+            "relative_gradient_rms": 0.07141382805564878,
+            "relative_curvature_rms": 0.845138990904645,
+            "geometry_penalty": 0.0014742861287468326
+          },
+          {
+            "weighted_stress": 28.49303656209015,
+            "grid_rms": 0.017616819015218645,
+            "grid_max": 0.13018266446396848,
+            "relative_gradient_rms": 0.08968179474339502,
+            "relative_curvature_rms": 1.0424930555380518,
+            "geometry_penalty": 0.0024168704188332352
+          }
+        ]
+      },
+      {
+        "call": 41,
+        "loss": 0.07839855311931189,
+        "profiles": [
+          {
+            "weighted_stress": 27.531285200960404,
+            "grid_rms": 0.014608627012664794,
+            "grid_max": 0.09122084739720893,
+            "relative_gradient_rms": 0.09200186196749398,
+            "relative_curvature_rms": 1.2582536079041253,
+            "geometry_penalty": 0.002197234691097104
+          },
+          {
+            "weighted_stress": 28.322806243889243,
+            "grid_rms": 0.02168166282412589,
+            "grid_max": 0.1186845079313501,
+            "relative_gradient_rms": 0.12090621254077628,
+            "relative_curvature_rms": 1.4657688474017967,
+            "geometry_penalty": 0.004009444160340424
+          }
+        ]
+      },
+      {
+        "call": 61,
+        "loss": 0.07802127476433102,
+        "profiles": [
+          {
+            "weighted_stress": 27.453634004111006,
+            "grid_rms": 0.016164675975403452,
+            "grid_max": 0.11408803647382298,
+            "relative_gradient_rms": 0.10526393678106087,
+            "relative_curvature_rms": 1.4645558660448659,
+            "geometry_penalty": 0.0028221655447980285
+          },
+          {
+            "weighted_stress": 28.226031352133056,
+            "grid_rms": 0.02456552331950597,
+            "grid_max": 0.12344613293071843,
+            "relative_gradient_rms": 0.14303486267494203,
+            "relative_curvature_rms": 1.5864392329736017,
+            "geometry_penalty": 0.005094078277382473
+          }
+        ]
+      },
+      {
+        "call": 81,
+        "loss": 0.07766398993006639,
+        "profiles": [
+          {
+            "weighted_stress": 27.400803103831283,
+            "grid_rms": 0.016958393519003124,
+            "grid_max": 0.11147646135902911,
+            "relative_gradient_rms": 0.1055904992284228,
+            "relative_curvature_rms": 1.4524580414129387,
+            "geometry_penalty": 0.002938726875851693
+          },
+          {
+            "weighted_stress": 28.139670947308403,
+            "grid_rms": 0.024655705982855148,
+            "grid_max": 0.13871245363958834,
+            "relative_gradient_rms": 0.14790422625864744,
+            "relative_curvature_rms": 1.7244733019024838,
+            "geometry_penalty": 0.00540144967785899
+          }
+        ]
+      },
+      {
+        "call": 101,
+        "loss": 0.07741699332968222,
+        "profiles": [
+          {
+            "weighted_stress": 27.349558496374414,
+            "grid_rms": 0.01920756387479856,
+            "grid_max": 0.12826886763853368,
+            "relative_gradient_rms": 0.11815464354221723,
+            "relative_curvature_rms": 1.666762842793725,
+            "geometry_penalty": 0.0037921225287047807
+          },
+          {
+            "weighted_stress": 28.07685777095666,
+            "grid_rms": 0.023110804561076042,
+            "grid_max": 0.13874337035764328,
+            "relative_gradient_rms": 0.1554154880709106,
+            "relative_curvature_rms": 1.9671316279440327,
+            "geometry_penalty": 0.005571508815422911
+          }
+        ]
+      },
+      {
+        "call": 121,
+        "loss": 0.07722408043340478,
+        "profiles": [
+          {
+            "weighted_stress": 27.32668425477034,
+            "grid_rms": 0.018201083012708084,
+            "grid_max": 0.1256849958595459,
+            "relative_gradient_rms": 0.11901894419567081,
+            "relative_curvature_rms": 1.7350867563463257,
+            "geometry_penalty": 0.0037282805032997496
+          },
+          {
+            "weighted_stress": 28.012429236105312,
+            "grid_rms": 0.024438088765432076,
+            "grid_max": 0.14449095184184996,
+            "relative_gradient_rms": 0.16629880717218037,
+            "relative_curvature_rms": 2.12880444147145,
+            "geometry_penalty": 0.006358216818225574
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "same_21_score_columns_and_domain_support": true,
+  "max_absolute_score_change": 0.0,
+  "unweighted_combvd_change": 0.0,
+  "note": "Final numpy-input/streaming-parser runner reproduces the originally executed 0.8A full baseline."
+}

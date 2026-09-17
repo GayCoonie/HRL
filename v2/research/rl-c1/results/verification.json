@@ -1,0 +1,36 @@
+{
+  "candidate_sha256": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c",
+  "model": "0.8A R/L C1 balanced",
+  "profiles": {
+    "srgb": {
+      "weighted_stress": 27.833646147958042,
+      "n": 3331,
+      "retained_indices_sha256": "c968b71d1718ee7ba973e4fc5a76aea31fc74856a35f0d369042449338384fdb",
+      "random_triangle_roundtrips": 4096,
+      "max_embedding_roundtrip_error": 1.5302223030366768e-11,
+      "unchanged_vivid_samples": 720,
+      "max_hue_change_deg": 0,
+      "neutral_samples": 1025,
+      "max_neutral_xyz_change": 0,
+      "integer16_exact_roundtrips": 1024,
+      "gray8_exact_roundtrips": 256,
+      "min_atlas_row_increment": 0.003883955250160972,
+      "max_atlas_inverse_error": 2.3592239273284576e-15
+    },
+    "full": {
+      "weighted_stress": 28.489587944395854,
+      "n": 3813,
+      "retained_indices_sha256": "c98cc1eda535d71ca1aaae735c814418574f30640b3ecc98e2d4f7cb93dfed9c",
+      "random_triangle_roundtrips": 4096,
+      "max_embedding_roundtrip_error": 1.8562928971732617e-13,
+      "unchanged_vivid_samples": 720,
+      "max_hue_change_deg": 0,
+      "neutral_samples": 1025,
+      "max_neutral_xyz_change": 0,
+      "integer16_exact_roundtrips": 1024,
+      "gray8_exact_roundtrips": 256,
+      "min_atlas_row_increment": 0.0013260951397279473,
+      "max_atlas_inverse_error": 4.440892098500626e-15
+    }
+  }
+}
