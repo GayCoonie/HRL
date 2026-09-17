@@ -1,0 +1,89 @@
+{
+  "models": {
+    "balanced": {
+      "sha256": "a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35",
+      "profiles": {
+        "srgb": {
+          "randomRoundTrips": 4096,
+          "maxEmbeddingError": 9.614746498964877e-12,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "exact16BitRoundTrips": 2048,
+          "combvdWeighted": 32.11640951297585,
+          "pairs": 3331
+        },
+        "full": {
+          "randomRoundTrips": 4096,
+          "maxEmbeddingError": 4.07829325865805e-12,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "exact16BitRoundTrips": 2048,
+          "combvdWeighted": 31.449029569569376,
+          "pairs": 3813
+        }
+      },
+      "sharedBankCount": 1,
+      "bitIdenticalNormalizedTuples": 1024,
+      "darkCurve": {
+        "maxInverseError": 5.981326545168031e-15,
+        "minSampledDerivative": 0.15594181279055164,
+        "analyticLowerBound": 0.15
+      },
+      "thirdGamut": {
+        "id": "a98-rgb",
+        "roundtrips": 1024,
+        "maxLinearRGBError": 3.921529767580978e-12,
+        "refitting": false,
+        "bankSame": true
+      },
+      "relative100vs300BitIdenticalSamples": 512
+    },
+    "metric": {
+      "sha256": "2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b",
+      "profiles": {
+        "srgb": {
+          "randomRoundTrips": 4096,
+          "maxEmbeddingError": 3.769007328457974e-11,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "exact16BitRoundTrips": 2048,
+          "combvdWeighted": 29.318041536480987,
+          "pairs": 3331
+        },
+        "full": {
+          "randomRoundTrips": 4096,
+          "maxEmbeddingError": 6.8108296780167166e-12,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "exact16BitRoundTrips": 2048,
+          "combvdWeighted": 29.630885131441076,
+          "pairs": 3813
+        }
+      },
+      "sharedBankCount": 1,
+      "bitIdenticalNormalizedTuples": 1024,
+      "darkCurve": {
+        "maxInverseError": 6.279698983036042e-15,
+        "minSampledDerivative": 0.20653434350497135,
+        "analyticLowerBound": 0.15
+      },
+      "thirdGamut": {
+        "id": "a98-rgb",
+        "roundtrips": 1024,
+        "maxLinearRGBError": 3.6167735473213725e-12,
+        "refitting": false,
+        "bankSame": true
+      },
+      "relative100vs300BitIdenticalSamples": 512
+    }
+  },
+  "method": "Actual JavaScript runtime; one rounded/frozen bank across all gamut realizations."
+}

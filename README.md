@@ -105,3 +105,8 @@ Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1
 ## OPAL 0.7 gamut-anchor research
 
 [Open the 0.7 comparison picker](v2/opal-anchor.html) · [Methods, source intake and scores](v2/research/anchor-0.7/README.md). The default balances direct COMBVD fitting against the accepted OPAL 0.6 layout. Its own-gamut anchor controls normalization throughout the R/L construction. OPAL 0.6 and Release 1 are preserved. These are explicitly in-sample research fits, not an accepted Release 2.
+
+<!-- shared-rl -->
+## Shared R/L dark-edge research
+
+[Live comparison](v2/shared.html) retains prior refits and adds one learned R/L bank per candidate across gamut realizations. See `research/shared-rl` under v2 for the plan, evidence, tests and explicit tradeoffs.
