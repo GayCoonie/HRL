@@ -1,0 +1,15 @@
+{
+  "standalone_sha256": "df9f57b452fe8e9239791b0ac23f7e94bd4fd078732c21635b6ceca8d1b38ae9",
+  "chromium": "144.0.7559.96",
+  "method": "Playwright set_content of the actual offline HTML; no remote navigation or Pages availability claimed",
+  "desktop_panels": 3,
+  "initial_canvas_sizes": [[167,192],[167,192],[167,192]],
+  "initial_status": "Ready. The accepted checkpoints and native sRGB profile are unchanged.",
+  "actual_xyz_readout": "H 150.0° · R 0.2470 · L 0.6209 XYZ 0.20851, 0.26064, 0.18948",
+  "mask_toggled": true,
+  "hue_change_rendered": true,
+  "strip_and_resolution_controls": true,
+  "mobile_horizontal_overflow": false,
+  "uncaught_page_errors": [],
+  "external_network_requests": []
+}
