@@ -115,3 +115,9 @@ Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1
 ## GenSpace tonal operations research
 
 [Black/white operations lab](https://gaycoonie.github.io/HRL/v2/research/tonal-semantics/) compares unchanged shared 0.10 candidates with a GenSpace ruler. It implements distinct black dilution, white dilution and fixed-Reach neutral exchange, plus local per-hue preference export. Definitions, source roles, raw audit and algebraic tests are in `v2/research/tonal-semantics`. This is a research/diagnostic addition, not a newly fitted colour-space release.
+
+
+<!-- gen-tonal-fit -->
+## HRL 0.11 GenSpace tonal research
+
+[Four-way fitted comparison](https://gaycoonie.github.io/HRL/v2/gen-tonal.html) preserves both shared 0.10 controls and adds newly fitted balanced/metric checkpoints. One learned coefficient bank per candidate operates across gamuts. [Source and method](v2/research/gen-tonal-fit/README.md), [scored report](v2/research/gen-tonal-fit/results/REPORT.md), and [sampling/dark-side tradeoffs](v2/research/gen-tonal-fit/FINDINGS.md) are retained. The Release 1 entry point and all earlier checkpoints remain unchanged.

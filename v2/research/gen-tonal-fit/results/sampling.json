@@ -1,0 +1,10 @@
+{
+  "trainingHueCount": 48,
+  "diagnosticHueCount": 72,
+  "diagnosticHuesAbsentFromTraining": 48,
+  "diagnosticHuesAlsoInTraining": 24,
+  "diagnosticHueOffsetDegrees": 2.5,
+  "diagnosticHueStepDegrees": 5,
+  "samplesPerPath": 257,
+  "meaning": "Denser mixed-grid numerical check, not a wholly held-out hue set or independent observer validation."
+}
