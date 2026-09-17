@@ -1,0 +1,47 @@
+name: HRL R-L refit inputs
+on:
+  push:
+    paths: ['.github/workflows/hrl-refit-inputs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 70cb77d14060b3231d817487e27413e0107e87ba
+          persist-credentials: false
+          path: sources/hrl
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch pinned benchmark inputs
+        run: |
+          git clone https://github.com/Grkmyldz148/colorbench.git sources/colorbench
+          git -C sources/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git sources/color-perception-datasets
+          git -C sources/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+          python -m pip download --no-deps colour-science --dest wheels
+      - name: Bundle numerical sources, not repository credentials
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,subprocess,json
+          root=Path('sources')
+          provenance={n:subprocess.check_output(['git','-C',str(root/n),'rev-parse','HEAD'],text=True).strip() for n in ['hrl','colorbench','color-perception-datasets']}
+          with zipfile.ZipFile('hrl-refit-inputs.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in root.rglob('*'):
+                  if not p.is_file() or '.git' in p.parts: continue
+                  if p.suffix.lower() in ['.zip','.pdf','.png','.jpg','.jpeg','.webp','.svg','.html','.ipynb']: continue
+                  z.write(p,p.relative_to(root))
+              for p in Path('wheels').glob('*.whl'):z.write(p,p)
+              z.writestr('PINNED_SOURCES.json',json.dumps(provenance,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-refit-inputs
+          path: hrl-refit-inputs.zip
+          retention-days: 7
