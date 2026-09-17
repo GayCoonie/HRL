@@ -1,0 +1,42 @@
+name: HRL GenSpace tonal interpretation notes
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-gen-tonal-notes.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  notes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Add derived interpretation without changing fitted outputs
+        run: |
+          python v2/research/gen-tonal-fit/finalize-notes.py
+          node --check v2/gen-tonal-ui/app.mjs
+          python -m py_compile v2/research/gen-tonal-fit/build-site.py v2/research/gen-tonal-fit/report.py
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/gen-tonal-ui/app.mjs v2/research/gen-tonal-fit/build-site.py v2/research/gen-tonal-fit/report.py v2/research/gen-tonal-fit/results/REPORT.md v2/research/gen-tonal-fit/results/sampling.json v2/research/gen-tonal-fit/FINDINGS.md README.md
+          git commit -m 'Clarify hue-grid overlap and measured dark-side tradeoffs without altering checkpoints'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-gen-tonal-finalized-notes
+          path: |
+            v2/gen-tonal-ui/app.mjs
+            v2/research/gen-tonal-fit/FINDINGS.md
+            v2/research/gen-tonal-fit/results/sampling.json
+            v2/research/gen-tonal-fit/results/REPORT.md
+            v2/research/gen-tonal-fit/build-site.py
+            v2/research/gen-tonal-fit/report.py
+            README.md
