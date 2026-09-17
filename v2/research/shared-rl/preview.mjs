@@ -1,0 +1,5 @@
+import fs from 'node:fs';import {createSharedHRL} from './source.mjs';import {createHRLRefits} from '../native-srgb-refit/index.mjs';import {XYZ_TO_SRGB,mul3,encodeSRGB} from '../../lib/srgb-triangles.mjs';
+const names=['old-balanced','balanced','metric'],W=209,T=242,out=[];
+for(const gamut of ['srgb','full'])for(const name of names){const m=name==='old-balanced'?await createHRLRefits({gamut,checkpoint:'balanced'}):await createSharedHRL({gamut,checkpoint:name});
+for(const H of [30,150,240,270,300,330]){const data=new Uint8Array(W*T*4);let clipped=0,inside=0;for(let y=0;y<T;y++)for(let x=0;x<W;x++){const R=x/(W-1),L=1-y/(T-1)+R/2;if(R>L||L>1)continue;const rgb=mul3(XYZ_TO_SRGB,m.toXYZ({H,R,L}));inside++;if(rgb.some(v=>v< -2e-10||v>1+2e-10))clipped++;const k=(y*W+x)*4;for(let j=0;j<3;j++)data[k+j]=Math.round(255*encodeSRGB(Math.max(0,Math.min(1,rgb[j]))));data[k+3]=255;}const file=`${gamut}-${name}-${H}.rgba`;fs.writeFileSync(new URL('results/'+file,import.meta.url),data);out.push({gamut,name,H,W,T,file,inside,clipped});}console.log('preview',gamut,name);
+}fs.writeFileSync(new URL('results/preview-index.json',import.meta.url),JSON.stringify(out));
