@@ -1,0 +1,12 @@
+{
+  "meaning": "Reproduction on a second runtime with the same code and frozen data, not independent perceptual validation",
+  "checkpoints_unchanged": true,
+  "scored_cells_compared": 168,
+  "model_cases": 8,
+  "max_absolute_score_difference": 0.0,
+  "identical_clipping_rejection_continuation_audits": true,
+  "identical_COMBVD_pair_masks": true,
+  "local_versions": {"python": "3.13.5", "numpy": "2.3.5", "colour": "0.4.7", "node": "v22.16.0"},
+  "runner_versions": {"python": "3.13.15", "numpy": "2.3.5", "colour": "0.4.7", "node": "v22.16.0"},
+  "runner_run_id": 35189636655
+}
