@@ -1,0 +1,126 @@
+name: HRL shared R-L dark-edge refinement
+on:
+  push:
+    branches: [main]
+    paths: ['v2/research/shared-rl/PUBLISH.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-shared-rl-publication
+  cancel-in-progress: false
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Validate and unpack the source transfer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,base64,zlib,hashlib
+          root=Path('v2/research/shared-rl')
+          packet=json.loads((root/'PUBLISH.json').read_text())
+          chunks=[''.join((root/f'transfer-{i}.txt').read_text().split()) for i in range(packet['parts'])]
+          if 'part_sha256' in packet:
+              for i,(chunk,expected) in enumerate(zip(chunks,packet['part_sha256'])):
+                  assert hashlib.sha256(chunk.encode()).hexdigest()==expected, f'Transfer part {i} checksum mismatch'
+          raw=zlib.decompress(base64.b64decode(''.join(chunks),validate=True))
+          assert hashlib.sha256(raw).hexdigest()==packet['sha256']
+          files=json.loads(raw)
+          assert len(files)==packet['files']
+          for name,text in files.items():
+              p=Path(name)
+              assert name.startswith('v2/research/shared-rl/') and '..' not in p.parts and not p.is_absolute()
+              assert isinstance(text,str)
+              p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_text(text)
+          for name,expected in json.loads((root/'SOURCE_HASHES.json').read_text()).items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==expected, name
+          for p in root.glob('transfer-*.txt'):p.unlink()
+          (root/'PUBLISH.json').unlink()
+          PY
+      - name: Install pinned evaluation and browser tools
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Rebuild gamut normalization and verify the one-bank models
+        run: |
+          node v2/research/shared-rl/source-test.mjs
+          node v2/research/shared-rl/rebuild-check.mjs
+          node v2/research/shared-rl/test.mjs
+      - name: Run only the scored ColorBench columns
+        run: python v2/research/shared-rl/benchmark.py --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets
+      - name: Verify dark-edge paths and generate the review page
+        run: |
+          DENSE=1 node v2/research/shared-rl/visual.mjs baseline balanced metric
+          node v2/research/shared-rl/audit.mjs old-balanced balanced metric
+          node v2/research/shared-rl/preview.mjs old-balanced balanced metric
+          python v2/research/shared-rl/build-preview.py
+          python v2/research/shared-rl/make-summary.py
+          python v2/research/shared-rl/build-site.py
+          node --check v2/shared-ui/app.mjs
+          node --check v2/shared-ui/worker.mjs
+          find v2/research/shared-rl/results -name '*.rgba' -delete
+      - name: Test the actual served site on the runner
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-shared-http.log 2>&1 &
+          python v2/research/shared-rl/site-check.py --base http://127.0.0.1:8765/ --root-links --out v2/research/shared-rl/results/browser-runner
+      - name: Publish verified sources, evidence, and site navigation
+        id: publication
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/shared-rl v2/shared-ui v2/shared.html v2/refits.html v2/index.html v2/README.md index.html README.md
+          git commit -m 'Publish verified shared-gamut R-L calibration and dark-edge comparison'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for the public Pages checkpoint
+        env:
+          PUBLISHED_SHA: ${{ steps.publication.outputs.sha }}
+        run: |
+          python - <<'PY'
+          import os,time,hashlib,urllib.request
+          from pathlib import Path
+          expected=hashlib.sha256(Path('v2/research/shared-rl/results/balanced.json').read_bytes()).hexdigest()
+          url='https://gaycoonie.github.io/HRL/v2/research/shared-rl/results/balanced.json'
+          for attempt in range(90):
+              try:
+                  data=urllib.request.urlopen(url+'?build='+os.environ['PUBLISHED_SHA']+'&try='+str(attempt),timeout=15).read()
+                  if hashlib.sha256(data).hexdigest()==expected:
+                      print('Public Pages serves the exact frozen shared checkpoint.');break
+              except Exception as e:print(type(e).__name__,str(e)[:120],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Public Pages checkpoint did not become available')
+          PY
+      - name: Verify the actual public shared-gamut picker
+        run: python v2/research/shared-rl/site-check.py --base https://gaycoonie.github.io/HRL/ --root-links --out v2/research/shared-rl/results/browser-live
+      - name: Record the public browser receipt
+        run: |
+          git add v2/research/shared-rl/results/browser-live/verification.json
+          git commit -m 'Record live Pages verification of the shared R-L picker'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-shared-rl-review
+          path: |
+            v2/research/shared-rl/
+            v2/shared-ui/
+            v2/shared.html
+          retention-days: 30
