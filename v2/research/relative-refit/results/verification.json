@@ -1,0 +1,52 @@
+{
+  "definition": "Regular bicone; physical source solid, source atlas, hue field/ring, and neutral shift frozen",
+  "hashes": {
+    "../relative-domain/geometry.mjs": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+    "../relative-domain/context.mjs": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+    "../relative-domain/base.mjs": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+    "../relative-domain/results/source-full.json": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a",
+    "../../data/hue-field-0.6.json": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+    "../../data/release1-angles.json": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+    "../rl-c1/atlas.mjs": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9"
+  },
+  "models": {
+    "balanced": {
+      "weighted_stress": 27.822993936997246,
+      "unweighted_stress": 28.901216278736186,
+      "pairs": 3813,
+      "mapped_inputs": 0,
+      "record_sha256": "eba7d8fe0a577a1c077f4fef3342acbc14ba22f518213202e02ff811e9114fc7",
+      "free_full_rl_coefficients": 195,
+      "random_triangle_roundtrips": 8192,
+      "max_embedding_roundtrip_error": 8.495676384612239e-12,
+      "max_hue_change_degrees": 0,
+      "unchanged_vivid_samples": 720,
+      "neutral_samples": 1025,
+      "max_neutral_xyz_change": 0,
+      "integer16_roundtrips": 2048,
+      "integer16_errors": 0,
+      "referenceWhite100vs300MaxCoordinateDifference": 0
+    },
+    "metric": {
+      "weighted_stress": 26.71104159053993,
+      "unweighted_stress": 27.618624581595586,
+      "pairs": 3813,
+      "mapped_inputs": 0,
+      "record_sha256": "489a8bb02195e92d698632c873135d5613727edef4e4275c239f209011a13e78",
+      "free_full_rl_coefficients": 195,
+      "random_triangle_roundtrips": 8192,
+      "max_embedding_roundtrip_error": 8.463327261232223e-12,
+      "max_hue_change_degrees": 0,
+      "unchanged_vivid_samples": 720,
+      "neutral_samples": 1025,
+      "max_neutral_xyz_change": 0,
+      "integer16_roundtrips": 2048,
+      "integer16_errors": 0,
+      "referenceWhite100vs300MaxCoordinateDifference": 0
+    }
+  },
+  "native": {
+    "samples": 2048,
+    "max_coordinate_change": 0
+  }
+}

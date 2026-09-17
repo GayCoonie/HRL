@@ -1,0 +1,10 @@
+{
+  "selected_at_utc": "2026-09-17T03:11:19.574163+00:00",
+  "primary": "balanced (byte-identical to fine200)",
+  "alternate": "metric (byte-identical to fine100)",
+  "primary_sha256": "eba7d8fe0a577a1c077f4fef3342acbc14ba22f518213202e02ff811e9114fc7",
+  "alternate_sha256": "489a8bb02195e92d698632c873135d5613727edef4e4275c239f209011a13e78",
+  "selection_basis": "Actual JS COMBVD and synthetic constant-R/constant-L Oklab path screens; prefer fine200 over lower-STRESS fits for stronger smoothing on both axes. No new ColorBench human-data judges have been evaluated yet.",
+  "training": "COMBVD + synthetic inverse-path regularization; no OSA/MacAdam1974/Xiao/threshold/tolerance training",
+  "parameter_change": "Three full R/L layers, 195 coefficients; native sRGB coefficients and all physical/hue/neutral definitions unchanged."
+}

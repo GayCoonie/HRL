@@ -1,0 +1,116 @@
+{
+  "models": {
+    "baseline": {
+      "weighted_stress": 37.221657814154256,
+      "unweighted_stress": 39.59792132290983,
+      "pairs": 3813,
+      "visual": {
+        "reach": {
+          "ramps": 288,
+          "mean_cv": 0.9108034157327461,
+          "p95_cv": 2.738212174997843,
+          "mean_step_jump": 0.01946458106624888,
+          "mean_p95_step_jump": 0.06912482468150924,
+          "worst_step_jump": 1.520625991506169,
+          "max_peak_step_ratio": 50.78659065504695
+        },
+        "level": {
+          "ramps": 288,
+          "mean_cv": 0.45833843125720225,
+          "p95_cv": 1.6375594378200868,
+          "mean_step_jump": 0.012070913003785115,
+          "mean_p95_step_jump": 0.05147707967216264,
+          "worst_step_jump": 1.7922846838874067,
+          "max_peak_step_ratio": 57.94828476168698
+        }
+      },
+      "displayOutOfSRGB": {
+        "n": 73044,
+        "total": 148032,
+        "fraction": 0.49343385214007784
+      },
+      "osa_cv": 0.3349801497795754,
+      "macadam1974_stress": 36.94111952409235
+    },
+    "balanced": {
+      "weighted_stress": 27.822993936996493,
+      "unweighted_stress": 28.901216278737074,
+      "pairs": 3813,
+      "visual": {
+        "reach": {
+          "ramps": 288,
+          "mean_cv": 0.3586594536259631,
+          "p95_cv": 0.6477610520714958,
+          "mean_step_jump": 0.015390222634123072,
+          "mean_p95_step_jump": 0.05141575746713181,
+          "worst_step_jump": 0.8476586697645211,
+          "max_peak_step_ratio": 11.883805453681163
+        },
+        "level": {
+          "ramps": 288,
+          "mean_cv": 0.2371035151602477,
+          "p95_cv": 0.45288645730757005,
+          "mean_step_jump": 0.008294218096649751,
+          "mean_p95_step_jump": 0.033861448905488555,
+          "worst_step_jump": 0.9587308700768653,
+          "max_peak_step_ratio": 4.801573339492023
+        }
+      },
+      "displayOutOfSRGB": {
+        "n": 73665,
+        "total": 148032,
+        "fraction": 0.49762889105058367
+      },
+      "osa_cv": 0.25263014442747816,
+      "macadam1974_stress": 30.98659617516613
+    },
+    "metric": {
+      "weighted_stress": 26.71104159053812,
+      "unweighted_stress": 27.618624581594997,
+      "pairs": 3813,
+      "visual": {
+        "reach": {
+          "ramps": 288,
+          "mean_cv": 0.43015605624527103,
+          "p95_cv": 0.7738079477161663,
+          "mean_step_jump": 0.018677603326058025,
+          "mean_p95_step_jump": 0.06120782392194188,
+          "worst_step_jump": 1.2765924272339992,
+          "max_peak_step_ratio": 16.24203310842338
+        },
+        "level": {
+          "ramps": 288,
+          "mean_cv": 0.2753930611347906,
+          "p95_cv": 0.5367723408235644,
+          "mean_step_jump": 0.010046820378548982,
+          "mean_p95_step_jump": 0.04059836266499802,
+          "worst_step_jump": 1.3185719881555438,
+          "max_peak_step_ratio": 4.8255814530693115
+        }
+      },
+      "displayOutOfSRGB": {
+        "n": 71912,
+        "total": 148032,
+        "fraction": 0.4857868568958063
+      },
+      "osa_cv": 0.24768736898552163,
+      "macadam1974_stress": 32.37256935545098
+    }
+  },
+  "selected_before_heldout": {
+    "selected_at_utc": "2026-09-17T03:11:19.574163+00:00",
+    "primary": "balanced (byte-identical to fine200)",
+    "alternate": "metric (byte-identical to fine100)",
+    "primary_sha256": "eba7d8fe0a577a1c077f4fef3342acbc14ba22f518213202e02ff811e9114fc7",
+    "alternate_sha256": "489a8bb02195e92d698632c873135d5613727edef4e4275c239f209011a13e78",
+    "selection_basis": "Actual JS COMBVD and synthetic constant-R/constant-L Oklab path screens; prefer fine200 over lower-STRESS fits for stronger smoothing on both axes. No new ColorBench human-data judges have been evaluated yet.",
+    "training": "COMBVD + synthetic inverse-path regularization; no OSA/MacAdam1974/Xiao/threshold/tolerance training",
+    "parameter_change": "Three full R/L layers, 195 coefficients; native sRGB coefficients and all physical/hue/neutral definitions unchanged."
+  },
+  "notes": [
+    "COMBVD is in-sample.",
+    "Visual paths use Oklab as a model-based proxy, not human ratings.",
+    "The whole full gamut cannot be faithfully displayed on sRGB.",
+    "Only the full-profile R/L calibration changes; native sRGB is unchanged."
+  ]
+}

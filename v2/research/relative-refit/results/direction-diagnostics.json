@@ -1,0 +1,26 @@
+{
+  "baseline": {
+    "levelSteps": 18432,
+    "negativeYSteps": 549,
+    "maxNegativeYStep": 0.5808842863497768,
+    "reachSteps": 18432,
+    "negativeOklabChromaSteps": 544,
+    "maxNegativeOklabChromaStep": 0.21968595109141043
+  },
+  "balanced": {
+    "levelSteps": 18432,
+    "negativeYSteps": 127,
+    "maxNegativeYStep": 0.0034917308970051977,
+    "reachSteps": 18432,
+    "negativeOklabChromaSteps": 900,
+    "maxNegativeOklabChromaStep": 0.0509818764734945
+  },
+  "metric": {
+    "levelSteps": 18432,
+    "negativeYSteps": 227,
+    "maxNegativeYStep": 0.01222466451348031,
+    "reachSteps": 18432,
+    "negativeOklabChromaSteps": 764,
+    "maxNegativeOklabChromaStep": 0.05037542077241253
+  }
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "name": "baseline",
+    "H": 30,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-30.rgba",
+    "oog": 4273,
+    "inside": 8938
+  },
+  {
+    "name": "baseline",
+    "H": 90,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-90.rgba",
+    "oog": 2454,
+    "inside": 8938
+  },
+  {
+    "name": "baseline",
+    "H": 150,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-150.rgba",
+    "oog": 2102,
+    "inside": 8938
+  },
+  {
+    "name": "baseline",
+    "H": 210,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-210.rgba",
+    "oog": 3456,
+    "inside": 8938
+  },
+  {
+    "name": "baseline",
+    "H": 270,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-270.rgba",
+    "oog": 7079,
+    "inside": 8938
+  },
+  {
+    "name": "baseline",
+    "H": 300,
+    "width": 125,
+    "height": 144,
+    "file": "preview-baseline-300.rgba",
+    "oog": 5854,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 30,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-30.rgba",
+    "oog": 3237,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 90,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-90.rgba",
+    "oog": 2906,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 150,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-150.rgba",
+    "oog": 2643,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 210,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-210.rgba",
+    "oog": 4915,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 270,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-270.rgba",
+    "oog": 5704,
+    "inside": 8938
+  },
+  {
+    "name": "balanced",
+    "H": 300,
+    "width": 125,
+    "height": 144,
+    "file": "preview-balanced-300.rgba",
+    "oog": 5578,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 30,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-30.rgba",
+    "oog": 3079,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 90,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-90.rgba",
+    "oog": 2985,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 150,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-150.rgba",
+    "oog": 2411,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 210,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-210.rgba",
+    "oog": 4718,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 270,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-270.rgba",
+    "oog": 5835,
+    "inside": 8938
+  },
+  {
+    "name": "metric",
+    "H": 300,
+    "width": 125,
+    "height": 144,
+    "file": "preview-metric-300.rgba",
+    "oog": 5470,
+    "inside": 8938
+  }
+]
