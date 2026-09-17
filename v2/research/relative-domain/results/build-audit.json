@@ -1,0 +1,15 @@
+{
+  "base": "4919b977049c58a15703f8f86442dd11436d2aad",
+  "solid": "polygonized physical chromaticity cone intersect 0<=Y<=1",
+  "hueContinuation": {
+    "kind": "hold-last-fitted-magnitude",
+    "aMax": 1.25,
+    "notObserverValidated": true
+  },
+  "hueShellChecks": 70560,
+  "minHueSlope": 0.03391383639927881,
+  "fit": "none; inherited coefficients with regenerated source path maps",
+  "referenceWhiteNits": 300,
+  "nitsAffectRelativeGeometry": false,
+  "atlasSha256": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a"
+}

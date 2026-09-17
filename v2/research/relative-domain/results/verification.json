@@ -1,0 +1,32 @@
+{
+  "carrierTests": 21600,
+  "carrierMaxXYZError": 2.9842794901924208e-12,
+  "physicalSamplesFormerlyOverCompletionCap": 5527,
+  "maximumSampledCompletion": 154.9511634896461,
+  "hrlRoundTrips": 2048,
+  "maxEmbeddingRoundTripError": 5.5900284401388944e-12,
+  "carrierInteger16Exact": 2048,
+  "maxOriginalRangeHueLabelChange": 1.0288658813806251e-10,
+  "regressionGreen": {
+    "input": [
+      0.07285208,
+      0.78731731,
+      0.08983061
+    ],
+    "coordinates": {
+      "H": 174.95637631508384,
+      "R": 0.9389250583162415,
+      "L": 0.9402970791845916
+    },
+    "completion": 1.0454458374880222,
+    "events": []
+  },
+  "bradfordRoundTripError": 2.220446049250313e-16,
+  "referenceWhite100vs300RelativeCoordinateDifference": 0,
+  "relativeY1_2IsPhysical": true,
+  "clippedAboveWhiteEvents": [
+    "luminance-clipped"
+  ],
+  "extendedCarrierPreservesY1_2": true,
+  "nitsComparison": "Unit/context scaling only; existing relative appearance calibration has no fitted absolute-luminance response."
+}
