@@ -1,0 +1,93 @@
+name: HRL relative-solid R-L refit
+on:
+  push:
+    paths: ['v2/research/relative-refit/PUBLISH.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-relative-refit-publication
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Unpack and verify the assistant-generated source transfer
+        run: |
+          python - <<'PY'
+          import base64,hashlib,json,zlib
+          from pathlib import Path
+          root=Path('v2/research/relative-refit')
+          packet=json.loads((root/'PUBLISH.json').read_text())
+          encoded=''.join((root/f'transfer-{i}.txt').read_text().strip() for i in range(packet['parts']))
+          data=zlib.decompress(base64.b64decode(encoded,validate=True))
+          assert hashlib.sha256(data).hexdigest()==packet['sha256']
+          files=json.loads(data)
+          assert len(files)==packet['files']
+          for name,text in files.items():
+              p=Path(name)
+              assert name.startswith('v2/research/relative-refit/') and '..' not in p.parts
+              assert isinstance(text,str)
+              p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_text(text)
+          for name,expected in json.loads((root/'SOURCE_HASHES.json').read_text()).items():
+              assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==expected, name
+          for p in root.glob('transfer-*.txt'):p.unlink()
+          (root/'PUBLISH.json').unlink()
+          PY
+      - name: Install pinned benchmark inputs and viewer bundler
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow
+          npm install --prefix /tmp/hrl-esbuild --no-audit --no-fund esbuild@0.25.5
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Verify frozen coefficients against actual JavaScript
+        run: |
+          python - <<'PY'
+          import json,numpy as np
+          from pathlib import Path
+          root=Path('v2/research')
+          a=np.load(root/'relative-domain/results/relative-candidate-full-300-reject-combvd.npz')
+          rows=[dict(xyz1=x.tolist(),xyz2=y.tolist(),dv=float(d),weight=int(w)) for x,y,d,w in zip(a['xyz1'],a['xyz2'],a['dv'],a['weights'])]
+          (root/'relative-refit/results/training-pairs.json').write_text(json.dumps(rows))
+          PY
+          node v2/research/relative-refit/test.mjs balanced metric
+      - name: Re-run only the scored ColorBench columns
+        run: python v2/research/relative-refit/benchmark.py --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets
+      - name: Validate exact R-L paths and build the comparison
+        env:
+          ESBUILD_MODULE: /tmp/hrl-esbuild/node_modules/esbuild/lib/main.js
+        run: |
+          DENSE=1 node v2/research/relative-refit/visual.mjs baseline balanced metric
+          node v2/research/relative-refit/diagnostics.mjs baseline balanced metric
+          node v2/research/relative-refit/preview.mjs baseline balanced metric
+          python v2/research/relative-refit/build-preview.py
+          python v2/research/relative-refit/make-summary.py
+          node v2/research/relative-refit/build-standalone.mjs
+          find v2/research/relative-refit/results -name '*.rgba' -delete
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-relative-refit-review
+          path: v2/research/relative-refit/
+          retention-days: 30
+      - name: Publish additive sources and verified results
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/relative-refit/
+          git commit -m 'Publish verified relative-solid R-L refit, diagnostics, and offline viewer'
+          git pull --rebase origin main
+          git push origin HEAD:main
