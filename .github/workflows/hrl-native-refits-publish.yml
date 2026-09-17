@@ -51,6 +51,14 @@ jobs:
               assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==sha,name
           for f in root.glob('transfer-*.txt'):f.unlink()
           (root/'PUBLISH.json').unlink()
+          # The select is intentionally inside a collapsed details element.
+          # Exercise the same disclosure click a user needs before selecting it.
+          check=root/'site-check.py'
+          text=check.read_text()
+          old="page.locator('#board').select_option('measurement');page.locator('#benchDetails').evaluate('(e)=>e.open=true');"
+          new="page.locator('#benchDetails > summary').click();page.locator('#board').select_option('measurement');"
+          assert text.count(old)==1
+          check.write_text(text.replace(old,new))
           PY
       - name: Install pinned benchmark and browser tools
         run: |
