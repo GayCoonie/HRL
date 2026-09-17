@@ -1,5 +1,11 @@
 # HRL v2 research: Black-Anchored Semantic Remap
 
+<!-- HRL A SMOOTH APPROVED -->
+## Approved v2 prototype: A Smooth
+
+[Open A Smooth](https://gaycoonie.github.io/HRL/v2/a-smooth.html) · [Source and reproducibility](a-smooth/README.md). The approved original-ring R/L fit is the default on this new page. A parent remains selectable. Weighted COMBVD: **28.1724** (3,331 sRGB pairs), **28.9553** (3,813 full-domain pairs). Magenta is an acknowledged follow-up, unchanged here. The Release 1 picker and prior v2 pages remain available.
+
+
 **Current named prototype: BASR 0.4 (Black-Anchored Semantic Remap).**
 
 These are additional pages and modules. The root picker and `src/index.mjs` remain **R15-D Release 1**. No v1 color conversion, coefficient, or default is replaced.

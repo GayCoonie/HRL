@@ -1,5 +1,11 @@
 # HRL — Hue, Reach, Level
 
+<!-- HRL A SMOOTH APPROVED -->
+## Approved v2 prototype: A Smooth
+
+[Open A Smooth](https://gaycoonie.github.io/HRL/v2/a-smooth.html) · [Source and reproducibility](v2/a-smooth/README.md). The approved original-ring R/L fit is the default on this new page. A parent remains selectable. Weighted COMBVD: **28.1724** (3,331 sRGB pairs), **28.9553** (3,813 full-domain pairs). Magenta is an acknowledged follow-up, unchanged here. The Release 1 picker and prior v2 pages remain available.
+
+
 This repository is the standalone JavaScript reference implementation of **HRL R15-D Release 1**. It contains the selected color-space definition itself, with no dependency on the HRL Studio website.
 
 HRL is a bounded display-gamut color space whose slices are regular equilateral bicones:
