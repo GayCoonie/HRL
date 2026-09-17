@@ -1,0 +1,55 @@
+name: HRL shared R-L live verification
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-shared-live.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-public:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install browser test runtime
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Wait for exact completed public files
+        run: |
+          python - <<'PY'
+          import urllib.request,hashlib,time
+          from pathlib import Path
+          paths=['v2/shared.html','v2/research/shared-rl/results/site-data.json','v2/research/shared-rl/results/balanced.json']
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(90):
+              try:
+                  for p in paths:
+                      raw=urllib.request.urlopen('https://gaycoonie.github.io/HRL/'+p+'?sharedcheck='+str(attempt),timeout=15).read()
+                      assert hashlib.sha256(raw).hexdigest()==expected[p],p
+                  print('Public files match the completed source and evidence.');break
+              except Exception as e:print(type(e).__name__,str(e)[:140],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Exact public files did not become available')
+          PY
+      - name: Exercise both gamuts on public Pages
+        run: python v2/research/shared-rl/site-check.py --base https://gaycoonie.github.io/HRL/ --root-links --out v2/research/shared-rl/results/browser-live
+      - name: Record live verification
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/research/shared-rl/results/browser-live/verification.json
+          git commit -m 'Record successful public browser verification of shared R-L dark-edge page'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-shared-live-review
+          path: v2/research/shared-rl/results/browser-live/
