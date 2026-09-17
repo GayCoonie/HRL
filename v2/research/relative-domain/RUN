@@ -1,0 +1,3 @@
+relative-domain-v1
+Validate the corrected carrier and regenerated full-gamut source atlas.
+Run pinned ColorBench generation and measurement scored columns for old and corrected profiles, strict and clipped imports, and 100/300-nit contexts.
