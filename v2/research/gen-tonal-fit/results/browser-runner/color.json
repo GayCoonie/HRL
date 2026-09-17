@@ -1,0 +1,24 @@
+{
+  "profile": "HRL-0.11-gen-tonal",
+  "gamut": "srgb",
+  "checkpoint": "metric",
+  "sharedCalibration": true,
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.5774020662450442,
+    "L": 0.8051794063325189
+  },
+  "relativeXYZ": [
+    0.26312152208038414,
+    0.18444060041200347,
+    0.6540650978783242
+  ],
+  "displaySRGB8": [
+    135,
+    96,
+    213
+  ],
+  "displayClipped": false
+}

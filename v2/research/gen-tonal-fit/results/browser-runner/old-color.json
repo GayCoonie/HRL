@@ -1,0 +1,24 @@
+{
+  "profile": "HRL-0.10-shared-RL",
+  "gamut": "srgb",
+  "checkpoint": "old-metric",
+  "sharedCalibration": true,
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.5774020662450442,
+    "L": 0.8051794063325189
+  },
+  "relativeXYZ": [
+    0.2709220654284181,
+    0.19942400611110078,
+    0.6451747549053509
+  ],
+  "displaySRGB8": [
+    137,
+    104,
+    212
+  ],
+  "displayClipped": false
+}

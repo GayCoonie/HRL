@@ -1,0 +1,1632 @@
+{
+  "profiles": {
+    "srgb": {
+      "models": {
+        "old-balanced": {
+          "weighted": 32.116409512974506,
+          "unweighted": 33.68732717834274,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.3011388053843378,
+              "meanStepJump": 0.01635005421370109,
+              "worstStepJump": 0.6152580305818446,
+              "cornerRetreatPaths": 5,
+              "totalPaths": 360,
+              "meanRetreatFraction": 2.5096903505656072e-05,
+              "worstRetreatFraction": 0.0005084669574913176
+            },
+            "white": {
+              "meanCV": 0.21128227138062217,
+              "meanStepJump": 0.009160319739650591,
+              "worstStepJump": 1.2740235642859754,
+              "cornerRetreatPaths": 103,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.005867047275418042,
+              "worstRetreatFraction": 0.07962130350993878
+            },
+            "exchange": {
+              "meanCV": 0.20874519562825522,
+              "meanStepJump": 0.010520424492165916,
+              "worstStepJump": 1.4157016421840884,
+              "cornerRetreatPaths": 127,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.009817791290254162,
+              "worstRetreatFraction": 0.06522792105341073
+            },
+            "reach": {
+              "meanCV": 0.42438959606008264,
+              "meanStepJump": 0.01947401009326619,
+              "worstStepJump": 1.7984936720194087,
+              "cornerRetreatPaths": 220,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.03566334842647361,
+              "worstRetreatFraction": 0.07415927099245956
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.09045607500261638,
+            "quarterGenDistance": 0.16287770686856465,
+            "blueQuarterGenLightness": 0.06686395682014801
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829562,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2766804752219804,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.28983547084154865,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.27430441277709194,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.30252513520957053,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.21645248764101144,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.34485622209471867,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.32985643379075497,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.32518295789854046,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.39786063063283167,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.28294939767648775,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 34.186051876165976,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 30.8378777151687,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 25.86437797383993,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 34.56639070147851,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 27.843703414168818,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        },
+        "old-metric": {
+          "weighted": 29.318041536480248,
+          "unweighted": 30.939438680978824,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.32434163809090455,
+              "meanStepJump": 0.019966453159991807,
+              "worstStepJump": 0.758682960378106,
+              "cornerRetreatPaths": 42,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0011926810255825516,
+              "worstRetreatFraction": 0.006272307576909052
+            },
+            "white": {
+              "meanCV": 0.32499920391023585,
+              "meanStepJump": 0.012288649768265252,
+              "worstStepJump": 1.4020678715165567,
+              "cornerRetreatPaths": 139,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.01677504361164419,
+              "worstRetreatFraction": 0.3246995691761716
+            },
+            "exchange": {
+              "meanCV": 0.34159502007339343,
+              "meanStepJump": 0.013726468613651953,
+              "worstStepJump": 1.814724788697346,
+              "cornerRetreatPaths": 150,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.02789623673590817,
+              "worstRetreatFraction": 0.2922586520578441
+            },
+            "reach": {
+              "meanCV": 0.6143395378229763,
+              "meanStepJump": 0.023797432506439082,
+              "worstStepJump": 1.807712403653633,
+              "cornerRetreatPaths": 251,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.1203840861480913,
+              "worstRetreatFraction": 0.18875909531369345
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.14358420297175922,
+            "quarterGenDistance": 0.20876391585789125,
+            "blueQuarterGenLightness": 0.13872449448232077
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829555,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.28843229254214536,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3009365236354538,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.2720510129375516,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.2966863369021662,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2204281408786613,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.36540027414193493,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3361163797981787,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3212188941243553,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3433609792956876,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.30133417712806476,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.449751711136432,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.744420682360943,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.2210991827298,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.387185307693493,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 29.17938148165235,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        },
+        "balanced": {
+          "weighted": 29.410505328989466,
+          "unweighted": 30.958685816186875,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.22418363091993795,
+              "meanStepJump": 0.014856804292390722,
+              "worstStepJump": 0.5493375017211328,
+              "cornerRetreatPaths": 1,
+              "totalPaths": 360,
+              "meanRetreatFraction": 7.713759420651529e-07,
+              "worstRetreatFraction": 8.923856603047737e-05
+            },
+            "white": {
+              "meanCV": 0.1943766489524612,
+              "meanStepJump": 0.007620526999246389,
+              "worstStepJump": 1.4239148770073886,
+              "cornerRetreatPaths": 54,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0021425266348930215,
+              "worstRetreatFraction": 0.022982206697991968
+            },
+            "exchange": {
+              "meanCV": 0.2163032533522143,
+              "meanStepJump": 0.00832177351053404,
+              "worstStepJump": 1.3035973683909627,
+              "cornerRetreatPaths": 51,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.005455105012732746,
+              "worstRetreatFraction": 0.07586015357394876
+            },
+            "reach": {
+              "meanCV": 0.3510986224662957,
+              "meanStepJump": 0.01675182087495931,
+              "worstStepJump": 1.686357962468211,
+              "cornerRetreatPaths": 226,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.03696999493778664,
+              "worstRetreatFraction": 0.0896942427813683
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.16590473539347014,
+            "quarterGenDistance": 0.22862383175912823,
+            "blueQuarterGenLightness": 0.1932705395878818
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829562,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.26908050182233706,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.28649379633900984,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.27041590348604516,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.29560133031033614,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.19843492291908185,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3229890029987315,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.31685422857260603,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.319745961909999,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.35958446879333505,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.250620320268699,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.46987186481039,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 28.499638553058116,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.676903404100013,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.67890361965306,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 25.98893454756521,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        },
+        "metric": {
+          "weighted": 28.1950152946272,
+          "unweighted": 29.83179680660869,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.2635165427163924,
+              "meanStepJump": 0.016946699777747556,
+              "worstStepJump": 0.7407538446824197,
+              "cornerRetreatPaths": 15,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0002912304946222182,
+              "worstRetreatFraction": 0.002257548885014363
+            },
+            "white": {
+              "meanCV": 0.23917863341565962,
+              "meanStepJump": 0.009475268925563616,
+              "worstStepJump": 1.480632581746968,
+              "cornerRetreatPaths": 68,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.002211790576370902,
+              "worstRetreatFraction": 0.03424408938582748
+            },
+            "exchange": {
+              "meanCV": 0.2541565065276897,
+              "meanStepJump": 0.010023069471805077,
+              "worstStepJump": 1.572840043361297,
+              "cornerRetreatPaths": 65,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.007095241316542409,
+              "worstRetreatFraction": 0.18718770259770875
+            },
+            "reach": {
+              "meanCV": 0.4256976801365784,
+              "meanStepJump": 0.019232359325348808,
+              "worstStepJump": 1.4905621509075055,
+              "cornerRetreatPaths": 218,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.07301234961383758,
+              "worstRetreatFraction": 0.12876827693977078
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.16841571462461047,
+            "quarterGenDistance": 0.231229659689005,
+            "blueQuarterGenLightness": 0.17487300224993435
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829562,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.26576762290898637,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.28040083611038213,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.2638128994783724,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.2874206043909659,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.19900537067624213,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3331547566900651,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3140551091717542,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3266595023299165,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.34355326817581017,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.25859631915150616,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 30.361379741562743,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 25.868871178890558,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 22.719905868579655,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 30.79959043615508,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 28.913899613397138,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        }
+      }
+    },
+    "full": {
+      "models": {
+        "old-balanced": {
+          "weighted": 31.449029569567628,
+          "unweighted": 33.30605569823833,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.3401527586097606,
+              "meanStepJump": 0.01733942302430393,
+              "worstStepJump": 1.1054252099179809,
+              "cornerRetreatPaths": 22,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0004960785008041857,
+              "worstRetreatFraction": 0.0028181445814248413
+            },
+            "white": {
+              "meanCV": 0.332053327564684,
+              "meanStepJump": 0.011199451286007961,
+              "worstStepJump": 1.4697050826384637,
+              "cornerRetreatPaths": 110,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.005214056939040843,
+              "worstRetreatFraction": 0.055954314021556345
+            },
+            "exchange": {
+              "meanCV": 0.2549054724417082,
+              "meanStepJump": 0.01189876217476122,
+              "worstStepJump": 1.5216380489405723,
+              "cornerRetreatPaths": 176,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.02256925464990208,
+              "worstRetreatFraction": 0.07614029857048528
+            },
+            "reach": {
+              "meanCV": 0.5185147737821499,
+              "meanStepJump": 0.019585873085623748,
+              "worstStepJump": 1.8260997181620564,
+              "cornerRetreatPaths": 162,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.04308029429841197,
+              "worstRetreatFraction": 0.09485940106986364
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.08825025166468457,
+            "quarterGenDistance": 0.15543292688732369,
+            "blueQuarterGenLightness": 0.09558881110842402
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.2428688947053694,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434123,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.742565970982971,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.281138030611101,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.30362834122689486,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.30362870028065314,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.3112385238350051,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.23988218403031275,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.38423843431984955,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.4206113591435416,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3381988372380396,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.33400226349832207,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.32055237972794015,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3602987790681641,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.3163489978268494,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 33.80098264048385,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.778235542003504,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 25.254440618566832,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 32.52918699244562,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 32.48371821607352,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        },
+        "old-metric": {
+          "weighted": 29.630885131438916,
+          "unweighted": 31.234385948914827,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.364574142352304,
+              "meanStepJump": 0.020495394014054917,
+              "worstStepJump": 1.251059987405184,
+              "cornerRetreatPaths": 55,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.003920416901250923,
+              "worstRetreatFraction": 0.009039679941790533
+            },
+            "white": {
+              "meanCV": 0.4815340488900069,
+              "meanStepJump": 0.014693012737057927,
+              "worstStepJump": 1.5733194614093717,
+              "cornerRetreatPaths": 120,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.014185192751183144,
+              "worstRetreatFraction": 0.12974825677864263
+            },
+            "exchange": {
+              "meanCV": 0.4221541020263833,
+              "meanStepJump": 0.015620226976601873,
+              "worstStepJump": 1.870512130353477,
+              "cornerRetreatPaths": 185,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.07101389764059313,
+              "worstRetreatFraction": 0.39095426545667217
+            },
+            "reach": {
+              "meanCV": 0.6799255716735673,
+              "meanStepJump": 0.023043720348975345,
+              "worstStepJump": 1.7936252891679207,
+              "cornerRetreatPaths": 211,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.09998149847289213,
+              "worstRetreatFraction": 0.14707367731242552
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.14867395566725677,
+            "quarterGenDistance": 0.20587503959254497,
+            "blueQuarterGenLightness": 0.1764430911825122
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.242868894705369,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434128,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.742565970982971,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2868402269190373,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3328905628129003,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.32121356593222067,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.32887291959655274,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2392759841745803,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.39225255099740514,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.49545081183239753,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3468741558920139,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.3231089453000469,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.31436334661713816,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3600352587789809,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.3203392346458967,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.67083435067204,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.290987310803484,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.535872192223206,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.038974728446334,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 29.690125919012424,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        },
+        "balanced": {
+          "weighted": 30.371858100792444,
+          "unweighted": 32.35472466477607,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.25749615100955897,
+              "meanStepJump": 0.015797651563711844,
+              "worstStepJump": 1.251032498741227,
+              "cornerRetreatPaths": 17,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0006440677799772192,
+              "worstRetreatFraction": 0.0022596545301558687
+            },
+            "white": {
+              "meanCV": 0.30992454940909336,
+              "meanStepJump": 0.009514574149752125,
+              "worstStepJump": 0.8154147709788195,
+              "cornerRetreatPaths": 58,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0023757121605320385,
+              "worstRetreatFraction": 0.028156449010189898
+            },
+            "exchange": {
+              "meanCV": 0.2571077298228939,
+              "meanStepJump": 0.00957250127074458,
+              "worstStepJump": 0.8167243416179281,
+              "cornerRetreatPaths": 85,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.01686356688178733,
+              "worstRetreatFraction": 0.08897487017741419
+            },
+            "reach": {
+              "meanCV": 0.3812034934367574,
+              "meanStepJump": 0.015181835751509776,
+              "worstStepJump": 1.7246168904744434,
+              "cornerRetreatPaths": 131,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.025510290247250392,
+              "worstRetreatFraction": 0.07844552472471651
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.17000384590955572,
+            "quarterGenDistance": 0.22467243014505187,
+            "blueQuarterGenLightness": 0.2266996563067846
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.242868894705369,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434128,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.742565970982971,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2756537452617247,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3278290531012701,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.308850870715678,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.3190094829154314,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2244858288578872,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.36810204693093146,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.3805136142229584,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3295800787439336,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.306311867344624,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3099388360942581,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.33673002377096045,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.30280707102308035,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 32.885875063502866,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 28.063204410211583,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.72811591431747,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 29.976731650448556,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 30.79053612552261,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        },
+        "metric": {
+          "weighted": 28.941918519480993,
+          "unweighted": 30.71220968363611,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.29997289660206206,
+              "meanStepJump": 0.017779804435979835,
+              "worstStepJump": 0.7957745389868446,
+              "cornerRetreatPaths": 25,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0007232381458477098,
+              "worstRetreatFraction": 0.0037993146242380656
+            },
+            "white": {
+              "meanCV": 0.36292745781273344,
+              "meanStepJump": 0.01124145479835471,
+              "worstStepJump": 1.105682603345493,
+              "cornerRetreatPaths": 85,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.00413725541603272,
+              "worstRetreatFraction": 0.052583876756579745
+            },
+            "exchange": {
+              "meanCV": 0.32233224840099584,
+              "meanStepJump": 0.01173174995854549,
+              "worstStepJump": 1.429337465919933,
+              "cornerRetreatPaths": 114,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.024183975803283003,
+              "worstRetreatFraction": 0.2849989170023324
+            },
+            "reach": {
+              "meanCV": 0.4496116013542281,
+              "meanStepJump": 0.017833782589421147,
+              "worstStepJump": 1.748274120623705,
+              "cornerRetreatPaths": 171,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.05296912296377471,
+              "worstRetreatFraction": 0.06201832255869869
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.17207739633216015,
+            "quarterGenDistance": 0.22645482438859008,
+            "blueQuarterGenLightness": 0.20957794809862254
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.2428688947053685,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434128,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829697,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.28270484451403033,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3056799359758832,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.28057845418560223,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.29713613364104885,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2244970446492562,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3817740692641898,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.40839508856643225,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3399809862362924,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.311928988719543,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3439647939939407,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.36051558841094095,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.29921007630085533,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.18712786413347,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 26.629974469788838,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 22.95547982744327,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 29.169058487054254,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 32.14349114360253,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "selection": {
+    "status": "Frozen before the new scored ColorBench run",
+    "timeUTC": "2026-09-17T18:15:08.784134+00:00",
+    "baseCommit": "bf43587e620c97a660a6f4d3da76ae41472446f8",
+    "human_training": [
+      "COMBVD"
+    ],
+    "syntheticRuler": "frozen HelmLab 1.0.0 GenSpace",
+    "selectionBasis": "joint training objective, 36-hue direct-runtime diagnostics and native hue-sheet review; not new held-out scores",
+    "candidates": {
+      "balanced": {
+        "trial": "g2-balanced",
+        "sha256": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+        "layers": 5
+      },
+      "metric": {
+        "trial": "g2-metric",
+        "sha256": "11b2c1039943cf31925ec7df22f4071859bb8ed3d00e4df8e7cae6403e045f5c",
+        "layers": 5
+      }
+    },
+    "priorDataExposure": "Earlier development used/scored these datasets; this is not pristine external validation.",
+    "notSelected": {
+      "g2-smooth": "Stronger smoothing remains a retained trial, but gives up the full-gamut COMBVD gains of the chosen pair.",
+      "g1-balanced": "Earlier coarse-hue continuation.",
+      "g1-metric": "Earlier coarse-hue continuation."
+    }
+  }
+}

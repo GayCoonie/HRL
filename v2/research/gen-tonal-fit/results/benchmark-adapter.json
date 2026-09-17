@@ -1,0 +1,5 @@
+{
+  "baseAdapter": "../shared-rl/benchmark.py",
+  "baseSHA256": "bb15a5207db9a890fca2dae4678dc4ff0f10480f49d712011a8af56f8a7d5879",
+  "change": "Same judges and support policies; four controls/candidates plus two full clipped cases. GenSpace is not substituted into any scored judge."
+}

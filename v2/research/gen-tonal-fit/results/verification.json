@@ -1,0 +1,102 @@
+{
+  "seed": 170917,
+  "models": {
+    "balanced": {
+      "sha256": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+      "profiles": {
+        "srgb": {
+          "randomRoundtrips": 8192,
+          "nearBlackSamples": 256,
+          "maxEmbeddingError": 1.25253034940348e-11,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "maxVividChange": 0,
+          "exact16BitRoundtrips": 4096,
+          "jacobianSamples": 1200,
+          "minDet": 0.19586853389871337,
+          "maxCondition": 199.67680084341873,
+          "maxSeamXYZDifference": 2.365670992432456e-9,
+          "linearRGBExtent": [
+            1.0209892619989859e-11,
+            0.9999569238959307
+          ]
+        },
+        "full": {
+          "randomRoundtrips": 8192,
+          "nearBlackSamples": 256,
+          "maxEmbeddingError": 4.29234425780578e-12,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "maxVividChange": 0,
+          "exact16BitRoundtrips": 4096,
+          "jacobianSamples": 1200,
+          "minDet": 0.09443306021915099,
+          "maxCondition": 109.20957648897405,
+          "maxSeamXYZDifference": 1.3211924554390464e-8,
+          "linearRGBExtent": null
+        }
+      },
+      "identicalNormalizedTuples": 2048,
+      "untrainedThirdGamut": {
+        "id": "a98-rgb",
+        "samples": 2048,
+        "maxLinearRGBError": 5.715872219980156e-12,
+        "refitted": false
+      },
+      "relative100vs300IdentitySamples": 1024
+    },
+    "metric": {
+      "sha256": "11b2c1039943cf31925ec7df22f4071859bb8ed3d00e4df8e7cae6403e045f5c",
+      "profiles": {
+        "srgb": {
+          "randomRoundtrips": 8192,
+          "nearBlackSamples": 256,
+          "maxEmbeddingError": 9.919731702723311e-12,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "maxVividChange": 0,
+          "exact16BitRoundtrips": 4096,
+          "jacobianSamples": 1200,
+          "minDet": 0.059313993763839744,
+          "maxCondition": 195.94793357548724,
+          "maxSeamXYZDifference": 2.884588096163654e-9,
+          "linearRGBExtent": [
+            4.185135153256615e-13,
+            0.9998671010494743
+          ]
+        },
+        "full": {
+          "randomRoundtrips": 8192,
+          "nearBlackSamples": 256,
+          "maxEmbeddingError": 1.2992526325639187e-11,
+          "maxHueLabelChange": 0,
+          "neutralSamples": 1025,
+          "maxNeutralChange": 0,
+          "vividSamples": 720,
+          "maxVividChange": 0,
+          "exact16BitRoundtrips": 4096,
+          "jacobianSamples": 1200,
+          "minDet": 0.0685555263474411,
+          "maxCondition": 470.8889106414113,
+          "maxSeamXYZDifference": 1.2965168383338721e-8,
+          "linearRGBExtent": null
+        }
+      },
+      "identicalNormalizedTuples": 2048,
+      "untrainedThirdGamut": {
+        "id": "a98-rgb",
+        "samples": 2048,
+        "maxLinearRGBError": 3.2791547255328624e-12,
+        "refitted": false
+      },
+      "relative100vs300IdentitySamples": 1024
+    }
+  },
+  "method": "Exact JS inverse, seeded near-black and uniform samples; finite-difference coordinate Jacobian excludes vertices and boundaries."
+}
