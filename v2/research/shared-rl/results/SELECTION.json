@@ -1,0 +1,11 @@
+{
+  "status": "Recovered frozen selection; runtime verification pending at creation",
+  "selection_basis": "COMBVD joint fit plus direct dark-edge and generated-path checks from the interrupted work",
+  "balanced": {"record": "balanced.json", "trial": "fine-balanced", "prior_commit": "ba89fc8bcf26c2e4c8d3efe3596a7d735fe70e44"},
+  "metric": {"record": "metric.json", "trial": "joint-metric", "prior_commit": "23364a997542a28e14e4c20a1f74344bd6d0410d"},
+  "human_training": ["COMBVD"],
+  "learned_gamut_specific_banks": false,
+  "dark_target_is_engineering_preference": true,
+  "heldout_caveat": "Earlier development and the interrupted work may have exposed evaluation scores. Do not call this pristine external validation. No new scored evaluation is used to alter the recovered coefficients during completion.",
+  "recovery_limits": "The fitted coefficients, trial recipes, aggregate optimizer statistics and source code were committed. Full shared-trial optimizer traces were not committed before the interruptions. They must not be reconstructed as though they were original logs. New verification logs will be retained separately."
+}
