@@ -119,9 +119,12 @@ def main():
 
 def report(out):
     models=out['models'];names=['legacy-parent-full-300-reject','legacy-candidate-full-300-reject','relative-parent-full-300-clip','relative-candidate-full-300-clip','relative-candidate-full-300-reject']
-    lines=['# Relative-domain ColorBench rerun','',f"Run commit: `{out['hrl_run_commit']}`. ColorBench `{out['colorbench_commit']}`. Pool `{out['pool_commit']}`.",'','No observer refit was performed. The old checkpoints remain unchanged. New full-domain coordinates use regenerated path maps on the physical chromaticity cone with 0 <= relative Y <= 1.','', '**Clipped imports are marked †.** Missing strict results are N/A, not zero. The high-magnitude hue continuation is separately counted in the JSON audits. No overall rank is claimed for a clipped-input pipeline.','', '| Dataset | 0.8A old | C1 old | 0.8A corrected/clip | C1 corrected/clip | C1 corrected/strict |','|---|---:|---:|---:|---:|---:|']
+    lines=['# Relative-domain ColorBench rerun','',f"Run commit: `{out['hrl_run_commit']}`. ColorBench `{out['colorbench_commit']}`. Pool `{out['pool_commit']}`.",'','No observer refit was performed. The old checkpoints remain unchanged. New full-domain coordinates use regenerated path maps on the physical chromaticity cone with 0 <= relative Y <= 1.','', '**† marks explicitly clipped inputs; ‡ marks incomplete strict support.** Missing results are N/A, not zero. The high-magnitude hue continuation is separately counted in the JSON audits. No overall rank is claimed for a clipped-input pipeline.','', '| Dataset | 0.8A old | C1 old | 0.8A corrected/clip | C1 corrected/clip | C1 corrected/strict |','|---|---:|---:|---:|---:|---:|']
     def f(v):
-        x=v['score'];return 'N/A' if x is None or not np.isfinite(x) else f'{x:.6f}'+(' †' if not v['exact_input_support'] else '')
+        x=v['score']
+        if x is None or not np.isfinite(x):return 'N/A'
+        mark=' †' if v.get('audit',{}).get('mapped',0) else ' ‡' if not v['exact_input_support'] else ''
+        return f'{x:.6f}'+mark
     for board in ['generation','measurement']:
         keys=list(models[names[0]][board])
         if board=='measurement':keys=['bfd','leeds','witt','rit','macadam']+[k for k in keys if k not in ['bfd','leeds','witt','rit','macadam']]
@@ -129,7 +132,9 @@ def report(out):
     lines+=['','## COMBVD','', '| Model | Unweighted | Traditional weighted | Retained |','|---|---:|---:|---:|']
     for n,m in models.items():
         c=m['combvd'];lines.append(f"| {n} | {c['unweighted']:.6f} | {c['traditional_weighted']:.6f} | {c['retained']}/{c['total']} |")
-    lines+=['','## 100 versus 300 nits','','Both contexts were actually run on the same relative XYZ inputs. The existing relative calibration has no newly fitted absolute-luminance response; identical results are therefore a unit-invariance check, not evidence that either white luminance is better.','',json.dumps(out['nits_comparison'],indent=2),'','## Scope','','Only the five scored generation and sixteen scored measurement columns were evaluated. Appearance diagnostics, ordinal HumanFB, application scenarios, and unscored physics gates were excluded. Separate numerical round-trip/unit tests validate the implementation.','', 'The original COMBVD, hue-field fitting, and inherited development-data contamination still apply. Newly admitted stimuli may be outside the hue model’s original fitted magnitude interval; continuation is not additional observer evidence.']
+    lines+=['','## 100 versus 300 nits','','Both contexts were actually run on the same relative XYZ inputs. The existing relative calibration has no newly fitted absolute-luminance response; identical results are therefore a unit-invariance check, not evidence that either white luminance is better.','','```json',json.dumps(out['nits_comparison'],indent=2),'```','','## Scope','','Only the five scored generation and sixteen scored measurement columns were evaluated. Appearance diagnostics, ordinal HumanFB, application scenarios, and unscored physics gates were excluded. Separate numerical round-trip/unit tests validate the implementation.','', 'The original COMBVD, hue-field fitting, and inherited development-data contamination still apply. Newly admitted stimuli may be outside the hue model’s original fitted magnitude interval; continuation is not additional observer evidence.']
     (HERE/'results/REPORT.md').write_text('\n'.join(lines)+'\n')
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    if sys.argv[1:]==['--report-only']:report(json.loads((HERE/'results/colorbench.json').read_text()))
+    else:main()
