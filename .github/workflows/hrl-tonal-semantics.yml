@@ -1,0 +1,77 @@
+name: HRL tonal semantics verification
+on:
+  push:
+    branches: [research/tonal-semantics-recovery]
+    paths: ['.github/workflows/hrl-tonal-semantics.yml','v2/research/tonal-semantics/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: hrl-tonal-semantics
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Preserve complete input snapshot
+        run: |
+          git archive --format=zip -o /tmp/hrl-tonal-source.zip HEAD
+          mkdir -p v2/research/tonal-semantics/results
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          root=Path('v2/research/tonal-semantics')
+          recorded=json.loads((root/'VERIFY_INPUTS.json').read_text())
+          for name,sha in recorded['sourceHashes'].items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==sha,name
+          result={name:hashlib.sha256((root/name).read_bytes()).hexdigest() for name in recorded['publicSources']}
+          (root/'results/verified-source-hashes.json').write_text(json.dumps(result,indent=2)+'\n')
+          print('Frozen model and GenSpace inputs match the recovered source manifest.')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-tonal-source-snapshot
+          path: /tmp/hrl-tonal-source.zip
+      - name: Algebraic tests and new GenSpace audit
+        run: |
+          set -o pipefail
+          node v2/research/tonal-semantics/test.mjs | tee v2/research/tonal-semantics/results/test.log
+          node v2/research/tonal-semantics/audit.mjs | tee v2/research/tonal-semantics/results/audit.log
+          python v2/research/tonal-semantics/report.py
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('v2/research/tonal-semantics')
+          a=json.loads((p/'results/genspace-audit.json').read_text())
+          expected=json.loads((p/'VERIFY_INPUTS.json').read_text())['aggregateCV']
+          actual=[a['models'][g+'-'+v]['summaries'][f]['meanCV'] for g in ['srgb','full'] for v in ['balanced','metric'] for f in ['black','white']]
+          difference=max(abs(x-y) for x,y in zip(expected,actual))
+          assert difference<1e-10, (difference,actual)
+          assert sum(m['evaluated'] for m in a['models'].values())==371520
+          assert all(m['invalid']==0 for m in a['models'].values())
+          (p/'results/reproduction-check.json').write_text(json.dumps({'maxDifferenceFromRecoveredAggregateCV':difference,'recoveredValuesAreNotObserverData':True,'sampleCount':371520,'invalidSamples':0},indent=2)+'\n')
+          PY
+      - name: Install browser runtime
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Test the actual served page
+        run: |
+          node --check v2/research/tonal-semantics/app.mjs
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/tonal-http.log 2>&1 &
+          python v2/research/tonal-semantics/site-check.py --base http://127.0.0.1:8765/ --out v2/research/tonal-semantics/results/browser-runner
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-tonal-semantics-review
+          path: v2/research/tonal-semantics/
+          retention-days: 30

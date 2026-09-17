@@ -1,0 +1,118 @@
+name: HRL tonal semantics publication
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-tonal-publish.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-tonal-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify frozen conversion and ruler inputs
+        run: |
+          mkdir -p v2/research/tonal-semantics/results
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          p=Path('v2/research/tonal-semantics')
+          expected=json.loads((p/'VERIFY_INPUTS.json').read_text())
+          for name,sha in expected['sourceHashes'].items():
+              assert hashlib.sha256((p/name).read_bytes()).hexdigest()==sha,name
+          print('Frozen conversion and GenSpace inputs unchanged.')
+          PY
+      - name: Complete source notes and navigation
+        run: python v2/research/tonal-semantics/finalize.py
+      - name: Reproduce algebra and GenSpace audit
+        run: |
+          set -o pipefail
+          node v2/research/tonal-semantics/test.mjs | tee v2/research/tonal-semantics/results/test.log
+          node v2/research/tonal-semantics/audit.mjs | tee v2/research/tonal-semantics/results/audit.log
+          python v2/research/tonal-semantics/report.py
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          p=Path('v2/research/tonal-semantics')
+          a=json.loads((p/'results/genspace-audit.json').read_text())
+          expected=json.loads((p/'VERIFY_INPUTS.json').read_text())['aggregateCV']
+          actual=[a['models'][g+'-'+v]['summaries'][f]['meanCV'] for g in ['srgb','full'] for v in ['balanced','metric'] for f in ['black','white']]
+          error=max(abs(x-y) for x,y in zip(expected,actual))
+          assert error<1e-10,(error,actual)
+          assert sum(m['evaluated'] for m in a['models'].values())==371520
+          assert all(m['invalid']==0 for m in a['models'].values())
+          (p/'results/reproduction-check.json').write_text(json.dumps({'maxDifferenceFromRecoveredAggregateCV':error,'sampleCount':371520,'invalidSamples':0,'newObserverData':False},indent=2)+'\n')
+          hashes={str(f.relative_to(p)):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.iterdir() if f.is_file()}
+          (p/'results/verified-source-hashes.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - name: Install browser runtime
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Verify finalized served app and entry links
+        run: |
+          node --check v2/research/tonal-semantics/app.mjs
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/tonal-http.log 2>&1 &
+          python v2/research/tonal-semantics/site-check.py --base http://127.0.0.1:8765/ --out v2/research/tonal-semantics/results/browser-runner
+          python - <<'PY'
+          from pathlib import Path
+          for name in ['index.html','v2/index.html','v2/shared.html']:
+              assert 'id="tonal-semantics-link"' in Path(name).read_text()
+          PY
+      - name: Commit verified results and public entry points
+        id: publication
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/research/tonal-semantics index.html README.md v2/index.html v2/README.md v2/shared.html
+          git commit -m 'Publish verified GenSpace audit, tonal operations, definitions and live lab'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for exact public Pages files
+        env:
+          PUBLISHED_SHA: ${{ steps.publication.outputs.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,os,time,urllib.request
+          paths=['v2/research/tonal-semantics/index.html','v2/research/tonal-semantics/app.mjs','v2/research/tonal-semantics/results/genspace-audit.json','v2/shared.html']
+          hashes={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(90):
+              try:
+                  for p in paths:
+                      u='https://gaycoonie.github.io/HRL/'+p+'?verified='+os.environ['PUBLISHED_SHA']+'&attempt='+str(attempt)
+                      raw=urllib.request.urlopen(u,timeout=15).read()
+                      assert hashlib.sha256(raw).hexdigest()==hashes[p],p
+                  print('Exact public page, script, audit and entry link verified.');break
+              except Exception as e:print(type(e).__name__,str(e)[:140],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Public Pages files did not match before timeout')
+          PY
+      - name: Exercise actual public app
+        run: python v2/research/tonal-semantics/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/tonal-semantics/results/browser-live
+      - name: Commit public browser receipt
+        run: |
+          git add v2/research/tonal-semantics/results/browser-live/verification.json
+          git commit -m 'Record actual public Pages verification for the GenSpace tonal lab'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-tonal-published-review
+          path: v2/research/tonal-semantics/
+          retention-days: 30

@@ -1,0 +1,32 @@
+{
+  "sourceHashes": {
+    "../../../src/base/appearance-runtime.mjs": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+    "../../../src/base/gen-parameters.mjs": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+    "../shared-rl/source.mjs": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+    "../shared-rl/core.mjs": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+    "../shared-rl/results/balanced.json": "a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35",
+    "../shared-rl/results/metric.json": "2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b"
+  },
+  "publicSources": {
+    "app.mjs": "44ab4cbe645317c1efb04c254893cc773760281ad1a15937dd0586fd834598bb",
+    "test.mjs": "da0d1ff47748c21c6ccebde0ae2ff670718cf267ba7832634241bc9d918f4944",
+    "operations.mjs": "182edbef7f08c312ec2bdeab85545b38226349a9ab90fb1602066f5585d01f0e",
+    "report.py": "7bd4645a30995835ff591bb7b264f7bf9ad09e9d1429184d6ac802b1aed2afde",
+    "index.html": "1f7e27c1611090ae350729302c14875961773700458d3e639cc23065330ae67a",
+    "audit.mjs": "549cde1c2ea4a22050ca1c0bb6085dd97b42e4ad20e593cdd98c087f5869e11c",
+    "PLAN.md": "87f0fdb816eb5fadadb030cfd6232d53f1ec8363617bda540871d1eea18afc18",
+    "site-check.py": "d8defc70847f7ae73b7fa8447e0e63a166ece05cf89f83eb45717cafe3b2f2a6",
+    "DEFINITIONS.md": "7ef8218b4f754aad20fb566abfe071ac5ae735ceaa1e7c77b2428ce886892898",
+    "ruler.mjs": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce"
+  },
+  "aggregateCV": [
+    0.3148095058040127,
+    0.19769063734608391,
+    0.33029035641752197,
+    0.2999470271665382,
+    0.35588684919551306,
+    0.33139963215607815,
+    0.3745244215933097,
+    0.45992274562960767
+  ]
+}
