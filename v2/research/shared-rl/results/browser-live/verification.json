@@ -1,0 +1,18 @@
+{
+  "baseURL": "https://gaycoonie.github.io/HRL/",
+  "liveGitHubPages": true,
+  "rootNavigationChecked": true,
+  "panels": 3,
+  "edgeStripCanvases": 6,
+  "neutralSurroundSwitch": true,
+  "currentHueReadouts": true,
+  "nativeTrianglesUnclipped": true,
+  "bothGamutsRendered": true,
+  "hexImport": true,
+  "sharedMetricColorJSONExport": true,
+  "measurementRows": 16,
+  "maskSwitch": true,
+  "mobileNoOverflow": true,
+  "errors": [],
+  "chromium": "143.0.7499.4"
+}
