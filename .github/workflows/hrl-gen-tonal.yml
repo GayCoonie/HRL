@@ -1,0 +1,127 @@
+name: HRL GenSpace tonal checkpoints
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-gen-tonal.yml', 'v2/research/gen-tonal-fit/RUN.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-gen-tonal-publication
+  cancel-in-progress: false
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify exact frozen models and inherited input hashes
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path('v2/research/gen-tonal-fit');sel=json.loads((p/'results/SELECTION.json').read_text())
+          for name,item in sel['candidates'].items():
+              raw=(p/f'results/{name}.json').read_bytes()
+              assert hashlib.sha256(raw).hexdigest()==item['sha256'],name
+              r=json.loads(raw)
+              assert len(r['coefficients'])==1 and r['ring_logits'] is None
+              assert r['research']['ruler']=='helmlab-1.0.0-genspace'
+              for path,digest in r['research']['grid_record']['hashes'].items():
+                  assert hashlib.sha256((p/path).read_bytes()).hexdigest()==digest,path
+          PY
+      - name: Install pinned numerical, benchmark and browser tools
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Exact numerical checks and training-runtime parity
+        run: |
+          node v2/research/gen-tonal-fit/verify.mjs
+          python v2/research/gen-tonal-fit/parity.py
+          python v2/research/gen-tonal-fit/prepare-benchmark.py
+      - name: Scored ColorBench and dense actual-inverse diagnostics
+        run: |
+          python v2/research/gen-tonal-fit/benchmark.py --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets > /tmp/hrl-gen-benchmark.log 2>&1 &
+          BENCH=$!
+          HUES=72 SAMPLES=257 node v2/research/gen-tonal-fit/evaluate.mjs old-balanced old-metric balanced metric > /tmp/hrl-gen-direct.log 2>&1 &
+          DIRECT=$!
+          FAILED=0
+          wait $BENCH || FAILED=1
+          wait $DIRECT || FAILED=1
+          cat /tmp/hrl-gen-benchmark.log /tmp/hrl-gen-direct.log
+          test "$FAILED" = 0
+          cp v2/research/gen-tonal-fit/results/direct-72-257-old-balanced_old-metric_balanced_metric.json v2/research/gen-tonal-fit/results/direct-final.json
+      - name: Render exact previews and compile report
+        run: |
+          node v2/research/gen-tonal-fit/preview.mjs
+          python v2/research/gen-tonal-fit/build-preview.py
+          python v2/research/gen-tonal-fit/report.py
+          find v2/research/gen-tonal-fit/results -name '*.rgba' -delete
+      - name: Build and test the actual served four-way site
+        run: |
+          python v2/research/gen-tonal-fit/build-site.py
+          node --check v2/gen-tonal-ui/app.mjs
+          node --check v2/gen-tonal-ui/worker.mjs
+          python -m http.server 8765 --bind 127.0.0.1 > /tmp/hrl-gen-http.log 2>&1 &
+          python v2/research/gen-tonal-fit/site-check.py --base http://127.0.0.1:8765/ --out v2/research/gen-tonal-fit/results/browser-runner
+      - name: Publish verified results and site
+        id: publication
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/research/gen-tonal-fit v2/gen-tonal-ui v2/gen-tonal.html v2/index.html v2/shared.html index.html
+          git commit -m 'Publish verified GenSpace-trained tonal checkpoints, scored results and four-way picker'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for exact public Pages files
+        env:
+          PUBLISHED_SHA: ${{ steps.publication.outputs.sha }}
+        run: |
+          python - <<'PY'
+          import os,time,hashlib,urllib.request
+          from pathlib import Path
+          paths=['v2/gen-tonal.html','v2/research/gen-tonal-fit/results/site-data.json','v2/research/gen-tonal-fit/results/balanced.json']
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(90):
+              try:
+                  for p in paths:
+                      url='https://gaycoonie.github.io/HRL/'+p+'?build='+os.environ['PUBLISHED_SHA']+'&attempt='+str(attempt)
+                      data=urllib.request.urlopen(url,timeout=15).read()
+                      assert hashlib.sha256(data).hexdigest()==expected[p],p
+                  print('Public files match the verified source and evidence.');break
+              except Exception as e:print(type(e).__name__,str(e)[:120],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Exact public files did not become available')
+          PY
+      - name: Exercise the actual public comparison
+        run: python v2/research/gen-tonal-fit/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/gen-tonal-fit/results/browser-live
+      - name: Record public browser verification
+        run: |
+          git add v2/research/gen-tonal-fit/results/browser-live/verification.json
+          git commit -m 'Record successful public Pages verification of GenSpace tonal fitted checkpoints'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-gen-tonal-verified-review
+          path: |
+            v2/research/gen-tonal-fit/
+            v2/gen-tonal-ui/
+            v2/gen-tonal.html
+            /tmp/hrl-gen-*.log
+          retention-days: 30
