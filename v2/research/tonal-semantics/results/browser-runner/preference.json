@@ -1,0 +1,24 @@
+{
+  "schema": "hrl-tonal-preferences-v1",
+  "observations": [
+    {
+      "gamut": "srgb",
+      "H": 270,
+      "R": 0.65,
+      "L": 0.65,
+      "operation": "white",
+      "amount": 0.5,
+      "modelSourceHashes": {
+        "../../../src/base/appearance-runtime.mjs": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+        "../../../src/base/gen-parameters.mjs": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+        "../shared-rl/source.mjs": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+        "../shared-rl/core.mjs": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+        "../shared-rl/results/balanced.json": "a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35",
+        "../shared-rl/results/metric.json": "2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b"
+      },
+      "preferred": "balanced",
+      "recordedAt": "2026-09-17T14:27:17.365Z",
+      "interpretation": "Informal visual preference; viewing luminance and calibration unknown"
+    }
+  ]
+}

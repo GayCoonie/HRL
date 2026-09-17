@@ -1,0 +1,15 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "publicPages": false,
+  "twoUnchangedCandidates": true,
+  "bothGamuts": true,
+  "operationStrips": 6,
+  "actualWhiteAdditionReadout": true,
+  "fixedReachNeutralExchange": true,
+  "currentHueReadout": true,
+  "perHueGenSpaceTable": true,
+  "localPreferenceExport": true,
+  "mobileNoOverflow": true,
+  "errors": [],
+  "chromium": "143.0.7499.4"
+}

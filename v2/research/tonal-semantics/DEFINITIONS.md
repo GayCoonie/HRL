@@ -148,7 +148,7 @@ Coonie's preference for different candidates in different hues is first-person v
 
 ## 9. Context is part of the definition, not an excuse to avoid one
 
-The primary study by da Pos, Albertazzi, Villani and Dazzi, *The white and black colour attributes in the Natural Colour System*, distinguishes isolated attribute judgments from comparison in organised colour arrays. Its comparative experiments move the results closer to NCS, while noting very small observer counts in those tests. This supports specifying the judgment context; it does not establish a universal refutation or verification of NCS.
+The primary study by da Pos, Fiorentin, Cristoforetti, Freuli, Guidolin, Nitri and Salamina, *The white and black colour attributes in the Natural Colour System*, distinguishes isolated attribute judgments from comparison in organised colour arrays. Its comparative experiments move the results closer to NCS, while noting very small observer counts in those tests. This supports specifying the judgment context; it does not establish a universal refutation or verification of NCS.
 
 Our immediate operational context is related colours on hue sheets under a declared reference condition, with the surrounding interface and the user's display affecting visual review. The local preference recorder retains which operation and address were shown, and explicitly records that display luminance and calibration are unknown. No population-level perceptual claim is made from those informal choices.
 
@@ -162,3 +162,39 @@ Our immediate operational context is related colours on hue sheets under a decla
 - HelmLab official implementation: https://github.com/Grkmyldz148/helmlab/blob/a0d7389df929eb6b303673276019a7fcea58584c/src/helmlab/spaces/gen.py. Checked for the generation-space role and stages. The executed parameters are the existing HRL pin, not an unannounced upgrade to that repository's current defaults.
 
 These sources constrain the design and identify where observations are still needed. They do not uniquely prescribe the proposed share-dilution operator or its perceptual calibration.
+
+
+## 10. A local differential form for the next calibration
+
+This is an HRL mathematical deduction, not a formula taken from ZCAM. Let
+`X_g(H,R,L)` be the inverse HRL mapping for gamut g and let `G(X)` be the
+pinned GenSpace vector. At fixed hue define the 3-by-2 derivative
+
+    A_g = d G(X_g) / d(R,L).
+
+The two infinitesimal appearance-operation directions are
+
+    v_black = (-R,-L)       v_white = (-R,1-L).
+
+Their external-ruler speeds are `||A_g v_black||` and `||A_g v_white||`.
+This uses all three GenSpace coordinates and their interaction, not only
+Gen lightness. The two directions have determinant -R, so together they
+span the chromatic interior. Their collapse on R=0 is the expected loss
+of a chromatic direction on the neutral axis, not automatically a defect.
+
+The native equilateral-triangle metric is
+
+    ds^2 = dR^2 - dR*dL + dL^2
+
+at fixed hue, with an additional `(3/4) R^2 dH^2` for hue in radians.
+Therefore a comparison of `A_g^T A_g` with the native metric must include
+the R/L cross term. Ordinary Cartesian R/L distance would test a different
+geometry. A local metric or path-speed penalty can guide smoothness, but
+cannot on its own make R, W and K correct appearance ratings.
+
+For a future fit this supplies two separately inspectable path families,
+with own-gamut endpoints and the same learned law, rather than a single
+power target for lightness. Appearance-data constraints determine whether
+those paths really read as progressively blacker or whiter. Endpoint and
+inverse constraints keep the chart coherent; GenSpace supplies the step
+ruler. These roles remain analytically separate.

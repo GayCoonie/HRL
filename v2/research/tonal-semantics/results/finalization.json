@@ -1,0 +1,42 @@
+{
+  "recoveredCommit": "537e8f1351d1528f8f8112967e8768dcf2a4b24b",
+  "changes": {
+    "v2/research/tonal-semantics/DEFINITIONS.md": {
+      "before": "7ef8218b4f754aad20fb566abfe071ac5ae735ceaa1e7c77b2428ce886892898",
+      "after": "252a0ba9e7c6529b77623c90b447fe79c7b3990bd03b5f8d71eecfe0d65e3461",
+      "reason": "Correct author attribution from the primary paper and add explicitly derived two-direction metric constraints."
+    },
+    "v2/research/tonal-semantics/app.mjs": {
+      "before": "44ab4cbe645317c1efb04c254893cc773760281ad1a15937dd0586fd834598bb",
+      "after": "ddecae96a8f82cb5854e74dd6c9079e713f7f5d83d7d49c667ac110d23f4e4d4",
+      "reason": "Record preferences only against the completed rendered state; prevent stale-control attribution."
+    },
+    "index.html": {
+      "before": "66747dfcacbc6c9d121bd4636084eaf3f372dcc8e67f4632141607745a321228",
+      "after": "3d70f5ad16cd37b902a94c427f2adfdb1d87ffded1a392cbfe48e37517346d64",
+      "reason": "Add navigation; preserve prior picker and all calibrations."
+    },
+    "v2/index.html": {
+      "before": "5fdcb2cbd6a0f9129ea66d3add5229247e8f0cf83f5a78e9a1e870b666c580a4",
+      "after": "048cfa6a2ed0fd5a0a35bc6343cefe515e0cfa2e1f1bf9644910dbabb3d5d93a",
+      "reason": "Add navigation; preserve prior picker and all calibrations."
+    },
+    "v2/shared.html": {
+      "before": "61884c56f845f0cdb7a448f948580afb4e16e4d3287bc243a95aacf99eaef3f3",
+      "after": "8d3b2098cc6dcb7acf95eafbe5cf7eaf90ad02c01b57741db21cb4bbe4168996",
+      "reason": "Add navigation; preserve prior picker and all calibrations."
+    },
+    "README.md": {
+      "before": "f51e6c63a6b8653010ba56035655aedccca698dcc5c453c421eced5e9f85b864",
+      "after": "6c7735cfda53930ca87db3569514f6921affd8c6491b149ce67ee6c125f28331",
+      "reason": "Document additive research entry point."
+    },
+    "v2/README.md": {
+      "before": "6c8a74290db1faebae0139df63fd08060313cf61471eca61846ed1b9229765fe",
+      "after": "aa394f583ef3fb5f4e16ccca2884c16c623e22d63a6fc2ffb34ea300e8d48404",
+      "reason": "Document additive research entry point."
+    }
+  },
+  "numericalAuditChanged": false,
+  "coefficientsChanged": false
+}

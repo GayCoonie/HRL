@@ -167,3 +167,8 @@ No font files, private chat transcripts, or credentials are part of this additio
 ## Shared R/L dark-edge research
 
 [Live comparison](shared.html) retains prior refits and adds one learned R/L bank per candidate across gamut realizations. See `research/shared-rl` under v2 for the plan, evidence, tests and explicit tradeoffs.
+
+<!-- tonal-semantics -->
+## GenSpace tonal operations research
+
+[Black/white operations lab](research/tonal-semantics/) compares unchanged shared 0.10 candidates with a GenSpace ruler. It implements distinct black dilution, white dilution and fixed-Reach neutral exchange, plus local per-hue preference export. Definitions, source roles, raw audit and algebraic tests are in `v2/research/tonal-semantics`. This is a research/diagnostic addition, not a newly fitted colour-space release.

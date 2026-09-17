@@ -1,0 +1,60 @@
+{
+  "seed": 170926,
+  "randomOperationTests": 10000,
+  "maxCompositionError": 2.220446049250313e-16,
+  "contracts": [
+    "simplex containment",
+    "same-endpoint semigroup",
+    "cross-endpoint order difference",
+    "corner-distance contractions",
+    "fixed-Reach neutral exchange"
+  ],
+  "ZCAM": {
+    "white": {
+      "Vz": 42,
+      "Kz": 20,
+      "Wz": 100
+    },
+    "black": {
+      "Vz": 58,
+      "Kz": 100,
+      "Wz": 0
+    },
+    "grey": {
+      "Vz": 8,
+      "Kz": 60,
+      "Wz": 50
+    },
+    "warning": "Kz and Wz are not HRL shares, and Vz is not 100-Kz."
+  },
+  "conceptual": {
+    "ordinaryGrey": {
+      "K": 0.5,
+      "W": 0.5,
+      "R": 0
+    },
+    "genericVivid": {
+      "K": 0.3596875762567151,
+      "W": 0.3596875762567151,
+      "R": 0.2806248474865698
+    },
+    "symmetricZeroKW": {
+      "K": 0,
+      "W": 0,
+      "R": 1
+    }
+  },
+  "GenSpace": {
+    "black": [
+      0,
+      0,
+      0
+    ],
+    "white": [
+      0.9999989851441786,
+      -0.000019390012858377106,
+      -0.00007003990773534483
+    ],
+    "negativeResponseRejection": true
+  }
+}
