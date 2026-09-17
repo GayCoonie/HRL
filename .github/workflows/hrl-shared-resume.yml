@@ -1,0 +1,96 @@
+name: HRL shared R-L completion
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-shared-resume.yml', 'v2/research/shared-rl/RESUME']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-shared-completion
+  cancel-in-progress: false
+jobs:
+  complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bundle recovered source snapshot
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile,subprocess
+          with zipfile.ZipFile('/tmp/hrl-shared-sources.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in Path('.').rglob('*'):
+                  if p.is_file() and '.git' not in p.parts and p.suffix.lower() in ['.json','.mjs','.js','.py','.md','.html','.css','.npz','.sh']:
+                      z.write(p,str(p))
+              z.writestr('RECOVERED_COMMIT.txt',subprocess.check_output(['git','rev-parse','HEAD'],text=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-shared-recovered-sources
+          path: /tmp/hrl-shared-sources.zip
+      - name: Install evaluation tools and pinned data
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Prepare inputs and verify frozen shared models
+        run: |
+          python - <<'PY'
+          import json,numpy as np
+          from pathlib import Path
+          root=Path('v2/research')
+          a=np.load(root/'relative-domain/results/relative-candidate-full-300-reject-combvd.npz')
+          rows=[dict(xyz1=x.tolist(),xyz2=y.tolist(),dv=float(d),weight=int(w)) for x,y,d,w in zip(a['xyz1'],a['xyz2'],a['dv'],a['weights'])]
+          (root/'relative-refit/results/training-pairs.json').write_text(json.dumps(rows))
+          PY
+          python v2/research/shared-rl/prepare.py
+          node v2/research/shared-rl/cache.mjs --coordinates-only
+          node v2/research/shared-rl/source-test.mjs
+          node v2/research/shared-rl/test.mjs
+      - name: Run scored ColorBench and direct output diagnostics
+        run: |
+          python v2/research/shared-rl/benchmark.py --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets
+          GAMUT=srgb DENSE=1 node v2/research/shared-rl/visual.mjs old-balanced balanced metric
+          GAMUT=full DENSE=1 node v2/research/shared-rl/visual.mjs old-balanced balanced metric
+          node v2/research/shared-rl/audit.mjs old-balanced balanced metric
+          node v2/research/shared-rl/preview.mjs
+          python v2/research/shared-rl/build-preview.py
+          python v2/research/shared-rl/make-summary.py
+      - name: Build and exercise the served comparison
+        run: |
+          python v2/research/shared-rl/build-site.py
+          node --check v2/shared-ui/app.mjs
+          node --check v2/shared-ui/worker.mjs
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-http.log 2>&1 &
+          python v2/research/shared-rl/site-check.py --base http://127.0.0.1:8765/ --root-links --out v2/research/shared-rl/results/browser-runner
+      - name: Publish verified evidence and page
+        run: |
+          find v2/research/shared-rl/results -name '*.rgba' -delete
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/research/shared-rl v2/shared-ui v2/shared.html v2/refits.html v2/index.html v2/README.md index.html README.md
+          git commit -m 'Complete shared R-L validation, scored results, and comparison page'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-shared-completion-review
+          path: |
+            v2/research/shared-rl/
+            v2/shared-ui/
+            v2/shared.html
+          retention-days: 30
