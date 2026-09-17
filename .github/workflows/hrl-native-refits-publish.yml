@@ -33,10 +33,18 @@ jobs:
           assert hashlib.sha256(raw).hexdigest()==p['sha256']
           files=json.loads(raw)
           assert len(files)==p['files']
-          for name,text in files.items():
+          for name,item in files.items():
               target=Path(name)
               assert '..' not in target.parts and not target.is_absolute()
               assert name.startswith(('v2/research/native-srgb-refit/','v2/refits-ui/')) or name in ['v2/refits.html','v2/refits.mjs','tools/integrate-refits.py']
+              if isinstance(item,str):text=item
+              else:
+                  base=Path(item['base'])
+                  assert str(base).startswith('v2/research/relative-refit/') and '..' not in base.parts
+                  original=base.read_bytes()
+                  assert hashlib.sha256(original).hexdigest()==item['hash'],str(base)
+                  lines=original.decode().splitlines(keepends=True)
+                  text=''.join(''.join(lines[b[0]:b[1]]) if isinstance(b,list) else b for b in item['blocks'])
               target.parent.mkdir(parents=True,exist_ok=True)
               target.write_text(text)
           for name,sha in json.loads((root/'SOURCE_HASHES.json').read_text()).items():
