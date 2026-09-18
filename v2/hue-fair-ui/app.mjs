@@ -77,20 +77,32 @@ $('exportColor').onclick=()=>{const r=colorRecord();if(!r)return toast('Wait for
 $('copyURL').onclick=()=>{const p=new URLSearchParams({gamut:state.gamut,checkpoint:state.checkpoint,h:state.q.H.toFixed(6),r:state.q.R.toFixed(8),l:state.q.L.toFixed(8)});history.replaceState(null,'','#'+p.toString());copy(location.href);};
 const labels={hung_berns:'Hung–Berns hue',ebner_fairchild:'Ebner–Fairchild hue',munsell:'Munsell hue',xiao_unique_hues:'Xiao unique hues',osa_ucs_1974:'OSA-UCS spacing',bfd:'BFD-P STRESS',leeds:'Leeds STRESS',witt:'Witt STRESS',rit:'RIT-DuPont STRESS',macadam:'MacAdam 1974 STRESS',macadam1942:'MacAdam 1942',luo_rigg_ellipses:'Luo–Rigg',alder1982:'Alder',regan_1994_cvd_ellipses:'Regan',koenderink_2026_3d_metric_field:'Koenderink',brown_1957_12obs_ellipsoids:'Brown 1957',wyszecki_fielder_1971_ellipsoids:'Wyszecki–Fielder',brown_macadam_1949_ellipsoids:'Brown–MacAdam',huang_2012_cielab_ellipses:'Huang',berns_1991_rit_dupont_tolerance_vectors:'Berns tolerance',hong_2025_ellipsoids:'Hong'};
 function updateEvidence(){
- if(!evidenceData)return;const p=evidenceData.profiles[state.gamut];
- for(let i=0;i<ids.length;i++){const m=p.models[ids[i]];$('score'+i).textContent=`COMBVD ${m.weighted.toFixed(4)} weighted / ${m.unweighted.toFixed(4)} unweighted · ${m.pairs} pairs`;}
+ if(!evidenceData)return;policyNotice();const p=evidenceData.profiles[state.gamut];
+ for(let i=0;i<ids.length;i++){const m=p.models[ids[i]];$('score'+i).textContent=`COMBVD ${m.weighted.toFixed(4)} weighted / ${m.unweighted.toFixed(4)} unweighted · ${m.pairs} pairs · ${evidenceData.input_policy?"mapped":"historical strict"}`;}
  const a=p.models.parent,b=p.models.balanced;let rows='';
  for(const f of ['black','white','exchange','reach']){const v=a.visual[f],w=b.visual[f];rows+=`<tr><td>${f}</td><td>${(100*(w.meanCV/v.meanCV-1)).toFixed(1)}%</td><td>${(100*(w.meanStepJump/v.meanStepJump-1)).toFixed(1)}%</td></tr>`;}
  $('progress').innerHTML=`<p>Traditional weighted COMBVD, 0.11 balanced → 0.12 refined balanced: <strong>${a.weighted.toFixed(6)} → ${b.weighted.toFixed(6)}</strong>. COMBVD is fitted, not held-out.</p><div class="scroll"><table><tr><th>GenSpace path family</th><th>Mean step variation change</th><th>Mean step jump change</th></tr>${rows}</table></div><p class="hint">Negative percentages mean lower values. The diagnostic uses the actual inverse and the identical sample set for the parent and continuations. See the report for the exact grid and its overlap with training. GenSpace is a model-based ruler, not new observer data. Level still means inverse blackness, not Gen lightness.</p>`;
  const per=p.perHue;if(per){const nearest=per.reduce((a,b)=>Math.abs(((a.H-state.q.H+540)%360)-180)<Math.abs(((b.H-state.q.H+540)%360)-180)?a:b);let t=`<p>Nearest audited hue: <strong>${nearest.H.toFixed(2)}°</strong>. Mean variation over the four path families:</p><table><tr><th>Parent</th><th>Refined</th><th>Lighter refinement</th></tr><tr>`;for(const id of ids)t+=`<td>${nearest[id].toFixed(5)}</td>`;$('hueEvidence').innerHTML=t+'</tr></table>';}
  const board=$('board').value,keys=Object.keys(a[board]),table=document.createElement('table'),head=table.insertRow();
  for(const text of ['Dataset',...names]){const th=document.createElement('th');th.textContent=text;head.appendChild(th);}
- for(const key of keys){const tr=table.insertRow();tr.insertCell().textContent=labels[key]||key;for(const id of ids){const v=p.models[id][board][key],td=tr.insertCell();td.textContent=v.score===null?'N/A':v.score.toFixed(6)+(v.exact?'':' †');td.title=`${v.exact?'Complete unchanged input support':'Incomplete support'}; mapped ${v.mapped||0}; rejected ${v.rejected||0}; continued ${v.continued||0}`;if(!v.exact)td.className='support';}}
+ for(const key of keys){const tr=table.insertRow();tr.insertCell().textContent=labels[key]||key;for(const id of ids){const v=p.models[id][board][key],td=tr.insertCell();td.textContent=v.score===null?'N/A':v.score.toFixed(6)+(v.exact?'':' †');td.title=`${v.exact?'Unchanged input':(v.rejected?'Historical incomplete strict support':'All inputs converted; mapping applied')}; mapped ${v.mapped||0}; rejected ${v.rejected||0}; continued ${v.continued||0}`;if(!v.exact)td.className='support';}}
  $('benchTable').replaceChildren(table);
 }
 $('board').onchange=updateEvidence;
 $('surround').onchange=()=>document.body.classList.toggle('neutral-surround',$('surround').checked);
-fetch('research/hue-fair-refine/results/site-data.json').then(r=>{if(!r.ok)throw Error('Evidence unavailable: '+r.status);return r.json();}).then(d=>{evidenceData=d;updateEvidence();const worst=d.profiles.srgb.perHue.slice().sort((a,b)=>b.parent-a.parent).slice(0,8);for(const row of worst){const b=document.createElement('button');b.textContent=row.H.toFixed(2)+'°';b.onclick=()=>setHue(row.H);$('problemHues').appendChild(b);}}).catch(e=>{$('progress').textContent=e.message;});
+// mapped-012-v1: evidence-policy selection never changes rendered colours.
+let policyData=null;
+$('benchDetails').insertAdjacentHTML('beforebegin','<label>Benchmark import <select id="benchPolicy"><option value="mapped">Mapped import (current)</option><option value="strict">Historical strict input</option></select></label><p id="policyNotice" class="hint"></p>');
+function policyNotice(){if(!evidenceData)return;$('policyNotice').textContent=evidenceData.input_policy?'Mapped import: all forwarded inputs converted, with adjustments counted. All 3,813 COMBVD pairs are used in both gamuts. No fitting or triangle-rendering change. † means mapped input, not rejection.':'Historical strict results: unsupported inputs were rejected. Native COMBVD uses only 3,331 pairs. This is retained as a diagnostic, not the ordinary input policy.';}
+$('benchPolicy').onchange=()=>{if(!policyData)return;evidenceData=policyData[$('benchPolicy').value];updateEvidence();policyNotice();};
+Promise.all(['research/hue-fair-refine/results/site-data.json','research/mapped-012/results/site-data.json'].map(url=>fetch(url).then(r=>{if(!r.ok)throw Error('Evidence unavailable '+r.status);return r.json();}))).then(([strict,mapped])=>{
+ policyData={strict,mapped};evidenceData=mapped;updateEvidence();policyNotice();
+ const worst=strict.profiles.srgb.perHue.slice().sort((a,b)=>b.parent-a.parent).slice(0,8);
+ for(const row of worst){const b=document.createElement('button');b.textContent=row.H.toFixed(2)+'°';b.onclick=()=>setHue(row.H);$('problemHues').appendChild(b);}
+}).catch(e=>{$('progress').textContent=e.message;});
+
 updateControls();requestSample();requestRender();
 
 document.querySelector('footer').insertAdjacentHTML('beforeend','<p><a href="research/hue-fair-refine/NUMERICAL-LIMITS.md">Matched-coordinate conditioning and remaining blue limits</a></p>');
+
+document.querySelector('footer').insertAdjacentHTML('beforeend','<p><a href="research/mapped-012/">Mapped-import ColorBench rerun and full policy report</a></p>');

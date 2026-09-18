@@ -1,0 +1,130 @@
+{
+  "checkpoints": {
+    "balanced": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+    "gentle": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0"
+  },
+  "inDomain": [
+    {
+      "checkpoint": "balanced",
+      "gamut": "srgb",
+      "samples": 1024,
+      "bitIdenticalCoordinates": true,
+      "bitIdenticalGeneratedXYZ": true,
+      "maxXYZRoundtripError": 7.564351922617618e-12
+    },
+    {
+      "checkpoint": "balanced",
+      "gamut": "full",
+      "samples": 1024,
+      "bitIdenticalCoordinates": true,
+      "bitIdenticalGeneratedXYZ": true,
+      "maxXYZRoundtripError": 1.0056400157054668e-11
+    },
+    {
+      "checkpoint": "gentle",
+      "gamut": "srgb",
+      "samples": 1024,
+      "bitIdenticalCoordinates": true,
+      "bitIdenticalGeneratedXYZ": true,
+      "maxXYZRoundtripError": 2.3277491045803345e-12
+    },
+    {
+      "checkpoint": "gentle",
+      "gamut": "full",
+      "samples": 1024,
+      "bitIdenticalCoordinates": true,
+      "bitIdenticalGeneratedXYZ": true,
+      "maxXYZRoundtripError": 1.4479084597951442e-11
+    }
+  ],
+  "units": [
+    {
+      "referenceWhiteNits": 100,
+      "sourceWhiteNits": 100,
+      "sourceRelativeY": 1.2,
+      "mappedY": 1,
+      "events": [
+        "luminance-clipped"
+      ],
+      "absoluteRelativeAgreement": true,
+      "bradfordCheck": true
+    },
+    {
+      "referenceWhiteNits": 300,
+      "sourceWhiteNits": 100,
+      "sourceRelativeY": 1.2,
+      "mappedY": 0.39999999999999997,
+      "events": [],
+      "absoluteRelativeAgreement": true,
+      "bradfordCheck": true
+    }
+  ],
+  "primaryImports": [
+    {
+      "name": "P3 red",
+      "input": [
+        0.42500000000000004,
+        0.2,
+        -3.469446951953614e-17
+      ],
+      "mapped": [
+        0.4248861978414608,
+        0.2,
+        0.00010551934632738725
+      ],
+      "events": [
+        "chromaticity-clipped"
+      ]
+    },
+    {
+      "name": "2020 red",
+      "input": [
+        0.48493150684931513,
+        0.2,
+        3.802133645976564e-17
+      ],
+      "mapped": [
+        0.4848804827704353,
+        0.2,
+        0.00003769373761867142
+      ],
+      "events": [
+        "chromaticity-clipped"
+      ]
+    },
+    {
+      "name": "2020 green",
+      "input": [
+        0.04265997490589712,
+        0.2,
+        0.008281053952321184
+      ],
+      "mapped": [
+        0.04279571379548439,
+        0.2,
+        0.008473967222120004
+      ],
+      "events": [
+        "chromaticity-clipped"
+      ]
+    },
+    {
+      "name": "2020 blue",
+      "input": [
+        0.5695652173913044,
+        0.2,
+        3.5782608695652174
+      ],
+      "mapped": [
+        0.5649955451066098,
+        0.2,
+        3.537793931580348
+      ],
+      "events": [
+        "chromaticity-clipped"
+      ]
+    }
+  ],
+  "fittedOrBoundaryChanges": false,
+  "sameReferenceScaleIdentitySamples": 512
+}
