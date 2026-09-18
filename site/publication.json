@@ -1,5 +1,32 @@
 {
   "release": "2.0.0-beta.1",
-  "status": "pending-publication-verification",
-  "note": "Updated only after successful public-site verification."
+  "status": "publicly-verified",
+  "runURL": "https://github.com/GayCoonie/HRL/actions/runs/35333392329",
+  "publicFileSHA256": {
+    "v2/index.html": "b20f53345a76f6dbc9b9d5934d0314ad60af2dfe29c972496d8eac6475e94b45",
+    "v2/beta1.html": "112d56be43d2eb28d007e0a3341a8c7e18286e79946d1e2b8c06d07665d3b4af",
+    "v2/beta1-notes.html": "8f14957c23cf5e2cdf0587b8aebaad253e3148c52ac1be3cad75a79ab2c2eb3a",
+    "v2/HRL_v2_Beta_1.md": "38806b953d72730f393190cd9d204cd8efdac12f9a8d82ca0e476cb683d55c78",
+    "v2/index.mjs": "8f8971f32cfed8b80ed00b7752af42be79e14bc8e4412d25d79e3bb2c0cc4264",
+    "v2/default.json": "14a59c3192bfc04995795eab9d5ca5cc30adf8ffa6040ee36efbc0d084ac6eee",
+    "v2/boundary-tonal-ui/app.mjs": "57c54e1d015daf00e461462208522a2415993af2f8308a5204044d1e1b2aade4",
+    "v2/research/boundary-tonal/results/metric.json": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+    "site/preservation.json": "33a3080b4eead536bbf2850798070afb4b534b2007a86ad787b60cf85f6c6073"
+  },
+  "browser": {
+    "base": "https://gaycoonie.github.io/HRL/",
+    "publicPages": true,
+    "releaseDefaultMetric": true,
+    "focusedPickerAndFourWayComparison": true,
+    "nativeAndFull": true,
+    "correctReleaseAndParentExports": true,
+    "hexImportAndShareRoundTrip": true,
+    "longDefinitionAndR0Section": true,
+    "completeCatalogueAndFilters": true,
+    "historicalComparisonDefaultRetained": true,
+    "release1PickerLoaded": true,
+    "mobileNoHorizontalOverflow": true,
+    "pageErrors": [],
+    "chromium": "143.0.7499.4"
+  }
 }
