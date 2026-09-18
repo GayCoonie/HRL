@@ -1,0 +1,31 @@
+name: HRL domain evidence
+on:
+  push:
+    paths: ['.github/workflows/hrl-domain-evidence.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the published CIE 1931 2-degree CMFs
+        run: |
+          mkdir -p /tmp/hrl-domain-evidence
+          python - <<'PY'
+          import urllib.request,hashlib,json,pathlib
+          p=pathlib.Path('/tmp/hrl-domain-evidence')
+          url='https://files.cie.co.at/CIE_xyz_1931_2deg.csv'
+          raw=urllib.request.urlopen(url,timeout=60).read()
+          assert hashlib.md5(raw).hexdigest()=='17cca777db64b17170f06f67ce9d3ab7'
+          (p/'CIE_xyz_1931_2deg.csv').write_bytes(raw)
+          r={'url':url,'doi':'10.25039/CIE.DS.xvudnb9b','source':'CIE 018:2019 Table 6','md5':hashlib.md5(raw).hexdigest(),'sha256':hashlib.sha256(raw).hexdigest(),'coefficientFitting':False}
+          (p/'SOURCE.json').write_text(json.dumps(r,indent=2)+'\n')
+          print(json.dumps(r,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-domain-official-evidence
+          path: /tmp/hrl-domain-evidence
