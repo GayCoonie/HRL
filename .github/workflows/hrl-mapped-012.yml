@@ -1,0 +1,97 @@
+name: HRL 0.12 mapped ColorBench
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-mapped-012.yml', 'v2/research/mapped-012/RUN.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-mapped-012
+  cancel-in-progress: false
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install original benchmark runtime and pinned upstream snapshots
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Verify mapped policy and unchanged supported colors
+        run: node v2/research/mapped-012/test.mjs
+      - name: Run only the original scored Python judges
+        run: |
+          set -o pipefail
+          python -u v2/research/mapped-012/run.py --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets | tee v2/research/mapped-012/results/runner-console.log
+      - name: Build mapped report and selectable historical evidence
+        run: |
+          python v2/research/mapped-012/report.py
+          python v2/research/mapped-012/site.py
+          node --check v2/hue-fair-ui/app.mjs
+      - name: Test the actual served comparison
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-mapped-http.log 2>&1 &
+          python v2/research/mapped-012/site-check.py --base http://127.0.0.1:8765/ --out v2/research/mapped-012/results/browser-runner
+      - name: Publish verified results without changing frozen models
+        id: publish
+        run: |
+          find v2/research/mapped-012 -name '*.pyc' -delete
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/research/mapped-012 v2/hue-fair-ui/app.mjs
+          git commit -m 'Publish 0.12 mapped-input ColorBench rerun and preserve strict comparisons'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for exact public evidence and application
+        env:
+          PUBLISHED_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import urllib.request,time,hashlib,os,json
+          paths=['v2/hue-fair-ui/app.mjs','v2/research/mapped-012/results/site-data.json','v2/research/mapped-012/index.html']
+          hashes={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(90):
+              try:
+                  for p in paths:
+                      data=urllib.request.urlopen('https://gaycoonie.github.io/HRL/'+p+'?mapped='+os.environ['PUBLISHED_SHA']+'&try='+str(attempt),timeout=15).read()
+                      assert hashlib.sha256(data).hexdigest()==hashes[p],p
+                  break
+              except Exception as e:print(type(e).__name__,str(e)[:150],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Public evidence did not match within the deployment window')
+          Path('v2/research/mapped-012/results/public-hashes.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+      - name: Exercise the public mapped and historical tables
+        run: python v2/research/mapped-012/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/mapped-012/results/browser-live
+      - name: Preserve the public verification receipt
+        run: |
+          git add v2/research/mapped-012/results/browser-live/verification.json v2/research/mapped-012/results/public-hashes.json
+          git commit -m 'Record public verification of mapped 0.12 benchmark results'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-012-mapped-review
+          path: |
+            v2/research/mapped-012/
+            v2/hue-fair-ui/app.mjs
+            .github/workflows/hrl-mapped-012.yml
+          retention-days: 30
