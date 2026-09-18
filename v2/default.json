@@ -1,0 +1,29 @@
+{
+  "name": "HRL v2 Beta 1",
+  "version": "2.0.0-beta.1",
+  "date": "2026-09-18",
+  "status": "beta",
+  "gamutDefault": "srgb",
+  "realizations": [
+    "srgb",
+    "full"
+  ],
+  "entryPoint": "index.mjs",
+  "factory": "createHRLv2",
+  "picker": "beta1.html",
+  "documentation": "HRL_v2_Beta_1.md",
+  "documentationHTML": "beta1-notes.html",
+  "checkpoint": "metric",
+  "trial": "metric-b2",
+  "definition": "research/boundary-tonal/results/metric.json",
+  "definitionSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+  "boundary": "research/boundary-tonal/boundary-1nm.json",
+  "boundarySHA256": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+  "sourceCommit": "bd1d9039d3c4390197099dcb53967baac2896505",
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "inputPolicy": "mapped-spectral-v1",
+  "promotionChangesNumericalDefinition": false,
+  "release1EntryPoint": "../src/index.mjs",
+  "historicalPrototypeEntryPoint": "lib/index.mjs"
+}

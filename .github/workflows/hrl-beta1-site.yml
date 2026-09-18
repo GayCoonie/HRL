@@ -1,0 +1,108 @@
+name: HRL v2 Beta 1 site publication
+on:
+  push:
+    branches: [main]
+    paths: ['site/BUILD.json', '.github/workflows/hrl-beta1-site.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-beta1-site
+  cancel-in-progress: true
+jobs:
+  build-verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install document and browser tooling
+        run: |
+          python -m pip install mistune==3.2.0 playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Generate static navigation and Markdown reading editions
+        run: |
+          python site/build.py
+          node --check v2/index.mjs
+          node --check v2/boundary-tonal-ui/app.mjs
+          node --check site/catalog.js
+      - name: Verify the frozen metric definition and release facade
+        run: node site/test-beta1.mjs
+      - name: Exercise the actual served site before publication
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-beta1-http.log 2>&1 &
+          python site/browser-check.py --base http://127.0.0.1:8765/ --out /tmp/hrl-beta1-browser
+          cp /tmp/hrl-beta1-browser/verification.json site/browser-checks.json
+      - name: Verify retained artifacts and new navigation links
+        run: |
+          python site/check.py
+          test -z "$(git diff --name-only --diff-filter=D)"
+          git diff --check
+      - name: Commit the verified static site
+        id: publish
+        run: |
+          find site -name '*.pyc' -delete
+          git config user.name 'HRL site publication'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish HRL v2 Beta 1 navigation, preserved archive and readable technical definition'
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Confirm the exact release files on public Pages
+        env:
+          PUBLISHED_SHA: ${{ steps.publish.outputs.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,os,time,urllib.request
+          paths=['v2/index.html','v2/beta1.html','v2/beta1-notes.html','v2/HRL_v2_Beta_1.md','v2/index.mjs','v2/default.json','v2/boundary-tonal-ui/app.mjs','v2/research/boundary-tonal/results/metric.json','site/preservation.json']
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(100):
+              try:
+                  for p in paths:
+                      url='https://gaycoonie.github.io/HRL/'+p+'?beta1='+os.environ['PUBLISHED_SHA']+'&try='+str(attempt)
+                      data=urllib.request.urlopen(url,timeout=20).read()
+                      assert hashlib.sha256(data).hexdigest()==expected[p],p
+                  break
+              except Exception as e:print(type(e).__name__,str(e)[:180],flush=True)
+              time.sleep(6)
+          else:raise RuntimeError('Public Pages did not match the verified release')
+          Path('/tmp/hrl-beta1-public-hashes.json').write_text(json.dumps(expected,indent=2)+'\n')
+          PY
+      - name: Verify public picker and document behavior
+        run: |
+          python site/browser-check.py --base https://gaycoonie.github.io/HRL/ --out /tmp/hrl-beta1-public
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          record={'release':'2.0.0-beta.1','status':'publicly-verified','runURL':'https://github.com/'+os.environ['GITHUB_REPOSITORY']+'/actions/runs/'+os.environ['GITHUB_RUN_ID'],'publicFileSHA256':json.loads(Path('/tmp/hrl-beta1-public-hashes.json').read_text()),'browser':json.loads(Path('/tmp/hrl-beta1-public/verification.json').read_text())}
+          Path('site/publication.json').write_text(json.dumps(record,indent=2)+'\n')
+          PY
+      - name: Record public verification
+        run: |
+          git add site/publication.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record live verification of HRL v2 Beta 1 release and preserved site'
+            git pull --rebase --autostash origin main
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-beta1-site-verification
+          path: |
+            site/
+            /tmp/hrl-beta1-browser/
+            /tmp/hrl-beta1-public/
+            /tmp/hrl-beta1-http.log
+          retention-days: 30

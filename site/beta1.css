@@ -1,0 +1,6 @@
+html[data-hrl-release="beta1"]:not([data-compare="true"]) #panels{display:block;max-width:620px;margin:24px auto}
+html[data-hrl-release="beta1"]:not([data-compare="true"]) #panels .panel:not(.selected){display:none}
+html[data-hrl-release="beta1"]:not([data-compare="true"]) #panels .panel .canvas-wrap{max-width:400px;margin:auto}
+html[data-hrl-release="beta1"]:not([data-compare="true"]) #panels .panel .triangle{width:100%;height:auto}
+.hrl-release-callout{padding:15px 20px;border:1px solid #72bda8;border-radius:12px;background:#1b2930;color:#eefaf5;margin:20px 0}
+.hrl-release-callout a{color:#9cf2d5}.hrl-compare-toggle{display:flex;align-items:center;gap:12px;margin:20px 0}
