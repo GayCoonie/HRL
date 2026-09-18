@@ -1,0 +1,49 @@
+name: HRL refinement source recovery
+on:
+  push:
+    paths: ['.github/workflows/hrl-refinement-recovery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover complete JSON entries from the interrupted source stream
+        run: |
+          python - <<'PY'
+          import pathlib,json,base64,zlib,hashlib,zipfile,subprocess
+          root=pathlib.Path('v2/research/hue-fair-refine')
+          files=sorted(root.glob('transfer-*.txt'),key=lambda p:int(p.stem.split('-')[1]))
+          text=''.join(''.join(p.read_text().split()) for p in files)
+          dec=zlib.decompressobj();raw=b'';error=None
+          try:
+              for i in range(0,len(text)-3,4):raw+=dec.decompress(base64.b64decode(text[i:i+4]))
+          except Exception as e:error=str(e)
+          pathlib.Path('/tmp/partial-source-stream.txt').write_bytes(raw)
+          s=raw.decode('utf8',errors='replace');decoder=json.JSONDecoder();pos=1;recovered=[]
+          while pos<len(s):
+              try:
+                  while s[pos].isspace() or s[pos]==',':pos+=1
+                  key,end=decoder.raw_decode(s,pos);pos=end
+                  while s[pos].isspace() or s[pos]==':':pos+=1
+                  value,end=decoder.raw_decode(s,pos);pos=end
+                  if isinstance(key,str) and isinstance(value,str) and key.startswith('v2/research/hue-fair-refine/') and '..' not in pathlib.Path(key).parts:
+                      p=pathlib.Path(key);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(value);recovered.append({'path':key,'sha256':hashlib.sha256(value.encode()).hexdigest(),'bytes':len(value.encode())})
+              except Exception as e:break
+          receipt={'parts_present':len(files),'stream_complete':dec.eof,'bytes_decompressed':len(raw),'decompression_error':error,'recovered_complete_entries':recovered,'note':'Partial-stream recovery only; no missing content invented, no execution or publication of recovered entries.'}
+          pathlib.Path('/tmp/recovery.json').write_text(json.dumps(receipt,indent=2))
+          print(json.dumps(receipt,indent=2))
+          with zipfile.ZipFile('/tmp/HRL-current-snapshot.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in pathlib.Path('.').rglob('*'):
+                  if p.is_file() and '.git' not in p.parts:z.write(p,str(p))
+              z.write('/tmp/recovery.json','RECOVERY.json');z.write('/tmp/partial-source-stream.txt','PARTIAL_STREAM.txt')
+              z.writestr('RECOVERED_COMMIT.txt',subprocess.check_output(['git','rev-parse','HEAD'],text=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-refinement-recovered-snapshot
+          path: /tmp/HRL-current-snapshot.zip
+          retention-days: 30
