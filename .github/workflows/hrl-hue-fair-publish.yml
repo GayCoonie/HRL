@@ -1,0 +1,98 @@
+name: HRL hue-fair continuation
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-hue-fair-publish.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish-verified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/download-artifact@v4
+        with:
+          name: hrl-hue-fair-finished-review
+          run-id: 35302355933
+          github-token: ${{ github.token }}
+          path: /tmp/verified-refinement
+      - name: Verify completed artifact and restore only additive research files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib,shutil
+          source=Path('/tmp/verified-refinement');p=Path('v2/research/hue-fair-refine')
+          hashes=json.loads((source/p/'SOURCE_HASHES.json').read_text())
+          for name,digest in hashes.items():
+              f=source/name
+              assert f.is_file(),name
+              assert hashlib.sha256(f.read_bytes()).hexdigest()==digest,name
+          check=json.loads((source/p/'results/browser-runner/verification.json').read_text())
+          assert check['threePanels'] and check['bothGamuts'] and not check['errors']
+          for directory in ['v2/research/hue-fair-refine','v2/hue-fair-ui']:
+              for f in (source/directory).rglob('*'):
+                  if f.is_file():
+                      target=Path(f.relative_to(source));target.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(f,target)
+          shutil.copy2(source/'v2/hue-fair.html','v2/hue-fair.html')
+          for f in p.glob('transfer-*.txt'):f.unlink()
+          receipt={'fittingRun':35300703792,'evaluationRun':35302355933,'artifactID':10530019763,'fitsRerun':False,'scoredEvaluationRerun':False,'priorPublicationFailure':'Unstaged working-tree changes prevented rebase after all numerical, scored and browser gates passed. Verified files restored into a fresh current checkout.'}
+          (p/'recovery/publication-resume.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+      - name: Recheck matched-coordinate conditioning and integrate current navigation
+        run: |
+          node v2/research/hue-fair-refine/conditioning.mjs
+          python v2/research/hue-fair-refine/build-site.py
+          python v2/research/hue-fair-refine/finalize-public.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('v2/research/hue-fair-refine');note='\n\nSee [matched-coordinate conditioning and residual blue limits](../NUMERICAL-LIMITS.md). The denser common-coordinate audit retains severe near-boundary tails; positive invertibility is not a uniform-conditioning guarantee.\n'
+          report=p/'results/REPORT.md';report.write_text(report.read_text()+note)
+          app=Path('v2/hue-fair-ui/app.mjs')
+          snippet="\ndocument.querySelector('footer').insertAdjacentHTML('beforeend','<p><a href=\"research/hue-fair-refine/NUMERICAL-LIMITS.md\">Matched-coordinate conditioning and remaining blue limits</a></p>');\n"
+          app.write_text(app.read_text()+snippet)
+          b=p/'build-site.py';s=b.read_text();needle="(out/'app.mjs').write_text(s)";assert s.count(needle)==1;b.write_text(s.replace(needle,'s += '+repr(snippet)+'\n'+needle))
+          PY
+          node --check v2/hue-fair-ui/app.mjs
+      - name: Verify the current served app
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-publish-http.log 2>&1 &
+          python v2/research/hue-fair-refine/site-check.py --base http://127.0.0.1:8765/ --out v2/research/hue-fair-refine/results/browser-publication
+      - name: Publish without discarding unrelated working-tree changes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path('v2/research/hue-fair-refine')
+          h={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file() and f.suffix!='.pyc' and f.name!='SOURCE_HASHES.json'}
+          (p/'SOURCE_HASHES.json').write_text(json.dumps(h,indent=2)+'\n')
+          PY
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/hue-fair-refine v2/hue-fair-ui v2/hue-fair.html v2/gen-tonal.html v2/research/gen-tonal-fit/build-site.py v2/index.html index.html README.md
+          git status --short
+          git commit -m 'Publish tested HRL hue-sheet refinement, scored evidence and complete trial logs'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-hue-fair-published-review
+          path: |
+            README.md
+            v2/research/hue-fair-refine/
+            v2/hue-fair-ui/
+            v2/hue-fair.html
+          retention-days: 30
