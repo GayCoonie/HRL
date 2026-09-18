@@ -1,0 +1,85 @@
+name: HRL hue-fair public verification
+on:
+  workflow_run:
+    workflows: ['HRL hue-fair continuation']
+    types: [completed]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  public:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install the browser checker
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Finish review controls and source identities without refitting
+        run: |
+          python v2/research/hue-fair-refine/finalize-public.py
+          node --check v2/hue-fair-ui/app.mjs
+          python -m py_compile v2/research/hue-fair-refine/build-site.py v2/research/hue-fair-refine/finalize-public.py
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-public-http.log 2>&1 &
+          python v2/research/hue-fair-refine/site-check.py --base http://127.0.0.1:8765/ --out v2/research/hue-fair-refine/results/browser-final
+      - name: Commit the checked review controls
+        id: publication
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add v2/hue-fair-ui/app.mjs v2/research/hue-fair-refine/build-site.py v2/research/hue-fair-refine/site-check.py v2/research/hue-fair-refine/FINDINGS.md v2/research/hue-fair-refine/results/finalization.json v2/research/hue-fair-refine/results/browser-final/verification.json v2/research/hue-fair-refine/SOURCE_HASHES.json README.md
+          git diff --cached --quiet || git commit -m 'Finish blue-neighbor controls and accurate parent checkpoint exports'
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for exact public Pages files
+        env:
+          PUBLISHED_SHA: ${{ steps.publication.outputs.sha }}
+        run: |
+          python - <<'PY'
+          import urllib.request,hashlib,time,os
+          from pathlib import Path
+          paths=['v2/hue-fair.html','v2/hue-fair-ui/app.mjs','v2/research/hue-fair-refine/results/site-data.json','v2/research/hue-fair-refine/results/balanced.json','v2/research/hue-fair-refine/results/gentle.json']
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(120):
+              try:
+                  for p in paths:
+                      data=urllib.request.urlopen('https://gaycoonie.github.io/HRL/'+p+'?build='+os.environ['PUBLISHED_SHA']+'&try='+str(attempt),timeout=15).read()
+                      assert hashlib.sha256(data).hexdigest()==expected[p],p
+                  print('Public Pages serves the exact checked models, page and evidence.');break
+              except Exception as e:print(type(e).__name__,str(e)[:140],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Exact public files did not become available')
+          Path('v2/research/hue-fair-refine/results/public-hashes.json').write_text(__import__('json').dumps(expected,indent=2)+'\n')
+          PY
+      - name: Exercise both gamuts and checkpoint identities on the public site
+        run: python v2/research/hue-fair-refine/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/hue-fair-refine/results/browser-live
+      - name: Preserve the public browser and content receipts
+        run: |
+          git add v2/research/hue-fair-refine/results/browser-live/verification.json v2/research/hue-fair-refine/results/public-hashes.json
+          git diff --cached --quiet || git commit -m 'Record successful public verification of HRL hue-sheet refinement'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-hue-fair-final-public-review
+          path: |
+            README.md
+            .github/workflows/hrl-hue-fair-resume.yml
+            .github/workflows/hrl-hue-fair-live.yml
+            v2/research/hue-fair-refine/
+            v2/hue-fair-ui/
+            v2/hue-fair.html
+          retention-days: 30
