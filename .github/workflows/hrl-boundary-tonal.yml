@@ -1,0 +1,165 @@
+name: HRL repaired boundary and tonal fits
+on:
+  push:
+    branches: [main]
+    paths: ['v2/research/boundary-tonal/PUBLISH.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-boundary-tonal
+  cancel-in-progress: false
+jobs:
+  verify-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify complete source packet and frozen selection
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib,base64,lzma
+          root=Path('v2/research/boundary-tonal');packet=json.loads((root/'PUBLISH.json').read_text())
+          chunks=[''.join((root/f'transfer-{i}.txt').read_text().split()) for i in range(packet['parts'])]
+          assert len(chunks)==len(packet['part_sha256'])
+          for i,(c,h) in enumerate(zip(chunks,packet['part_sha256'])):assert hashlib.sha256(c.encode()).hexdigest()==h,f'part {i}'
+          raw=lzma.decompress(base64.b64decode(''.join(chunks),validate=True));assert hashlib.sha256(raw).hexdigest()==packet['sha256']
+          files=json.loads(raw);assert len(files)==packet['files']
+          for name,item in files.items():
+              p=Path(name);assert not p.is_absolute() and '..' not in p.parts
+              assert name.startswith(('v2/research/boundary-tonal/','v2/boundary-tonal-ui/')) or name=='v2/boundary-tonal.html'
+              if isinstance(item,str):text=item
+              else:
+                  base=Path(item['base']);assert str(base).startswith('v2/research/') and '..' not in base.parts
+                  data=base.read_bytes();assert hashlib.sha256(data).hexdigest()==item['sha256'],str(base)
+                  lines=data.decode().splitlines(keepends=True)
+                  text=''.join(''.join(lines[b[0]:b[1]]) if isinstance(b,list) else b for b in item['blocks'])
+              p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+          for name,h in packet['file_sha256'].items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==h,name
+          for p in root.glob('transfer-*.txt'):p.unlink()
+          (root/'recovery/source-packet.json').write_text(json.dumps({k:v for k,v in packet.items() if k!='file_sha256'},indent=2)+'\n')
+          (root/'PUBLISH.json').unlink()
+          sel=json.loads((root/'results/SELECTION.json').read_text())
+          for name,r in sel['candidates'].items():assert hashlib.sha256((root/f'results/{name}.json').read_bytes()).hexdigest()==r['sha256']
+          PY
+      - name: Install pinned numerical, benchmark and browser dependencies
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Rebuild physical boundary and normal retained-pair inputs
+        run: |
+          P=v2/research/boundary-tonal
+          python "$P/build-boundary.py"
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path('v2/research/boundary-tonal');s=json.loads((p/'results/SELECTION.json').read_text())
+          assert hashlib.sha256((p/'boundary-1nm.json').read_bytes()).hexdigest()==s['boundary_sha256']
+          PY
+          python "$P/prepare-inputs.py"
+          node "$P/prepare-coordinates.mjs"
+          node "$P/verify-boundary.mjs"
+      - name: Verify exact inverses, shared banks and training derivatives
+        run: |
+          P=v2/research/boundary-tonal
+          node "$P/verify.mjs"
+          node "$P/conditioning.mjs"
+          python "$P/parity.py"
+          python "$P/verify-jacobian.py"
+      - name: Run original scored ColorBench and direct-output diagnostics
+        run: |
+          P=v2/research/boundary-tonal
+          python -u "$P/benchmark.py" --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets >"$P/results/runner-benchmark.log" 2>&1 &
+          B=$!
+          HUES=72 SAMPLES=257 OFFSET=1 node "$P/evaluate.mjs" parent boundary balanced metric >"$P/results/runner-direct.log" 2>&1 &
+          D=$!
+          HUES=72 OFFSET=1 node "$P/sheet-audit.mjs" parent boundary balanced metric >"$P/results/runner-sheet.log" 2>&1 &
+          S=$!
+          FAILED=0; wait $B || FAILED=1; wait $D || FAILED=1; wait $S || FAILED=1
+          cat "$P/results/runner-benchmark.log" "$P/results/runner-direct.log" "$P/results/runner-sheet.log"
+          test "$FAILED" = 0
+          cp "$P/results/direct-72-257-parent_boundary_balanced_metric.json" "$P/results/direct-final.json"
+      - name: Build exact previews and separated score reports
+        run: |
+          P=v2/research/boundary-tonal
+          node "$P/preview.mjs" parent boundary balanced metric
+          python "$P/build-preview.py"
+          python "$P/report.py"
+          python "$P/integrate.py"
+          node --check v2/boundary-tonal-ui/app.mjs
+          node --check v2/boundary-tonal-ui/worker.mjs
+      - name: Exercise the actual served comparison before publication
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-boundary-http.log 2>&1 &
+          python v2/research/boundary-tonal/site-check.py --base http://127.0.0.1:8765/ --out v2/research/boundary-tonal/results/browser-runner
+      - name: Publish verified additions without changing historical models
+        id: publication
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          p=Path('v2/research/boundary-tonal')
+          for f in p.rglob('*.pyc'):f.unlink()
+          for f in (p/'results').glob('*.rgba'):f.unlink()
+          h={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file() and f.name!='SOURCE_HASHES.json'}
+          (p/'SOURCE_HASHES.json').write_text(json.dumps(h,indent=2)+'\n')
+          PY
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/boundary-tonal v2/boundary-tonal-ui v2/boundary-tonal.html index.html v2/index.html v2/hue-fair.html README.md
+          git commit -m 'Publish repaired spectral boundary, shared tonal fits and separate retained/mapped scores'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Wait for exact public models, page and benchmark data
+        env:
+          PUBLISHED_SHA: ${{ steps.publication.outputs.sha }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,time,urllib.request,os
+          paths=['v2/boundary-tonal.html','v2/boundary-tonal-ui/app.mjs','v2/research/boundary-tonal/index.mjs','v2/research/boundary-tonal/results/balanced.json','v2/research/boundary-tonal/results/colorbench.json']
+          h={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(100):
+              try:
+                  for p in paths:
+                      data=urllib.request.urlopen('https://gaycoonie.github.io/HRL/'+p+'?build='+os.environ['PUBLISHED_SHA']+'&try='+str(attempt),timeout=15).read()
+                      assert hashlib.sha256(data).hexdigest()==h[p],p
+                  break
+              except Exception as e:print(type(e).__name__,str(e)[:150],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Public files did not match the verified publication')
+          Path('v2/research/boundary-tonal/results/public-hashes.json').write_text(json.dumps(h,indent=2)+'\n')
+          PY
+      - name: Verify public retained scores, mapped boards and color picking
+        run: python v2/research/boundary-tonal/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/boundary-tonal/results/browser-live
+      - name: Record public verification
+        run: |
+          git add v2/research/boundary-tonal/results/browser-live/verification.json v2/research/boundary-tonal/results/public-hashes.json
+          git commit -m 'Record successful public verification of boundary/tonal comparison'
+          git pull --rebase --autostash origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-boundary-tonal-verified-review
+          path: |
+            v2/research/boundary-tonal/
+            v2/boundary-tonal-ui/
+            v2/boundary-tonal.html
+            .github/workflows/hrl-boundary-tonal.yml
+          retention-days: 30
