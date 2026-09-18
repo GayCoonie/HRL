@@ -1,0 +1,17 @@
+{
+  "status": "Frozen before new scored ColorBench evaluation",
+  "timeUTC": "2026-09-18T03:07:03.923308+00:00",
+  "parent_sha256": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+  "basis": "Balanced-parent continuation. New runs, not recovered missing arrays. Choice uses training and native visual checks; no newly computed non-COMBVD observer score used.",
+  "candidates": {
+    "balanced": {
+      "trial": "resume-b",
+      "sha256": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605"
+    },
+    "gentle": {
+      "trial": "resume-a",
+      "sha256": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0"
+    }
+  },
+  "priorDataExposure": "All benchmark sets have project development exposure; this is not pristine external validation."
+}

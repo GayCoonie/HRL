@@ -1,0 +1,969 @@
+{
+  "names": [
+    "parent",
+    "balanced",
+    "gentle"
+  ],
+  "rows": [
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-30.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-90.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-150.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-210.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-240.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-255.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-263.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-269.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-273.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-275.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-277.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-281.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-285.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-293.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-300.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "parent",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-parent-330.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-30.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-90.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-150.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-210.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-240.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-255.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-263.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-269.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-273.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-275.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-277.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-281.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-285.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-293.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-300.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "balanced",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-balanced-330.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-30.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-90.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-150.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-210.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-240.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-255.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-263.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-269.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-273.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-275.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-277.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-281.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-285.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-293.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-300.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "srgb",
+      "name": "gentle",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "srgb-gentle-330.rgba",
+      "inside": 20914,
+      "clipped": 0
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-30.rgba",
+      "inside": 20914,
+      "clipped": 9299
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-90.rgba",
+      "inside": 20914,
+      "clipped": 5665
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-150.rgba",
+      "inside": 20914,
+      "clipped": 5527
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-210.rgba",
+      "inside": 20914,
+      "clipped": 13046
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-240.rgba",
+      "inside": 20914,
+      "clipped": 17664
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-255.rgba",
+      "inside": 20914,
+      "clipped": 14420
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-263.rgba",
+      "inside": 20914,
+      "clipped": 15373
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-269.rgba",
+      "inside": 20914,
+      "clipped": 15500
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-273.rgba",
+      "inside": 20914,
+      "clipped": 15939
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-275.rgba",
+      "inside": 20914,
+      "clipped": 16271
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-277.rgba",
+      "inside": 20914,
+      "clipped": 16624
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-281.rgba",
+      "inside": 20914,
+      "clipped": 17163
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-285.rgba",
+      "inside": 20914,
+      "clipped": 17159
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-293.rgba",
+      "inside": 20914,
+      "clipped": 15994
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-300.rgba",
+      "inside": 20914,
+      "clipped": 14209
+    },
+    {
+      "gamut": "full",
+      "name": "parent",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "full-parent-330.rgba",
+      "inside": 20914,
+      "clipped": 10631
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-30.rgba",
+      "inside": 20914,
+      "clipped": 9085
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-90.rgba",
+      "inside": 20914,
+      "clipped": 5933
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-150.rgba",
+      "inside": 20914,
+      "clipped": 5300
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-210.rgba",
+      "inside": 20914,
+      "clipped": 12993
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-240.rgba",
+      "inside": 20914,
+      "clipped": 17645
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-255.rgba",
+      "inside": 20914,
+      "clipped": 14578
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-263.rgba",
+      "inside": 20914,
+      "clipped": 15102
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-269.rgba",
+      "inside": 20914,
+      "clipped": 15137
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-273.rgba",
+      "inside": 20914,
+      "clipped": 15562
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-275.rgba",
+      "inside": 20914,
+      "clipped": 15864
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-277.rgba",
+      "inside": 20914,
+      "clipped": 16174
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-281.rgba",
+      "inside": 20914,
+      "clipped": 16513
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-285.rgba",
+      "inside": 20914,
+      "clipped": 16433
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-293.rgba",
+      "inside": 20914,
+      "clipped": 15453
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-300.rgba",
+      "inside": 20914,
+      "clipped": 13774
+    },
+    {
+      "gamut": "full",
+      "name": "balanced",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "full-balanced-330.rgba",
+      "inside": 20914,
+      "clipped": 10376
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 30,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-30.rgba",
+      "inside": 20914,
+      "clipped": 9203
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 90,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-90.rgba",
+      "inside": 20914,
+      "clipped": 5978
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 150,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-150.rgba",
+      "inside": 20914,
+      "clipped": 5183
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 210,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-210.rgba",
+      "inside": 20914,
+      "clipped": 12758
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 240,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-240.rgba",
+      "inside": 20914,
+      "clipped": 17775
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 255,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-255.rgba",
+      "inside": 20914,
+      "clipped": 14572
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 263,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-263.rgba",
+      "inside": 20914,
+      "clipped": 15242
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 269,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-269.rgba",
+      "inside": 20914,
+      "clipped": 15288
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 273,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-273.rgba",
+      "inside": 20914,
+      "clipped": 15744
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 275,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-275.rgba",
+      "inside": 20914,
+      "clipped": 16067
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 277,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-277.rgba",
+      "inside": 20914,
+      "clipped": 16405
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 281,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-281.rgba",
+      "inside": 20914,
+      "clipped": 16805
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 285,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-285.rgba",
+      "inside": 20914,
+      "clipped": 16665
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 293,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-293.rgba",
+      "inside": 20914,
+      "clipped": 15537
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 300,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-300.rgba",
+      "inside": 20914,
+      "clipped": 13853
+    },
+    {
+      "gamut": "full",
+      "name": "gentle",
+      "H": 330,
+      "W": 191,
+      "T": 220,
+      "file": "full-gentle-330.rgba",
+      "inside": 20914,
+      "clipped": 10315
+    }
+  ]
+}

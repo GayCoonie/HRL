@@ -1,0 +1,11 @@
+{
+  "parts": 14,
+  "streamComplete": false,
+  "recovered": [
+    "EVIDENCE.md",
+    "build-site.py",
+    "fit-v1.py",
+    "fit-v2.py"
+  ],
+  "note": "Only complete, hash-checked executable entries are used. Incomplete stream is not a recovered trial archive."
+}

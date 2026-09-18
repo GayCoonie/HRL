@@ -1,0 +1,25 @@
+{
+  "profile": "HRL-0.12-hue-fair",
+  "gamut": "srgb",
+  "checkpoint": "gentle",
+  "viewCheckpoint": "gentle",
+  "sharedCalibration": true,
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.591625901762436,
+    "L": 0.8150992635570892
+  },
+  "relativeXYZ": [
+    0.24037846208508917,
+    0.162155450678179,
+    0.612840009537967
+  ],
+  "displaySRGB8": [
+    130,
+    88,
+    208
+  ],
+  "displayClipped": false
+}

@@ -1,0 +1,2133 @@
+{
+  "profiles": {
+    "srgb": {
+      "models": {
+        "parent": {
+          "weighted": 29.41050532898966,
+          "unweighted": 30.958685816186932,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.22411102073778852,
+              "meanStepJump": 0.01486133085067928,
+              "worstStepJump": 0.5211082930438979,
+              "cornerRetreatPaths": 1,
+              "totalPaths": 360,
+              "meanRetreatFraction": 2.791597779907415e-08,
+              "worstRetreatFraction": 1.0049752007666694e-05
+            },
+            "white": {
+              "meanCV": 0.19148615694830254,
+              "meanStepJump": 0.007555914019479727,
+              "worstStepJump": 1.378185829465183,
+              "cornerRetreatPaths": 54,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0021050524457938346,
+              "worstRetreatFraction": 0.02395101661897645
+            },
+            "exchange": {
+              "meanCV": 0.21233316084458206,
+              "meanStepJump": 0.008287272622297068,
+              "worstStepJump": 1.101186734518313,
+              "cornerRetreatPaths": 51,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0054381408017250225,
+              "worstRetreatFraction": 0.07491225154838592
+            },
+            "reach": {
+              "meanCV": 0.34844420660868086,
+              "meanStepJump": 0.016696898806614117,
+              "worstStepJump": 1.381255961241741,
+              "cornerRetreatPaths": 222,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.036911403215798125,
+              "worstRetreatFraction": 0.11134660958699445
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.166174737668662,
+            "quarterGenDistance": 0.2288667633780585,
+            "blueQuarterGenLightness": 0.19937867711878185
+          },
+          "sheet": {
+            "mean": 1.0768672734716898,
+            "rms": 1.208103291521272,
+            "p95Hue": 2.034149454217047,
+            "worstHue": 2.7849391274009547,
+            "blueMean": 0.7289361247531649
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829548,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.26908050182233706,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.28649379633899985,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.27041590348604505,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.2956013303103356,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.19843492291908185,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3229890029987318,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.31685422857260603,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.31974596190999915,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3595844687933356,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.25062032026869996,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.4698718648104,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 28.499638553058382,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.676903404101086,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.678903619652793,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 25.98893454756521,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        },
+        "balanced": {
+          "weighted": 29.281170389187118,
+          "unweighted": 31.055225108098146,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.2190797076651756,
+              "meanStepJump": 0.014686978558661069,
+              "worstStepJump": 0.5241549960134111,
+              "cornerRetreatPaths": 0,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0,
+              "worstRetreatFraction": 0
+            },
+            "white": {
+              "meanCV": 0.1949687497080474,
+              "meanStepJump": 0.007764816031063071,
+              "worstStepJump": 1.2720474108207427,
+              "cornerRetreatPaths": 49,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0013459552673345493,
+              "worstRetreatFraction": 0.019454784042482538
+            },
+            "exchange": {
+              "meanCV": 0.20645624316809424,
+              "meanStepJump": 0.008177294982330737,
+              "worstStepJump": 1.3419289428252956,
+              "cornerRetreatPaths": 40,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.003514494117544998,
+              "worstRetreatFraction": 0.08738126249954867
+            },
+            "reach": {
+              "meanCV": 0.3207130446084404,
+              "meanStepJump": 0.01516307910294709,
+              "worstStepJump": 1.50639726786691,
+              "cornerRetreatPaths": 200,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.021678663880766818,
+              "worstRetreatFraction": 0.16631935146447532
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.16011690901935827,
+            "quarterGenDistance": 0.22425205822524333,
+            "blueQuarterGenLightness": 0.15156605092082562
+          },
+          "sheet": {
+            "mean": 0.45998600588326927,
+            "rms": 0.5204092677335688,
+            "p95Hue": 0.8860185961306296,
+            "worstHue": 1.2458186215732787,
+            "blueMean": 0.4981058997256332
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829548,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.27485595962527076,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.29545883241445076,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.2761923725876358,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.29572164278827257,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2075037257658511,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.31851267616622664,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3183646210509246,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3192066528809586,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.35695403403177783,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.26247164764123604,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.627326361405782,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.834159661369007,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.372388307549652,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.259043648880812,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 27.1846189217826,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        },
+        "gentle": {
+          "weighted": 29.24400756790149,
+          "unweighted": 30.93336812062316,
+          "pairs": 3331,
+          "visual": {
+            "black": {
+              "meanCV": 0.22223904226558983,
+              "meanStepJump": 0.014814086115034207,
+              "worstStepJump": 0.5269291109616859,
+              "cornerRetreatPaths": 1,
+              "totalPaths": 360,
+              "meanRetreatFraction": 2.0994114315514534e-06,
+              "worstRetreatFraction": 0.00019121765778605914
+            },
+            "white": {
+              "meanCV": 0.19511142848386853,
+              "meanStepJump": 0.007925076000768406,
+              "worstStepJump": 1.285731144969142,
+              "cornerRetreatPaths": 53,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0016446550611703122,
+              "worstRetreatFraction": 0.021436514778101937
+            },
+            "exchange": {
+              "meanCV": 0.22423555422407546,
+              "meanStepJump": 0.008456675705983196,
+              "worstStepJump": 1.1347191573952198,
+              "cornerRetreatPaths": 40,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.003829083317788131,
+              "worstRetreatFraction": 0.0717318226490095
+            },
+            "reach": {
+              "meanCV": 0.3347694570167242,
+              "meanStepJump": 0.015730721019634568,
+              "worstStepJump": 1.8610712927546387,
+              "cornerRetreatPaths": 211,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.02497613137568379,
+              "worstRetreatFraction": 0.08464739237932382
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.1604515140328269,
+            "quarterGenDistance": 0.2239847658184021,
+            "blueQuarterGenLightness": 0.16903057548068648
+          },
+          "sheet": {
+            "mean": 0.5661471004951077,
+            "rms": 0.6425209384546358,
+            "p95Hue": 1.1873295894607778,
+            "worstHue": 1.386080900962045,
+            "blueMean": 0.51502769416527
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 78,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 70,
+              "continued": 0
+            },
+            "munsell": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1232,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829548,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2725279994681716,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 19,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.28491389141180823,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 300,
+              "continued": 0
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.2708591999367891,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 605,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.28999310078465285,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 364,
+              "continued": 0
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.20950439310521599,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 8,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.31871947404633716,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 396,
+              "continued": 0
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3126413622630896,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 278,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 1045,
+              "continued": 0
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.3193541406851441,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 34,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3520942368386187,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 16,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.25687862526126604,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 31.478761070515077,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 452,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.905358938271846,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.27451099908042,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 2,
+              "continued": 0
+            },
+            "rit": {
+              "score": 31.4449942059716,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 28,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 27.22211931351567,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 3,
+              "continued": 0
+            }
+          }
+        }
+      },
+      "perHue": [
+        {
+          "H": 1,
+          "parent": 0.23420395129990318,
+          "balanced": 0.22482531014363816,
+          "gentle": 0.2500249311765758
+        },
+        {
+          "H": 6,
+          "parent": 0.20030731748693542,
+          "balanced": 0.24118902572790196,
+          "gentle": 0.25847564018777935
+        },
+        {
+          "H": 11,
+          "parent": 0.21270256755632766,
+          "balanced": 0.2411937566734597,
+          "gentle": 0.25017438901750955
+        },
+        {
+          "H": 16,
+          "parent": 0.2052207928030494,
+          "balanced": 0.2242633452233064,
+          "gentle": 0.22076831884527487
+        },
+        {
+          "H": 21,
+          "parent": 0.2357414200489168,
+          "balanced": 0.22811901298398635,
+          "gentle": 0.22139789029399073
+        },
+        {
+          "H": 26,
+          "parent": 0.25009715067849114,
+          "balanced": 0.22607014856427265,
+          "gentle": 0.2321784211579289
+        },
+        {
+          "H": 31,
+          "parent": 0.23287583713070908,
+          "balanced": 0.20597129776800563,
+          "gentle": 0.22390215600418953
+        },
+        {
+          "H": 36,
+          "parent": 0.20146267262655776,
+          "balanced": 0.19817586864011197,
+          "gentle": 0.20704718763939875
+        },
+        {
+          "H": 41,
+          "parent": 0.24379727150378477,
+          "balanced": 0.2346822276374112,
+          "gentle": 0.24277401716547953
+        },
+        {
+          "H": 46,
+          "parent": 0.2520205996798738,
+          "balanced": 0.24739780397262107,
+          "gentle": 0.26654372104647106
+        },
+        {
+          "H": 51,
+          "parent": 0.20141427545152846,
+          "balanced": 0.20380256272990876,
+          "gentle": 0.20586468882844935
+        },
+        {
+          "H": 56,
+          "parent": 0.16435723711413558,
+          "balanced": 0.20341662724971407,
+          "gentle": 0.21019816264259417
+        },
+        {
+          "H": 61,
+          "parent": 0.1730276862497664,
+          "balanced": 0.20350574961799534,
+          "gentle": 0.2124080484391487
+        },
+        {
+          "H": 66,
+          "parent": 0.19467571431552635,
+          "balanced": 0.18062691463770755,
+          "gentle": 0.18885735825323754
+        },
+        {
+          "H": 71,
+          "parent": 0.17243341236636284,
+          "balanced": 0.1828518619360909,
+          "gentle": 0.17185428808195843
+        },
+        {
+          "H": 76,
+          "parent": 0.14991983205581047,
+          "balanced": 0.1640778720022195,
+          "gentle": 0.14795297766385723
+        },
+        {
+          "H": 81,
+          "parent": 0.14180491666980802,
+          "balanced": 0.14918772613334974,
+          "gentle": 0.14358956592191532
+        },
+        {
+          "H": 86,
+          "parent": 0.14320108951877902,
+          "balanced": 0.16099347533081584,
+          "gentle": 0.14606316669201386
+        },
+        {
+          "H": 91,
+          "parent": 0.178955023454483,
+          "balanced": 0.19600352514307334,
+          "gentle": 0.18883091050193224
+        },
+        {
+          "H": 96,
+          "parent": 0.20201640123901804,
+          "balanced": 0.21998219160078053,
+          "gentle": 0.2185689050639986
+        },
+        {
+          "H": 101,
+          "parent": 0.21500889083790872,
+          "balanced": 0.21912302933161695,
+          "gentle": 0.22978597629657735
+        },
+        {
+          "H": 106,
+          "parent": 0.2158253402823461,
+          "balanced": 0.2179936001336483,
+          "gentle": 0.22307426175207015
+        },
+        {
+          "H": 111,
+          "parent": 0.1922551112191801,
+          "balanced": 0.20647523899875875,
+          "gentle": 0.2049292838606438
+        },
+        {
+          "H": 116,
+          "parent": 0.18231067899366832,
+          "balanced": 0.1879509145795384,
+          "gentle": 0.19197099733284356
+        },
+        {
+          "H": 121,
+          "parent": 0.19393067041494966,
+          "balanced": 0.19678888735535544,
+          "gentle": 0.20284558186894527
+        },
+        {
+          "H": 126,
+          "parent": 0.19233296414147755,
+          "balanced": 0.20984680678293782,
+          "gentle": 0.22565394593078528
+        },
+        {
+          "H": 131,
+          "parent": 0.1777118135304514,
+          "balanced": 0.20754889769893978,
+          "gentle": 0.22032853582378098
+        },
+        {
+          "H": 136,
+          "parent": 0.19798239539141255,
+          "balanced": 0.20499602429076544,
+          "gentle": 0.21216180484553293
+        },
+        {
+          "H": 141,
+          "parent": 0.21271775360767564,
+          "balanced": 0.19814801317900216,
+          "gentle": 0.20201353300864167
+        },
+        {
+          "H": 146,
+          "parent": 0.15785726694120258,
+          "balanced": 0.17299353132146736,
+          "gentle": 0.16382444328849627
+        },
+        {
+          "H": 151,
+          "parent": 0.21786723916158648,
+          "balanced": 0.21774661718008673,
+          "gentle": 0.2126824057700823
+        },
+        {
+          "H": 156,
+          "parent": 0.27330911979874495,
+          "balanced": 0.2811830720262997,
+          "gentle": 0.2681661808475778
+        },
+        {
+          "H": 161,
+          "parent": 0.31967531393191584,
+          "balanced": 0.345675243640429,
+          "gentle": 0.3403430470096963
+        },
+        {
+          "H": 166,
+          "parent": 0.27190469533097567,
+          "balanced": 0.2918103126655353,
+          "gentle": 0.2854746363877693
+        },
+        {
+          "H": 171,
+          "parent": 0.2959904673061381,
+          "balanced": 0.31432979117943305,
+          "gentle": 0.2929727781098168
+        },
+        {
+          "H": 176,
+          "parent": 0.2925104958805178,
+          "balanced": 0.2955260629108839,
+          "gentle": 0.29659132208227607
+        },
+        {
+          "H": 181,
+          "parent": 0.2946885250383996,
+          "balanced": 0.26845776365624147,
+          "gentle": 0.2667224058520433
+        },
+        {
+          "H": 186,
+          "parent": 0.2769847907619827,
+          "balanced": 0.24569706592011867,
+          "gentle": 0.24872887851105294
+        },
+        {
+          "H": 191,
+          "parent": 0.27179597417527,
+          "balanced": 0.2503900024817005,
+          "gentle": 0.25845743531582716
+        },
+        {
+          "H": 196,
+          "parent": 0.28263841011815205,
+          "balanced": 0.2654516789198949,
+          "gentle": 0.26004404216811094
+        },
+        {
+          "H": 201,
+          "parent": 0.2752920305996985,
+          "balanced": 0.2427797357285216,
+          "gentle": 0.2309688179005846
+        },
+        {
+          "H": 206,
+          "parent": 0.22885945360651733,
+          "balanced": 0.2056583119762097,
+          "gentle": 0.22460875303737712
+        },
+        {
+          "H": 211,
+          "parent": 0.2245155249416956,
+          "balanced": 0.2253228877608644,
+          "gentle": 0.2647155911450203
+        },
+        {
+          "H": 216,
+          "parent": 0.2700451191297619,
+          "balanced": 0.24032660504778955,
+          "gentle": 0.29285480286580756
+        },
+        {
+          "H": 221,
+          "parent": 0.3212909384864884,
+          "balanced": 0.284704222710171,
+          "gentle": 0.3194103606942366
+        },
+        {
+          "H": 226,
+          "parent": 0.3512764126966713,
+          "balanced": 0.296508400959256,
+          "gentle": 0.3321183683375221
+        },
+        {
+          "H": 231,
+          "parent": 0.2861785958860933,
+          "balanced": 0.2634887652396239,
+          "gentle": 0.2811444702852187
+        },
+        {
+          "H": 236,
+          "parent": 0.29294434490298565,
+          "balanced": 0.2736273082195485,
+          "gentle": 0.2811413139339926
+        },
+        {
+          "H": 241,
+          "parent": 0.34960605748523993,
+          "balanced": 0.31878818512337026,
+          "gentle": 0.33716751342291107
+        },
+        {
+          "H": 246,
+          "parent": 0.3303110429426118,
+          "balanced": 0.3267132861183484,
+          "gentle": 0.3417264456725472
+        },
+        {
+          "H": 251,
+          "parent": 0.2852011387747383,
+          "balanced": 0.2698375418953501,
+          "gentle": 0.27571172596369486
+        },
+        {
+          "H": 256,
+          "parent": 0.3016321771318203,
+          "balanced": 0.26044434221312646,
+          "gentle": 0.27448930596576415
+        },
+        {
+          "H": 261,
+          "parent": 0.3423031299487759,
+          "balanced": 0.30803131858845145,
+          "gentle": 0.32851237908586517
+        },
+        {
+          "H": 266,
+          "parent": 0.3752253353757248,
+          "balanced": 0.32806346572264433,
+          "gentle": 0.34782271478050286
+        },
+        {
+          "H": 271,
+          "parent": 0.42623520635140216,
+          "balanced": 0.3390593851650148,
+          "gentle": 0.3735564721471035
+        },
+        {
+          "H": 276,
+          "parent": 0.35437510774115577,
+          "balanced": 0.282947608314547,
+          "gentle": 0.31052155126670333
+        },
+        {
+          "H": 281,
+          "parent": 0.2690061393096721,
+          "balanced": 0.20307286821058304,
+          "gentle": 0.23208443217040847
+        },
+        {
+          "H": 286,
+          "parent": 0.24788989900406952,
+          "balanced": 0.2215052451928718,
+          "gentle": 0.24343068918903832
+        },
+        {
+          "H": 291,
+          "parent": 0.27290009112902963,
+          "balanced": 0.23021276289481807,
+          "gentle": 0.25218350410163476
+        },
+        {
+          "H": 296,
+          "parent": 0.2549987550664751,
+          "balanced": 0.2272532059451259,
+          "gentle": 0.25022072086786695
+        },
+        {
+          "H": 301,
+          "parent": 0.2217533990538339,
+          "balanced": 0.2017692116119621,
+          "gentle": 0.2249861266357387
+        },
+        {
+          "H": 306,
+          "parent": 0.19789207786679036,
+          "balanced": 0.17969874996711857,
+          "gentle": 0.19248536050087564
+        },
+        {
+          "H": 311,
+          "parent": 0.20041288119135636,
+          "balanced": 0.17929152816024946,
+          "gentle": 0.17122827647924105
+        },
+        {
+          "H": 316,
+          "parent": 0.2205170528200599,
+          "balanced": 0.18327696376792962,
+          "gentle": 0.18748826700312482
+        },
+        {
+          "H": 321,
+          "parent": 0.2562152774117277,
+          "balanced": 0.20497633343942626,
+          "gentle": 0.22823045655058327
+        },
+        {
+          "H": 326,
+          "parent": 0.2814129517545055,
+          "balanced": 0.24061225922765317,
+          "gentle": 0.25848913782182315
+        },
+        {
+          "H": 331,
+          "parent": 0.26427618979137113,
+          "balanced": 0.2956122849209585,
+          "gentle": 0.275867299002469
+        },
+        {
+          "H": 336,
+          "parent": 0.2374562379478659,
+          "balanced": 0.3081061087561308,
+          "gentle": 0.2842668908382118
+        },
+        {
+          "H": 341,
+          "parent": 0.2178390330835854,
+          "balanced": 0.26033501058097014,
+          "gentle": 0.26864672328675865
+        },
+        {
+          "H": 346,
+          "parent": 0.21474057374429711,
+          "balanced": 0.20852277079165402,
+          "gentle": 0.2357953483017119
+        },
+        {
+          "H": 351,
+          "parent": 0.2276650570164888,
+          "balanced": 0.1950179659309623,
+          "gentle": 0.22128073750580385
+        },
+        {
+          "H": 356,
+          "parent": 0.24894149420214617,
+          "balanced": 0.20188591454536678,
+          "gentle": 0.21699787837822232
+        }
+      ]
+    },
+    "full": {
+      "models": {
+        "parent": {
+          "weighted": 30.371858100792252,
+          "unweighted": 32.35472466477597,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.25996380459988766,
+              "meanStepJump": 0.01588815033192442,
+              "worstStepJump": 1.7231988962285,
+              "cornerRetreatPaths": 18,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0006602249527470163,
+              "worstRetreatFraction": 0.0023837353875446063
+            },
+            "white": {
+              "meanCV": 0.31568627441590713,
+              "meanStepJump": 0.009642810889307627,
+              "worstStepJump": 1.4246815968238977,
+              "cornerRetreatPaths": 56,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.002408486974458816,
+              "worstRetreatFraction": 0.026966204035501408
+            },
+            "exchange": {
+              "meanCV": 0.2618183713824501,
+              "meanStepJump": 0.009682901707123624,
+              "worstStepJump": 1.3238209519423494,
+              "cornerRetreatPaths": 84,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.017509889968451365,
+              "worstRetreatFraction": 0.14361489893991955
+            },
+            "reach": {
+              "meanCV": 0.3861625482629465,
+              "meanStepJump": 0.015418465644560626,
+              "worstStepJump": 1.4059333414896984,
+              "cornerRetreatPaths": 131,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.025273542563148496,
+              "worstRetreatFraction": 0.09024545002291877
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.1704989644426968,
+            "quarterGenDistance": 0.22499010967747923,
+            "blueQuarterGenLightness": 0.2354400914961381
+          },
+          "sheet": {
+            "mean": 1.4334656738764393,
+            "rms": 1.894628074740851,
+            "p95Hue": 2.7317800072686653,
+            "worstHue": 8.349929635193334,
+            "blueMean": 0.3743984023364007
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.242868894705369,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434185,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829704,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2756537452617247,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3278290531012834,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.30885087071567713,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.3190094829154321,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.2244858288578872,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3681020469309314,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.3805136142229584,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.32958007874393364,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.30631186734462396,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.30993883609425776,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3367300237709602,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.3028070710230804,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 32.88587506350279,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 28.063204410210318,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 23.72811591431778,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 29.976731650448745,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 30.79053612552261,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        },
+        "balanced": {
+          "weighted": 30.219765761581534,
+          "unweighted": 32.48447300671502,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.2646276208126446,
+              "meanStepJump": 0.015589455945289406,
+              "worstStepJump": 1.7197964896974514,
+              "cornerRetreatPaths": 13,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0004432424868557499,
+              "worstRetreatFraction": 0.002599243375599079
+            },
+            "white": {
+              "meanCV": 0.3073782001735378,
+              "meanStepJump": 0.009808330339958342,
+              "worstStepJump": 1.046832389210967,
+              "cornerRetreatPaths": 60,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.002197267540178159,
+              "worstRetreatFraction": 0.02157230872457638
+            },
+            "exchange": {
+              "meanCV": 0.2530986695910149,
+              "meanStepJump": 0.009773007537638751,
+              "worstStepJump": 1.1475155215194337,
+              "cornerRetreatPaths": 88,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.018023323941910953,
+              "worstRetreatFraction": 0.16325354875357612
+            },
+            "reach": {
+              "meanCV": 0.36830863113375023,
+              "meanStepJump": 0.014899638958677432,
+              "worstStepJump": 1.5084092119167583,
+              "cornerRetreatPaths": 121,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.013824092654808188,
+              "worstRetreatFraction": 0.13764052327853582
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.16531994701471445,
+            "quarterGenDistance": 0.22069392585207248,
+            "blueQuarterGenLightness": 0.19291461736280008
+          },
+          "sheet": {
+            "mean": 0.6532892909337159,
+            "rms": 0.7701980998806607,
+            "p95Hue": 1.3994506006597847,
+            "worstHue": 2.156570330847817,
+            "blueMean": 0.2648533795849229
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.242868894705369,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434185,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829697,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2901087147421342,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.34671393288659486,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.3247715989584314,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.328289719370738,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.23163498092495668,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.3864784044695207,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.3418957066823843,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.33732383551027034,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.3102869344268954,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.30952184838015834,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.34286556047979416,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.3014736773395226,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 33.085089047696506,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.23144712832876,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 22.725494855828074,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 29.564720240820293,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 32.80250387056694,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        },
+        "gentle": {
+          "weighted": 29.74755815983491,
+          "unweighted": 31.77631152461676,
+          "pairs": 3813,
+          "visual": {
+            "black": {
+              "meanCV": 0.2688819807509273,
+              "meanStepJump": 0.015773601177303528,
+              "worstStepJump": 1.722439745348493,
+              "cornerRetreatPaths": 16,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.000566138960269132,
+              "worstRetreatFraction": 0.002399717088836348
+            },
+            "white": {
+              "meanCV": 0.31520497840163014,
+              "meanStepJump": 0.009922856580049457,
+              "worstStepJump": 1.057736591120235,
+              "cornerRetreatPaths": 50,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.0021865329806361675,
+              "worstRetreatFraction": 0.02077663833470299
+            },
+            "exchange": {
+              "meanCV": 0.2722784001950708,
+              "meanStepJump": 0.010009409908070581,
+              "worstStepJump": 1.2673292262359428,
+              "cornerRetreatPaths": 84,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.018111484438743036,
+              "worstRetreatFraction": 0.13273826729055402
+            },
+            "reach": {
+              "meanCV": 0.3799619577432294,
+              "meanStepJump": 0.015234003667256774,
+              "worstStepJump": 1.9822898062985537,
+              "cornerRetreatPaths": 127,
+              "totalPaths": 360,
+              "meanRetreatFraction": 0.020361268045863135,
+              "worstRetreatFraction": 0.07163323795956536
+            }
+          },
+          "edge": {
+            "quarterGenLightness": 0.1650313225267034,
+            "quarterGenDistance": 0.22031592064160727,
+            "blueQuarterGenLightness": 0.20767614212297775
+          },
+          "sheet": {
+            "mean": 0.7802669765825208,
+            "rms": 0.9284684045636634,
+            "p95Hue": 1.4312162120266172,
+            "worstHue": 2.694298698153902,
+            "blueMean": 0.2533836385874869
+          },
+          "generation": {
+            "hung_berns": {
+              "score": null,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 5,
+              "continued": 0
+            },
+            "ebner_fairchild": {
+              "score": 2.242868894705369,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "munsell": {
+              "score": 3.8162200642434185,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "xiao_unique_hues": {
+              "score": 1.7425659709829697,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "osa_ucs_1974": {
+              "score": 0.2750899018149533,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          },
+          "measurement": {
+            "macadam1942": {
+              "score": 0.3327515634216961,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 25
+            },
+            "luo_rigg_ellipses": {
+              "score": 0.3121094261945969,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "alder1982": {
+              "score": 0.3205992192987287,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 15
+            },
+            "regan_1994_cvd_ellipses": {
+              "score": 0.22726530261495476,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "koenderink_2026_3d_metric_field": {
+              "score": 0.39018061762813794,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "brown_1957_12obs_ellipsoids": {
+              "score": 0.35611332343769275,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 191,
+              "continued": 29
+            },
+            "wyszecki_fielder_1971_ellipsoids": {
+              "score": 0.3320684290802479,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 41,
+              "continued": 0
+            },
+            "brown_macadam_1949_ellipsoids": {
+              "score": 0.30802794382287574,
+              "exact": false,
+              "mapped": 0,
+              "rejected": 378,
+              "continued": 138
+            },
+            "huang_2012_cielab_ellipses": {
+              "score": 0.315738198744914,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "berns_1991_rit_dupont_tolerance_vectors": {
+              "score": 0.3259122166824958,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "hong_2025_ellipsoids": {
+              "score": 0.2990782001350932,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "bfd": {
+              "score": 32.31776650759854,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "leeds": {
+              "score": 27.11789551982636,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "witt": {
+              "score": 22.89447098562021,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "rit": {
+              "score": 29.37647538583915,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            },
+            "macadam": {
+              "score": 32.468392142801754,
+              "exact": true,
+              "mapped": 0,
+              "rejected": 0,
+              "continued": 0
+            }
+          }
+        }
+      },
+      "perHue": [
+        {
+          "H": 1,
+          "parent": 0.23832024042297412,
+          "balanced": 0.29701796475578307,
+          "gentle": 0.280857208500396
+        },
+        {
+          "H": 6,
+          "parent": 0.2398673082766769,
+          "balanced": 0.28129722199974083,
+          "gentle": 0.2813943053243043
+        },
+        {
+          "H": 11,
+          "parent": 0.24651947875201566,
+          "balanced": 0.2876526525223946,
+          "gentle": 0.2886626263326498
+        },
+        {
+          "H": 16,
+          "parent": 0.23812235392844552,
+          "balanced": 0.2932013109983521,
+          "gentle": 0.29069722240379164
+        },
+        {
+          "H": 21,
+          "parent": 0.2806436680297407,
+          "balanced": 0.3221293172558606,
+          "gentle": 0.3123055773701599
+        },
+        {
+          "H": 26,
+          "parent": 0.2966259984575223,
+          "balanced": 0.31731363537633345,
+          "gentle": 0.314013111137895
+        },
+        {
+          "H": 31,
+          "parent": 0.23715740181971717,
+          "balanced": 0.25276546612465445,
+          "gentle": 0.25277894861721933
+        },
+        {
+          "H": 36,
+          "parent": 0.1957783052222447,
+          "balanced": 0.22163237915087866,
+          "gentle": 0.21732600101375454
+        },
+        {
+          "H": 41,
+          "parent": 0.22306303195162186,
+          "balanced": 0.23987141094309966,
+          "gentle": 0.2356369568244192
+        },
+        {
+          "H": 46,
+          "parent": 0.2524960703829454,
+          "balanced": 0.25606058158825146,
+          "gentle": 0.2633721564059452
+        },
+        {
+          "H": 51,
+          "parent": 0.22566527428796515,
+          "balanced": 0.24247665209442185,
+          "gentle": 0.2425517110304693
+        },
+        {
+          "H": 56,
+          "parent": 0.189732151673309,
+          "balanced": 0.2254960888955364,
+          "gentle": 0.2494551167389274
+        },
+        {
+          "H": 61,
+          "parent": 0.16573939952575387,
+          "balanced": 0.1948489216200678,
+          "gentle": 0.22835106594086718
+        },
+        {
+          "H": 66,
+          "parent": 0.18159360165249175,
+          "balanced": 0.16295665984110827,
+          "gentle": 0.17936527322606446
+        },
+        {
+          "H": 71,
+          "parent": 0.16864065676165657,
+          "balanced": 0.16758332908217294,
+          "gentle": 0.17122738863305037
+        },
+        {
+          "H": 76,
+          "parent": 0.14249252353267644,
+          "balanced": 0.15307254767957496,
+          "gentle": 0.1499945991100404
+        },
+        {
+          "H": 81,
+          "parent": 0.1456536179633557,
+          "balanced": 0.14630493436263586,
+          "gentle": 0.1485913713578279
+        },
+        {
+          "H": 86,
+          "parent": 0.15497786277715464,
+          "balanced": 0.16142359255783412,
+          "gentle": 0.15749983973140766
+        },
+        {
+          "H": 91,
+          "parent": 0.189648503539694,
+          "balanced": 0.20450165008434804,
+          "gentle": 0.20005453327530226
+        },
+        {
+          "H": 96,
+          "parent": 0.21273310298109283,
+          "balanced": 0.23471472220486875,
+          "gentle": 0.2296703516660202
+        },
+        {
+          "H": 101,
+          "parent": 0.2296341258581708,
+          "balanced": 0.23776163905000364,
+          "gentle": 0.24133673622486654
+        },
+        {
+          "H": 106,
+          "parent": 0.2257286299433671,
+          "balanced": 0.2321850413666325,
+          "gentle": 0.23132794230789605
+        },
+        {
+          "H": 111,
+          "parent": 0.19601076373879042,
+          "balanced": 0.21305083624354354,
+          "gentle": 0.20823940722321127
+        },
+        {
+          "H": 116,
+          "parent": 0.17960964464485205,
+          "balanced": 0.1939033718591563,
+          "gentle": 0.1935663281014134
+        },
+        {
+          "H": 121,
+          "parent": 0.1844442794028683,
+          "balanced": 0.19686629594829247,
+          "gentle": 0.2007029089860081
+        },
+        {
+          "H": 126,
+          "parent": 0.18559363074887475,
+          "balanced": 0.20583535790329463,
+          "gentle": 0.21904473306115438
+        },
+        {
+          "H": 131,
+          "parent": 0.17548155915442448,
+          "balanced": 0.20454147805922288,
+          "gentle": 0.2157115795173655
+        },
+        {
+          "H": 136,
+          "parent": 0.19826148831656815,
+          "balanced": 0.21007943474327936,
+          "gentle": 0.21636229088998116
+        },
+        {
+          "H": 141,
+          "parent": 0.21250524685667696,
+          "balanced": 0.202877171818169,
+          "gentle": 0.21233256483014012
+        },
+        {
+          "H": 146,
+          "parent": 0.19766849160545305,
+          "balanced": 0.2252437462012001,
+          "gentle": 0.22899346174278795
+        },
+        {
+          "H": 151,
+          "parent": 0.2995932782024494,
+          "balanced": 0.319436371854363,
+          "gentle": 0.3127143995978326
+        },
+        {
+          "H": 156,
+          "parent": 0.42508831604625935,
+          "balanced": 0.4437129883920745,
+          "gentle": 0.43909671655696914
+        },
+        {
+          "H": 161,
+          "parent": 0.5192700426595487,
+          "balanced": 0.5290749531283258,
+          "gentle": 0.5376260943118734
+        },
+        {
+          "H": 166,
+          "parent": 0.5507628468902365,
+          "balanced": 0.5589972450746836,
+          "gentle": 0.5619477074126454
+        },
+        {
+          "H": 171,
+          "parent": 0.5631533192323915,
+          "balanced": 0.5575138220707803,
+          "gentle": 0.5542861684064662
+        },
+        {
+          "H": 176,
+          "parent": 0.5202854906570632,
+          "balanced": 0.4798151929641704,
+          "gentle": 0.5211476465229027
+        },
+        {
+          "H": 181,
+          "parent": 0.4513974061040786,
+          "balanced": 0.3958423646003574,
+          "gentle": 0.4450067354782127
+        },
+        {
+          "H": 186,
+          "parent": 0.393578528917643,
+          "balanced": 0.3307762718378343,
+          "gentle": 0.3785310144132871
+        },
+        {
+          "H": 191,
+          "parent": 0.4144523869150546,
+          "balanced": 0.37068820119984824,
+          "gentle": 0.3946450238225434
+        },
+        {
+          "H": 196,
+          "parent": 0.3778831114499517,
+          "balanced": 0.3457956868859333,
+          "gentle": 0.35207988465650447
+        },
+        {
+          "H": 201,
+          "parent": 0.3283042622262324,
+          "balanced": 0.3157352893790652,
+          "gentle": 0.3096018259737618
+        },
+        {
+          "H": 206,
+          "parent": 0.299117420248629,
+          "balanced": 0.2746205162217939,
+          "gentle": 0.2886472155189931
+        },
+        {
+          "H": 211,
+          "parent": 0.32670391738704774,
+          "balanced": 0.3092531054446495,
+          "gentle": 0.3663719204278929
+        },
+        {
+          "H": 216,
+          "parent": 0.3876924730808696,
+          "balanced": 0.35563037402972303,
+          "gentle": 0.43245568938512935
+        },
+        {
+          "H": 221,
+          "parent": 0.3540278446037325,
+          "balanced": 0.3566022981818645,
+          "gentle": 0.3944144948236353
+        },
+        {
+          "H": 226,
+          "parent": 0.3417856569694967,
+          "balanced": 0.32037955221610803,
+          "gentle": 0.3352519318816332
+        },
+        {
+          "H": 231,
+          "parent": 0.40336761270350613,
+          "balanced": 0.36077295655423736,
+          "gentle": 0.40100513983319497
+        },
+        {
+          "H": 236,
+          "parent": 0.4868880826270051,
+          "balanced": 0.4269790944298917,
+          "gentle": 0.4761465138389916
+        },
+        {
+          "H": 241,
+          "parent": 0.5237674348845104,
+          "balanced": 0.45522494139161546,
+          "gentle": 0.49179736659436657
+        },
+        {
+          "H": 246,
+          "parent": 0.4960268183494382,
+          "balanced": 0.43528641681978064,
+          "gentle": 0.4634003032743431
+        },
+        {
+          "H": 251,
+          "parent": 0.5100884080008539,
+          "balanced": 0.43208887958439046,
+          "gentle": 0.44000741486624684
+        },
+        {
+          "H": 256,
+          "parent": 0.46197493910128784,
+          "balanced": 0.37995555838039696,
+          "gentle": 0.3869162047789068
+        },
+        {
+          "H": 261,
+          "parent": 0.4142921825621043,
+          "balanced": 0.35057854577710107,
+          "gentle": 0.3543542289094808
+        },
+        {
+          "H": 266,
+          "parent": 0.3976438128658161,
+          "balanced": 0.35387383661953026,
+          "gentle": 0.3586954830479278
+        },
+        {
+          "H": 271,
+          "parent": 0.3864581184769215,
+          "balanced": 0.34557465152597777,
+          "gentle": 0.3535612433739334
+        },
+        {
+          "H": 276,
+          "parent": 0.3697521082605416,
+          "balanced": 0.3199060329374916,
+          "gentle": 0.3343838446304094
+        },
+        {
+          "H": 281,
+          "parent": 0.33155533626397393,
+          "balanced": 0.275392718168603,
+          "gentle": 0.2910535550547755
+        },
+        {
+          "H": 286,
+          "parent": 0.29010680993902793,
+          "balanced": 0.27342782181156633,
+          "gentle": 0.28837304205778946
+        },
+        {
+          "H": 291,
+          "parent": 0.53684850851174,
+          "balanced": 0.48818269007294235,
+          "gentle": 0.5238162412905863
+        },
+        {
+          "H": 296,
+          "parent": 0.2745943471086051,
+          "balanced": 0.2550990682714042,
+          "gentle": 0.28761824500328537
+        },
+        {
+          "H": 301,
+          "parent": 0.2774382983554278,
+          "balanced": 0.2668733126029519,
+          "gentle": 0.2993608464039572
+        },
+        {
+          "H": 306,
+          "parent": 0.28678554214605967,
+          "balanced": 0.2745919991569486,
+          "gentle": 0.28852199954770347
+        },
+        {
+          "H": 311,
+          "parent": 0.3032932155861302,
+          "balanced": 0.2748493795448281,
+          "gentle": 0.26978615109729037
+        },
+        {
+          "H": 316,
+          "parent": 0.3117264187487728,
+          "balanced": 0.28527681045234343,
+          "gentle": 0.2750821331498698
+        },
+        {
+          "H": 321,
+          "parent": 0.315203830465722,
+          "balanced": 0.3012121828531821,
+          "gentle": 0.3016752475886054
+        },
+        {
+          "H": 326,
+          "parent": 0.3395169507562666,
+          "balanced": 0.3181933664062281,
+          "gentle": 0.3290647857194979
+        },
+        {
+          "H": 331,
+          "parent": 0.32138503075609653,
+          "balanced": 0.32997238242990334,
+          "gentle": 0.335757278130858
+        },
+        {
+          "H": 336,
+          "parent": 0.2809958465299068,
+          "balanced": 0.2910554192259128,
+          "gentle": 0.2866146084530945
+        },
+        {
+          "H": 341,
+          "parent": 0.25163977577939495,
+          "balanced": 0.24295809548492703,
+          "gentle": 0.2503086036319425
+        },
+        {
+          "H": 346,
+          "parent": 0.23139207192001776,
+          "balanced": 0.21759260127771354,
+          "gentle": 0.20203187948844517
+        },
+        {
+          "H": 351,
+          "parent": 0.21210645872286077,
+          "balanced": 0.2268606995467212,
+          "gentle": 0.2210226230073876
+        },
+        {
+          "H": 356,
+          "parent": 0.24700530267967252,
+          "balanced": 0.25111708365817315,
+          "gentle": 0.2582889381469404
+        }
+      ]
+    }
+  },
+  "selection": {
+    "status": "Frozen before new scored ColorBench evaluation",
+    "timeUTC": "2026-09-18T03:07:03.923308+00:00",
+    "parent_sha256": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+    "basis": "Balanced-parent continuation. New runs, not recovered missing arrays. Choice uses training and native visual checks; no newly computed non-COMBVD observer score used.",
+    "candidates": {
+      "balanced": {
+        "trial": "resume-b",
+        "sha256": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605"
+      },
+      "gentle": {
+        "trial": "resume-a",
+        "sha256": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0"
+      }
+    },
+    "priorDataExposure": "All benchmark sets have project development exposure; this is not pristine external validation."
+  }
+}

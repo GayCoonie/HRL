@@ -39,6 +39,7 @@ s=(G/'evaluate.mjs').read_text().replace("import {createGenTonalHRL} from './ind
 s=s.replace("name.startsWith('old-')", "name==='parent'").replace('`../shared-rl/results/${name.slice(4)}.json`',"'../gen-tonal-fit/results/balanced.json'").replace("await createSharedHRL({gamut,record}):await createGenTonalHRL({gamut,record})","await createGenTonalHRL({gamut,record}):await createHueFairHRL({gamut,record})")
 (P/'evaluate.mjs').write_text(s)
 s=(G/'verify.mjs').read_text().replace('createGenTonalHRL','createHueFairHRL').replace("['balanced','metric']","['balanced','gentle']")
+s=s.replace("names.push('balanced','metric')","names.push('balanced','gentle')")
 (P/'verify.mjs').write_text(s)
 s=(G/'parity.py').read_text().replace("['balanced','metric']","['balanced','gentle']").replace('m.InversePhi','m.base.InversePhi');(P/'parity.py').write_text(s)
 s=(G/'benchmark.py').read_text().replace("['old-balanced','old-metric','balanced','metric']","['parent','balanced','gentle']").replace("['balanced','metric']","['balanced','gentle']").replace('results/metric.json','results/gentle.json').replace(' + GenSpace tonal fit',' + balanced-parent hue refinement')

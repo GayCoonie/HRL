@@ -1,0 +1,8 @@
+{
+  "fittingRun": 35300703792,
+  "evaluationRun": 35302355933,
+  "artifactID": 10530019763,
+  "fitsRerun": false,
+  "scoredEvaluationRerun": false,
+  "priorPublicationFailure": "Unstaged working-tree changes prevented rebase after all numerical, scored and browser gates passed. Verified files restored into a fresh current checkout."
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "file": "resume-a.json",
+    "sha256": "d2da623b89bf9b9e3d2d6898de6d2b5fb56cc6479012e1527d68ebf40769f5f8",
+    "recipe": {
+      "name": "resume-a",
+      "start": "parent",
+      "steps": 650,
+      "stride": 2,
+      "samples": 97,
+      "visual": 0.22,
+      "fair": 0.55,
+      "sheet": 0.003,
+      "corner": 1.0,
+      "guard": 2.0,
+      "blue": 1.5,
+      "layers": 6,
+      "mode": "bilinear",
+      "gridroot": "results",
+      "metricguard": 400.0,
+      "gain": 0.001
+    },
+    "trace_sha256": "acefb9a14d18fa1144b4eea660d88190c0b54e1825f7981bfa669db998e038b5",
+    "evaluations": 663,
+    "recorded_evaluations": 663
+  },
+  {
+    "file": "resume-b.json",
+    "sha256": "ebcad99dda9354597f3dcbcd03836c9fee1b3d29d6796cbb0011964d43fd4d5e",
+    "recipe": {
+      "name": "resume-b",
+      "start": "resume-a",
+      "steps": 800,
+      "stride": 1,
+      "samples": 129,
+      "visual": 0.28,
+      "fair": 0.7,
+      "sheet": 0.006,
+      "corner": 1.0,
+      "guard": 2.0,
+      "blue": 2.0,
+      "layers": 6,
+      "mode": "bilinear",
+      "gridroot": "results",
+      "metricguard": 600.0,
+      "gain": 0.001
+    },
+    "trace_sha256": "23a536638cba4728e490211b4ffaf8187f36cdef55ac61cebb8699bb80a0279f",
+    "evaluations": 806,
+    "recorded_evaluations": 806
+  }
+]

@@ -121,3 +121,9 @@ Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1
 ## HRL 0.11 GenSpace tonal research
 
 [Four-way fitted comparison](https://gaycoonie.github.io/HRL/v2/gen-tonal.html) preserves both shared 0.10 controls and adds newly fitted balanced/metric checkpoints. One learned coefficient bank per candidate operates across gamuts. [Source and method](v2/research/gen-tonal-fit/README.md), [scored report](v2/research/gen-tonal-fit/results/REPORT.md), and [sampling/dark-side tradeoffs](v2/research/gen-tonal-fit/FINDINGS.md) are retained. The Release 1 entry point and all earlier checkpoints remain unchanged.
+
+
+<!-- hue-fair-refinement -->
+## HRL 0.12 balanced-parent refinement
+
+[Live hue-sheet comparison](https://gaycoonie.github.io/HRL/v2/hue-fair.html) keeps 0.11 Gen tonal balanced beside two shared-bank continuations. [Scored results](v2/research/hue-fair-refine/results/REPORT.md), [review limits](v2/research/hue-fair-refine/FINDINGS.md), [source](v2/research/hue-fair-refine/README.md), and the complete new trial logs are retained. Earlier releases and accepted defaults remain available.

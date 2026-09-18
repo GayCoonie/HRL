@@ -1,0 +1,24 @@
+{
+  "H": 96,
+  "N": 193,
+  "grid": "cosine in source U=R/L and L",
+  "ruler": "frozen HelmLab 1.0.0 GenSpace, neutral correction off",
+  "source": "shared deterministic own-gamut chart",
+  "hashes": {
+    "../shared-rl/source.mjs": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+    "../shared-rl/core.mjs": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+    "../shared-rl/results/cache.json": "076255b5eccbfb46961ef117ed4cabccafbd641af812318f34523a4cbd97e655",
+    "../../../src/base/appearance-runtime.mjs": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+    "../../../src/base/gen-parameters.mjs": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808"
+  },
+  "profiles": {
+    "srgb": {
+      "sha256": "c9ea29215c96f5a9fb501876e5036951d6973ab925537b74d17e06a22be8e56d",
+      "seconds": 100.746
+    },
+    "full": {
+      "sha256": "cc6d59499b19540a35886133d8138962861dd092a88928882a5c6bd15f78e566",
+      "seconds": 266.865
+    }
+  }
+}

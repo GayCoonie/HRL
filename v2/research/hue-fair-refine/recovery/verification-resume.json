@@ -1,0 +1,10 @@
+{
+  "restoredFromRun": 35300703792,
+  "artifactID": 10529888505,
+  "checkpoints": {
+    "balanced": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+    "gentle": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0"
+  },
+  "optimizationRepeated": false,
+  "issue": "The test adapter default retained the old metric filename. Balanced numerical checks passed; no score or coefficient changed to fix that filename."
+}

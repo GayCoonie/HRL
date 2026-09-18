@@ -1,0 +1,22 @@
+{
+  "coefficientsUnchanged": true,
+  "checkpoints": {
+    "balanced": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+    "gentle": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0"
+  },
+  "parentExportIdentity": "HRL-0.11-gen-tonal / balanced",
+  "viewCheckpointPreserved": true,
+  "blueNeighborControls": [
+    255,
+    263,
+    269,
+    270,
+    273,
+    275,
+    277,
+    281,
+    285,
+    293
+  ],
+  "importUpdatesPerHueEvidence": true
+}

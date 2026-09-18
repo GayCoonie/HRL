@@ -1,0 +1,17 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "publicPages": false,
+  "threePanels": true,
+  "whiteDilutionStrips": 3,
+  "bothGamuts": true,
+  "nativeNoDisplayClipping": true,
+  "colorImportExport": true,
+  "oldVersionIdentityOnExport": true,
+  "sixteenMeasurementColumns": true,
+  "neutralSurround": true,
+  "mask": true,
+  "currentHueReadouts": true,
+  "mobileNoOverflow": true,
+  "errors": [],
+  "chromium": "143.0.7499.4"
+}
