@@ -2,7 +2,7 @@ name: HRL repaired boundary and tonal fits
 on:
   push:
     branches: [main]
-    paths: ['v2/research/boundary-tonal/PUBLISH.json']
+    paths: ['v2/research/boundary-tonal/PUBLISH.json', '.github/workflows/hrl-boundary-tonal.yml']
   workflow_dispatch:
 permissions:
   contents: write
@@ -50,6 +50,15 @@ jobs:
           (root/'PUBLISH.json').unlink()
           sel=json.loads((root/'results/SELECTION.json').read_text())
           for name,r in sel['candidates'].items():assert hashlib.sha256((root/f'results/{name}.json').read_bytes()).hexdigest()==r['sha256']
+          # First runner rebuilt the same vertices and CMFs but its BLAS dot
+          # changed 49 normal components by at most 2.22e-16. Specify the exact
+          # fused order used by the frozen local geometry; do not loosen hashes.
+          f=root/'build-boundary.py';before=f.read_text()
+          (root/'recovery/build-boundary-before-portability.py').write_text(before)
+          assert before.count('import hashlib,json')==1 and before.count('n=[]')==1
+          after=before.replace('import hashlib,json','import hashlib,json,math').replace('n=[]','# Match the frozen IEEE-754 fused dot order explicitly, independent of BLAS CPU dispatch.\ndef dot3(v,w):return math.fma(float(v[2]),float(w[2]),math.fma(float(v[1]),float(w[1]),float(v[0])*float(w[0])))\nn=[]').replace('v@w','dot3(v,w)')
+          f.write_text(after)
+          (root/'recovery/boundary-portability.json').write_text(json.dumps({'firstRun':35322851009,'difference':'49 normal components differed by at most 2.220446049250313e-16; every CMF and hull vertex identical','repair':'Explicit fused dot-product order reproduces the originally frozen boundary byte-for-byte','frozenGeometryHashStillRequired':True,'refitting':False},indent=2)+'\n')
           PY
       - name: Install pinned numerical, benchmark and browser dependencies
         run: |
