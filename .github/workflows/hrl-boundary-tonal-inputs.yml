@@ -1,0 +1,41 @@
+name: HRL boundary tonal input snapshot
+on:
+  push:
+    paths: ['.github/workflows/hrl-boundary-tonal-inputs.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Save pinned dependency and current research sources
+        run: |
+          mkdir -p /tmp/hrl-boundary-inputs/dependencies
+          python -m pip download --no-deps colour-science==0.4.7 -d /tmp/hrl-boundary-inputs/dependencies
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,subprocess,urllib.request,zipfile
+          root=Path('/tmp/hrl-boundary-inputs')
+          url='https://files.cie.co.at/CIE_xyz_1931_2deg.csv'
+          try:
+              data=urllib.request.urlopen(url,timeout=30).read()
+              (root/'CIE_xyz_1931_2deg.csv').write_bytes(data)
+          except Exception as e:(root/'CIE-download-error.txt').write_text(str(e))
+          paths=[p for p in Path('.').rglob('*') if p.is_file() and '.git' not in p.parts and p.suffix in ['.mjs','.js','.json','.py','.sh','.md','.html','.css','.npz']]
+          manifest={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+          (root/'SOURCE_HASHES.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          (root/'COMMIT.txt').write_text(subprocess.check_output(['git','rev-parse','HEAD'],text=True))
+          with zipfile.ZipFile(root/'current-source.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in paths:z.write(p,str(p))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-boundary-tonal-inputs
+          path: /tmp/hrl-boundary-inputs/
+          retention-days: 30
