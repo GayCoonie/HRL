@@ -1,0 +1,115 @@
+name: HRL hue-fair continuation
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-hue-fair-resume.yml','v2/research/hue-fair-refine/RUN.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-hue-fair-continuation
+  cancel-in-progress: false
+jobs:
+  continue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Recover verified source and prepare runtime adapters
+        run: python v2/research/hue-fair-refine/resume-build.py
+      - name: Install pinned training, benchmark and browser tools
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Rebuild denser GenSpace source grid
+        run: HUES=96 GRID=193 node v2/research/hue-fair-refine/cache.mjs
+      - name: Fit the balanced-parent continuations and freeze records
+        run: |
+          P=v2/research/hue-fair-refine
+          python "$P/fit.py" --name resume-a --start parent --steps 650 --stride 2 --samples 97 --visual .22 --fair .55 --sheet .003 --blue 1.5 --metricguard 400 --layers 6 --corner 1 --guard 2 --gain .001 | tee "$P/trials/resume-a-console.log"
+          python "$P/fit.py" --name resume-b --start resume-a --steps 800 --stride 1 --samples 129 --visual .28 --fair .7 --sheet .006 --blue 2 --metricguard 600 --layers 6 --corner 1 --guard 2 --gain .001 | tee "$P/trials/resume-b-console.log"
+          python "$P/freeze.py"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hrl-hue-fair-frozen-trials
+          path: |
+            v2/research/hue-fair-refine/trials/
+            v2/research/hue-fair-refine/results/balanced.json
+            v2/research/hue-fair-refine/results/gentle.json
+            v2/research/hue-fair-refine/results/SELECTION.json
+            v2/research/hue-fair-refine/results/grid.json
+      - name: Verify exact inverses, preserved anchors and training-runtime parity
+        run: |
+          node v2/research/hue-fair-refine/verify.mjs
+          python v2/research/hue-fair-refine/parity.py
+      - name: Scored-only ColorBench and exact-output visual diagnostics
+        run: |
+          P=v2/research/hue-fair-refine
+          python "$P/benchmark.py" --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets >/tmp/hue-resume-bench.log 2>&1 &
+          B=$!
+          HUES=72 SAMPLES=257 OFFSET=1 node "$P/evaluate.mjs" parent balanced gentle >/tmp/hue-resume-path.log 2>&1 &
+          D=$!
+          HUES=72 OFFSET=1 node "$P/sheet-audit.mjs" parent balanced gentle >/tmp/hue-resume-sheet.log 2>&1 &
+          S=$!
+          FAILED=0; wait $B || FAILED=1; wait $D || FAILED=1; wait $S || FAILED=1
+          cat /tmp/hue-resume-bench.log /tmp/hue-resume-path.log /tmp/hue-resume-sheet.log
+          test "$FAILED" = 0
+          cp "$P/results/direct-72-257-parent_balanced_gentle.json" "$P/results/direct-final.json"
+      - name: Render exact neighboring-blue previews and compile comparison
+        run: |
+          P=v2/research/hue-fair-refine
+          node "$P/preview.mjs" parent balanced gentle
+          python "$P/build-preview.py"
+          python "$P/report.py"
+          python "$P/build-site.py"
+          node --check v2/hue-fair-ui/app.mjs
+          node --check v2/hue-fair-ui/worker.mjs
+      - name: Exercise the actual served app before publishing
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hue-resume-http.log 2>&1 &
+          python v2/research/hue-fair-refine/site-check.py --base http://127.0.0.1:8765/ --out v2/research/hue-fair-refine/results/browser-runner
+      - name: Preserve sources and logs; publish verified additions
+        run: |
+          P=v2/research/hue-fair-refine
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,zipfile
+          p=Path('v2/research/hue-fair-refine')
+          with zipfile.ZipFile(p/'recovery/interrupted-transfer.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for f in p.glob('transfer-*.txt'):z.write(f,f.name)
+          for f in p.glob('transfer-*.txt'):f.unlink()
+          for f in p.rglob('*.pyc'):f.unlink()
+          for f in (p/'results').glob('*.f64'):f.unlink()
+          for f in (p/'results').glob('*.rgba'):f.unlink()
+          hashes={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file() and f.name!='SOURCE_HASHES.json'}
+          (p/'SOURCE_HASHES.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A "$P" v2/hue-fair-ui v2/hue-fair.html v2/gen-tonal.html v2/research/gen-tonal-fit/build-site.py v2/index.html index.html
+          git commit -m 'Publish completed balanced-parent hue-sheet fits, full logs and verified comparison'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-hue-fair-complete-review
+          path: |
+            v2/research/hue-fair-refine/
+            v2/hue-fair-ui/
+            v2/hue-fair.html
+            /tmp/hue-resume-*.log
+          retention-days: 30
