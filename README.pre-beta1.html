@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL — Hue, Reach, Level · HRL</title><link rel="stylesheet" href="site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="v2/index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="v2/index.html">v2 Beta 1</a><a href="v2/beta1.html">Picker</a><a href="v2/beta1-notes.html">Definition</a><a href="v2/benchmarks.html">Benchmarks</a><a href="index.html">Release 1</a><a href="v2/archive.html">Archive</a><a href="library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.pre-beta1.md" download>Download original Markdown</a> · <a href="library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#current-v2-refits-native-srgb-and-full-gamut">Current v2 refits: native sRGB and full gamut</a></li><li><a href="#approved-v2-prototype-a-smooth">Approved v2 prototype: A Smooth</a></li><li><a href="#use">Use</a></li><li><a href="#regular-bicone-metric">Regular-bicone metric</a></li><li><a href="#api">API</a></li><li><a href="#verification">Verification</a></li><li><a href="#hrl-v2-research-separate-from-release-1">HRL v2 research (separate from Release 1)</a></li><li><a href="#equal-span-and-opal-research-candidates">Equal-Span and OPAL research candidates</a></li><li><a href="#opal-07-gamut-anchor-research">OPAL 0.7 gamut-anchor research</a></li><li><a href="#shared-rl-dark-edge-research">Shared R/L dark-edge research</a></li><li><a href="#genspace-tonal-operations-research">GenSpace tonal operations research</a></li><li><a href="#hrl-011-genspace-tonal-research">HRL 0.11 GenSpace tonal research</a></li><li><a href="#hrl-012-balanced-parent-refinement">HRL 0.12 balanced-parent refinement</a></li><li><a href="#hrl-013-boundary-and-tonal-research">HRL 0.13 boundary and tonal research</a></li></ol></details><h1 id="hrl--hue-reach-level">HRL — Hue, Reach, Level</h1>
+<!-- HRL DUAL REFITS START -->
+
+<h2 id="current-v2-refits-native-srgb-and-full-gamut">Current v2 refits: native sRGB and full gamut</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/refits.html">Open the live refit lab</a> · <a href="v2/research/native-srgb-refit/README.html">Native construction and fitting</a> · <a href="v2/research/native-srgb-refit/results/REPORT.html">Native scored report</a> · <a href="v2/research/relative-refit/results/REPORT.html">Full scored report</a>.</p>
+<p>Both balanced/smoother and metric-leaning profiles now have genuine native-sRGB calibrations. The native vivid endpoints and source maps belong to sRGB, not a clipped full solid. The full-gamut refits are unchanged. The new page defaults to native sRGB, includes a gamut switch, color selection/export, and both scored benchmark tables. These are named research checkpoints, not a replacement of Release 1 or the approved A Smooth prototype.</p>
+<pre><code class="language-js">import {createHRLRefits} from './v2/refits.mjs';
+const native = await createHRLRefits({gamut:'srgb', checkpoint:'balanced'});
+const metric = await createHRLRefits({gamut:'srgb', checkpoint:'metric'});
+const full = await createHRLRefits({gamut:'full', checkpoint:'balanced'});
+</code></pre>
+<!-- HRL DUAL REFITS END -->
+
+<!-- HRL A SMOOTH APPROVED -->
+
+<h2 id="approved-v2-prototype-a-smooth">Approved v2 prototype: A Smooth</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/a-smooth.html">Open A Smooth</a> · <a href="v2/a-smooth/README.html">Source and reproducibility</a>. The approved original-ring R/L fit is the default on this new page. A parent remains selectable. Weighted COMBVD: <strong>28.1724</strong> (3,331 sRGB pairs), <strong>28.9553</strong> (3,813 full-domain pairs). Magenta is an acknowledged follow-up, unchanged here. The Release 1 picker and prior v2 pages remain available.</p>
+<p>This repository is the standalone JavaScript reference implementation of <strong>HRL R15-D Release 1</strong>. It contains the selected color-space definition itself, with no dependency on the HRL Studio website.</p>
+<p>HRL is a bounded display-gamut color space whose slices are regular equilateral bicones:</p>
+<ul>
+<li><strong>Hue</strong> is an observer-fitted angular coordinate in degrees.</li>
+<li><strong>Reach</strong> runs from the grayscale axis to the vivid boundary.</li>
+<li><strong>Level</strong> runs from black toward white, constrained by <code>0 ≤ Reach ≤ Level ≤ 1</code>.</li>
+</ul>
+<p>Release 1 preserves the black, white, vivid, and grayscale anchors while applying the selected R15-D interior progression. The same R15-D coordinate layers are implemented for both sRGB and Rec.2020; the Rec.2020 base projection is HRL's existing wide-gamut appearance projector.</p>
+<h2 id="use">Use</h2>
+<pre><code class="language-js">import { createHRL } from './src/index.mjs';
+
+const hrl = await createHRL({ gamut: 'srgb' });
+
+const coordinates = hrl.fromRGB([1, 0.25, 0.1]);
+// { H: degrees, R: 0..1, L: R..1 }
+
+const rgb = hrl.toRGB(coordinates);
+const xyz = hrl.toXYZ(coordinates);
+
+const wide = await createHRL({ gamut: 'rec2020' });
+const wideCoordinates = wide.fromRGB([0.8, 0.2, 0.95]);
+</code></pre>
+<p>Inputs and outputs use encoded channel values in the selected gamut. <code>fromXYZ()</code> and <code>toXYZ()</code> use relative CIE XYZ with D65 white.</p>
+<h2 id="regular-bicone-metric">Regular-bicone metric</h2>
+<p><code>embed()</code> maps HRL to Cartesian coordinates in ColorBench-compatible component order:</p>
+<pre><code class="language-text">neutral-axis = Level - Reach / 2
+opponent-x   = (sqrt(3) / 2) Reach cos(Hue)
+opponent-y   = (sqrt(3) / 2) Reach sin(Hue)
+</code></pre>
+<p><code>distance()</code> is Euclidean distance in that regular bicone. <code>distanceRGB()</code> converts two colors through HRL first.</p>
+<h2 id="api">API</h2>
+<ul>
+<li><code>createHRL({ gamut: 'srgb' | 'rec2020' })</code></li>
+<li><code>model.fromRGB([r, g, b])</code></li>
+<li><code>model.toRGB({ H, R, L })</code></li>
+<li><code>model.fromXYZ([X, Y, Z])</code></li>
+<li><code>model.toXYZ({ H, R, L })</code></li>
+<li><code>model.embed({ H, R, L })</code></li>
+<li><code>model.distance(a, b)</code></li>
+<li><code>model.distanceRGB(rgbA, rgbB)</code></li>
+</ul>
+<p>All release coefficients, fitted tables, ring calibration, and wide-gamut calibration needed by the implementation are included under <code>src/data/</code>.</p>
+<h2 id="verification">Verification</h2>
+<pre><code class="language-sh">npm test
+</code></pre>
+<p>The test suite checks both profiles, the exact triangle corners, RGB/HRL and XYZ/HRL round trips, in-gamut output, and the regular-bicone metric.</p>
+<p>The Rec.2020 transfer is executable and invertible, but Release 1's observer fitting data was sRGB-based; wide-gamut observer accuracy has not yet been independently validated.</p>
+<!-- HRL V2 RESEARCH -->
+
+<h2 id="hrl-v2-research-separate-from-release-1">HRL v2 research (separate from Release 1)</h2>
+<p>The root picker and <code>src/</code> library remain <strong>R15-D Release 1</strong>. New research pages and libraries live under <code>v2/</code>; they do not replace v1.</p>
+<ul>
+<li><a href="https://gaycoonie.github.io/HRL/v2/basr.html">BASR 0.4 picker</a>: Black-Anchored Semantic Remap.</li>
+<li><a href="https://gaycoonie.github.io/HRL/v2/">V2 research hub</a>: native 0.2 and observer 0.1 comparisons, version notes, and module links.</li>
+<li><a href="v2/README.html">V2 library and reproducibility</a>.</li>
+</ul>
+<p>Import <code>createHRLv2</code> from <code>./v2/lib/index.mjs</code> for the prototype. The default v1 entry point is unchanged.</p>
+<h2 id="equal-span-and-opal-research-candidates">Equal-Span and OPAL research candidates</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/opal.html">OPAL 0.6</a> and <a href="https://gaycoonie.github.io/HRL/v2/equal-span.html">Equal-Span 0.5</a> are additional experimental pages. <a href="v2/research/equal-span/README.html">Their separate library and numerical evidence</a> preserve the current v1 implementation and BASR 0.4. These candidates change path parameterization; OPAL additionally uses an experimental hue refit. They are not an across-the-board improvement on observer or COMBVD scores.</p>
+<h2 id="opal-07-gamut-anchor-research">OPAL 0.7 gamut-anchor research</h2>
+<p><a href="v2/opal-anchor.html">Open the 0.7 comparison picker</a> · <a href="v2/research/anchor-0.7/README.html">Methods, source intake and scores</a>. The default balances direct COMBVD fitting against the accepted OPAL 0.6 layout. Its own-gamut anchor controls normalization throughout the R/L construction. OPAL 0.6 and Release 1 are preserved. These are explicitly in-sample research fits, not an accepted Release 2.</p>
+<!-- shared-rl -->
+
+<h2 id="shared-rl-dark-edge-research">Shared R/L dark-edge research</h2>
+<p><a href="v2/shared.html">Live comparison</a> retains prior refits and adds one learned R/L bank per candidate across gamut realizations. See <code>research/shared-rl</code> under v2 for the plan, evidence, tests and explicit tradeoffs.</p>
+<!-- tonal-semantics -->
+
+<h2 id="genspace-tonal-operations-research">GenSpace tonal operations research</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/research/tonal-semantics/">Black/white operations lab</a> compares unchanged shared 0.10 candidates with a GenSpace ruler. It implements distinct black dilution, white dilution and fixed-Reach neutral exchange, plus local per-hue preference export. Definitions, source roles, raw audit and algebraic tests are in <code>v2/research/tonal-semantics</code>. This is a research/diagnostic addition, not a newly fitted colour-space release.</p>
+<!-- gen-tonal-fit -->
+
+<h2 id="hrl-011-genspace-tonal-research">HRL 0.11 GenSpace tonal research</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/gen-tonal.html">Four-way fitted comparison</a> preserves both shared 0.10 controls and adds newly fitted balanced/metric checkpoints. One learned coefficient bank per candidate operates across gamuts. <a href="v2/research/gen-tonal-fit/README.html">Source and method</a>, <a href="v2/research/gen-tonal-fit/results/REPORT.html">scored report</a>, and <a href="v2/research/gen-tonal-fit/FINDINGS.html">sampling/dark-side tradeoffs</a> are retained. The Release 1 entry point and all earlier checkpoints remain unchanged.</p>
+<!-- hue-fair-refinement -->
+
+<h2 id="hrl-012-balanced-parent-refinement">HRL 0.12 balanced-parent refinement</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/hue-fair.html">Live hue-sheet comparison</a> keeps 0.11 Gen tonal balanced beside two shared-bank continuations. <a href="v2/research/hue-fair-refine/results/REPORT.html">Scored results</a>, <a href="v2/research/hue-fair-refine/FINDINGS.html">review limits</a>, <a href="v2/research/hue-fair-refine/README.html">source</a>, and the complete new trial logs are retained. Earlier releases and accepted defaults remain available.</p>
+<!-- boundary-tonal -->
+
+<h2 id="hrl-013-boundary-and-tonal-research">HRL 0.13 boundary and tonal research</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/boundary-tonal.html">Four-way comparison</a> preserves the 0.12 parent, isolates the 1-nm boundary-only repair, and adds two shared Reach/Level fits. <a href="v2/research/boundary-tonal/results/retained-combvd.json">Normal retained-pair COMBVD</a> remains separate from mapped all-input ColorBench. <a href="v2/research/boundary-tonal/DESIGN.html">Method</a>, <a href="v2/research/boundary-tonal/results/REPORT.html">results</a> and <a href="v2/research/boundary-tonal/EXECUTION.html">execution history</a> retain the source/observer evidence distinction and numerical limits. Earlier accepted entry points are unchanged.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="site/preservation.json">Preservation audit</a></footer></main></body></html>

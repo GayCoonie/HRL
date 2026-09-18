@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shared R/L and dark-edge refinement: executed results · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="REPORT.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#main-tradeoff">Main tradeoff</a></li><li><a href="#combvd-identical-retained-pairs-no-clipping">COMBVD: identical retained pairs, no clipping</a></li><li><a href="#common-and-full-only-combvd">Common and full-only COMBVD</a></li><li><a href="#dark-edge-and-conditioning">Dark edge and conditioning</a></li><li><a href="#actual-generated-path-check">Actual generated-path check</a></li><li><a href="#scored-colorbench-panels">Scored ColorBench panels</a></li><li><a href="#invariants-and-scope">Invariants and scope</a></li><li><a href="#frozen-selection">Frozen selection</a></li></ol></details><h1 id="shared-rl-and-dark-edge-refinement-executed-results">Shared R/L and dark-edge refinement: executed results</h1>
+<p>The pre-fit plan is retained in <code>../PLAN.md</code>; literature roles are in <code>../EVIDENCE.md</code>, and trial history and limitations in <code>../EXECUTION.md</code>.</p>
+<h2 id="main-tradeoff">Main tradeoff</h2>
+<p>One R/L bank operates across native sRGB, the full relative-Y solid, and an untrained third gamut. The balanced candidate is substantially darker on the low-Level black-to-vivid edge, particularly native blue. <strong>COMBVD is worse than the separately fitted predecessors. Whole-sheet regularity is mixed, not uniformly improved.</strong></p>
+<p>COMBVD was fitted; no other observer dataset enters this continuation objective. A first scored round and earlier development exposure remain disclosed. This is not pristine external validation. All scores use the actual bicone embedding.</p>
+<h2 id="combvd-identical-retained-pairs-no-clipping">COMBVD: identical retained pairs, no clipping</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Realization</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Weighted STRESS</th>
+  <th style="text-align:right">Unweighted STRESS</th>
+  <th style="text-align:right">Pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">26.156618</td>
+  <td style="text-align:right">27.735136</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">32.116410</td>
+  <td style="text-align:right">33.687327</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">29.318042</td>
+  <td style="text-align:right">30.939439</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">27.822994</td>
+  <td style="text-align:right">28.901216</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">31.449030</td>
+  <td style="text-align:right">33.306056</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">29.630885</td>
+  <td style="text-align:right">31.234386</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+</tbody>
+</table></div>
+<p>Native retains the same 3,331 supported pairs; full retains all 3,813. These are ColorBench-preprocessed inputs, not the legacy exact-HRL-white convention.</p>
+<h2 id="common-and-full-only-combvd">Common and full-only COMBVD</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th>Realization / subset</th>
+  <th style="text-align:right">Pairs</th>
+  <th style="text-align:right">Weighted STRESS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Previous separate balanced</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">26.156618</td>
+</tr>
+<tr>
+  <td>Previous separate balanced</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">27.924807</td>
+</tr>
+<tr>
+  <td>Previous separate balanced</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">26.991760</td>
+</tr>
+<tr>
+  <td>Shared dark-edge balanced</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">32.116410</td>
+</tr>
+<tr>
+  <td>Shared dark-edge balanced</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">31.197584</td>
+</tr>
+<tr>
+  <td>Shared dark-edge balanced</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">32.429838</td>
+</tr>
+<tr>
+  <td>Shared metric-leaning</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.318042</td>
+</tr>
+<tr>
+  <td>Shared metric-leaning</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.574688</td>
+</tr>
+<tr>
+  <td>Shared metric-leaning</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">29.796871</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="dark-edge-and-conditioning">Dark edge and conditioning</h2>
+<p>The edge statistic is Oklab lightness divided by the lightness of the same hue/gamut ray endpoint, not the definition of Level. Curves use 72 hues, four ratios R/L, and 129 samples through actual XYZ without display clipping. Blue means H=260 through 295 degrees at five-degree intervals.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Realization</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Mean at R=L=.25</th>
+  <th style="text-align:right">Blue mean at .25</th>
+  <th style="text-align:right">Mean edge step jump</th>
+  <th style="text-align:right">Min determinant</th>
+  <th style="text-align:right">Worst condition number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">0.521550</td>
+  <td style="text-align:right">0.786151</td>
+  <td style="text-align:right">0.016290</td>
+  <td style="text-align:right">0.0381965</td>
+  <td style="text-align:right">3048.166</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">0.255041</td>
+  <td style="text-align:right">0.301481</td>
+  <td style="text-align:right">0.014341</td>
+  <td style="text-align:right">0.117072</td>
+  <td style="text-align:right">195.915</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">0.304697</td>
+  <td style="text-align:right">0.380465</td>
+  <td style="text-align:right">0.014675</td>
+  <td style="text-align:right">0.0505016</td>
+  <td style="text-align:right">627.699</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">0.269671</td>
+  <td style="text-align:right">0.256044</td>
+  <td style="text-align:right">0.019828</td>
+  <td style="text-align:right">0.140071</td>
+  <td style="text-align:right">2883.016</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">0.206321</td>
+  <td style="text-align:right">0.192518</td>
+  <td style="text-align:right">0.019994</td>
+  <td style="text-align:right">0.117072</td>
+  <td style="text-align:right">195.915</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">0.258269</td>
+  <td style="text-align:right">0.258184</td>
+  <td style="text-align:right">0.020049</td>
+  <td style="text-align:right">0.0505016</td>
+  <td style="text-align:right">627.699</td>
+</tr>
+</tbody>
+</table></div>
+<p>Jacobians are normalized source R/L to final R/L at 900 interior samples, excluding the black singularity. The previous fits also have positive sampled determinants: apparent folds were not proof of a negative Jacobian. Local Y decreases remain and are separately counted in the raw audit.</p>
+<h2 id="actual-generated-path-check">Actual generated-path check</h2>
+<p>48 interleaved hues; 288 Reach and 288 Level ramps per realization; 257 samples each. Fitting used an interpolated surrogate, but these diagnostics use the actual inverse.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Realization</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Reach CV</th>
+  <th style="text-align:right">Level CV</th>
+  <th style="text-align:right">Reach step jump</th>
+  <th style="text-align:right">Level step jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">0.328279</td>
+  <td style="text-align:right">0.227274</td>
+  <td style="text-align:right">0.013418</td>
+  <td style="text-align:right">0.006858</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">0.335274</td>
+  <td style="text-align:right">0.209625</td>
+  <td style="text-align:right">0.016703</td>
+  <td style="text-align:right">0.007699</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">0.524520</td>
+  <td style="text-align:right">0.317087</td>
+  <td style="text-align:right">0.021727</td>
+  <td style="text-align:right">0.010999</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Previous separate balanced</td>
+  <td style="text-align:right">0.358659</td>
+  <td style="text-align:right">0.237104</td>
+  <td style="text-align:right">0.015390</td>
+  <td style="text-align:right">0.008294</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared dark-edge balanced</td>
+  <td style="text-align:right">0.431506</td>
+  <td style="text-align:right">0.254542</td>
+  <td style="text-align:right">0.016539</td>
+  <td style="text-align:right">0.008992</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Shared metric-leaning</td>
+  <td style="text-align:right">0.604960</td>
+  <td style="text-align:right">0.385115</td>
+  <td style="text-align:right">0.020574</td>
+  <td style="text-align:right">0.012671</td>
+</tr>
+</tbody>
+</table></div>
+<p>Darker edges do not imply every interior metric improves. Full blue retains inherited trajectory irregularities. The metric alternate is rougher than balanced and is not presented as a universal visual improvement.</p>
+<h2 id="scored-colorbench-panels">Scored ColorBench panels</h2>
+<p>Only five generation and sixteen measurement columns were run. No unscored appearance, application, ordinal or physics-gate suite was added. † = mapped input; ‡ = incomplete strict support. N/A is not zero.</p>
+<h3 id="srgb-strict-inputs">srgb: strict inputs</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">Previous separate</th>
+  <th style="text-align:right">Shared balanced</th>
+  <th style="text-align:right">Shared metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.251473 ‡</td>
+  <td style="text-align:right">0.276680 ‡</td>
+  <td style="text-align:right">0.288432 ‡</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.271039 ‡</td>
+  <td style="text-align:right">0.289835 ‡</td>
+  <td style="text-align:right">0.300937 ‡</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.242985 ‡</td>
+  <td style="text-align:right">0.274304 ‡</td>
+  <td style="text-align:right">0.272051 ‡</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.261385 ‡</td>
+  <td style="text-align:right">0.302525 ‡</td>
+  <td style="text-align:right">0.296686 ‡</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.188017 ‡</td>
+  <td style="text-align:right">0.216452 ‡</td>
+  <td style="text-align:right">0.220428 ‡</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.335947</td>
+  <td style="text-align:right">0.344856</td>
+  <td style="text-align:right">0.365400</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.282921 ‡</td>
+  <td style="text-align:right">0.329856 ‡</td>
+  <td style="text-align:right">0.336116 ‡</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.309925 ‡</td>
+  <td style="text-align:right">0.325183 ‡</td>
+  <td style="text-align:right">0.321219 ‡</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.338918 ‡</td>
+  <td style="text-align:right">0.397861 ‡</td>
+  <td style="text-align:right">0.343361 ‡</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.265294</td>
+  <td style="text-align:right">0.282949</td>
+  <td style="text-align:right">0.301334</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">28.223624 ‡</td>
+  <td style="text-align:right">34.186052 ‡</td>
+  <td style="text-align:right">31.449752 ‡</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">25.821342</td>
+  <td style="text-align:right">30.837878</td>
+  <td style="text-align:right">27.744421</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">21.060954 ‡</td>
+  <td style="text-align:right">25.864378 ‡</td>
+  <td style="text-align:right">23.221099 ‡</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">26.390619 ‡</td>
+  <td style="text-align:right">34.566391 ‡</td>
+  <td style="text-align:right">31.387185 ‡</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">25.734213 ‡</td>
+  <td style="text-align:right">27.843703 ‡</td>
+  <td style="text-align:right">29.179381 ‡</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="full-strict-inputs">full: strict inputs</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">Previous separate</th>
+  <th style="text-align:right">Shared balanced</th>
+  <th style="text-align:right">Shared metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.252630</td>
+  <td style="text-align:right">0.281138</td>
+  <td style="text-align:right">0.286840</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.275755</td>
+  <td style="text-align:right">0.303628</td>
+  <td style="text-align:right">0.332891</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.250370</td>
+  <td style="text-align:right">0.303629</td>
+  <td style="text-align:right">0.321214</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.301126</td>
+  <td style="text-align:right">0.311239</td>
+  <td style="text-align:right">0.328873</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.227057</td>
+  <td style="text-align:right">0.239882</td>
+  <td style="text-align:right">0.239276</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.334432</td>
+  <td style="text-align:right">0.384238</td>
+  <td style="text-align:right">0.392253</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">0.330679 ‡</td>
+  <td style="text-align:right">0.420611 ‡</td>
+  <td style="text-align:right">0.495451 ‡</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.286166 ‡</td>
+  <td style="text-align:right">0.338199 ‡</td>
+  <td style="text-align:right">0.346874 ‡</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.307893 ‡</td>
+  <td style="text-align:right">0.334002 ‡</td>
+  <td style="text-align:right">0.323109 ‡</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.307215</td>
+  <td style="text-align:right">0.320552</td>
+  <td style="text-align:right">0.314363</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.328794</td>
+  <td style="text-align:right">0.360299</td>
+  <td style="text-align:right">0.360035</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.314120</td>
+  <td style="text-align:right">0.316349</td>
+  <td style="text-align:right">0.320339</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">29.189331</td>
+  <td style="text-align:right">33.800983</td>
+  <td style="text-align:right">31.670834</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">26.817570</td>
+  <td style="text-align:right">27.778236</td>
+  <td style="text-align:right">27.290987</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">24.102805</td>
+  <td style="text-align:right">25.254441</td>
+  <td style="text-align:right">23.535872</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">26.992010</td>
+  <td style="text-align:right">32.529187</td>
+  <td style="text-align:right">31.038975</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">30.986596</td>
+  <td style="text-align:right">32.483718</td>
+  <td style="text-align:right">29.690126</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="full-explicitly-clipped-pipeline">Full: explicitly clipped pipeline</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">Shared balanced / clip</th>
+  <th style="text-align:right">Shared metric / clip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">3.397949 †</td>
+  <td style="text-align:right">3.397949 †</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.281138</td>
+  <td style="text-align:right">0.286840</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.303628</td>
+  <td style="text-align:right">0.332891</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.303629</td>
+  <td style="text-align:right">0.321214</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.311239</td>
+  <td style="text-align:right">0.328873</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.239882</td>
+  <td style="text-align:right">0.239276</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.384238</td>
+  <td style="text-align:right">0.392253</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">0.369742 †</td>
+  <td style="text-align:right">0.371186 †</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.330091 †</td>
+  <td style="text-align:right">0.339812 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.373841 †</td>
+  <td style="text-align:right">0.359370 †</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.320552</td>
+  <td style="text-align:right">0.314363</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.360299</td>
+  <td style="text-align:right">0.360035</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.316349</td>
+  <td style="text-align:right">0.320339</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">33.800983</td>
+  <td style="text-align:right">31.670834</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">27.778236</td>
+  <td style="text-align:right">27.290987</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">25.254441</td>
+  <td style="text-align:right">23.535872</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">32.529187</td>
+  <td style="text-align:right">31.038975</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">32.483718</td>
+  <td style="text-align:right">29.690126</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="invariants-and-scope">Invariants and scope</h2>
+<p><code>verification.json</code> records exact round-trips, neutral/vivid/hue preservation, one-bank identity, and an untrained Adobe RGB (1998) linear-RGB realization. <code>source-gamut-verification.json</code> records regeneration of both source caches with the same algorithm. Canonical P3 red lies slightly outside the inherited polygon and is explicitly rejected, not silently clipped.</p>
+<p>The full solid remains the physical polygon over 0&lt;=relative Y&lt;=1. The 300-nit context and relative 100-nit invariance are retained. High-magnitude hue continuation remains a declared limitation, not new observer evidence.</p>
+<h2 id="frozen-selection">Frozen selection</h2>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;Recovered frozen selection; runtime verification pending at creation&quot;,
+  &quot;selection_basis&quot;: &quot;COMBVD joint fit plus direct dark-edge and generated-path checks from the interrupted work&quot;,
+  &quot;balanced&quot;: {
+    &quot;record&quot;: &quot;balanced.json&quot;,
+    &quot;trial&quot;: &quot;fine-balanced&quot;,
+    &quot;prior_commit&quot;: &quot;ba89fc8bcf26c2e4c8d3efe3596a7d735fe70e44&quot;
+  },
+  &quot;metric&quot;: {
+    &quot;record&quot;: &quot;metric.json&quot;,
+    &quot;trial&quot;: &quot;joint-metric&quot;,
+    &quot;prior_commit&quot;: &quot;23364a997542a28e14e4c20a1f74344bd6d0410d&quot;
+  },
+  &quot;human_training&quot;: [
+    &quot;COMBVD&quot;
+  ],
+  &quot;learned_gamut_specific_banks&quot;: false,
+  &quot;dark_target_is_engineering_preference&quot;: true,
+  &quot;heldout_caveat&quot;: &quot;Earlier development and the interrupted work may have exposed evaluation scores. Do not call this pristine external validation. No new scored evaluation is used to alter the recovered coefficients during completion.&quot;,
+  &quot;recovery_limits&quot;: &quot;The fitted coefficients, trial recipes, aggregate optimizer statistics and source code were committed. Full shared-trial optimizer traces were not committed before the interruptions. They must not be reconstructed as though they were original logs. New verification logs will be retained separately.&quot;
+}
+</code></pre>
+<p>ColorBench <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>; pool <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>. Full runtime source hashes and versions are in <code>colorbench.json</code>.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

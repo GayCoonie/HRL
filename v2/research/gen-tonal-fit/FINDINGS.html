@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FINDINGS · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="FINDINGS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#sampling-and-dark-edge-interpretation">Sampling and dark-edge interpretation</a></li></ol></details><h2 id="sampling-and-dark-edge-interpretation">Sampling and dark-edge interpretation</h2>
+<p>The diagnostic samples 72 hues at 5-degree intervals with a 2.5-degree offset. <strong>48 are absent from the 48-hue training grid; 24 coincide with it.</strong> The entire set is therefore not a held-out hue set. All path families also use finer parameter sampling and the actual inverse instead of the fit lookup.</p>
+<p>These fits redistribute the dark-side progression; they do not force every low-Level colour to get darker. In particular, the mean R=L=.25 output is lighter by the same GenSpace ruler than in 0.10 balanced. This is a real change of the colours, not merely a switch of rulers: both controls and candidates below are rerated identically.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Mean Gen lightness / vivid Gen lightness at R=L=.25</th>
+  <th style="text-align:right">Mean Gen distance from black / vivid distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>old-balanced</td>
+  <td style="text-align:right">0.090456</td>
+  <td style="text-align:right">0.162878</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>old-metric</td>
+  <td style="text-align:right">0.143584</td>
+  <td style="text-align:right">0.208764</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.165905</td>
+  <td style="text-align:right">0.228624</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>metric</td>
+  <td style="text-align:right">0.168416</td>
+  <td style="text-align:right">0.231230</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>old-balanced</td>
+  <td style="text-align:right">0.088250</td>
+  <td style="text-align:right">0.155433</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>old-metric</td>
+  <td style="text-align:right">0.148674</td>
+  <td style="text-align:right">0.205875</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.170004</td>
+  <td style="text-align:right">0.224672</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>metric</td>
+  <td style="text-align:right">0.172077</td>
+  <td style="text-align:right">0.226455</td>
+</tr>
+</tbody>
+</table></div>
+<p>Neither diagnostic is the definition of Level. The new balanced and metric versions are closer to each other on this dark-edge progress measure; human preference is still a separate question. Blue and cyan should be inspected against both old controls rather than declared universally repaired.</p>
+<p>The balanced candidate has slightly larger fixed-Reach neutral-exchange CV than its same-role predecessor (native and full), despite smaller mean adjacent step jumps. Its full-gamut black-family mean total retreat magnitude also increases slightly even though the number of affected paths decreases. These are counterexamples to a blanket all-metrics-improved claim. The raw per-path and worst-step data remain available.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

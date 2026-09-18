@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Execution record: boundary and shared tonal continuation · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="EXECUTION.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#boundary-and-source-preparation">Boundary and source preparation</a></li><li><a href="#trials-and-interruptions">Trials and interruptions</a></li><li><a href="#selection">Selection</a></li><li><a href="#sourceruntime-identity">Source/runtime identity</a></li><li><a href="#verification-and-publication">Verification and publication</a></li></ol></details><h1 id="execution-record-boundary-and-shared-tonal-continuation">Execution record: boundary and shared tonal continuation</h1>
+<p>The pre-fit plan was committed as 6fb195e255db081f22c3e06f3f399a88eba5bb24. The input snapshot is from 5a160b684d369a0adb483b65548eda27deb2bd2f, including the unchanged 0.12 mapping and previous fitted records.</p>
+<h2 id="boundary-and-source-preparation">Boundary and source preparation</h2>
+<p>The pinned colour-science 0.4.7 wheel was obtained through an authenticated GitHub Actions input snapshot because the local runtime has no network DNS. A direct CIE CSV download attempt failed. The boundary was rebuilt from the bundled 471-row table and checked before fitting. The normal sRGB pair mask is unchanged. Full source coordinates were regenerated for the repaired geometry.</p>
+<p>The 96-hue, 193-by-193 source grids were built from actual inverse outputs in GenSpace. One initial tool-bound execution stopped before completion; the build was restarted as a monitored process and completed for both gamuts. Only the complete final grids were fitted. Their hashes and timings are in results/grid.json.</p>
+<h2 id="trials-and-interruptions">Trials and interruptions</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Trial</th>
+  <th>Status</th>
+  <th style="text-align:right">Actual objective evaluations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>conditioned-a</td>
+  <td>Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected</td>
+  <td style="text-align:right">315</td>
+</tr>
+<tr>
+  <td>conditioned-c</td>
+  <td>Completed; original full trace and final array preserved</td>
+  <td style="text-align:right">421</td>
+</tr>
+<tr>
+  <td>metric-a</td>
+  <td>Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected</td>
+  <td style="text-align:right">308</td>
+</tr>
+<tr>
+  <td>metric-b</td>
+  <td>Aborted by OOM killer during setup; zero objective evaluations</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>metric-b2</td>
+  <td>Completed; original full trace and final array preserved</td>
+  <td style="text-align:right">667</td>
+</tr>
+<tr>
+  <td>smooth-b</td>
+  <td>Completed; original full trace and final array preserved</td>
+  <td style="text-align:right">679</td>
+</tr>
+</tbody>
+</table></div>
+<p>The local memory limit is 4 GiB. Starting additional fits while two were active caused the OOM killer to terminate conditioned-a, metric-a, and the metric-b setup. Their surviving intermediate records, actual console outputs and completed trace rows are preserved in the review ZIP. They were not selected. Subsequent coarse fits were limited to two concurrently; the dense conditioned-c fit ran alone. The zero-evaluation setup is not counted as a completed fitting trial.</p>
+<p>The raw-Hessian family was also poorly balanced near very small stencils. The successful fit-v2.py switches its sheet penalty to bounded-influence log1p bending and a bicubic surrogate. fit-v3.py adds exact critical blue angles and weighted mean/RMS conditioning-tail risk. Both use the same invertible runtime map, not a different hidden gamut-specific conversion.</p>
+<p>Completed trials: smooth-b, metric-b2 and conditioned-c, totaling 1767 objective evaluations. Including aborted experiments, 2390 original trace entries are retained. Command JSON files and script hashes identify the actual algorithms and weights.</p>
+<h2 id="selection">Selection</h2>
+<p>The final comparison uses conditioned-c as balanced and metric-b2 as the accuracy-oriented alternate. smooth-b remains a completed initializer/control trial. Selection used COMBVD, 24-hue direct-inverse checks, matched-coordinate conditioning and exact native-blue/magenta previews. Some ordinary path averages regress; selection is a tradeoff, not a declaration that all metrics improve. The severe conditioning maximum is reduced but remains large. The deep-blue lower-boundary band remains visible.</p>
+<p>The frozen selection timestamp and exact record hashes are in results/SELECTION.json and precede the new non-COMBVD scored run. No fitted coefficient changes during benchmark evaluation or publication. The boundary-only control shares the 0.12 coefficient hash and isolates geometry.</p>
+<h2 id="sourceruntime-identity">Source/runtime identity</h2>
+<p>After grid generation, the inner fullVivid alias was pointed at the corrected XYZ path and an unchanged continuation cone was cached rather than reconstructed for every native import. These do not alter coordinate outputs; the grid-generation source text and both hashes are preserved in recovery/grid-runtime.mjs.txt and results/runtime-finalization.json. The public benchmark records the finalized runtime hash.</p>
+<p>The repository includes complete coefficient arrays, commands, hashes, statuses, and sampled progress. Full original JSONL traces and console logs are in the downloadable review ZIP; sampled progress must not be called the complete trace. This storage distinction is intentional and documented, not a claim that missing logs were reconstructed.</p>
+<h2 id="verification-and-publication">Verification and publication</h2>
+<p>Numerical receipts cover spectral geometry, actual inverses, exact integer conversions, hue/neutral/vivid preservation relative to the repaired chart, common-bank identity, third-gamut transfer, implicit-gradient parity and analytic Jacobian parity. The original mapped Python ColorBench and finer actual-output diagnostics are run on frozen models. Public site/content verification has a separate receipt and is not inferred from a local pass.</p>
+<p>The local Chromium navigation attempt was blocked by the sandbox administrator before the page loaded. No local-browser pass is claimed; served and public browser tests are performed on the GitHub runner. The complete local error log is retained in the review ZIP.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

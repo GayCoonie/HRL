@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL 0.10 shared R/L dark-edge research · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#use">Use</a></li><li><a href="#dark-side-correction">Dark-side correction</a></li><li><a href="#results-and-status">Results and status</a></li><li><a href="#reproduction">Reproduction</a></li></ol></details><h1 id="hrl-010-shared-rl-dark-edge-research">HRL 0.10 shared R/L dark-edge research</h1>
+<p>This continuation replaces the two learned native/full R/L banks with <strong>one bank per candidate</strong>, applied after the same deterministic, own-gamut boundary normalization. Earlier releases and separate refits remain unchanged.</p>
+<p>The public meanings stay fixed: <code>K = 1 - L</code>, <code>W = L - R</code>, and chromaticness is <code>R</code>. The internal ratio <code>U = R/L</code> is not Reach itself. Level is brilliance / inverse blackness, not relative Y or an ordinary lightness correlate. <code>R=L</code> is the zero-whiteness black-to-vivid edge.</p>
+<h2 id="use">Use</h2>
+<pre><code class="language-js">import {createSharedHRL, ADOBE_RGB1998} from './source.mjs';
+const native = await createSharedHRL({gamut:'srgb', checkpoint:'balanced'});
+const full = await createSharedHRL({gamut:'full', checkpoint:'balanced'});
+const third = await createSharedHRL({gamut:ADOBE_RGB1998, checkpoint:'balanced'});
+const q = native.fromRGB([0.2,0.3,0.4]);
+const xyz = native.toXYZ(q);
+</code></pre>
+<p>The selected gamut determines the actual physical boundary and own-anchor normalization. It does not select a second coefficient bank or a learned gamut-specific correction. <code>source.mjs</code> accepts a linear-RGB-to-XYZ matrix descriptor and computes its source chart without observer fitting. Only sRGB and full contributed to the joint fit. Adobe RGB (1998) is the untrained numerical transfer test. This is not proof of perceptual accuracy for all gamuts. Canonical Display P3 is currently rejected because its red primary slightly exceeds the inherited polygonized boundary; no silent clipping or P3 support claim is made.</p>
+<p>The built-in source atlases are caches, not independently fitted heads. <code>source-test.mjs</code> rebuilds both with the same path-integration algorithm and checks their agreement. The same normalized source coordinates yield bit-identical final R/L across the two realizations.</p>
+<h2 id="dark-side-correction">Dark-side correction</h2>
+<p>The inverse tonal correction is <code>phi(t) = t - a(H,U) t (1-t)^2</code>, with <code>a = 0.85 sigmoid(Fourier(H)) U^2</code>. Its derivative in t is at least 0.15. It fixes black, the top boundary, the neutral side and the zero-whiteness edge. Safeguarded inversion is used in the forward map. Four invertible coupling layers retain position- and hue-dependent interactions.</p>
+<p>The shape and endpoint-normalized Oklab diagnostic target are engineering responses to Coonie's screenshots, <strong>not new observer measurements or replacements for Level's definition</strong>. Positive Jacobians, visually regular contours and low difference error are separately evaluated. Apparent folds in screenshots alone did not establish a negative Jacobian.</p>
+<h2 id="results-and-status">Results and status</h2>
+<p>The recovered frozen records retain their pre-interruption coefficients. The shared balanced trial's recorded weighted COMBVD estimates are approximately 32.1164 (sRGB) and 31.4490 (full); the shared metric alternate's are 29.3180 and 29.6309. These are worse than the separately fitted predecessors. See the actual runtime <code>results/REPORT.md</code> and <code>results/verification.json</code> after verification; do not treat recorded optimizer estimates as newly verified results.</p>
+<p>The dark-edge change and shared-bank architecture are the purpose of this checkpoint. It is a review candidate, not an approved replacement. All clipping, rejected samples, full-only/common COMBVD subsets and inherited hue-continuation limits are reported separately. Only the five scored generation and sixteen scored measurement ColorBench columns are run. No overall rank is asserted from incompatible support.</p>
+<p>D65, relative XYZ, <code>referenceWhiteNits:300</code>, and explicit Bradford source-white adaptation remain. The full reference solid covers the polygonized physical cone for <code>0 &lt;= relative Y &lt;= 1</code>, not unlimited absolute luminance. Existing absolute/relative unit conversions and the extended carrier remain available.</p>
+<h2 id="reproduction">Reproduction</h2>
+<p>Use the pinned ColorBench commit <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code> and pool commit <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>. The completion workflow prepares training pairs from the retained raw XYZ NPZ, generates adapters and exact source-coordinate caches, runs numerical checks and scored evaluations, then tests and publishes the page. The fitting script additionally needs PyTorch and the dense cache generated by <code>cache.mjs</code>; it writes new trial records and traces.</p>
+<pre><code class="language-sh">python v2/research/shared-rl/prepare.py
+node v2/research/shared-rl/cache.mjs --coordinates-only
+node v2/research/shared-rl/source-test.mjs
+node v2/research/shared-rl/test.mjs
+python v2/research/shared-rl/benchmark.py --colorbench /path/to/colorbench --pool /path/to/color-perception-datasets/datasets
+GAMUT=srgb DENSE=1 node v2/research/shared-rl/visual.mjs old-balanced balanced metric
+GAMUT=full DENSE=1 node v2/research/shared-rl/visual.mjs old-balanced balanced metric
+node v2/research/shared-rl/audit.mjs old-balanced balanced metric
+</code></pre>
+<p><a href="PLAN.html">Preserved pre-fit plan</a> · <a href="EVIDENCE.html">Ten-paper evidence intake</a> · <a href="EXECUTION.html">Execution / recovery record</a> · <a href="results/SELECTION.json">Frozen selection</a> · <a href="../../shared.html">Comparison page</a></p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

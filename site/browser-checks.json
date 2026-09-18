@@ -1,0 +1,16 @@
+{
+  "base": "http://127.0.0.1:8765/",
+  "publicPages": false,
+  "releaseDefaultMetric": true,
+  "focusedPickerAndFourWayComparison": true,
+  "nativeAndFull": true,
+  "correctReleaseAndParentExports": true,
+  "hexImportAndShareRoundTrip": true,
+  "longDefinitionAndR0Section": true,
+  "completeCatalogueAndFilters": true,
+  "historicalComparisonDefaultRetained": true,
+  "release1PickerLoaded": true,
+  "mobileNoHorizontalOverflow": true,
+  "pageErrors": [],
+  "chromium": "143.0.7499.4"
+}

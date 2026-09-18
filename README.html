@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL — Hue, Reach, Level · HRL</title><link rel="stylesheet" href="site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="v2/index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="v2/index.html">v2 Beta 1</a><a href="v2/beta1.html">Picker</a><a href="v2/beta1-notes.html">Definition</a><a href="v2/benchmarks.html">Benchmarks</a><a href="index.html">Release 1</a><a href="v2/archive.html">Archive</a><a href="library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#current-v2-release-hrl-v2-beta-1">Current v2 release: HRL v2 Beta 1</a></li><li><a href="#release-1-remains-available">Release 1 remains available</a></li><li><a href="#geometry-and-units">Geometry and units</a></li><li><a href="#github-pages-and-local-use">GitHub Pages and local use</a></li><li><a href="#research-and-reproducibility">Research and reproducibility</a></li></ol></details><h1 id="hrl--hue-reach-level">HRL — Hue, Reach, Level</h1>
+<p>A color space built around a regular hue bicone: black, white, and vivid in every equilateral hue triangle.</p>
+<h2 id="current-v2-release-hrl-v2-beta-1">Current v2 release: HRL v2 Beta 1</h2>
+<p><strong>The selected 0.13 metric-leaning checkpoint (<code>metric-b2</code>), now the v2 default.</strong> This is a promotion, not a new fit. One shared learned Reach/Level bank operates over native sRGB and the repaired full physical-reference domain.</p>
+<p><a href="https://gaycoonie.github.io/HRL/v2/">Current release</a> · <a href="https://gaycoonie.github.io/HRL/v2/beta1.html">Beta 1 picker</a> · <a href="v2/beta1-notes.html">Full technical write-up</a> · <a href="https://gaycoonie.github.io/HRL/v2/beta1-notes.html">Readable web edition</a> · <a href="https://gaycoonie.github.io/HRL/v2/benchmarks.html">Benchmarks</a> · <a href="https://gaycoonie.github.io/HRL/library.html">All files</a></p>
+<pre><code class="language-js">import {createHRLv2} from './v2/index.mjs';
+const hrl = await createHRLv2(); // native sRGB; HRL v2 Beta 1
+const q = hrl.fromRGB([0.2, 0.5, 0.8]);
+const rgb = hrl.toRGB(q);
+const full = await createHRLv2({gamut:'full'});
+const audit = full.importXYZ(hrl.toXYZ(q));
+</code></pre>
+<p>The <a href="v2/default.json">release manifest</a> pins the exact coefficient and boundary hashes. Normal retained-pair weighted COMBVD is <strong>29.107048</strong> for 3,331 native sRGB pairs and <strong>29.948555</strong> for 3,813 full-domain pairs. These fitted development populations are not interchangeable with all-input mapped ColorBench; the <a href="v2/research/boundary-tonal/results/REPORT.html">original report</a> preserves both.</p>
+<h2 id="release-1-remains-available">Release 1 remains available</h2>
+<p>The <a href="https://gaycoonie.github.io/HRL/">root picker</a> and <code>src/index.mjs</code> remain <strong>R15-D Release 1</strong>. The package's existing root export is unchanged. Its native sRGB and Rec.2020 implementation, coefficients, tests, and historical documentation are preserved.</p>
+<pre><code class="language-js">import {createHRL} from './src/index.mjs';
+const release1 = await createHRL({gamut:'srgb'});
+const wideRelease1 = await createHRL({gamut:'rec2020'});
+</code></pre>
+<p><a href="README.pre-beta1.html">Complete pre-beta README</a> · <a href="src/index.mjs">Release 1 source</a></p>
+<h2 id="geometry-and-units">Geometry and units</h2>
+<p>Public coordinates satisfy <code>0 &lt;= R &lt;= L &lt;= 1</code>; H is cyclic degrees. Shares are chromaticness R, whiteness L−R, and blackness 1−L. Level is inverse blackness, not a synonym for luminance.</p>
+<p>The regular-bicone embedding is <code>[L-R/2, sqrt(3)/2*R*cos(H), sqrt(3)/2*R*sin(H)]</code>, with H converted to radians inside the trigonometric functions. Distance is Euclidean <strong>in that embedding</strong>, not in raw H/R/L.</p>
+<h2 id="github-pages-and-local-use">GitHub Pages and local use</h2>
+<p>The repository is served directly at <strong><a href="https://gaycoonie.github.io/HRL/">https://gaycoonie.github.io/HRL/</a></strong>, from <code>main</code> at the repository root. The site is static; no account, framework, CDN, or backend is needed to use the pickers.</p>
+<p>For local browser use, retain the full repository layout and serve it over HTTP:</p>
+<pre><code class="language-sh">git clone https://github.com/GayCoonie/HRL.git
+cd HRL
+python3 -m http.server 8000
+# Open http://localhost:8000/v2/ for the current release.
+# Open http://localhost:8000/ for Release 1.
+</code></pre>
+<p>The reference modules also work in Node 18 or later. The modular pickers need HTTP rather than a <code>file:</code> page; preserved standalone research viewers keep their embedded model data.</p>
+<h2 id="research-and-reproducibility">Research and reproducibility</h2>
+<p><a href="https://gaycoonie.github.io/HRL/v2/archive.html">Chronological archive</a> · <a href="https://gaycoonie.github.io/HRL/library.html">Searchable complete file catalogue</a> · <a href="https://gaycoonie.github.io/HRL/v2/boundary-tonal.html">Preserved four-way 0.13 comparison</a></p>
+<p>No earlier page, Markdown document, JSON record, or numerical model is removed. Markdown has both its original raw file and a generated reading edition where a same-name HTML page does not already exist. Navigation is generated by <code>site/build.py</code>; the publication workflow checks retained source identities, release-wrapper equivalence, links, and browser behavior.</p>
+<pre><code class="language-sh">npm test                         # existing repository tests
+node site/test-beta1.mjs          # release-wrapper/model identity checks
+python -m pip install mistune
+python site/build.py              # rebuild navigation, catalogue, reading editions
+python site/check.py              # preservation and new-site link audit
+</code></pre>
+<p>The older <code>v2/lib/index.mjs</code> retains its historical BASR/linear factory. Use <strong><code>v2/index.mjs</code></strong> for the named Beta 1 release. No npm version or historical checkpoint is silently reinterpreted.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="site/preservation.json">Preservation audit</a></footer></main></body></html>

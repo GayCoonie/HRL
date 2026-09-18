@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL 0.9 relative-domain correction · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#the-domain-and-carrier">The domain and carrier</a></li><li><a href="#reference-conditions-and-input-policy">Reference conditions and input policy</a></li><li><a href="#coordinate-and-appearance-consequences">Coordinate and appearance consequences</a></li><li><a href="#100-versus-300-nits">100 versus 300 nits</a></li><li><a href="#reproduction-and-evidence">Reproduction and evidence</a></li></ol></details><h1 id="hrl-09-relative-domain-correction">HRL 0.9 relative-domain correction</h1>
+<p>This is an additive research implementation. The original 0.8A, approved A Smooth, C1 candidate, and Release 1 entry points remain unchanged.</p>
+<h2 id="the-domain-and-carrier">The domain and carrier</h2>
+<p>The corrected full reference solid is explicitly the polygonized physical XYZ chromaticity cone intersected with <strong>0 &lt;= relative Y &lt;= 1</strong>. This is a reference-relative emissive solid, not a spectral-reflectance/object-color solid. X and Z are not individually capped at 1.</p>
+<p>The previous white-completion gauge answers how much D65 light is needed to complete a stimulus. It is retained as a geometric quantity but is no longer treated as relative luminance or a physical admission limit. The bounded pseudo-RGB carrier instead has <code>max(channels) = relative Y</code> and encodes chromaticity through an independent spectral-boundary mapping. Every polygonized physical chromaticity has the whole declared Y range. Its integer packing and floating-point conversion are distinct operations.</p>
+<p>The floating carrier additionally accepts <code>extended:true</code>, preserving Y &gt; 1. The bounded H/R/L bicone does not grow an extra coordinate or above-white slot.</p>
+<h2 id="reference-conditions-and-input-policy">Reference conditions and input policy</h2>
+<p><code>referenceWhiteNits</code> defaults to <strong>300</strong>. Public XYZ is still relative. Multiplication/division by this scalar converts relative/absolute units. Bradford adaptation is applied when a caller declares a different source reference white. Input XYZ on a 0-to-100 scale must declare <code>xyzScale:100</code>; its units are not guessed.</p>
+<pre><code class="language-js">import {createRelativeHRL, D65} from './index.mjs';
+const hrl = await createRelativeHRL({
+  gamut: 'full', variant: 'candidate', referenceWhiteNits: 300,
+  overflow: 'clip', imaginary: 'clip'
+});
+const q = hrl.fromXYZ([0.2, 0.3, 0.1]);
+const absoluteXYZ = hrl.toAbsoluteXYZ(q);
+const imported = hrl.importXYZ([20, 30, 10], {
+  sourceWhite: [0.96422, 1, 0.82521], xyzScale: 100
+});
+console.log(imported.coordinates, imported.events);
+</code></pre>
+<p>The default above-white policy implements the requested clipping: for Y &gt; 1, scale all three XYZ components together to make Y = 1, preserving chromaticity. This is reported as <code>luminance-clipped</code>, not mislabeled as an imaginary chromaticity. Relative Y=1.2 corresponds to 120 nits under a 100-nit reference; declaring absolute units does not magically bring it inside that same bounded reference solid.</p>
+<p>A genuinely nonphysical chromaticity can be rejected or explicitly projected radially from D65 onto the polygonized spectral boundary. Nonpositive-Y imaginary inputs map to black in clip mode. These operations are separately counted. Nonfinite input always raises an error. <code>overflow:'reject', imaginary:'reject'</code> selects strict import; the unit-conversion context and extended floating carrier preserve larger physical intensities without clipping.</p>
+<h2 id="coordinate-and-appearance-consequences">Coordinate and appearance consequences</h2>
+<p>Correcting the physical domain necessarily changes its full-gamut vivid endpoints and relative coordinate allocation. The builder regenerates the original auxiliary brightness/chromatic-content path maps on the corrected solid. It does <strong>not</strong> refit any COMBVD or human-observer coefficients. Parent and C1 coupling coefficients remain identifiable inherited checkpoints. Native sRGB keeps its existing physical chart and fitted coordinates.</p>
+<p>Inside the original hue field's fitted magnitude range, its hue labels are retained. Beyond that range, the final fitted magnitude slice is held constant. This is an explicit extrapolation rule, not evidence that those new colors were included in the original observer fit. The resulting constant-Y hue shells are numerically checked for order before building the atlas.</p>
+<p>The metric is still the actual regular-bicone embedding:</p>
+<pre><code>[L - R/2, sqrt(3)/2 * R*cos(H), sqrt(3)/2 * R*sin(H)]
+</code></pre>
+<p>H is in radians only for sine/cosine. Neither raw H/R/L Euclidean distance nor a replacement perceptual metric is used.</p>
+<h2 id="100-versus-300-nits">100 versus 300 nits</h2>
+<p>Both settings are run through the scored benchmark with identical relative inputs. The inherited appearance calibration is relative and has no newly fitted absolute-luminance response. Identical outputs therefore establish unit-scale invariance, not an empirical preference for 300 over 100. Absolute inputs, by contrast, become different relative values when the reference white changes. No numerical nits sensitivity is invented by arbitrarily changing hue-field coefficients.</p>
+<h2 id="reproduction-and-evidence">Reproduction and evidence</h2>
+<p>From the repository root:</p>
+<pre><code class="language-sh">node v2/research/relative-domain/build.mjs
+node v2/research/relative-domain/test.mjs
+python v2/research/relative-domain/benchmark.py \
+  --colorbench /path/to/colorbench \
+  --pool /path/to/color-perception-datasets/datasets
+</code></pre>
+<p>ColorBench is pinned to <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>; the pool to <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>. The workflow only runs the five scored generation and sixteen scored measurement columns. It omits unscored appearance, application, HumanFB ordinal, and physics-gate suites. The separate numerical implementation tests cover the carrier, inverse mapping, clipping, Bradford, and unit conventions.</p>
+<p>Results are generated under <code>results/</code>: <code>REPORT.md</code>, <code>colorbench.json</code>, <code>scores.csv</code>, raw per-pair COMBVD arrays, <code>verification.json</code>, and <code>build-audit.json</code>. Clipped-input and strict results are separate. No overall leaderboard rank is claimed from a clipped pipeline. Old full-profile results are rerun as controls. Benchmark datasets are not used for a new optimization.</p>
+<p>Sources: W3C CSS Color 4, XYZ and Bradford conversion conventions; Colour's Jzazbz API for the distinction between relative XYZ and absolute-luminance input; the pinned ColorBench code for all scored judges. The new geometry and continuation policy are HRL modeling decisions, not claims imposed by these sources.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

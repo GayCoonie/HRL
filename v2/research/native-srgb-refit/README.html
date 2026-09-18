@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Native-sRGB counterparts to the HRL 0.9 refits · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#the-native-construction">The native construction</a></li><li><a href="#native-results">Native results</a></li><li><a href="#visual-progression-and-selection">Visual progression and selection</a></li><li><a href="#other-scored-checks">Other scored checks</a></li><li><a href="#unified-api">Unified API</a></li><li><a href="#reproducibility">Reproducibility</a></li></ol></details><h1 id="native-srgb-counterparts-to-the-hrl-09-refits">Native-sRGB counterparts to the HRL 0.9 refits</h1>
+<p><a href="../../refits.html">Live two-gamut refit lab</a> · <a href="results/REPORT.html">Scored native results</a> · <a href="results/verification.json">Numerical verification</a> · <a href="results/SELECTION.json">Selected checkpoints</a></p>
+<p>These are genuine native-sRGB balanced and metric-leaning profiles. They are not the full-gamut outputs clipped to a monitor, and the factory no longer returns the same old native C1 calibration for both names. Full-gamut refits and all accepted predecessor entry points remain unchanged.</p>
+<h2 id="the-native-construction">The native construction</h2>
+<p>Both profiles use the existing, separately generated <strong>sRGB source atlas</strong> from <code>v2/a-smooth/source-srgb.json</code>, with C1 interpolation. Its vivid reference is the actual intersection of the shared observer-fitted hue sheet with the sRGB boundary, not the full-domain spectral endpoint. Before integration the auxiliary appearance coordinates are normalized against that hue/gamut's own black, D65 white, and vivid point. The source method is preserved in the atlas and in <code>v2/a-smooth/build-atlas.mjs</code>.</p>
+<p>The same angular hue identities and physical hue sheets are shared across profiles. Equal HRL addresses in different gamuts need not represent identical XYZ. We fit native Reach/Level coupling separately, retaining the native source atlas, hue field/ring, neutral progression, and all native vivid endpoints. No full-gamut lookup or output clipping is used to manufacture the native colors.</p>
+<p>As in the full refits, there are three analytically invertible coupling layers with six angular harmonics: 195 native R/L coefficients. The regular-bicone distance remains</p>
+<pre><code class="language-text">E(H,R,L) = [L-R/2, sqrt(3)/2 R cos(H), sqrt(3)/2 R sin(H)]
+</code></pre>
+<p>The native solid remains <code>0 &lt;= R &lt;= L &lt;= 1</code>. H is converted to radians only for sine/cosine.</p>
+<h2 id="native-results">Native results</h2>
+<p>Actual JavaScript runtime results on the same ColorBench-prepared native subset, with no clipping:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Native profile</th>
+  <th style="text-align:right">Weighted COMBVD STRESS</th>
+  <th style="text-align:right">Unweighted STRESS</th>
+  <th style="text-align:right">Pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Previous native C1</td>
+  <td style="text-align:right">27.819289</td>
+  <td style="text-align:right">28.780616</td>
+  <td style="text-align:right">3,331</td>
+</tr>
+<tr>
+  <td><strong>Balanced / smoother</strong></td>
+  <td style="text-align:right"><strong>26.156618</strong></td>
+  <td style="text-align:right"><strong>27.735136</strong></td>
+  <td style="text-align:right"><strong>3,331</strong></td>
+</tr>
+<tr>
+  <td><strong>Metric-leaning</strong></td>
+  <td style="text-align:right"><strong>25.272446</strong></td>
+  <td style="text-align:right"><strong>26.976822</strong></td>
+  <td style="text-align:right"><strong>3,331</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>COMBVD was fitted. These are in-sample results, not independent validation. The native mask is identical for every model. Full-gamut scores use 3,813 pairs and must not be compared as if they used the same subset. All benchmark computation is in the actual embedded geometry, never Euclidean distance between raw H/R/L triples.</p>
+<p>The full balanced and metric profiles retain their previous weighted scores, 27.822994 and 26.711042 respectively. Their stored definitions are unchanged and the new unified factory is tested against the old full entry point.</p>
+<h2 id="visual-progression-and-selection">Visual progression and selection</h2>
+<p>We used the same distinction as the full counterparts: balanced uses synthetic smoothness weight 0.20, metric-leaning 0.10. A pure metric-only control achieved 24.609360 weighted STRESS but made native ramps rougher; it was not selected for the live comparison.</p>
+<p>The synthetic regularizer uses Oklab step-size variation, neighboring step changes, concentrated steps, and direction penalties. The optimizer's differentiable approximation uses 48 hues and a 161-by-161 cosine-spaced grid of actual native source XYZ. Only this regularizer uses interpolated grid samples; production conversion and final diagnostics call the real JavaScript transform.</p>
+<p>Exact output-path validation uses 48 interleaved hues, 288 Reach ramps and 288 Level ramps, 257 samples per ramp, with three endpoint steps excluded at each end. These settings differ from the fitting grid.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Diagnostic</th>
+  <th style="text-align:right">Previous Reach</th>
+  <th style="text-align:right">Balanced Reach</th>
+  <th style="text-align:right">Previous Level</th>
+  <th style="text-align:right">Balanced Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mean step CV</td>
+  <td style="text-align:right">0.612838</td>
+  <td style="text-align:right">0.328279</td>
+  <td style="text-align:right">0.303826</td>
+  <td style="text-align:right">0.227274</td>
+</tr>
+<tr>
+  <td>Mean neighboring step jump</td>
+  <td style="text-align:right">0.015943</td>
+  <td style="text-align:right">0.013418</td>
+  <td style="text-align:right">0.008627</td>
+  <td style="text-align:right">0.006858</td>
+</tr>
+<tr>
+  <td>Worst sampled step jump</td>
+  <td style="text-align:right">1.334153</td>
+  <td style="text-align:right">1.190365</td>
+  <td style="text-align:right">1.415376</td>
+  <td style="text-align:right">1.251319</td>
+</tr>
+</tbody>
+</table></div>
+<p>Balanced mean step variation falls <strong>46.4% in Reach and 25.2% in Level</strong>; mean local step jumps fall <strong>15.8% and 20.5%</strong>. Both selected variants improve these mean diagnostics relative to the previous native C1. These are numerical proxies, not observer preference judgments, and they do not establish that every local path improved. No screen blur or RGB blending is used.</p>
+<p>The native display is genuinely in sRGB. The full-domain display is explicitly sRGB-clipped and includes a mask; those previews must not be mistaken for a faithful rendering of every full-gamut color.</p>
+<h2 id="other-scored-checks">Other scored checks</h2>
+<p>All five scored generation and sixteen measurement columns were run after freezing the two selections. Unsupported native inputs are rejected rather than silently clipped. Some native scores therefore have incomplete dataset support and are marked in the report; no whole-board rank is claimed.</p>
+<p>This is not a universal improvement. Native OSA spacing on the supported subset rises from 0.236671 to 0.251473 for balanced, and Hong threshold CV rises from 0.241622 to 0.265294. Other difference/threshold tests improve. Read the complete table, not just the COMBVD result. OSA, MacAdam1974, Xiao, and threshold/tolerance data were not used in this refit, but inherited hue-field fitting and prior development exposure remain part of provenance.</p>
+<p>The 100-nit and 300-nit runs agree for the same relative XYZ. Reference-white unit conversions are preserved; no new absolute-luminance appearance response is asserted.</p>
+<h2 id="unified-api">Unified API</h2>
+<pre><code class="language-js">import {createHRLRefits} from './v2/refits.mjs';
+const srgb = await createHRLRefits({gamut:'srgb', checkpoint:'balanced'});
+const srgbMetric = await createHRLRefits({gamut:'srgb', checkpoint:'metric'});
+const full = await createHRLRefits({gamut:'full', checkpoint:'balanced'});
+const q = srgb.fromRGB([0.2, 0.5, 0.8]);
+const rgb = srgb.toRGB(q);
+const xyz = srgb.toXYZ(q);
+</code></pre>
+<p><code>checkpoint:'baseline'</code> selects the pre-refit profile for that gamut. Save gamut and checkpoint together with coordinates. The live page defaults to native sRGB/balanced, exposes both refits and the prior calibration, supports color picking, exact relative-XYZ readout, hex import, JSON export, a shareable view URL, and the two scored benchmark tables.</p>
+<h2 id="reproducibility">Reproducibility</h2>
+<p>Base: <code>a5afe600dc38b4d8a929d48de87973fab8408fce</code>. The executable source/data subset supplied in the preceding verified artifacts is retained. ColorBench: <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>; dataset pool: <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>.</p>
+<p><code>fit-recipe.sh</code> recreates the training lineage without overwriting the published selected files. <code>prepare-inputs.py</code> reads already-preserved numeric COMBVD endpoints. <code>cache.mjs</code> constructs the true native source grid. <code>fit.py</code> records the objective and each trial; <code>results/TRAINING.json</code> records metrics and runtime versions. Nonconvex optimization can vary with the numerical environment; the frozen parameter hashes identify the delivered models.</p>
+<p><code>test.mjs</code> verifies the actual JS scores, identical retained masks, 8,192 triangle round-trips per native model, exact 16-bit RGB round-trips, gray codes, fixed vivid and neutral points, same physical hue identity, and unchanged full profiles. <code>benchmark.py</code> runs only the scored ColorBench columns. <code>visual.mjs</code> produces exact-path diagnostics; <code>DENSE=1</code> selects the final interleaved grid. <code>make-summary.py</code> builds the live site's evidence table from executed results, not hand-entered web scores.</p>
+<p>No original library definition or accepted picker is overwritten. The website adds first-class navigation from the root and research hub to <code>v2/refits.html</code>.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

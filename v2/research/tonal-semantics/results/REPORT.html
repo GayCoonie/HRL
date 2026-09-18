@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL tonal semantics: GenSpace audit · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="REPORT.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#what-ran">What ran</a></li><li><a href="#full-path-step-statistics">Full-path step statistics</a></li><li><a href="#hue-specific-differences">Hue-specific differences</a></li><li><a href="#direction-and-endpoint-diagnostics">Direction and endpoint diagnostics</a></li><li><a href="#algebra-and-source-interpretation">Algebra and source interpretation</a></li><li><a href="#scope-and-next-experiment">Scope and next experiment</a></li><li><a href="#reproduction">Reproduction</a></li></ol></details><h1 id="hrl-tonal-semantics-genspace-audit">HRL tonal semantics: GenSpace audit</h1>
+<h2 id="what-ran">What ran</h2>
+<p>The same shared 0.10 balanced and metric candidates were rerated using the repository's pinned HelmLab 1.0.0 GenSpace forward transform (neutral correction disabled). This is <strong>not a new colour-space fit</strong>. No Oklab value enters these new diagnostics. Historical coefficients and ColorBench results were not changed or relabeled.</p>
+<p>72 hues, five start ratios, 129 samples per path, two families, two candidates, two gamuts: <strong>371,520 evaluated XYZ samples</strong>, including repeated endpoints. All sampled paths had full numerical GenSpace domain support; no display clipping was used in the analysis. This is not proof of perceptual validity throughout the full physical solid.</p>
+<p>Black family: black → upper-edge tint, reversing addBlack. White family: black-vivid shade → white, using addWhite. R/L share dilution is the proposed operation contract. Fixed-Reach Level is neutral exchange and is not the same as general white dilution. See <a href="../DEFINITIONS.html">DEFINITIONS.md</a>.</p>
+<h2 id="full-path-step-statistics">Full-path step statistics</h2>
+<p>CV is step-size standard deviation divided by its mean. Step jump is the absolute difference of adjacent step lengths divided by their mean. Two endpoint steps are trimmed at each end for these statistics. Both use full 3D GenSpace distance; lower means more even by this ruler, not more preferred by a human.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Black-family CV</th>
+  <th style="text-align:right">White-family CV</th>
+  <th style="text-align:right">Black-family step jump</th>
+  <th style="text-align:right">White-family step jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.314810</td>
+  <td style="text-align:right">0.197691</td>
+  <td style="text-align:right">0.030771</td>
+  <td style="text-align:right">0.014250</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>metric</td>
+  <td style="text-align:right">0.330290</td>
+  <td style="text-align:right">0.299947</td>
+  <td style="text-align:right">0.037560</td>
+  <td style="text-align:right">0.020103</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.355887</td>
+  <td style="text-align:right">0.331400</td>
+  <td style="text-align:right">0.032413</td>
+  <td style="text-align:right">0.019155</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>metric</td>
+  <td style="text-align:right">0.374524</td>
+  <td style="text-align:right">0.459923</td>
+  <td style="text-align:right">0.038436</td>
+  <td style="text-align:right">0.025950</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="hue-specific-differences">Hue-specific differences</h2>
+<p>Each hue compares the mean over five start ratios. Counts are out of 72 hues; they do not identify Coonie's preferences. The user's own per-hue choices are separate evidence.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Family</th>
+  <th style="text-align:right">Balanced lower CV</th>
+  <th style="text-align:right">Metric lower CV</th>
+  <th style="text-align:right">Balanced lower step jump</th>
+  <th style="text-align:right">Metric lower step jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>black</td>
+  <td style="text-align:right">37</td>
+  <td style="text-align:right">35</td>
+  <td style="text-align:right">51</td>
+  <td style="text-align:right">21</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>white</td>
+  <td style="text-align:right">67</td>
+  <td style="text-align:right">5</td>
+  <td style="text-align:right">62</td>
+  <td style="text-align:right">10</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>black</td>
+  <td style="text-align:right">39</td>
+  <td style="text-align:right">33</td>
+  <td style="text-align:right">53</td>
+  <td style="text-align:right">19</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>white</td>
+  <td style="text-align:right">71</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">64</td>
+  <td style="text-align:right">8</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="direction-and-endpoint-diagnostics">Direction and endpoint diagnostics</h2>
+<p>For black-origin paths, a corner retreat is a decrease in 3D GenSpace distance from black as the path leaves black. For white-directed paths, it is an increase in distance to white while adding white. Threshold: 1e-8 GenSpace units per step; all steps, not endpoint-trimmed. These are ruler-dependent trajectory diagnostics, not proofs of a topological fold or a perceptual reversal.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Black paths with corner retreat / 360</th>
+  <th style="text-align:right">White paths with corner retreat / 360</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">6</td>
+  <td style="text-align:right">81</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>metric</td>
+  <td style="text-align:right">46</td>
+  <td style="text-align:right">119</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">22</td>
+  <td style="text-align:right">94</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>metric</td>
+  <td style="text-align:right">61</td>
+  <td style="text-align:right">100</td>
+</tr>
+</tbody>
+</table></div>
+<p>This exposes small local departures that are missed by endpoint and round-trip tests. Their perceptual importance is not established simply by counting them. The raw JSON retains the per-path counts and statistics.</p>
+<h3 id="scalar-lightness-is-not-whiteness">Scalar lightness is not whiteness</h3>
+<p>The raw audit also records decreases in Gen L, but these are not automatically failures of white addition. On the full vivid boundary, some chromatic endpoints exceed reference white on the Gen L correlate. Moving from them toward white can therefore decrease Gen L without moving away from white in the full 3D ruler.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th style="text-align:right">Vivid endpoints with Gen L above white / 72</th>
+  <th style="text-align:right">Minimum vivid Gen L</th>
+  <th style="text-align:right">Maximum vivid Gen L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0.369167</td>
+  <td style="text-align:right">0.962423</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td style="text-align:right">42</td>
+  <td style="text-align:right">0.904332</td>
+  <td style="text-align:right">1.904737</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reference white Gen L is 0.999998985144. These are model outputs, not measurements that those physical colours actually have that perceived lightness. GenSpace is not being presented as a fully validated appearance model of every high-purity colour.</p>
+<p>At R=L=.25, mean endpoint-normalized Gen L is srgb/balanced: 0.090894, srgb/metric: 0.144216, full/balanced: 0.089352, full/metric: 0.149466. These are not directly comparable units to the old Oklab-ruler numbers. No colour became darker merely because the ruler changed.</p>
+<h2 id="algebra-and-source-interpretation">Algebra and source interpretation</h2>
+<p>The operator test passed 10,000 seeded random cases for simplex containment, same-endpoint composition, cross-endpoint order, corner-distance contraction and fixed-Reach neutral exchange. Maximum recorded composition error: 2.220446049250313e-16.</p>
+<p>ZCAM Equations 17–19 were implemented as Jz/Cz-input attribute functions, not a full XYZ-to-ZCAM replacement. Ideal neutral white gives Kz=20, Wz=100, Vz=42. This is why raw ZCAM correlates must not be inserted as HRL shares. The conceptual two-distance construction has a separate boundary-normalization issue, derived in the definitions record.</p>
+<h2 id="scope-and-next-experiment">Scope and next experiment</h2>
+<p>The interactive page makes addBlack, addWhite and neutral exchange visible on both existing candidates and records informal per-hue preferences locally. It does not introduce a new candidate under an old name. The next fit should combine both operation families with GenSpace path diagnostics and separately justified appearance constraints, retaining one common coefficient bank. Simply substituting Gen L into the former arbitrary t^1.08 target would still not define blackness and whiteness.</p>
+<p>Only existing transform outputs and algebraic contracts were evaluated. No new observer training, appearance-board score, COMBVD rerun or overall leaderboard rank is claimed. The earlier development-data exposure and inherited physical-boundary limitations remain.</p>
+<h2 id="reproduction">Reproduction</h2>
+<pre><code class="language-sh">node v2/research/tonal-semantics/test.mjs
+node v2/research/tonal-semantics/audit.mjs
+python v2/research/tonal-semantics/report.py
+</code></pre>
+<p><a href="genspace-audit.json">Raw audit</a> · <a href="per-hue.csv">Per-hue CSV</a> · <a href="operation-tests.json">Operation tests</a> · <a href="../index.html">Interactive page</a></p>
+<p>Source hashes:</p>
+<pre><code class="language-json">{
+  &quot;../../../src/base/appearance-runtime.mjs&quot;: &quot;4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8&quot;,
+  &quot;../../../src/base/gen-parameters.mjs&quot;: &quot;4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808&quot;,
+  &quot;../shared-rl/source.mjs&quot;: &quot;f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd&quot;,
+  &quot;../shared-rl/core.mjs&quot;: &quot;293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4&quot;,
+  &quot;../shared-rl/results/balanced.json&quot;: &quot;a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35&quot;,
+  &quot;../shared-rl/results/metric.json&quot;: &quot;2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b&quot;
+}
+</code></pre>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

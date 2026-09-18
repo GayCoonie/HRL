@@ -1,0 +1,4197 @@
+{
+  "sourceCommit": "bd1d9039d3c4390197099dcb53967baac2896505",
+  "files": [
+    {
+      "path": ".github/workflows/hrl-a-smooth-publish.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-a-smooth-publish.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-beta1-site.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-beta1-site.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-boundary-tonal-inputs.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-boundary-tonal-inputs.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-boundary-tonal.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-boundary-tonal.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-domain-evidence.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-domain-evidence.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-gen-tonal-notes.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-gen-tonal-notes.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-gen-tonal.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-gen-tonal.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-hue-fair-finish.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair-finish.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-hue-fair-live.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair-live.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-hue-fair-publish.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair-publish.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-hue-fair-resume.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair-resume.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-hue-fair.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-mapped-012.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-mapped-012.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-native-refits-publish.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-native-refits-publish.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-opal07-checks.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-opal07-checks.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-refinement-recovery.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-refinement-recovery.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-refit-inputs.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-refit-inputs.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-relative-domain.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-relative-domain.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-relative-refit.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-relative-refit.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-shared-live.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-shared-live.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-shared-resume.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-shared-resume.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-shared-rl.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-shared-rl.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-tonal-publish.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-tonal-publish.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-tonal-semantics.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-tonal-semantics.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-v2-checks.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-v2-checks.yml"
+    },
+    {
+      "path": ".nojekyll",
+      "kind": "other",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.nojekyll"
+    },
+    {
+      "path": "README.html",
+      "kind": "html",
+      "url": "README.html"
+    },
+    {
+      "path": "README.md",
+      "kind": "markdown",
+      "url": "README.md",
+      "readingEdition": "README.html"
+    },
+    {
+      "path": "README.pre-beta1.html",
+      "kind": "html",
+      "url": "README.pre-beta1.html"
+    },
+    {
+      "path": "README.pre-beta1.md",
+      "kind": "markdown",
+      "url": "README.pre-beta1.md",
+      "readingEdition": "README.pre-beta1.html"
+    },
+    {
+      "path": "index.html",
+      "kind": "html",
+      "url": "index.html"
+    },
+    {
+      "path": "library.html",
+      "kind": "html",
+      "url": "library.html"
+    },
+    {
+      "path": "package.json",
+      "kind": "json",
+      "url": "package.json"
+    },
+    {
+      "path": "site/BUILD.json",
+      "kind": "json",
+      "url": "site/BUILD.json"
+    },
+    {
+      "path": "site/beta1.css",
+      "kind": "source",
+      "url": "site/beta1.css"
+    },
+    {
+      "path": "site/browser-check.py",
+      "kind": "source",
+      "url": "site/browser-check.py"
+    },
+    {
+      "path": "site/browser-checks.json",
+      "kind": "json",
+      "url": "site/browser-checks.json"
+    },
+    {
+      "path": "site/build-manifest.json",
+      "kind": "json",
+      "url": "site/build-manifest.json"
+    },
+    {
+      "path": "site/build.py",
+      "kind": "source",
+      "url": "site/build.py"
+    },
+    {
+      "path": "site/catalog.js",
+      "kind": "source",
+      "url": "site/catalog.js"
+    },
+    {
+      "path": "site/catalog.json",
+      "kind": "json",
+      "url": "site/catalog.json"
+    },
+    {
+      "path": "site/check.py",
+      "kind": "source",
+      "url": "site/check.py"
+    },
+    {
+      "path": "site/model-checks.json",
+      "kind": "json",
+      "url": "site/model-checks.json"
+    },
+    {
+      "path": "site/preservation.json",
+      "kind": "json",
+      "url": "site/preservation.json"
+    },
+    {
+      "path": "site/publication.json",
+      "kind": "json",
+      "url": "site/publication.json"
+    },
+    {
+      "path": "site/site.css",
+      "kind": "source",
+      "url": "site/site.css"
+    },
+    {
+      "path": "site/test-beta1.mjs",
+      "kind": "source",
+      "url": "site/test-beta1.mjs"
+    },
+    {
+      "path": "src/base/appearance-runtime.mjs",
+      "kind": "source",
+      "url": "src/base/appearance-runtime.mjs"
+    },
+    {
+      "path": "src/base/core.mjs",
+      "kind": "source",
+      "url": "src/base/core.mjs"
+    },
+    {
+      "path": "src/base/gen-parameters.mjs",
+      "kind": "source",
+      "url": "src/base/gen-parameters.mjs"
+    },
+    {
+      "path": "src/data/algorithmic-results.json",
+      "kind": "json",
+      "url": "src/data/algorithmic-results.json"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part00",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part00"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part01",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part01"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part02",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part02"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part03",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part03"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part04",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part04"
+    },
+    {
+      "path": "src/data/algorithmic-table.json.part05",
+      "kind": "other",
+      "url": "src/data/algorithmic-table.json.part05"
+    },
+    {
+      "path": "src/data/cap-results.json",
+      "kind": "json",
+      "url": "src/data/cap-results.json"
+    },
+    {
+      "path": "src/data/r15-candidate.json",
+      "kind": "json",
+      "url": "src/data/r15-candidate.json"
+    },
+    {
+      "path": "src/data/release-config.json.part00",
+      "kind": "other",
+      "url": "src/data/release-config.json.part00"
+    },
+    {
+      "path": "src/data/release-config.json.part01",
+      "kind": "other",
+      "url": "src/data/release-config.json.part01"
+    },
+    {
+      "path": "src/data/release-config.json.part02",
+      "kind": "other",
+      "url": "src/data/release-config.json.part02"
+    },
+    {
+      "path": "src/data/srgb-hue-calibration.json",
+      "kind": "json",
+      "url": "src/data/srgb-hue-calibration.json"
+    },
+    {
+      "path": "src/data/wide-native-boundary-h.json",
+      "kind": "json",
+      "url": "src/data/wide-native-boundary-h.json"
+    },
+    {
+      "path": "src/index.mjs",
+      "kind": "source",
+      "url": "src/index.mjs"
+    },
+    {
+      "path": "src/model/algorithmic.mjs",
+      "kind": "source",
+      "url": "src/model/algorithmic.mjs"
+    },
+    {
+      "path": "src/model/cap.mjs",
+      "kind": "source",
+      "url": "src/model/cap.mjs"
+    },
+    {
+      "path": "src/model/picker-model.mjs",
+      "kind": "source",
+      "url": "src/model/picker-model.mjs"
+    },
+    {
+      "path": "src/model/r14.mjs",
+      "kind": "source",
+      "url": "src/model/r14.mjs"
+    },
+    {
+      "path": "src/model/r15.mjs",
+      "kind": "source",
+      "url": "src/model/r15.mjs"
+    },
+    {
+      "path": "src/wide/appearance-hue.mjs",
+      "kind": "source",
+      "url": "src/wide/appearance-hue.mjs"
+    },
+    {
+      "path": "src/wide/appearance-map.mjs",
+      "kind": "source",
+      "url": "src/wide/appearance-map.mjs"
+    },
+    {
+      "path": "src/wide/appearance-observer-ring.mjs",
+      "kind": "source",
+      "url": "src/wide/appearance-observer-ring.mjs"
+    },
+    {
+      "path": "src/wide/appearance-project.mjs",
+      "kind": "source",
+      "url": "src/wide/appearance-project.mjs"
+    },
+    {
+      "path": "src/wide/hue.mjs",
+      "kind": "source",
+      "url": "src/wide/hue.mjs"
+    },
+    {
+      "path": "src/wide/observer-ring-calibration.mjs",
+      "kind": "source",
+      "url": "src/wide/observer-ring-calibration.mjs"
+    },
+    {
+      "path": "src/wide/observer-ring-retune.mjs",
+      "kind": "source",
+      "url": "src/wide/observer-ring-retune.mjs"
+    },
+    {
+      "path": "src/wide/project.mjs",
+      "kind": "source",
+      "url": "src/wide/project.mjs"
+    },
+    {
+      "path": "src/wide/reach-level-retune.mjs",
+      "kind": "source",
+      "url": "src/wide/reach-level-retune.mjs"
+    },
+    {
+      "path": "src/wide/triangle-map.mjs",
+      "kind": "source",
+      "url": "src/wide/triangle-map.mjs"
+    },
+    {
+      "path": "src/wide/zcam-neutral-reference.mjs",
+      "kind": "source",
+      "url": "src/wide/zcam-neutral-reference.mjs"
+    },
+    {
+      "path": "test/reference.test.mjs",
+      "kind": "source",
+      "url": "test/reference.test.mjs"
+    },
+    {
+      "path": "tools/integrate-refits.py",
+      "kind": "source",
+      "url": "tools/integrate-refits.py"
+    },
+    {
+      "path": "v2/HRL_v2_Beta_1.md",
+      "kind": "markdown",
+      "url": "v2/HRL_v2_Beta_1.md",
+      "readingEdition": "v2/beta1-notes.html"
+    },
+    {
+      "path": "v2/README.html",
+      "kind": "html",
+      "url": "v2/README.html"
+    },
+    {
+      "path": "v2/README.md",
+      "kind": "markdown",
+      "url": "v2/README.md",
+      "readingEdition": "v2/README.html"
+    },
+    {
+      "path": "v2/README.pre-beta1.html",
+      "kind": "html",
+      "url": "v2/README.pre-beta1.html"
+    },
+    {
+      "path": "v2/README.pre-beta1.md",
+      "kind": "markdown",
+      "url": "v2/README.pre-beta1.md",
+      "readingEdition": "v2/README.pre-beta1.html"
+    },
+    {
+      "path": "v2/a-smooth.html",
+      "kind": "html",
+      "url": "v2/a-smooth.html"
+    },
+    {
+      "path": "v2/a-smooth/COMBVD.csv",
+      "kind": "other",
+      "url": "v2/a-smooth/COMBVD.csv"
+    },
+    {
+      "path": "v2/a-smooth/README.html",
+      "kind": "html",
+      "url": "v2/a-smooth/README.html"
+    },
+    {
+      "path": "v2/a-smooth/README.md",
+      "kind": "markdown",
+      "url": "v2/a-smooth/README.md",
+      "readingEdition": "v2/a-smooth/README.html"
+    },
+    {
+      "path": "v2/a-smooth/build-atlas.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/build-atlas.mjs"
+    },
+    {
+      "path": "v2/a-smooth/build-viewer.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/build-viewer.mjs"
+    },
+    {
+      "path": "v2/a-smooth/definitions.json",
+      "kind": "json",
+      "url": "v2/a-smooth/definitions.json"
+    },
+    {
+      "path": "v2/a-smooth/index.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/index.mjs"
+    },
+    {
+      "path": "v2/a-smooth/link.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/link.mjs"
+    },
+    {
+      "path": "v2/a-smooth/rl-core.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/rl-core.mjs"
+    },
+    {
+      "path": "v2/a-smooth/source-full.json",
+      "kind": "json",
+      "url": "v2/a-smooth/source-full.json"
+    },
+    {
+      "path": "v2/a-smooth/source-readout.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/source-readout.mjs"
+    },
+    {
+      "path": "v2/a-smooth/source-srgb.json",
+      "kind": "json",
+      "url": "v2/a-smooth/source-srgb.json"
+    },
+    {
+      "path": "v2/a-smooth/test.mjs",
+      "kind": "source",
+      "url": "v2/a-smooth/test.mjs"
+    },
+    {
+      "path": "v2/a-smooth/verification.json",
+      "kind": "json",
+      "url": "v2/a-smooth/verification.json"
+    },
+    {
+      "path": "v2/a-smooth/viewer-template.html",
+      "kind": "html",
+      "url": "v2/a-smooth/viewer-template.html"
+    },
+    {
+      "path": "v2/archive.html",
+      "kind": "html",
+      "url": "v2/archive.html"
+    },
+    {
+      "path": "v2/basr.html",
+      "kind": "html",
+      "url": "v2/basr.html"
+    },
+    {
+      "path": "v2/benchmarks.html",
+      "kind": "html",
+      "url": "v2/benchmarks.html"
+    },
+    {
+      "path": "v2/beta1-notes.html",
+      "kind": "html",
+      "url": "v2/beta1-notes.html"
+    },
+    {
+      "path": "v2/beta1.html",
+      "kind": "html",
+      "url": "v2/beta1.html"
+    },
+    {
+      "path": "v2/boundary-tonal-ui/app.mjs",
+      "kind": "source",
+      "url": "v2/boundary-tonal-ui/app.mjs"
+    },
+    {
+      "path": "v2/boundary-tonal-ui/style.css",
+      "kind": "source",
+      "url": "v2/boundary-tonal-ui/style.css"
+    },
+    {
+      "path": "v2/boundary-tonal-ui/worker.mjs",
+      "kind": "source",
+      "url": "v2/boundary-tonal-ui/worker.mjs"
+    },
+    {
+      "path": "v2/boundary-tonal.html",
+      "kind": "html",
+      "url": "v2/boundary-tonal.html"
+    },
+    {
+      "path": "v2/build.mjs",
+      "kind": "source",
+      "url": "v2/build.mjs"
+    },
+    {
+      "path": "v2/data/appearance-readouts.json",
+      "kind": "json",
+      "url": "v2/data/appearance-readouts.json"
+    },
+    {
+      "path": "v2/data/equal-span-full.json",
+      "kind": "json",
+      "url": "v2/data/equal-span-full.json"
+    },
+    {
+      "path": "v2/data/equal-span-srgb.json",
+      "kind": "json",
+      "url": "v2/data/equal-span-srgb.json"
+    },
+    {
+      "path": "v2/data/hue-field-0.6.json",
+      "kind": "json",
+      "url": "v2/data/hue-field-0.6.json"
+    },
+    {
+      "path": "v2/data/hue-field.json",
+      "kind": "json",
+      "url": "v2/data/hue-field.json"
+    },
+    {
+      "path": "v2/data/opal-full.json",
+      "kind": "json",
+      "url": "v2/data/opal-full.json"
+    },
+    {
+      "path": "v2/data/opal-srgb.json",
+      "kind": "json",
+      "url": "v2/data/opal-srgb.json"
+    },
+    {
+      "path": "v2/data/release1-angles.json",
+      "kind": "json",
+      "url": "v2/data/release1-angles.json"
+    },
+    {
+      "path": "v2/default.json",
+      "kind": "json",
+      "url": "v2/default.json"
+    },
+    {
+      "path": "v2/docs/OBSERVER_FIELD_0_1_FIT_REPORT.json",
+      "kind": "json",
+      "url": "v2/docs/OBSERVER_FIELD_0_1_FIT_REPORT.json"
+    },
+    {
+      "path": "v2/docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.html",
+      "kind": "html",
+      "url": "v2/docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.html"
+    },
+    {
+      "path": "v2/docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.md",
+      "kind": "markdown",
+      "url": "v2/docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.md",
+      "readingEdition": "v2/docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.html"
+    },
+    {
+      "path": "v2/equal-span.html",
+      "kind": "html",
+      "url": "v2/equal-span.html"
+    },
+    {
+      "path": "v2/gen-tonal-ui/app.mjs",
+      "kind": "source",
+      "url": "v2/gen-tonal-ui/app.mjs"
+    },
+    {
+      "path": "v2/gen-tonal-ui/style.css",
+      "kind": "source",
+      "url": "v2/gen-tonal-ui/style.css"
+    },
+    {
+      "path": "v2/gen-tonal-ui/worker.mjs",
+      "kind": "source",
+      "url": "v2/gen-tonal-ui/worker.mjs"
+    },
+    {
+      "path": "v2/gen-tonal.html",
+      "kind": "html",
+      "url": "v2/gen-tonal.html"
+    },
+    {
+      "path": "v2/history.html",
+      "kind": "html",
+      "url": "v2/history.html"
+    },
+    {
+      "path": "v2/hue-fair-ui/app.mjs",
+      "kind": "source",
+      "url": "v2/hue-fair-ui/app.mjs"
+    },
+    {
+      "path": "v2/hue-fair-ui/style.css",
+      "kind": "source",
+      "url": "v2/hue-fair-ui/style.css"
+    },
+    {
+      "path": "v2/hue-fair-ui/worker.mjs",
+      "kind": "source",
+      "url": "v2/hue-fair-ui/worker.mjs"
+    },
+    {
+      "path": "v2/hue-fair.html",
+      "kind": "html",
+      "url": "v2/hue-fair.html"
+    },
+    {
+      "path": "v2/hue-field-0.1.html",
+      "kind": "html",
+      "url": "v2/hue-field-0.1.html"
+    },
+    {
+      "path": "v2/index.html",
+      "kind": "html",
+      "url": "v2/index.html"
+    },
+    {
+      "path": "v2/index.mjs",
+      "kind": "source",
+      "url": "v2/index.mjs"
+    },
+    {
+      "path": "v2/lib/basr.mjs",
+      "kind": "source",
+      "url": "v2/lib/basr.mjs"
+    },
+    {
+      "path": "v2/lib/hue-field.mjs",
+      "kind": "source",
+      "url": "v2/lib/hue-field.mjs"
+    },
+    {
+      "path": "v2/lib/index.mjs",
+      "kind": "source",
+      "url": "v2/lib/index.mjs"
+    },
+    {
+      "path": "v2/lib/opal-anchor.mjs",
+      "kind": "source",
+      "url": "v2/lib/opal-anchor.mjs"
+    },
+    {
+      "path": "v2/lib/research.mjs",
+      "kind": "source",
+      "url": "v2/lib/research.mjs"
+    },
+    {
+      "path": "v2/lib/srgb-triangles.mjs",
+      "kind": "source",
+      "url": "v2/lib/srgb-triangles.mjs"
+    },
+    {
+      "path": "v2/native-0.2.html",
+      "kind": "html",
+      "url": "v2/native-0.2.html"
+    },
+    {
+      "path": "v2/opal-anchor.html",
+      "kind": "html",
+      "url": "v2/opal-anchor.html"
+    },
+    {
+      "path": "v2/opal.html",
+      "kind": "html",
+      "url": "v2/opal.html"
+    },
+    {
+      "path": "v2/refits-ui/app.mjs",
+      "kind": "source",
+      "url": "v2/refits-ui/app.mjs"
+    },
+    {
+      "path": "v2/refits-ui/style.css",
+      "kind": "source",
+      "url": "v2/refits-ui/style.css"
+    },
+    {
+      "path": "v2/refits-ui/worker.mjs",
+      "kind": "source",
+      "url": "v2/refits-ui/worker.mjs"
+    },
+    {
+      "path": "v2/refits.html",
+      "kind": "html",
+      "url": "v2/refits.html"
+    },
+    {
+      "path": "v2/refits.mjs",
+      "kind": "source",
+      "url": "v2/refits.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/BENCHMARKS.html",
+      "kind": "html",
+      "url": "v2/research/anchor-0.7/BENCHMARKS.html"
+    },
+    {
+      "path": "v2/research/anchor-0.7/BENCHMARKS.md",
+      "kind": "markdown",
+      "url": "v2/research/anchor-0.7/BENCHMARKS.md",
+      "readingEdition": "v2/research/anchor-0.7/BENCHMARKS.html"
+    },
+    {
+      "path": "v2/research/anchor-0.7/README.html",
+      "kind": "html",
+      "url": "v2/research/anchor-0.7/README.html"
+    },
+    {
+      "path": "v2/research/anchor-0.7/README.md",
+      "kind": "markdown",
+      "url": "v2/research/anchor-0.7/README.md",
+      "readingEdition": "v2/research/anchor-0.7/README.html"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/analyze-hedjar.py",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/analyze-hedjar.py"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/benchmark.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/benchmark.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/build-anchor.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/build-anchor.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/build-viewer.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/build-viewer.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/evaluate-control.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/evaluate-control.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/fit.py",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/fit.py"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/intake-nayatani.py",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/intake-nayatani.py"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/intake-rogers.py",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/intake-rogers.py"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/link-pages.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/link-pages.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/prepare-fit.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/prepare-fit.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/report.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/report.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/code/verify.mjs",
+      "kind": "source",
+      "url": "v2/research/anchor-0.7/code/verify.mjs"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/anchor-full-pairs.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/anchor-full-pairs.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/anchor-full.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/anchor-full.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/anchor-srgb-pairs.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/anchor-srgb-pairs.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/anchor-srgb.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/anchor-srgb.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/benchmark-summary.csv",
+      "kind": "other",
+      "url": "v2/research/anchor-0.7/results/benchmark-summary.csv"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/benchmarks.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/benchmarks.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/brightness-readout.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/brightness-readout.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/brightness-reproduction.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/brightness-reproduction.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/browser-check.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/browser-check.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-g12.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-g12.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-BFD-P-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-BFD-P-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-BFD-P-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-BFD-P-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-LEEDS-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-LEEDS-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-LEEDS-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-LEEDS-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-RIT-DuPont-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-RIT-DuPont-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-RIT-DuPont-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-RIT-DuPont-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-WITT-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-WITT-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-full-omit-WITT-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-full-omit-WITT-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-input-full.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-input-full.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-input-srgb.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-input-srgb.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-g12.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-g12.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-BFD-P-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-BFD-P-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-BFD-P-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-BFD-P-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-LEEDS-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-LEEDS-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-LEEDS-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-LEEDS-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-RIT-DuPont-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-RIT-DuPont-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-RIT-DuPont-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-RIT-DuPont-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-WITT-g3.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-WITT-g3.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/fit-srgb-omit-WITT-g6.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/fit-srgb-omit-WITT-g6.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/hedjar-diagnostic.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/hedjar-diagnostic.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/normalization-ablation.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/normalization-ablation.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/pair-distances.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/pair-distances.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/source-hashes.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/source-hashes.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/results/verification.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/colour-LICENSE",
+      "kind": "other",
+      "url": "v2/research/anchor-0.7/sources/colour-LICENSE"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/hedjar-2025/PSEs.csv",
+      "kind": "other",
+      "url": "v2/research/anchor-0.7/sources/hedjar-2025/PSEs.csv"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/hedjar-2025/detection_thresholds.csv",
+      "kind": "other",
+      "url": "v2/research/anchor-0.7/sources/hedjar-2025/detection_thresholds.csv"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/hedjar-2025/thresholds.csv",
+      "kind": "other",
+      "url": "v2/research/anchor-0.7/sources/hedjar-2025/thresholds.csv"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/munsell-renotation-subset.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/sources/munsell-renotation-subset.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/nayatani2011-observed.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/sources/nayatani2011-observed.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/paper-manifest.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/sources/paper-manifest.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/public-manifest.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/sources/public-manifest.json"
+    },
+    {
+      "path": "v2/research/anchor-0.7/sources/rogers2016-intervals.json",
+      "kind": "json",
+      "url": "v2/research/anchor-0.7/sources/rogers2016-intervals.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/DEPLOYMENT.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/DEPLOYMENT.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/DEPLOYMENT.md",
+      "readingEdition": "v2/research/boundary-tonal/DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/DESIGN.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/DESIGN.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/DESIGN.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/DESIGN.md",
+      "readingEdition": "v2/research/boundary-tonal/DESIGN.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/EXECUTION.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/EXECUTION.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/EXECUTION.md",
+      "readingEdition": "v2/research/boundary-tonal/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/FINDINGS.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/FINDINGS.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/FINDINGS.md",
+      "readingEdition": "v2/research/boundary-tonal/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/PLAN.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/PLAN.md",
+      "readingEdition": "v2/research/boundary-tonal/PLAN.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/README.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/README.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/README.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/README.md",
+      "readingEdition": "v2/research/boundary-tonal/README.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/SOURCE_HASHES.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/SOURCE_HASHES.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/benchmark.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/boundary-1nm.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/boundary-1nm.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/bridge.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/build-boundary.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/build-boundary.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/build-preview.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/cache-grid.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/cache-grid.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/conditioning.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/conditioning.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/conditioning.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/conditioning.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/evaluate.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/evaluate.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/fit-v2.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/fit-v2.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/fit-v3.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/fit-v3.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/fit.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/fit.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/freeze.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/freeze.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/hue-transport-audit.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/hue-transport-audit.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/index.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/index.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/integrate.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/integrate.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/parity.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/parity.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/prepare-coordinates.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/prepare-coordinates.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/prepare-inputs.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/prepare-inputs.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/preview.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/recovery/boundary-portability.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/recovery/boundary-portability.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/recovery/build-boundary-before-portability.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/recovery/build-boundary-before-portability.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/recovery/grid-runtime.mjs.txt",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/recovery/grid-runtime.mjs.txt"
+    },
+    {
+      "path": "v2/research/boundary-tonal/recovery/source-packet.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/recovery/source-packet.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/report.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/report.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/boundary-tonal/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/boundary-tonal/results/REPORT.md",
+      "readingEdition": "v2/research/boundary-tonal/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/balanced.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/boundary-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/boundary-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/boundary-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/boundary-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/boundary-verification.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/boundary-verification.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/full-275.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/browser-runner/full-275.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/mobile.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/browser-runner/mobile.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/native-273.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/browser-runner/native-273.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/new-color.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/browser-runner/new-color.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/parent-color.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/browser-runner/parent-color.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/cache.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/cache.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/conditioning-same-grid.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/conditioning-same-grid.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/direct-72-257-parent_boundary_balanced_metric.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/direct-72-257-parent_boundary_balanced_metric.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/direct-final.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/direct-final.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/grid.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/grid.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/hue-transport.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/hue-transport.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/jacobian-verification.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/jacobian-verification.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/metric-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/metric-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/metric-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/metric-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/metric.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/metric.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/parent-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/parent-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/parent-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/parent-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/point-event-masks.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/point-event-masks.jsonl.gz"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/preview-full-all.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/preview-full-all.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/preview-full-dark.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/preview-full-dark.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/preview-srgb-all.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/preview-srgb-all.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/preview-srgb-dark.png",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/preview-srgb-dark.png"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/public-hashes.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/public-hashes.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/python-js-parity.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/python-js-parity.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/retained-combvd.csv",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/retained-combvd.csv"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/retained-combvd.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/retained-combvd.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/runner-benchmark.log",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/runner-benchmark.log"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/runner-direct.log",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/runner-direct.log"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/runner-sheet.log",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/runner-sheet.log"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/runtime-finalization.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/runtime-finalization.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/boundary-tonal/results/scores.csv"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/sheet-final.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/sheet-final.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/training-inputs.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/training-inputs.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/results/verification.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/sheet-audit.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/sheet-audit.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/site-check.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/site-check.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/EXECUTION-STATUS.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/EXECUTION-STATUS.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-a-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-a-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-a-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-a-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-a.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-a.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-c-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-c-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-c-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-c-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/conditioned-c.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/conditioned-c.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-a-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-a-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-a-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-a-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-a.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-a.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-b-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-b-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-b-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-b-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-b2-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-b2-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-b2-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-b2-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/metric-b2.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/metric-b2.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/registry.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/registry.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/smooth-b-command.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/smooth-b-command.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/smooth-b-progress.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/smooth-b-progress.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/trials/smooth-b.json",
+      "kind": "json",
+      "url": "v2/research/boundary-tonal/trials/smooth-b.json"
+    },
+    {
+      "path": "v2/research/boundary-tonal/verify-boundary.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/verify-boundary.mjs"
+    },
+    {
+      "path": "v2/research/boundary-tonal/verify-jacobian.py",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/verify-jacobian.py"
+    },
+    {
+      "path": "v2/research/boundary-tonal/verify.mjs",
+      "kind": "source",
+      "url": "v2/research/boundary-tonal/verify.mjs"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/README.html",
+      "kind": "html",
+      "url": "v2/research/colorbench-0.8a/README.html"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/README.md",
+      "kind": "markdown",
+      "url": "v2/research/colorbench-0.8a/README.md",
+      "readingEdition": "v2/research/colorbench-0.8a/README.html"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/adapter.py",
+      "kind": "source",
+      "url": "v2/research/colorbench-0.8a/adapter.py"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/colorbench-0.8a/bridge.mjs"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/candidate-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/candidate-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/candidate-full.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/candidate-full.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/candidate-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/candidate-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/candidate-srgb.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/candidate-srgb.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/loader-verification.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/loader-verification.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/parent-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/parent-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/parent-full.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/parent-full.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/parent-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/parent-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/parent-srgb.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/parent-srgb.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/reproduction-check.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/reproduction-check.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/scores.csv"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/smooth-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/smooth-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/smooth-full.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/smooth-full.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/smooth-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/colorbench-0.8a/results/smooth-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/results/smooth-srgb.json",
+      "kind": "json",
+      "url": "v2/research/colorbench-0.8a/results/smooth-srgb.json"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/run_scored.py",
+      "kind": "source",
+      "url": "v2/research/colorbench-0.8a/run_scored.py"
+    },
+    {
+      "path": "v2/research/colorbench-0.8a/xlsx_rows.py",
+      "kind": "source",
+      "url": "v2/research/colorbench-0.8a/xlsx_rows.py"
+    },
+    {
+      "path": "v2/research/equal-span/BENCHMARKS.html",
+      "kind": "html",
+      "url": "v2/research/equal-span/BENCHMARKS.html"
+    },
+    {
+      "path": "v2/research/equal-span/BENCHMARKS.md",
+      "kind": "markdown",
+      "url": "v2/research/equal-span/BENCHMARKS.md",
+      "readingEdition": "v2/research/equal-span/BENCHMARKS.html"
+    },
+    {
+      "path": "v2/research/equal-span/README.html",
+      "kind": "html",
+      "url": "v2/research/equal-span/README.html"
+    },
+    {
+      "path": "v2/research/equal-span/README.md",
+      "kind": "markdown",
+      "url": "v2/research/equal-span/README.md",
+      "readingEdition": "v2/research/equal-span/README.html"
+    },
+    {
+      "path": "v2/research/equal-span/code/benchmark.mjs",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/benchmark.mjs"
+    },
+    {
+      "path": "v2/research/equal-span/code/build-atlases.mjs",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/build-atlases.mjs"
+    },
+    {
+      "path": "v2/research/equal-span/code/build-viewers.mjs",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/build-viewers.mjs"
+    },
+    {
+      "path": "v2/research/equal-span/code/fit_brightness.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/fit_brightness.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/fit_extended_hue.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/fit_extended_hue.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/fit_huefield.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/fit_huefield.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/fit_saturation.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/fit_saturation.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/huefield.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/huefield.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/intake_ayama.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/intake_ayama.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/link-pages.mjs",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/link-pages.mjs"
+    },
+    {
+      "path": "v2/research/equal-span/code/prepare-benchmark-inputs.py",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/prepare-benchmark-inputs.py"
+    },
+    {
+      "path": "v2/research/equal-span/code/test-research.mjs",
+      "kind": "source",
+      "url": "v2/research/equal-span/code/test-research.mjs"
+    },
+    {
+      "path": "v2/research/equal-span/results/brightness-fit.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/brightness-fit.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/browser-check.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/browser-check.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-baseline.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-baseline.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-basr-full-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-basr-full-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-basr-srgb-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-basr-srgb-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-equal-span-full-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-equal-span-full-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-equal-span-srgb-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-equal-span-srgb-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-inputs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-inputs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-opal-full-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-opal-full-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/combvd-opal-srgb-pairs.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/combvd-opal-srgb-pairs.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/hue-refit-report.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/hue-refit-report.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/hue-source-inventory.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/hue-source-inventory.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/implementation-verification.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/implementation-verification.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/saturation-condition-pse.csv",
+      "kind": "other",
+      "url": "v2/research/equal-span/results/saturation-condition-pse.csv"
+    },
+    {
+      "path": "v2/research/equal-span/results/saturation-fit.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/saturation-fit.json"
+    },
+    {
+      "path": "v2/research/equal-span/results/source-hashes.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/results/source-hashes.json"
+    },
+    {
+      "path": "v2/research/equal-span/sources/ayama1987-transcription.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/sources/ayama1987-transcription.json"
+    },
+    {
+      "path": "v2/research/equal-span/sources/ayama1987_tables23.csv",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/ayama1987_tables23.csv"
+    },
+    {
+      "path": "v2/research/equal-span/sources/cie1931_5nm.csv",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/cie1931_5nm.csv"
+    },
+    {
+      "path": "v2/research/equal-span/sources/ebner_fairchild_transcribed.txt",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/ebner_fairchild_transcribed.txt"
+    },
+    {
+      "path": "v2/research/equal-span/sources/hung_berns_CL.csv",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/hung_berns_CL.csv"
+    },
+    {
+      "path": "v2/research/equal-span/sources/hung_berns_VL.csv",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/hung_berns_VL.csv"
+    },
+    {
+      "path": "v2/research/equal-span/sources/munsell_1929_subset.txt",
+      "kind": "other",
+      "url": "v2/research/equal-span/sources/munsell_1929_subset.txt"
+    },
+    {
+      "path": "v2/research/equal-span/sources/public-manifest.json",
+      "kind": "json",
+      "url": "v2/research/equal-span/sources/public-manifest.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/FINDINGS.html",
+      "kind": "html",
+      "url": "v2/research/gen-tonal-fit/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/FINDINGS.md",
+      "kind": "markdown",
+      "url": "v2/research/gen-tonal-fit/FINDINGS.md",
+      "readingEdition": "v2/research/gen-tonal-fit/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/gen-tonal-fit/PLAN.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/gen-tonal-fit/PLAN.md",
+      "readingEdition": "v2/research/gen-tonal-fit/PLAN.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/README.html",
+      "kind": "html",
+      "url": "v2/research/gen-tonal-fit/README.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/README.md",
+      "kind": "markdown",
+      "url": "v2/research/gen-tonal-fit/README.md",
+      "readingEdition": "v2/research/gen-tonal-fit/README.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/__pycache__/fit.cpython-313.pyc",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/__pycache__/fit.cpython-313.pyc"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/benchmark.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/bridge.mjs"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/build-preview.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/build-site.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/build-site.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/cache.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/cache.mjs"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/evaluate.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/evaluate.mjs"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/finalize-notes.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/finalize-notes.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/fit.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/fit.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/index.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/index.mjs"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/parity.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/parity.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/prepare-benchmark.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/prepare-benchmark.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/preview.mjs"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/report.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/report.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/reproduce-fit.sh",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/reproduce-fit.sh"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/gen-tonal-fit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/gen-tonal-fit/results/REPORT.md",
+      "readingEdition": "v2/research/gen-tonal-fit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/balanced-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/balanced-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/balanced.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/benchmark-adapter.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/benchmark-adapter.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/color.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/color.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/full.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/full.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/mobile.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/mobile.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/native.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/native.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/old-color.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/old-color.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/direct-72-257-old-balanced_old-metric_balanced_metric.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/direct-72-257-old-balanced_old-metric_balanced_metric.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/direct-final.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/direct-final.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/metric-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/metric-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/metric-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/metric-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/metric-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/metric-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/metric.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/metric.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/old-balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/old-balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/old-balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/old-balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/old-metric-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/old-metric-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/old-metric-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/old-metric-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/preview-full-all.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/preview-full-all.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/preview-full-dark.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/preview-full-dark.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/preview-srgb-all.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/preview-srgb-all.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/preview-srgb-dark.png",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/preview-srgb-dark.png"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/python-js-parity.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/python-js-parity.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/sampling.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/sampling.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/gen-tonal-fit/results/scores.csv"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/site-data.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/site-data.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/results/verification.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/site-check.py",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/site-check.py"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/trials/registry.json",
+      "kind": "json",
+      "url": "v2/research/gen-tonal-fit/trials/registry.json"
+    },
+    {
+      "path": "v2/research/gen-tonal-fit/verify.mjs",
+      "kind": "source",
+      "url": "v2/research/gen-tonal-fit/verify.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/EVIDENCE.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/EVIDENCE.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/EVIDENCE.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/EVIDENCE.md",
+      "readingEdition": "v2/research/hue-fair-refine/EVIDENCE.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/FINDINGS.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/FINDINGS.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/FINDINGS.md",
+      "readingEdition": "v2/research/hue-fair-refine/FINDINGS.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/NUMERICAL-LIMITS.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/NUMERICAL-LIMITS.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/NUMERICAL-LIMITS.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/NUMERICAL-LIMITS.md",
+      "readingEdition": "v2/research/hue-fair-refine/NUMERICAL-LIMITS.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/PLAN.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/PLAN.md",
+      "readingEdition": "v2/research/hue-fair-refine/PLAN.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/README.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/README.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/README.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/README.md",
+      "readingEdition": "v2/research/hue-fair-refine/README.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/RECOVERY.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/RECOVERY.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/RECOVERY.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/RECOVERY.md",
+      "readingEdition": "v2/research/hue-fair-refine/RECOVERY.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/SOURCE_HASHES.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/SOURCE_HASHES.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/benchmark.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/bridge.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/build-preview.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/build-site.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/build-site.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/cache.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/cache.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/conditioning.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/conditioning.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/evaluate.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/evaluate.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/finalize-public.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/finalize-public.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/fit-v1.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/fit-v1.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/fit-v2.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/fit-v2.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/fit.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/fit.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/freeze.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/freeze.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/index.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/index.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/parity.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/parity.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/preview.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/interrupted-EXECUTION.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/recovery/interrupted-EXECUTION.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/interrupted-EXECUTION.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/recovery/interrupted-EXECUTION.md",
+      "readingEdition": "v2/research/hue-fair-refine/recovery/interrupted-EXECUTION.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/interrupted-README.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/recovery/interrupted-README.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/interrupted-README.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/recovery/interrupted-README.md",
+      "readingEdition": "v2/research/hue-fair-refine/recovery/interrupted-README.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/interrupted-transfer.zip",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/recovery/interrupted-transfer.zip"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/publication-resume.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/recovery/publication-resume.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/stream-receipt.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/recovery/stream-receipt.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/recovery/verification-resume.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/recovery/verification-resume.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/report.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/report.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/hue-fair-refine/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/hue-fair-refine/results/REPORT.md",
+      "readingEdition": "v2/research/hue-fair-refine/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/balanced-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/balanced-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/balanced.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/benchmark-console.log",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/benchmark-console.log"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-final/verification.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-final/verification.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/color.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/color.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/full.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/full.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/mobile.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/mobile.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/native.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/native.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/old-color.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/old-color.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-publication/verification.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-publication/verification.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/color.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/color.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/full.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/full.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/mobile.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/mobile.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/native.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/native.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/old-color.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/old-color.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/conditioning-same-grid.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/conditioning-same-grid.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/direct-72-257-parent_balanced_gentle.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/direct-72-257-parent_balanced_gentle.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/direct-console.log",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/direct-console.log"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/direct-final.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/direct-final.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/finalization.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/finalization.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/gentle-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/gentle-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/gentle-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/gentle-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/gentle-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/gentle-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/gentle.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/gentle.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/grid.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/grid.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/parent-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/parent-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/parent-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/parent-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/preview-full-all.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/preview-full-all.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/preview-full-dark.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/preview-full-dark.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/preview-srgb-all.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/preview-srgb-all.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/preview-srgb-dark.png",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/preview-srgb-dark.png"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/public-hashes.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/public-hashes.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/python-js-parity.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/python-js-parity.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/scores.csv"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/sheet-console.log",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/results/sheet-console.log"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/sheet-final.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/sheet-final.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/site-data.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/site-data.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/results/verification.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/resume-build.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/resume-build.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/sheet-audit.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/sheet-audit.mjs"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/site-check.py",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/site-check.py"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/registry.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/trials/registry.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-a-console.log",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/trials/resume-a-console.log"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-a.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/trials/resume-a.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-a.jsonl",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/trials/resume-a.jsonl"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-b-console.log",
+      "kind": "other",
+      "url": "v2/research/hue-fair-refine/trials/resume-b-console.log"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-b.json",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/trials/resume-b.json"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/trials/resume-b.jsonl",
+      "kind": "json",
+      "url": "v2/research/hue-fair-refine/trials/resume-b.jsonl"
+    },
+    {
+      "path": "v2/research/hue-fair-refine/verify.mjs",
+      "kind": "source",
+      "url": "v2/research/hue-fair-refine/verify.mjs"
+    },
+    {
+      "path": "v2/research/mapped-012/DEPLOYMENT.html",
+      "kind": "html",
+      "url": "v2/research/mapped-012/DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/mapped-012/DEPLOYMENT.md",
+      "kind": "markdown",
+      "url": "v2/research/mapped-012/DEPLOYMENT.md",
+      "readingEdition": "v2/research/mapped-012/DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/mapped-012/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/mapped-012/PLAN.html"
+    },
+    {
+      "path": "v2/research/mapped-012/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/mapped-012/PLAN.md",
+      "readingEdition": "v2/research/mapped-012/PLAN.html"
+    },
+    {
+      "path": "v2/research/mapped-012/README.html",
+      "kind": "html",
+      "url": "v2/research/mapped-012/README.html"
+    },
+    {
+      "path": "v2/research/mapped-012/README.md",
+      "kind": "markdown",
+      "url": "v2/research/mapped-012/README.md",
+      "readingEdition": "v2/research/mapped-012/README.html"
+    },
+    {
+      "path": "v2/research/mapped-012/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/mapped-012/bridge.mjs"
+    },
+    {
+      "path": "v2/research/mapped-012/import.mjs",
+      "kind": "source",
+      "url": "v2/research/mapped-012/import.mjs"
+    },
+    {
+      "path": "v2/research/mapped-012/index.html",
+      "kind": "html",
+      "url": "v2/research/mapped-012/index.html"
+    },
+    {
+      "path": "v2/research/mapped-012/report.py",
+      "kind": "source",
+      "url": "v2/research/mapped-012/report.py"
+    },
+    {
+      "path": "v2/research/mapped-012/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/mapped-012/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/mapped-012/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/mapped-012/results/REPORT.md",
+      "readingEdition": "v2/research/mapped-012/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/mapped-012/results/balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/browser-runner/full-mapped.png",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/browser-runner/full-mapped.png"
+    },
+    {
+      "path": "v2/research/mapped-012/results/browser-runner/mobile.png",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/browser-runner/mobile.png"
+    },
+    {
+      "path": "v2/research/mapped-012/results/browser-runner/native-mapped.png",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/browser-runner/native-mapped.png"
+    },
+    {
+      "path": "v2/research/mapped-012/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/gentle-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/gentle-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/gentle-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/gentle-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/import-tests.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/import-tests.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/parent-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/parent-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/parent-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/parent-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/point-event-masks.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/point-event-masks.jsonl.gz"
+    },
+    {
+      "path": "v2/research/mapped-012/results/public-hashes.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/public-hashes.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/reproduction-check.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/reproduction-check.json"
+    },
+    {
+      "path": "v2/research/mapped-012/results/runner-console.log",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/runner-console.log"
+    },
+    {
+      "path": "v2/research/mapped-012/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/mapped-012/results/scores.csv"
+    },
+    {
+      "path": "v2/research/mapped-012/results/site-data.json",
+      "kind": "json",
+      "url": "v2/research/mapped-012/results/site-data.json"
+    },
+    {
+      "path": "v2/research/mapped-012/run.py",
+      "kind": "source",
+      "url": "v2/research/mapped-012/run.py"
+    },
+    {
+      "path": "v2/research/mapped-012/site-check.py",
+      "kind": "source",
+      "url": "v2/research/mapped-012/site-check.py"
+    },
+    {
+      "path": "v2/research/mapped-012/site.py",
+      "kind": "source",
+      "url": "v2/research/mapped-012/site.py"
+    },
+    {
+      "path": "v2/research/mapped-012/test.mjs",
+      "kind": "source",
+      "url": "v2/research/mapped-012/test.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/README.html",
+      "kind": "html",
+      "url": "v2/research/native-srgb-refit/README.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/README.md",
+      "kind": "markdown",
+      "url": "v2/research/native-srgb-refit/README.md",
+      "readingEdition": "v2/research/native-srgb-refit/README.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/SITE_DEPLOYMENT.html",
+      "kind": "html",
+      "url": "v2/research/native-srgb-refit/SITE_DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/SITE_DEPLOYMENT.md",
+      "kind": "markdown",
+      "url": "v2/research/native-srgb-refit/SITE_DEPLOYMENT.md",
+      "readingEdition": "v2/research/native-srgb-refit/SITE_DEPLOYMENT.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/SOURCE_HASHES.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/SOURCE_HASHES.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/benchmark.py"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/bridge.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/cache.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/cache.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/diagnostics.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/diagnostics.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/fit-recipe.sh",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/fit-recipe.sh"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/fit.py",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/fit.py"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/index.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/index.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/make-summary.py",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/make-summary.py"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/prepare-inputs.py",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/prepare-inputs.py"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/native-srgb-refit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/native-srgb-refit/results/REPORT.md",
+      "readingEdition": "v2/research/native-srgb-refit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/TRAINING.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/TRAINING.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/balanced.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/baseline-srgb-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/baseline-srgb-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-local/export.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/browser-local/export.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-local/full-desktop.png",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/browser-local/full-desktop.png"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-local/native-desktop.png",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/browser-local/native-desktop.png"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-local/native-mobile.png",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/browser-local/native-mobile.png"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/browser-local/verification.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/browser-local/verification.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/direction-diagnostics.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/direction-diagnostics.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/metric-srgb-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/metric-srgb-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/metric.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/metric.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/refit-srgb-100-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/refit-srgb-100-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/refit-srgb-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/refit-srgb-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/native-srgb-refit/results/scores.csv"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/site-data.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/site-data.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/training-pairs.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/training-pairs.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/verification.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/visual-dense-baseline-balanced-metric.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/visual-dense-baseline-balanced-metric.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/results/visual-dense.json",
+      "kind": "json",
+      "url": "v2/research/native-srgb-refit/results/visual-dense.json"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/site-check.py",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/site-check.py"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/test.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/test.mjs"
+    },
+    {
+      "path": "v2/research/native-srgb-refit/visual.mjs",
+      "kind": "source",
+      "url": "v2/research/native-srgb-refit/visual.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/INPUT_POLICY_CORRECTION.html",
+      "kind": "html",
+      "url": "v2/research/relative-domain/INPUT_POLICY_CORRECTION.html"
+    },
+    {
+      "path": "v2/research/relative-domain/INPUT_POLICY_CORRECTION.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-domain/INPUT_POLICY_CORRECTION.md",
+      "readingEdition": "v2/research/relative-domain/INPUT_POLICY_CORRECTION.html"
+    },
+    {
+      "path": "v2/research/relative-domain/README.html",
+      "kind": "html",
+      "url": "v2/research/relative-domain/README.html"
+    },
+    {
+      "path": "v2/research/relative-domain/README.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-domain/README.md",
+      "readingEdition": "v2/research/relative-domain/README.html"
+    },
+    {
+      "path": "v2/research/relative-domain/RUN",
+      "kind": "other",
+      "url": "v2/research/relative-domain/RUN"
+    },
+    {
+      "path": "v2/research/relative-domain/STATUS.html",
+      "kind": "html",
+      "url": "v2/research/relative-domain/STATUS.html"
+    },
+    {
+      "path": "v2/research/relative-domain/STATUS.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-domain/STATUS.md",
+      "readingEdition": "v2/research/relative-domain/STATUS.html"
+    },
+    {
+      "path": "v2/research/relative-domain/base.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/base.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/relative-domain/benchmark.py"
+    },
+    {
+      "path": "v2/research/relative-domain/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/bridge.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/build.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/build.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/context.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/context.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/geometry.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/geometry.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/index.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/index.mjs"
+    },
+    {
+      "path": "v2/research/relative-domain/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/relative-domain/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/relative-domain/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-domain/results/REPORT.md",
+      "readingEdition": "v2/research/relative-domain/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/relative-domain/results/build-audit.json",
+      "kind": "json",
+      "url": "v2/research/relative-domain/results/build-audit.json"
+    },
+    {
+      "path": "v2/research/relative-domain/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/relative-domain/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/relative-domain/results/legacy-candidate-full-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/legacy-candidate-full-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/legacy-parent-full-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/legacy-parent-full-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-candidate-full-100-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-candidate-full-100-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-candidate-full-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-candidate-full-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-candidate-full-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-candidate-full-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-candidate-srgb-100-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-candidate-srgb-100-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-candidate-srgb-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-candidate-srgb-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/relative-parent-full-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/relative-parent-full-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-domain/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/relative-domain/results/scores.csv"
+    },
+    {
+      "path": "v2/research/relative-domain/results/source-full.json",
+      "kind": "json",
+      "url": "v2/research/relative-domain/results/source-full.json"
+    },
+    {
+      "path": "v2/research/relative-domain/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/relative-domain/results/verification.json"
+    },
+    {
+      "path": "v2/research/relative-domain/test.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-domain/test.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/README.html",
+      "kind": "html",
+      "url": "v2/research/relative-refit/README.html"
+    },
+    {
+      "path": "v2/research/relative-refit/README.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-refit/README.md",
+      "readingEdition": "v2/research/relative-refit/README.html"
+    },
+    {
+      "path": "v2/research/relative-refit/SOURCE_HASHES.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/SOURCE_HASHES.json"
+    },
+    {
+      "path": "v2/research/relative-refit/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/relative-refit/benchmark.py"
+    },
+    {
+      "path": "v2/research/relative-refit/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/bridge.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/relative-refit/build-preview.py"
+    },
+    {
+      "path": "v2/research/relative-refit/build-standalone.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/build-standalone.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/cache-fine.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/cache-fine.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/cache.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/cache.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/diagnostics.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/diagnostics.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/fit-recipe.sh",
+      "kind": "other",
+      "url": "v2/research/relative-refit/fit-recipe.sh"
+    },
+    {
+      "path": "v2/research/relative-refit/fit.py",
+      "kind": "source",
+      "url": "v2/research/relative-refit/fit.py"
+    },
+    {
+      "path": "v2/research/relative-refit/index.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/index.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/make-summary.py",
+      "kind": "source",
+      "url": "v2/research/relative-refit/make-summary.py"
+    },
+    {
+      "path": "v2/research/relative-refit/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/preview.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/relative-refit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/relative-refit/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/relative-refit/results/REPORT.md",
+      "readingEdition": "v2/research/relative-refit/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/relative-refit/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/balanced.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/baseline-full-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/baseline-full-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/browser-check.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/browser-check.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/direction-diagnostics.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/direction-diagnostics.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/metric-full-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/metric-full-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/metric.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/metric.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/preview.png",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/preview.png"
+    },
+    {
+      "path": "v2/research/relative-refit/results/refit-full-100-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/refit-full-100-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/refit-full-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/refit-full-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/refit-full-300-reject-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/refit-full-300-reject-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/refit-srgb-100-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/refit-srgb-100-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/refit-srgb-300-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/refit-srgb-300-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/relative-refit/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/relative-refit/results/scores.csv"
+    },
+    {
+      "path": "v2/research/relative-refit/results/summary.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/summary.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/training-pairs.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/training-pairs.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/verification.json"
+    },
+    {
+      "path": "v2/research/relative-refit/results/visual-dense-baseline-balanced-metric.json",
+      "kind": "json",
+      "url": "v2/research/relative-refit/results/visual-dense-baseline-balanced-metric.json"
+    },
+    {
+      "path": "v2/research/relative-refit/standalone.html",
+      "kind": "html",
+      "url": "v2/research/relative-refit/standalone.html"
+    },
+    {
+      "path": "v2/research/relative-refit/test.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/test.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/viewer-worker.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/viewer-worker.mjs"
+    },
+    {
+      "path": "v2/research/relative-refit/viewer.html",
+      "kind": "html",
+      "url": "v2/research/relative-refit/viewer.html"
+    },
+    {
+      "path": "v2/research/relative-refit/visual.mjs",
+      "kind": "source",
+      "url": "v2/research/relative-refit/visual.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/README.html",
+      "kind": "html",
+      "url": "v2/research/rl-c1/README.html"
+    },
+    {
+      "path": "v2/research/rl-c1/README.md",
+      "kind": "markdown",
+      "url": "v2/research/rl-c1/README.md",
+      "readingEdition": "v2/research/rl-c1/README.html"
+    },
+    {
+      "path": "v2/research/rl-c1/atlas.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/atlas.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/rl-c1/build-preview.py"
+    },
+    {
+      "path": "v2/research/rl-c1/cache-fit.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/cache-fit.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/candidate.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/candidate.json"
+    },
+    {
+      "path": "v2/research/rl-c1/fit.py",
+      "kind": "source",
+      "url": "v2/research/rl-c1/fit.py"
+    },
+    {
+      "path": "v2/research/rl-c1/index.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/index.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/preview.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/render.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/render.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/results/artifact-manifest.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/artifact-manifest.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/c1-unfitted.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/c1-unfitted.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/fit-0p125.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/fit-0p125.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/fit-0p5.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/fit-0p5.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/fit-2p0.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/fit-2p0.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/fit-summary.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/fit-summary.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/preview.png",
+      "kind": "other",
+      "url": "v2/research/rl-c1/results/preview.png"
+    },
+    {
+      "path": "v2/research/rl-c1/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/verification.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/visual-balanced.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/visual-balanced.json"
+    },
+    {
+      "path": "v2/research/rl-c1/results/visual-paths.json",
+      "kind": "json",
+      "url": "v2/research/rl-c1/results/visual-paths.json"
+    },
+    {
+      "path": "v2/research/rl-c1/select_balanced.py",
+      "kind": "source",
+      "url": "v2/research/rl-c1/select_balanced.py"
+    },
+    {
+      "path": "v2/research/rl-c1/test-unfitted.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/test-unfitted.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/test.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/test.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/viewer-worker.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/viewer-worker.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/viewer.html",
+      "kind": "html",
+      "url": "v2/research/rl-c1/viewer.html"
+    },
+    {
+      "path": "v2/research/rl-c1/visual-balanced.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/visual-balanced.mjs"
+    },
+    {
+      "path": "v2/research/rl-c1/visual-paths.mjs",
+      "kind": "source",
+      "url": "v2/research/rl-c1/visual-paths.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/EVIDENCE.html",
+      "kind": "html",
+      "url": "v2/research/shared-rl/EVIDENCE.html"
+    },
+    {
+      "path": "v2/research/shared-rl/EVIDENCE.md",
+      "kind": "markdown",
+      "url": "v2/research/shared-rl/EVIDENCE.md",
+      "readingEdition": "v2/research/shared-rl/EVIDENCE.html"
+    },
+    {
+      "path": "v2/research/shared-rl/EXECUTION.html",
+      "kind": "html",
+      "url": "v2/research/shared-rl/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/shared-rl/EXECUTION.md",
+      "kind": "markdown",
+      "url": "v2/research/shared-rl/EXECUTION.md",
+      "readingEdition": "v2/research/shared-rl/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/shared-rl/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/shared-rl/PLAN.html"
+    },
+    {
+      "path": "v2/research/shared-rl/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/shared-rl/PLAN.md",
+      "readingEdition": "v2/research/shared-rl/PLAN.html"
+    },
+    {
+      "path": "v2/research/shared-rl/README.html",
+      "kind": "html",
+      "url": "v2/research/shared-rl/README.html"
+    },
+    {
+      "path": "v2/research/shared-rl/README.md",
+      "kind": "markdown",
+      "url": "v2/research/shared-rl/README.md",
+      "readingEdition": "v2/research/shared-rl/README.html"
+    },
+    {
+      "path": "v2/research/shared-rl/audit.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/audit.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/benchmark.py"
+    },
+    {
+      "path": "v2/research/shared-rl/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/bridge.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/build-preview.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/build-preview.py"
+    },
+    {
+      "path": "v2/research/shared-rl/build-site.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/build-site.py"
+    },
+    {
+      "path": "v2/research/shared-rl/cache.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/cache.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/core.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/core.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/fit.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/fit.py"
+    },
+    {
+      "path": "v2/research/shared-rl/make-summary.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/make-summary.py"
+    },
+    {
+      "path": "v2/research/shared-rl/prepare.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/prepare.py"
+    },
+    {
+      "path": "v2/research/shared-rl/preview.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/preview.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/shared-rl/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/shared-rl/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/shared-rl/results/REPORT.md",
+      "readingEdition": "v2/research/shared-rl/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/shared-rl/results/SELECTION.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/SELECTION.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/audit-old-balanced-balanced-metric.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/audit-old-balanced-balanced-metric.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/balanced-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/balanced-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/balanced.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/balanced.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-runner/export.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/browser-runner/export.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-runner/full-desktop.png",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/browser-runner/full-desktop.png"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-runner/native-desktop.png",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/browser-runner/native-desktop.png"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-runner/native-mobile.png",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/browser-runner/native-mobile.png"
+    },
+    {
+      "path": "v2/research/shared-rl/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/cache.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/cache.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/colorbench.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/colorbench.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/metric-full-clip-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/metric-full-clip-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/metric-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/metric-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/metric-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/metric-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/metric.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/metric.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/old-balanced-full-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/old-balanced-full-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/old-balanced-srgb-combvd.npz",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/old-balanced-srgb-combvd.npz"
+    },
+    {
+      "path": "v2/research/shared-rl/results/preview-full.png",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/preview-full.png"
+    },
+    {
+      "path": "v2/research/shared-rl/results/preview-index.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/preview-index.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/preview-srgb.png",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/preview-srgb.png"
+    },
+    {
+      "path": "v2/research/shared-rl/results/reproduction-check.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/reproduction-check.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/scores.csv",
+      "kind": "other",
+      "url": "v2/research/shared-rl/results/scores.csv"
+    },
+    {
+      "path": "v2/research/shared-rl/results/site-data.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/site-data.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/source-gamut-verification.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/source-gamut-verification.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/verification.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/verification.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/visual-full-dense-old-balanced-balanced-metric.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/visual-full-dense-old-balanced-balanced-metric.json"
+    },
+    {
+      "path": "v2/research/shared-rl/results/visual-srgb-dense-old-balanced-balanced-metric.json",
+      "kind": "json",
+      "url": "v2/research/shared-rl/results/visual-srgb-dense-old-balanced-balanced-metric.json"
+    },
+    {
+      "path": "v2/research/shared-rl/site-check.py",
+      "kind": "source",
+      "url": "v2/research/shared-rl/site-check.py"
+    },
+    {
+      "path": "v2/research/shared-rl/source-test.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/source-test.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/source.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/source.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/test.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/test.mjs"
+    },
+    {
+      "path": "v2/research/shared-rl/transfer-0.txt",
+      "kind": "other",
+      "url": "v2/research/shared-rl/transfer-0.txt"
+    },
+    {
+      "path": "v2/research/shared-rl/visual.mjs",
+      "kind": "source",
+      "url": "v2/research/shared-rl/visual.mjs"
+    },
+    {
+      "path": "v2/research/tonal-semantics/DEFINITIONS.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/DEFINITIONS.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/DEFINITIONS.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/DEFINITIONS.md",
+      "readingEdition": "v2/research/tonal-semantics/DEFINITIONS.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/EXECUTION.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/EXECUTION.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/EXECUTION.md",
+      "readingEdition": "v2/research/tonal-semantics/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/PLAN.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/PLAN.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/PLAN.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/PLAN.md",
+      "readingEdition": "v2/research/tonal-semantics/PLAN.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/README.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/README.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/README.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/README.md",
+      "readingEdition": "v2/research/tonal-semantics/README.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/RESULTS_PROVENANCE.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/RESULTS_PROVENANCE.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/RESULTS_PROVENANCE.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/RESULTS_PROVENANCE.md",
+      "readingEdition": "v2/research/tonal-semantics/RESULTS_PROVENANCE.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/VERIFY_INPUTS.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/VERIFY_INPUTS.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/app.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/app.mjs"
+    },
+    {
+      "path": "v2/research/tonal-semantics/audit.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/audit.mjs"
+    },
+    {
+      "path": "v2/research/tonal-semantics/finalize.py",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/finalize.py"
+    },
+    {
+      "path": "v2/research/tonal-semantics/index.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/index.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/operations.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/operations.mjs"
+    },
+    {
+      "path": "v2/research/tonal-semantics/report.py",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/report.py"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/REPORT.html",
+      "kind": "html",
+      "url": "v2/research/tonal-semantics/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/REPORT.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-semantics/results/REPORT.md",
+      "readingEdition": "v2/research/tonal-semantics/results/REPORT.html"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/audit.log",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/audit.log"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-live/verification.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/browser-live/verification.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-runner/full.png",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/browser-runner/full.png"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-runner/mobile.png",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/browser-runner/mobile.png"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-runner/native.png",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/browser-runner/native.png"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-runner/preference.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/browser-runner/preference.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/browser-runner/verification.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/browser-runner/verification.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/finalization.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/finalization.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/genspace-audit.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/genspace-audit.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/operation-tests.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/operation-tests.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/per-hue.csv",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/per-hue.csv"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/reproduction-check.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/reproduction-check.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/test.log",
+      "kind": "other",
+      "url": "v2/research/tonal-semantics/results/test.log"
+    },
+    {
+      "path": "v2/research/tonal-semantics/results/verified-source-hashes.json",
+      "kind": "json",
+      "url": "v2/research/tonal-semantics/results/verified-source-hashes.json"
+    },
+    {
+      "path": "v2/research/tonal-semantics/ruler.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/ruler.mjs"
+    },
+    {
+      "path": "v2/research/tonal-semantics/site-check.py",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/site-check.py"
+    },
+    {
+      "path": "v2/research/tonal-semantics/test.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-semantics/test.mjs"
+    },
+    {
+      "path": "v2/results/basr-test-vectors.json",
+      "kind": "json",
+      "url": "v2/results/basr-test-vectors.json"
+    },
+    {
+      "path": "v2/results/basr-verification.json",
+      "kind": "json",
+      "url": "v2/results/basr-verification.json"
+    },
+    {
+      "path": "v2/results/browser-verification.json",
+      "kind": "json",
+      "url": "v2/results/browser-verification.json"
+    },
+    {
+      "path": "v2/results/historical-0.2-native-verification.json",
+      "kind": "json",
+      "url": "v2/results/historical-0.2-native-verification.json"
+    },
+    {
+      "path": "v2/results/historical-0.2-shell-order-audit.json",
+      "kind": "json",
+      "url": "v2/results/historical-0.2-shell-order-audit.json"
+    },
+    {
+      "path": "v2/results/preservation.json",
+      "kind": "json",
+      "url": "v2/results/preservation.json"
+    },
+    {
+      "path": "v2/shared-ui/app.mjs",
+      "kind": "source",
+      "url": "v2/shared-ui/app.mjs"
+    },
+    {
+      "path": "v2/shared-ui/style.css",
+      "kind": "source",
+      "url": "v2/shared-ui/style.css"
+    },
+    {
+      "path": "v2/shared-ui/worker.mjs",
+      "kind": "source",
+      "url": "v2/shared-ui/worker.mjs"
+    },
+    {
+      "path": "v2/shared.html",
+      "kind": "html",
+      "url": "v2/shared.html"
+    },
+    {
+      "path": "v2/source/basr-template.html",
+      "kind": "html",
+      "url": "v2/source/basr-template.html"
+    },
+    {
+      "path": "v2/source/field-template.html",
+      "kind": "html",
+      "url": "v2/source/field-template.html"
+    },
+    {
+      "path": "v2/source/native-template.html",
+      "kind": "html",
+      "url": "v2/source/native-template.html"
+    },
+    {
+      "path": "v2/source/opal-anchor-template.html",
+      "kind": "html",
+      "url": "v2/source/opal-anchor-template.html"
+    },
+    {
+      "path": "v2/source/opal-template.html",
+      "kind": "html",
+      "url": "v2/source/opal-template.html"
+    },
+    {
+      "path": "v2/test/browser.py",
+      "kind": "source",
+      "url": "v2/test/browser.py"
+    },
+    {
+      "path": "v2/test/test.mjs",
+      "kind": "source",
+      "url": "v2/test/test.mjs"
+    }
+  ]
+}

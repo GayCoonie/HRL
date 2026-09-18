@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Review findings and remaining limits · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="FINDINGS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#identical-sample-comparisons">Identical-sample comparisons</a></li><li><a href="#regressions-and-scope">Regressions and scope</a></li></ol></details><h1 id="review-findings-and-remaining-limits">Review findings and remaining limits</h1>
+<p>This is a shared GenSpace R/L continuation of 0.11 balanced, not a hue-field or gamut-boundary refit. A fitted transform changes actual output colours; the previews are not blurred. Only their explicit full-gamut display conversion clips to sRGB.</p>
+<h2 id="identical-sample-comparisons">Identical-sample comparisons</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Realization</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Weighted COMBVD change</th>
+  <th style="text-align:right">Black-path CV change</th>
+  <th style="text-align:right">White-path CV change</th>
+  <th style="text-align:right">Sheet-bending change</th>
+  <th style="text-align:right">Blue-sheet bending change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">-0.129335</td>
+  <td style="text-align:right">-2.25%</td>
+  <td style="text-align:right">+1.82%</td>
+  <td style="text-align:right">-57.28%</td>
+  <td style="text-align:right">-31.67%</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>gentle</td>
+  <td style="text-align:right">-0.166498</td>
+  <td style="text-align:right">-0.84%</td>
+  <td style="text-align:right">+1.89%</td>
+  <td style="text-align:right">-47.43%</td>
+  <td style="text-align:right">-29.35%</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">-0.152092</td>
+  <td style="text-align:right">+1.79%</td>
+  <td style="text-align:right">-2.63%</td>
+  <td style="text-align:right">-54.43%</td>
+  <td style="text-align:right">-29.26%</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>gentle</td>
+  <td style="text-align:right">-0.624300</td>
+  <td style="text-align:right">+3.43%</td>
+  <td style="text-align:right">-0.15%</td>
+  <td style="text-align:right">-45.57%</td>
+  <td style="text-align:right">-32.32%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Negative changes indicate a lower numerical value. They are not human preference percentages. The whole-sheet statistic uses the actual inverse and the equilateral embedding; it is distinct from path CV, hue matching and perceived blackness.</p>
+<p>The blue-neighbor controls expose 263, 269, 273, 275, 277, 281 and 285 degrees directly. A clean result at 270 degrees alone does not establish that the neighboring deep-blue sheets are clean. The inherited hue field and source paths were not changed, and residual edge/interior structure must remain visible in review. The numerical checks do not prove every local contour is perceptually regular.</p>
+<h2 id="regressions-and-scope">Regressions and scope</h2>
+<p>The full scored table in results/REPORT.md is authoritative, including regressions. No newly computed non-COMBVD observer result was used to adjust these frozen records. All datasets have earlier project exposure, so they are not called pristine holdouts. Strict and mapped pipelines, support masks, and common/full-only pair subsets are separate.</p>
+<p>The lower-regularization candidate is named gentle in the API; the name does not assert lighter physical colours. Public exports identify the unchanged parent as profile HRL-0.11-gen-tonal, checkpoint balanced, while retaining viewCheckpoint=parent for the comparison interface. New outputs identify HRL-0.12-hue-fair. Gamut remains part of the record.</p>
+<p>The original interrupted code drafts are kept under recovery/ and are not used as evidence of recovered trial arrays. Both newly executed trial arrays and every objective-evaluation log entry are committed under trials/. PLAN.md is unchanged.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

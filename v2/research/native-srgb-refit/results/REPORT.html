@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Native sRGB refits: ColorBench · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="REPORT.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#combvd-identical-colorbench-prepared-native-subset">COMBVD, identical ColorBench-prepared native subset</a></li><li><a href="#100300-nit-unit-invariance">100/300-nit unit invariance</a></li></ol></details><h1 id="native-srgb-refits-colorbench">Native sRGB refits: ColorBench</h1>
+<p>Separate native calibration on the existing sRGB own-anchor source atlas. Shared physical hue sheets/ring, unchanged black/white/vivid anchors and neutral shift. The full profiles are unchanged.</p>
+<p>COMBVD was fitted, using exactly the same 3,331 retained pairs. OSA, MacAdam1974, Xiao, and threshold/tolerance data were not used in this refit. Prior exposure and inherited hue-field training still apply.</p>
+<p><strong>Lower is better within each row.</strong> A dagger marks incomplete native-sRGB support, not clipping. Unsupported stimuli are rejected, not gamut-mapped. No native score is ranked against a full-coverage leaderboard.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">Previous native C1</th>
+  <th style="text-align:right">Balanced native</th>
+  <th style="text-align:right">Metric native</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.236671 †</td>
+  <td style="text-align:right">0.251473 †</td>
+  <td style="text-align:right">0.241386 †</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">29.046938 †</td>
+  <td style="text-align:right">28.223624 †</td>
+  <td style="text-align:right">27.496118 †</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">26.483363</td>
+  <td style="text-align:right">25.821342</td>
+  <td style="text-align:right">24.117515</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">24.689223 †</td>
+  <td style="text-align:right">21.060954 †</td>
+  <td style="text-align:right">20.841966 †</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">28.476497 †</td>
+  <td style="text-align:right">26.390619 †</td>
+  <td style="text-align:right">25.205027 †</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">25.639594 †</td>
+  <td style="text-align:right">25.734213 †</td>
+  <td style="text-align:right">27.924979 †</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.312438 †</td>
+  <td style="text-align:right">0.271039 †</td>
+  <td style="text-align:right">0.262476 †</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.248558 †</td>
+  <td style="text-align:right">0.242985 †</td>
+  <td style="text-align:right">0.255665 †</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.242815 †</td>
+  <td style="text-align:right">0.261385 †</td>
+  <td style="text-align:right">0.261134 †</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.253579 †</td>
+  <td style="text-align:right">0.188017 †</td>
+  <td style="text-align:right">0.201601 †</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.332151</td>
+  <td style="text-align:right">0.335947</td>
+  <td style="text-align:right">0.345328</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.305608 †</td>
+  <td style="text-align:right">0.282921 †</td>
+  <td style="text-align:right">0.281397 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.301883 †</td>
+  <td style="text-align:right">0.309925 †</td>
+  <td style="text-align:right">0.302967 †</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.337014 †</td>
+  <td style="text-align:right">0.338918 †</td>
+  <td style="text-align:right">0.313233 †</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.241622</td>
+  <td style="text-align:right">0.265294</td>
+  <td style="text-align:right">0.263628</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="combvd-identical-colorbench-prepared-native-subset">COMBVD, identical ColorBench-prepared native subset</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Weighted</th>
+  <th style="text-align:right">Unweighted</th>
+  <th style="text-align:right">Retained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>baseline-srgb-300-reject</td>
+  <td style="text-align:right">27.819289</td>
+  <td style="text-align:right">28.780616</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>refit-srgb-300-reject</td>
+  <td style="text-align:right">26.156618</td>
+  <td style="text-align:right">27.735136</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>metric-srgb-300-reject</td>
+  <td style="text-align:right">25.272446</td>
+  <td style="text-align:right">26.976822</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>refit-srgb-100-reject</td>
+  <td style="text-align:right">26.156618</td>
+  <td style="text-align:right">27.735136</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+</tbody>
+</table></div>
+<p>No COMBVD inputs are clipped. The same source-data white conversion, scale-optimal STRESS, and multiplicities are used for every column.</p>
+<h2 id="100300-nit-unit-invariance">100/300-nit unit invariance</h2>
+<p>Same relative inputs, independent real runs. This is not a test of an absolute-luminance appearance response.</p>
+<pre><code class="language-json">{
+  &quot;srgb&quot;: {
+    &quot;maximum_score_difference&quot;: 0.0,
+    &quot;combvd_difference&quot;: 0.0,
+    &quot;meaning&quot;: &quot;Relative calibration is scale-invariant. This does not empirically identify an optimal white luminance.&quot;
+  }
+}
+</code></pre>
+<p>Only the five scored generation and sixteen scored measurement columns were run. Native full-atlas path diagnostics and numeric round-trips are separate checks.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R/L C1 balanced — HRL v2 review candidate · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#result">Result</a></li><li><a href="#what-changed">What changed</a></li><li><a href="#actual-generated-rl-paths">Actual generated R/L paths</a></li><li><a href="#scored-colorbench-follow-up">Scored ColorBench follow-up</a></li><li><a href="#invariants-and-verification">Invariants and verification</a></li><li><a href="#use-and-reproduce">Use and reproduce</a></li><li><a href="#provenance">Provenance</a></li></ol></details><h1 id="rl-c1-balanced--hrl-v2-review-candidate">R/L C1 balanced — HRL v2 review candidate</h1>
+<p><strong>Experimental, additive, not an accepted release.</strong> The approved A Smooth picker, definitions, core library, hue field, and root defaults are unchanged. The requested 0.8A ColorBench baseline was completed before this continuation was fitted.</p>
+<p><a href="viewer.html">Open the four-way comparison</a> · <a href="../colorbench-0.8a/README.html">Baseline report</a> · <a href="results/preview.png">Preview sheet</a> · <a href="candidate.json">Verified checkpoint</a></p>
+<h2 id="result">Result</h2>
+<p>Traditional weighted COMBVD on the repository’s unchanged stored inputs (lower is better):</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native sRGB, 3,331 pairs</th>
+  <th style="text-align:right">Full domain, 3,813 pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0.8A parent</td>
+  <td style="text-align:right">27.907880</td>
+  <td style="text-align:right">28.607473</td>
+</tr>
+<tr>
+  <td>Approved A Smooth</td>
+  <td style="text-align:right">28.172398</td>
+  <td style="text-align:right">28.955307</td>
+</tr>
+<tr>
+  <td>C1 interpolation only, on Smooth</td>
+  <td style="text-align:right">28.171477</td>
+  <td style="text-align:right">28.968100</td>
+</tr>
+<tr>
+  <td><strong>C1 balanced</strong></td>
+  <td style="text-align:right"><strong>27.833646</strong></td>
+  <td style="text-align:right"><strong>28.489588</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>These are real JavaScript runtime results, not only optimizer estimates. All retained-index masks are unchanged. COMBVD is training data; these gains must be described as in-sample.</p>
+<p>ColorBench has a different, unweighted convention and slightly different D65 preprocessing. Its full-domain unweighted pooled COMBVD changes from <strong>29.608930</strong> (0.8A) to <strong>29.565423</strong> (candidate); native supported-pair scores change from <strong>29.140616</strong> to <strong>28.780616</strong>. Do not mix these values with the traditional table above.</p>
+<h2 id="what-changed">What changed</h2>
+<ol>
+<li>The frozen path atlas’s piecewise-linear parameter interpolation is replaced by monotone cubic Hermite interpolation, with an algebraic slope construction and safeguarded inverse. This removes path-parameter slope discontinuities at atlas knots.</li>
+<li>The secondary coordinate uses an open/clamped cubic B-spline with nonnegative weights and Greville-sampled controls. This smooths interpolation between stored rows while preserving their order and exact endpoint rows. Hue interpolation is not replaced.</li>
+<li>The existing two-layer Fourier R/L coupling is refitted with a trust-region penalty on displacement, first differences, and second differences, evaluated on actual A Smooth physical samples at a triangular R/L grid. The neutral shift is frozen.</li>
+<li>Three regularization strengths (2, 0.5, 0.125) are preserved in <code>results/</code>. The strongest-regularized fit was selected, then its <strong>native-sRGB coefficient change was halved</strong> after output-ramp checks exposed a Level-tail tradeoff. The full-domain calibration retains the strength-2 fit. This is permitted by the existing separately calibrated profiles; no gamut relabeling or domain expansion occurred.</li>
+</ol>
+<p>No OSA, Xiao, MacAdam1974, or threshold/tolerance dataset was fitted in this continuation. The candidate was fixed before evaluating its ColorBench held-out results. No claim is made that all of the inherited hue-field training data are held out.</p>
+<h2 id="actual-generated-rl-paths">Actual generated R/L paths</h2>
+<p>The check generates continuous XYZ along 144 Reach ramps and 144 Level ramps: 24 hues, six fixed opposite-axis coordinates, 129 samples per ramp. It converts those colors to Oklab, omits the three endpoint steps on each end, and measures neighboring step-size jumps. This is a diagnostic proxy, <strong>not observer testimony or an extra ColorBench score</strong>.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Statistic</th>
+  <th style="text-align:right">Reach: A Smooth</th>
+  <th style="text-align:right">Reach: C1 balanced</th>
+  <th style="text-align:right">Level: A Smooth</th>
+  <th style="text-align:right">Level: C1 balanced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mean neighboring step jump</td>
+  <td style="text-align:right">0.029534</td>
+  <td style="text-align:right">0.027377</td>
+  <td style="text-align:right">0.014534</td>
+  <td style="text-align:right">0.013829</td>
+</tr>
+<tr>
+  <td>Mean per-ramp 95th-percentile jump</td>
+  <td style="text-align:right">0.091291</td>
+  <td style="text-align:right">0.082091</td>
+  <td style="text-align:right">0.056980</td>
+  <td style="text-align:right">0.056556</td>
+</tr>
+<tr>
+  <td>Worst sampled step jump</td>
+  <td style="text-align:right">1.271981</td>
+  <td style="text-align:right">1.044215</td>
+  <td style="text-align:right">1.056415</td>
+  <td style="text-align:right">1.016818</td>
+</tr>
+<tr>
+  <td>Mean within-ramp step CV</td>
+  <td style="text-align:right">0.531327</td>
+  <td style="text-align:right">0.538619</td>
+  <td style="text-align:right">0.255432</td>
+  <td style="text-align:right">0.258918</td>
+</tr>
+</tbody>
+</table></div>
+<p>Compared with A Smooth, mean adjacent step-size jumps fall <strong>7.30% in Reach and 4.85% in Level</strong>. The mean tail-jump statistic and worst sampled jump also improve for both axes. However, mean within-ramp CV becomes about <strong>1.37% worse</strong> on each axis: smoother local transitions are not identical to globally more equal perceptual spacing. All these aggregate path measures are better than 0.8A, but local per-ramp regressions remain possible; inspect the comparison rather than treating an average as universal.</p>
+<h2 id="scored-colorbench-follow-up">Scored ColorBench follow-up</h2>
+<p>Selected full-domain results, with complete dataset support for every row below:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">0.8A</th>
+  <th style="text-align:right">A Smooth</th>
+  <th style="text-align:right">C1 balanced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>OSA-UCS spacing</td>
+  <td style="text-align:right">0.309323</td>
+  <td style="text-align:right">0.314833</td>
+  <td style="text-align:right">0.300851</td>
+</tr>
+<tr>
+  <td>MacAdam 1974 STRESS</td>
+  <td style="text-align:right">32.806409</td>
+  <td style="text-align:right">31.914425</td>
+  <td style="text-align:right">31.680924</td>
+</tr>
+<tr>
+  <td>Leeds STRESS</td>
+  <td style="text-align:right">27.364162</td>
+  <td style="text-align:right">27.368794</td>
+  <td style="text-align:right">27.479856</td>
+</tr>
+<tr>
+  <td>Huang tolerance CV</td>
+  <td style="text-align:right">0.291347</td>
+  <td style="text-align:right">0.306890</td>
+  <td style="text-align:right">0.306295</td>
+</tr>
+</tbody>
+</table></div>
+<p>OSA and MacAdam improve without having entered this fit; Leeds and Huang demonstrate that it is not a clean sweep. OSA remains substantially worse than strong published spacing baselines. The constant-hue scores are unchanged, as they should be for a frozen-hue R/L-only edit.</p>
+<p>All five generation and sixteen measurement columns are stored for the candidate in the adjacent benchmark results. Domain support remains limited exactly as before. In particular, some Hung–Berns inputs and Brown-1957 ellipsoid neighborhoods lie outside the bounded model. No overall leaderboard rank is manufactured from silently omitted inputs.</p>
+<h2 id="invariants-and-verification">Invariants and verification</h2>
+<p><code>node v2/research/rl-c1/test.mjs</code> checks the published candidate directly. For each profile it verifies 4,096 random triangle round-trips, 1,024 exact integer-16 round-trips, 256 exact gray-8 round-trips, 720 unchanged vivid endpoints, 1,025 unchanged neutral samples, preserved hue identity, monotone atlas rows, and random interior atlas inverses. Full-domain integer tests use its existing carrier channels, not a claim of Rec.2020 coverage.</p>
+<p>Maximum measured embedding round-trip error: <strong>1.53e-11 native</strong>, <strong>1.86e-13 full</strong>. Measured hue change and neutral XYZ change are zero. The triangle bicone metric is unchanged. Its existing physical gamut boundaries, bounded-brightness limitation, and inherited hue-field limitations remain. The numeric cubic bracket guard corrects floating-point roundoff only; it is not an input-color clipping operation.</p>
+<h2 id="use-and-reproduce">Use and reproduce</h2>
+<pre><code class="language-js">import { createRLC1 } from './v2/research/rl-c1/index.mjs';
+const model = await createRLC1({ gamut: 'srgb', variant: 'candidate' });
+const q = model.fromRGB([0.2, 0.5, 0.8]);
+const rgb = model.toRGB(q);
+</code></pre>
+<p>Use <code>variant:&quot;smooth&quot;</code> for the C1 interpolation-only model, or <code>variant:&quot;parent&quot;</code> for the C1 interpolation-only parent trial. These are experiments, not the original unchanged reference models. Obtain those through <code>createASmooth</code> in <code>v2/a-smooth/index.mjs</code>.</p>
+<p>For local review, serve the repository root with <code>python3 -m http.server 8000</code> and open <code>/v2/research/rl-c1/viewer.html</code>. Four models are rendered through their actual inverse transforms in a worker; there is no image blur or cross-model RGB blend.</p>
+<p>Fitting requires Node, NumPy, and CPU PyTorch. Run <code>cache-fit.mjs</code>, then <code>fit.py</code>, then <code>select_balanced.py</code>, then <code>test.mjs</code>. Retraining can vary with numerical-library versions; the published <code>candidate.json</code> and its verification hash identify the exact tested checkpoint. <code>visual-paths.mjs</code> and <code>visual-balanced.mjs</code> reproduce the output-path checks. ColorBench scored execution is documented in the adjacent baseline README.</p>
+<h2 id="provenance">Provenance</h2>
+<p>All work is additive to HRL <code>5552223b1d51a07c869a01d3cae81847e4c0c13f</code>. ColorBench is pinned to <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>; its data pool to <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>. The baseline and candidate JSON files record versions, model/data hashes, every score, and domain rejections.</p>
+<p>Full source training records and physical hue-field definitions are inherited, not independently re-estimated here. The held-out assays are a single development evaluation after selecting this candidate, not a preregistered external validation study.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

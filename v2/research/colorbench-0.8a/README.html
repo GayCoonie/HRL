@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL 0.8A — scored ColorBench baseline · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#scope-and-computation">Scope and computation</a></li><li><a href="#domain-coverage-is-not-a-score">Domain coverage is not a score</a></li><li><a href="#generation--lower-is-better">Generation — lower is better</a></li><li><a href="#measurement--lower-is-better">Measurement — lower is better</a></li><li><a href="#combvd-conventions">COMBVD conventions</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#reproduce">Reproduce</a></li></ol></details><h1 id="hrl-08a--scored-colorbench-baseline">HRL 0.8A — scored ColorBench baseline</h1>
+<p>Pinned baseline: <code>5552223b1d51a07c869a01d3cae81847e4c0c13f</code>. ColorBench: <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>. Dataset pool: <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>.</p>
+<p>The requested <strong>0.8A checkpoint is <code>createASmooth({variant:&quot;parent&quot;})</code></strong>, not the approved newer Smooth profile. Both are reported, separately. The baseline was run before the R/L C1 experiment.</p>
+<h2 id="scope-and-computation">Scope and computation</h2>
+<p>Only the five generation and sixteen measurement score columns defined in upstream <code>research/leaderboard.py</code> were run. The 39 application scenarios, ordinal-only HumanFB score, appearance diagnostics, and unscored robustness gate were omitted.</p>
+<p>The adapter calls the actual JavaScript model, continuously in double precision. Forward coordinates are the native unit bicone <code>[L-R/2, sqrt(3)/2 R cos(H), sqrt(3)/2 R sin(H)]</code>. Neither raw H/R/L nor a different color-space metric is substituted. No additional coordinate rescaling or input gamut clipping is performed. Upstream preprocessing (including its own clipping where present) remains as written.</p>
+<p><code>run_scored.py</code> uses the numpy input path rather than the upstream torch-first dispatch (which would immediately convert back to numpy). Its memory-bounded worksheet reader was checked against every numeric record in the upstream raw COMBVD JSON: exact equality for all 3,813 records. It uses the same worksheet, row selection, dataset labels, XYZ units, Bradford conversion, STRESS, and bootstrap routines as the upstream measurement board.</p>
+<h2 id="domain-coverage-is-not-a-score">Domain coverage is not a score</h2>
+<p>0.8A is bounded. Some ColorBench stimuli exceed its white-relative brightness envelope or physical cone; the native-sRGB profile additionally excludes out-of-sRGB stimuli. Unsupported inputs are recorded as NaN and audited. Some upstream judges consequently skip whole neighborhoods, while the hue judge propagates NaN. <strong>A subset score is not a full-dataset score and is not ranked against full-coverage entrants.</strong> No overall leaderboard placement is claimed.</p>
+<p>For example, the full profile rejects 18 of 156 Hung–Berns inputs, including Y=1.0041 stimuli. None of the 21 Brown-1957 ellipsoids has complete supported neighborhoods; some generated inputs have Y several times reference white. These are recorded as unsupported, not clipped or silently repaired.</p>
+<h2 id="generation--lower-is-better">Generation — lower is better</h2>
+<p>Values followed by † have incomplete support. <code>N/A</code> means the literal upstream judge could not produce a finite score. Full per-dataset audits are in the JSON files.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">0.8A full</th>
+  <th style="text-align:right">Smooth full</th>
+  <th style="text-align:right">0.8A sRGB</th>
+  <th style="text-align:right">Smooth sRGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.309323</td>
+  <td style="text-align:right">0.314833</td>
+  <td style="text-align:right">0.253739 †</td>
+  <td style="text-align:right">0.238442 †</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="measurement--lower-is-better">Measurement — lower is better</h2>
+<p>The first five columns here are STRESS; discrimination and tolerance values are coefficients of variation.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">0.8A full</th>
+  <th style="text-align:right">Smooth full</th>
+  <th style="text-align:right">0.8A sRGB</th>
+  <th style="text-align:right">Smooth sRGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">29.899816</td>
+  <td style="text-align:right">30.405726</td>
+  <td style="text-align:right">29.481316 †</td>
+  <td style="text-align:right">29.498161 †</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">27.364162</td>
+  <td style="text-align:right">27.368794</td>
+  <td style="text-align:right">26.395035</td>
+  <td style="text-align:right">26.420868</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">23.520950</td>
+  <td style="text-align:right">23.503638</td>
+  <td style="text-align:right">24.270943 †</td>
+  <td style="text-align:right">25.062004 †</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">30.503707</td>
+  <td style="text-align:right">31.036805</td>
+  <td style="text-align:right">28.131772 †</td>
+  <td style="text-align:right">28.848541 †</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">32.806409</td>
+  <td style="text-align:right">31.914425</td>
+  <td style="text-align:right">26.574751 †</td>
+  <td style="text-align:right">25.693543 †</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.344632 †</td>
+  <td style="text-align:right">0.334767 †</td>
+  <td style="text-align:right">0.345854 †</td>
+  <td style="text-align:right">0.313356 †</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.287903 †</td>
+  <td style="text-align:right">0.275906 †</td>
+  <td style="text-align:right">0.268562 †</td>
+  <td style="text-align:right">0.249988 †</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.314055 †</td>
+  <td style="text-align:right">0.312091 †</td>
+  <td style="text-align:right">0.274191 †</td>
+  <td style="text-align:right">0.245718 †</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.303371</td>
+  <td style="text-align:right">0.252212</td>
+  <td style="text-align:right">0.336565 †</td>
+  <td style="text-align:right">0.263538 †</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.389347</td>
+  <td style="text-align:right">0.374064</td>
+  <td style="text-align:right">0.365544</td>
+  <td style="text-align:right">0.332900</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.369105 †</td>
+  <td style="text-align:right">0.359065 †</td>
+  <td style="text-align:right">0.320922 †</td>
+  <td style="text-align:right">0.307990 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.367528 †</td>
+  <td style="text-align:right">0.334889 †</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.291347</td>
+  <td style="text-align:right">0.306890</td>
+  <td style="text-align:right">0.311781 †</td>
+  <td style="text-align:right">0.300850 †</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.400739</td>
+  <td style="text-align:right">0.402127</td>
+  <td style="text-align:right">0.352220 †</td>
+  <td style="text-align:right">0.341605 †</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.283809</td>
+  <td style="text-align:right">0.287916</td>
+  <td style="text-align:right">0.255869</td>
+  <td style="text-align:right">0.243074</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="combvd-conventions">COMBVD conventions</h2>
+<p>Do not compare these two conventions as if they were the same run.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Profile</th>
+  <th style="text-align:right">Official ColorBench unweighted</th>
+  <th style="text-align:right">ColorBench-input traditional weighting</th>
+  <th style="text-align:right">Retained pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>parent-full</td>
+  <td style="text-align:right">29.608930</td>
+  <td style="text-align:right">28.561281</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>parent-srgb</td>
+  <td style="text-align:right">29.140616</td>
+  <td style="text-align:right">27.902581</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>smooth-full</td>
+  <td style="text-align:right">30.082816</td>
+  <td style="text-align:right">28.917886</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>smooth-srgb</td>
+  <td style="text-align:right">29.205588</td>
+  <td style="text-align:right">28.155037</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+</tbody>
+</table></div>
+<p>The unchanged repository publication gate was also re-run successfully: traditional weighting with its own stored, exact-HRL-white inputs reproduces parent <strong>27.907880 sRGB / 28.607473 full</strong> and Smooth <strong>28.172398 sRGB / 28.955307 full</strong>. Its small differences from ColorBench-input weighted values come from different preprocessing conventions, not a replacement embedding. Traditional multiplicities: BFD-P 1, LEEDS 9, RIT-DuPont 9, WITT 7.</p>
+<h2 id="interpretation">Interpretation</h2>
+<p>COMBVD is training data, so improvement is an in-sample fit result. Hung–Berns, Ebner–Fairchild, and part of Munsell informed the existing hue field. Xiao and OSA were not used in this continuation fit; neither were MacAdam1974 or threshold/tolerance datasets. RIT-DuPont tolerance is related in source family to COMBVD RIT-DuPont and should not be sold as wholly independent evidence.</p>
+<p>OSA spacing is a genuine weakness of these checkpoints: full 0.8A is 0.309323 and Smooth 0.314833. The pinned published board reports IPT at 0.078102 and OKLab at 0.212394. Those comparator values are published cached results, not new comparator runs. Hue scores are unchanged by the R/L-only Smooth warp, as expected.</p>
+<h2 id="reproduce">Reproduce</h2>
+<pre><code class="language-sh">git clone https://github.com/Grkmyldz148/colorbench.git ../colorbench
+git -C ../colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+git clone https://github.com/Grkmyldz148/color-perception-datasets.git ../color-perception-datasets
+git -C ../color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+python -m pip install numpy scipy colour-science
+python v2/research/colorbench-0.8a/run_scored.py \
+  --colorbench ../colorbench --pool ../color-perception-datasets/datasets \
+  --gamut full --variant parent
+</code></pre>
+<p>Repeat with <code>--gamut srgb</code> and/or <code>--variant smooth</code>. Results are saved under <code>results/</code>. A partially completed run resumes existing same-checkpoint score records. Production HRL definitions and approved defaults are not edited.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

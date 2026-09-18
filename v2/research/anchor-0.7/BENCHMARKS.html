@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OPAL 0.7 COMBVD and reference diagnostics · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="BENCHMARKS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#native-srgb">Native sRGB</a></li><li><a href="#full-domain">Full-domain</a></li><li><a href="#identical-3331-pair-mask">Identical 3,331-pair mask</a></li><li><a href="#whole-family-omission-diagnostic">Whole-family omission diagnostic</a></li><li><a href="#attribution-of-the-improvement">Attribution of the improvement</a></li></ol></details><h1 id="opal-07-combvd-and-reference-diagnostics">OPAL 0.7 COMBVD and reference diagnostics</h1>
+<p>All 0.7 fitted scores are development / in-sample results. Lower STRESS is better. The shared input, exact masks, nuisance scales and rejected rows are in <code>results/benchmarks.json</code>. Quantization and channel clipping are absent. The metric is the public regular bicone.</p>
+<h2 id="native-srgb">Native sRGB</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Subset</th>
+  <th style="text-align:right">Pairs</th>
+  <th style="text-align:right">OPAL 0.6</th>
+  <th style="text-align:right">Balanced 0.7</th>
+  <th style="text-align:right">Metric 0.7</th>
+  <th style="text-align:right">Conservative 0.7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>BFD-P(D65)</td>
+  <td style="text-align:right">1828</td>
+  <td style="text-align:right">44.2289</td>
+  <td style="text-align:right">30.0322</td>
+  <td style="text-align:right">29.4327</td>
+  <td style="text-align:right">31.9463</td>
+</tr>
+<tr>
+  <td>BFD-P( C )</td>
+  <td style="text-align:right">139</td>
+  <td style="text-align:right">52.9874</td>
+  <td style="text-align:right">45.2353</td>
+  <td style="text-align:right">44.9130</td>
+  <td style="text-align:right">46.1929</td>
+</tr>
+<tr>
+  <td>BFD-P(M)</td>
+  <td style="text-align:right">357</td>
+  <td style="text-align:right">62.3360</td>
+  <td style="text-align:right">38.9980</td>
+  <td style="text-align:right">36.8227</td>
+  <td style="text-align:right">42.7427</td>
+</tr>
+<tr>
+  <td>LEEDS</td>
+  <td style="text-align:right">307</td>
+  <td style="text-align:right">59.7986</td>
+  <td style="text-align:right">33.1295</td>
+  <td style="text-align:right">32.3708</td>
+  <td style="text-align:right">35.3824</td>
+</tr>
+<tr>
+  <td>RIT-DuPont</td>
+  <td style="text-align:right">284</td>
+  <td style="text-align:right">48.3618</td>
+  <td style="text-align:right">30.6792</td>
+  <td style="text-align:right">30.7652</td>
+  <td style="text-align:right">31.9893</td>
+</tr>
+<tr>
+  <td>WITT</td>
+  <td style="text-align:right">416</td>
+  <td style="text-align:right">54.4100</td>
+  <td style="text-align:right">32.1238</td>
+  <td style="text-align:right">30.1311</td>
+  <td style="text-align:right">35.6698</td>
+</tr>
+<tr>
+  <td>BFD-P combined</td>
+  <td style="text-align:right">2324</td>
+  <td style="text-align:right">53.0608</td>
+  <td style="text-align:right">33.3772</td>
+  <td style="text-align:right">32.1116</td>
+  <td style="text-align:right">36.1388</td>
+</tr>
+<tr>
+  <td><strong>Pooled unweighted</strong></td>
+  <td style="text-align:right"><strong>3331</strong></td>
+  <td style="text-align:right"><strong>53.3601</strong></td>
+  <td style="text-align:right"><strong>33.2849</strong></td>
+  <td style="text-align:right"><strong>32.0272</strong></td>
+  <td style="text-align:right"><strong>36.0433</strong></td>
+</tr>
+<tr>
+  <td><strong>Pooled traditional weights</strong></td>
+  <td style="text-align:right"><strong>3331</strong></td>
+  <td style="text-align:right"><strong>54.3531</strong></td>
+  <td style="text-align:right"><strong>32.9901</strong></td>
+  <td style="text-align:right"><strong>31.8076</strong></td>
+  <td style="text-align:right"><strong>35.6838</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="full-domain">Full-domain</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Subset</th>
+  <th style="text-align:right">Pairs</th>
+  <th style="text-align:right">OPAL 0.6</th>
+  <th style="text-align:right">Balanced 0.7</th>
+  <th style="text-align:right">Metric 0.7</th>
+  <th style="text-align:right">Conservative 0.7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>BFD-P(D65)</td>
+  <td style="text-align:right">2028</td>
+  <td style="text-align:right">44.9577</td>
+  <td style="text-align:right">35.0733</td>
+  <td style="text-align:right">33.4911</td>
+  <td style="text-align:right">38.2907</td>
+</tr>
+<tr>
+  <td>BFD-P( C )</td>
+  <td style="text-align:right">200</td>
+  <td style="text-align:right">50.8538</td>
+  <td style="text-align:right">46.3663</td>
+  <td style="text-align:right">44.0481</td>
+  <td style="text-align:right">49.9930</td>
+</tr>
+<tr>
+  <td>BFD-P(M)</td>
+  <td style="text-align:right">548</td>
+  <td style="text-align:right">46.5146</td>
+  <td style="text-align:right">40.1703</td>
+  <td style="text-align:right">37.8443</td>
+  <td style="text-align:right">42.8221</td>
+</tr>
+<tr>
+  <td>LEEDS</td>
+  <td style="text-align:right">307</td>
+  <td style="text-align:right">41.9360</td>
+  <td style="text-align:right">31.4882</td>
+  <td style="text-align:right">31.1539</td>
+  <td style="text-align:right">34.4689</td>
+</tr>
+<tr>
+  <td>RIT-DuPont</td>
+  <td style="text-align:right">312</td>
+  <td style="text-align:right">36.8993</td>
+  <td style="text-align:right">28.6763</td>
+  <td style="text-align:right">29.4183</td>
+  <td style="text-align:right">29.9619</td>
+</tr>
+<tr>
+  <td>WITT</td>
+  <td style="text-align:right">418</td>
+  <td style="text-align:right">49.9627</td>
+  <td style="text-align:right">37.6088</td>
+  <td style="text-align:right">34.1800</td>
+  <td style="text-align:right">41.9186</td>
+</tr>
+<tr>
+  <td>BFD-P combined</td>
+  <td style="text-align:right">2776</td>
+  <td style="text-align:right">45.6751</td>
+  <td style="text-align:right">37.4063</td>
+  <td style="text-align:right">35.4862</td>
+  <td style="text-align:right">40.3672</td>
+</tr>
+<tr>
+  <td><strong>Pooled unweighted</strong></td>
+  <td style="text-align:right"><strong>3813</strong></td>
+  <td style="text-align:right"><strong>45.8136</strong></td>
+  <td style="text-align:right"><strong>37.1608</strong></td>
+  <td style="text-align:right"><strong>35.2407</strong></td>
+  <td style="text-align:right"><strong>40.1948</strong></td>
+</tr>
+<tr>
+  <td><strong>Pooled traditional weights</strong></td>
+  <td style="text-align:right"><strong>3813</strong></td>
+  <td style="text-align:right"><strong>45.9790</strong></td>
+  <td style="text-align:right"><strong>36.0015</strong></td>
+  <td style="text-align:right"><strong>34.1721</strong></td>
+  <td style="text-align:right"><strong>39.2542</strong></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="identical-3331-pair-mask">Identical 3,331-pair mask</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native sRGB</th>
+  <th style="text-align:right">Full-domain on the same pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>opal0.6</td>
+  <td style="text-align:right">54.3531</td>
+  <td style="text-align:right">46.2421</td>
+</tr>
+<tr>
+  <td>anchor-control</td>
+  <td style="text-align:right">52.6014</td>
+  <td style="text-align:right">47.7550</td>
+</tr>
+<tr>
+  <td>balanced</td>
+  <td style="text-align:right">32.9901</td>
+  <td style="text-align:right">35.1253</td>
+</tr>
+<tr>
+  <td>metric</td>
+  <td style="text-align:right">31.8076</td>
+  <td style="text-align:right">33.3517</td>
+</tr>
+<tr>
+  <td>conservative</td>
+  <td style="text-align:right">35.6838</td>
+  <td style="text-align:right">38.6882</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="whole-family-omission-diagnostic">Whole-family omission diagnostic</h2>
+<p>Each run omits the named family from the direct difference loss, refits from zero, and scores that omitted family. Appearance constraints, the fixed architecture and OPAL visual reference remain shared. These are retrospective transfer checks, not untouched independent tests.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Family</th>
+  <th style="text-align:right">sRGB balanced omission</th>
+  <th style="text-align:right">Full balanced omission</th>
+  <th style="text-align:right">sRGB metric omission</th>
+  <th style="text-align:right">Full metric omission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>BFD-P</td>
+  <td style="text-align:right">39.6554</td>
+  <td style="text-align:right">42.6038</td>
+  <td style="text-align:right">36.7194</td>
+  <td style="text-align:right">42.1040</td>
+</tr>
+<tr>
+  <td>LEEDS</td>
+  <td style="text-align:right">36.8959</td>
+  <td style="text-align:right">33.6436</td>
+  <td style="text-align:right">35.0324</td>
+  <td style="text-align:right">33.0478</td>
+</tr>
+<tr>
+  <td>RIT-DuPont</td>
+  <td style="text-align:right">31.9691</td>
+  <td style="text-align:right">30.8460</td>
+  <td style="text-align:right">34.4976</td>
+  <td style="text-align:right">32.0478</td>
+</tr>
+<tr>
+  <td>WITT</td>
+  <td style="text-align:right">39.1831</td>
+  <td style="text-align:right">46.9350</td>
+  <td style="text-align:right">37.2728</td>
+  <td style="text-align:right">44.1766</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="attribution-of-the-improvement">Attribution of the improvement</h2>
+<p>Own-anchor normalization alone, with the original readout, scored 56.3198 / 46.7465 (native/full). Own-anchor normalization with the new Nayatani/Corney readout but without the final difference fit scores 52.6014 / 48.2767. The major gain is therefore after joint native R/L difference calibration, not evidence that normalization alone fixes COMBVD.</p>
+<p>Hue membership, angular allocation and the physical hue sheet remain unchanged from OPAL 0.6. These results do not improve its constant-hue residuals; they improve placement inside the same sheets.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GenSpace and black/white operations · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="README.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><h1 id="genspace-and-blackwhite-operations">GenSpace and black/white operations</h1>
+<p><a href="https://gaycoonie.github.io/HRL/v2/research/tonal-semantics/">Live lab</a> compares the unchanged shared 0.10 balanced and metric candidates using a GenSpace diagnostic ruler and explicit tonal operations.</p>
+<p>This is an executed research and semantics pass, not a new HRL conversion fit. The previous shared calibrations and ColorBench results remain intact. The new diagnostics do not use Oklab. Existing coefficients trained with the earlier regularizer are not relabeled as GenSpace-trained.</p>
+<ul>
+<li><a href="DEFINITIONS.html">Definitions and primary-source roles</a></li>
+<li><a href="PLAN.html">Plan</a> and <a href="EXECUTION.html">execution/recovery record</a></li>
+<li><a href="results/REPORT.html">Measured report</a>, <a href="results/genspace-audit.json">raw audit</a>, <a href="results/per-hue.csv">per-hue CSV</a></li>
+<li><a href="results/operation-tests.json">Operation tests</a>, <a href="results/browser-runner/verification.json">runner browser receipt</a>, and <a href="results/browser-live/verification.json">public browser receipt</a></li>
+</ul>
+<p>The native unit shares remain <code>R=chromaticness</code>, <code>W=L-R</code>, <code>K=1-L</code>. The explicit appearance-share operators are</p>
+<pre><code class="language-js">import {addBlack, addWhite, exchangeNeutral} from './operations.mjs';
+const q = {H:270, R:0.65, L:0.65};
+addBlack(q, 0.5); // {H:270, R:0.325, L:0.325}
+addWhite(q, 0.5); // {H:270, R:0.325, L:0.825}
+exchangeNeutral(q, 0.1); // {H:270, R:0.65, L:0.75}
+</code></pre>
+<p>The amount is a replacement share under the proposed appearance operation, not a paint-mass or luminance fraction. The algebra is exact; its mapping to observed blackness/whiteness is a calibration problem, not settled by those identities alone. <code>zcamAttributes</code> implements the paper's fitted Equations 17-19 on ZCAM Jz/Cz inputs; it is not a complete XYZ-to-ZCAM model and does not reinterpret GenSpace inputs as ZCAM units.</p>
+<p>The GenSpace audit uses 72 hues, five start ratios, 129 points, two operation families, two candidates and two gamuts. The actual XYZ is measured; display clipping occurs only in previews. Each candidate keeps the same learned bank across gamuts.</p>
+<pre><code class="language-sh">mkdir -p v2/research/tonal-semantics/results
+node v2/research/tonal-semantics/test.mjs
+node v2/research/tonal-semantics/audit.mjs
+python v2/research/tonal-semantics/report.py
+python -m http.server 8765
+</code></pre>
+<p>Open <code>/v2/research/tonal-semantics/</code> on the local server. The page can record informal per-hue preferences in localStorage and export them as JSON. There is no server-side collection. The saved record uses the completed rendered state and retains model hashes when loaded. Display calibration is unknown and no population-level observer claim is made.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

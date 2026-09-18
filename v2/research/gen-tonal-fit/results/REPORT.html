@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL 0.11: GenSpace-trained tonal checkpoints · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="REPORT.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#what-was-fitted">What was fitted</a></li><li><a href="#combvd-actual-runtime-unchanged-support">COMBVD: actual runtime, unchanged support</a></li><li><a href="#direct-genspace-paths">Direct GenSpace paths</a></li><li><a href="#scored-colorbench">Scored ColorBench</a></li><li><a href="#same-pair-overlap-and-full-only-check">Same-pair overlap and full-only check</a></li><li><a href="#verification">Verification</a></li><li><a href="#records">Records</a></li><li><a href="#sampling-and-dark-edge-interpretation">Sampling and dark-edge interpretation</a></li></ol></details><h1 id="hrl-011-genspace-trained-tonal-checkpoints">HRL 0.11: GenSpace-trained tonal checkpoints</h1>
+<p>These are newly fitted coefficients, not a rerating or relabeling of the unchanged 0.10 candidates. Previous models and entry points are retained. The source geometry, hue field and ring, neutral progression, vivid endpoints and one-bank-per-candidate architecture are unchanged.</p>
+<h2 id="what-was-fitted">What was fitted</h2>
+<p>Human training: supported COMBVD pairs only. Synthetic regularizers: full three-dimensional frozen HelmLab 1.0.0 GenSpace trajectories for black dilution, white dilution, neutral exchange and fixed-Level Reach. Oklab and the former scalar lightness power target are absent from this fit. ZCAM motivates the semantics but its predicted attribute ratings were not relabeled as new human observations.</p>
+<p>The traditional weighted STRESS-squared objective has equal native/full weights. Each recipe records its path, corner-retreat and dark-envelope weights. The broad dark continuation envelope uses previous user-reviewed candidates, not a paper-derived curve. R=chromaticness, K=1-L and W=L-R remain the meaning of the coordinates.</p>
+<h2 id="combvd-actual-runtime-unchanged-support">COMBVD: actual runtime, unchanged support</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native weighted</th>
+  <th style="text-align:right">Native unweighted</th>
+  <th style="text-align:right">Full weighted</th>
+  <th style="text-align:right">Full unweighted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0.10 balanced</td>
+  <td style="text-align:right">32.116410</td>
+  <td style="text-align:right">33.687327</td>
+  <td style="text-align:right">31.449030</td>
+  <td style="text-align:right">33.306056</td>
+</tr>
+<tr>
+  <td>0.10 metric</td>
+  <td style="text-align:right">29.318042</td>
+  <td style="text-align:right">30.939439</td>
+  <td style="text-align:right">29.630885</td>
+  <td style="text-align:right">31.234386</td>
+</tr>
+<tr>
+  <td>Gen tonal balanced</td>
+  <td style="text-align:right">29.410505</td>
+  <td style="text-align:right">30.958686</td>
+  <td style="text-align:right">30.371858</td>
+  <td style="text-align:right">32.354725</td>
+</tr>
+<tr>
+  <td>Gen tonal metric</td>
+  <td style="text-align:right">28.195015</td>
+  <td style="text-align:right">29.831797</td>
+  <td style="text-align:right">28.941919</td>
+  <td style="text-align:right">30.712210</td>
+</tr>
+</tbody>
+</table></div>
+<p>Native retains the same 3,331/3,813 supported pairs, full retains all 3,813. No COMBVD clipping. The native and full overall values have different support and are not a same-stimulus gamut comparison. COMBVD is in-sample. Earlier project development exposed other evaluation results; the scored rerun is not pristine independent validation.</p>
+<h2 id="direct-genspace-paths">Direct GenSpace paths</h2>
+<p>72 hues offset 2.5 degrees from the nominal grid, five paths in each of four families, 257 samples, four models, two gamuts: 2,960,640 XYZ evaluations including repeated endpoints. Actual inverse runtime, not the training lookup grid. Two endpoint steps are trimmed for step-variation statistics, but not for direction checks. No display clipping or unavailable-path deletion.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Black CV</th>
+  <th style="text-align:right">White CV</th>
+  <th style="text-align:right">Neutral-exchange CV</th>
+  <th style="text-align:right">Reach CV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>0.10 balanced</td>
+  <td style="text-align:right">0.301139</td>
+  <td style="text-align:right">0.211282</td>
+  <td style="text-align:right">0.208745</td>
+  <td style="text-align:right">0.424390</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>0.10 metric</td>
+  <td style="text-align:right">0.324342</td>
+  <td style="text-align:right">0.324999</td>
+  <td style="text-align:right">0.341595</td>
+  <td style="text-align:right">0.614340</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Gen tonal balanced</td>
+  <td style="text-align:right">0.224184</td>
+  <td style="text-align:right">0.194377</td>
+  <td style="text-align:right">0.216303</td>
+  <td style="text-align:right">0.351099</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Gen tonal metric</td>
+  <td style="text-align:right">0.263517</td>
+  <td style="text-align:right">0.239179</td>
+  <td style="text-align:right">0.254157</td>
+  <td style="text-align:right">0.425698</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>0.10 balanced</td>
+  <td style="text-align:right">0.340153</td>
+  <td style="text-align:right">0.332053</td>
+  <td style="text-align:right">0.254905</td>
+  <td style="text-align:right">0.518515</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>0.10 metric</td>
+  <td style="text-align:right">0.364574</td>
+  <td style="text-align:right">0.481534</td>
+  <td style="text-align:right">0.422154</td>
+  <td style="text-align:right">0.679926</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Gen tonal balanced</td>
+  <td style="text-align:right">0.257496</td>
+  <td style="text-align:right">0.309925</td>
+  <td style="text-align:right">0.257108</td>
+  <td style="text-align:right">0.381203</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Gen tonal metric</td>
+  <td style="text-align:right">0.299973</td>
+  <td style="text-align:right">0.362927</td>
+  <td style="text-align:right">0.322332</td>
+  <td style="text-align:right">0.449612</td>
+</tr>
+</tbody>
+</table></div>
+<p>CV is step-size standard deviation divided by its mean. Lower is more even by this external ruler, not proof of human preference. Unlike the preceding audit, the path ratios and offset hues are revised; all old controls are rerun on the identical new diagnostic sample set.</p>
+<h3 id="step-jumps-and-corner-direction">Step jumps and corner direction</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Black mean step jump</th>
+  <th style="text-align:right">White mean step jump</th>
+  <th style="text-align:right">Black retreat paths / 360</th>
+  <th style="text-align:right">White retreat paths / 360</th>
+  <th style="text-align:right">Mean white retreat / start distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>0.10 balanced</td>
+  <td style="text-align:right">0.016350</td>
+  <td style="text-align:right">0.009160</td>
+  <td style="text-align:right">5</td>
+  <td style="text-align:right">103</td>
+  <td style="text-align:right">0.00586705</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>0.10 metric</td>
+  <td style="text-align:right">0.019966</td>
+  <td style="text-align:right">0.012289</td>
+  <td style="text-align:right">42</td>
+  <td style="text-align:right">139</td>
+  <td style="text-align:right">0.01677504</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Gen tonal balanced</td>
+  <td style="text-align:right">0.014857</td>
+  <td style="text-align:right">0.007621</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">54</td>
+  <td style="text-align:right">0.00214253</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>Gen tonal metric</td>
+  <td style="text-align:right">0.016947</td>
+  <td style="text-align:right">0.009475</td>
+  <td style="text-align:right">15</td>
+  <td style="text-align:right">68</td>
+  <td style="text-align:right">0.00221179</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>0.10 balanced</td>
+  <td style="text-align:right">0.017339</td>
+  <td style="text-align:right">0.011199</td>
+  <td style="text-align:right">22</td>
+  <td style="text-align:right">110</td>
+  <td style="text-align:right">0.00521406</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>0.10 metric</td>
+  <td style="text-align:right">0.020495</td>
+  <td style="text-align:right">0.014693</td>
+  <td style="text-align:right">55</td>
+  <td style="text-align:right">120</td>
+  <td style="text-align:right">0.01418519</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Gen tonal balanced</td>
+  <td style="text-align:right">0.015798</td>
+  <td style="text-align:right">0.009515</td>
+  <td style="text-align:right">17</td>
+  <td style="text-align:right">58</td>
+  <td style="text-align:right">0.00237571</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>Gen tonal metric</td>
+  <td style="text-align:right">0.017780</td>
+  <td style="text-align:right">0.011241</td>
+  <td style="text-align:right">25</td>
+  <td style="text-align:right">85</td>
+  <td style="text-align:right">0.00413726</td>
+</tr>
+</tbody>
+</table></div>
+<p>A corner retreat is movement back toward black on a black-origin path, or away from the endpoint on a white-directed path in full GenSpace distance. It is not a topological fold. Both counts and magnitudes matter. A larger or smaller scalar Gen lightness value is not substituted for blackness or whiteness.</p>
+<h3 id="matching-role-changes">Matching-role changes</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>New candidate vs same-role 0.10</th>
+  <th style="text-align:right">Weighted COMBVD change</th>
+  <th style="text-align:right">Black CV change</th>
+  <th style="text-align:right">White CV change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">-2.705904</td>
+  <td style="text-align:right">-25.55%</td>
+  <td style="text-align:right">-8.00%</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>metric</td>
+  <td style="text-align:right">-1.123026</td>
+  <td style="text-align:right">-18.75%</td>
+  <td style="text-align:right">-26.41%</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">-1.077171</td>
+  <td style="text-align:right">-24.30%</td>
+  <td style="text-align:right">-6.66%</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>metric</td>
+  <td style="text-align:right">-0.688967</td>
+  <td style="text-align:right">-17.72%</td>
+  <td style="text-align:right">-24.63%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Do not infer that every hue or every local step improved from an average. Raw per-hue and per-path results are in direct-final.json, including worst-step measures and residual reversals. Interleaved synthetic samples are a numerical out-of-grid check, not independent observer data.</p>
+<h2 id="scored-colorbench">Scored ColorBench</h2>
+<p>Only the five scored generation and sixteen scored measurement columns. The scored judges are unchanged, not redefined in GenSpace. Strict native/full inputs are shown below. A dagger denotes incomplete or mapped support; N/A is unavailable, not zero. Full clipped results are a separate pipeline. No overall leaderboard rank is constructed.</p>
+<h3 id="srgb-strict-inputs">srgb: strict inputs</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Test</th>
+  <th style="text-align:right">0.10 balanced</th>
+  <th style="text-align:right">0.10 metric</th>
+  <th style="text-align:right">Gen tonal balanced</th>
+  <th style="text-align:right">Gen tonal metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.276680 †</td>
+  <td style="text-align:right">0.288432 †</td>
+  <td style="text-align:right">0.269081 †</td>
+  <td style="text-align:right">0.265768 †</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.289835 †</td>
+  <td style="text-align:right">0.300937 †</td>
+  <td style="text-align:right">0.286494 †</td>
+  <td style="text-align:right">0.280401 †</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.274304 †</td>
+  <td style="text-align:right">0.272051 †</td>
+  <td style="text-align:right">0.270416 †</td>
+  <td style="text-align:right">0.263813 †</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.302525 †</td>
+  <td style="text-align:right">0.296686 †</td>
+  <td style="text-align:right">0.295601 †</td>
+  <td style="text-align:right">0.287421 †</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.216452 †</td>
+  <td style="text-align:right">0.220428 †</td>
+  <td style="text-align:right">0.198435 †</td>
+  <td style="text-align:right">0.199005 †</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.344856</td>
+  <td style="text-align:right">0.365400</td>
+  <td style="text-align:right">0.322989</td>
+  <td style="text-align:right">0.333155</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.329856 †</td>
+  <td style="text-align:right">0.336116 †</td>
+  <td style="text-align:right">0.316854 †</td>
+  <td style="text-align:right">0.314055 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.325183 †</td>
+  <td style="text-align:right">0.321219 †</td>
+  <td style="text-align:right">0.319746 †</td>
+  <td style="text-align:right">0.326660 †</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.397861 †</td>
+  <td style="text-align:right">0.343361 †</td>
+  <td style="text-align:right">0.359584 †</td>
+  <td style="text-align:right">0.343553 †</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.282949</td>
+  <td style="text-align:right">0.301334</td>
+  <td style="text-align:right">0.250620</td>
+  <td style="text-align:right">0.258596</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">34.186052 †</td>
+  <td style="text-align:right">31.449752 †</td>
+  <td style="text-align:right">31.469872 †</td>
+  <td style="text-align:right">30.361380 †</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">30.837878</td>
+  <td style="text-align:right">27.744421</td>
+  <td style="text-align:right">28.499639</td>
+  <td style="text-align:right">25.868871</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">25.864378 †</td>
+  <td style="text-align:right">23.221099 †</td>
+  <td style="text-align:right">23.676903 †</td>
+  <td style="text-align:right">22.719906 †</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">34.566391 †</td>
+  <td style="text-align:right">31.387185 †</td>
+  <td style="text-align:right">31.678904 †</td>
+  <td style="text-align:right">30.799590 †</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">27.843703 †</td>
+  <td style="text-align:right">29.179381 †</td>
+  <td style="text-align:right">25.988935 †</td>
+  <td style="text-align:right">28.913900 †</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="full-strict-inputs">full: strict inputs</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Test</th>
+  <th style="text-align:right">0.10 balanced</th>
+  <th style="text-align:right">0.10 metric</th>
+  <th style="text-align:right">Gen tonal balanced</th>
+  <th style="text-align:right">Gen tonal metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.281138</td>
+  <td style="text-align:right">0.286840</td>
+  <td style="text-align:right">0.275654</td>
+  <td style="text-align:right">0.282705</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.303628</td>
+  <td style="text-align:right">0.332891</td>
+  <td style="text-align:right">0.327829</td>
+  <td style="text-align:right">0.305680</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.303629</td>
+  <td style="text-align:right">0.321214</td>
+  <td style="text-align:right">0.308851</td>
+  <td style="text-align:right">0.280578</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.311239</td>
+  <td style="text-align:right">0.328873</td>
+  <td style="text-align:right">0.319009</td>
+  <td style="text-align:right">0.297136</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.239882</td>
+  <td style="text-align:right">0.239276</td>
+  <td style="text-align:right">0.224486</td>
+  <td style="text-align:right">0.224497</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.384238</td>
+  <td style="text-align:right">0.392253</td>
+  <td style="text-align:right">0.368102</td>
+  <td style="text-align:right">0.381774</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">0.420611 †</td>
+  <td style="text-align:right">0.495451 †</td>
+  <td style="text-align:right">0.380514 †</td>
+  <td style="text-align:right">0.408395 †</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.338199 †</td>
+  <td style="text-align:right">0.346874 †</td>
+  <td style="text-align:right">0.329580 †</td>
+  <td style="text-align:right">0.339981 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.334002 †</td>
+  <td style="text-align:right">0.323109 †</td>
+  <td style="text-align:right">0.306312 †</td>
+  <td style="text-align:right">0.311929 †</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.320552</td>
+  <td style="text-align:right">0.314363</td>
+  <td style="text-align:right">0.309939</td>
+  <td style="text-align:right">0.343965</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.360299</td>
+  <td style="text-align:right">0.360035</td>
+  <td style="text-align:right">0.336730</td>
+  <td style="text-align:right">0.360516</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.316349</td>
+  <td style="text-align:right">0.320339</td>
+  <td style="text-align:right">0.302807</td>
+  <td style="text-align:right">0.299210</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">33.800983</td>
+  <td style="text-align:right">31.670834</td>
+  <td style="text-align:right">32.885875</td>
+  <td style="text-align:right">31.187128</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">27.778236</td>
+  <td style="text-align:right">27.290987</td>
+  <td style="text-align:right">28.063204</td>
+  <td style="text-align:right">26.629974</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">25.254441</td>
+  <td style="text-align:right">23.535872</td>
+  <td style="text-align:right">23.728116</td>
+  <td style="text-align:right">22.955480</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">32.529187</td>
+  <td style="text-align:right">31.038975</td>
+  <td style="text-align:right">29.976732</td>
+  <td style="text-align:right">29.169058</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">32.483718</td>
+  <td style="text-align:right">29.690126</td>
+  <td style="text-align:right">30.790536</td>
+  <td style="text-align:right">32.143491</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="full-explicitly-mapped-pipeline">Full: explicitly mapped pipeline</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Test</th>
+  <th style="text-align:right">Gen tonal balanced</th>
+  <th style="text-align:right">Gen tonal metric</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">3.397949 †</td>
+  <td style="text-align:right">3.397949 †</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.275654</td>
+  <td style="text-align:right">0.282705</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.327829</td>
+  <td style="text-align:right">0.305680</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.308851</td>
+  <td style="text-align:right">0.280578</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.319009</td>
+  <td style="text-align:right">0.297136</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.224486</td>
+  <td style="text-align:right">0.224497</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.368102</td>
+  <td style="text-align:right">0.381774</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">0.361332 †</td>
+  <td style="text-align:right">0.365960 †</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.318144 †</td>
+  <td style="text-align:right">0.329796 †</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.349303 †</td>
+  <td style="text-align:right">0.349738 †</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.309939</td>
+  <td style="text-align:right">0.343965</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.336730</td>
+  <td style="text-align:right">0.360516</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.302807</td>
+  <td style="text-align:right">0.299210</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">32.885875</td>
+  <td style="text-align:right">31.187128</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">28.063204</td>
+  <td style="text-align:right">26.629974</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">23.728116</td>
+  <td style="text-align:right">22.955480</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">29.976732</td>
+  <td style="text-align:right">29.169058</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">30.790536</td>
+  <td style="text-align:right">32.143491</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="same-pair-overlap-and-full-only-check">Same-pair overlap and full-only check</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th>Realization / subset</th>
+  <th style="text-align:right">Pairs</th>
+  <th style="text-align:right">Weighted STRESS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0.10 balanced</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">32.116410</td>
+</tr>
+<tr>
+  <td>0.10 balanced</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">31.197584</td>
+</tr>
+<tr>
+  <td>0.10 balanced</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">32.429838</td>
+</tr>
+<tr>
+  <td>0.10 metric</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.318042</td>
+</tr>
+<tr>
+  <td>0.10 metric</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.574688</td>
+</tr>
+<tr>
+  <td>0.10 metric</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">29.796871</td>
+</tr>
+<tr>
+  <td>Gen tonal balanced</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.410505</td>
+</tr>
+<tr>
+  <td>Gen tonal balanced</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">29.973645</td>
+</tr>
+<tr>
+  <td>Gen tonal balanced</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">31.938055</td>
+</tr>
+<tr>
+  <td>Gen tonal metric</td>
+  <td>srgb / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">28.195015</td>
+</tr>
+<tr>
+  <td>Gen tonal metric</td>
+  <td>full / common</td>
+  <td style="text-align:right">3331</td>
+  <td style="text-align:right">28.676896</td>
+</tr>
+<tr>
+  <td>Gen tonal metric</td>
+  <td>full / full-only</td>
+  <td style="text-align:right">482</td>
+  <td style="text-align:right">30.059155</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="verification">Verification</h2>
+<p>The actual JavaScript checks cover 8,192 random triangle round-trips per model/gamut (256 near black), 4,096 exact 16-bit round-trips, 1,025 neutrals, 720 vivid anchors, 1,200 interior Jacobians, and circular continuity. Also: 2,048 identical normalized tuples across gamuts, 2,048 untrained Adobe RGB linear round-trips, and 1,024 relative 100/300-nit identity checks per candidate.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native maximum embedding error</th>
+  <th style="text-align:right">Full maximum embedding error</th>
+  <th style="text-align:right">Native min determinant</th>
+  <th style="text-align:right">Full min determinant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>balanced</td>
+  <td style="text-align:right">1.253e-11</td>
+  <td style="text-align:right">4.292e-12</td>
+  <td style="text-align:right">0.195869</td>
+  <td style="text-align:right">0.0944331</td>
+</tr>
+<tr>
+  <td>metric</td>
+  <td style="text-align:right">9.92e-12</td>
+  <td style="text-align:right">1.299e-11</td>
+  <td style="text-align:right">0.059314</td>
+  <td style="text-align:right">0.0685555</td>
+</tr>
+</tbody>
+</table></div>
+<p>The Python training equations were separately compared against JavaScript, and the implicit inverse derivative was checked by finite differences. This verifies the training math, not the psychophysical validity of its synthetic targets.</p>
+<p>Inherited limitations: full is still the polygonized physical solid with relative Y&lt;=1. Canonical P3 remains explicitly outside that polygon at red; this pass does not claim new P3 support. High-magnitude hue continuation is retained and separately counted by the benchmark adapter. Source/white/neutral/hue definitions were not refitted.</p>
+<h2 id="records">Records</h2>
+<p>PLAN.md was committed before optimization. All five trial recipes and final coefficient arrays are retained in the downloadable review bundle; per-evaluation JSONL traces are preserved there and hashed in trials/registry.json. They are actual logs of this turn, not reconstructed logs from the previous interruptions. The differentiable grid is reproducible through cache.mjs and not required by the runtime library.</p>
+<p>Frozen selection:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;Frozen before the new scored ColorBench run&quot;,
+  &quot;timeUTC&quot;: &quot;2026-09-17T18:15:08.784134+00:00&quot;,
+  &quot;baseCommit&quot;: &quot;bf43587e620c97a660a6f4d3da76ae41472446f8&quot;,
+  &quot;human_training&quot;: [
+    &quot;COMBVD&quot;
+  ],
+  &quot;syntheticRuler&quot;: &quot;frozen HelmLab 1.0.0 GenSpace&quot;,
+  &quot;selectionBasis&quot;: &quot;joint training objective, 36-hue direct-runtime diagnostics and native hue-sheet review; not new held-out scores&quot;,
+  &quot;candidates&quot;: {
+    &quot;balanced&quot;: {
+      &quot;trial&quot;: &quot;g2-balanced&quot;,
+      &quot;sha256&quot;: &quot;109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8&quot;,
+      &quot;layers&quot;: 5
+    },
+    &quot;metric&quot;: {
+      &quot;trial&quot;: &quot;g2-metric&quot;,
+      &quot;sha256&quot;: &quot;11b2c1039943cf31925ec7df22f4071859bb8ed3d00e4df8e7cae6403e045f5c&quot;,
+      &quot;layers&quot;: 5
+    }
+  },
+  &quot;priorDataExposure&quot;: &quot;Earlier development used/scored these datasets; this is not pristine external validation.&quot;,
+  &quot;notSelected&quot;: {
+    &quot;g2-smooth&quot;: &quot;Stronger smoothing remains a retained trial, but gives up the full-gamut COMBVD gains of the chosen pair.&quot;,
+    &quot;g1-balanced&quot;: &quot;Earlier coarse-hue continuation.&quot;,
+    &quot;g1-metric&quot;: &quot;Earlier coarse-hue continuation.&quot;
+  }
+}
+</code></pre>
+<p>Pinned ColorBench: <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>. Pinned pool: <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>.</p>
+<h2 id="sampling-and-dark-edge-interpretation">Sampling and dark-edge interpretation</h2>
+<p>The diagnostic samples 72 hues at 5-degree intervals with a 2.5-degree offset. <strong>48 are absent from the 48-hue training grid; 24 coincide with it.</strong> The entire set is therefore not a held-out hue set. All path families also use finer parameter sampling and the actual inverse instead of the fit lookup.</p>
+<p>These fits redistribute the dark-side progression; they do not force every low-Level colour to get darker. In particular, the mean R=L=.25 output is lighter by the same GenSpace ruler than in 0.10 balanced. This is a real change of the colours, not merely a switch of rulers: both controls and candidates below are rerated identically.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Gamut</th>
+  <th>Candidate</th>
+  <th style="text-align:right">Mean Gen lightness / vivid Gen lightness at R=L=.25</th>
+  <th style="text-align:right">Mean Gen distance from black / vivid distance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>srgb</td>
+  <td>old-balanced</td>
+  <td style="text-align:right">0.090456</td>
+  <td style="text-align:right">0.162878</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>old-metric</td>
+  <td style="text-align:right">0.143584</td>
+  <td style="text-align:right">0.208764</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.165905</td>
+  <td style="text-align:right">0.228624</td>
+</tr>
+<tr>
+  <td>srgb</td>
+  <td>metric</td>
+  <td style="text-align:right">0.168416</td>
+  <td style="text-align:right">0.231230</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>old-balanced</td>
+  <td style="text-align:right">0.088250</td>
+  <td style="text-align:right">0.155433</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>old-metric</td>
+  <td style="text-align:right">0.148674</td>
+  <td style="text-align:right">0.205875</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>balanced</td>
+  <td style="text-align:right">0.170004</td>
+  <td style="text-align:right">0.224672</td>
+</tr>
+<tr>
+  <td>full</td>
+  <td>metric</td>
+  <td style="text-align:right">0.172077</td>
+  <td style="text-align:right">0.226455</td>
+</tr>
+</tbody>
+</table></div>
+<p>Neither diagnostic is the definition of Level. The new balanced and metric versions are closer to each other on this dark-edge progress measure; human preference is still a separate question. Blue and cyan should be inspected against both old controls rather than declared universally repaired.</p>
+<p>The balanced candidate has slightly larger fixed-Reach neutral-exchange CV than its same-role predecessor (native and full), despite smaller mean adjacent step jumps. Its full-gamut black-family mean total retreat magnitude also increases slightly even though the number of affected paths decreases. These are counterexamples to a blanket all-metrics-improved claim. The raw per-path and worst-step data remain available.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

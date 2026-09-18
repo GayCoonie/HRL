@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Relative-domain ColorBench rerun · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="REPORT.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#combvd">COMBVD</a></li><li><a href="#100-versus-300-nits">100 versus 300 nits</a></li><li><a href="#scope">Scope</a></li></ol></details><h1 id="relative-domain-colorbench-rerun">Relative-domain ColorBench rerun</h1>
+<p>Run commit: <code>46c8718b913065eb17de6466219841c8284e7f7e</code>. ColorBench <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code>. Pool <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>.</p>
+<p>No observer refit was performed. The old checkpoints remain unchanged. New full-domain coordinates use regenerated path maps on the physical chromaticity cone with 0 &lt;= relative Y &lt;= 1.</p>
+<p><strong>† marks explicitly clipped inputs; ‡ marks incomplete strict support.</strong> Missing results are N/A, not zero. The high-magnitude hue continuation is separately counted in the JSON audits. No overall rank is claimed for a clipped-input pipeline.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Dataset</th>
+  <th style="text-align:right">0.8A old</th>
+  <th style="text-align:right">C1 old</th>
+  <th style="text-align:right">0.8A corrected/clip</th>
+  <th style="text-align:right">C1 corrected/clip</th>
+  <th style="text-align:right">C1 corrected/strict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>hung_berns</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">3.397949 †</td>
+  <td style="text-align:right">3.397949 †</td>
+  <td style="text-align:right">N/A</td>
+</tr>
+<tr>
+  <td>ebner_fairchild</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+  <td style="text-align:right">2.242869</td>
+</tr>
+<tr>
+  <td>munsell</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+  <td style="text-align:right">3.816220</td>
+</tr>
+<tr>
+  <td>xiao_unique_hues</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+  <td style="text-align:right">1.742566</td>
+</tr>
+<tr>
+  <td>osa_ucs_1974</td>
+  <td style="text-align:right">0.309323</td>
+  <td style="text-align:right">0.300851</td>
+  <td style="text-align:right">0.346812</td>
+  <td style="text-align:right">0.334980</td>
+  <td style="text-align:right">0.334980</td>
+</tr>
+<tr>
+  <td>bfd</td>
+  <td style="text-align:right">29.899816</td>
+  <td style="text-align:right">29.876351</td>
+  <td style="text-align:right">39.297806</td>
+  <td style="text-align:right">40.195463</td>
+  <td style="text-align:right">40.195463</td>
+</tr>
+<tr>
+  <td>leeds</td>
+  <td style="text-align:right">27.364162</td>
+  <td style="text-align:right">27.479856</td>
+  <td style="text-align:right">36.795001</td>
+  <td style="text-align:right">34.710625</td>
+  <td style="text-align:right">34.710625</td>
+</tr>
+<tr>
+  <td>witt</td>
+  <td style="text-align:right">23.520950</td>
+  <td style="text-align:right">22.991591</td>
+  <td style="text-align:right">31.369154</td>
+  <td style="text-align:right">27.310520</td>
+  <td style="text-align:right">27.310520</td>
+</tr>
+<tr>
+  <td>rit</td>
+  <td style="text-align:right">30.503707</td>
+  <td style="text-align:right">30.205857</td>
+  <td style="text-align:right">37.327361</td>
+  <td style="text-align:right">37.010658</td>
+  <td style="text-align:right">37.010658</td>
+</tr>
+<tr>
+  <td>macadam</td>
+  <td style="text-align:right">32.806409</td>
+  <td style="text-align:right">31.680924</td>
+  <td style="text-align:right">38.041039</td>
+  <td style="text-align:right">36.941120</td>
+  <td style="text-align:right">36.941120</td>
+</tr>
+<tr>
+  <td>macadam1942</td>
+  <td style="text-align:right">0.344632 ‡</td>
+  <td style="text-align:right">0.322756 ‡</td>
+  <td style="text-align:right">0.336006</td>
+  <td style="text-align:right">0.357852</td>
+  <td style="text-align:right">0.357852</td>
+</tr>
+<tr>
+  <td>luo_rigg_ellipses</td>
+  <td style="text-align:right">0.287903 ‡</td>
+  <td style="text-align:right">0.272802 ‡</td>
+  <td style="text-align:right">0.299751</td>
+  <td style="text-align:right">0.292293</td>
+  <td style="text-align:right">0.292293</td>
+</tr>
+<tr>
+  <td>alder1982</td>
+  <td style="text-align:right">0.314055 ‡</td>
+  <td style="text-align:right">0.313812 ‡</td>
+  <td style="text-align:right">0.338571</td>
+  <td style="text-align:right">0.325327</td>
+  <td style="text-align:right">0.325327</td>
+</tr>
+<tr>
+  <td>regan_1994_cvd_ellipses</td>
+  <td style="text-align:right">0.303371</td>
+  <td style="text-align:right">0.253079</td>
+  <td style="text-align:right">0.332464</td>
+  <td style="text-align:right">0.301323</td>
+  <td style="text-align:right">0.301323</td>
+</tr>
+<tr>
+  <td>koenderink_2026_3d_metric_field</td>
+  <td style="text-align:right">0.389347</td>
+  <td style="text-align:right">0.367715</td>
+  <td style="text-align:right">0.398782</td>
+  <td style="text-align:right">0.389297</td>
+  <td style="text-align:right">0.389297</td>
+</tr>
+<tr>
+  <td>brown_1957_12obs_ellipsoids</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">N/A</td>
+  <td style="text-align:right">0.390320 †</td>
+  <td style="text-align:right">0.410117 †</td>
+  <td style="text-align:right">0.458824 ‡</td>
+</tr>
+<tr>
+  <td>wyszecki_fielder_1971_ellipsoids</td>
+  <td style="text-align:right">0.369105 ‡</td>
+  <td style="text-align:right">0.356820 ‡</td>
+  <td style="text-align:right">0.375670 †</td>
+  <td style="text-align:right">0.362710 †</td>
+  <td style="text-align:right">0.365875 ‡</td>
+</tr>
+<tr>
+  <td>brown_macadam_1949_ellipsoids</td>
+  <td style="text-align:right">0.367528 ‡</td>
+  <td style="text-align:right">0.333052 ‡</td>
+  <td style="text-align:right">0.372662 †</td>
+  <td style="text-align:right">0.372421 †</td>
+  <td style="text-align:right">0.344567 ‡</td>
+</tr>
+<tr>
+  <td>huang_2012_cielab_ellipses</td>
+  <td style="text-align:right">0.291347</td>
+  <td style="text-align:right">0.306295</td>
+  <td style="text-align:right">0.328129</td>
+  <td style="text-align:right">0.330894</td>
+  <td style="text-align:right">0.330894</td>
+</tr>
+<tr>
+  <td>berns_1991_rit_dupont_tolerance_vectors</td>
+  <td style="text-align:right">0.400739</td>
+  <td style="text-align:right">0.394521</td>
+  <td style="text-align:right">0.427782</td>
+  <td style="text-align:right">0.418826</td>
+  <td style="text-align:right">0.418826</td>
+</tr>
+<tr>
+  <td>hong_2025_ellipsoids</td>
+  <td style="text-align:right">0.283809</td>
+  <td style="text-align:right">0.280531</td>
+  <td style="text-align:right">0.317497</td>
+  <td style="text-align:right">0.301022</td>
+  <td style="text-align:right">0.301022</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="combvd">COMBVD</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Unweighted</th>
+  <th style="text-align:right">Traditional weighted</th>
+  <th style="text-align:right">Retained</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>legacy-parent-full-300-reject</td>
+  <td style="text-align:right">29.608930</td>
+  <td style="text-align:right">28.561281</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>legacy-candidate-full-300-reject</td>
+  <td style="text-align:right">29.565423</td>
+  <td style="text-align:right">28.447720</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>relative-parent-full-300-clip</td>
+  <td style="text-align:right">38.922328</td>
+  <td style="text-align:right">37.478234</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>relative-candidate-full-300-clip</td>
+  <td style="text-align:right">39.597921</td>
+  <td style="text-align:right">37.221658</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>relative-candidate-full-100-clip</td>
+  <td style="text-align:right">39.597921</td>
+  <td style="text-align:right">37.221658</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>relative-candidate-full-300-reject</td>
+  <td style="text-align:right">39.597921</td>
+  <td style="text-align:right">37.221658</td>
+  <td style="text-align:right">3813/3813</td>
+</tr>
+<tr>
+  <td>relative-candidate-srgb-300-clip</td>
+  <td style="text-align:right">28.780616</td>
+  <td style="text-align:right">27.819289</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+<tr>
+  <td>relative-candidate-srgb-100-clip</td>
+  <td style="text-align:right">28.780616</td>
+  <td style="text-align:right">27.819289</td>
+  <td style="text-align:right">3331/3813</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="100-versus-300-nits">100 versus 300 nits</h2>
+<p>Both contexts were actually run on the same relative XYZ inputs. The existing relative calibration has no newly fitted absolute-luminance response; identical results are therefore a unit-invariance check, not evidence that either white luminance is better.</p>
+<pre><code class="language-json">{
+  &quot;full&quot;: {
+    &quot;maximum_score_difference&quot;: 0.0,
+    &quot;combvd_difference&quot;: 0.0,
+    &quot;meaning&quot;: &quot;Relative calibration is scale-invariant. This does not empirically identify an optimal white luminance.&quot;
+  },
+  &quot;srgb&quot;: {
+    &quot;maximum_score_difference&quot;: 0.0,
+    &quot;combvd_difference&quot;: 0.0,
+    &quot;meaning&quot;: &quot;Relative calibration is scale-invariant. This does not empirically identify an optimal white luminance.&quot;
+  }
+}
+</code></pre>
+<h2 id="scope">Scope</h2>
+<p>Only the five scored generation and sixteen scored measurement columns were evaluated. Appearance diagnostics, ordinal HumanFB, application scenarios, and unscored physics gates were excluded. Separate numerical round-trip/unit tests validate the implementation.</p>
+<p>The original COMBVD, hue-field fitting, and inherited development-data contamination still apply. Newly admitted stimuli may be outside the hue model’s original fitted magnitude interval; continuation is not additional observer evidence.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

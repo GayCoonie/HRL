@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Numerical limits of the frozen continuations · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="NUMERICAL-LIMITS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#random-inverse-checks">Random inverse checks</a></li><li><a href="#conditioning-must-be-compared-on-the-same-coordinates">Conditioning must be compared on the same coordinates</a></li><li><a href="#visual-inspection">Visual inspection</a></li></ol></details><h1 id="numerical-limits-of-the-frozen-continuations">Numerical limits of the frozen continuations</h1>
+<p>The frozen records from run 35300703792 were independently loaded and tested in the local Node 22.16.0 runtime. Their byte hashes match the selected records. This is reproduction of the implementation, not independent perceptual validation or another fit.</p>
+<h2 id="random-inverse-checks">Random inverse checks</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native maximum round-trip embedding error</th>
+  <th style="text-align:right">Full maximum error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>balanced</td>
+  <td style="text-align:right">1.9629409209187543e-11</td>
+  <td style="text-align:right">5.3088644591525735e-12</td>
+</tr>
+<tr>
+  <td>gentle</td>
+  <td style="text-align:right">9.01552443810516e-12</td>
+  <td style="text-align:right">5.451666895694984e-12</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both candidates passed 8,192 random round-trips per gamut, 4,096 exact 16-bit round-trips per gamut, and all declared anchor, hue-label, shared-bank and untrained-third-gamut checks. The training-coordinate equations were compared with JavaScript on 2,048 inputs per candidate: maximum difference 5.684341886080802e-14 for both; the implicit inverse derivative passed its numerical gradient check.</p>
+<h2 id="conditioning-must-be-compared-on-the-same-coordinates">Conditioning must be compared on the same coordinates</h2>
+<p>The original random verification stream advanced its seed between models and gamuts. Its maximum condition numbers therefore used different points. They are retained in verification.json as sampling receipts, but must not be interpreted as a same-point comparison or evidence of a gamut-specific learned-map defect. In particular, the normalized R/L map is identical across gamuts; only the source geometry differs. This corrects the earlier wording of this note.</p>
+<p>A new explicit stencil uses the same 14,378 normalized H,R,L points for the parent and both candidates. It includes low-Level and near-boundary points. Both source and destination derivatives are transformed to the equilateral x,z basis. All sampled determinants are positive. This is a finite-difference audit of the learned coordinate map, not the gamut-dependent XYZ Jacobian or an observer-rated contour.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Median condition</th>
+  <th style="text-align:right">95th percentile</th>
+  <th style="text-align:right">99th percentile</th>
+  <th style="text-align:right">Maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Parent 0.11 balanced</td>
+  <td style="text-align:right">2.62051</td>
+  <td style="text-align:right">103.17651</td>
+  <td style="text-align:right">1200.72745</td>
+  <td style="text-align:right">183646.27529</td>
+</tr>
+<tr>
+  <td>Refined balanced</td>
+  <td style="text-align:right">2.49337</td>
+  <td style="text-align:right">57.33672</td>
+  <td style="text-align:right">1776.63040</td>
+  <td style="text-align:right">122404.54182</td>
+</tr>
+<tr>
+  <td>Lighter regularization</td>
+  <td style="text-align:right">2.52745</td>
+  <td style="text-align:right">77.35054</td>
+  <td style="text-align:right">2246.03527</td>
+  <td style="text-align:right">216755.74837</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The conditioning tail remains severe near some dark/boundary regions.</strong> Both new candidates improve the median and 95th percentile, but worsen the 99th percentile. Balanced reduces the sampled maximum, while the alternate increases it. Positive determinant and accurate round-trips do not erase this limitation. The maximum for balanced occurs at normalized source H=269, R=0.000999, L=0.001; the parent and alternate maxima occur at H=216, R=0.04995, L=0.05. These are source coordinates, not displayed final HRL addresses.</p>
+<p>Executable audit: conditioning.mjs. Exact sample grid, hashes, determinants and worst locations: results/conditioning-same-grid.json. The denser fixed grid is deliberately more demanding than the random verification sample. Its numbers are not directly comparable to the earlier raw-R/L random-sample condition numbers.</p>
+<h2 id="visual-inspection">Visual inspection</h2>
+<p>A native preview of the exact frozen records inspected H=240,255,263,269,273,275,277,281,293,330. The gray-to-blue compression is less concentrated in the new sheets around 263 and 269 degrees. A distinctly stronger chromatic band near the lower boundary remains at some narrow deep-blue hues around 273-277 degrees. This is a visual reading of an sRGB preview, not a measured user preference or proof of a particular cause. The published comparison exposes these neighbors explicitly.</p>
+<p>No coefficients were changed during these checks. Frozen hashes: balanced <code>159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605</code>; gentle <code>d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0</code>.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

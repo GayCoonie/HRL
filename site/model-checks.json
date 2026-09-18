@@ -1,0 +1,21 @@
+{
+  "release": "2.0.0-beta.1",
+  "coefficientHashVerified": true,
+  "boundaryHashVerified": true,
+  "release1NameUnchanged": true,
+  "refitting": false,
+  "profiles": {
+    "srgb": {
+      "points": 69,
+      "maximumXYZDifferenceFromFrozenMetric": 0,
+      "maxEmbeddingRoundTrip": 2.3533205807278903e-12,
+      "ceilingEventVerified": true
+    },
+    "full": {
+      "points": 69,
+      "maximumXYZDifferenceFromFrozenMetric": 0,
+      "maxEmbeddingRoundTrip": 2.7480433940601247e-12,
+      "ceilingEventVerified": true
+    }
+  }
+}

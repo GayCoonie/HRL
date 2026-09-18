@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL v2 Beta 1 · HRL</title><link rel="stylesheet" href="../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="index.html">v2 Beta 1</a><a href="beta1.html">Picker</a><a href="beta1-notes.html" aria-current="page">Definition</a><a href="benchmarks.html">Benchmarks</a><a href="../index.html">Release 1</a><a href="archive.html">Archive</a><a href="../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="HRL_v2_Beta_1.md" download>Download original Markdown</a> · <a href="../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#definition-construction-evidence-and-the-road-from-r0-and-release-1">Definition, construction, evidence, and the road from r0 and Release 1</a></li><li><a href="#1-what-hrl-is-trying-to-represent">1. What HRL is trying to represent</a></li><li><a href="#2-the-public-coordinates-and-their-meanings">2. The public coordinates and their meanings</a></li><li><a href="#3-why-the-solid-really-is-a-regular-bicone">3. Why the solid really is a regular bicone</a></li><li><a href="#4-what-is-common-across-gamuts-and-what-is-not">4. What is common across gamuts, and what is not</a></li><li><a href="#5-the-full-physical-reference-boundary">5. The full physical-reference boundary</a></li><li><a href="#6-hue-identity-angular-spacing-and-inherited-evidence">6. Hue identity, angular spacing, and inherited evidence</a></li><li><a href="#7-from-physical-color-to-the-normalized-source-chart">7. From physical color to the normalized source chart</a></li><li><a href="#8-the-seven-shared-tonal-coupling-layers">8. The seven shared tonal coupling layers</a></li><li><a href="#9-the-bounded-dark-side-continuation">9. The bounded dark-side continuation</a></li><li><a href="#10-black-white-and-neutral-exchange-operations">10. Black, white, and neutral-exchange operations</a></li><li><a href="#11-reference-white-luminance-units-and-the-ceiling">11. Reference white, luminance units, and the ceiling</a></li><li><a href="#12-ordinary-import-mapping-and-its-audit-trail">12. Ordinary import mapping and its audit trail</a></li><li><a href="#13-pseudo-rgb-display-previews-and-integer-packing">13. Pseudo-RGB, display previews, and integer packing</a></li><li><a href="#14-what-was-actually-fitted-for-this-checkpoint">14. What was actually fitted for this checkpoint</a></li><li><a href="#15-the-measurements-with-populations-kept-separate">15. The measurements, with populations kept separate</a></li><li><a href="#16-why-metric-leaning-does-not-mean-best-at-everything">16. Why “metric-leaning” does not mean “best at everything”</a></li><li><a href="#17-relation-to-r0-the-original-appearance-reference">17. Relation to r0: the original appearance reference</a></li><li><a href="#18-relation-to-r15-d-release-1">18. Relation to R15-D Release 1</a></li><li><a href="#19-the-intervening-v2-stages-without-erasing-them">19. The intervening v2 stages, without erasing them</a></li><li><a href="#20-using-the-beta-1-reference-implementation">20. Using the Beta 1 reference implementation</a></li><li><a href="#21-exact-identity-and-reproduction">21. Exact identity and reproduction</a></li><li><a href="#22-primary-implementation-and-evidence-sources">22. Primary implementation and evidence sources</a></li></ol></details><h1 id="hrl-v2-beta-1">HRL v2 Beta 1</h1>
+<h2 id="definition-construction-evidence-and-the-road-from-r0-and-release-1">Definition, construction, evidence, and the road from r0 and Release 1</h2>
+<p><strong>Publication date:</strong> 18 September 2026<br />
+<strong>Release identifier:</strong> <code>2.0.0-beta.1</code><br />
+<strong>Selected definition:</strong> the <strong>metric-leaning / <code>metric-b2</code></strong> checkpoint of HRL 0.13 boundary-and-tonal research<br />
+<strong>Default realization:</strong> native sRGB; a full physical-reference realization is also supplied.</p>
+<p><a href="beta1.html">Open Beta 1</a> · <a href="default.json">Release manifest</a> · <a href="benchmarks.html">Benchmarks</a> · <a href="boundary-tonal.html">Preserved comparison</a> · <a href="archive.html">Research archive</a> · <a href="../library.html">All files</a></p>
+<p>This is the first named beta release of the current HRL v2 construction. It is a <strong>promotion of an existing, frozen color-space definition, not another numerical refit</strong>. Its coordinates, learned coefficients, source charts, boundary, and existing benchmark results are those of the selected metric-leaning checkpoint. The new public entry point, documentation, and navigation make that choice explicit. Release 1 remains available and is not silently redefined.</p>
+<p>This document distinguishes the public coordinate contract, the physical realization of those coordinates, the learned transformations, input mapping, and empirical evidence. Those are related, but they are not interchangeable. In particular, a well-behaved inverse is not an observer experiment; a boundary repair is not a hue refit; and a coordinate called Level is not automatically luminance.</p>
+<h2 id="1-what-hrl-is-trying-to-represent">1. What HRL is trying to represent</h2>
+<p>HRL means <strong>Hue, Reach, Level</strong>. It describes a color using its position around a hue circle and its location in a triangle whose corners are <strong>black, white, and the vivid endpoint of that hue</strong>. Across hues, those triangles form a regular bicone.</p>
+<p>The project is not trying to make every gamut look like a clipped copy of one monitor. Its geometric contract is common: zero-light black, D65 reference white, the same public coordinate ranges, and the same regular solid. Each realization supplies its own vivid boundary and its own normalized physical chart. Beta 1 then applies <strong>one shared learned Reach/Level transformation</strong> to those charts. Native sRGB is a genuine native construction, not the full reference solid clipped to an sRGB picture. [1, 2, 3]</p>
+<p>The perceptual ambition is to make chromaticness and tonal progression useful together: to preserve recognizable hue families, give colors meaningful positions between black/white/vivid, and support a color-difference distance in the same solid. This ambition does not establish perfect perceptual uniformity. Beta 1 has measured strengths and remaining tradeoffs, especially in difficult blue sheets and in the tails of its coordinate conditioning.</p>
+<h2 id="2-the-public-coordinates-and-their-meanings">2. The public coordinates and their meanings</h2>
+<p>A normalized HRL coordinate is an object <code>{H, R, L}</code> satisfying:</p>
+<pre><code class="language-text">H is finite, in degrees, interpreted cyclically modulo 360.
+0 &lt;= R &lt;= L &lt;= 1.
+</code></pre>
+<p><strong>Hue, H</strong>, is the public angular label. It is not an HSV angle, a wavelength, or a raw chromaticity-plane angle. The same numerical H does not become a new color identity merely because a different display gamut is selected.</p>
+<p><strong>Reach, R</strong>, is the chromaticness coordinate: distance away from the neutral axis in the prescribed solid, scaled so the vivid endpoint has Reach one. The public term should not be replaced with the internal ratio <code>R/L</code>.</p>
+<p><strong>Level, L</strong>, is the coordinate of absence of blackness, or inverse blackness/brilliance in the project's terminology. It is <strong>not</strong> relative luminance Y, not CIELAB lightness for arbitrary chromatic colors, and not the first coordinate of HelmLab GenSpace. The word “Level” describes its role in HRL, not an identity with another model's scalar. [2, 4]</p>
+<p>The associated shares are:</p>
+<pre><code class="language-text">chromaticness  R = R
+whiteness      W = L - R
+blackness      K = 1 - L
+
+R + W + K = 1
+</code></pre>
+<p>These are barycentric shares in HRL's triangle. They are nonnegative throughout its legal domain. They are <strong>not a recipe for mixing fixed XYZ stimuli, paint, light, or display channels</strong>. The physical hue sheet can curve as these shares change.</p>
+<p>The internal quantity <code>U = R/L</code>, defined as zero at black for computation, is the vivid fraction of the nonblack share. It is useful for invertible transformations; it is not what public Reach means. At fixed R, changing L changes U. At fixed U, reducing L reduces both R and L.</p>
+<p>The corners of every hue triangle are:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Corner</th>
+  <th style="text-align:right">R</th>
+  <th style="text-align:right">L</th>
+  <th style="text-align:right">W</th>
+  <th style="text-align:right">K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Black</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">1</td>
+</tr>
+<tr>
+  <td>White</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>Vivid</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">1</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>All hue labels meet on the neutral axis, <code>R=0</code>. There H is a bookkeeping choice, not a chromatic distinction. A gray or black round trip should therefore be judged by its physical color or embedding, not by demanding recovery of an otherwise unobservable hue label.</p>
+<h2 id="3-why-the-solid-really-is-a-regular-bicone">3. Why the solid really is a regular bicone</h2>
+<p>For a single hue, use equilateral coordinates:</p>
+<pre><code class="language-text">x = (sqrt(3)/2) R
+z = L - R/2
+</code></pre>
+<p>Black is <code>(0,0)</code>, white is <code>(0,1)</code>, and vivid is <code>(sqrt(3)/2,1/2)</code>. Every side has length one. Rotating the triangle about its black–white axis gives the regular bicone.</p>
+<p>The public Cartesian embedding, in the component order used by the implementation, is:</p>
+<pre><code class="language-text">theta = H * pi/180
+E(H,R,L) = [L - R/2,
+            (sqrt(3)/2) R cos(theta),
+            (sqrt(3)/2) R sin(theta)]
+</code></pre>
+<p>The HRL distance is ordinary Euclidean chord distance <strong>after this embedding</strong>:</p>
+<pre><code class="language-text">d(a,b) = norm(E(a) - E(b))
+</code></pre>
+<p>It is not Euclidean distance in the three raw numbers H, R, L. Nor is it distance in an orthogonal R–L rectangle, a shortest path around the surface, or a substituted external color-difference formula. At a fixed hue its squared distance is <code>dR² - dR*dL + dL²</code>. For arbitrary hues, direct expansion gives:</p>
+<pre><code class="language-text">d² = dR² - dR*dL + dL² + 3 R1 R2 sin²((theta1-theta2)/2)
+</code></pre>
+<p>This identity is a derivation from the embedding, not an extra fit. It makes the cyclic hue behavior and the disappearance of hue distance at zero Reach explicit. The black–white distance is one in normalized units. A scale factor can change displayed distance units without changing the geometry. [1, 5]</p>
+<h2 id="4-what-is-common-across-gamuts-and-what-is-not">4. What is common across gamuts, and what is not</h2>
+<p>Beta 1's standard public factory offers <code>srgb</code> and <code>full</code>.</p>
+<p><strong>Native sRGB</strong> uses the sRGB cube and its own actual vivid edge intersections with the inherited hue family. For a legal native coordinate, its RGB output belongs to that cube up to numerical tolerance. It is not obtained by drawing the full-domain triangle and clipping the picture.</p>
+<p><strong>Full</strong> uses the declared physical chromaticity cone, bounded by a reference-relative luminance ceiling. Its hue triangle has the same abstract shape and corners in HRL coordinates, but its vivid endpoint normally differs physically from the sRGB endpoint. The “full” name refers to this explicitly bounded reference solid, not unbounded intensity or all possible visual contexts. [2, 6]</p>
+<p>There are two different cross-gamut operations:</p>
+<ul>
+<li>To preserve a <strong>stimulus</strong>, convert through XYZ: <code>q2 = model2.fromXYZ(model1.toXYZ(q1))</code>. Use <code>importXYZ</code> rather than <code>fromXYZ</code> when mapping events matter. The target may be unable to represent the original stimulus exactly.</li>
+<li>To preserve a <strong>relative position in the HRL solid</strong>, reuse <code>{H,R,L}</code> in the other realization. This transports the coordinate relationship to that realization's boundary; it generally changes XYZ.</li>
+</ul>
+<p>Those operations should not be conflated. Identical normalized coordinates do not promise identical physical colors across different vivid boundaries.</p>
+<p>Black is zero light in both realizations. Relative D65 white is the same numerical XYZ:</p>
+<pre><code class="language-text">[0.9504559270516716, 1, 1.0890577507598787]
+</code></pre>
+<p>The one learned coefficient bank is also common. The physical source chart is not. This is how the project can retain both a common rule and real gamut-specific boundaries without hiding a learned “which gamut?” switch in the tonal fit. The underlying research code also explores additional RGB descriptors; that does not make every such descriptor a supported native Beta 1 profile.</p>
+<h2 id="5-the-full-physical-reference-boundary">5. The full physical-reference boundary</h2>
+<p>The full reference domain is the cone of nonnegative spectral mixtures under the declared CIE 1931 2-degree observer representation, intersected with:</p>
+<pre><code class="language-text">0 &lt;= relative Y &lt;= 1
+</code></pre>
+<p>X and Z are <strong>not independently capped at one</strong>. This is an emissive reference solid, not a spectral-reflectance or object-color solid. A chromaticity can be physically admitted while requiring unusually large X or Z at a chosen Y.</p>
+<p>The repaired boundary is built from all <strong>471 tabulated 1-nm rows from 360 through 830 nm</strong>. Its unsimplified convex hull has <strong>158 vertices</strong> and includes the line-of-purples closure. “All 471 rows” and “158 hull vertices” describe different things: interior or collinear tabulated directions need not become separate convex-hull corners. [2, 7]</p>
+<p>The exactness claim is limited and meaningful. With <strong>piecewise-linear interpolation of the XYZ color-matching functions</strong>, an interpolated wavelength lies in the cone generated by neighboring tabulated vectors, and a nonnegative spectral mixture lies in the same cone. The hull therefore covers that declared numerical representation. It is not a claim that a finite table exactly describes every observer's biological sensitivity.</p>
+<p>The source is the frozen <code>colour-science 0.4.7</code> copy of the CIE table. The original repair record identifies official dataset DOI <code>10.25039/CIE.DS.xvudnb9b</code>, but explicitly says direct retrieval of the official CSV failed during preparation. This publication does not turn that into a fresh official-byte comparison. The source-table SHA-256 is preserved in the repair evidence. [7]</p>
+<h3 id="boundary-transport-is-not-a-fresh-hue-experiment">Boundary transport is not a fresh hue experiment</h3>
+<p>The pre-repair full chart is transported to the repaired cone at fixed relative Y, fixed direction from D65 in u′v′, and fixed fraction of the radial distance to the boundary. Let:</p>
+<pre><code class="language-text">u' = 4X / (X + 15Y + 3Z)
+v' = 9Y / (X + 15Y + 3Z)
+</code></pre>
+<p>The transport keeps the D65-relative direction and the boundary-normalized radius, while allowing the physical endpoint to move. Its geometric angle is <strong>not public HRL Hue</strong>. The inherited hue labels travel with the chart; the repair does not assert that straight u′v′ rays are perceptually constant hue. [2, 7]</p>
+<p>The boundary-only control on the comparison page retains the old 0.12 coefficients. It isolates this physical change from the subsequent tonal fitting. Its native-sRGB output is unchanged. Its full-domain output can change because the cone changed.</p>
+<h2 id="6-hue-identity-angular-spacing-and-inherited-evidence">6. Hue identity, angular spacing, and inherited evidence</h2>
+<p>Three layers must be distinguished: a physical color's position, its constant-hue-family label, and the angular spacing assigned to that label around HRL's circle.</p>
+<p>The v2 lineage attached its hue labels to the <strong>actual 1,530 released sRGB vivid-edge angles</strong> recovered through the complete Release 1 API. The earlier accepted calibration table alone was not treated as sufficient: Release 1 has further angular transforms. <code>data/release1-angles.json</code> and <code>expandReleaseAngles</code> preserve the later, executable extraction. The older observer-source audit contains historical “not yet executed here” statements; those dated statements should not overwrite the subsequent extraction record. [8, 9]</p>
+<p>The current source uses the OPAL-era <code>hue-field-0.6.json</code> family. Beta 1 does not refit that field or add another angular-density remap. Its checkpoint has <code>ring_logits: null</code>; the seven tonal layers preserve the source hue label. That is a claim about this continuation, <strong>not</strong> a claim that all v2 interior hue sheets are identical to Release 1 or r0.</p>
+<p>The inherited source audit distinguishes direct constant-hue tables, Munsell renotation relationships, adaptation assumptions, and problematic rows. Examples include Ebner–Fairchild targets, Hung–Berns loci, and a declared Munsell subset. In the Hung–Berns material, inconsistent magenta-red variable-lightness rows were preserved but quarantined rather than silently repaired. Literature illustrations were not fabricated into exact numerical matches. [9, 10]</p>
+<p>These datasets constrain relationships among colors; they do not uniquely determine angular density, every unsampled hue trajectory, or the metric on the bicone. Above the inherited field's fitted magnitude range, the corrected full construction holds the last fitted angular slice. That is a declared <strong>continuation rule</strong>, not evidence from new high-magnitude observers. Beta 1 inherits this limitation. [6]</p>
+<h2 id="7-from-physical-color-to-the-normalized-source-chart">7. From physical color to the normalized source chart</h2>
+<p>The delivered model is a composition, not a single three-line replacement for RGB. Its stored data are part of its definition.</p>
+<p>Conceptually, conversion proceeds as:</p>
+<pre><code class="language-text">physical XYZ
+  -&gt; gamut-specific base hue chart
+  -&gt; inherited monotone source atlas
+  -&gt; shared invertible tonal transformation
+  -&gt; public HRL
+</code></pre>
+<p>For full-domain XYZ, the repaired-boundary transport is included at the physical/source interface. The opposite direction reverses the same construction. Input mapping, when necessary, happens before this reversible part.</p>
+<p>The inherited base charts describe different physical solids. The source atlas provides normalized positions on each chart. It uses path constructions originally informed by the project's auxiliary brightness/chromatic-content readouts and the gamut's <strong>own</strong> vivid endpoint. The current model is therefore <strong>not simply “GenSpace with new axes”</strong>. GenSpace is important in the later fitting losses, but earlier OPAL-derived source structure remains in the executable chain. [3, 10]</p>
+<p>For clarity, write the source atlas's internal nonblack ratio as <code>s</code>, and its initial tonal parameter as <code>l</code>. The base parameter is obtained using the inherited inverse-normalized-L* curve:</p>
+<pre><code class="language-text">Q(l) = 2700*l/24389                for l &lt;= 0.08
+       ((25*l + 4)/29)^3          otherwise
+
+baseL = Q(l)
+baseR = s * Q(l)
+</code></pre>
+<p>The monotone atlas then supplies a source Level and a source Reach ratio. In the implementation's order:</p>
+<pre><code class="language-text">L_source = A_level(H, s, l)
+U_source = A_reach(H, L_source, s)
+R_source = L_source * U_source
+</code></pre>
+<p>The inverse first inverts the Reach atlas for s, then the Level atlas for l. The selected source uses the C1 atlas implementation. These interpolation rules and frozen tables are part of the reproducible model, not decorative approximations of a different continuous definition. [3, 11]</p>
+<p>On neutral colors, the later tonal map includes a small fixed neutral shift. Thus the complete public neutral curve must not be advertised as exactly unshifted CIE L*. If <code>F</code> is the unit warp below and <code>n</code> is the fixed shift, its inherited neutral relation is <code>Y = Q(F(L, -n))</code>. The new metric-leaning fit does not optimize this neutral progression.</p>
+<h2 id="8-the-seven-shared-tonal-coupling-layers">8. The seven shared tonal coupling layers</h2>
+<p>The central learned map is easiest to understand in <code>(U,L)</code>, with <code>U=R/L</code>. This is an internal parameterization of the same triangle.</p>
+<p>Define the endpoint-preserving unit warp:</p>
+<pre><code class="language-text">F(x,t) = x / [x + (1-x) exp(-t)]
+F(0,t) = 0
+F(1,t) = 1
+F_inverse(x,t) = F(x,-t)
+</code></pre>
+<p>For interior x this is a translation of log-odds. The runtime uses algebraically equivalent branches for numerical stability. Define also:</p>
+<pre><code class="language-text">B(t) = 8 tanh(t/8)
+</code></pre>
+<p>Each layer has five periodic coefficient functions <code>c0(H)</code> through <code>c4(H)</code>. Each is a constant plus cosine/sine pairs through the sixth harmonic:</p>
+<pre><code class="language-text">c(H) = a0 + sum(k=1..6) [ak cos(k theta) + bk sin(k theta)]
+</code></pre>
+<p>Starting from source U and L, the forward map first applies the fixed neutral shift:</p>
+<pre><code class="language-text">L = F(L_source, 0.02686567756674324)
+</code></pre>
+<p>It then applies seven layers in stored order:</p>
+<pre><code class="language-text">L = F(L, B(U * [c0 + c1*(2U-1)]))
+v = 2L - 1
+U = F(U, B(c2 + c3*v + c4*v*v))
+</code></pre>
+<p>The second update uses the <strong>new</strong> L. To invert a layer, undo its U update using the current L, then undo its L update using the recovered U. Traverse layers in reverse order and undo the neutral shift last. No numerical XYZ interpolation is inserted into these coupling equations. [11, 12]</p>
+<p>The checkpoint contains <strong>one bank of seven layers, five functions per layer, thirteen Fourier coefficients per function</strong>: 455 coupling coefficients. There is no separately trained native bank and full bank in this release. Historic records that say <code>gamut_calibration: separate</code> belong to earlier stages and should not be confused with this checkpoint's <code>shared</code> field.</p>
+<p>The transformations preserve the triangle boundaries and the three corners. They can, and intentionally do, change progress along a boundary. “Preserves an arm” means the same endpoint-connected boundary remains the boundary; it does not mean every interior parameter value on that arm has the same XYZ as before fitting.</p>
+<h2 id="9-the-bounded-dark-side-continuation">9. The bounded dark-side continuation</h2>
+<p>After the seven coupling layers, a further shared dark-curve transformation acts at the same U. Its amount is:</p>
+<pre><code class="language-text">a(H,U) = 0.85 * sigmoid(d(H)) * U²
+</code></pre>
+<p>Here <code>d(H)</code> is another periodic Fourier series, through the third harmonic, with seven stored coefficients. Define:</p>
+<pre><code class="language-text">phi(t,a) = t * [1 - a*(1-t)²]
+</code></pre>
+<p>The source-to-public direction solves:</p>
+<pre><code class="language-text">phi(L_public, a) = L_coupled
+R_public = U * L_public
+</code></pre>
+<p>The public-to-source direction evaluates phi directly before reversing the coupling layers. Since <code>0 &lt;= a &lt; 0.85</code>, its derivative</p>
+<pre><code class="language-text">1 - a*(1-t)*(1-3t)
+</code></pre>
+<p>stays positive on the unit interval; in particular it is bounded below by <code>1-a</code>. The implementation uses safeguarded Newton/bisection for the inverse. This makes the dark adjustment monotone without pretending every part of the overall color conversion has a closed-form inverse. [12]</p>
+<p>The U² factor switches this correction off on neutrals. It also prevents this learned dark adjustment from becoming an unrelated replacement gray ruler. Its direction and amount should be evaluated in the complete model, not inferred solely from the name “dark.”</p>
+<h2 id="10-black-white-and-neutral-exchange-operations">10. Black, white, and neutral-exchange operations</h2>
+<p>The public API exports three different operations. For an amount <code>a</code> in <code>[0,1]</code>:</p>
+<pre><code class="language-text">addBlack:
+  R' = (1-a) R
+  L' = (1-a) L
+
+addWhite:
+  R' = (1-a) R
+  L' = a + (1-a) L
+
+exchangeNeutral by delta:
+  R' = R
+  L' = L + delta
+  R-L &lt;= delta &lt;= 1-L
+</code></pre>
+<p>Black dilution preserves the R:W ratio. White dilution preserves the R:K ratio. Neutral exchange transfers an absolute share between K and W while keeping R fixed. These distinctions are useful both in a picker and when judging a generated tonal sequence. Increasing Level at fixed Reach is not the same operation as adding white. [4]</p>
+<p>For example, <code>{R:.3,L:.6}</code> has shares R=.3, W=.3, K=.4. Adding half black gives <code>{R:.15,L:.3}</code>. Adding half white gives <code>{R:.15,L:.8}</code>. Exchanging .2 of black for white gives <code>{R:.3,L:.8}</code>. The latter two have the same Level but different Reach and different shares. This example follows the coordinate algebra; it does not claim an exact physical mixing correspondence.</p>
+<h2 id="11-reference-white-luminance-units-and-the-ceiling">11. Reference white, luminance units, and the ceiling</h2>
+<p>Public XYZ defaults to D65-relative values with reference-white Y=1. <code>referenceWhiteNits</code> defaults to <strong>300 cd/m²</strong>. That setting defines the connection between relative XYZ and absolute units; it does not create a fourth HRL coordinate. [1, 6]</p>
+<p>The input context supports a declared source white, Bradford adaptation to D65, and an explicit XYZ scale. For XYZ whose white is represented near Y=100, specify <code>xyzScale:100</code>; the library does not guess the units from magnitude.</p>
+<p>Absolute XYZ is divided by the target reference-white luminance. Relative XYZ with an explicitly different source-white luminance is additionally multiplied by <code>sourceWhiteNits / referenceWhiteNits</code>. Without that source setting, supplied relative XYZ already uses the target white scale. An absolute input together with <code>sourceWhiteNits</code> is rejected as an ambiguous double intensity specification. [1, 2]</p>
+<p>For above-ceiling Y, the ordinary bounded import scales the entire XYZ vector to Y=1. It does not separately clamp X and Z, and it does not call an ordinary above-white stimulus an imaginary chromaticity. This is a many-to-one admission policy for the chosen bounded solid.</p>
+<p>Equal <strong>relative</strong> inputs at 100 and 300 nits give the same coordinates in this construction. That is unit-scale invariance, not a new empirical claim about appearance at two adaptation luminances. Equal <strong>absolute</strong> inputs can yield different relative coordinates when the chosen reference white changes.</p>
+<h2 id="12-ordinary-import-mapping-and-its-audit-trail">12. Ordinary import mapping and its audit trail</h2>
+<p>Beta 1 retains the selected checkpoint's ordinary mapped import. Finite out-of-spec tuples are converted according to explicit rules rather than silently removed from a benchmark. Nonfinite values, invalid types, invalid coordinate objects, and invalid unit declarations remain errors. [1, 2]</p>
+<p>For imaginary input, the physical-cone preparation can map nonpositive-Y input to black, invalid chromaticity directions to the neutral at that Y, or a finite nonphysical chromaticity radially to the cone boundary at fixed Y. An above-ceiling stimulus is then scaled as described above. Native sRGB additionally clamps outside-cube <strong>linear</strong> sRGB channels where necessary. These are separate events, not one undifferentiated “clipping” flag.</p>
+<p>Use <code>importXYZ()</code> when provenance matters. Its result contains the coordinates, original relative XYZ, mapped XYZ, an event list, boundary identifier, and a hue-continuation flag. Possible events include <code>chromaticity-clipped</code>, <code>luminance-clipped</code>, <code>imaginary-to-black</code>, <code>imaginary-to-neutral</code>, and <code>srgb-gamut-clipped</code>.</p>
+<p><code>fromXYZ()</code> is a convenience that returns just the coordinates. It cannot carry the full import audit in those three numbers. A mapped round trip recovers the <strong>mapped stimulus</strong>, not the original unsupported input. The release factory deliberately fixes this policy; historical factories' optional strict-import flags should not be assumed to override Beta 1's mapping.</p>
+<p>Accepting nominal P3 or Rec.2020 <strong>XYZ input through mapping</strong> is not the same as supplying a native P3 or Rec.2020 Beta 1 realization. The selected release exposes native sRGB and full. This distinction is especially important when a nominal RGB primary falls just outside the declared physical cone or the inherited native-descriptor validator.</p>
+<h2 id="13-pseudo-rgb-display-previews-and-integer-packing">13. Pseudo-RGB, display previews, and integer packing</h2>
+<p>The full reference implementation has a separate three-channel carrier for its bounded physical domain. In that carrier, <code>max(pseudoRGB) = relative Y</code>; chromaticity is encoded using boundary-relative geometry and independent carrier landmarks. These channels are not ordinary display RGB. They do not define HRL hue identity. [6]</p>
+<p>Floating conversion and 16-bit packing are distinct. <code>encode16</code> rounds into unsigned channel codes; it does not promise exact recovery of an arbitrary unquantized XYZ tuple. Exact tested integer-code round trips establish the behavior of those tested codes, not exhaustive coverage of all 2^48 possible codes or a new observer result.</p>
+<p>A full-domain color shown in a browser still needs a display representation. The picker converts XYZ for an sRGB preview and explicitly marks clipping. Its exported relative XYZ remains the model output, not the clipped canvas pixel. The full model's ordinary <code>toRGB()</code> is intentionally not a silently clipped sRGB renderer; use XYZ and make the display conversion explicit.</p>
+<h2 id="14-what-was-actually-fitted-for-this-checkpoint">14. What was actually fitted for this checkpoint</h2>
+<p>The immediate parent is <strong>0.12 refined balanced after the boundary-only transport</strong>. The record also retains older ancestry names such as A Smooth; that older <code>parent</code> field is not a complete description of the immediate optimization starting point. [7, 13]</p>
+<p>The newly fitted human-observer objective is <strong>COMBVD</strong>, with traditional weighted STRESS and a smaller unweighted contribution. Native training retains its original 3,331-pair mask; full uses 3,813 pairs. The two gamut objectives have equal recorded weights. Neither the source atlas nor the hue ring nor the fixed neutral shift is newly optimized in this pass.</p>
+<p>Synthetic regularizers use the frozen <strong>HelmLab 1.0.0 GenSpace vector</strong>, not just its first coordinate, for black dilution, white dilution, neutral exchange, and fixed-Level Reach paths. They also examine whole-sheet bending in equilateral coordinates, difficult blue regions, parent-relative safeguards, and a common-coordinate Jacobian-conditioning penalty. GenSpace is a model-based ruler here; it is not another set of direct observer ratings.</p>
+<p>The successful fit uses a bicubic training surrogate and a bounded-influence <code>log1p</code> bending penalty. Final reported path and sheet diagnostics use the actual JavaScript inverse rather than claiming that the surrogate proves smooth output. The record preserves abandoned/OOM trials separately from completed trials. No Oklab target or new scalar-lightness power target was introduced. [2, 7, 13]</p>
+<p>The metric-leaning trial is <code>metric-b2</code>. Selection was frozen before the subsequent scored ColorBench run. Earlier project work had already exposed evaluation datasets, however, so this chronology does not make the results pristine external validation.</p>
+<h2 id="15-the-measurements-with-populations-kept-separate">15. The measurements, with populations kept separate</h2>
+<p>Lower STRESS is better. The following are the selected checkpoint's <strong>already published</strong> measurements; naming Beta 1 did not rerun or improve them.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Population and realization</th>
+  <th style="text-align:right">Weighted STRESS</th>
+  <th style="text-align:right">Unweighted STRESS</th>
+  <th style="text-align:right">Pairs</th>
+  <th style="text-align:right">Mapped pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Normal development: native sRGB</td>
+  <td style="text-align:right">29.107048</td>
+  <td style="text-align:right">30.712588</td>
+  <td style="text-align:right">3,331</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>Normal development: full</td>
+  <td style="text-align:right">29.948555</td>
+  <td style="text-align:right">32.127880</td>
+  <td style="text-align:right">3,813</td>
+  <td style="text-align:right">0</td>
+</tr>
+<tr>
+  <td>ColorBench all-input mapped: native sRGB</td>
+  <td style="text-align:right">34.489196</td>
+  <td style="text-align:right">38.126339</td>
+  <td style="text-align:right">3,813</td>
+  <td style="text-align:right">482</td>
+</tr>
+<tr>
+  <td>ColorBench all-input mapped: full</td>
+  <td style="text-align:right">29.948555</td>
+  <td style="text-align:right">32.127880</td>
+  <td style="text-align:right">3,813</td>
+  <td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table></div>
+<p>The first native row must not be silently replaced with the larger mapped native population. Equally, the native and full retained rows are not a controlled same-stimulus comparison: full includes 482 additional pairs. COMBVD was fitted; these are development scores, not held-out success rates. [7]</p>
+<p>Against the same-pipeline 0.12 parent, weighted retained STRESS changes from <strong>29.281170 to 29.107048</strong> in native sRGB, and <strong>30.219766 to 29.948555</strong> in full. The full boundary-only control scores <strong>30.208686</strong>, separating the small geometry effect from the subsequent learned change.</p>
+<p>The original ColorBench five generation and sixteen measurement columns are retained individually in the <a href="research/boundary-tonal/results/REPORT.html">complete report</a> and <a href="research/boundary-tonal/results/colorbench.json">raw JSON</a>. Its Python judges, finite-ellipsoid construction, scales, and upstream preprocessing remain as recorded. A dagger denotes mapped inputs, not omitted inputs. No single overall rank is invented from heterogeneous test columns.</p>
+<h2 id="16-why-metric-leaning-does-not-mean-best-at-everything">16. Why “metric-leaning” does not mean “best at everything”</h2>
+<p>The selected candidate improves the reported COMBVD aggregate, but its synthetic path regularity is not uniformly better than the boundary-only control. For example, native average black-path CV is <strong>0.222288</strong> rather than <strong>0.219080</strong>, and native mean sheet bending is <strong>0.464887</strong> rather than <strong>0.459986</strong>. Full mean sheet bending is <strong>0.718056</strong>, compared with <strong>0.653031</strong> for boundary-only. These are diagnostics in a chosen model ruler, not observer preference percentages. [7]</p>
+<p>The stronger balanced sibling substantially reduces some conditioning tails but does not win the same metric tradeoff. On the reported common-coordinate grid, the metric candidate's median condition is about <strong>2.51635</strong>, while its maximum remains about <strong>113,447.9</strong>. The balanced sibling's maximum is about <strong>25,197.9</strong>. A reasonable median does not erase an extreme tail, and positive sampled Jacobians do not alone establish perceptual smoothness everywhere.</p>
+<p>The report also retains narrow-blue structure, white-corner retreat counts, and small directional reversals in the chosen ruler. These are reasons to preserve the control comparisons and call this a beta, rather than to claim a universally superior final space.</p>
+<p>Numerical verification is nevertheless strong within its stated samples: maximum embedding round-trip errors for the selected metric model are approximately <strong>1.67e-11 native</strong> and <strong>4.32e-12 full</strong>. Such errors quantify implementation consistency, not human color-difference error. The report distinguishes random tests, integer tests, and boundary coverage instead of calling them an exhaustive proof.</p>
+<h2 id="17-relation-to-r0-the-original-appearance-reference">17. Relation to r0: the original appearance reference</h2>
+<p>Here <strong>r0</strong> means the early accepted, appearance-oriented HRL reference used during the Release 1 tuning history. It is <strong>not</strong> v2's observer-field 0.1, the native 0.2 model, or merely any file with an early version number.</p>
+<p>The recovered project discussions identify r0's smooth hue triangles and accepted vivid ring as important visual references. Coonie's later feedback explicitly distinguished the desirability of those interiors from the gains obtained by stronger metric fitting. This is first-person visual design evidence, not a synthetic observer table. The current publication does not convert that preference into invented numerical r0 targets.</p>
+<p>There is also executable evidence in Release 1 itself. <code>src/model/picker-model.mjs</code> retains an <code>r0Accepted</code> hue lookup, while <code>src/model/algorithmic.mjs</code> explicitly implements an <strong>R0-guided R15 warp</strong>. The latter is a table-driven interior residual with hue interpolation and boundary/interior gates. Its existence supports a concrete statement: the road to Release 1 did not simply discard r0; it used r0-derived guidance while retaining later fitted structure. [5, 14]</p>
+<p>That evidence has limits. An <code>r0Accepted</code> lookup is not a complete r0 forward/inverse model. A residual toward an r0-derived field is not the original field itself. No independently identified, complete r0 factory was recovered for this publication, so this document does <strong>not</strong> publish a made-up closed-form r0 definition or a supposedly comparable fresh r0 benchmark row. The historical archived name <code>smooth-r0-w0.25</code> is a retrieval clue, not proof that an arbitrary early prototype is the same model.</p>
+<p>The useful comparison is therefore architectural and evidential: r0 supplied an appearance-first reference and visual continuity; Release 1 layered difference-oriented fitting and local interior repairs onto that lineage; Beta 1 reconstructs the broader physical/gamut architecture and makes the current metric-versus-regularity tradeoff explicit. This does not establish that Beta 1 visually beats r0 on every sheet. A future direct comparison needs the exact r0 runtime and matching stimulus/pipeline conditions.</p>
+<h2 id="18-relation-to-r15-d-release-1">18. Relation to R15-D Release 1</h2>
+<p>Release 1 is an actual executable reference, not merely a historical label. <code>src/index.mjs</code> declares <strong>R15-D Release 1</strong>, loads the selected <code>observer15</code> curve and transport, and composes them with the selected <strong>D</strong> cap/interior model. Native sRGB uses the complete fitted model; the Rec.2020 realization uses the existing wide-gamut appearance projector with the corresponding coordinate layers. [5]</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Aspect</th>
+  <th>Release 1</th>
+  <th>v2 Beta 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Public solid</td>
+  <td>Regular HRL bicone</td>
+  <td>Same regular HRL bicone contract</td>
+</tr>
+<tr>
+  <td>Main entry point</td>
+  <td><code>src/index.mjs</code></td>
+  <td><code>v2/index.mjs</code></td>
+</tr>
+<tr>
+  <td>Named definition</td>
+  <td>R15-D</td>
+  <td>Frozen 0.13 metric-b2</td>
+</tr>
+<tr>
+  <td>Standard realizations here</td>
+  <td>sRGB, Rec.2020</td>
+  <td>Native sRGB, full reference cone</td>
+</tr>
+<tr>
+  <td>Physical construction</td>
+  <td>Native fitted and wide-gamut projector lineage</td>
+  <td>Native/full source charts with repaired full boundary</td>
+</tr>
+<tr>
+  <td>Interior mechanism</td>
+  <td>R15 curve/transport plus algorithmic/cap residual construction</td>
+  <td>Seven shared coupling layers plus bounded dark continuation</td>
+</tr>
+<tr>
+  <td>Full spectral/Y domain</td>
+  <td>Not the Beta 1 full-reference construction</td>
+  <td>Declared 1-nm cone with relative Y ceiling</td>
+</tr>
+<tr>
+  <td>Ordinary unsupported XYZ</td>
+  <td>Release 1 rejects outside its selected RGB gamut, apart from tolerance</td>
+  <td>Beta 1 explicitly maps and reports events</td>
+</tr>
+<tr>
+  <td>Role of released hue ring</td>
+  <td>Result of complete v1 angular transforms</td>
+  <td>Actual v1 vivid angles anchor the inherited v2 hue labeling</td>
+</tr>
+</tbody>
+</table></div>
+<p>The unchanged bicone formula does <strong>not</strong> imply unchanged distances between physical colors. If a physical stimulus moves to a different public R/L/H coordinate under a new definition, its distance to another stimulus can change while the abstract solid remains regular.</p>
+<p>Nor is the Release 1 API's older Rec.2020 support evidence that Beta 1's repaired full model has independent wide-gamut observer validation. Executability, geometric admission, numerical round trips, and observer accuracy are separate properties.</p>
+<p>All v1 source/data remain untouched by this promotion. The root picker remains the Release 1 picker. Its navigation now points clearly to the current v2 release, rather than presenting a pile of successively added experiments as competing “latest” versions.</p>
+<h2 id="19-the-intervening-v2-stages-without-erasing-them">19. The intervening v2 stages, without erasing them</h2>
+<p>The preserved archive includes observer-field 0.1; native 0.2; BASR 0.4; Equal-Span 0.5; OPAL 0.6 and gamut-anchor 0.7; A Smooth; C1 and relative-domain experiments; native/full refits; shared R/L; tonal-operation diagnostics; 0.11 GenSpace tonal fitting; 0.12 refinements; the mapped-input audit; and 0.13 boundary/tonal fitting. [8, 10]</p>
+<p>These are not all consecutive replacements of one identical API. Some are diagnostic labs, some alter source geometry, some change interpolation or import policy, and some train independent or shared coefficient banks. The archive labels their roles. An old page's historical claims stay attached to its own checkpoint; they are not silently upgraded to claims about Beta 1.</p>
+<p>The former v2 landing page and the pre-beta READMEs are preserved as historical documents. Current navigation, a chronological archive, and the searchable file catalogue give separate ways to find the models, methods, JSON evidence, and original pages.</p>
+<h2 id="20-using-the-beta-1-reference-implementation">20. Using the Beta 1 reference implementation</h2>
+<p>Use Node 18 or newer, or serve the repository over HTTP in a browser. The model loads its own local ES modules and frozen data. Retain the repository layout; the entry module is not a self-contained single-file bundle. No training-grid cache is required for ordinary conversion.</p>
+<pre><code class="language-js">import {
+  createHRLv2, VERSION, addBlack, addWhite, exchangeNeutral
+} from './v2/index.mjs';
+
+const native = await createHRLv2(); // native sRGB, metric-b2, 300-nit reference
+const q = native.fromRGB([0.2, 0.5, 0.8]); // encoded sRGB, channels 0..1
+const recoveredRGB = native.toRGB(q);
+const xyz = native.toXYZ(q);
+const darker = addBlack(q, 0.25);
+const whiter = addWhite(q, 0.25);
+const lessBlack = exchangeNeutral(q, Math.min(0.05, 1 - q.L));
+const difference = native.distance(q, darker);
+
+const full = await createHRLv2({gamut:'full', referenceWhiteNits:300});
+const imported = full.importXYZ(xyz);
+console.log(VERSION, native.release, imported.events);
+console.log(full.toXYZ(imported.coordinates));
+</code></pre>
+<p>A declared scale/white example:</p>
+<pre><code class="language-js">const report = full.importXYZ([20, 30, 10], {
+  xyzScale: 100,
+  sourceWhite: [0.96422, 1, 0.82521]
+});
+const absoluteXYZ = full.toAbsoluteXYZ(report.coordinates);
+</code></pre>
+<p>For an explicit 100-nit source-white scale entering a 300-nit target context:</p>
+<pre><code class="language-js">const report2 = full.importXYZ([0.2, 0.3, 0.1], {sourceWhiteNits:100});
+</code></pre>
+<p>The facade accepts <code>gamut</code> and <code>referenceWhiteNits</code>. It deliberately does not accept a different checkpoint or arbitrary coefficient record under the Beta 1 label. Use the preserved research factory for comparisons:</p>
+<pre><code class="language-js">import {createSpectralTonalHRL} from './v2/research/boundary-tonal/index.mjs';
+const control = await createSpectralTonalHRL({gamut:'srgb', checkpoint:'boundary'});
+const sibling = await createSpectralTonalHRL({gamut:'srgb', checkpoint:'balanced'});
+</code></pre>
+<p>The historical <code>v2/lib/index.mjs</code> factory remains the earlier explicit BASR/linear prototype API. It is not the new release entry point. The root package entry remains Release 1; this promotion does not misrepresent a changed npm release.</p>
+<h2 id="21-exact-identity-and-reproduction">21. Exact identity and reproduction</h2>
+<p>The <a href="default.json">machine-readable manifest</a> records the release choice. The defining metric coefficient file is:</p>
+<pre><code class="language-text">v2/research/boundary-tonal/results/metric.json
+SHA-256 92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72
+</code></pre>
+<p>The boundary record is:</p>
+<pre><code class="language-text">v2/research/boundary-tonal/boundary-1nm.json
+SHA-256 20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67
+</code></pre>
+<p>The source snapshot reviewed for promotion is commit:</p>
+<pre><code class="language-text">bd1d9039d3c4390197099dcb53967baac2896505
+</code></pre>
+<p>The checkpoint file alone is not sufficient to reimplement the model: source atlases, hue-field data, release-angle attachment, interpolation, boundary transport, unit conventions, and inverse algorithms must agree as well. The source hash records and numerical verification accompany those components. [7, 13]</p>
+<p>The original scored benchmark used ColorBench commit <code>12b2de215cc5020682e3d245a8c78bce5f0ebbc9</code> and the dataset-pool commit <code>8641f4e8ebd9d85a34dc0fedc116fa0e58493190</code>. Its report includes separate normal retained-pair scores, mapped-input scores, raw events, and actual-inverse diagnostics. Reproducing those numbers requires the same input preparation and populations, not merely the same three coordinate names.</p>
+<p>For the release-navigation checks supplied with this publication:</p>
+<pre><code class="language-sh">python -m pip install mistune
+python site/build.py
+node site/test-beta1.mjs
+python site/check.py
+</code></pre>
+<p>The GitHub publication workflow additionally runs Chromium checks, records the generated-site preservation audit, and retains deployment evidence. Those checks test the release wrapper and website; they do not claim to have rerun the psychophysical fitting or manufacture a new benchmark victory.</p>
+<h2 id="22-primary-implementation-and-evidence-sources">22. Primary implementation and evidence sources</h2>
+<p>The numbered references below are paths to the actual source or frozen evidence used in this write-up. Derivations and examples in the text are identified as such. Historical project recollection in the r0 section is distinguished from executable evidence and is not used as a substitute coefficient packet.</p>
+<ol>
+<li><a href="research/boundary-tonal/index.mjs">Repaired-domain runtime and ordinary import</a>.</li>
+<li><a href="research/boundary-tonal/DESIGN.html">Boundary/tonal design and source-role distinctions</a>.</li>
+<li><a href="research/shared-rl/source.mjs">Gamut-specific deterministic source charts</a> and <a href="research/shared-rl/README.html">shared source construction notes</a>.</li>
+<li><a href="research/tonal-semantics/operations.mjs">Tonal operations</a> and <a href="research/tonal-semantics/DEFINITIONS.html">terminology/evidence analysis</a>.</li>
+<li><a href="../src/index.mjs">Release 1 entry point</a>, <a href="../src/model/cap.mjs">cap construction</a>, and <a href="../README.pre-beta1.html">pre-promotion root README</a>.</li>
+<li><a href="research/relative-domain/README.html">Relative-domain definition</a>, <a href="research/relative-domain/geometry.mjs">geometry/carrier</a>, <a href="research/relative-domain/context.mjs">units and adaptation</a>, and <a href="research/relative-domain/base.mjs">high-magnitude continuation</a>.</li>
+<li><a href="research/boundary-tonal/results/REPORT.html">Full 0.13 report</a>, <a href="research/boundary-tonal/results/boundary-verification.json">boundary verification</a>, and <a href="research/boundary-tonal/results/colorbench.json">scored data</a>.</li>
+<li><a href="README.pre-beta1.html">Pre-beta v2 README and dated lineage</a>, <a href="data/release1-angles.json">release-angle data</a>, and <a href="lib/index.mjs">historical library</a>.</li>
+<li><a href="docs/OBSERVER_FIELD_0_1_SOURCE_AUDIT.html">Original observer-field source audit</a>; read its execution-status statements as dated history, alongside the subsequent extraction record in reference 8.</li>
+<li><a href="research/equal-span/README.html">Equal-Span/OPAL research definition</a>, <a href="a-smooth/index.mjs">A Smooth construction</a>, and <a href="a-smooth/source-readout.mjs">source readout</a>.</li>
+<li><a href="lib/research.mjs">Source PathModel and atlas composition</a>, <a href="research/rl-c1/atlas.mjs">C1 atlas</a>, and <a href="a-smooth/rl-core.mjs">coupling equations</a>.</li>
+<li><a href="research/shared-rl/core.mjs">Shared coupling/dark-curve implementation</a>.</li>
+<li><a href="research/boundary-tonal/results/metric.json">Exact metric checkpoint</a>, <a href="research/boundary-tonal/results/SELECTION.json">frozen selection</a>, <a href="research/boundary-tonal/results/verification.json">numerical verification</a>, and <a href="research/boundary-tonal/results/runtime-finalization.json">runtime finalization record</a>.</li>
+<li><a href="../src/model/picker-model.mjs">Release 1's retained r0 angle reference</a> and <a href="../src/model/algorithmic.mjs">R0-guided algorithmic interior warp</a>. These are concrete lineage evidence, not a claim that either file alone is the complete r0 model.</li>
+</ol>
+<hr />
+<p><strong>In one sentence:</strong> HRL v2 Beta 1 is the frozen metric-leaning, shared-tonal realization of HRL's regular hue bicone over native sRGB and a repaired full physical-reference domain, retaining r0/Release 1 lineage while making its geometry, mappings, fitted evidence, and unresolved tradeoffs explicit.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../site/preservation.json">Preservation audit</a></footer></main></body></html>
