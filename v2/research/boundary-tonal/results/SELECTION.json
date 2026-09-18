@@ -1,0 +1,32 @@
+{
+  "status": "Frozen before the new scored ColorBench run",
+  "timeUTC": "2026-09-18T07:46:22.255441+00:00",
+  "baseCommit": "16b87da59c91d9c4b30997631397bad4404c4d39",
+  "parent": "0.12 refined balanced",
+  "parent_sha256": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+  "boundary_sha256": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+  "runtime_sha256": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+  "selectionBasis": "Training COMBVD, actual-inverse 24-hue/129-sample diagnostic, 14,378-point common-coordinate conditioning, native previews at 263/269/273/275/277 and magenta. No new non-COMBVD observer score used.",
+  "candidates": {
+    "balanced": {
+      "trial": "conditioned-c",
+      "sha256": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "trial_sha256": "da7861f46584a81a38c433e336e08bd9f0ab93dcb636ff9ad0894ccbcbbb8042",
+      "layers": 7
+    },
+    "metric": {
+      "trial": "metric-b2",
+      "sha256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "trial_sha256": "2ebc6f9b43852fa3e9d9c9d5bd7b14cded32318b8b1d5efa3c19a194c30a497d",
+      "layers": 7
+    }
+  },
+  "notSelected": {
+    "smooth-b": "Completed initializer and regularity trial. Retained, but conditioned-c gives the stronger common-coordinate tail reduction.",
+    "conditioned-a": "OOM-aborted intermediate from the raw-Hessian family.",
+    "metric-a": "OOM-aborted intermediate from the raw-Hessian family.",
+    "metric-b": "OOM during setup; no objective evaluations."
+  },
+  "priorExposure": "Earlier project work used evaluation datasets. New scored results are not pristine external validation.",
+  "normalNativeMask": "3331 supported pairs, unchanged from 0.12; all-input ColorBench separately mapped."
+}

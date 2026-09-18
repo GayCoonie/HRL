@@ -1,0 +1,26 @@
+{
+  "profile": "HRL-0.12-hue-fair",
+  "checkpoint": "balanced",
+  "viewCheckpoint": "parent",
+  "gamut": "srgb",
+  "boundary": "legacy-39-vertex",
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.5629270942391413,
+    "L": 0.7469595447106049
+  },
+  "relativeXYZ": [
+    0.1881226619478919,
+    0.12271912395098214,
+    0.48390781220724816
+  ],
+  "displayRGB": [
+    0.4627450980392157,
+    0.2901960784313726,
+    0.7333333333333333
+  ],
+  "displayClipped": false,
+  "sharedCalibration": true
+}

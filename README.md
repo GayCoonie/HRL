@@ -127,3 +127,9 @@ Import `createHRLv2` from `./v2/lib/index.mjs` for the prototype. The default v1
 ## HRL 0.12 balanced-parent refinement
 
 [Live hue-sheet comparison](https://gaycoonie.github.io/HRL/v2/hue-fair.html) keeps 0.11 Gen tonal balanced beside two shared-bank continuations. [Scored results](v2/research/hue-fair-refine/results/REPORT.md), [review limits](v2/research/hue-fair-refine/FINDINGS.md), [source](v2/research/hue-fair-refine/README.md), and the complete new trial logs are retained. Earlier releases and accepted defaults remain available.
+
+
+<!-- boundary-tonal -->
+## HRL 0.13 boundary and tonal research
+
+[Four-way comparison](https://gaycoonie.github.io/HRL/v2/boundary-tonal.html) preserves the 0.12 parent, isolates the 1-nm boundary-only repair, and adds two shared Reach/Level fits. [Normal retained-pair COMBVD](v2/research/boundary-tonal/results/retained-combvd.json) remains separate from mapped all-input ColorBench. [Method](v2/research/boundary-tonal/DESIGN.md), [results](v2/research/boundary-tonal/results/REPORT.md) and [execution history](v2/research/boundary-tonal/EXECUTION.md) retain the source/observer evidence distinction and numerical limits. Earlier accepted entry points are unchanged.

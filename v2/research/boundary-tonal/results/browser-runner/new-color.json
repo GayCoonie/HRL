@@ -1,0 +1,26 @@
+{
+  "profile": "HRL-0.13-boundary-tonal",
+  "checkpoint": "metric",
+  "viewCheckpoint": "metric",
+  "gamut": "srgb",
+  "boundary": "cie1931-2deg-1nm-linear-cone",
+  "referenceWhite": "D65",
+  "referenceWhiteNits": 300,
+  "coordinates": {
+    "H": 296.66870048692795,
+    "R": 0.5629270942391413,
+    "L": 0.7469595447106049
+  },
+  "relativeXYZ": [
+    0.19087533703107518,
+    0.1264374900287233,
+    0.48611787851078947
+  ],
+  "displayRGB": [
+    0.4627450980392157,
+    0.2980392156862745,
+    0.7333333333333333
+  ],
+  "displayClipped": false,
+  "sharedCalibration": true
+}

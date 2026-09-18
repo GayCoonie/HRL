@@ -1,0 +1,7 @@
+{
+  "firstRun": 35322851009,
+  "difference": "49 normal components differed by at most 2.220446049250313e-16; every CMF and hull vertex identical",
+  "repair": "Explicit fused dot-product order reproduces the originally frozen boundary byte-for-byte",
+  "frozenGeometryHashStillRequired": true,
+  "refitting": false
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "trial": "conditioned-a",
+    "status": "Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected",
+    "trace_sha256": "1f791ab74cf2e13af5a47d43846767895025f633a5c72fc1bc7e7c0f5e5fa878",
+    "trace_evaluations": 315,
+    "trace_bytes": 315845,
+    "record_sha256": "57a1bf28427da5411d82ba7bb7542e11791173cce62c1774dc988ed309ecf089",
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/conditioned-a.jsonl"
+  },
+  {
+    "trial": "conditioned-c",
+    "status": "Completed; original full trace and final array preserved",
+    "trace_sha256": "0b009bb606f05828b3c51ce2e9ce9ad13470ea4c513dd2ddd8f22afdf6853e72",
+    "trace_evaluations": 421,
+    "trace_bytes": 419971,
+    "record_sha256": "da7861f46584a81a38c433e336e08bd9f0ab93dcb636ff9ad0894ccbcbbb8042",
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/conditioned-c.jsonl"
+  },
+  {
+    "trial": "metric-a",
+    "status": "Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected",
+    "trace_sha256": "2e9520bafa3ce7ef883c802eb0d792e6af1e47fa0fb9f178374c5ea2d67f58ea",
+    "trace_evaluations": 308,
+    "trace_bytes": 309087,
+    "record_sha256": "9a775d442a03fb4ce55068c26b358883a5dcf9d55266e8acb6a15fc5379971f4",
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/metric-a.jsonl"
+  },
+  {
+    "trial": "metric-b",
+    "status": "Aborted by OOM killer during setup; zero objective evaluations",
+    "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "trace_evaluations": 0,
+    "trace_bytes": 0,
+    "record_sha256": null,
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/metric-b.jsonl"
+  },
+  {
+    "trial": "metric-b2",
+    "status": "Completed; original full trace and final array preserved",
+    "trace_sha256": "ad62ddd8b855094a6a2fe8f501571cee54014e92f14f27d2d6a509d1560a5acc",
+    "trace_evaluations": 667,
+    "trace_bytes": 649019,
+    "record_sha256": "2ebc6f9b43852fa3e9d9c9d5bd7b14cded32318b8b1d5efa3c19a194c30a497d",
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/metric-b2.jsonl"
+  },
+  {
+    "trial": "smooth-b",
+    "status": "Completed; original full trace and final array preserved",
+    "trace_sha256": "77074c8231653608d12e09c40bb2126078bd91f8a3d343584cca1357dc078ea0",
+    "trace_evaluations": 679,
+    "trace_bytes": 635548,
+    "record_sha256": "c79fba8b74fa54e22ecac280082c90d3595bf7bc81a2a06cbcdc9a46237414da",
+    "fullTraceLocation": "Review ZIP: v2/research/boundary-tonal/trials/smooth-b.jsonl"
+  }
+]

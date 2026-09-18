@@ -1,0 +1,78 @@
+{
+  "srgb": {
+    "parent": {
+      "pairs": 3331,
+      "weighted": 29.281170389187118,
+      "unweighted": 31.055225108098146,
+      "previous_weighted": 29.281170389187118,
+      "previous_unweighted": 31.055225108098146,
+      "mapped_pairs": 0,
+      "mask_sha256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251"
+    },
+    "boundary": {
+      "pairs": 3331,
+      "weighted": 29.281170389187118,
+      "unweighted": 31.055225108098146,
+      "previous_weighted": 29.281170389187118,
+      "previous_unweighted": 31.055225108098146,
+      "mapped_pairs": 0,
+      "mask_sha256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251"
+    },
+    "balanced": {
+      "pairs": 3331,
+      "weighted": 29.244797611944573,
+      "unweighted": 30.9648383809415,
+      "previous_weighted": 29.281170389187118,
+      "previous_unweighted": 31.055225108098146,
+      "mapped_pairs": 0,
+      "mask_sha256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251"
+    },
+    "metric": {
+      "pairs": 3331,
+      "weighted": 29.107047807813768,
+      "unweighted": 30.712588175217103,
+      "previous_weighted": 29.281170389187118,
+      "previous_unweighted": 31.055225108098146,
+      "mapped_pairs": 0,
+      "mask_sha256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251"
+    }
+  },
+  "full": {
+    "parent": {
+      "pairs": 3813,
+      "weighted": 30.219765761581534,
+      "unweighted": 32.48447300671502,
+      "previous_weighted": 30.219765761581534,
+      "previous_unweighted": 32.48447300671502,
+      "mapped_pairs": 0,
+      "mask_sha256": "94a5da7edf89cb2a7733bc13fcb0a5a44453a86a9955a9d7d204858418c7a6b9"
+    },
+    "boundary": {
+      "pairs": 3813,
+      "weighted": 30.20868640009412,
+      "unweighted": 32.46536479960194,
+      "previous_weighted": 30.219765761581534,
+      "previous_unweighted": 32.48447300671502,
+      "mapped_pairs": 0,
+      "mask_sha256": "94a5da7edf89cb2a7733bc13fcb0a5a44453a86a9955a9d7d204858418c7a6b9"
+    },
+    "balanced": {
+      "pairs": 3813,
+      "weighted": 30.161428514849042,
+      "unweighted": 32.36964573360686,
+      "previous_weighted": 30.219765761581534,
+      "previous_unweighted": 32.48447300671502,
+      "mapped_pairs": 0,
+      "mask_sha256": "94a5da7edf89cb2a7733bc13fcb0a5a44453a86a9955a9d7d204858418c7a6b9"
+    },
+    "metric": {
+      "pairs": 3813,
+      "weighted": 29.94855464531939,
+      "unweighted": 32.127879751619446,
+      "previous_weighted": 30.219765761581534,
+      "previous_unweighted": 32.48447300671502,
+      "mapped_pairs": 0,
+      "mask_sha256": "94a5da7edf89cb2a7733bc13fcb0a5a44453a86a9955a9d7d204858418c7a6b9"
+    }
+  }
+}

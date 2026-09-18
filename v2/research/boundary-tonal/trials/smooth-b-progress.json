@@ -1,0 +1,562 @@
+{
+  "note": "Sampled progress, not the complete original JSONL. Full trace in downloadable review ZIP.",
+  "trace_sha256": "77074c8231653608d12e09c40bb2126078bd91f8a3d343584cca1357dc078ea0",
+  "evaluations": 679,
+  "sampled_evaluations": [
+    {
+      "evaluation": 1,
+      "elapsed": 1.248577644000079,
+      "loss": 0.23015903156229203,
+      "stats": {
+        "srgb": {
+          "stress": 29.28117038918698,
+          "unweighted": 31.05522510809806,
+          "conditionPenalty": 0.5435186411673788,
+          "maxLogCondition": 11.705951419330598,
+          "pathRisk": 0.07239387271778674,
+          "worstHue": 0.11927142645530868,
+          "bluePathRisk": 0.0847859314455704,
+          "sheetBending": 1.0937387269571344,
+          "worstSheet": 1.348369204654599,
+          "blueSheet": 1.2128618867853138,
+          "retreat": 0.000261529004867095,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.208686400093836,
+          "unweighted": 32.4653647996018,
+          "conditionPenalty": 0.5435186411673788,
+          "maxLogCondition": 11.705951419330598,
+          "pathRisk": 0.11264270080204504,
+          "worstHue": 0.31990641197687786,
+          "bluePathRisk": 0.12383682210986442,
+          "sheetBending": 1.1668020327467266,
+          "worstSheet": 1.4698894014599333,
+          "blueSheet": 1.1475331646193982,
+          "retreat": 0.000761159979539862,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 51,
+      "elapsed": 29.12382462200003,
+      "loss": 0.2276208779733831,
+      "stats": {
+        "srgb": {
+          "stress": 29.247607276067157,
+          "unweighted": 30.971147582338876,
+          "conditionPenalty": 0.5408017508716345,
+          "maxLogCondition": 11.73495450423233,
+          "pathRisk": 0.07205705951353769,
+          "worstHue": 0.12051695034651336,
+          "bluePathRisk": 0.08545425563915605,
+          "sheetBending": 1.0682080415341109,
+          "worstSheet": 1.3442930526372838,
+          "blueSheet": 1.19227739791114,
+          "retreat": 0.0002739998850987286,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.15547118733822,
+          "unweighted": 32.40731824167688,
+          "conditionPenalty": 0.5408017508716345,
+          "maxLogCondition": 11.73495450423233,
+          "pathRisk": 0.1135598536832163,
+          "worstHue": 0.3280852602973276,
+          "bluePathRisk": 0.12543294349057005,
+          "sheetBending": 1.1407455925420387,
+          "worstSheet": 1.4431706977352818,
+          "blueSheet": 1.1071857487913925,
+          "retreat": 0.0007815020352857834,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 101,
+      "elapsed": 55.05771460200003,
+      "loss": 0.22647468619504496,
+      "stats": {
+        "srgb": {
+          "stress": 29.202064109457627,
+          "unweighted": 30.902709106099113,
+          "conditionPenalty": 0.5388653759041897,
+          "maxLogCondition": 11.788946450847847,
+          "pathRisk": 0.07230171125294516,
+          "worstHue": 0.12338992256317917,
+          "bluePathRisk": 0.08629657228189506,
+          "sheetBending": 1.0585695786740668,
+          "worstSheet": 1.345482012957522,
+          "blueSheet": 1.1837877688256209,
+          "retreat": 0.0003261183289453952,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.10476935335225,
+          "unweighted": 32.350439063798234,
+          "conditionPenalty": 0.5388653759041897,
+          "maxLogCondition": 11.788946450847847,
+          "pathRisk": 0.11381642928184693,
+          "worstHue": 0.32757827936815076,
+          "bluePathRisk": 0.1268235267322608,
+          "sheetBending": 1.1290196003067492,
+          "worstSheet": 1.4230791263424187,
+          "blueSheet": 1.1006817552335044,
+          "retreat": 0.0007879757278311068,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 151,
+      "elapsed": 80.91808839700002,
+      "loss": 0.22596092450387034,
+      "stats": {
+        "srgb": {
+          "stress": 29.181685027348102,
+          "unweighted": 30.87694513393094,
+          "conditionPenalty": 0.5376290153956628,
+          "maxLogCondition": 11.80102128684085,
+          "pathRisk": 0.0723509885636681,
+          "worstHue": 0.12305153374666324,
+          "bluePathRisk": 0.08629071131195375,
+          "sheetBending": 1.0516206209991992,
+          "worstSheet": 1.3492833580896608,
+          "blueSheet": 1.1827447082169307,
+          "retreat": 0.0003586162924367017,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.104731140316243,
+          "unweighted": 32.33434272923505,
+          "conditionPenalty": 0.5376290153956628,
+          "maxLogCondition": 11.80102128684085,
+          "pathRisk": 0.11382320308792264,
+          "worstHue": 0.32519447493571196,
+          "bluePathRisk": 0.12660109101548053,
+          "sheetBending": 1.123063821535237,
+          "worstSheet": 1.4195563521052186,
+          "blueSheet": 1.0999663746741046,
+          "retreat": 0.0007862137801184645,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 201,
+      "elapsed": 107.85968026900002,
+      "loss": 0.22563632183869559,
+      "stats": {
+        "srgb": {
+          "stress": 29.187350271272212,
+          "unweighted": 30.86799586037861,
+          "conditionPenalty": 0.5368984236866736,
+          "maxLogCondition": 11.784296484048705,
+          "pathRisk": 0.07226486299836933,
+          "worstHue": 0.12195296192728611,
+          "bluePathRisk": 0.08589197574809443,
+          "sheetBending": 1.0479878409498464,
+          "worstSheet": 1.3502696902130245,
+          "blueSheet": 1.1799986866078354,
+          "retreat": 0.00035211694710272505,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.09998210062628,
+          "unweighted": 32.31757581626931,
+          "conditionPenalty": 0.5368984236866736,
+          "maxLogCondition": 11.784296484048705,
+          "pathRisk": 0.11372188961831327,
+          "worstHue": 0.32664725252735105,
+          "bluePathRisk": 0.12618813921782954,
+          "sheetBending": 1.118901160208198,
+          "worstSheet": 1.4187725515398895,
+          "blueSheet": 1.099954895600156,
+          "retreat": 0.0007867946937614857,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 251,
+      "elapsed": 134.56220400100005,
+      "loss": 0.22533246088160883,
+      "stats": {
+        "srgb": {
+          "stress": 29.167404248606527,
+          "unweighted": 30.851251501371614,
+          "conditionPenalty": 0.5330820356424371,
+          "maxLogCondition": 11.780694553895781,
+          "pathRisk": 0.0723104853654659,
+          "worstHue": 0.1220685363799016,
+          "bluePathRisk": 0.08595492455324454,
+          "sheetBending": 1.0455994195855742,
+          "worstSheet": 1.3496071908183782,
+          "blueSheet": 1.1787219519944745,
+          "retreat": 0.0003535289626645279,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.10038944291044,
+          "unweighted": 32.29855657063969,
+          "conditionPenalty": 0.5330820356424371,
+          "maxLogCondition": 11.780694553895781,
+          "pathRisk": 0.11374536325722327,
+          "worstHue": 0.32817584842345837,
+          "bluePathRisk": 0.12623353598977713,
+          "sheetBending": 1.115224178644928,
+          "worstSheet": 1.4210607662156831,
+          "blueSheet": 1.0992039037919805,
+          "retreat": 0.0007878737934179071,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 301,
+      "elapsed": 161.76694012200005,
+      "loss": 0.2251646282714428,
+      "stats": {
+        "srgb": {
+          "stress": 29.173089978010715,
+          "unweighted": 30.85591588736755,
+          "conditionPenalty": 0.5293575898856858,
+          "maxLogCondition": 11.776035076802211,
+          "pathRisk": 0.07226106235555507,
+          "worstHue": 0.1224459051706991,
+          "bluePathRisk": 0.08591688742002836,
+          "sheetBending": 1.0438311480535343,
+          "worstSheet": 1.348304413708344,
+          "blueSheet": 1.1784402262701221,
+          "retreat": 0.0003543349070051312,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.090433995044847,
+          "unweighted": 32.296980105178335,
+          "conditionPenalty": 0.5293575898856858,
+          "maxLogCondition": 11.776035076802211,
+          "pathRisk": 0.11365126913286061,
+          "worstHue": 0.32802674690517175,
+          "bluePathRisk": 0.1262559876945947,
+          "sheetBending": 1.113442823501239,
+          "worstSheet": 1.4260495343022508,
+          "blueSheet": 1.0993819846117379,
+          "retreat": 0.0007860630106777543,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 351,
+      "elapsed": 188.03090977099998,
+      "loss": 0.22497833850046575,
+      "stats": {
+        "srgb": {
+          "stress": 29.16668638139801,
+          "unweighted": 30.846232298437975,
+          "conditionPenalty": 0.5251538290798127,
+          "maxLogCondition": 11.770475099703045,
+          "pathRisk": 0.0722706521643774,
+          "worstHue": 0.12230185089370764,
+          "bluePathRisk": 0.08607840812030175,
+          "sheetBending": 1.04191113644899,
+          "worstSheet": 1.3486744470117187,
+          "blueSheet": 1.178337752783779,
+          "retreat": 0.0003499309310561183,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.090234731511593,
+          "unweighted": 32.30437673099717,
+          "conditionPenalty": 0.5251538290798127,
+          "maxLogCondition": 11.770475099703045,
+          "pathRisk": 0.11362206891691444,
+          "worstHue": 0.32917011385985323,
+          "bluePathRisk": 0.12619011142134134,
+          "sheetBending": 1.110962060433755,
+          "worstSheet": 1.429654190529622,
+          "blueSheet": 1.0990358620175253,
+          "retreat": 0.000792803582359497,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 401,
+      "elapsed": 214.53301732299997,
+      "loss": 0.22480252351662447,
+      "stats": {
+        "srgb": {
+          "stress": 29.17113243243862,
+          "unweighted": 30.850118372350003,
+          "conditionPenalty": 0.521625236638317,
+          "maxLogCondition": 11.784703731673021,
+          "pathRisk": 0.07223454519166228,
+          "worstHue": 0.12190159754340235,
+          "bluePathRisk": 0.08608171489543541,
+          "sheetBending": 1.040337264893582,
+          "worstSheet": 1.3509210654168264,
+          "blueSheet": 1.1772437769603283,
+          "retreat": 0.0003284357132389248,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.084262460535705,
+          "unweighted": 32.303278173449385,
+          "conditionPenalty": 0.521625236638317,
+          "maxLogCondition": 11.784703731673021,
+          "pathRisk": 0.11347575718819719,
+          "worstHue": 0.32939855038937654,
+          "bluePathRisk": 0.12638668371109205,
+          "sheetBending": 1.1087925819436204,
+          "worstSheet": 1.4315895669147547,
+          "blueSheet": 1.0990672969644895,
+          "retreat": 0.0007943513879508006,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 451,
+      "elapsed": 241.84217134899995,
+      "loss": 0.22467715655348738,
+      "stats": {
+        "srgb": {
+          "stress": 29.167735692764328,
+          "unweighted": 30.840794360260666,
+          "conditionPenalty": 0.5197210141077844,
+          "maxLogCondition": 11.778838634935187,
+          "pathRisk": 0.07220204932721158,
+          "worstHue": 0.12186973492747065,
+          "bluePathRisk": 0.08618296303145827,
+          "sheetBending": 1.038892420091065,
+          "worstSheet": 1.3504831070558432,
+          "blueSheet": 1.177074910554246,
+          "retreat": 0.0003246610062707725,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.086860926608793,
+          "unweighted": 32.30823997262191,
+          "conditionPenalty": 0.5197210141077844,
+          "maxLogCondition": 11.778838634935187,
+          "pathRisk": 0.11339648079710407,
+          "worstHue": 0.3299772748145945,
+          "bluePathRisk": 0.12631241210639957,
+          "sheetBending": 1.1075093406136352,
+          "worstSheet": 1.4316010370510142,
+          "blueSheet": 1.098866646244035,
+          "retreat": 0.0007972165587306003,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 501,
+      "elapsed": 270.00495575000014,
+      "loss": 0.22453595424755562,
+      "stats": {
+        "srgb": {
+          "stress": 29.1722863997622,
+          "unweighted": 30.828322755452113,
+          "conditionPenalty": 0.5168828179796718,
+          "maxLogCondition": 11.782394006825843,
+          "pathRisk": 0.07206846885812722,
+          "worstHue": 0.1220934923945761,
+          "bluePathRisk": 0.08648908024250268,
+          "sheetBending": 1.0367205806182513,
+          "worstSheet": 1.3490379790984774,
+          "blueSheet": 1.1769308213414076,
+          "retreat": 0.0003301986682739789,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.08214966287986,
+          "unweighted": 32.28575551985281,
+          "conditionPenalty": 0.5168828179796718,
+          "maxLogCondition": 11.782394006825843,
+          "pathRisk": 0.1133852758455966,
+          "worstHue": 0.33153226075622744,
+          "bluePathRisk": 0.12666885172806933,
+          "sheetBending": 1.1057973009044024,
+          "worstSheet": 1.4310552481668373,
+          "blueSheet": 1.0982527306296264,
+          "retreat": 0.0007958498971175661,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 551,
+      "elapsed": 297.18373730100006,
+      "loss": 0.22440500148594622,
+      "stats": {
+        "srgb": {
+          "stress": 29.165070453039988,
+          "unweighted": 30.807786812654147,
+          "conditionPenalty": 0.5156283967131928,
+          "maxLogCondition": 11.786974535943767,
+          "pathRisk": 0.07186542944548689,
+          "worstHue": 0.12180638164188917,
+          "bluePathRisk": 0.08650299533628623,
+          "sheetBending": 1.0348009794611197,
+          "worstSheet": 1.350805941483772,
+          "blueSheet": 1.1758469032910315,
+          "retreat": 0.00034329607730164424,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.086755454179197,
+          "unweighted": 32.295618571687015,
+          "conditionPenalty": 0.5156283967131928,
+          "maxLogCondition": 11.786974535943767,
+          "pathRisk": 0.11345057621256839,
+          "worstHue": 0.3330598152816739,
+          "bluePathRisk": 0.1268602545574371,
+          "sheetBending": 1.1044456001534522,
+          "worstSheet": 1.4291462649728772,
+          "blueSheet": 1.0977394917524905,
+          "retreat": 0.0008036165446938671,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 601,
+      "elapsed": 324.857781035,
+      "loss": 0.22429634098662155,
+      "stats": {
+        "srgb": {
+          "stress": 29.165853580179675,
+          "unweighted": 30.8012327867433,
+          "conditionPenalty": 0.5141535172574778,
+          "maxLogCondition": 11.780497593159014,
+          "pathRisk": 0.07181890077388413,
+          "worstHue": 0.12199812715822278,
+          "bluePathRisk": 0.08650335764358935,
+          "sheetBending": 1.0334750232767558,
+          "worstSheet": 1.349157445464418,
+          "blueSheet": 1.175383949322501,
+          "retreat": 0.00034129270705025584,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.085375398854026,
+          "unweighted": 32.29716198668548,
+          "conditionPenalty": 0.5141535172574778,
+          "maxLogCondition": 11.780497593159014,
+          "pathRisk": 0.11346876577687227,
+          "worstHue": 0.333648780701759,
+          "bluePathRisk": 0.12685336255213306,
+          "sheetBending": 1.102971031838619,
+          "worstSheet": 1.4296964231226235,
+          "blueSheet": 1.0970280207717442,
+          "retreat": 0.0008028049105780287,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 651,
+      "elapsed": 352.55742962399995,
+      "loss": 0.22411069261686858,
+      "stats": {
+        "srgb": {
+          "stress": 29.17356849890248,
+          "unweighted": 30.80767758351895,
+          "conditionPenalty": 0.510874639773133,
+          "maxLogCondition": 11.762088514416574,
+          "pathRisk": 0.07174326143358205,
+          "worstHue": 0.12177785922141689,
+          "bluePathRisk": 0.08650972522161453,
+          "sheetBending": 1.0299529679155057,
+          "worstSheet": 1.3509189865082287,
+          "blueSheet": 1.173869855276094,
+          "retreat": 0.0003313092932342974,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.08900175613503,
+          "unweighted": 32.296295926986694,
+          "conditionPenalty": 0.510874639773133,
+          "maxLogCondition": 11.762088514416574,
+          "pathRisk": 0.11341185577184076,
+          "worstHue": 0.3338112114543065,
+          "bluePathRisk": 0.12690588491307822,
+          "sheetBending": 1.1001451194475493,
+          "worstSheet": 1.4279791602873873,
+          "blueSheet": 1.095069889101499,
+          "retreat": 0.0008052877961353667,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "evaluation": 679,
+      "elapsed": 368.763561538,
+      "loss": 0.22402257379864074,
+      "stats": {
+        "srgb": {
+          "stress": 29.171058435021855,
+          "unweighted": 30.807751349405088,
+          "conditionPenalty": 0.5094154260489571,
+          "maxLogCondition": 11.75239844058196,
+          "pathRisk": 0.07177143350492539,
+          "worstHue": 0.12211580961598043,
+          "bluePathRisk": 0.08649463881391393,
+          "sheetBending": 1.0288344430143377,
+          "worstSheet": 1.3500221414891511,
+          "blueSheet": 1.1732560375851904,
+          "retreat": 0.0003304766257294063,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        },
+        "full": {
+          "stress": 30.093203366701793,
+          "unweighted": 32.304903455342085,
+          "conditionPenalty": 0.5094154260489571,
+          "maxLogCondition": 11.75239844058196,
+          "pathRisk": 0.11337088599895002,
+          "worstHue": 0.33424731365696275,
+          "bluePathRisk": 0.12679971700484413,
+          "sheetBending": 1.0984825994745557,
+          "worstSheet": 1.4285759770255528,
+          "blueSheet": 1.094031776908998,
+          "retreat": 0.0008073248838801108,
+          "darkGuard": 0.0,
+          "regret": 0.0
+        }
+      }
+    }
+  ]
+}

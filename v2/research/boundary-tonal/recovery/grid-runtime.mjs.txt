@@ -1,0 +1,75 @@
+/** HRL 0.13: repaired spectral domain and shared tonal refinements.
+ * Ordinary mapped import is the default. Coordinates remain exactly {H,R,L}.
+ */
+import {getSource,ADOBE_RGB1998} from '../shared-rl/source.mjs';
+import {SharedModel,sharedCoordinates} from '../shared-rl/core.mjs';
+import {RelativeModel,RelativeCone,RelativeSpectralCarrier,D65} from '../relative-domain/index.mjs';
+import {XYZ_TO_SRGB,SRGB_TO_XYZ,mul3} from '../../lib/srgb-triangles.mjs';
+export {D65,ADOBE_RGB1998,sharedCoordinates};
+export {addBlack,addWhite,exchangeNeutral} from '../tonal-semantics/operations.mjs';
+export const VERSION='0.13-boundary-tonal';
+export const BOUNDARY_ID='cie1931-2deg-1nm-linear-cone';
+export const INPUT_POLICY='mapped-spectral-v1';
+async function read(url){if(url.protocol==='file:'){const{readFile}=await import('node:fs/promises');return JSON.parse(await readFile(url,'utf8'));}const r=await fetch(url);if(!r.ok)throw Error('Resource unavailable '+url+' '+r.status);return r.json();}
+let boundaryPromise;
+export function boundaryRecord(){return boundaryPromise??=read(new URL('boundary-1nm.json',import.meta.url));}
+export async function createPhysicalCone(){const r=await boundaryRecord();return new RelativeCone({white:r.white_xyz,xyBoundary:r.vertices_xy,normals:r.normals});}
+/** Geometry transport, not an assertion that straight u'v' rays are constant hue. */
+export function transportXYZ(input,from,to){const c=from.coordinates(input);return c.neutral?to.white.map(v=>v*c.Y):to.at(c.theta,c.rho,c.Y);}
+const sources=new Map();
+export function getBoundarySource(gamut='full'){
+ const id=typeof gamut==='string'?gamut:JSON.stringify(gamut);
+ if(!sources.has(id))sources.set(id,(async()=>{
+  const old=await getSource(gamut);
+  if(gamut!=='full')return old;
+  const legacyCone=new RelativeCone(old.field),cone=await createPhysicalCone();
+  // Retain the inherited normalized chart; transport its physical realization.
+  // All labels and deterministic atlas values remain those of the source chart.
+  const source=Object.assign(Object.create(Object.getPrototypeOf(old)),old);
+  source.field=Object.assign(Object.create(Object.getPrototypeOf(old.field)),old.field,{white:cone.white.slice(),whiteUV:cone.whiteUV.slice(),xyBoundary:cone.vertices.map(x=>x.slice()),normals:cone.normals.map(x=>x.slice())});
+  source.toLegacyXYZ=x=>transportXYZ(x,cone,legacyCone);
+  source.fromLegacyXYZ=x=>transportXYZ(x,legacyCone,cone);
+  source.toXYZ=q=>source.fromLegacyXYZ(old.toXYZ(q));
+  source.fromXYZ=(x,h=0)=>old.fromXYZ(source.toLegacyXYZ(x),h);
+  source.carrier=new RelativeSpectralCarrier(cone);
+  source.legacySource=old;source.legacyCone=legacyCone;source.boundaryID=BOUNDARY_ID;
+  source.fullVivid=H=>source.toXYZ({H,R:1,L:1});
+  // A latent OPAL readout must not accidentally receive the transported XYZ.
+  if(old.readout)source.readout=Object.assign(Object.create(Object.getPrototypeOf(old.readout)),old.readout,{evaluate:(x,o)=>old.readout.evaluate(source.toLegacyXYZ(x),o)});
+  return source;
+ })().catch(e=>{sources.delete(id);throw e;}));
+ return sources.get(id);
+}
+export async function createSpectralTonalHRL({gamut='full',checkpoint='balanced',record=null,referenceWhiteNits=300}={}){
+ if(!record){if(checkpoint==='boundary')record=await read(new URL('../hue-fair-refine/results/balanced.json',import.meta.url));else{if(!/^[a-z0-9-]+$/.test(checkpoint))throw RangeError('Invalid checkpoint');record=await read(new URL(`results/${checkpoint}.json`,import.meta.url));}}
+ const source=await getBoundarySource(gamut),model=new SharedModel(source,record),m=new RelativeModel(model,{referenceWhiteNits,overflow:'clip',imaginary:'clip'});
+ // Native charts are unchanged but imports use the repaired outer physical cone.
+ m.cone=await createPhysicalCone();m.carrier=new RelativeSpectralCarrier(m.cone);
+ m.version=VERSION;m.name=`HRL ${VERSION} ${checkpoint}`;model.version=VERSION;model.name=m.name;
+ m.definition=record;m.checkpoint=checkpoint;m.boundaryID=BOUNDARY_ID;m.inputPolicy=INPUT_POLICY;
+ m.gamutID=typeof gamut==='string'?gamut:gamut.id;
+ m.toLinearRGB=q=>model.toLinear(q);m.fromLinearRGB=(rgb,h=0)=>model.fromLinear(rgb,h);
+ m.importXYZ=function(xyz,options={}){
+  const{sourceWhiteNits,...context}=options;
+  if(sourceWhiteNits!==undefined&&(!Number.isFinite(sourceWhiteNits)||sourceWhiteNits<=0))throw RangeError('Positive sourceWhiteNits required');
+  if(context.absolute&&sourceWhiteNits!==undefined)throw RangeError('Absolute XYZ already has an intensity scale');
+  let relative=this.context.toRelative(xyz,context);
+  if(sourceWhiteNits!==undefined&&sourceWhiteNits!==this.referenceWhiteNits)relative=relative.map(v=>v*sourceWhiteNits/this.referenceWhiteNits);
+  const p=this.cone.prepare(relative,{overflow:'clip',imaginary:'clip'});let mapped=p.xyz,events=p.events.slice(),coordinates;
+  if(m.gamutID==='srgb'){
+   const rgb=mul3(XYZ_TO_SRGB,mapped);
+   if(rgb.some(v=>v< -2e-12||v>1+2e-12)){const c=rgb.map(v=>Math.max(0,Math.min(1,v)));coordinates=model.fromLinear(c,options.neutralHue??0);mapped=mul3(SRGB_TO_XYZ,c);events.push('srgb-gamut-clipped');}
+   else coordinates=model.fromXYZ(mapped,options.neutralHue??0);
+  }else if(m.gamutID==='full')coordinates=model.fromXYZ(mapped,options.neutralHue??0);
+  else{
+   const rgb=mul3(source.base.MI,mapped);
+   if(rgb.some(v=>v< -2e-12||v>1+2e-12)){const c=rgb.map(v=>Math.max(0,Math.min(1,v)));coordinates=model.fromLinear(c,options.neutralHue??0);mapped=mul3(source.base.M,c);events.push(m.gamutID+'-gamut-clipped');}
+   else coordinates=model.fromXYZ(mapped,options.neutralHue??0);
+  }
+  if(![coordinates.H,coordinates.R,coordinates.L].every(Number.isFinite))throw Error('Nonfinite conversion');
+  const legacy=source.toLegacyXYZ?source.toLegacyXYZ(mapped):mapped;
+  const legacyCone=source.legacyCone??new RelativeCone(source.field);
+  return{coordinates,relativeXYZ:relative,mappedXYZ:mapped,events,absoluteLuminance:relative[1]*this.referenceWhiteNits,hueContinuation:legacyCone.completion(legacy)>model.field.aMax,boundary:this.boundaryID};
+ };
+ return m;
+}

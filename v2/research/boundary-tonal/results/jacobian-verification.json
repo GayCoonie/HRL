@@ -1,0 +1,28 @@
+{
+  "seed": 180917,
+  "samplesPerModel": 128,
+  "basis": "equilateral source and destination x,z",
+  "models": {
+    "parent": {
+      "sha256": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+      "maxAbsoluteJacobianDifference": 1.6262546864709293e-12,
+      "maxScaledJacobianDifference": 9.218866726405516e-13,
+      "maxLogConditionDifference": 5.243583345304614e-13,
+      "maxRelativeDeterminantDifference": 5.375432757830598e-13
+    },
+    "balanced": {
+      "sha256": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "maxAbsoluteJacobianDifference": 1.1616929640467788e-11,
+      "maxScaledJacobianDifference": 3.644312259544517e-12,
+      "maxLogConditionDifference": 4.29278834701563e-12,
+      "maxRelativeDeterminantDifference": 2.8691746109590225e-12
+    },
+    "metric": {
+      "sha256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "maxAbsoluteJacobianDifference": 1.8940959911617483e-12,
+      "maxScaledJacobianDifference": 1.8940959911617483e-12,
+      "maxLogConditionDifference": 5.581979323210362e-12,
+      "maxRelativeDeterminantDifference": 2.8827176231341603e-12
+    }
+  }
+}

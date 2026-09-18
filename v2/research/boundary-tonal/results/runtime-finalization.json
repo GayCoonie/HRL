@@ -1,0 +1,11 @@
+{
+  "gridRuntimeSHA256": "11314c599b1865152fcd36a58733cf5a3ab09d620508116f8bf35512a487029b",
+  "publicRuntimeSHA256": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+  "changes": [
+    "Expose repaired fullVivid alias on the inner model, matching public vivid.",
+    "Cache the unchanged continuation cone instead of allocating it on every native import."
+  ],
+  "coordinateEquationsChanged": false,
+  "originalGridRuntime": "recovery/grid-runtime.mjs.txt",
+  "note": "The grid metadata records the exact runtime that generated it. This later alias/allocation fix does not alter source.toXYZ or fitted-coordinate outputs."
+}

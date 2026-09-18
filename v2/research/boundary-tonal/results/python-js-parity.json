@@ -1,0 +1,13 @@
+{
+  "seed": 170917,
+  "coordinates": 2048,
+  "models": {
+    "balanced": {
+      "maxForwardInverseCoordinateDifference": 8.293365993949919e-14
+    },
+    "metric": {
+      "maxForwardInverseCoordinateDifference": 5.967448757360216e-14
+    }
+  },
+  "implicitInverseGradientCheck": true
+}

@@ -1,0 +1,10 @@
+{
+  "conditioned-a": "Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected",
+  "metric-a": "Aborted by OOM killer, exit -9; last saved intermediate and all completed objective logs retained; not selected",
+  "metric-b": "Aborted by OOM killer during setup; zero objective evaluations",
+  "memory_limit_bytes": 4294967296,
+  "correction": "At most two coarse fits concurrently; final dense fits individually.",
+  "smooth-b": "Completed; original full trace and final array preserved",
+  "metric-b2": "Completed; original full trace and final array preserved",
+  "conditioned-c": "Completed; original full trace and final array preserved"
+}
