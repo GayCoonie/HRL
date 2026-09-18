@@ -1,0 +1,15 @@
+{
+  "base": "https://gaycoonie.github.io/HRL/",
+  "publicPages": true,
+  "defaultMapped": true,
+  "historicalStrictSelectable": true,
+  "native3813AndHistorical3331": true,
+  "fullOriginalJudgeScoresVisible": true,
+  "fiveGenerationSixteenMeasurement": true,
+  "noMappedNA": true,
+  "policySwitchLeavesTrianglePixelsIdentical": true,
+  "scorePage": true,
+  "mobileNoOverflow": true,
+  "pageErrors": [],
+  "chromium": "143.0.7499.4"
+}
