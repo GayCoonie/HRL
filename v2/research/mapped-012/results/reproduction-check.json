@@ -1,0 +1,21 @@
+{
+  "meaning": "Execution reproduction, not independent perceptual validation or a new fit",
+  "runnerRunID": 35315786445,
+  "runnerResultCommit": "cfb7366c488457d3d86065ee3c5c0e241ee28edb",
+  "localVersusRunner": {"scoredCellsCompared":126,"maximumAbsoluteScoreDifference":1.4992451724538114e-12,"mappingCountsAndReasonsIdentical":true},
+  "localVersusExtractedRerun": {"scoredCellsCompared":126,"maximumAbsoluteScoreDifference":0.0,"mappingCountsAndReasonsIdentical":true},
+  "allPerInputEventMasksIdentical": true,
+  "originalUpstreamJudgeSourceHashesIdentical": true,
+  "commonFrozenSourceFiles": 73,
+  "commonFrozenSourceFileHashesIdentical": true,
+  "sourceInventoryNote": "The portable dependency archive contains fewer historical research files than the full GitHub checkout; every common frozen-source hash matches.",
+  "packagingCorrection": "The first extraction lacked Xiao unique_hues_long.csv and OSA neighbor_pairs.csv. These original canonical tables were added without changing benchmark code or data. The full rerun then completed all 126 cells and reproduced local scores exactly.",
+  "localBrowserNote": "Browser navigation was blocked in the local sandbox; no local-browser success is claimed. Runner-served and actual public Pages checks passed and have separate receipts.",
+  "localVersions": {"python":"3.13.5","numpy":"2.3.5","colour":"0.4.7","node":"v22.16.0"},
+  "runnerVersions": {"python":"3.13.15","numpy":"2.3.5","colour":"0.4.7","node":"v22.16.0"},
+  "scoreResultSHA256": {
+    "local":"2700997a924841f7b3f59b3bdecd483aabcaf0ecdb6053159c6fca212edadb07",
+    "runner":"2e5acb425d0cb1018359aca719a8d76d52188638ff6edab29666dcfed966931f",
+    "extracted":"46e2aa8dd0a40e30f0cd268c353e354e88172e20c76ebf2d823e1c5b2c2da9a7"
+  }
+}
