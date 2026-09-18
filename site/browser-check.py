@@ -20,7 +20,7 @@ with sync_playwright() as pw:
     page.screenshot(path=str(out/'definition.png'))
     page.goto(base+'library.html',wait_until='domcontentloaded')
     assert page.locator('[data-hrl-file]').count()>=744
-    page.locator('#hrl-file-search').fill('boundary-tonal metric.json')
+    page.locator('#hrl-file-search').fill('boundary-tonal/results/metric.json')
     page.wait_for_function("document.querySelector('#hrl-file-count').textContent.startsWith('1 of ')")
     assert page.locator('[data-hrl-file]:visible').count()==1
     page.locator('#hrl-file-kind').select_option('markdown')
@@ -62,7 +62,7 @@ with sync_playwright() as pw:
     page.set_viewport_size({'width':390,'height':844})
     assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),'Beta 1 horizontal overflow'
     page.screenshot(path=str(out/'beta1-mobile.png'),full_page=True)
-    for url in ['v2/','v2/beta1-notes.html','v2/archive.html','v2/benchmarks.html','library.html?q=boundary-tonal%20metric.json']:
+    for url in ['v2/','v2/beta1-notes.html','v2/archive.html','v2/benchmarks.html','library.html?q=boundary-tonal/results/metric.json']:
         page.goto(base+url,wait_until='domcontentloaded')
         assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),url+' horizontal overflow'
     page.set_viewport_size({'width':1450,'height':1050})
