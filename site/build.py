@@ -45,12 +45,13 @@ class Positions(HTMLParser):
         super().__init__(convert_charrefs=False);self.text=text
         self.lines=[0]
         for m in re.finditer('\n',text):self.lines.append(m.end())
-        self.body=None;self.main=None;self.headEnd=None;self.navStart=None;self.navEnd=None;self.depth=0
+        self.body=None;self.main=None;self.content=None;self.headEnd=None;self.navStart=None;self.navEnd=None;self.depth=0
         self.feed(text)
     def at(self):
         line,col=self.getpos();return self.lines[line-1]+col
     def handle_starttag(self,tag,attrs):
         p=self.at()
+        if self.content is None and tag in {'header','h1','h2','section','article','div','p','nav'}:self.content=p
         if tag=='body' and self.body is None:self.body=p+len(self.get_starttag_text())
         if tag=='main' and self.main is None:self.main=p
         if tag=='nav':
@@ -69,7 +70,7 @@ def attach_navigation(path):
     p=ROOT/path;text=p.read_text()
     if MARK in text:return
     before=scripts(text);pos=Positions(text);patch=[]
-    insert=pos.body if pos.body is not None else pos.main
+    insert=pos.body if pos.body is not None else pos.main if pos.main is not None else pos.content
     if insert is None:return # Raw templates with no usable document body are left intact.
     if pos.navStart is not None and pos.navEnd is not None:
         patch.extend([(pos.navEnd,'</details>'),(pos.navStart,'<details class="hrl-local-links"><summary>Page-specific links and sources</summary>')])
@@ -127,7 +128,10 @@ def all_files():
             p=Path(base)/name;path=p.relative_to(ROOT).as_posix()
             if name.endswith(('.pyc','.log')) and path.startswith('site/'):continue
             out.append(path)
-    return sorted(out)
+    if (ROOT/'.git').exists():
+        tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','-z',BASE],cwd=ROOT).decode().split('\0')
+        out.extend(p for p in tracked if p and (ROOT/p).is_file())
+    return sorted(set(out))
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--preview',action='store_true');args=ap.parse_args()
