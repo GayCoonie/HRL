@@ -1,0 +1,149 @@
+name: HRL hue-sheet refinement
+on:
+  push:
+    paths: ['v2/research/hue-fair-refine/PUBLISH.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: hrl-hue-fair
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify and unpack source transfer
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib,base64,zlib
+          root=Path('v2/research/hue-fair-refine')
+          p=json.loads((root/'PUBLISH.json').read_text())
+          parts=[''.join((root/f'transfer-{i}.txt').read_text().split()) for i in range(p['parts'])]
+          assert len(parts)==len(p['part_sha256'])
+          for i,s in enumerate(parts):assert hashlib.sha256(s.encode()).hexdigest()==p['part_sha256'][i],i
+          raw=zlib.decompress(base64.b64decode(''.join(parts),validate=True))
+          assert hashlib.sha256(raw).hexdigest()==p['sha256']
+          files=json.loads(raw);assert len(files)==p['files']
+          for name,item in files.items():
+              dest=Path(name)
+              assert name.startswith(str(root)+'/') and '..' not in dest.parts and not dest.is_absolute()
+              if isinstance(item,str):text=item
+              else:
+                  b=Path(item['base'])
+                  assert str(b).startswith(('v2/research/gen-tonal-fit/','v2/research/hue-fair-refine/')) and '..' not in b.parts
+                  original=b.read_bytes();assert hashlib.sha256(original).hexdigest()==item['hash'],str(b)
+                  lines=original.decode().splitlines(keepends=True);blocks=[]
+                  for block in item['blocks']:
+                      if isinstance(block,str):blocks.append(block)
+                      else:
+                          assert len(block)==2 and all(isinstance(x,int) for x in block) and 0<=block[0]<=block[1]<=len(lines)
+                          blocks.append(''.join(lines[block[0]:block[1]]))
+                  text=''.join(blocks)
+              dest.parent.mkdir(parents=True,exist_ok=True);dest.write_text(text)
+          for name,sha in json.loads((root/'SOURCE_HASHES.json').read_text()).items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==sha,name
+          s=json.loads((root/'results/SELECTION.json').read_text())
+          assert hashlib.sha256(Path('v2/research/gen-tonal-fit/results/balanced.json').read_bytes()).hexdigest()==s['parent_sha256']
+          for name,item in s['candidates'].items():
+              raw=(root/f'results/{name}.json').read_bytes();assert hashlib.sha256(raw).hexdigest()==item['sha256']
+              r=json.loads(raw);assert len(r['coefficients'])==1 and r['ring_logits'] is None
+              assert r['research']['ruler']=='helmlab-1.0.0-genspace'
+          assert not (root/'results/UI_TEST_FIXTURE.json').exists()
+          for f in root.glob('transfer-*.txt'):f.unlink()
+          (root/'PUBLISH.json').unlink()
+          PY
+      - name: Install pinned tools and benchmark data
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Verify exact numerical mapping
+        run: |
+          node v2/research/hue-fair-refine/verify.mjs
+          python v2/research/hue-fair-refine/parity.py
+          python v2/research/hue-fair-refine/prepare-benchmark.py
+      - name: Scored ColorBench and actual-inverse diagnostics
+        run: |
+          P=v2/research/hue-fair-refine
+          python "$P/benchmark.py" --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets >/tmp/hue-bench.log 2>&1 &
+          B=$!
+          HUES=72 SAMPLES=257 OFFSET=1 node "$P/evaluate.mjs" parent balanced gentle >/tmp/hue-path.log 2>&1 &
+          D=$!
+          HUES=48 OFFSET=1 node "$P/sheet-audit.mjs" parent balanced gentle >/tmp/hue-sheet.log 2>&1 &
+          S=$!
+          FAILED=0; wait $B || FAILED=1; wait $D || FAILED=1; wait $S || FAILED=1
+          cat /tmp/hue-bench.log /tmp/hue-path.log /tmp/hue-sheet.log
+          test "$FAILED" = 0
+          cp "$P/results/direct-72-257-parent_balanced_gentle.json" "$P/results/direct-final.json"
+          cp "$P/results/sheet-48-parent_balanced_gentle.json" "$P/results/sheet-final.json"
+      - name: Build exact previews and comparison
+        run: |
+          P=v2/research/hue-fair-refine
+          node "$P/preview.mjs" parent balanced gentle
+          python "$P/build-preview.py"
+          python "$P/report.py"
+          python "$P/build-site.py"
+          node --check v2/hue-fair-ui/app.mjs
+          node --check v2/hue-fair-ui/worker.mjs
+          find "$P/results" -name '*.rgba' -delete
+      - name: Verify served app on runner
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hue-http.log 2>&1 &
+          python v2/research/hue-fair-refine/site-check.py --base http://127.0.0.1:8765/ --out v2/research/hue-fair-refine/results/browser-runner
+      - name: Publish verified additions
+        run: |
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/hue-fair-refine v2/hue-fair-ui v2/hue-fair.html v2/gen-tonal.html v2/research/gen-tonal-fit/build-site.py v2/index.html index.html
+          git commit -m 'Publish verified balanced-parent hue-sheet refinement'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - name: Wait for exact public files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import time,hashlib,urllib.request
+          paths=['v2/hue-fair.html','v2/hue-fair-ui/app.mjs','v2/research/hue-fair-refine/results/site-data.json']
+          expected={p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in paths}
+          for attempt in range(90):
+              try:
+                  for p in paths:
+                      data=urllib.request.urlopen('https://gaycoonie.github.io/HRL/'+p+'?huecheck='+str(attempt),timeout=15).read()
+                      assert hashlib.sha256(data).hexdigest()==expected[p],p
+                  print('Exact public files available.');break
+              except Exception as e:print(type(e).__name__,str(e)[:100],flush=True)
+              time.sleep(5)
+          else:raise RuntimeError('Public files did not become available')
+          PY
+      - name: Verify public comparison
+        run: python v2/research/hue-fair-refine/site-check.py --base https://gaycoonie.github.io/HRL/ --out v2/research/hue-fair-refine/results/browser-live
+      - name: Record public verification
+        run: |
+          git add v2/research/hue-fair-refine/results/browser-live/verification.json
+          git commit -m 'Record public verification of hue-sheet refinement'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-hue-fair-review
+          path: |
+            v2/research/hue-fair-refine/
+            v2/hue-fair-ui/
+            v2/hue-fair.html
+            /tmp/hue-*.log
+          retention-days: 30
