@@ -1,0 +1,128 @@
+name: HRL hue-fair continuation
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/hrl-hue-fair-finish.yml','v2/research/hue-fair-refine/FINISH.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: hrl-hue-fair-completion
+  cancel-in-progress: false
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Restore verified source adapters
+        run: |
+          python v2/research/hue-fair-refine/resume-build.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('v2/research/hue-fair-refine')
+          f=p/'verify.mjs';s=f.read_text();old="names.push('balanced','metric')";new="names.push('balanced','gentle')"
+          assert s.count(old)==1;f.write_text(s.replace(old,new))
+          f=p/'resume-build.py';s=f.read_text();needle="(P/'verify.mjs').write_text(s)"
+          assert s.count(needle)==1
+          f.write_text(s.replace(needle,"s=s.replace(\"names.push('balanced','metric')\",\"names.push('balanced','gentle')\")\n"+needle))
+          PY
+      - uses: actions/download-artifact@v4
+        with:
+          name: hrl-hue-fair-frozen-trials
+          run-id: 35300703792
+          github-token: ${{ github.token }}
+          path: v2/research/hue-fair-refine
+      - name: Verify original checkpoint and trace identities
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path('v2/research/hue-fair-refine');h=lambda x:hashlib.sha256(x.read_bytes()).hexdigest()
+          expected={'balanced':'159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605','gentle':'d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0'}
+          sel=json.loads((p/'results/SELECTION.json').read_text())
+          for n,v in expected.items():assert h(p/f'results/{n}.json')==v==sel['candidates'][n]['sha256']
+          for r in json.loads((p/'trials/registry.json').read_text()):
+              f=p/'trials'/r['file'];assert h(f)==r['sha256'];assert h(f.with_suffix('.jsonl'))==r['trace_sha256']
+          receipt={'restoredFromRun':35300703792,'artifactID':10529888505,'checkpoints':expected,'optimizationRepeated':False,'issue':'The test adapter default retained the old metric filename. Balanced numerical checks passed; no score or coefficient changed to fix that filename.'}
+          (p/'recovery/verification-resume.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          PY
+      - name: Install pinned numerical, benchmark and browser tools
+        run: |
+          python -m pip install numpy==2.3.5 scipy==1.17.0 colour-science==0.4.7 Pillow playwright==1.57.0
+          python -m pip install torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu
+          python -m playwright install --with-deps chromium
+          git clone https://github.com/Grkmyldz148/colorbench.git /tmp/colorbench
+          git -C /tmp/colorbench checkout 12b2de215cc5020682e3d245a8c78bce5f0ebbc9
+          git clone https://github.com/Grkmyldz148/color-perception-datasets.git /tmp/color-perception-datasets
+          git -C /tmp/color-perception-datasets checkout 8641f4e8ebd9d85a34dc0fedc116fa0e58493190
+      - name: Exact model verification and training-runtime parity
+        run: |
+          node v2/research/hue-fair-refine/verify.mjs balanced gentle
+          python v2/research/hue-fair-refine/parity.py
+      - name: Scored-only ColorBench and actual-output checks
+        run: |
+          P=v2/research/hue-fair-refine
+          python "$P/benchmark.py" --colorbench /tmp/colorbench --pool /tmp/color-perception-datasets/datasets >"$P/results/benchmark-console.log" 2>&1 &
+          B=$!
+          HUES=72 SAMPLES=257 OFFSET=1 node "$P/evaluate.mjs" parent balanced gentle >"$P/results/direct-console.log" 2>&1 &
+          D=$!
+          HUES=72 OFFSET=1 node "$P/sheet-audit.mjs" parent balanced gentle >"$P/results/sheet-console.log" 2>&1 &
+          S=$!
+          FAILED=0; wait $B || FAILED=1; wait $D || FAILED=1; wait $S || FAILED=1
+          cat "$P/results/benchmark-console.log" "$P/results/direct-console.log" "$P/results/sheet-console.log"
+          test "$FAILED" = 0
+          cp "$P/results/direct-72-257-parent_balanced_gentle.json" "$P/results/direct-final.json"
+      - name: Render exact hue neighbors and build the comparison
+        run: |
+          P=v2/research/hue-fair-refine
+          node "$P/preview.mjs" parent balanced gentle
+          python "$P/build-preview.py"
+          python "$P/report.py"
+          python "$P/build-site.py"
+          python "$P/finalize-public.py"
+          node --check v2/hue-fair-ui/app.mjs
+          node --check v2/hue-fair-ui/worker.mjs
+      - name: Exercise the served comparison
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-finish-http.log 2>&1 &
+          python v2/research/hue-fair-refine/site-check.py --base http://127.0.0.1:8765/ --out v2/research/hue-fair-refine/results/browser-runner
+      - name: Preserve provenance and publish verified additions
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,zipfile
+          p=Path('v2/research/hue-fair-refine')
+          with zipfile.ZipFile(p/'recovery/interrupted-transfer.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for f in p.glob('transfer-*.txt'):z.write(f,f.name)
+          for f in p.glob('transfer-*.txt'):f.unlink()
+          for f in p.rglob('*.pyc'):f.unlink()
+          for f in (p/'results').glob('*.rgba'):f.unlink()
+          hashes={str(f):hashlib.sha256(f.read_bytes()).hexdigest() for f in p.rglob('*') if f.is_file() and f.name!='SOURCE_HASHES.json'}
+          (p/'SOURCE_HASHES.json').write_text(json.dumps(hashes,indent=2)+'\n')
+          PY
+          git config user.name 'HRL research checks'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A v2/research/hue-fair-refine v2/hue-fair-ui v2/hue-fair.html v2/gen-tonal.html v2/research/gen-tonal-fit/build-site.py v2/index.html index.html README.md
+          git commit -m 'Complete frozen balanced-parent refinement tests, scored results, full logs and comparison'
+          git pull --rebase origin main
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-hue-fair-finished-review
+          path: |
+            README.md
+            v2/research/hue-fair-refine/
+            v2/hue-fair-ui/
+            v2/hue-fair.html
+          retention-days: 30
