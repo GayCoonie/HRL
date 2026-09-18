@@ -1,0 +1,18 @@
+{
+  "samplesAttempted":4096,
+  "chromaticSamples":4095,
+  "method":"Identical physical XYZ in native and full; low-chromaticness cases excluded. This is separate from fixed latent-hue tests.",
+  "originalMaximumNativeFullHueDifference":1.6359535948140547e-9,
+  "repairedMeanNativeFullHueDifference":0.005543136115173676,
+  "repaired95thPercentileNativeFullHueDifference":0.02675539601739274,
+  "repairedMaximumNativeFullHueDifference":0.22530073347331836,
+  "worst":{
+    "rgb":[0.09338252750012543,0.25121909954009425,0.949364197939758],
+    "xyz":[0.18247498582503527,0.10280839542822484,0.8509918330524904],
+    "nativeHue":269.7089021218893,
+    "oldFullHue":269.7089021218893,
+    "repairedFullHue":269.9342028553626,
+    "differenceDegrees":0.22530073347331836
+  },
+  "interpretation":"The outer-boundary radial transport changes the full physical hue field slightly. It preserves latent labels, not exact physical hue agreement with the unchanged native chart. One shared R/L bank is retained, but exact cross-gamut hue equality is a remaining geometric-normalization limitation. Not a measured observer error; no refitting occurred."
+}
