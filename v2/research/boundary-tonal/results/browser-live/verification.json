@@ -1,0 +1,22 @@
+{
+  "base": "https://gaycoonie.github.io/HRL/",
+  "publicPages": true,
+  "fourPanels": true,
+  "bothGamuts": true,
+  "nativeBoundaryOnlyPixelsIdentical": true,
+  "nativeRetained3331Prominent": true,
+  "mappedAll3813Separate": true,
+  "fiveGenerationSixteenMeasurement": true,
+  "finiteMappedScores": true,
+  "tonalStrips": 20,
+  "criticalBlueNeighbors": true,
+  "hexImport": true,
+  "correctVersionedExports": true,
+  "noExtraIntensityCoordinate": true,
+  "currentHueReadouts": true,
+  "neutralSurround": true,
+  "mask": true,
+  "mobileNoOverflow": true,
+  "pageErrors": [],
+  "chromium": "143.0.7499.4"
+}
