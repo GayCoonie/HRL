@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HRL v2 · Tonal research comparison</title>
+  <meta name="description" content="Compare the frozen HRL v2 Beta 1 with tonal research candidates at the same Hue, Reach and Level.">
+  <link rel="stylesheet" href="tonal-next.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to comparison</a>
+  <nav class="site-nav" aria-label="HRL site">
+    <a class="brand" href="index.html">HRL <small>Hue · Reach · Level</small></a>
+    <div><a href="beta1.html">Beta 1 picker</a><a href="beta1-notes.html">Beta 1 definition</a><a href="tonal-next.html" aria-current="page">Tonal research</a></div>
+  </nav>
+  <main id="main">
+    <header class="intro">
+      <p class="eyebrow">HRL v2 · research comparison</p>
+      <h1>Inspect the tonal changes.</h1>
+      <p>Compare the same hue sheet in the frozen Beta 1 and a research candidate. Look closely at the dark, high-Reach blues; the measurements below describe numerical changes, not a visual preference.</p>
+    </header>
+
+    <section class="controls" aria-label="Comparison controls">
+      <label for="profile">Realization<select id="profile"><option value="srgb">Native sRGB</option><option value="full">Full physical reference solid</option></select></label>
+      <label for="candidate">Research candidate<select id="candidate"><option value="smooth-mild">Smooth mild</option><option value="smooth-conditioned">Smooth conditioned</option></select></label>
+      <div class="hue-control"><label for="hue">Hue</label><div class="hue-inputs"><input id="hue" type="range" min="0" max="359.75" step=".25" value="275"><label class="number-label" for="hue-number"><span class="sr-only">Hue in degrees</span><input id="hue-number" type="number" min="0" max="360" step=".25" value="275"><span aria-hidden="true">°</span></label></div></div>
+    </section>
+    <div class="quick-hues" aria-label="Critical blue hues"><span>Blue neighbours</span><div id="quick-hues"></div></div>
+    <div class="display-options"><label><input type="checkbox" id="clip-mask"> Mark display clipping</label><label><input type="checkbox" id="neutral-surround"> Neutral surround</label></div>
+    <p id="display-note" class="display-note">Native sRGB colors are shown directly. All sheets use the same Hue, Reach and Level coordinates.</p>
+    <div class="status-row"><p id="render-status" role="status">Loading the color models…</p><button id="retry-render" type="button" hidden>Retry color models</button></div>
+
+    <section class="sheets" aria-label="Same-hue color sheets" aria-busy="true">
+      <article class="sheet" id="sheet-beta1">
+        <header><div><h2>HRL v2 Beta 1</h2><p>Frozen release · metric-b2</p></div><span class="sheet-hue" id="sheet-hue-beta1">H 275°</span></header>
+        <div class="triangle-frame"><div class="white-label">White <span>R 0 · L 1</span></div><div class="triangle-stage"><canvas id="triangle-beta1" width="241" height="279" tabindex="0" role="img" aria-label="Beta 1 hue triangle. Click to sample; arrow keys change Reach and Level, Shift for larger steps."></canvas><span class="cursor" id="cursor-beta1" hidden></span><span class="vivid-label">Vivid</span></div><div class="black-label">Black <span>R 0 · L 0</span></div></div>
+        <p class="clip-reading" id="clip-beta1">Waiting for the hue sheet.</p>
+        <div class="path"><p>Black → vivid <span>R = L</span></p><canvas id="edge-beta1" width="257" height="24" role="img" aria-label="Beta 1 black-to-vivid tonal path"></canvas></div>
+        <div class="path"><p>Near the vivid edge <span>R = 0.96 L</span></p><canvas id="near-beta1" width="257" height="24" role="img" aria-label="Beta 1 near-edge tonal path"></canvas></div>
+      </article>
+      <article class="sheet" id="sheet-candidate">
+        <header><div><h2 id="candidate-title">Smooth mild</h2><p>Research candidate · <span id="candidate-id">smooth-mild</span></p></div><span class="sheet-hue" id="sheet-hue-candidate">H 275°</span></header>
+        <div class="triangle-frame"><div class="white-label">White <span>R 0 · L 1</span></div><div class="triangle-stage"><canvas id="triangle-candidate" width="241" height="279" tabindex="0" role="img" aria-label="Research candidate hue triangle. Click to sample; arrow keys change Reach and Level, Shift for larger steps."></canvas><span class="cursor" id="cursor-candidate" hidden></span><span class="vivid-label">Vivid</span></div><div class="black-label">Black <span>R 0 · L 0</span></div></div>
+        <p class="clip-reading" id="clip-candidate">Waiting for the hue sheet.</p>
+        <div class="path"><p>Black → vivid <span>R = L</span></p><canvas id="edge-candidate" width="257" height="24" role="img" aria-label="Research candidate black-to-vivid tonal path"></canvas></div>
+        <div class="path"><p>Near the vivid edge <span>R = 0.96 L</span></p><canvas id="near-candidate" width="257" height="24" role="img" aria-label="Research candidate near-edge tonal path"></canvas></div>
+      </article>
+    </section>
+
+    <section class="sample-section" aria-labelledby="sample-heading">
+      <div class="section-heading"><div><h2 id="sample-heading">Sample the same coordinates</h2><p>Click either triangle, use its arrow keys, or enter Reach and Level. Shift + arrow takes a larger step.</p></div><div class="coordinate-inputs"><label for="reach">Reach<input id="reach" type="number" min="0" max="1" step=".005" value=".24"></label><label for="level">Level<input id="level" type="number" min="0" max="1" step=".005" value=".25"></label></div></div>
+      <p id="coordinate-reading" class="coordinate-reading" aria-live="polite">H 275° · R 0.240 · L 0.250</p>
+      <div class="sample-grid">
+        <div class="sample"><div id="swatch-beta1" class="swatch" role="img" aria-label="Beta 1 sample color"></div><div><h3>Beta 1</h3><p id="hex-beta1" class="hex">Calculating…</p><p id="xyz-beta1" class="xyz">Relative D65 XYZ pending.</p><p id="sample-clip-beta1" class="sample-clip"></p></div></div>
+        <div class="sample"><div id="swatch-candidate" class="swatch" role="img" aria-label="Research candidate sample color"></div><div><h3 id="sample-candidate-title">Smooth mild</h3><p id="hex-candidate" class="hex">Calculating…</p><p id="xyz-candidate" class="xyz">Relative D65 XYZ pending.</p><p id="sample-clip-candidate" class="sample-clip"></p></div></div>
+      </div>
+    </section>
+
+    <section class="measurements" aria-labelledby="measurements-heading">
+      <div class="section-heading"><div><h2 id="measurements-heading">Recorded comparison</h2><p id="measurement-context">Measurements use the selected realization and research candidate.</p></div><button type="button" id="retry-results">Reload measurements</button></div>
+      <p id="results-status" role="status">Loading recorded measurements…</p>
+      <p id="selection-note" class="selection-note" hidden></p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Comparison measurements; scroll horizontally on small screens" hidden id="table-scroll">
+        <table><caption id="table-caption">Beta 1 and selected research candidate</caption><thead><tr><th scope="col">Measure</th><th scope="col">Beta 1</th><th scope="col" id="candidate-column">Smooth mild</th><th scope="col">Change</th></tr></thead><tbody id="comparison-values"></tbody></table>
+      </div>
+      <p class="hint">Lower STRESS is better on the retained COMBVD pairs used in fitting. Blue-sheet error and the four path CVs are synthetic diagnostics: lower values describe the measured regularity, not observer preference. Change is candidate minus Beta 1. Missing measurements are shown as —.</p>
+      <p class="hint" id="receipt-meta"></p>
+    </section>
+
+    <details class="method"><summary>Reading the triangles and their limits</summary><p>Reach is chromaticness. Level remains brilliance / inverse blackness: K = 1 − L and W = L − R. Every point satisfies 0 ≤ R ≤ L ≤ 1. Black dilution, white dilution and neutral exchange are different operations.</p><p>The triangle runs from white at the upper left to black at the lower left, with vivid at the right corner. The lower edge has R = L; its near-edge strip uses R = 0.96 L. Both sheets evaluate the same coordinates, with a shared coefficient bank across each candidate’s gamut realizations.</p><p>The full physical reference solid extends beyond sRGB. This screen preview clips out-of-display colors to sRGB; it cannot show the complete physical gamut. The reported relative D65 XYZ values retain the model output before display clipping. A clipping mask marks affected pixels and is not part of the color model.</p><p>This is a research comparison. The frozen Beta 1 definition remains the public release. Numerical regularity and eligibility do not establish a preferred appearance.</p></details>
+    <footer><span>Research records: <a href="research/boundary-tonal/results/metric.json">Beta 1</a> · <a id="candidate-source" href="research/tonal-next/trials/smooth-mild.json">Selected candidate</a> · <a href="research/tonal-next/results/comparison.json">Comparison measurements</a></span><a href="beta1.html">Return to Beta 1 picker</a></footer>
+  </main>
+  <noscript><p class="noscript">JavaScript is needed to evaluate the color sheets. The Beta 1 definition and linked research records remain available.</p></noscript>
+  <script type="module" src="tonal-next.mjs"></script>
+</body>
+</html>

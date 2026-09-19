@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-19T10:22:46.171251+00:00",
+  "selectedCandidate": "smooth-mild",
+  "status": "no-eligible-candidate",
+  "selectionNote": "Neither research candidate meets every declared improvement check. Beta 1 remains the default; the measured tradeoffs are available for inspection.",
+  "models": {
+    "beta1-srgb": {
+      "retained_combvd": {
+        "weighted": 29.107047807815334,
+        "unweighted": 30.712588175216553,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5066819042384556,
+        "blackCV": 0.22228767401880106,
+        "whiteCV": 0.1972656374059561,
+        "exchangeCV": 0.21131784625193886,
+        "reachCV": 0.3257046146716111
+      },
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "mappedAllInput": {
+        "weighted": 34.489196386295546,
+        "unweighted": 38.12633858568467,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "beta1-full": {
+      "retained_combvd": {
+        "weighted": 29.948554645320474,
+        "unweighted": 32.12787975161901,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2793756199582022,
+        "blackCV": 0.26987119879461674,
+        "whiteCV": 0.3183927640300582,
+        "exchangeCV": 0.2596748558021401,
+        "reachCV": 0.37805973096262285
+      },
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "mappedAllInput": null
+    },
+    "smooth-mild-srgb": {
+      "retained_combvd": {
+        "weighted": 29.158023904684406,
+        "unweighted": 30.871647708700056,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5136986604693586,
+        "blackCV": 0.22066153005019684,
+        "whiteCV": 0.1988635429904707,
+        "exchangeCV": 0.21075337289443002,
+        "reachCV": 0.32751268505998743
+      },
+      "recordSHA256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "mappedAllInput": {
+        "weighted": 34.67428949529549,
+        "unweighted": 38.4525735671864,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "smooth-mild-full": {
+      "retained_combvd": {
+        "weighted": 29.999540384373695,
+        "unweighted": 32.21129827340429,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.28108108267732085,
+        "blackCV": 0.2696624993128515,
+        "whiteCV": 0.3203996571841352,
+        "exchangeCV": 0.2615915592265227,
+        "reachCV": 0.37801624780074594
+      },
+      "recordSHA256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "mappedAllInput": null
+    },
+    "smooth-conditioned-srgb": {
+      "retained_combvd": {
+        "weighted": 29.162527706182516,
+        "unweighted": 30.866300106291007,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.7384198817135698,
+        "blackCV": 0.22478787395369473,
+        "whiteCV": 0.20686745108830976,
+        "exchangeCV": 0.22465614425599473,
+        "reachCV": 0.3330480336146946
+      },
+      "recordSHA256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "mappedAllInput": {
+        "weighted": 34.71974677601718,
+        "unweighted": 38.50922655970145,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "smooth-conditioned-full": {
+      "retained_combvd": {
+        "weighted": 30.005696685766768,
+        "unweighted": 32.273767571021985,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2871521281740652,
+        "blackCV": 0.2774487125614771,
+        "whiteCV": 0.3322142700626754,
+        "exchangeCV": 0.2734336250332836,
+        "reachCV": 0.3847555383394595
+      },
+      "recordSHA256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "mappedAllInput": null
+    }
+  },
+  "selection": {
+    "smooth-mild": {
+      "blueBendingImprovementFraction": -0.013848444501781021,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.05097609686907134,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9926845067960598,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 1.0081002733447502,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.9973287946686914,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 1.0055512581244797,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": 0.050985739053221124,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9992266700459428,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 1.0063031996351763,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 1.007381166799773,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 0.9998849833549683,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
+    },
+    "smooth-conditioned": {
+      "blueBendingImprovementFraction": -0.45736383229122235,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.05547989836718159,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 1.0112475869205515,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 1.0486745375860569,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 1.0631196003585688,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 1.0225462539131889,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": 0.05714204044629412,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 1.0280782602986365,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 1.0434102391576725,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 1.0529846033365164,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0177109774685278,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
+    }
+  },
+  "limits": [
+    "COMBVD is reused development/training data, not held-out validation.",
+    "Native retained3331 and full3813 differ; mapped native3813 is a separate pipeline.",
+    "Path CV and blue sheet bending are synthetic GenSpace diagnostics, not observer preference scores.",
+    "Finite sampled contracts and conditioning do not prove whole-domain behavior."
+  ],
+  "receiptSHA256": {
+    "audit-baseline.json": "09a12a76cb70e90a338ae89c67e3ce4be9ff87678cfda49faf258334c45bf7ea",
+    "audit-mild.json": "e0ad73bde83ff5fd251cfc0bf5bf3553bd191e19c6cca868f49bc6b3bc2ea156",
+    "audit-conditioned.json": "110055ac39415c6430583d5664d8b7e9bbeea2b30e44d18beb78b0923dc39268"
+  }
+}
