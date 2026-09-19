@@ -1,0 +1,13 @@
+{
+  "output": "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-round3-supplemental-evidence.json",
+  "checks": 267757,
+  "failures": 1,
+  "hashChecks": 202,
+  "maxScaledArithmeticDifference": 5.736865128955007e-16,
+  "firstFailures": [
+    {
+      "check": "selector_unchanged",
+      "details": null
+    }
+  ]
+}

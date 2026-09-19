@@ -1,0 +1,795 @@
+{
+  "command": [
+    "/workspace/scratch/20abb8fd27ac/hrl-opt-env/bin/python",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-blue-check.py"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "scope": "Exact source/control/point identity and saved matrix arithmetic for six candidates; full grid forward evaluations not regenerated.",
+  "baselineReceipt": "/workspace/scratch/20abb8fd27ac/hrl-optimization/conditioning-audit.json",
+  "baselineReceiptSha256": "ec6d73c94b7beabe6461103ad6044667d5575007b33a7f2114ae4cc466c0f7f6",
+  "metricMaximumCondition": 113447.18172334721,
+  "receipts": {
+    "conditioning-candidates.json": {
+      "sha256": "50941a634fc16fd318073598a747ea02de4c45290d2aa6bce851a51a4b2fc91f",
+      "sourceHashesMatchCurrent": {
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json": true
+      },
+      "sourceHashSetMatchesOriginal": true,
+      "modelHashesMatchCurrent": {
+        "parent": true,
+        "balanced": true,
+        "metric": true,
+        "smooth-mild": true,
+        "smooth-conditioned": true
+      },
+      "frozenControlBlocksExactlyEqualOriginal": {
+        "parent": true,
+        "balanced": true,
+        "metric": true
+      }
+    },
+    "conditioning-sheet-candidates.json": {
+      "sha256": "f7eaf942d56d15d86149a4c342816a7d9c215e9fac9361692f9eda334f90843a",
+      "sourceHashesMatchCurrent": {
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json": true
+      },
+      "sourceHashSetMatchesOriginal": true,
+      "modelHashesMatchCurrent": {
+        "parent": true,
+        "balanced": true,
+        "metric": true,
+        "sheet-raw": true,
+        "sheet-robust": true
+      },
+      "frozenControlBlocksExactlyEqualOriginal": {
+        "parent": true,
+        "balanced": true,
+        "metric": true
+      }
+    },
+    "conditioning-blue-candidates.json": {
+      "sha256": "9d96e9be5a85577e99722ddce9a5d1606ade8a6b64c19e5d27281f35a43e55e6",
+      "sourceHashesMatchCurrent": {
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs": true,
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json": true
+      },
+      "sourceHashSetMatchesOriginal": true,
+      "modelHashesMatchCurrent": {
+        "parent": true,
+        "balanced": true,
+        "metric": true,
+        "blue-raw": true,
+        "blue-robust": true
+      },
+      "frozenControlBlocksExactlyEqualOriginal": {
+        "parent": true,
+        "balanced": true,
+        "metric": true
+      }
+    }
+  },
+  "models": {
+    "smooth-mild": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/smooth-mild.json",
+      "recordSha256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "maximumCondition": 60097.315771266396,
+      "maximumPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "maximumConditionChangeVsMetricPercent": -47.02617124696851,
+      "pointwiseLowerVsMetric": 164,
+      "pointwiseHigherVsMetric": 161,
+      "worstPointwiseRatioVsMetric": 24.297160395316617,
+      "worstPointwiseRatioPoint": [
+        285.0,
+        0.000999,
+        0.001
+      ],
+      "minPropagatedDeterminant": 0.1617796903054776,
+      "summary": {
+        "maxForwardAbsoluteDifference": 4.961309141293668e-15,
+        "maxAnalyticAutogradScaledJacobianError": 1.1615691772467633e-10,
+        "maxAnalyticAutogradLogConditionError": 2.795390585674795e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 6.280220787857616e-11,
+        "maxPropagatedLogVsSvdError": 7.45181694128405e-12,
+        "maxPropagatedDetVsSvdMatrixError": 5.261679980606004e-12,
+        "maxAnalyticCondition": 60097.315771266396,
+        "minAnalyticDeterminant": 0.1617796903054776,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008130139176647152,
+            "logConditionError": 0.0012876387919964483,
+            "relativeConditionError": 0.0012868101408730626,
+            "relativeDeterminantError": 0.0004925090590071068
+          },
+          "0.001": {
+            "scaledJacobianError": 8.134191880666723e-06,
+            "logConditionError": 1.2884736323659496e-05,
+            "relativeConditionError": 1.2884653315836658e-05,
+            "relativeDeterminantError": 4.928538533288673e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 2.4177355377086974e-06,
+            "logConditionError": 2.0095470032455154e-06,
+            "relativeConditionError": 2.0095490225191526e-06,
+            "relativeDeterminantError": 4.412065470305038e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 9.212070126353063e-06,
+            "logConditionError": 1.3429127003306007e-05,
+            "relativeConditionError": 1.3429217175175978e-05,
+            "relativeDeterminantError": 1.4182764503378742e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 4.6024564335560763e-05,
+            "logConditionError": 0.00016562261833374947,
+            "relativeConditionError": 0.00016560890366534853,
+            "relativeDeterminantError": 0.00020562740804375146
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0008130139176647152,
+          "logConditionError": 0.0012876387919964483,
+          "relativeConditionError": 0.0012868101408730626,
+          "relativeDeterminantError": 0.0004925090590071068
+        },
+        "0.001": {
+          "scaledJacobianError": 8.134191880666723e-06,
+          "logConditionError": 1.2884736323659496e-05,
+          "relativeConditionError": 1.2884653315836658e-05,
+          "relativeDeterminantError": 4.928538533288673e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 2.4177355377086974e-06,
+          "logConditionError": 2.0095470032455154e-06,
+          "relativeConditionError": 2.0095490225191526e-06,
+          "relativeDeterminantError": 4.412065470305038e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 9.212070126353063e-06,
+          "logConditionError": 1.3429127003306007e-05,
+          "relativeConditionError": 1.3429217175175978e-05,
+          "relativeDeterminantError": 1.4182764503378742e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 4.6024564335560763e-05,
+          "logConditionError": 0.00016562261833374947,
+          "relativeConditionError": 0.00016560890366534853,
+          "relativeDeterminantError": 0.00020562740804375146
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 60097.315771266396
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 57894.39286544949
+        }
+      ]
+    },
+    "smooth-conditioned": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/smooth-conditioned.json",
+      "recordSha256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "maximumCondition": 21738.547221822817,
+      "maximumPoint": [
+        216.0,
+        0.04995,
+        0.05
+      ],
+      "maximumConditionChangeVsMetricPercent": -80.83817782725133,
+      "pointwiseLowerVsMetric": 197,
+      "pointwiseHigherVsMetric": 128,
+      "worstPointwiseRatioVsMetric": 6.169116971918076,
+      "worstPointwiseRatioPoint": [
+        281.0,
+        0.24975,
+        0.25
+      ],
+      "minPropagatedDeterminant": 0.23694769764693238,
+      "summary": {
+        "maxForwardAbsoluteDifference": 6.0580880589800046e-15,
+        "maxAnalyticAutogradScaledJacobianError": 2.920366214555056e-10,
+        "maxAnalyticAutogradLogConditionError": 2.08287831426901e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 8.693623598787781e-11,
+        "maxPropagatedLogVsSvdError": 2.639666263348772e-12,
+        "maxPropagatedDetVsSvdMatrixError": 1.5111245588173006e-12,
+        "maxAnalyticCondition": 21738.547221822817,
+        "minAnalyticDeterminant": 0.23694769764693238,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0009670940340801957,
+            "logConditionError": 0.001711962697131586,
+            "relativeConditionError": 0.0017104981248770024,
+            "relativeDeterminantError": 0.00039316765691754796
+          },
+          "0.001": {
+            "scaledJacobianError": 9.671489546029029e-06,
+            "logConditionError": 1.7094551765239885e-05,
+            "relativeConditionError": 1.7094405654116684e-05,
+            "relativeDeterminantError": 3.934218377743548e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.4421306055342458e-06,
+            "logConditionError": 1.4960368631133925e-06,
+            "relativeConditionError": 1.4960357440640948e-06,
+            "relativeDeterminantError": 2.362121538146411e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 2.4182216817415784e-05,
+            "logConditionError": 3.531600507189481e-05,
+            "relativeConditionError": 3.531662868949681e-05,
+            "relativeDeterminantError": 3.604308735094541e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00018057522004304692,
+            "logConditionError": 0.000382075216575295,
+            "relativeConditionError": 0.00038200223513440434,
+            "relativeDeterminantError": 0.00040358757200542605
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0009670940340801957,
+          "logConditionError": 0.001711962697131586,
+          "relativeConditionError": 0.0017104981248770024,
+          "relativeDeterminantError": 0.00039316765691754796
+        },
+        "0.001": {
+          "scaledJacobianError": 9.671489546029029e-06,
+          "logConditionError": 1.7094551765239885e-05,
+          "relativeConditionError": 1.7094405654116684e-05,
+          "relativeDeterminantError": 3.934218377743548e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 1.4421306055342458e-06,
+          "logConditionError": 1.4960368631133925e-06,
+          "relativeConditionError": 1.4960357440640948e-06,
+          "relativeDeterminantError": 2.362121538146411e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 2.4182216817415784e-05,
+          "logConditionError": 3.531600507189481e-05,
+          "relativeConditionError": 3.531662868949681e-05,
+          "relativeDeterminantError": 3.604308735094541e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 0.00018057522004304692,
+          "logConditionError": 0.000382075216575295,
+          "relativeConditionError": 0.00038200223513440434,
+          "relativeDeterminantError": 0.00040358757200542605
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 413.7422453271846
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 21738.547221822817
+        }
+      ]
+    },
+    "sheet-raw": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/sheet-raw.json",
+      "recordSha256": "00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f",
+      "maximumCondition": 112526.69190396069,
+      "maximumPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "maximumConditionChangeVsMetricPercent": -0.8113818302082021,
+      "pointwiseLowerVsMetric": 207,
+      "pointwiseHigherVsMetric": 118,
+      "worstPointwiseRatioVsMetric": 1.0583061912846516,
+      "worstPointwiseRatioPoint": [
+        216.0,
+        0.24975,
+        0.25
+      ],
+      "minPropagatedDeterminant": 0.10136906372997898,
+      "summary": {
+        "maxForwardAbsoluteDifference": 2.2315482794965646e-14,
+        "maxAnalyticAutogradScaledJacobianError": 9.843921436453026e-11,
+        "maxAnalyticAutogradLogConditionError": 1.8515988742251466e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 6.87503387553079e-11,
+        "maxPropagatedLogVsSvdError": 1.2878587085651816e-11,
+        "maxPropagatedDetVsSvdMatrixError": 1.0133893724173504e-11,
+        "maxAnalyticCondition": 112526.69190396069,
+        "minAnalyticDeterminant": 0.10136906372997898,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008041449809244905,
+            "logConditionError": 0.0012627920081749178,
+            "relativeConditionError": 0.0012619950218580867,
+            "relativeDeterminantError": 0.00047749386493811663
+          },
+          "0.001": {
+            "scaledJacobianError": 8.045464853184008e-06,
+            "logConditionError": 1.2636053895231925e-05,
+            "relativeConditionError": 1.2635974060426491e-05,
+            "relativeDeterminantError": 4.778276508687895e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.6851669945117901e-06,
+            "logConditionError": 2.966218812350263e-06,
+            "relativeConditionError": 2.9662144133135726e-06,
+            "relativeDeterminantError": 3.514438413843024e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 2.7889441131915776e-05,
+            "logConditionError": 2.6343843912535192e-05,
+            "relativeConditionError": 2.634349691643667e-05,
+            "relativeDeterminantError": 4.074647265173148e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 6.418299481554152e-05,
+            "logConditionError": 0.0002129156086196904,
+            "relativeConditionError": 0.00021289294369997158,
+            "relativeDeterminantError": 0.00018434263048305866
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0008041449809244905,
+          "logConditionError": 0.0012627920081749178,
+          "relativeConditionError": 0.0012619950218580867,
+          "relativeDeterminantError": 0.00047749386493811663
+        },
+        "0.001": {
+          "scaledJacobianError": 8.045464853184008e-06,
+          "logConditionError": 1.2636053895231925e-05,
+          "relativeConditionError": 1.2635974060426491e-05,
+          "relativeDeterminantError": 4.778276508687895e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 1.6851669945117901e-06,
+          "logConditionError": 2.966218812350263e-06,
+          "relativeConditionError": 2.9662144133135726e-06,
+          "relativeDeterminantError": 3.514438413843024e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 2.7889441131915776e-05,
+          "logConditionError": 2.6343843912535192e-05,
+          "relativeConditionError": 2.634349691643667e-05,
+          "relativeDeterminantError": 4.074647265173148e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 6.418299481554152e-05,
+          "logConditionError": 0.0002129156086196904,
+          "relativeConditionError": 0.00021289294369997158,
+          "relativeDeterminantError": 0.00018434263048305866
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 112526.69190396069
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 64620.69517930684
+        }
+      ]
+    },
+    "sheet-robust": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/sheet-robust.json",
+      "recordSha256": "374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c",
+      "maximumCondition": 112617.04257873626,
+      "maximumPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "maximumConditionChangeVsMetricPercent": -0.7317406497019285,
+      "pointwiseLowerVsMetric": 225,
+      "pointwiseHigherVsMetric": 100,
+      "worstPointwiseRatioVsMetric": 1.1147381062228854,
+      "worstPointwiseRatioPoint": [
+        285.0,
+        0.000999,
+        0.001
+      ],
+      "minPropagatedDeterminant": 0.10179124260416171,
+      "summary": {
+        "maxForwardAbsoluteDifference": 4.746203430272544e-15,
+        "maxAnalyticAutogradScaledJacobianError": 4.010207435753628e-11,
+        "maxAnalyticAutogradLogConditionError": 5.732792018875443e-11,
+        "maxAnalyticAutogradRelativeDeterminantError": 4.787370500025645e-11,
+        "maxPropagatedLogVsSvdError": 1.2096990076315706e-11,
+        "maxPropagatedDetVsSvdMatrixError": 1.1964318424873e-11,
+        "maxAnalyticCondition": 112617.04257873626,
+        "minAnalyticDeterminant": 0.10179124260416171,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008054646316677579,
+            "logConditionError": 0.001259184905596289,
+            "relativeConditionError": 0.001258392464927538,
+            "relativeDeterminantError": 0.00047377480248012027
+          },
+          "0.001": {
+            "scaledJacobianError": 8.058678000356058e-06,
+            "logConditionError": 1.2599961470627363e-05,
+            "relativeConditionError": 1.2599882091346437e-05,
+            "relativeDeterminantError": 4.74106868142421e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.7603450242880433e-06,
+            "logConditionError": 1.950926620697402e-06,
+            "relativeConditionError": 1.9509247176641153e-06,
+            "relativeDeterminantError": 4.559744228638252e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 1.1154731503860484e-05,
+            "logConditionError": 3.5659765629247886e-05,
+            "relativeConditionError": 3.5659129827281255e-05,
+            "relativeDeterminantError": 3.4560312767606405e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.0003398823301682093,
+            "logConditionError": 0.00033571085065497996,
+            "relativeConditionError": 0.00033576720784878056,
+            "relativeDeterminantError": 0.00031540930714490933
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0008054646316677579,
+          "logConditionError": 0.001259184905596289,
+          "relativeConditionError": 0.001258392464927538,
+          "relativeDeterminantError": 0.00047377480248012027
+        },
+        "0.001": {
+          "scaledJacobianError": 8.058678000356058e-06,
+          "logConditionError": 1.2599961470627363e-05,
+          "relativeConditionError": 1.2599882091346437e-05,
+          "relativeDeterminantError": 4.74106868142421e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 1.7603450242880433e-06,
+          "logConditionError": 1.950926620697402e-06,
+          "relativeConditionError": 1.9509247176641153e-06,
+          "relativeDeterminantError": 4.559744228638252e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 1.1154731503860484e-05,
+          "logConditionError": 3.5659765629247886e-05,
+          "relativeConditionError": 3.5659129827281255e-05,
+          "relativeDeterminantError": 3.4560312767606405e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 0.0003398823301682093,
+          "logConditionError": 0.00033571085065497996,
+          "relativeConditionError": 0.00033576720784878056,
+          "relativeDeterminantError": 0.00031540930714490933
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 112617.04257873626
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 64657.78524796677
+        }
+      ]
+    },
+    "blue-raw": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-raw.json",
+      "recordSha256": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "maximumCondition": 114567.43979359421,
+      "maximumPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "maximumConditionChangeVsMetricPercent": 0.9874710444362167,
+      "pointwiseLowerVsMetric": 199,
+      "pointwiseHigherVsMetric": 126,
+      "worstPointwiseRatioVsMetric": 1.0861477938058601,
+      "worstPointwiseRatioPoint": [
+        263.0,
+        0.94905,
+        0.95
+      ],
+      "minPropagatedDeterminant": 0.09956618114511943,
+      "summary": {
+        "maxForwardAbsoluteDifference": 2.2148949341271873e-14,
+        "maxAnalyticAutogradScaledJacobianError": 9.032820935289811e-11,
+        "maxAnalyticAutogradLogConditionError": 1.351332379329051e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 7.444289629177092e-11,
+        "maxPropagatedLogVsSvdError": 1.5944578990456648e-11,
+        "maxPropagatedDetVsSvdMatrixError": 1.5208390102827707e-11,
+        "maxAnalyticCondition": 114567.43979359421,
+        "minAnalyticDeterminant": 0.09956618114511943,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008047557335986062,
+            "logConditionError": 0.001261376592765151,
+            "relativeConditionError": 0.0012605813916952702,
+            "relativeDeterminantError": 0.00047493113110586016
+          },
+          "0.001": {
+            "scaledJacobianError": 8.051580540899624e-06,
+            "logConditionError": 1.262188400574793e-05,
+            "relativeConditionError": 1.2621804350243515e-05,
+            "relativeDeterminantError": 4.752639950700299e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.8402051251719323e-06,
+            "logConditionError": 5.316311773473359e-06,
+            "relativeConditionError": 5.31632590505815e-06,
+            "relativeDeterminantError": 5.21516398699351e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 2.3086422648950694e-05,
+            "logConditionError": 2.9704032906752165e-05,
+            "relativeConditionError": 2.9704474075797904e-05,
+            "relativeDeterminantError": 1.5745097094344018e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00023086802623201324,
+            "logConditionError": 0.0006298377040026004,
+            "relativeConditionError": 0.0006300360934181626,
+            "relativeDeterminantError": 0.0006397039125455306
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0008047557335986062,
+          "logConditionError": 0.001261376592765151,
+          "relativeConditionError": 0.0012605813916952702,
+          "relativeDeterminantError": 0.00047493113110586016
+        },
+        "0.001": {
+          "scaledJacobianError": 8.051580540899624e-06,
+          "logConditionError": 1.262188400574793e-05,
+          "relativeConditionError": 1.2621804350243515e-05,
+          "relativeDeterminantError": 4.752639950700299e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 1.8402051251719323e-06,
+          "logConditionError": 5.316311773473359e-06,
+          "relativeConditionError": 5.31632590505815e-06,
+          "relativeDeterminantError": 5.21516398699351e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 2.3086422648950694e-05,
+          "logConditionError": 2.9704032906752165e-05,
+          "relativeConditionError": 2.9704474075797904e-05,
+          "relativeDeterminantError": 1.5745097094344018e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 0.00023086802623201324,
+          "logConditionError": 0.0006298377040026004,
+          "relativeConditionError": 0.0006300360934181626,
+          "relativeDeterminantError": 0.0006397039125455306
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 114567.43979359421
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 64722.40485497177
+        }
+      ]
+    },
+    "blue-robust": {
+      "record": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-robust.json",
+      "recordSha256": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "maximumCondition": 113643.04280099589,
+      "maximumPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "maximumConditionChangeVsMetricPercent": 0.1726451681508534,
+      "pointwiseLowerVsMetric": 238,
+      "pointwiseHigherVsMetric": 87,
+      "worstPointwiseRatioVsMetric": 1.0523422536084788,
+      "worstPointwiseRatioPoint": [
+        216.0,
+        0.4995,
+        0.5
+      ],
+      "minPropagatedDeterminant": 0.1012255687418875,
+      "summary": {
+        "maxForwardAbsoluteDifference": 4.6351811278100286e-15,
+        "maxAnalyticAutogradScaledJacobianError": 2.479030799132794e-10,
+        "maxAnalyticAutogradLogConditionError": 3.7221825621713833e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 7.576828053856843e-11,
+        "maxPropagatedLogVsSvdError": 1.0029310715253814e-11,
+        "maxPropagatedDetVsSvdMatrixError": 8.189338096542542e-12,
+        "maxAnalyticCondition": 113643.04280099589,
+        "minAnalyticDeterminant": 0.1012255687418875,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008057037438810325,
+            "logConditionError": 0.001258491216291402,
+            "relativeConditionError": 0.001257699648315791,
+            "relativeDeterminantError": 0.00047279253766285834
+          },
+          "0.001": {
+            "scaledJacobianError": 8.061071524787584e-06,
+            "logConditionError": 1.2593016382567157e-05,
+            "relativeConditionError": 1.2592937090882828e-05,
+            "relativeDeterminantError": 4.731241035393907e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 2.2691389258095577e-06,
+            "logConditionError": 2.9107936875827356e-06,
+            "relativeConditionError": 2.9107894512492294e-06,
+            "relativeDeterminantError": 3.2859143668240165e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 3.345949218176346e-05,
+            "logConditionError": 2.277459340049859e-05,
+            "relativeConditionError": 2.2774334061392842e-05,
+            "relativeDeterminantError": 5.699632760269857e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00023005930393113526,
+            "logConditionError": 0.00032791481775945597,
+            "relativeConditionError": 0.00032796858770045567,
+            "relativeDeterminantError": 0.00017938757731705834
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "recomputedNumericalByFactor": {
+        "0.01": {
+          "scaledJacobianError": 0.0008057037438810325,
+          "logConditionError": 0.001258491216291402,
+          "relativeConditionError": 0.001257699648315791,
+          "relativeDeterminantError": 0.00047279253766285834
+        },
+        "0.001": {
+          "scaledJacobianError": 8.061071524787584e-06,
+          "logConditionError": 1.2593016382567157e-05,
+          "relativeConditionError": 1.2592937090882828e-05,
+          "relativeDeterminantError": 4.731241035393907e-06
+        },
+        "0.0001": {
+          "scaledJacobianError": 2.2691389258095577e-06,
+          "logConditionError": 2.9107936875827356e-06,
+          "relativeConditionError": 2.9107894512492294e-06,
+          "relativeDeterminantError": 3.2859143668240165e-06
+        },
+        "1e-05": {
+          "scaledJacobianError": 3.345949218176346e-05,
+          "logConditionError": 2.277459340049859e-05,
+          "relativeConditionError": 2.2774334061392842e-05,
+          "relativeDeterminantError": 5.699632760269857e-05
+        },
+        "1e-06": {
+          "scaledJacobianError": 0.00023005930393113526,
+          "logConditionError": 0.00032791481775945597,
+          "relativeConditionError": 0.00032796858770045567,
+          "relativeDeterminantError": 0.00017938757731705834
+        }
+      },
+      "historicalExtremeConditions": [
+        {
+          "q": [
+            269.0,
+            0.000999,
+            0.001
+          ],
+          "condition": 113643.04280099589
+        },
+        {
+          "q": [
+            216.0,
+            0.04995,
+            0.05
+          ],
+          "condition": 64932.73673836627
+        }
+      ]
+    }
+  },
+  "checkedCandidateRows": 1950,
+  "checkedCandidateMatrices": 13650,
+  "maxNormalizedStoredArithmeticDifference": 0.0,
+  "contextReportSha256": {
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-round1-report.md": "80c969a38463d437686447f5eb59cac7f26149cb9733b33a2afc171697dd2982",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-round2-report.md": "da0e70ef7d509f766fd0a900940c2f9ed578ea70d89170aa800efaaa361dc548"
+  },
+  "verdict": "confirmed within stated scope"
+}

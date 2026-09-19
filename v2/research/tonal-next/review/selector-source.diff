@@ -1,0 +1,10 @@
+--- c5cfd3a6c6fd7970845c404fec5d8461b2228702f0284a8daff627071680e9b6
++++ d4dbec95546c4d252a8143768e15a576437b72319f88cb791b7057a75a9ce8f4
+@@ -22,6 +22,6 @@
+ eligible=[k for k,v in selection.items() if v['eligible']]
+ selected=max(eligible or list(selection),key=lambda k:selection[k]['blueBendingImprovementFraction'])
+ status='eligible' if eligible else 'no-eligible-candidate'
+-note='This research candidate meets the declared smoothness and accuracy checks. Beta 1 remains the frozen default.' if eligible else 'Neither research candidate meets every declared improvement check. Beta 1 remains the default; the measured tradeoffs are available for inspection.'
++note='This research candidate meets the declared smoothness and accuracy checks. Beta 1 remains the frozen default.' if eligible else 'No research candidate meets every declared improvement check. Beta 1 remains the default; the measured tradeoffs are available for inspection.'
+ out={'schemaVersion':1,'generatedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'selectedCandidate':selected,'status':status,'selectionNote':note,'models':models,'selection':selection,'limits':['COMBVD is reused development/training data, not held-out validation.','Native retained3331 and full3813 differ; mapped native3813 is a separate pipeline.','Path CV and blue sheet bending are synthetic GenSpace diagnostics, not observer preference scores.','Finite sampled contracts and conditioning do not prove whole-domain behavior.'],'receiptSHA256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in receipts}}
+ Path(a.out).parent.mkdir(parents=True,exist_ok=True);Path(a.out).write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({'status':status,'selectedCandidate':selected,'selection':selection},indent=2))

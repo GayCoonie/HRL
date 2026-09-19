@@ -1,0 +1,26 @@
+{
+  "H": 96,
+  "N": 193,
+  "grid": "cosine in source U=R/L and L",
+  "ruler": "frozen HelmLab 1.0.0 GenSpace, neutral correction off",
+  "source": "shared deterministic chart with full-domain 1-nm boundary transport",
+  "hashes": {
+    "index.mjs": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+    "boundary-1nm.json": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+    "results/cache.json": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+    "../shared-rl/source.mjs": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+    "../shared-rl/core.mjs": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+    "../../../src/base/appearance-runtime.mjs": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+    "../../../src/base/gen-parameters.mjs": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808"
+  },
+  "profiles": {
+    "srgb": {
+      "sha256": "40f87acf19429f96fc0658c166836db5fa0936f234a679c8df3568bce27c0d8a",
+      "seconds": 99.327
+    },
+    "full": {
+      "sha256": "bd8dbe7838bf4b1f8a33fa28f58a61c725aa19590da27aed4e92b322986e75fc",
+      "seconds": 302.546
+    }
+  }
+}

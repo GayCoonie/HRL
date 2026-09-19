@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "currentFrozenFileHashes": 148,
+  "frozenDiffCommand": [
+    "git",
+    "diff",
+    "--exit-code",
+    "bc70cc754e83c92790a88e0833ca8956d4d1407e",
+    "--",
+    "v2/index.mjs",
+    "v2/research/boundary-tonal",
+    "v2/research/shared-rl",
+    "v2/research/relative-domain",
+    "v2/lib",
+    "src"
+  ],
+  "frozenDiffExitCode": 0,
+  "nativeMaskSHA256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251",
+  "nativePairs": 3331,
+  "fullPairs": 3813,
+  "cacheIndicesMatch": true,
+  "records": {
+    "blue-raw": {
+      "recordSHA256": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "traceRows": 622,
+      "traceSHA256": "43853bcb886c5f10029eaae200bc537a2da93319c9db1b8e1c11f391034166bd",
+      "fitSource": "fit.py",
+      "fitSourceSHA256": "edf327dde8b40f6589964f11ccf943a01fa78fbe3ef2a6fe9f721e6efca5dd9b"
+    },
+    "blue-robust": {
+      "recordSHA256": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "traceRows": 628,
+      "traceSHA256": "b165ff05d98a924992637828bae562f255bc9f243eb9663e73feb9b6bd20a49b",
+      "fitSource": "fit.py",
+      "fitSourceSHA256": "edf327dde8b40f6589964f11ccf943a01fa78fbe3ef2a6fe9f721e6efca5dd9b"
+    },
+    "sheet-raw": {
+      "recordSHA256": "00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f",
+      "traceRows": 464,
+      "traceSHA256": "6595cadcfefc7df7130b0a09f4b00076d20b286b466e43ed08904395f65288a9",
+      "fitSource": "fit-sheet-round.py",
+      "fitSourceSHA256": "a3b835ffb5218a347b6b1a442c9f1d2f32840cce36845fb67c33a1d7f89ef3ca"
+    },
+    "sheet-robust": {
+      "recordSHA256": "374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c",
+      "traceRows": 506,
+      "traceSHA256": "b5b77cb37c38a9ab0f584b458db8abfdc748ee2c25fe1ba4ad363e41e82b7a43",
+      "fitSource": "fit-sheet-round.py",
+      "fitSourceSHA256": "a3b835ffb5218a347b6b1a442c9f1d2f32840cce36845fb67c33a1d7f89ef3ca"
+    },
+    "smooth-conditioned": {
+      "recordSHA256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "traceRows": 484,
+      "traceSHA256": "d94c3eea1339dad41ac01a14109244d358790cdeca39be3fe89b0ee4dc3e7fbd",
+      "fitSource": "fit-first-round.py",
+      "fitSourceSHA256": "6d5eacbdf3d6b2d6aceea380442e7811b61bb5150af1621a98fbfecf9d06808e"
+    },
+    "smooth-mild": {
+      "recordSHA256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "traceRows": 460,
+      "traceSHA256": "df0f7d5e4d8d6b82590768e90866754b13af679a83110a6e680c939693e2a7ab",
+      "fitSource": "fit-first-round.py",
+      "fitSourceSHA256": "6d5eacbdf3d6b2d6aceea380442e7811b61bb5150af1621a98fbfecf9d06808e"
+    }
+  },
+  "archives": {
+    "audit-blue-raw.json.gz": "178fc59e7a57589754f6df8b911db9091d3d63bbf2f630fb9c166e38eda8101b",
+    "audit-edge-candidates.json.gz": "3d3b1c3e98296f2e65f665dc24d9db4e46507aa6532bdd108ba5486e85d5ff52",
+    "conditioning-audit.json.gz": "ec6d73c94b7beabe6461103ad6044667d5575007b33a7f2114ae4cc466c0f7f6",
+    "conditioning-sheet-candidates.json.gz": "f7eaf942d56d15d86149a4c342816a7d9c215e9fac9361692f9eda334f90843a",
+    "audit-edge-baseline.json.gz": "d1676a1fbdefc565134cf1c35a4566b24cc17739bf374ed641492276294e2930",
+    "audit-conditioned.json.gz": "110055ac39415c6430583d5664d8b7e9bbeea2b30e44d18beb78b0923dc39268",
+    "conditioning-candidates.json.gz": "50941a634fc16fd318073598a747ea02de4c45290d2aa6bce851a51a4b2fc91f",
+    "audit-blue-robust.json.gz": "02456eeee5ba2c28f048afbaeaa66b5a139e6f557e2371dd84ca89873ddcb596",
+    "audit-sheet-robust.json.gz": "7dfa5383adaa1f77007ae0e97dd26d0a46f54b462473826aa168d634ae2fefa0",
+    "audit-sheet-raw.json.gz": "063496f6196660df68e6e4c5bb3bd7c4142e18572a0920cdeca430905c4345e1",
+    "audit-edge-sheet-raw.json.gz": "b12093a9041191bc517adfde61f68a9fc95b8889cf897cfaab928344f9968199",
+    "audit-edge-blue-candidates.json.gz": "70e7d655ccd740661e7f99cdc35d6fb1d9936e3d706d826b0d292935d07cad21",
+    "audit-baseline.json.gz": "09a12a76cb70e90a338ae89c67e3ce4be9ff87678cfda49faf258334c45bf7ea",
+    "audit-edge-sheet-robust.json.gz": "259277b5523cdc9b91cc9601eb1958de9ee0a3a814c5ac45294486db3527b103",
+    "audit-mild.json.gz": "e0ad73bde83ff5fd251cfc0bf5bf3553bd191e19c6cca868f49bc6b3bc2ea156",
+    "conditioning-blue-candidates.json.gz": "9d96e9be5a85577e99722ddce9a5d1606ade8a6b64c19e5d27281f35a43e55e6"
+  },
+  "criticalGridChecks": {
+    "srgb": {
+      "hash": "cd7cb6eb8ed3a78c4ba73555985dc941486b5f49e7b153009b54ef02813aed51",
+      "prefixUnchanged": true,
+      "bytes": 92079528
+    },
+    "full": {
+      "hash": "5975af335d532019ba3e67ab392daee601282dd161e2954b9dbf2f3c39bd2573",
+      "prefixUnchanged": true,
+      "bytes": 92079528
+    }
+  },
+  "comparisonSHA256": "16db06959b0213bc441006e0fdfada37608ae8e6edc892b0cb2c0b458dfb77fb"
+}

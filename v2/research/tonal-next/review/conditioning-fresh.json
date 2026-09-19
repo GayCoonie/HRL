@@ -1,0 +1,109 @@
+{
+  "command": [
+    "/workspace/scratch/20abb8fd27ac/hrl-opt-env/bin/python",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-blue-reproduce.py"
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "mpmath": "1.3.0",
+  "decimalPrecision": 80,
+  "nodeVersion": "v24.19.0",
+  "nodeExit": 0,
+  "auditSha256": "9d96e9be5a85577e99722ddce9a5d1606ade8a6b64c19e5d27281f35a43e55e6",
+  "method": "Independent scalar forward map; central R/L differences at 80 decimal digits; both bases x=sqrt(3)R/2,z=L-R/2. Condition from larger Gram eigenvalue divided by positive determinant.",
+  "highPrecisionFactors": [
+    "1e-20",
+    "1e-25"
+  ],
+  "sourceHashMatches": {
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs": true,
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json": true
+  },
+  "modelHashMatches": {
+    "parent": true,
+    "balanced": true,
+    "metric": true,
+    "blue-raw": true,
+    "blue-robust": true
+  },
+  "cases": [
+    {
+      "model": "blue-raw",
+      "q": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "highPrecisionCondition": "114567.439790724942079930765929",
+      "highPrecisionDeterminant": "10.979695059333956377058378514",
+      "highPrecisionEquilateralJacobian": [
+        [
+          "-482.035798574579571217272712352",
+          "841.721379695940691607656205763"
+        ],
+        [
+          "-279.837406448231558461026863952",
+          "488.623767876938112158079516359"
+        ]
+      ],
+      "twoStepRelativeConditionDifference": "3.20802609981824e-41",
+      "storedAnalyticRelativeConditionError": 2.5044357500790743e-11,
+      "storedAnalyticScaledJacobianError": 4.747998214207032e-12,
+      "freshActualJavascript": [
+        {
+          "factor": 0.001,
+          "h": 9.99999999999916e-10,
+          "condition": "114567.4782817286472372229",
+          "relativeErrorVsHighPrecision": 3.359680881013579e-07
+        },
+        {
+          "factor": 0.0001,
+          "h": 9.999999999999159e-11,
+          "condition": "114567.5471685551663263726",
+          "relativeErrorVsHighPrecision": 9.37245612020209e-07
+        }
+      ]
+    },
+    {
+      "model": "blue-robust",
+      "q": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "highPrecisionCondition": "113643.042801773579307583578049",
+      "highPrecisionDeterminant": "10.9891376843906849186089058307",
+      "highPrecisionEquilateralJacobian": [
+        [
+          "-480.278086436158132295438076282",
+          "838.681729983343542200910542294"
+        ],
+        [
+          "-278.823333880507992934886238795",
+          "486.870114387419910831980132047"
+        ]
+      ],
+      "twoStepRelativeConditionDifference": "3.17273531028655e-41",
+      "storedAnalyticRelativeConditionError": 6.843263682582784e-12,
+      "storedAnalyticScaledJacobianError": 1.1824006218773268e-12,
+      "freshActualJavascript": [
+        {
+          "factor": 0.001,
+          "h": 9.99999999999916e-10,
+          "condition": "113643.0953401634196733847",
+          "relativeErrorVsHighPrecision": 4.623106575209183e-07
+        },
+        {
+          "factor": 0.0001,
+          "h": 9.999999999999159e-11,
+          "condition": "113642.998632072418053449",
+          "relativeErrorVsHighPrecision": 3.8867052546541633e-07
+        }
+      ]
+    }
+  ]
+}

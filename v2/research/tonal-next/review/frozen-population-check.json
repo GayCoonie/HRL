@@ -1,0 +1,32 @@
+{
+  "nativeMaskSHA256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251",
+  "nativeCount": 3331,
+  "fullCount": 3813,
+  "allInputCount": 3813,
+  "cacheIndicesMatch": true,
+  "currentFrozenFilesMatched": 148,
+  "frozenGitDiffCommand": [
+    "git",
+    "diff",
+    "--exit-code",
+    "bc70cc754e83c92790a88e0833ca8956d4d1407e",
+    "--",
+    "v2/index.mjs",
+    "v2/research/boundary-tonal",
+    "v2/research/shared-rl",
+    "v2/research/relative-domain",
+    "v2/lib",
+    "src"
+  ],
+  "frozenGitDiffExitCode": 0,
+  "freshSupplementalChecks": 267757,
+  "freshSupplementalExitCode": 1,
+  "freshSupplementalFailures": [
+    {
+      "check": "selector_unchanged",
+      "details": null
+    }
+  ],
+  "allOtherSupplementalHashChecksPass": true,
+  "selectorResolution": "selector-resolution.json"
+}

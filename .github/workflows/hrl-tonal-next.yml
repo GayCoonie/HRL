@@ -1,0 +1,44 @@
+name: HRL v2 tonal continuation verification
+on:
+  push:
+    branches: [main, 'research/v2-next-*']
+    paths: ['v2/tonal-next.*', 'v2/research/tonal-next/**', '.github/workflows/hrl-tonal-next.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: hrl-tonal-next-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser-and-preservation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned browser tooling
+        run: |
+          python -m pip install playwright==1.57.0
+          python -m playwright install --with-deps chromium
+      - name: Verify unchanged Beta 1 and new module syntax
+        run: |
+          node site/test-beta1.mjs
+          node --check v2/tonal-next.mjs
+      - name: Exercise the actual comparison
+        run: |
+          python -m http.server 8765 --bind 127.0.0.1 >/tmp/hrl-tonal-http.log 2>&1 &
+          python v2/research/tonal-next/browser-check.py --base http://127.0.0.1:8765/ --out /tmp/hrl-tonal-browser
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hrl-tonal-next-browser
+          path: |
+            /tmp/hrl-tonal-browser/
+            /tmp/hrl-tonal-http.log
+            site/model-checks.json
+          retention-days: 30

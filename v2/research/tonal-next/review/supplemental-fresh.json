@@ -1,0 +1,2036 @@
+{
+  "reviewUTC": "2026-09-19T11:27:23.737773+00:00",
+  "reviewScriptSha256": "a9aba1c2c7de3080d3941b4e617ec022ae3b2ad9b84fd8418d3cd029a8483026",
+  "scope": "Completed final-round supplemental receipts; record identity checked against review-runtime-round3-identity.json. Main audits not inspected. No full audits, autograd, or runtime map re-execution.",
+  "checks": 267757,
+  "failures": [
+    {
+      "check": "selector_unchanged",
+      "details": null
+    }
+  ],
+  "maxScaledArithmeticDifference": 5.736865128955007e-16,
+  "receiptHashes": {
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-round3-identity.json": "2bcf890dcecfe6f2ad01bf68a07d77c2fc4cb6575e1484c23665a3deabdb4458",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-edge-blue-candidates.json": "70e7d655ccd740661e7f99cdc35d6fb1d9936e3d706d826b0d292935d07cad21",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/conditioning-blue-candidates.json": "9d96e9be5a85577e99722ddce9a5d1606ade8a6b64c19e5d27281f35a43e55e6"
+  },
+  "sourceAndRecordHashChecks": [
+    {
+      "label": "frozen_manifest:../../lib/srgb-triangles.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/srgb-triangles.mjs",
+      "recorded": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+      "actual": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../lib/opal-anchor.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/opal-anchor.mjs",
+      "recorded": "b90a332a77f5845f35f12237f96bb412cef7c4062fd546465b222340060c63b4",
+      "actual": "b90a332a77f5845f35f12237f96bb412cef7c4062fd546465b222340060c63b4",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../lib/hue-field.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/hue-field.mjs",
+      "recorded": "9594fe6a4ef0127a151096b87da8fc341472fd96e3c38e41817cd69d3bc6e0c3",
+      "actual": "9594fe6a4ef0127a151096b87da8fc341472fd96e3c38e41817cd69d3bc6e0c3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../lib/research.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/research.mjs",
+      "recorded": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+      "actual": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../lib/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/index.mjs",
+      "recorded": "d8ac2a3b3b910b5097f85405b8f22aaaa55f2babd7707f3587f25b8030ef2017",
+      "actual": "d8ac2a3b3b910b5097f85405b8f22aaaa55f2babd7707f3587f25b8030ef2017",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../lib/basr.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../lib/basr.mjs",
+      "recorded": "48b7d661c1e552755899220db61b9b63f629bff440d1a09f4d207f9e1e8bca49",
+      "actual": "48b7d661c1e552755899220db61b9b63f629bff440d1a09f4d207f9e1e8bca49",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/equal-span-srgb.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/equal-span-srgb.json",
+      "recorded": "dc0f40b1ce9a363a89377620efd79339a7fab637f4ef1342ac66ffc80a90cf44",
+      "actual": "dc0f40b1ce9a363a89377620efd79339a7fab637f4ef1342ac66ffc80a90cf44",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/hue-field.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/hue-field.json",
+      "recorded": "4b5c6af4bf3996275f39ddf99024d6d8357502f9be7782a4a0634a39f5a745d3",
+      "actual": "4b5c6af4bf3996275f39ddf99024d6d8357502f9be7782a4a0634a39f5a745d3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/opal-srgb.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/opal-srgb.json",
+      "recorded": "149849acb2160246eeb920fb1422435376eaadd591bfda2b0a4eb1f8294c4ad2",
+      "actual": "149849acb2160246eeb920fb1422435376eaadd591bfda2b0a4eb1f8294c4ad2",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/appearance-readouts.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/appearance-readouts.json",
+      "recorded": "97a2c8459fed67b8aee6277c388d85cee81581c9475fb9e108beffac26de11c9",
+      "actual": "97a2c8459fed67b8aee6277c388d85cee81581c9475fb9e108beffac26de11c9",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/equal-span-full.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/equal-span-full.json",
+      "recorded": "0f460508fcb9ce1049f2bfc73ccbf3df0f4deff61de94f11572f6ef043e50148",
+      "actual": "0f460508fcb9ce1049f2bfc73ccbf3df0f4deff61de94f11572f6ef043e50148",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/hue-field-0.6.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/hue-field-0.6.json",
+      "recorded": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+      "actual": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/opal-full.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/opal-full.json",
+      "recorded": "9f7d87b1a4564c8712cd78de5ee71c7ac744927f4c9936aa173afcfc4346c48e",
+      "actual": "9f7d87b1a4564c8712cd78de5ee71c7ac744927f4c9936aa173afcfc4346c48e",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../data/release1-angles.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../data/release1-angles.json",
+      "recorded": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+      "actual": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/build-viewer.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/build-viewer.mjs",
+      "recorded": "53d092b03c134d823ad51c3e975117b0877fadef5e40b506bab602975a6a4164",
+      "actual": "53d092b03c134d823ad51c3e975117b0877fadef5e40b506bab602975a6a4164",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/verification.json",
+      "recorded": "39cf95043be2d36fa7d77fcb0a6447a41bbcc255fa03fbec6fc8402fd1ac13ae",
+      "actual": "39cf95043be2d36fa7d77fcb0a6447a41bbcc255fa03fbec6fc8402fd1ac13ae",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/source-readout.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/source-readout.mjs",
+      "recorded": "c00f6d08ead8fe7af85d835cf7aede1bd96e47c3c6f9d14918810d6fa7d17b77",
+      "actual": "c00f6d08ead8fe7af85d835cf7aede1bd96e47c3c6f9d14918810d6fa7d17b77",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/build-atlas.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/build-atlas.mjs",
+      "recorded": "f70c8b67963537f76214f0902b12fbfd442993290fcf549bd1442f1c1d7493e9",
+      "actual": "f70c8b67963537f76214f0902b12fbfd442993290fcf549bd1442f1c1d7493e9",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/test.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/test.mjs",
+      "recorded": "74d6e4e3e5d54fcc3a524873664e29d62e702b62d7baa935e6945d14686bf907",
+      "actual": "74d6e4e3e5d54fcc3a524873664e29d62e702b62d7baa935e6945d14686bf907",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/source-srgb.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/source-srgb.json",
+      "recorded": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5",
+      "actual": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/link.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/link.mjs",
+      "recorded": "393b245ad1e5f7e52e560c875bc72988991bc027484194ff2c5cec5c93dd70a9",
+      "actual": "393b245ad1e5f7e52e560c875bc72988991bc027484194ff2c5cec5c93dd70a9",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/index.mjs",
+      "recorded": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+      "actual": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/rl-core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/rl-core.mjs",
+      "recorded": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "actual": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/definitions.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/definitions.json",
+      "recorded": "4ff31208cfa8ef88a370248bd6be30c40a947b736f0607071abe6063e5dd6e31",
+      "actual": "4ff31208cfa8ef88a370248bd6be30c40a947b736f0607071abe6063e5dd6e31",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../../a-smooth/source-full.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../../a-smooth/source-full.json",
+      "recorded": "ae3da2b76af61b2aaba72054f6694f304ad6d14c03566054ebf98cad0545403c",
+      "actual": "ae3da2b76af61b2aaba72054f6694f304ad6d14c03566054ebf98cad0545403c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/build.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/build.mjs",
+      "recorded": "47ba5840c87bb39e561a9d9404291bfab9155dc0b5b392686e283828033366ae",
+      "actual": "47ba5840c87bb39e561a9d9404291bfab9155dc0b5b392686e283828033366ae",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/geometry.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/geometry.mjs",
+      "recorded": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+      "actual": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/context.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/context.mjs",
+      "recorded": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+      "actual": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/base.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/base.mjs",
+      "recorded": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+      "actual": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/bridge.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/bridge.mjs",
+      "recorded": "0bec3034b614dad20d7089955a088eaf82bcaf11e37dfa7797018683d0cae0db",
+      "actual": "0bec3034b614dad20d7089955a088eaf82bcaf11e37dfa7797018683d0cae0db",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/test.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/test.mjs",
+      "recorded": "97fa274375a7e999db4ee7cbf81c84caf4e5b6ae810695ec112b53e38a6e47f5",
+      "actual": "97fa274375a7e999db4ee7cbf81c84caf4e5b6ae810695ec112b53e38a6e47f5",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/index.mjs",
+      "recorded": "0992f0086e6352e06da7d769dfcfc0449d9acaa3c0ef33764ffa6b2d3a94aabb",
+      "actual": "0992f0086e6352e06da7d769dfcfc0449d9acaa3c0ef33764ffa6b2d3a94aabb",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/results/build-audit.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/results/build-audit.json",
+      "recorded": "c07cf79ef8a4879fe2181a5d416e4612f553819a97e00639d7341e8efe7eee86",
+      "actual": "c07cf79ef8a4879fe2181a5d416e4612f553819a97e00639d7341e8efe7eee86",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/results/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/results/verification.json",
+      "recorded": "14a1e0e988852652a33424478bfe5012ecce37e5e68e16597a01d59e59204035",
+      "actual": "14a1e0e988852652a33424478bfe5012ecce37e5e68e16597a01d59e59204035",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/results/colorbench.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/results/colorbench.json",
+      "recorded": "be19ad79ccc31c3f1c47817dc312ff9b4127bfdcff7a13aa3bda238c9c12ca11",
+      "actual": "be19ad79ccc31c3f1c47817dc312ff9b4127bfdcff7a13aa3bda238c9c12ca11",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../relative-domain/results/source-full.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../relative-domain/results/source-full.json",
+      "recorded": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a",
+      "actual": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/atlas.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/atlas.mjs",
+      "recorded": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+      "actual": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/visual-paths.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/visual-paths.mjs",
+      "recorded": "bb58d9b6b4f1ae31f89f02d3104261acc7196f5bd862c7547f3fd24abcc9865a",
+      "actual": "bb58d9b6b4f1ae31f89f02d3104261acc7196f5bd862c7547f3fd24abcc9865a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/viewer-worker.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/viewer-worker.mjs",
+      "recorded": "1bc1d6300ec9c16656d505ae53c3a7bffbe2a72b1cfc36b8cd83d4e935693511",
+      "actual": "1bc1d6300ec9c16656d505ae53c3a7bffbe2a72b1cfc36b8cd83d4e935693511",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/test.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/test.mjs",
+      "recorded": "b8a20b8cd8a07d17918062226d19894479c466edf2de9b58d3338a9fd060a949",
+      "actual": "b8a20b8cd8a07d17918062226d19894479c466edf2de9b58d3338a9fd060a949",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/preview.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/preview.mjs",
+      "recorded": "9c59e70651b9df7eceffcaa898019fb2f08296128cf1802199329b22c66443e6",
+      "actual": "9c59e70651b9df7eceffcaa898019fb2f08296128cf1802199329b22c66443e6",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/cache-fit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/cache-fit.mjs",
+      "recorded": "a8cf1e4a58c6fadf0e22a318d489a2e556d71b4fa8edca6ecb53c9c018d32657",
+      "actual": "a8cf1e4a58c6fadf0e22a318d489a2e556d71b4fa8edca6ecb53c9c018d32657",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/test-unfitted.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/test-unfitted.mjs",
+      "recorded": "a977607b3411d4f1eaa32d07aac9f6b171225e8bd3ccfab77b289f8279e6b554",
+      "actual": "a977607b3411d4f1eaa32d07aac9f6b171225e8bd3ccfab77b289f8279e6b554",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/index.mjs",
+      "recorded": "f4b2cb6f6df14d99506cf13ee08c8673472a481083dc672ddc07e95d31d0be21",
+      "actual": "f4b2cb6f6df14d99506cf13ee08c8673472a481083dc672ddc07e95d31d0be21",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/candidate.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/candidate.json",
+      "recorded": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c",
+      "actual": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/render.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/render.mjs",
+      "recorded": "ace3535f29ffca914366d4770531dd13666225c59a3062e406978e9aa6d08cdc",
+      "actual": "ace3535f29ffca914366d4770531dd13666225c59a3062e406978e9aa6d08cdc",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/visual-balanced.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/visual-balanced.mjs",
+      "recorded": "e6af5cb3b5057582756e35b92590d90254590af371840f5e77093be8f0cf2496",
+      "actual": "e6af5cb3b5057582756e35b92590d90254590af371840f5e77093be8f0cf2496",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/verification.json",
+      "recorded": "4e8b9beadc847e19dcc2058e5541de8377aee5e40f168594eb751a0eb79e3978",
+      "actual": "4e8b9beadc847e19dcc2058e5541de8377aee5e40f168594eb751a0eb79e3978",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/visual-balanced.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/visual-balanced.json",
+      "recorded": "ff81d3ad7596cb588dc9632b256c82a97248732e3382826576df48fdb93c87be",
+      "actual": "ff81d3ad7596cb588dc9632b256c82a97248732e3382826576df48fdb93c87be",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/fit-summary.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/fit-summary.json",
+      "recorded": "50100b971ee968e2960ba2aa9bbf441f1491fad159e81ed99df2dbc34cd5d87f",
+      "actual": "50100b971ee968e2960ba2aa9bbf441f1491fad159e81ed99df2dbc34cd5d87f",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/fit-0p5.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/fit-0p5.json",
+      "recorded": "88538818a24c368091e893b308fb9fb7181ff6451ca9fee12e9031c444c1ae8a",
+      "actual": "88538818a24c368091e893b308fb9fb7181ff6451ca9fee12e9031c444c1ae8a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/artifact-manifest.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/artifact-manifest.json",
+      "recorded": "dbf3d89560ce99bc5fd299e64fc150a3308abba1522f59d83fe9ff8aa23b3711",
+      "actual": "dbf3d89560ce99bc5fd299e64fc150a3308abba1522f59d83fe9ff8aa23b3711",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/fit-2p0.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/fit-2p0.json",
+      "recorded": "30023d58192f99dc709cdd88e7cb2af83e438f8faf6f3b42b314de9d20ab799c",
+      "actual": "30023d58192f99dc709cdd88e7cb2af83e438f8faf6f3b42b314de9d20ab799c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/c1-unfitted.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/c1-unfitted.json",
+      "recorded": "e220d7994b431b8b189934ea577441105d4b5b3488cc73be4cd5c8eb70ace50a",
+      "actual": "e220d7994b431b8b189934ea577441105d4b5b3488cc73be4cd5c8eb70ace50a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/preview-index.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/preview-index.json",
+      "recorded": "b6607ce5afe56734c7c257af17bd37b0449957b9729ed70ae26e1a440101a93a",
+      "actual": "b6607ce5afe56734c7c257af17bd37b0449957b9729ed70ae26e1a440101a93a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/fit-0p125.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/fit-0p125.json",
+      "recorded": "e7215324698e39cd19eb777efbb73e88629b148d21ee3c7a6dc74161c88deb05",
+      "actual": "e7215324698e39cd19eb777efbb73e88629b148d21ee3c7a6dc74161c88deb05",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../rl-c1/results/visual-paths.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../rl-c1/results/visual-paths.json",
+      "recorded": "5651b0b6338b6b03e697bea0a0872407a3975d6cf43d6d82b4958ca7c7113f09",
+      "actual": "5651b0b6338b6b03e697bea0a0872407a3975d6cf43d6d82b4958ca7c7113f09",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/source-test.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/source-test.mjs",
+      "recorded": "9d5d73ff1cf7056951bb6ecbf0a19d33180b038a1e7f1c85aaff2a1847b17dae",
+      "actual": "9d5d73ff1cf7056951bb6ecbf0a19d33180b038a1e7f1c85aaff2a1847b17dae",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/bridge.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/bridge.mjs",
+      "recorded": "b7ef598794e73419420a4a78be08f18c2b91bade4d5a4b18d520bcb267f3f745",
+      "actual": "b7ef598794e73419420a4a78be08f18c2b91bade4d5a4b18d520bcb267f3f745",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/test.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/test.mjs",
+      "recorded": "a6fdc3e74516eeaf5c225eed6c4e23643d37d8e6ce607ff0e24db9f9d5096074",
+      "actual": "a6fdc3e74516eeaf5c225eed6c4e23643d37d8e6ce607ff0e24db9f9d5096074",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/preview.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/preview.mjs",
+      "recorded": "ed2db13eaed03db7333a7274f145a86c8f1a0dc445cad8fec0fc1a13cb704f07",
+      "actual": "ed2db13eaed03db7333a7274f145a86c8f1a0dc445cad8fec0fc1a13cb704f07",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/cache.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/cache.mjs",
+      "recorded": "30c518773f4467ba4dfdde48129629dd84be9b9e5b5d85a2a59de1ed19c2c4b5",
+      "actual": "30c518773f4467ba4dfdde48129629dd84be9b9e5b5d85a2a59de1ed19c2c4b5",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/audit.mjs",
+      "recorded": "ad87c32582990568d6010a6e7bab6bf178a30b03931a92d0c820b3e97940cbed",
+      "actual": "ad87c32582990568d6010a6e7bab6bf178a30b03931a92d0c820b3e97940cbed",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/source.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/source.mjs",
+      "recorded": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "actual": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/visual.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/visual.mjs",
+      "recorded": "2382b1eed4ec4ac01cc5ed5622f8db31b56032318dba4ca8de0fd9172aa26fd3",
+      "actual": "2382b1eed4ec4ac01cc5ed5622f8db31b56032318dba4ca8de0fd9172aa26fd3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/core.mjs",
+      "recorded": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "actual": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/verification.json",
+      "recorded": "724d2f086f7901ed31988616e31ffdcb8891d6407b4cd01a43e7a57b307d0170",
+      "actual": "724d2f086f7901ed31988616e31ffdcb8891d6407b4cd01a43e7a57b307d0170",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/metric.json",
+      "recorded": "2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b",
+      "actual": "2348ccddb6b2844f2c81e484d15a14a75fb52e64d1824e1740a85cb0d7c2883b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/audit-old-balanced-balanced-metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/audit-old-balanced-balanced-metric.json",
+      "recorded": "c2b38caed1c4df08a7fa9088430f95d49f339cf1f8a5a15528d1e881031dd529",
+      "actual": "c2b38caed1c4df08a7fa9088430f95d49f339cf1f8a5a15528d1e881031dd529",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/SELECTION.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/SELECTION.json",
+      "recorded": "2f3a499b98c8a9f251a60bfd8f242a4fc96ac79c107c91bdea35c74c6fde29c1",
+      "actual": "2f3a499b98c8a9f251a60bfd8f242a4fc96ac79c107c91bdea35c74c6fde29c1",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/cache.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/cache.json",
+      "recorded": "076255b5eccbfb46961ef117ed4cabccafbd641af812318f34523a4cbd97e655",
+      "actual": "076255b5eccbfb46961ef117ed4cabccafbd641af812318f34523a4cbd97e655",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/balanced.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/balanced.json",
+      "recorded": "a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35",
+      "actual": "a5d15ca185b147c7d97ad9db7ca1891cf8dc2adda08b1577073a1fec9ccd7f35",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/source-gamut-verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/source-gamut-verification.json",
+      "recorded": "d31af87ac0c8722653589fa58281d76428c745d43bb985d7bc747c78373f797f",
+      "actual": "d31af87ac0c8722653589fa58281d76428c745d43bb985d7bc747c78373f797f",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/reproduction-check.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/reproduction-check.json",
+      "recorded": "ca4d0b446cec62274dfd7022e2dd5d9b5882597de551bb03f5bd7ccdbc1b6b43",
+      "actual": "ca4d0b446cec62274dfd7022e2dd5d9b5882597de551bb03f5bd7ccdbc1b6b43",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/visual-srgb-dense-old-balanced-balanced-metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/visual-srgb-dense-old-balanced-balanced-metric.json",
+      "recorded": "6f640b5f2a102b1243a5b1dfc592af9f7b71520da6aa7b8c04061f378dcc195e",
+      "actual": "6f640b5f2a102b1243a5b1dfc592af9f7b71520da6aa7b8c04061f378dcc195e",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/preview-index.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/preview-index.json",
+      "recorded": "2a73699bbe09b9cd38517915f4103c5bfd29c8b6933c114b4c3c97e028ee0016",
+      "actual": "2a73699bbe09b9cd38517915f4103c5bfd29c8b6933c114b4c3c97e028ee0016",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/visual-full-dense-old-balanced-balanced-metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/visual-full-dense-old-balanced-balanced-metric.json",
+      "recorded": "9a41ab676a4afc2b37cde9a860c22925eea3ae626556431c73b7a9ddddee7a3a",
+      "actual": "9a41ab676a4afc2b37cde9a860c22925eea3ae626556431c73b7a9ddddee7a3a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/site-data.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/site-data.json",
+      "recorded": "00625e46c08902b55ca34e7884a4f1d4ca51f135f35a366f81322d3c37baca6a",
+      "actual": "00625e46c08902b55ca34e7884a4f1d4ca51f135f35a366f81322d3c37baca6a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/colorbench.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/colorbench.json",
+      "recorded": "a2e716bfc1daf5afd84ce4a9aa0a5cdb6f32fc67cec626ff81ac418980ab78c3",
+      "actual": "a2e716bfc1daf5afd84ce4a9aa0a5cdb6f32fc67cec626ff81ac418980ab78c3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/browser-live/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/browser-live/verification.json",
+      "recorded": "22ecba54880b84985a63ab84c5029602e970c8f565bd78e52f1db3fe25d5f28c",
+      "actual": "22ecba54880b84985a63ab84c5029602e970c8f565bd78e52f1db3fe25d5f28c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/browser-runner/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/browser-runner/verification.json",
+      "recorded": "add2cd8e60ddf45ab551b4e2b7be3d8f4126963d12c43d4eba22b136409f978d",
+      "actual": "add2cd8e60ddf45ab551b4e2b7be3d8f4126963d12c43d4eba22b136409f978d",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../shared-rl/results/browser-runner/export.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../shared-rl/results/browser-runner/export.json",
+      "recorded": "cc35bd83374b9a6a8d0f3dd1c0cc9891ee76c3fbff4db078895133f494e373f4",
+      "actual": "cc35bd83374b9a6a8d0f3dd1c0cc9891ee76c3fbff4db078895133f494e373f4",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/bridge.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/bridge.mjs",
+      "recorded": "46e6ded11bffe635f355ec40b27e943149243d1f76ea1ecdc79bdcc944d11f4d",
+      "actual": "46e6ded11bffe635f355ec40b27e943149243d1f76ea1ecdc79bdcc944d11f4d",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/evaluate.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/evaluate.mjs",
+      "recorded": "533e9bc39982759a99f1a9065c6ee2af1be93ce545191be710ec40de9bc9f496",
+      "actual": "533e9bc39982759a99f1a9065c6ee2af1be93ce545191be710ec40de9bc9f496",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/preview.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/preview.mjs",
+      "recorded": "4c45cfb902e6b5be14e2e11c28cc85c1aecaedae05ce8d32c891317369f6e797",
+      "actual": "4c45cfb902e6b5be14e2e11c28cc85c1aecaedae05ce8d32c891317369f6e797",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/cache.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/cache.mjs",
+      "recorded": "2ec13fd9f8e09f1d743e7b2098b878e6eb0dec8da9158a6f804edfa308d2d462",
+      "actual": "2ec13fd9f8e09f1d743e7b2098b878e6eb0dec8da9158a6f804edfa308d2d462",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/verify.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/verify.mjs",
+      "recorded": "4cb5190972a5a0c7e677c00138db668cf7a99e3afa74a469478ab367e6c5daee",
+      "actual": "4cb5190972a5a0c7e677c00138db668cf7a99e3afa74a469478ab367e6c5daee",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/index.mjs",
+      "recorded": "63d60c4cc42bc6eea14cc012a7909aa67086dd33d613188a4ae2867c4cb67669",
+      "actual": "63d60c4cc42bc6eea14cc012a7909aa67086dd33d613188a4ae2867c4cb67669",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/verification.json",
+      "recorded": "7fe936153c2d8681b812b10605299cc0cf77dfda5b1cf555711911ef5b4401e8",
+      "actual": "7fe936153c2d8681b812b10605299cc0cf77dfda5b1cf555711911ef5b4401e8",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/direct-72-257-old-balanced_old-metric_balanced_metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/direct-72-257-old-balanced_old-metric_balanced_metric.json",
+      "recorded": "ad4fdcbe4c48422791ac39e9005d5b31f8ad5841007a6daa9db440e8cc70603f",
+      "actual": "ad4fdcbe4c48422791ac39e9005d5b31f8ad5841007a6daa9db440e8cc70603f",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/metric.json",
+      "recorded": "11b2c1039943cf31925ec7df22f4071859bb8ed3d00e4df8e7cae6403e045f5c",
+      "actual": "11b2c1039943cf31925ec7df22f4071859bb8ed3d00e4df8e7cae6403e045f5c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/direct-final.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/direct-final.json",
+      "recorded": "ad4fdcbe4c48422791ac39e9005d5b31f8ad5841007a6daa9db440e8cc70603f",
+      "actual": "ad4fdcbe4c48422791ac39e9005d5b31f8ad5841007a6daa9db440e8cc70603f",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/SELECTION.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/SELECTION.json",
+      "recorded": "cc9282c62f5cea43aebf74409ebd47af8103b6a954ac9e310464ca82cc7f8cde",
+      "actual": "cc9282c62f5cea43aebf74409ebd47af8103b6a954ac9e310464ca82cc7f8cde",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/balanced.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/balanced.json",
+      "recorded": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+      "actual": "109555996bc49629f35397c9bdbc1c8edac8f4ce753fb86caf8ce885e43892f8",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/sampling.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/sampling.json",
+      "recorded": "de04d2f3a0e9c94334a0850291c179e771f2ed638611cefb69b44a0b5c8156c5",
+      "actual": "de04d2f3a0e9c94334a0850291c179e771f2ed638611cefb69b44a0b5c8156c5",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/benchmark-adapter.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/benchmark-adapter.json",
+      "recorded": "86b1bd33da43abcdfb213952e20080d03b3167195445c487f4639acaf93e09a7",
+      "actual": "86b1bd33da43abcdfb213952e20080d03b3167195445c487f4639acaf93e09a7",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/preview-index.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/preview-index.json",
+      "recorded": "198c3479fcb409920ecf68535fd1c9c12c9c314863eb71c3c11d7796679b5bec",
+      "actual": "198c3479fcb409920ecf68535fd1c9c12c9c314863eb71c3c11d7796679b5bec",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/site-data.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/site-data.json",
+      "recorded": "88f8ebf68a1de3cb8efdda781d9ee0552f2cafed1bd4348a8f4dd1ff6acc53e1",
+      "actual": "88f8ebf68a1de3cb8efdda781d9ee0552f2cafed1bd4348a8f4dd1ff6acc53e1",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/colorbench.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/colorbench.json",
+      "recorded": "220adc894eb05960807be181d268e0987ee9ce0ebc281cc553814f4b8949831b",
+      "actual": "220adc894eb05960807be181d268e0987ee9ce0ebc281cc553814f4b8949831b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/python-js-parity.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/python-js-parity.json",
+      "recorded": "06f33c975967a58ea2ab4709fdcb95c4ee980cbf07ef7bd7711f19d9098b1d8b",
+      "actual": "06f33c975967a58ea2ab4709fdcb95c4ee980cbf07ef7bd7711f19d9098b1d8b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/trials/registry.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/trials/registry.json",
+      "recorded": "deaffc500347ef82fc354dac46b024e24496ba00075571e115922aa06b47d742",
+      "actual": "deaffc500347ef82fc354dac46b024e24496ba00075571e115922aa06b47d742",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/browser-live/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/browser-live/verification.json",
+      "recorded": "7ecf7ce03e0dc81b88884af9dfcfa6fb401c12802e7f55bbd47e01c737069ca6",
+      "actual": "7ecf7ce03e0dc81b88884af9dfcfa6fb401c12802e7f55bbd47e01c737069ca6",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/browser-runner/color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/browser-runner/color.json",
+      "recorded": "2bd334842b9d8a33ce6bc82612d39029daef9e185ec6e1bd787dd9f1af501667",
+      "actual": "2bd334842b9d8a33ce6bc82612d39029daef9e185ec6e1bd787dd9f1af501667",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/browser-runner/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/browser-runner/verification.json",
+      "recorded": "3b5140763c57474e3ba7da31bea9646653c452583e57b4b3df29be6110f40f1b",
+      "actual": "3b5140763c57474e3ba7da31bea9646653c452583e57b4b3df29be6110f40f1b",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../gen-tonal-fit/results/browser-runner/old-color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../gen-tonal-fit/results/browser-runner/old-color.json",
+      "recorded": "55d59f0904a82b55ac0ee490bab1d983f2c2777c6e3dd697710558577a687f60",
+      "actual": "55d59f0904a82b55ac0ee490bab1d983f2c2777c6e3dd697710558577a687f60",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/SOURCE_HASHES.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/SOURCE_HASHES.json",
+      "recorded": "ce6fb81e2e154619a373e18d07a1cba7035c079f194613b82bb279f111d8af35",
+      "actual": "ce6fb81e2e154619a373e18d07a1cba7035c079f194613b82bb279f111d8af35",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/bridge.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/bridge.mjs",
+      "recorded": "50d411a9b76e69c72bbd2521762de65bd53a9f56e2fa5a22e08d86d4b7edeebf",
+      "actual": "50d411a9b76e69c72bbd2521762de65bd53a9f56e2fa5a22e08d86d4b7edeebf",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/evaluate.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/evaluate.mjs",
+      "recorded": "263b931347ad71f661457a4724d8de5ee6929cdfdbf8ef05b6a595c7445d57dc",
+      "actual": "263b931347ad71f661457a4724d8de5ee6929cdfdbf8ef05b6a595c7445d57dc",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/preview.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/preview.mjs",
+      "recorded": "733d8b9e39c6f0b4f0811530038bfd0a1041c22b2e3096a2fe45c18813e49da3",
+      "actual": "733d8b9e39c6f0b4f0811530038bfd0a1041c22b2e3096a2fe45c18813e49da3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/conditioning.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/conditioning.mjs",
+      "recorded": "0047152d0e3a00ecca61ffbca30841233255f3d996a56ff1d09a1ff7b1fea049",
+      "actual": "0047152d0e3a00ecca61ffbca30841233255f3d996a56ff1d09a1ff7b1fea049",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/cache.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/cache.mjs",
+      "recorded": "2ec13fd9f8e09f1d743e7b2098b878e6eb0dec8da9158a6f804edfa308d2d462",
+      "actual": "2ec13fd9f8e09f1d743e7b2098b878e6eb0dec8da9158a6f804edfa308d2d462",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/sheet-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/sheet-audit.mjs",
+      "recorded": "e8dc2d37e25f47058d1c925e88db813c87274030a13cd3090db63b86cd568b87",
+      "actual": "e8dc2d37e25f47058d1c925e88db813c87274030a13cd3090db63b86cd568b87",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/verify.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/verify.mjs",
+      "recorded": "f1e18110606c1977ca2471acb8bae0f3e7a0abe1baaa57d4125b6f30dc2cf1dd",
+      "actual": "f1e18110606c1977ca2471acb8bae0f3e7a0abe1baaa57d4125b6f30dc2cf1dd",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/index.mjs",
+      "recorded": "5efc79fb2670b0f5f8f16c99feb071d845755e5edcc33d3ba3105e5563fccd22",
+      "actual": "5efc79fb2670b0f5f8f16c99feb071d845755e5edcc33d3ba3105e5563fccd22",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/recovery/publication-resume.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/recovery/publication-resume.json",
+      "recorded": "5bbb12482019454d82f8731e82f740aa3a496ddb0dab9e37fe8e4c68cbf7d1f5",
+      "actual": "5bbb12482019454d82f8731e82f740aa3a496ddb0dab9e37fe8e4c68cbf7d1f5",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/recovery/verification-resume.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/recovery/verification-resume.json",
+      "recorded": "bd85c226351168286c029f345e1879a5a277290804cb5b1759a767634e9d2ef1",
+      "actual": "bd85c226351168286c029f345e1879a5a277290804cb5b1759a767634e9d2ef1",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/recovery/stream-receipt.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/recovery/stream-receipt.json",
+      "recorded": "fe7ecf923047f698333c29d1bde10ad52a5fb88586cb097023872cce1a603e9e",
+      "actual": "fe7ecf923047f698333c29d1bde10ad52a5fb88586cb097023872cce1a603e9e",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/grid.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/grid.json",
+      "recorded": "6a6d21311fbf1510378fedcebf9dee43d80d410d00df6218b32c775d01000de7",
+      "actual": "6a6d21311fbf1510378fedcebf9dee43d80d410d00df6218b32c775d01000de7",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/verification.json",
+      "recorded": "08b7a0e09d32fecca78813e385d16d02494ab6a99736257492cc24b1a9ca73e7",
+      "actual": "08b7a0e09d32fecca78813e385d16d02494ab6a99736257492cc24b1a9ca73e7",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/finalization.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/finalization.json",
+      "recorded": "385c0643971459c2582338e3c82428f572b7d28ccb58d676eb8ff328f1c3c5dc",
+      "actual": "385c0643971459c2582338e3c82428f572b7d28ccb58d676eb8ff328f1c3c5dc",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/direct-final.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/direct-final.json",
+      "recorded": "70b79a62290ea5a94c5e2cccac9acd9261e7fdb61e4b0156d0bd61e4a65661d3",
+      "actual": "70b79a62290ea5a94c5e2cccac9acd9261e7fdb61e4b0156d0bd61e4a65661d3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/SELECTION.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/SELECTION.json",
+      "recorded": "7e6b7b63b8ae510ccba36c92b32aa76e4d56b313b9395d51f3cae39ef96edafb",
+      "actual": "7e6b7b63b8ae510ccba36c92b32aa76e4d56b313b9395d51f3cae39ef96edafb",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/conditioning-same-grid.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/conditioning-same-grid.json",
+      "recorded": "1f22cbfb1d09de598ed3fa3a2a6e841a2c2d0c0e5e49d270af922c1716609ae9",
+      "actual": "1f22cbfb1d09de598ed3fa3a2a6e841a2c2d0c0e5e49d270af922c1716609ae9",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/gentle.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/gentle.json",
+      "recorded": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0",
+      "actual": "d560a5891234d1baa59908a8d2ae694dc7c810728bc47cb15d7d7b562b95baf0",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/sheet-final.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/sheet-final.json",
+      "recorded": "c865b268351b5b5dc2ad5f183d9103991c4c7a16f1c897d0c6850927232a7960",
+      "actual": "c865b268351b5b5dc2ad5f183d9103991c4c7a16f1c897d0c6850927232a7960",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/balanced.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/balanced.json",
+      "recorded": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+      "actual": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/direct-72-257-parent_balanced_gentle.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/direct-72-257-parent_balanced_gentle.json",
+      "recorded": "70b79a62290ea5a94c5e2cccac9acd9261e7fdb61e4b0156d0bd61e4a65661d3",
+      "actual": "70b79a62290ea5a94c5e2cccac9acd9261e7fdb61e4b0156d0bd61e4a65661d3",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/public-hashes.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/public-hashes.json",
+      "recorded": "dc2c59f84d35878b05ff62d793c87acb6ee7319cb6f472af03d661b4ecfb9895",
+      "actual": "dc2c59f84d35878b05ff62d793c87acb6ee7319cb6f472af03d661b4ecfb9895",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/preview-index.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/preview-index.json",
+      "recorded": "0a7bd18bbc89f5b8e0b8f2791318816e8e26ca1bd802caff808b998ae1e58a11",
+      "actual": "0a7bd18bbc89f5b8e0b8f2791318816e8e26ca1bd802caff808b998ae1e58a11",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/site-data.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/site-data.json",
+      "recorded": "a579333410cd40e958dc34b770b33bbe1b8d10162b75b90c491d23c64040e739",
+      "actual": "a579333410cd40e958dc34b770b33bbe1b8d10162b75b90c491d23c64040e739",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/colorbench.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/colorbench.json",
+      "recorded": "0a333ddcc35808a96a71bb68462c87c6cfd1e3958d74aae1f1a62965ce86be49",
+      "actual": "0a333ddcc35808a96a71bb68462c87c6cfd1e3958d74aae1f1a62965ce86be49",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/python-js-parity.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/python-js-parity.json",
+      "recorded": "355b9ac2bbf572c95ff05ff6cab0601525146eee69662d248353fa5f8953aa68",
+      "actual": "355b9ac2bbf572c95ff05ff6cab0601525146eee69662d248353fa5f8953aa68",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/trials/resume-b.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/trials/resume-b.json",
+      "recorded": "ebcad99dda9354597f3dcbcd03836c9fee1b3d29d6796cbb0011964d43fd4d5e",
+      "actual": "ebcad99dda9354597f3dcbcd03836c9fee1b3d29d6796cbb0011964d43fd4d5e",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/trials/resume-a.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/trials/resume-a.json",
+      "recorded": "d2da623b89bf9b9e3d2d6898de6d2b5fb56cc6479012e1527d68ebf40769f5f8",
+      "actual": "d2da623b89bf9b9e3d2d6898de6d2b5fb56cc6479012e1527d68ebf40769f5f8",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/trials/registry.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/trials/registry.json",
+      "recorded": "51717569a98dde49baca63758da0b9d9745da0a86de559699708e98d85c9f386",
+      "actual": "51717569a98dde49baca63758da0b9d9745da0a86de559699708e98d85c9f386",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-live/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-live/verification.json",
+      "recorded": "f17c698f99550d69ade5b6fe0cf7df5c12e3c6b1d1e3e69aff807bd34b29fa38",
+      "actual": "f17c698f99550d69ade5b6fe0cf7df5c12e3c6b1d1e3e69aff807bd34b29fa38",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-runner/color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-runner/color.json",
+      "recorded": "95f32d8a5a82132c0c421ad775af78893b8c9ee9bc3b78927972374b2231050c",
+      "actual": "95f32d8a5a82132c0c421ad775af78893b8c9ee9bc3b78927972374b2231050c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-runner/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-runner/verification.json",
+      "recorded": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "actual": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-runner/old-color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-runner/old-color.json",
+      "recorded": "5a0ad74571e191490091dd245fd6c31f3ae413670ee311847215f4de2b809657",
+      "actual": "5a0ad74571e191490091dd245fd6c31f3ae413670ee311847215f4de2b809657",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-publication/color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-publication/color.json",
+      "recorded": "95f32d8a5a82132c0c421ad775af78893b8c9ee9bc3b78927972374b2231050c",
+      "actual": "95f32d8a5a82132c0c421ad775af78893b8c9ee9bc3b78927972374b2231050c",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-publication/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-publication/verification.json",
+      "recorded": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "actual": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-publication/old-color.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-publication/old-color.json",
+      "recorded": "5a0ad74571e191490091dd245fd6c31f3ae413670ee311847215f4de2b809657",
+      "actual": "5a0ad74571e191490091dd245fd6c31f3ae413670ee311847215f4de2b809657",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:../hue-fair-refine/results/browser-final/verification.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/../hue-fair-refine/results/browser-final/verification.json",
+      "recorded": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "actual": "999e7703e570cd58f6b47496366476aeda73ec52c20390fec8a13d01977c9efb",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "recorded": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "actual": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:boundary-1nm.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "recorded": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "actual": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:results/balanced.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/balanced.json",
+      "recorded": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "actual": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:results/metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/metric.json",
+      "recorded": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "actual": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "matches": true
+    },
+    {
+      "label": "frozen_manifest:results/SELECTION.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/SELECTION.json",
+      "recorded": "444ed6bb1358a1ce21785ab490593abc3695fef57107ba039bef5a7b7a6a3fbf",
+      "actual": "444ed6bb1358a1ce21785ab490593abc3695fef57107ba039bef5a7b7a6a3fbf",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/training-inputs.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/training-inputs.json",
+      "recorded": "bbe219aab839f67f70459f262177066c31eff580331a8db5724eba915f1cf569",
+      "actual": "bbe219aab839f67f70459f262177066c31eff580331a8db5724eba915f1cf569",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "recorded": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "actual": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/direct-72-257-parent_boundary_balanced_metric.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/direct-72-257-parent_boundary_balanced_metric.json",
+      "recorded": "fea64a11111dc5e7af28acdbb693f7287b53937258712ce4a170443f2415d9fa",
+      "actual": "fea64a11111dc5e7af28acdbb693f7287b53937258712ce4a170443f2415d9fa",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/sheet-final.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/sheet-final.json",
+      "recorded": "f5d6fc13e255f8bb66b9a5b6141fe164d69e93e001ee5300b7bc6afa76261059",
+      "actual": "f5d6fc13e255f8bb66b9a5b6141fe164d69e93e001ee5300b7bc6afa76261059",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/audit.mjs",
+      "recorded": "c3b96ecf9697e813c742512d8d99bd8e0475c41df611c0156f2921f157f84902",
+      "actual": "c3b96ecf9697e813c742512d8d99bd8e0475c41df611c0156f2921f157f84902",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "recorded": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "actual": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "recorded": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "actual": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/evaluate.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/evaluate.mjs",
+      "recorded": "e093156b2bef49e220288cc27dc061e49c4e84659aeac0f68a19be4dc2811e10",
+      "actual": "e093156b2bef49e220288cc27dc061e49c4e84659aeac0f68a19be4dc2811e10",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "recorded": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "actual": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "recorded": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "actual": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "recorded": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "actual": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "recorded": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "actual": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "recorded": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "actual": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "recorded": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "actual": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "matches": true
+    },
+    {
+      "label": "identity.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "recorded": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "actual": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "matches": true
+    },
+    {
+      "label": "selector_unchanged",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/make-comparison.py",
+      "recorded": "c5cfd3a6c6fd7970845c404fec5d8461b2228702f0284a8daff627071680e9b6",
+      "actual": "d4dbec95546c4d252a8143768e15a576437b72319f88cb791b7057a75a9ce8f4",
+      "matches": false
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/edge-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/edge-audit.mjs",
+      "recorded": "e6c199bfa0da5abfc2b7df7e6de5ef5aff475d665bda77fc34eb59fdf206c0a9",
+      "actual": "e6c199bfa0da5abfc2b7df7e6de5ef5aff475d665bda77fc34eb59fdf206c0a9",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "recorded": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "actual": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "recorded": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "actual": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "recorded": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "actual": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "recorded": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "actual": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "recorded": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "actual": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "recorded": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "actual": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "recorded": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "actual": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "recorded": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "actual": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "recorded": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "actual": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "recorded": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "actual": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.baseline",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/metric.json",
+      "recorded": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "actual": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "matches": true
+    },
+    {
+      "label": "blue-raw.record",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-raw.json",
+      "recorded": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "actual": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/edge-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/edge-audit.mjs",
+      "recorded": "e6c199bfa0da5abfc2b7df7e6de5ef5aff475d665bda77fc34eb59fdf206c0a9",
+      "actual": "e6c199bfa0da5abfc2b7df7e6de5ef5aff475d665bda77fc34eb59fdf206c0a9",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/index.mjs",
+      "recorded": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "actual": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/boundary-1nm.json",
+      "recorded": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "actual": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/sheet-audit.mjs",
+      "recorded": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "actual": "75c8489ed01b092a1b928815c530975a839067197c58532f1e33510d86ef6ac9",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/cache.json",
+      "recorded": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "actual": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "recorded": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "actual": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/source.mjs",
+      "recorded": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "actual": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "recorded": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "actual": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-semantics/ruler.mjs",
+      "recorded": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "actual": "8bfc3d4116c9854eb4a52bba0bfb458ade20d9c8beb37c78d9d3c97f5fedc4ce",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/appearance-runtime.mjs",
+      "recorded": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "actual": "4609ef4aa6bb08357298424ef61c863f66d34f2e622f92cd01fef61395dc74b8",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/src/base/gen-parameters.mjs",
+      "recorded": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "actual": "4827ed16f69196dfb6d7b73c2ce72dd06f48c73a63e55515f1ba7ef4e3053808",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.baseline",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/metric.json",
+      "recorded": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "actual": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "matches": true
+    },
+    {
+      "label": "blue-robust.record",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-robust.json",
+      "recorded": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "actual": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-audit.py",
+      "recorded": "f801c32e6e17bb32354128c635db2666fef2dcb70d063801a5a465019199a99a",
+      "actual": "f801c32e6e17bb32354128c635db2666fef2dcb70d063801a5a465019199a99a",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/conditioning-numeric.mjs",
+      "recorded": "128b3617b000cde4b91fd6e3e6317ac2e75954b678a30b310c711b4497cc40ef",
+      "actual": "128b3617b000cde4b91fd6e3e6317ac2e75954b678a30b310c711b4497cc40ef",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/gen-tonal-fit/fit.py",
+      "recorded": "d0f7b2ecd252a95cdd84a415405c712c2a265616c6b4ccc403f1042946d5816b",
+      "actual": "d0f7b2ecd252a95cdd84a415405c712c2a265616c6b4ccc403f1042946d5816b",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/conditioning.py",
+      "recorded": "2acfb26469c0db7db82c7051dda30b9d40ffe750ec6e223aec7d5c7f40b5eeb2",
+      "actual": "2acfb26469c0db7db82c7051dda30b9d40ffe750ec6e223aec7d5c7f40b5eeb2",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/shared-rl/core.mjs",
+      "recorded": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "actual": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/a-smooth/rl-core.mjs",
+      "recorded": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "actual": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+      "matches": true
+    },
+    {
+      "label": "conditioning.source:/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/conditioning-same-grid.json",
+      "recorded": "56d2ad90d2cb6676310d27a7ecb820152f9eb5c1414e28fdba60c90990873cea",
+      "actual": "56d2ad90d2cb6676310d27a7ecb820152f9eb5c1414e28fdba60c90990873cea",
+      "matches": true
+    },
+    {
+      "label": "conditioning.record:parent",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/hue-fair-refine/results/balanced.json",
+      "recorded": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+      "actual": "159f06a6ea8eeb1bbe6617318ff8057f540f6ea3919e99e8d364a2d7b990c605",
+      "matches": true
+    },
+    {
+      "label": "conditioning.record:balanced",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/balanced.json",
+      "recorded": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "actual": "57b83046e0ce0f2058447d449e36236f26e5aa893addd703e9e89c1f9c72495a",
+      "matches": true
+    },
+    {
+      "label": "conditioning.record:metric",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/boundary-tonal/results/metric.json",
+      "recorded": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "actual": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "matches": true
+    },
+    {
+      "label": "conditioning.record:blue-raw",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-raw.json",
+      "recorded": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "actual": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "matches": true
+    },
+    {
+      "label": "conditioning.record:blue-robust",
+      "path": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/trials/blue-robust.json",
+      "recorded": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "actual": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "matches": true
+    }
+  ],
+  "edge": {
+    "blue-raw": {
+      "srgb": {
+        "regular": {
+          "hues": 72,
+          "mean": 2147.783050810776,
+          "rms": 7221.773718068912,
+          "p95Hue": 8347.740811150421,
+          "worstHue": 55321.058595942784,
+          "maxStencil": 952493.2311607535
+        },
+        "critical": {
+          "hues": 8,
+          "mean": 2589.924746833133,
+          "rms": 3444.852243086185,
+          "p95Hue": 3856.667008771789,
+          "worstHue": 7667.602707593267,
+          "maxStencil": 130994.3968984277
+        },
+        "maxStencilLocation": {
+          "value": 952493.2311607535,
+          "H": 191,
+          "stencilIndex": 5,
+          "centre": {
+            "R": 0.0197,
+            "L": 0.02,
+            "U": 0.985,
+            "radius": 0.00010000000000000055,
+            "points": [
+              {
+                "R": 0.0197,
+                "L": 0.02
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.02
+              },
+              {
+                "R": 0.0196,
+                "L": 0.02
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0199
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0201
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0199
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0199
+              }
+            ]
+          }
+        },
+        "rows": 79,
+        "values": 1580
+      },
+      "full": {
+        "regular": {
+          "hues": 72,
+          "mean": 2777.514402457885,
+          "rms": 7833.87349100562,
+          "p95Hue": 14611.370889906106,
+          "worstHue": 49596.37970359138,
+          "maxStencil": 804984.3174551143
+        },
+        "critical": {
+          "hues": 8,
+          "mean": 1115.9242875179855,
+          "rms": 1228.9129257029772,
+          "p95Hue": 1694.901628666013,
+          "worstHue": 2154.8001649173875,
+          "maxStencil": 27011.843248920017
+        },
+        "maxStencilLocation": {
+          "value": 804984.3174551143,
+          "H": 191,
+          "stencilIndex": 5,
+          "centre": {
+            "R": 0.0197,
+            "L": 0.02,
+            "U": 0.985,
+            "radius": 0.00010000000000000055,
+            "points": [
+              {
+                "R": 0.0197,
+                "L": 0.02
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.02
+              },
+              {
+                "R": 0.0196,
+                "L": 0.02
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0199
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0201
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0199
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0199
+              }
+            ]
+          }
+        },
+        "rows": 79,
+        "values": 1580
+      }
+    },
+    "blue-robust": {
+      "srgb": {
+        "regular": {
+          "hues": 72,
+          "mean": 2146.662813865822,
+          "rms": 7216.564485741042,
+          "p95Hue": 8450.427412720477,
+          "worstHue": 55302.52478056379,
+          "maxStencil": 954091.2242969077
+        },
+        "critical": {
+          "hues": 8,
+          "mean": 2576.266954025597,
+          "rms": 3419.86437397565,
+          "p95Hue": 3825.082976698989,
+          "worstHue": 7596.918798706152,
+          "maxStencil": 128999.80237411702
+        },
+        "maxStencilLocation": {
+          "value": 954091.2242969077,
+          "H": 191,
+          "stencilIndex": 5,
+          "centre": {
+            "R": 0.0197,
+            "L": 0.02,
+            "U": 0.985,
+            "radius": 0.00010000000000000055,
+            "points": [
+              {
+                "R": 0.0197,
+                "L": 0.02
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.02
+              },
+              {
+                "R": 0.0196,
+                "L": 0.02
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0199
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0201
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0199
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0199
+              }
+            ]
+          }
+        },
+        "rows": 79,
+        "values": 1580
+      },
+      "full": {
+        "regular": {
+          "hues": 72,
+          "mean": 2761.52530216916,
+          "rms": 7802.579029015413,
+          "p95Hue": 14437.956180654593,
+          "worstHue": 49603.7077502004,
+          "maxStencil": 807634.6094565855
+        },
+        "critical": {
+          "hues": 8,
+          "mean": 1123.2075343326721,
+          "rms": 1233.8678688951009,
+          "p95Hue": 1677.2832654132458,
+          "worstHue": 2165.147636742114,
+          "maxStencil": 27161.456158884812
+        },
+        "maxStencilLocation": {
+          "value": 807634.6094565855,
+          "H": 191,
+          "stencilIndex": 5,
+          "centre": {
+            "R": 0.0197,
+            "L": 0.02,
+            "U": 0.985,
+            "radius": 0.00010000000000000055,
+            "points": [
+              {
+                "R": 0.0197,
+                "L": 0.02
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.02
+              },
+              {
+                "R": 0.0196,
+                "L": 0.02
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0197,
+                "L": 0.0199
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0201
+              },
+              {
+                "R": 0.019799999999999998,
+                "L": 0.0199
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0201
+              },
+              {
+                "R": 0.0196,
+                "L": 0.0199
+              }
+            ]
+          }
+        },
+        "rows": 79,
+        "values": 1580
+      }
+    }
+  },
+  "conditioning": {
+    "parent": {
+      "summary": {
+        "maxForwardAbsoluteDifference": 3.184952301893418e-15,
+        "maxAnalyticAutogradScaledJacobianError": 1.4625880740599266e-10,
+        "maxAnalyticAutogradLogConditionError": 2.8722968448136044e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 6.622191683902656e-11,
+        "maxPropagatedLogVsSvdError": 1.4205525644683803e-11,
+        "maxPropagatedDetVsSvdMatrixError": 1.0822009954836176e-11,
+        "maxAnalyticCondition": 122403.74789474247,
+        "minAnalyticDeterminant": 0.10644862400287258,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0007951464221437666,
+            "logConditionError": 0.0012930558045156637,
+            "relativeConditionError": 0.001292220168072622,
+            "relativeDeterminantError": 0.0005067201891288953
+          },
+          "0.001": {
+            "scaledJacobianError": 7.955382311260028e-06,
+            "logConditionError": 1.2938956079233677e-05,
+            "relativeConditionError": 1.29388723713042e-05,
+            "relativeDeterminantError": 5.0707380339076735e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 6.615299330938812e-07,
+            "logConditionError": 1.701665703013333e-06,
+            "relativeConditionError": 1.701664255282509e-06,
+            "relativeDeterminantError": 1.9079710310565545e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 1.95318458018968e-05,
+            "logConditionError": 2.9684934753415604e-05,
+            "relativeConditionError": 2.9684494160076014e-05,
+            "relativeDeterminantError": 2.1437396554357946e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 8.810831628389628e-05,
+            "logConditionError": 0.00025931653206390237,
+            "relativeConditionError": 0.00025935015750233603,
+            "relativeDeterminantError": 0.0002566246796691374
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "worstConditionPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "checks": {
+        "forwardParity": true,
+        "analyticAutogradJacobian": true,
+        "analyticAutogradLogCondition": true,
+        "analyticAutogradDeterminant": true,
+        "propagatedCondition": true,
+        "propagatedDeterminant": true,
+        "positiveDeterminants": true
+      }
+    },
+    "balanced": {
+      "summary": {
+        "maxForwardAbsoluteDifference": 2.4980018054066022e-15,
+        "maxAnalyticAutogradScaledJacobianError": 1.9758736404726302e-10,
+        "maxAnalyticAutogradLogConditionError": 8.011213914471682e-11,
+        "maxAnalyticAutogradRelativeDeterminantError": 6.853018152952473e-11,
+        "maxPropagatedLogVsSvdError": 1.616484723854228e-12,
+        "maxPropagatedDetVsSvdMatrixError": 1.3229417561433365e-12,
+        "maxAnalyticCondition": 25197.951630889642,
+        "minAnalyticDeterminant": 0.23983093865290137,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0015655076188294521,
+            "logConditionError": 0.002535201334480819,
+            "relativeConditionError": 0.002531990425584274,
+            "relativeDeterminantError": 0.0002988460809751903
+          },
+          "0.001": {
+            "scaledJacobianError": 1.5650024777232628e-05,
+            "logConditionError": 2.5323575234659224e-05,
+            "relativeConditionError": 2.5323254595699396e-05,
+            "relativeDeterminantError": 2.9903235996275868e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.4958400742930427e-06,
+            "logConditionError": 4.605042029481865e-06,
+            "relativeConditionError": 4.605031426185846e-06,
+            "relativeDeterminantError": 4.340682320469469e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 4.418034787679819e-05,
+            "logConditionError": 5.670907421245763e-05,
+            "relativeConditionError": 5.671068220247655e-05,
+            "relativeDeterminantError": 5.306828777063011e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00019570930666862227,
+            "logConditionError": 0.00027763790984636216,
+            "relativeConditionError": 0.00027759937200855234,
+            "relativeDeterminantError": 0.0003776295565751653
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "worstConditionPoint": [
+        216.0,
+        0.04995,
+        0.05
+      ],
+      "checks": {
+        "forwardParity": true,
+        "analyticAutogradJacobian": true,
+        "analyticAutogradLogCondition": true,
+        "analyticAutogradDeterminant": true,
+        "propagatedCondition": true,
+        "propagatedDeterminant": true,
+        "positiveDeterminants": true
+      }
+    },
+    "metric": {
+      "summary": {
+        "maxForwardAbsoluteDifference": 4.746203430272544e-15,
+        "maxAnalyticAutogradScaledJacobianError": 5.2179906364595454e-11,
+        "maxAnalyticAutogradLogConditionError": 1.3523537845117062e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 8.147982288875255e-11,
+        "maxPropagatedLogVsSvdError": 1.199040866595169e-11,
+        "maxPropagatedDetVsSvdMatrixError": 8.291700659412982e-12,
+        "maxAnalyticCondition": 113447.18172334721,
+        "minAnalyticDeterminant": 0.10135214646008366,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008106354914137264,
+            "logConditionError": 0.0012741398696556328,
+            "relativeConditionError": 0.0012733284980888104,
+            "relativeDeterminantError": 0.00048170176944606347
+          },
+          "0.001": {
+            "scaledJacobianError": 8.110409652361773e-06,
+            "logConditionError": 1.2749632272379685e-05,
+            "relativeConditionError": 1.2749550996060677e-05,
+            "relativeDeterminantError": 4.8204050187017344e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.1319341795382296e-06,
+            "logConditionError": 3.832853036289663e-06,
+            "relativeConditionError": 3.832860381747238e-06,
+            "relativeDeterminantError": 3.85351107456966e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 1.4961299500173088e-05,
+            "logConditionError": 1.4139217214825806e-05,
+            "relativeConditionError": 1.4139317173977872e-05,
+            "relativeDeterminantError": 2.6013773098521042e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00014036253772736076,
+            "logConditionError": 0.00017819026654697367,
+            "relativeConditionError": 0.00017817439160439097,
+            "relativeDeterminantError": 0.00021856556787525072
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "worstConditionPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "checks": {
+        "forwardParity": true,
+        "analyticAutogradJacobian": true,
+        "analyticAutogradLogCondition": true,
+        "analyticAutogradDeterminant": true,
+        "propagatedCondition": true,
+        "propagatedDeterminant": true,
+        "positiveDeterminants": true
+      }
+    },
+    "blue-raw": {
+      "summary": {
+        "maxForwardAbsoluteDifference": 2.2148949341271873e-14,
+        "maxAnalyticAutogradScaledJacobianError": 9.032820935289811e-11,
+        "maxAnalyticAutogradLogConditionError": 1.351332379329051e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 7.444289629177092e-11,
+        "maxPropagatedLogVsSvdError": 1.5944578990456648e-11,
+        "maxPropagatedDetVsSvdMatrixError": 1.5208390102827707e-11,
+        "maxAnalyticCondition": 114567.43979359421,
+        "minAnalyticDeterminant": 0.09956618114511943,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008047557335986062,
+            "logConditionError": 0.001261376592765151,
+            "relativeConditionError": 0.0012605813916952702,
+            "relativeDeterminantError": 0.00047493113110586016
+          },
+          "0.001": {
+            "scaledJacobianError": 8.051580540899624e-06,
+            "logConditionError": 1.262188400574793e-05,
+            "relativeConditionError": 1.2621804350243515e-05,
+            "relativeDeterminantError": 4.752639950700299e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 1.8402051251719323e-06,
+            "logConditionError": 5.316311773473359e-06,
+            "relativeConditionError": 5.31632590505815e-06,
+            "relativeDeterminantError": 5.21516398699351e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 2.3086422648950694e-05,
+            "logConditionError": 2.9704032906752165e-05,
+            "relativeConditionError": 2.9704474075797904e-05,
+            "relativeDeterminantError": 1.5745097094344018e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00023086802623201324,
+            "logConditionError": 0.0006298377040026004,
+            "relativeConditionError": 0.0006300360934181626,
+            "relativeDeterminantError": 0.0006397039125455306
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "worstConditionPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "checks": {
+        "forwardParity": true,
+        "analyticAutogradJacobian": true,
+        "analyticAutogradLogCondition": true,
+        "analyticAutogradDeterminant": true,
+        "propagatedCondition": true,
+        "propagatedDeterminant": true,
+        "positiveDeterminants": true
+      }
+    },
+    "blue-robust": {
+      "summary": {
+        "maxForwardAbsoluteDifference": 4.6351811278100286e-15,
+        "maxAnalyticAutogradScaledJacobianError": 2.479030799132794e-10,
+        "maxAnalyticAutogradLogConditionError": 3.7221825621713833e-10,
+        "maxAnalyticAutogradRelativeDeterminantError": 7.576828053856843e-11,
+        "maxPropagatedLogVsSvdError": 1.0029310715253814e-11,
+        "maxPropagatedDetVsSvdMatrixError": 8.189338096542542e-12,
+        "maxAnalyticCondition": 113643.04280099589,
+        "minAnalyticDeterminant": 0.1012255687418875,
+        "numericalByFactor": {
+          "0.01": {
+            "scaledJacobianError": 0.0008057037438810325,
+            "logConditionError": 0.001258491216291402,
+            "relativeConditionError": 0.001257699648315791,
+            "relativeDeterminantError": 0.00047279253766285834
+          },
+          "0.001": {
+            "scaledJacobianError": 8.061071524787584e-06,
+            "logConditionError": 1.2593016382567157e-05,
+            "relativeConditionError": 1.2592937090882828e-05,
+            "relativeDeterminantError": 4.731241035393907e-06
+          },
+          "0.0001": {
+            "scaledJacobianError": 2.2691389258095577e-06,
+            "logConditionError": 2.9107936875827356e-06,
+            "relativeConditionError": 2.9107894512492294e-06,
+            "relativeDeterminantError": 3.2859143668240165e-06
+          },
+          "1e-05": {
+            "scaledJacobianError": 3.345949218176346e-05,
+            "logConditionError": 2.277459340049859e-05,
+            "relativeConditionError": 2.2774334061392842e-05,
+            "relativeDeterminantError": 5.699632760269857e-05
+          },
+          "1e-06": {
+            "scaledJacobianError": 0.00023005930393113526,
+            "logConditionError": 0.00032791481775945597,
+            "relativeConditionError": 0.00032796858770045567,
+            "relativeDeterminantError": 0.00017938757731705834
+          }
+        },
+        "historicalExtremeRows": [
+          0,
+          1
+        ]
+      },
+      "worstConditionPoint": [
+        269.0,
+        0.000999,
+        0.001
+      ],
+      "checks": {
+        "forwardParity": true,
+        "analyticAutogradJacobian": true,
+        "analyticAutogradLogCondition": true,
+        "analyticAutogradDeterminant": true,
+        "propagatedCondition": true,
+        "propagatedDeterminant": true,
+        "positiveDeterminants": true
+      }
+    }
+  },
+  "counts": {
+    "edgeRows": 316,
+    "edgeStencilValues": 6320,
+    "conditioningRows": 1625,
+    "conditioningNumericMatrices": 8125,
+    "conditioningAllMatrices": 11375,
+    "implementationChecks": 35
+  }
+}

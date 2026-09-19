@@ -1,0 +1,110 @@
+{
+  "createdUTC": "2026-09-19T10:16:56.468691+00:00",
+  "command": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/make-comparison.py",
+    "--baseline",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-gate-baseline.json",
+    "--candidate",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-gate-candidates.json",
+    "--out",
+    "/workspace/scratch/20abb8fd27ac/hrl-optimization/review-runtime-gate-output.json"
+  ],
+  "exitCode": 0,
+  "scriptSHA256": "c5cfd3a6c6fd7970845c404fec5d8461b2228702f0284a8daff627071680e9b6",
+  "syntheticTestsOnly": true,
+  "caseCount": 15,
+  "actualEligible": {
+    "threshold_pass": true,
+    "just_inside": true,
+    "blue_fail": false,
+    "srgb_stress_fail": false,
+    "srgb_black_fail": false,
+    "srgb_white_fail": false,
+    "srgb_exchange_fail": false,
+    "srgb_reach_fail": false,
+    "full_stress_fail": false,
+    "full_black_fail": false,
+    "full_white_fail": false,
+    "full_exchange_fail": false,
+    "full_reach_fail": false,
+    "critical_independent": true,
+    "mapped_independent": true
+  },
+  "allExpectedMatched": true,
+  "guardsPerCandidate": 10,
+  "mappedFullNull": true,
+  "populationCounts": {
+    "nativeRetained": 3331,
+    "fullRetained": 3813,
+    "nativeMappedAllInput": 3813,
+    "nativeMappedPairs": 482
+  },
+  "thresholdPass": {
+    "blueBendingImprovementFraction": 0.050000000000000044,
+    "blueImprovementPass": true,
+    "guards": [
+      {
+        "metric": "srgb weighted STRESS delta",
+        "value": 0.14999999999999858,
+        "maximum": 0.15,
+        "pass": true
+      },
+      {
+        "metric": "srgb black CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "srgb white CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "srgb exchange CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "srgb reach CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "full weighted STRESS delta",
+        "value": 0.14999999999999858,
+        "maximum": 0.15,
+        "pass": true
+      },
+      {
+        "metric": "full black CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "full white CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "full exchange CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      },
+      {
+        "metric": "full reach CV ratio",
+        "value": 1.03,
+        "maximum": 1.03,
+        "pass": true
+      }
+    ],
+    "eligible": true
+  }
+}

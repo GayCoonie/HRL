@@ -1,0 +1,58 @@
+{
+  "previousExpectedHash": "c5cfd3a6c6fd7970845c404fec5d8461b2228702f0284a8daff627071680e9b6",
+  "currentHash": "d4dbec95546c4d252a8143768e15a576437b72319f88cb791b7057a75a9ce8f4",
+  "diffOnly": "Rejection prose: Neither research candidate -> No research candidate",
+  "thresholdsAndSelectionCodeUnchanged": true,
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/13a5381bdd70/review/selector-c5cfd3-reconstructed.py",
+        "--baseline",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-baseline.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-mild.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-conditioned.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-sheet-raw.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-sheet-robust.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-blue-raw.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-blue-robust.json",
+        "--out",
+        "/workspace/scratch/13a5381bdd70/review/selector-previous-output.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/make-comparison.py",
+        "--baseline",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-baseline.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-mild.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-conditioned.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-sheet-raw.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-sheet-robust.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-blue-raw.json",
+        "--candidate",
+        "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-blue-robust.json",
+        "--out",
+        "/workspace/scratch/13a5381bdd70/review/selector-current-output.json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "allOutputsExceptTimestampAndNoteIdentical": true,
+  "status": "no-eligible-candidate",
+  "selectedCandidate": "sheet-raw",
+  "originalSupplementalHashFailureResolvedBySourceDiff": true
+}

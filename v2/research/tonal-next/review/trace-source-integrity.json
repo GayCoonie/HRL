@@ -1,0 +1,113 @@
+{
+  "sourcehashes": {
+    "edf327dde8b40f6589964f11ccf943a01fa78fbe3ef2a6fe9f721e6efca5dd9b": "fit.py",
+    "a3b835ffb5218a347b6b1a442c9f1d2f32840cce36845fb67c33a1d7f89ef3ca": "fit-sheet-round.py",
+    "6d5eacbdf3d6b2d6aceea380442e7811b61bb5150af1621a98fbfecf9d06808e": "fit-first-round.py"
+  },
+  "records": {
+    "blue-raw": {
+      "sha256": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "fitSource": "fit.py",
+      "fitSourceSHA256": "edf327dde8b40f6589964f11ccf943a01fa78fbe3ef2a6fe9f721e6efca5dd9b",
+      "evaluations": 622,
+      "traceRows": 622,
+      "traceSHA256": "43853bcb886c5f10029eaae200bc537a2da93319c9db1b8e1c11f391034166bd",
+      "stepsRequested": 600,
+      "seconds": 531.8619092249992,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    },
+    "blue-robust": {
+      "sha256": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "fitSource": "fit.py",
+      "fitSourceSHA256": "edf327dde8b40f6589964f11ccf943a01fa78fbe3ef2a6fe9f721e6efca5dd9b",
+      "evaluations": 628,
+      "traceRows": 628,
+      "traceSHA256": "b165ff05d98a924992637828bae562f255bc9f243eb9663e73feb9b6bd20a49b",
+      "stepsRequested": 600,
+      "seconds": 539.0211348510002,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    },
+    "sheet-raw": {
+      "sha256": "00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f",
+      "fitSource": "fit-sheet-round.py",
+      "fitSourceSHA256": "a3b835ffb5218a347b6b1a442c9f1d2f32840cce36845fb67c33a1d7f89ef3ca",
+      "evaluations": 464,
+      "traceRows": 464,
+      "traceSHA256": "6595cadcfefc7df7130b0a09f4b00076d20b286b466e43ed08904395f65288a9",
+      "stepsRequested": 450,
+      "seconds": 411.7097350240001,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    },
+    "sheet-robust": {
+      "sha256": "374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c",
+      "fitSource": "fit-sheet-round.py",
+      "fitSourceSHA256": "a3b835ffb5218a347b6b1a442c9f1d2f32840cce36845fb67c33a1d7f89ef3ca",
+      "evaluations": 506,
+      "traceRows": 506,
+      "traceSHA256": "b5b77cb37c38a9ab0f584b458db8abfdc748ee2c25fe1ba4ad363e41e82b7a43",
+      "stepsRequested": 450,
+      "seconds": 520.7460564619996,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    },
+    "smooth-conditioned": {
+      "sha256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "fitSource": "fit-first-round.py",
+      "fitSourceSHA256": "6d5eacbdf3d6b2d6aceea380442e7811b61bb5150af1621a98fbfecf9d06808e",
+      "evaluations": 484,
+      "traceRows": 484,
+      "traceSHA256": "d94c3eea1339dad41ac01a14109244d358790cdeca39be3fe89b0ee4dc3e7fbd",
+      "stepsRequested": 450,
+      "seconds": 495.46886187699965,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    },
+    "smooth-mild": {
+      "sha256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "fitSource": "fit-first-round.py",
+      "fitSourceSHA256": "6d5eacbdf3d6b2d6aceea380442e7811b61bb5150af1621a98fbfecf9d06808e",
+      "evaluations": 460,
+      "traceRows": 460,
+      "traceSHA256": "df0f7d5e4d8d6b82590768e90866754b13af679a83110a6e680c939693e2a7ab",
+      "stepsRequested": 450,
+      "seconds": 426.0021656909994,
+      "oneBank": true,
+      "sevenLayers": true,
+      "parentIsFrozenMetricB2": true
+    }
+  },
+  "archiveMatches": {
+    "blue-raw.jsonl.gz": true,
+    "blue-robust.jsonl.gz": true,
+    "sheet-raw.jsonl.gz": true,
+    "sheet-robust.jsonl.gz": true,
+    "smooth-conditioned.jsonl.gz": true,
+    "smooth-mild.jsonl.gz": true,
+    "audit-blue-raw.json.gz": true,
+    "audit-edge-candidates.json.gz": true,
+    "conditioning-audit.json.gz": true,
+    "conditioning-sheet-candidates.json.gz": true,
+    "audit-edge-baseline.json.gz": true,
+    "audit-conditioned.json.gz": true,
+    "conditioning-candidates.json.gz": true,
+    "audit-blue-robust.json.gz": true,
+    "audit-sheet-robust.json.gz": true,
+    "audit-sheet-raw.json.gz": true,
+    "audit-edge-sheet-raw.json.gz": true,
+    "audit-edge-blue-candidates.json.gz": true,
+    "audit-baseline.json.gz": true,
+    "audit-edge-sheet-robust.json.gz": true,
+    "audit-mild.json.gz": true,
+    "conditioning-blue-candidates.json.gz": true
+  },
+  "sixRecordCount": 6,
+  "allRequestedIterationsUnder700": true
+}
