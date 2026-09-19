@@ -1,0 +1,212 @@
+{
+  "schema": "hrl-physical-contours-v1",
+  "id": "HRL-v2-contours-reconstructed-guarded",
+  "variant": "guarded",
+  "harmonics": 4,
+  "neutral_shift": 0.02686567756674324,
+  "coefficients": [
+    [
+      0.02363701670090623,
+      -0.19778492880534768,
+      0.14823592947710984,
+      -0.6585699206423185,
+      -0.26215029843078347,
+      -0.11916181600098538,
+      -0.15106636652058208,
+      0.29528564152837367,
+      -0.001624223380235627
+    ],
+    [
+      -0.03500333600589633,
+      0.057921863293833066,
+      -0.1431848421711888,
+      0.10836655759121953,
+      0.11039886586012225,
+      -0.06427980201060204,
+      0.018258121227219152,
+      -0.10416167767976803,
+      0.06218182462820497
+    ],
+    [
+      0.16191709082065395,
+      -0.26712652308728907,
+      0.0674913162723651,
+      -1.4197920968104503,
+      -0.375747943307592,
+      -0.1138975054618449,
+      0.1730106676758705,
+      0.728684319471311,
+      -0.029220731995807582
+    ],
+    [
+      0.06874204841005158,
+      0.2594286402288569,
+      -0.3848122055633687,
+      0.13036511242320972,
+      0.10202211462079361,
+      -0.26704274945554374,
+      -0.18170069602863945,
+      -0.1878599374272081,
+      0.274497316533772
+    ],
+    [
+      -0.5367508276250377,
+      -0.354889250508081,
+      0.11753433949215783,
+      0.3651149768856597,
+      -0.007209006527814372,
+      0.05078852145246914,
+      -0.32065098977437545,
+      -0.100381321077242,
+      0.022835506531314376
+    ],
+    [
+      0.6789142364739147,
+      0.34980044360584445,
+      0.5445450638620196,
+      -0.5499963947889501,
+      0.44868533838168706,
+      -0.009427934145334022,
+      0.6537034759454587,
+      -0.16785665738102926,
+      -0.10353804524200827
+    ],
+    [
+      0.00011236208856474144,
+      0.47128259521818755,
+      -2.965271294397819,
+      -0.7995338684686545,
+      -1.4159822635853054,
+      -1.2251925033374456,
+      -0.22606956137669929,
+      0.1300079822308075,
+      0.06012590531903332
+    ],
+    [
+      -0.26656725402639775,
+      -0.6173632252546863,
+      0.04840416728541629,
+      0.9764875460170229,
+      0.04629247958706213,
+      -0.11212736462883112,
+      -0.6019060608523163,
+      -0.3884349428428542,
+      0.11613084566696913
+    ],
+    [
+      -0.11112599064295602,
+      0.5016247807252847,
+      0.4543187208544724,
+      -0.7814766540594682,
+      0.26444349048307697,
+      0.44213287368987114,
+      0.742756256777957,
+      -0.1823919082444274,
+      -0.7754188863190142
+    ],
+    [
+      -1.1141915598449734,
+      -0.723974839315728,
+      -2.247560675984143,
+      -1.1761146561633307,
+      -0.35973191870631877,
+      -1.1949211652130374,
+      -0.014616554961392029,
+      0.7995721830869612,
+      0.3500093655987653
+    ]
+  ],
+  "gamut_calibration": "shared",
+  "ring_logits": null,
+  "contour": "positive-power-then-logit",
+  "research": {
+    "reconstructed": true,
+    "lost_run_not_reproduced": true,
+    "fit": {
+      "name": "strict",
+      "start": "seed",
+      "steps": 180
+    },
+    "objective": "joint weighted STRESS squared + 0.1 unweighted STRESS squared + physical fixed-Level turn loss + Level ordering loss + weak frequency penalty",
+    "contourTurnWeight": 2500.0,
+    "trainingHues": 18,
+    "stats": {
+      "srgb": {
+        "weighted": 34.99001659043729,
+        "unweighted": 34.429934594007705,
+        "surrogateMeanTurn": 0.000173964386418001,
+        "surrogateNearTurn": 3.4123525622765277e-06,
+        "surrogateWorstNearTurn": 0.0001802945783167002,
+        "orderPenalty": 1.904239170223501e-07
+      },
+      "full": {
+        "weighted": 38.117864801579614,
+        "unweighted": 38.00619962971597,
+        "surrogateMeanTurn": 0.00020525483048241372,
+        "surrogateNearTurn": 3.4190721402313486e-05,
+        "surrogateWorstNearTurn": 0.0009033474505009131,
+        "orderPenalty": 0.0
+      }
+    },
+    "bestLoss": 0.14844814979469295,
+    "calls": 12853,
+    "seconds": 378.21786854100355,
+    "codeSHA256": "091c973b1bbf13b0f467f4d74ce2ca8b2e0b38c56b1e7681bd894a49a16524e9",
+    "cacheSHA256": "c3ddfdc1a4f1f307b126a0b44ffef43806b7bb880125f376a4c927dce996d108",
+    "populations": {
+      "srgb_retained": 3331,
+      "full": 3813
+    },
+    "limits": [
+      "COMBVD used for training; not held out",
+      "GenSpace turn regularizer is synthetic evidence, not a definition of Level",
+      "No new ColorBench run",
+      "Fresh reconstruction, not recovery of prior coefficients"
+    ],
+    "reachRefinement": {
+      "fixedContourRows": 4,
+      "startSHA256": "652ede74b24625c167f5e1b9b282bae65e9c361b6d5f287465ba2d5b6114a35a",
+      "codeSHA256": "3a0dd0466d77e942fb25af22afa2a4a86c99246958135a79cbd5c85207c64731",
+      "stats": {
+        "srgb": {
+          "weighted": 33.91052741655207,
+          "unweighted": 33.29235654290638
+        },
+        "full": {
+          "weighted": 34.13267562401026,
+          "unweighted": 35.01374033844918
+        }
+      },
+      "calls": 12870,
+      "seconds": 28.028428461002477,
+      "optimizerStatus": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "limits": "Physical Level contours unchanged; public-U paths and fixed-R Level ordering require fresh direct audit"
+    },
+    "orderingRefinement": {
+      "fixedContourRows": 4,
+      "startSHA256": "8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a",
+      "codeSHA256": "5e21a32d24d0a98d3dcc812ffa2365494ca068cd5ebcf6e1259b04e9d3dad725",
+      "stats": {
+        "srgb": {
+          "weighted": 34.52135834200491,
+          "unweighted": 34.33663729951045,
+          "surrogateNegativeSteps": 6,
+          "surrogateWorstDrop": 0.0012384129547843292,
+          "orderingPenalty": 5.5304331802799054e-05
+        },
+        "full": {
+          "weighted": 34.77880632511061,
+          "unweighted": 36.225010522136714,
+          "surrogateNegativeSteps": 172,
+          "surrogateWorstDrop": 0.005193558389983921,
+          "orderingPenalty": 0.0025640828778686555
+        }
+      },
+      "calls": 6811,
+      "seconds": 89.26301107900508,
+      "optimizerStatus": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "limits": "Training grid at 18 hues; fresh offset-hue direct audit required"
+    }
+  },
+  "reach": "positive-power-then-logit"
+}

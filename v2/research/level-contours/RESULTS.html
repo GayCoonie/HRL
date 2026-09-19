@@ -1,0 +1,220 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL · Physical contour research</title><link rel="stylesheet" href="../../tonal-next.css"><style>main{max-width:1100px}table{display:block;overflow:auto;border-collapse:collapse}th,td{padding:10px;border:1px solid var(--line)}h2{margin-top:36px}p{margin:16px 0}pre{overflow:auto}code{overflow-wrap:anywhere}</style></head><body><main><p><a href="../../contours.html">← Interactive contour comparison</a></p><h1>HRL physical Level contours — reconstructed experiment, 19 September 2026</h1>
+<p>The physical-contour redesign substantially reduces the measured near-gray fixed-Level ridge. It does <strong>not</strong> yet solve general Level ordering, and its COMBVD fit is worse than Beta 1. The comparison is a research delivery; no replacement release is promoted.</p>
+<p><a href="https://hrl-color.coonie.chatgpt.site/v2/contours.html">Interactive comparison</a> · <a href="REPRODUCE.md">Reproduction instructions</a> · <a href="INDEPENDENT_REVIEW.md">Independent review</a></p>
+<h2>Recovery and provenance</h2>
+<p>The preceding chat exhausted its length. Published GitHub/Sites source was recovered, but its last unpublished contour records were absent from the available workspaces and saved handoff. This experiment reconstructs the architecture from published commit <code>4aac5291e4d7a124426a9d541f185165566903ca</code>. It is not an exact recovery of the lost fit. Earlier reported values of 31.70/32.04 and 3/504/22/504 were not reproduced and are not used as evidence here.</p>
+<h2>Structural change</h2>
+<p>A raw physical hue chart replaces the inherited tonal atlases and learned Level–Reach coupling inside this experimental factory. The fixed vivid ring, pseudoRGB carrier, import/mapping policy and agreed gray ruler are inherited unchanged. Full uses the existing repaired spectral-boundary transport. A single coefficient bank serves sRGB and full.</p>
+<p>The Level contour is defined as physical magnitude versus physical purity. Endpoint-preserving positive powers and logit warps specify it before Reach is assigned. Reach is a separate invertible redistribution along that contour. Four Fourier coefficient rows control the physical contours; the final Reach map has six rows. The strict and metric variants fit both retained COMBVD populations with different contour-turn weights. The ordering-penalty variant then changes only Reach, keeping strict's physical contours exactly fixed.</p>
+<p>This guarantees algebraic separation and preserved anchors. It does not guarantee monotone GenSpace J along changing public Reach or Level. HRL Level means absence of blackness, not constant luminance or constant J. Lightness may change along an equal-Level path; the diagnostic targets reversals, not all lightness variation.</p>
+<h2>Direct runtime measurements</h2>
+<p>Weighted/unweighted STRESS are training scores; lower is better. Native retains 3,331 COMBVD pairs; full retains all 3,813. Near-gray checks use 72 hues at 2.5° + 5°k, seven normalized Levels (.005, .01, .02, .04, .08, .12, .2), and 257 points over public U=R/L from 0 to .25. A turn is <code>(total variation of J − absolute endpoint change)/2</code>; counts use a .001 J threshold.</p>
+<table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th>Realization</th>
+  <th style="text-align:right">Weighted STRESS</th>
+  <th style="text-align:right">Unweighted STRESS</th>
+  <th style="text-align:right">Paths above threshold</th>
+  <th style="text-align:right">Mean J turn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td>srgb</td>
+  <td style="text-align:right">29.107048</td>
+  <td style="text-align:right">30.712588</td>
+  <td style="text-align:right">238/504</td>
+  <td style="text-align:right">0.00373695</td>
+</tr>
+<tr>
+  <td>Beta 1</td>
+  <td>full</td>
+  <td style="text-align:right">29.948555</td>
+  <td style="text-align:right">32.127880</td>
+  <td style="text-align:right">205/504</td>
+  <td style="text-align:right">0.00282658</td>
+</tr>
+<tr>
+  <td>Contour first</td>
+  <td>srgb</td>
+  <td style="text-align:right">33.910527</td>
+  <td style="text-align:right">33.292357</td>
+  <td style="text-align:right">4/504</td>
+  <td style="text-align:right">0.00002560</td>
+</tr>
+<tr>
+  <td>Contour first</td>
+  <td>full</td>
+  <td style="text-align:right">34.132676</td>
+  <td style="text-align:right">35.013740</td>
+  <td style="text-align:right">0/504</td>
+  <td style="text-align:right">0.00001038</td>
+</tr>
+<tr>
+  <td>Metric compromise</td>
+  <td>srgb</td>
+  <td style="text-align:right">33.169201</td>
+  <td style="text-align:right">33.143717</td>
+  <td style="text-align:right">31/504</td>
+  <td style="text-align:right">0.00020866</td>
+</tr>
+<tr>
+  <td>Metric compromise</td>
+  <td>full</td>
+  <td style="text-align:right">32.391347</td>
+  <td style="text-align:right">33.260378</td>
+  <td style="text-align:right">2/504</td>
+  <td style="text-align:right">0.00003506</td>
+</tr>
+<tr>
+  <td>Ordering penalty</td>
+  <td>srgb</td>
+  <td style="text-align:right">34.521358</td>
+  <td style="text-align:right">34.336637</td>
+  <td style="text-align:right">7/504</td>
+  <td style="text-align:right">0.00004003</td>
+</tr>
+<tr>
+  <td>Ordering penalty</td>
+  <td>full</td>
+  <td style="text-align:right">34.778806</td>
+  <td style="text-align:right">36.225011</td>
+  <td style="text-align:right">0/504</td>
+  <td style="text-align:right">0.00001686</td>
+</tr>
+<tr>
+  <td>Unfitted base</td>
+  <td>srgb</td>
+  <td style="text-align:right">43.467344</td>
+  <td style="text-align:right">40.843603</td>
+  <td style="text-align:right">0/504</td>
+  <td style="text-align:right">0.00000000</td>
+</tr>
+<tr>
+  <td>Unfitted base</td>
+  <td>full</td>
+  <td style="text-align:right">45.507142</td>
+  <td style="text-align:right">45.949710</td>
+  <td style="text-align:right">0/504</td>
+  <td style="text-align:right">0.00000217</td>
+</tr>
+</tbody>
+</table>
+<p>Strict reduces mean near-gray J backtracking by <strong>99.315% native / 99.633% full</strong>. The original H300/L=.08 regression passes in both realizations. This is sampled diagnostic evidence, not a claim that every gray smear has disappeared or that the geometry is perceptually ideal.</p>
+<p>The separate all-input mapped native population has 3,813 pairs: Beta1 34.489196, strict 36.276264, metric 36.258325, ordering-penalty 36.777026, seed 44.567770. These are not interchangeable with the retained native scores. No new ColorBench run or held-out observer evaluation was performed.</p>
+<h2>Remaining Level-ordering defect</h2>
+<p>At fixed public Reach, increasing Level can still make GenSpace J decrease. This check uses the same 72 offset hues, seven fixed R values (.0001, .001, .01, .05, .2, .5, .8), and 65 Levels from R to 1: 32,256 steps per model/profile. Negative steps use a 1e-8 tolerance.</p>
+<table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th>Realization</th>
+  <th style="text-align:right">Negative steps</th>
+  <th style="text-align:right">Worst J drop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td>srgb</td>
+  <td style="text-align:right">44</td>
+  <td style="text-align:right">0.01029663</td>
+</tr>
+<tr>
+  <td>Beta 1</td>
+  <td>full</td>
+  <td style="text-align:right">613</td>
+  <td style="text-align:right">0.03295220</td>
+</tr>
+<tr>
+  <td>Contour first</td>
+  <td>srgb</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0.00000000</td>
+</tr>
+<tr>
+  <td>Contour first</td>
+  <td>full</td>
+  <td style="text-align:right">833</td>
+  <td style="text-align:right">0.30493954</td>
+</tr>
+<tr>
+  <td>Metric compromise</td>
+  <td>srgb</td>
+  <td style="text-align:right">234</td>
+  <td style="text-align:right">0.10636317</td>
+</tr>
+<tr>
+  <td>Metric compromise</td>
+  <td>full</td>
+  <td style="text-align:right">1187</td>
+  <td style="text-align:right">0.52434635</td>
+</tr>
+<tr>
+  <td>Ordering penalty</td>
+  <td>srgb</td>
+  <td style="text-align:right">47</td>
+  <td style="text-align:right">0.00165511</td>
+</tr>
+<tr>
+  <td>Ordering penalty</td>
+  <td>full</td>
+  <td style="text-align:right">582</td>
+  <td style="text-align:right">0.07756632</td>
+</tr>
+<tr>
+  <td>Unfitted base</td>
+  <td>srgb</td>
+  <td style="text-align:right">0</td>
+  <td style="text-align:right">0.00000000</td>
+</tr>
+<tr>
+  <td>Unfitted base</td>
+  <td>full</td>
+  <td style="text-align:right">190</td>
+  <td style="text-align:right">0.10323224</td>
+</tr>
+</tbody>
+</table>
+<p>The unguarded metric refinement is particularly poor in full. Strict's worst full drop is .30494; the explicit ordering penalty reduces it to .07757, but Beta1's sampled worst is .03295. The ordering trial is therefore <strong>not accepted as a general ordering fix</strong>. Its training-grid maximum (.00519) substantially understates the offset-hue direct-runtime maximum (.07757); the two checks differ in both hue and Level spacing, and the training sampling is inadequate to certify this constraint near some full-domain hue boundaries. More fitting against this same grid would not establish a fix.</p>
+<p>The next structural investigation should directly evaluate the worst full-domain boundary paths, distinguish inherited physical geometry from Reach-induced changes, and use direct or adaptively refined constraints before another optimization. Keep the invariant anchor/carrier/semantic contracts; do not equate a low bending score or a completed audit with resolved Level behavior.</p>
+<h2>Validation and limits</h2>
+<ul>
+<li>Direct audit: exact gray and vivid XYZ changes are zero; analytic inverse and observer-pair/runtime parity checks pass for all saved candidates. The frozen Beta1 integrity suite passes; existing releases were not edited.</li>
+<li>Independent review of seed/strict/metric: 12,288 XYZ roundtrips, matching analytic roundtrips, 3,072 exact 16-bit carrier roundtrips, mapped-import policy probes and Python/JS parity. The worst observed native strict XYZ embedding roundtrip error was 8.11e-8; the smaller 300-point main audit alone would miss that conditioning tail.</li>
+<li>GenSpace regularization is a sampled scalar-J test, not a full three-dimensional smoothness test. An early inconsistent grid prefilter was caught by review; those records are excluded. Corrected fits restart from the seed. Exact-node interpolation checks and direct physical-contour checks support the corrected grid in their tested scope.</li>
+<li>Realizations share one bank. Full display clips to sRGB; diagnostic curves use original XYZ before clipping. Displays cannot show all full-domain colors faithfully.</li>
+<li>No subjective visual acceptance, universal monotonicity, uniformly good numerical conditioning, or observer generalization is claimed. See the independent review and its guarded-candidate addendum for scope.</li>
+</ul>
+<h2>Reproducible records</h2>
+<p>The saved records and direct audits are authoritative; optimization stopped at the declared iteration budgets. Runtime: Node24.19.0, Python3.12.14, NumPy2.3.5, SciPy1.17.0. <a href="REPRODUCE.md">REPRODUCE.md</a> gives preparation, fitting, refinement and audit commands. Grids are reproducible intermediates with hashes in cache.json. Superseded traces are retained and clearly excluded.</p>
+<table>
+<thead>
+<tr>
+  <th>Record</th>
+  <th>SHA256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>seed.json</td>
+  <td><code>e37fe3712493362118bc57d5aa6b1d4e65f0a35b543ff57df8669f038d13ad39</code></td>
+</tr>
+<tr>
+  <td>strict.json</td>
+  <td><code>8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a</code></td>
+</tr>
+<tr>
+  <td>metric.json</td>
+  <td><code>ccd59034734e1857e636b0b35a56db06ecfaa0eae7b7b0ff0d409cd45dc37de6</code></td>
+</tr>
+<tr>
+  <td>guarded.json</td>
+  <td><code>d09f095a0f4c439716382b3aa1c26854e1e989d802ddc976d44ea44a109653b1</code></td>
+</tr>
+</tbody>
+</table>
+</main></body></html>

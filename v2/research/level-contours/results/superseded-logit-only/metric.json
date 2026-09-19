@@ -1,0 +1,110 @@
+{
+  "schema": "hrl-physical-contours-v1",
+  "id": "HRL-v2-contours-reconstructed-metric",
+  "variant": "metric",
+  "harmonics": 4,
+  "neutral_shift": 0.02686567756674324,
+  "coefficients": [
+    [
+      0.12102949873035106,
+      -0.5229511462357517,
+      -0.1423255308674097,
+      -1.2849748826744785,
+      0.0820433353195674,
+      0.1514267222230597,
+      0.8768288083614201,
+      0.5793775574888483,
+      -0.10627773777620926
+    ],
+    [
+      -0.08953614492246477,
+      0.19456358739013616,
+      0.08889503520325673,
+      0.6519327362504518,
+      0.10860989513991093,
+      -0.10330920337190752,
+      -0.5933628521014898,
+      -0.2995331720522769,
+      0.2650594774698516
+    ],
+    [
+      0.8239185217155193,
+      0.11493379811793668,
+      -0.17859106272723005,
+      0.3865460518686425,
+      -0.12197370116084326,
+      -0.06764955562715971,
+      -0.15650407576259348,
+      -0.1878897149787205,
+      -0.02644367520711755
+    ],
+    [
+      -0.891263655616573,
+      -0.5080315178986384,
+      -0.024669595670592806,
+      -0.6007025657010838,
+      0.12492975396543357,
+      0.21803126510468526,
+      0.1636473670022206,
+      0.44278771109643317,
+      -0.1783835592211336
+    ],
+    [
+      -0.5289609696446393,
+      -0.5380628654221614,
+      0.3686728391884526,
+      0.12871842793648883,
+      -0.22887038761980819,
+      -0.2561177593635203,
+      -0.28005561156288455,
+      -0.1552244465694274,
+      0.03747210634126725
+    ]
+  ],
+  "gamut_calibration": "shared",
+  "ring_logits": null,
+  "research": {
+    "reconstructed": true,
+    "lost_run_not_reproduced": true,
+    "fit": {
+      "name": "metric",
+      "start": "seed",
+      "steps": 180
+    },
+    "objective": "joint weighted STRESS squared + 0.1 unweighted STRESS squared + physical fixed-Level turn loss + Level ordering loss + weak frequency penalty",
+    "contourTurnWeight": 12.0,
+    "stats": {
+      "srgb": {
+        "weighted": 34.436206526275605,
+        "unweighted": 33.963624899967456,
+        "surrogateMeanTurn": 0.0049910463564258635,
+        "surrogateNearTurn": 0.00033184564328075927,
+        "surrogateWorstNearTurn": 0.007785304554173589,
+        "orderPenalty": 4.3129104908409225e-07
+      },
+      "full": {
+        "weighted": 37.06882978525805,
+        "unweighted": 36.60556530469493,
+        "surrogateMeanTurn": 0.003220166519267794,
+        "surrogateNearTurn": 0.0002973398280706747,
+        "surrogateWorstNearTurn": 0.00570061988194992,
+        "orderPenalty": 0.0
+      }
+    },
+    "bestLoss": 0.14226384959009475,
+    "calls": 2911,
+    "seconds": 160.80035404700175,
+    "codeSHA256": "119983c65db8294b7aa55f6ad7adccb07fda3de8661d3f5d3a8a36c1db40aa83",
+    "cacheSHA256": "c3ddfdc1a4f1f307b126a0b44ffef43806b7bb880125f376a4c927dce996d108",
+    "populations": {
+      "srgb_retained": 3331,
+      "full": 3813
+    },
+    "limits": [
+      "COMBVD used for training; not held out",
+      "GenSpace turn regularizer is synthetic evidence, not a definition of Level",
+      "No new ColorBench run",
+      "Fresh reconstruction, not recovery of prior coefficients"
+    ]
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "schema": "hrl-contour-direct-audit-v1",
+  "hues": 72,
+  "hueOffset": 2.5,
+  "levels": [
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08,
+    0.12,
+    0.2
+  ],
+  "nearU": [
+    0,
+    0.25
+  ],
+  "nearSamples": 257,
+  "threshold": 0.001,
+  "observerData": "training only",
+  "models": {
+    "beta1": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 29.107047807815427,
+          "unweighted": 30.71258817521673,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 34.489196386295546
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 238,
+          "meanTurn": 0.003736951199659089,
+          "worstTurn": 0.038373150979860854
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 4.218186425950252e-12,
+        "analyticRoundtrip": 0,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 44,
+          "worstDrop": 0.010296633702262525,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        }
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 29.948554645320506,
+          "unweighted": 32.127879751619034
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 205,
+          "meanTurn": 0.0028265812955384165,
+          "worstTurn": 0.036060445201951175
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 1.7099595950938873e-12,
+        "analyticRoundtrip": 0,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 613,
+          "worstDrop": 0.032952195763887304,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        }
+      }
+    },
+    "seed": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 43.46734427992393,
+          "unweighted": 40.84360283636976,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 44.56776966156756
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 0,
+          "meanTurn": 0,
+          "worstTurn": 0
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 2.4586379135575412e-12,
+        "analyticRoundtrip": 2.2898349882893854e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 0,
+          "worstDrop": 0,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "e37fe3712493362118bc57d5aa6b1d4e65f0a35b543ff57df8669f038d13ad39"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 45.507142275130505,
+          "unweighted": 45.949710239473845
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 0,
+          "meanTurn": 2.1661857280154893e-06,
+          "worstTurn": 0.00016665515926878038
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 1.2537120371237208e-12,
+        "analyticRoundtrip": 2.2301825219878386e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 190,
+          "worstDrop": 0.10323223853382986,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "e37fe3712493362118bc57d5aa6b1d4e65f0a35b543ff57df8669f038d13ad39"
+      }
+    },
+    "metric": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 33.16920147545287,
+          "unweighted": 33.14371651040055,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 36.25832505492896
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 31,
+          "meanTurn": 0.00020866457510412655,
+          "worstTurn": 0.003654169349322889
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 8.754051659734628e-12,
+        "analyticRoundtrip": 9.742167503148516e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 234,
+          "worstDrop": 0.10636316956355688,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "ccd59034734e1857e636b0b35a56db06ecfaa0eae7b7b0ff0d409cd45dc37de6"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 32.39134715235648,
+          "unweighted": 33.26037772069398
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 2,
+          "meanTurn": 3.506122347039271e-05,
+          "worstTurn": 0.0013029220015424378
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 2.5336564432903086e-12,
+        "analyticRoundtrip": 8.049116928532385e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 1187,
+          "worstDrop": 0.5243463522746697,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "ccd59034734e1857e636b0b35a56db06ecfaa0eae7b7b0ff0d409cd45dc37de6"
+      }
+    },
+    "strict": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 33.91052741655323,
+          "unweighted": 33.29235654290444,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 36.2762641870527
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 4,
+          "meanTurn": 2.5602370082989844e-05,
+          "worstTurn": 0.0011871119156645835
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 2.942706008774808e-12,
+        "analyticRoundtrip": 4.685680459230494e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 0,
+          "worstDrop": 0,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 34.13267562401147,
+          "unweighted": 35.013740338448876
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 0,
+          "meanTurn": 1.0379512086284894e-05,
+          "worstTurn": 0.00036473067559783523
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 1.0373871963384324e-12,
+        "analyticRoundtrip": 7.853221736595769e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 833,
+          "worstDrop": 0.3049395372101208,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a"
+      }
+    },
+    "guarded": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 34.52135834200647,
+          "unweighted": 34.33663729950951,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 36.77702573266503
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 7,
+          "meanTurn": 4.002722110463711e-05,
+          "worstTurn": 0.0012891609369153276
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 4.973915639432702e-12,
+        "analyticRoundtrip": 8.899114524108741e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 47,
+          "worstDrop": 0.0016551079514686151,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "d09f095a0f4c439716382b3aa1c26854e1e989d802ddc976d44ea44a109653b1"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 34.778806325111624,
+          "unweighted": 36.22501052213625
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 0,
+          "meanTurn": 1.6861920697773877e-05,
+          "worstTurn": 0.0004868138622460688
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 2.5484136629816398e-12,
+        "analyticRoundtrip": 2.0170112579070047e-15,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 582,
+          "worstDrop": 0.07756631838195527,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "d09f095a0f4c439716382b3aa1c26854e1e989d802ddc976d44ea44a109653b1"
+      }
+    }
+  }
+}
