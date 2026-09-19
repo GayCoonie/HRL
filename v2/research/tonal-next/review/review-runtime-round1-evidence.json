@@ -1,0 +1,303 @@
+{
+  "createdUTC": "2026-09-19T10:24:34.405993+00:00",
+  "status": "passed",
+  "comparisonPath": "/workspace/scratch/20abb8fd27ac/hrl-v2-next/v2/research/tonal-next/results/comparison.json",
+  "comparisonSHA256": "87074c676d1bba83373fa2ab18653e25e042709e5dcf4523a2569b8f3f2adac0",
+  "baselineSHA256": "09a12a76cb70e90a338ae89c67e3ce4be9ff87678cfda49faf258334c45bf7ea",
+  "currentFrozenFilesVerified": 148,
+  "samplingMatchesBaseline": true,
+  "sourceHashesMatchBaselineAndCurrent": true,
+  "models": {
+    "smooth-mild": {
+      "recordSHA256": "60985f33667314ae33d6fe2325f7a775b10e93e73b002f0d96f6d338675eaba2",
+      "receiptPath": "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-mild.json",
+      "receiptSHA256": "e0ad73bde83ff5fd251cfc0bf5bf3553bd191e19c6cca868f49bc6b3bc2ea156",
+      "sharedBankIdentitySamples": 256,
+      "profiles": {
+        "srgb": {
+          "retained": {
+            "weighted": 29.158023904684406,
+            "unweighted": 30.871647708700056,
+            "pairs": 3331
+          },
+          "mappedAllInput": {
+            "weighted": 34.67428949529549,
+            "unweighted": 38.4525735671864,
+            "pairs": 3813,
+            "mappedPairs": 482
+          },
+          "contracts": {
+            "seed": 170917,
+            "roundtripSamples": 1024,
+            "nearBlackSamples": 64,
+            "maxEmbeddingError": 5.816847004069814e-12,
+            "neutralSamples": 129,
+            "maxNeutralDifference": 0,
+            "vividSamples": 79,
+            "maxVividDifference": 0,
+            "seamSamples": 128,
+            "maxSeamXYZDifference": 2.2841792624017643e-09,
+            "invalidInputsRejected": 4
+          },
+          "allFourCV": {
+            "black": 0.22066153005019684,
+            "white": 0.1988635429904707,
+            "exchange": 0.21075337289443002,
+            "reach": 0.32751268505998743
+          },
+          "blueMean": 0.5136986604693586,
+          "rawRowsReaggregated": true
+        },
+        "full": {
+          "retained": {
+            "weighted": 29.999540384373695,
+            "unweighted": 32.21129827340429,
+            "pairs": 3813
+          },
+          "mappedAllInput": null,
+          "contracts": {
+            "seed": 170917,
+            "roundtripSamples": 1024,
+            "nearBlackSamples": 64,
+            "maxEmbeddingError": 3.5342839765917233e-12,
+            "neutralSamples": 129,
+            "maxNeutralDifference": 0,
+            "vividSamples": 79,
+            "maxVividDifference": 0,
+            "seamSamples": 128,
+            "maxSeamXYZDifference": 1.250905107275102e-08,
+            "invalidInputsRejected": 4
+          },
+          "allFourCV": {
+            "black": 0.2696624993128515,
+            "white": 0.3203996571841352,
+            "exchange": 0.2615915592265227,
+            "reach": 0.37801624780074594
+          },
+          "blueMean": 0.28108108267732085,
+          "rawRowsReaggregated": true
+        }
+      }
+    },
+    "smooth-conditioned": {
+      "recordSHA256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "receiptPath": "/workspace/scratch/20abb8fd27ac/hrl-optimization/audit-conditioned.json",
+      "receiptSHA256": "110055ac39415c6430583d5664d8b7e9bbeea2b30e44d18beb78b0923dc39268",
+      "sharedBankIdentitySamples": 256,
+      "profiles": {
+        "srgb": {
+          "retained": {
+            "weighted": 29.162527706182516,
+            "unweighted": 30.866300106291007,
+            "pairs": 3331
+          },
+          "mappedAllInput": {
+            "weighted": 34.71974677601718,
+            "unweighted": 38.50922655970145,
+            "pairs": 3813,
+            "mappedPairs": 482
+          },
+          "contracts": {
+            "seed": 170917,
+            "roundtripSamples": 1024,
+            "nearBlackSamples": 64,
+            "maxEmbeddingError": 7.357690845477549e-12,
+            "neutralSamples": 129,
+            "maxNeutralDifference": 0,
+            "vividSamples": 79,
+            "maxVividDifference": 0,
+            "seamSamples": 128,
+            "maxSeamXYZDifference": 2.1926235826974505e-09,
+            "invalidInputsRejected": 4
+          },
+          "allFourCV": {
+            "black": 0.22478787395369473,
+            "white": 0.20686745108830976,
+            "exchange": 0.22465614425599473,
+            "reach": 0.3330480336146946
+          },
+          "blueMean": 0.7384198817135698,
+          "rawRowsReaggregated": true
+        },
+        "full": {
+          "retained": {
+            "weighted": 30.005696685766768,
+            "unweighted": 32.273767571021985,
+            "pairs": 3813
+          },
+          "mappedAllInput": null,
+          "contracts": {
+            "seed": 170917,
+            "roundtripSamples": 1024,
+            "nearBlackSamples": 64,
+            "maxEmbeddingError": 1.980943187263051e-12,
+            "neutralSamples": 129,
+            "maxNeutralDifference": 0,
+            "vividSamples": 79,
+            "maxVividDifference": 0,
+            "seamSamples": 128,
+            "maxSeamXYZDifference": 1.2391106862796875e-08,
+            "invalidInputsRejected": 4
+          },
+          "allFourCV": {
+            "black": 0.2774487125614771,
+            "white": 0.3322142700626754,
+            "exchange": 0.2734336250332836,
+            "reach": 0.3847555383394595
+          },
+          "blueMean": 0.2871521281740652,
+          "rawRowsReaggregated": true
+        }
+      }
+    }
+  },
+  "selection": {
+    "smooth-mild": {
+      "blueBendingImprovementFraction": -0.013848444501781021,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.05097609686907134,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9926845067960598,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 1.0081002733447502,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.9973287946686914,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 1.0055512581244797,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": 0.050985739053221124,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9992266700459428,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 1.0063031996351763,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 1.007381166799773,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 0.9998849833549683,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false,
+      "rejectionReasons": [
+        "native blue bending failed >=5% improvement"
+      ]
+    },
+    "smooth-conditioned": {
+      "blueBendingImprovementFraction": -0.45736383229122235,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.05547989836718159,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 1.0112475869205515,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 1.0486745375860569,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 1.0631196003585688,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 1.0225462539131889,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": 0.05714204044629412,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 1.0280782602986365,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 1.0434102391576725,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 1.0529846033365164,
+          "maximum": 1.03,
+          "pass": false
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0177109774685278,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false,
+      "rejectionReasons": [
+        "native blue bending failed >=5% improvement",
+        "srgb white CV ratio",
+        "srgb exchange CV ratio",
+        "full white CV ratio",
+        "full exchange CV ratio"
+      ]
+    }
+  },
+  "comparisonStatusVerified": "no-eligible-candidate",
+  "selectedCandidateVerified": "smooth-mild",
+  "note": "No-eligible status means baseline remains default. SelectedCandidate is a displayed research candidate, not eligibility."
+}

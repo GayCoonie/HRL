@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-19T10:22:46.171251+00:00",
-  "selectedCandidate": "smooth-mild",
+  "generatedAt": "2026-09-19T10:49:06.952355+00:00",
+  "selectedCandidate": "sheet-raw",
   "status": "no-eligible-candidate",
-  "selectionNote": "Neither research candidate meets every declared improvement check. Beta 1 remains the default; the measured tradeoffs are available for inspection.",
+  "selectionNote": "No research candidate meets every declared improvement check. Beta 1 remains the default; the measured tradeoffs are available for inspection.",
   "models": {
     "beta1-srgb": {
       "retained_combvd": {
@@ -114,6 +114,154 @@
         "reachCV": 0.3847555383394595
       },
       "recordSHA256": "805261ef2b45d75818955528ab4fee8745c008e4cde7a9e428c4c2ba450853a4",
+      "mappedAllInput": null
+    },
+    "sheet-raw-srgb": {
+      "retained_combvd": {
+        "weighted": 29.14414989737546,
+        "unweighted": 30.75561352254464,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5029092724836526,
+        "blackCV": 0.2222769064828089,
+        "whiteCV": 0.19702331058214226,
+        "exchangeCV": 0.21130298985034446,
+        "reachCV": 0.3254954532407765
+      },
+      "recordSHA256": "00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f",
+      "mappedAllInput": {
+        "weighted": 34.52323074908472,
+        "unweighted": 38.1652201882816,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "sheet-raw-full": {
+      "retained_combvd": {
+        "weighted": 29.94876337392991,
+        "unweighted": 32.12792789914282,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2800046505511668,
+        "blackCV": 0.2698143787120097,
+        "whiteCV": 0.3180895249617378,
+        "exchangeCV": 0.25945713364533024,
+        "reachCV": 0.37837798277714485
+      },
+      "recordSHA256": "00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f",
+      "mappedAllInput": null
+    },
+    "sheet-robust-srgb": {
+      "retained_combvd": {
+        "weighted": 29.132970768365308,
+        "unweighted": 30.732743593553195,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5048300131690449,
+        "blackCV": 0.2220102267605771,
+        "whiteCV": 0.1968541953026216,
+        "exchangeCV": 0.210962978203947,
+        "reachCV": 0.32548301195919954
+      },
+      "recordSHA256": "374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c",
+      "mappedAllInput": {
+        "weighted": 34.50901936905532,
+        "unweighted": 38.138868685716616,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "sheet-robust-full": {
+      "retained_combvd": {
+        "weighted": 29.9472364079861,
+        "unweighted": 32.12142386787439,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2795594780141759,
+        "blackCV": 0.2695569774248772,
+        "whiteCV": 0.31794835860570625,
+        "exchangeCV": 0.2592344136589523,
+        "reachCV": 0.3783011399831555
+      },
+      "recordSHA256": "374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c",
+      "mappedAllInput": null
+    },
+    "blue-raw-srgb": {
+      "retained_combvd": {
+        "weighted": 29.154892673170256,
+        "unweighted": 30.75698817837504,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5055634659427913,
+        "blackCV": 0.22200825548542313,
+        "whiteCV": 0.19678263920218125,
+        "exchangeCV": 0.21091073900296647,
+        "reachCV": 0.3258577497247928
+      },
+      "recordSHA256": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "mappedAllInput": {
+        "weighted": 34.5276191174334,
+        "unweighted": 38.160666388477196,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "blue-raw-full": {
+      "retained_combvd": {
+        "weighted": 29.929700173135267,
+        "unweighted": 32.10256182858337,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2780034906454267,
+        "blackCV": 0.2696583107035801,
+        "whiteCV": 0.31856159697599107,
+        "exchangeCV": 0.2591870034507249,
+        "reachCV": 0.3789287702401623
+      },
+      "recordSHA256": "1a34e0918461bea464a9a14c4c78a53bc6b0c7508b0f002279a702635d6cfc56",
+      "mappedAllInput": null
+    },
+    "blue-robust-srgb": {
+      "retained_combvd": {
+        "weighted": 29.144386312309962,
+        "unweighted": 30.751173674026415,
+        "pairs": 3331
+      },
+      "tonal": {
+        "blueSheetMean": 0.5046779427294538,
+        "blackCV": 0.2221574700717555,
+        "whiteCV": 0.19683930726586377,
+        "exchangeCV": 0.21110616767211413,
+        "reachCV": 0.3256465480323495
+      },
+      "recordSHA256": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
+      "mappedAllInput": {
+        "weighted": 34.52115149780463,
+        "unweighted": 38.157898350524384,
+        "pairs": 3813,
+        "mappedPairs": 482
+      }
+    },
+    "blue-robust-full": {
+      "retained_combvd": {
+        "weighted": 29.936880770099496,
+        "unweighted": 32.11657532867135,
+        "pairs": 3813
+      },
+      "tonal": {
+        "blueSheetMean": 0.2788386081810488,
+        "blackCV": 0.2696997119150259,
+        "whiteCV": 0.317941722114444,
+        "exchangeCV": 0.2593838630714992,
+        "reachCV": 0.3784231486754399
+      },
+      "recordSHA256": "7c049ef41c59989d8c2639f99be03e4f24d01668da3b719ff859de176faad590",
       "mappedAllInput": null
     }
   },
@@ -251,6 +399,274 @@
         }
       ],
       "eligible": false
+    },
+    "sheet-raw": {
+      "blueBendingImprovementFraction": 0.007445759801651741,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.037102089560125506,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9999515603551133,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 0.9987715710298031,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.9999296964177049,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 0.999357818644831,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": 0.00020872860943654814,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9997894548108104,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 0.9990475943470508,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 0.9991615585724026,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0008418029968746,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
+    },
+    "sheet-robust": {
+      "blueBendingImprovementFraction": 0.003654938244131989,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.02592296054997334,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9987518549580015,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 0.997914273825158,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.9983206905886747,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 0.99931962059354,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": -0.0013182373343738618,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9988356617114276,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 0.9986042226000149,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 0.9983038706546027,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0006385473002322,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
+    },
+    "blue-raw": {
+      "blueBendingImprovementFraction": 0.0022073776195842276,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.047844865354921495,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9987429868317651,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 0.997551534012075,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.998073483824518,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 1.0004701654391237,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": -0.018854472185207527,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9992111492742185,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 1.0005302662780269,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 0.9981212953795304,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0022986824736047,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
+    },
+    "blue-robust": {
+      "blueBendingImprovementFraction": 0.003955068243484683,
+      "blueImprovementPass": false,
+      "guards": [
+        {
+          "metric": "srgb weighted STRESS delta",
+          "value": 0.0373385044946275,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "srgb black CV ratio",
+          "value": 0.9994142547596473,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb white CV ratio",
+          "value": 0.9978388018019835,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb exchange CV ratio",
+          "value": 0.9989982929337053,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "srgb reach CV ratio",
+          "value": 0.9998217199368816,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full weighted STRESS delta",
+          "value": -0.011673875220978402,
+          "maximum": 0.15,
+          "pass": true
+        },
+        {
+          "metric": "full black CV ratio",
+          "value": 0.9993645602778036,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full white CV ratio",
+          "value": 0.9985833788748679,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full exchange CV ratio",
+          "value": 0.9988793958131139,
+          "maximum": 1.03,
+          "pass": true
+        },
+        {
+          "metric": "full reach CV ratio",
+          "value": 1.0009612706222155,
+          "maximum": 1.03,
+          "pass": true
+        }
+      ],
+      "eligible": false
     }
   },
   "limits": [
@@ -262,6 +678,10 @@
   "receiptSHA256": {
     "audit-baseline.json": "09a12a76cb70e90a338ae89c67e3ce4be9ff87678cfda49faf258334c45bf7ea",
     "audit-mild.json": "e0ad73bde83ff5fd251cfc0bf5bf3553bd191e19c6cca868f49bc6b3bc2ea156",
-    "audit-conditioned.json": "110055ac39415c6430583d5664d8b7e9bbeea2b30e44d18beb78b0923dc39268"
+    "audit-conditioned.json": "110055ac39415c6430583d5664d8b7e9bbeea2b30e44d18beb78b0923dc39268",
+    "audit-sheet-raw.json": "063496f6196660df68e6e4c5bb3bd7c4142e18572a0920cdeca430905c4345e1",
+    "audit-sheet-robust.json": "7dfa5383adaa1f77007ae0e97dd26d0a46f54b462473826aa168d634ae2fefa0",
+    "audit-blue-raw.json": "178fc59e7a57589754f6df8b911db9091d3d63bbf2f630fb9c166e38eda8101b",
+    "audit-blue-robust.json": "02456eeee5ba2c28f048afbaeaa66b5a139e6f557e2371dd84ca89873ddcb596"
   }
 }

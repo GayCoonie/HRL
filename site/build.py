@@ -107,6 +107,7 @@ def headings(html):
     return html,toc
 
 RESEARCH=[
+ ('v2/tonal-next.html','Tonal continuation · 19 September 2026','Six shared-bank research candidates, frozen Beta 1 comparison, and measured trade-offs.','v2/research/tonal-next/RESULTS.md'),
  ('v2/boundary-tonal.html','0.13 · Boundary and shared tonal comparison','Current release source: parent, geometry-only control, balanced, and metric-leaning.', 'v2/research/boundary-tonal/results/REPORT.md'),
  ('v2/research/mapped-012/index.html','0.12 · Mapped-input audit','Import policy and all-input benchmark evidence, distinct from retained-pair scores.','v2/research/mapped-012/README.md'),
  ('v2/hue-fair.html','0.12 · Hue-sheet refinement','Shared-bank continuations of the balanced 0.11 parent.','v2/research/hue-fair-refine/README.md'),
@@ -155,6 +156,7 @@ def main():
 <article class="hrl-card"><div class="hrl-eyebrow">Evidence</div><h2>Know what was measured</h2><p>Retained native pairs and mapped all-input ColorBench remain separate. Full reports, raw JSON, control comparisons, and limitations stay attached.</p><a href="benchmarks.html">Browse the benchmarks</a></article></div>
 <h2>Same geometry. Explicit tradeoffs.</h2><div class="hrl-kpis"><div><strong>29.107048</strong><span>Native weighted STRESS · 3,331 retained pairs</span></div><div><strong>29.948555</strong><span>Full weighted STRESS · 3,813 retained pairs</span></div></div>
 <p>These are fitted development scores on different retained populations, not a universal accuracy rating. The <a href="research/boundary-tonal/results/REPORT.html">original report</a> also preserves mapped-input scores, path diagnostics, and difficult conditioning tails.</p>
+<h2>Continue the research</h2><p>Explore six new tonal continuations beside the frozen release, with the same coordinates and explicit measurements.</p><div class="hrl-actions"><a class="hrl-button" href="tonal-next.html">Compare the tonal candidates</a><a class="hrl-button" href="research/tonal-next/RESULTS.html">Read the optimization findings</a></div>
 <h2>Use the named release</h2><pre><code>import {createHRLv2} from './v2/index.mjs';
 const hrl = await createHRLv2(); // native sRGB, metric-b2
 const q = hrl.fromRGB([0.2, 0.5, 0.8]);

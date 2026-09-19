@@ -1,0 +1,110 @@
+{
+  "url": "http://127.0.0.1:8765/v2/tonal-next.html",
+  "scope": "Chromium page behavior and viewport captures; screenshots require visual review",
+  "actions": [
+    {
+      "action": "Receipt HTTP 503 while model records load",
+      "result": "Honest error, hidden table, actual native sheets ready"
+    },
+    {
+      "action": "Reload measurements after real receipt becomes available",
+      "result": "Seven measured rows, exact selection note, receipt-derived candidate options"
+    },
+    {
+      "action": "Select every actual candidate",
+      "result": {
+        "candidates": [
+          "smooth-mild",
+          "smooth-conditioned"
+        ],
+        "baselineRasterUnchanged": true,
+        "weightedStressMatchesReceipt": true
+      }
+    },
+    {
+      "action": "Hue shortcuts, number normalization and range input",
+      "result": "Synchronized controls; pending is immediate during debounce; final H275 outputs ready"
+    },
+    {
+      "action": "Triangle keyboard/pointer and coordinate inputs",
+      "result": "Same R/L in both sheets; Shift step and 0<=R<=L<=1 constraints verified"
+    },
+    {
+      "action": "Full profile, mask and neutral surround",
+      "result": {
+        "fullDiffersFromNative": true,
+        "maskChangesRaster": true,
+        "fullClippingLabel": true
+      }
+    },
+    {
+      "action": "Native captures at 1280,768,375",
+      "result": "No document overflow; visible controls fit; screenshots saved for visual review"
+    },
+    {
+      "action": "Return to Beta 1 picker",
+      "result": "Existing frozen release route opens"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "/tmp/hrl-tonal-browser/measurements-unavailable-1280.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "profile": "srgb",
+      "candidate": "smooth-mild",
+      "hue": "275",
+      "meaning": "Real served page; bounded layout and control positions asserted, visual judgment pending"
+    },
+    {
+      "path": "/tmp/hrl-tonal-browser/full-masked-1280.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "profile": "full",
+      "candidate": "smooth-mild",
+      "hue": "275",
+      "meaning": "Real served page; bounded layout and control positions asserted, visual judgment pending"
+    },
+    {
+      "path": "/tmp/hrl-tonal-browser/native-1280.png",
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "profile": "srgb",
+      "candidate": "smooth-mild",
+      "hue": "275",
+      "meaning": "Real served page; bounded layout and control positions asserted, visual judgment pending"
+    },
+    {
+      "path": "/tmp/hrl-tonal-browser/native-768.png",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "profile": "srgb",
+      "candidate": "smooth-mild",
+      "hue": "275",
+      "meaning": "Real served page; bounded layout and control positions asserted, visual judgment pending"
+    },
+    {
+      "path": "/tmp/hrl-tonal-browser/native-375.png",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "profile": "srgb",
+      "candidate": "smooth-mild",
+      "hue": "275",
+      "meaning": "Real served page; bounded layout and control positions asserted, visual judgment pending"
+    }
+  ],
+  "pageErrors": [],
+  "pass": true,
+  "receiptSHA256": "87074c676d1bba83373fa2ab18653e25e042709e5dcf4523a2569b8f3f2adac0",
+  "chromium": "143.0.7499.4"
+}
