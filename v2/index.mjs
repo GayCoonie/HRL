@@ -20,3 +20,5 @@ export async function createHRLv2({gamut='srgb',referenceWhiteNits=300,...extra}
   return model;
 }
 export {createHRLv2 as createHRL};
+
+export {createShortCodeCodec, canonicalScale, SHORT_CODE_SCALES, SHORT_CODE_VERSION} from './codes.mjs';

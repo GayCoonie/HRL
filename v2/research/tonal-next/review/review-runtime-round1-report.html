@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent first-round candidate receipt review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-runtime-round1-report.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><h1 id="independent-first-round-candidate-receipt-review">Independent first-round candidate receipt review</h1>
+<p>UTC: 2026-09-19T10:25:45.000577+00:00</p>
+<p>Contract verification: confirmed. Candidate eligibility: both rejected under the fixed rule. Quality: no blocking evidence-integrity contradiction found.</p>
+<p>All current 148 frozen files match the immutable manifest. Both completed candidate receipts match the baseline schema, sampling, source/cache/input/ruler hashes, native retained 3331 and full 3813 populations, and separate native mapped 3813 population with 482 mapped pairs. Candidate record files match the recorded SHA256. Shared-bank 256-sample checks and every recorded inverse/anchor/seam/input-rejection contract satisfy the harness thresholds. Independent reaggregation of every raw regular/critical/control path and sheet summary matches the saved summaries. Comparison input receipt hashes and every reduced model and selection value match the raw receipts.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native blue bending change</th>
+  <th>Accuracy guards</th>
+  <th>Path guards</th>
+  <th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">+1.3848444502% worse</td>
+  <td>Both pass</td>
+  <td>All eight pass</td>
+  <td>Rejected: does not improve blue bending &gt;=5%</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">+45.7363832291% worse</td>
+  <td>Both pass</td>
+  <td>Four fail</td>
+  <td>Rejected: blue improvement and srgb/full white/exchange CV</td>
+</tr>
+</tbody>
+</table></div>
+<p>Conditioned failed CV ratios: srgb white 1.0486745375860569, srgb exchange 1.0631196003585688, full white 1.0434102391576725, full exchange 1.0529846033365164. Required maximum 1.03. Weighted STRESS deltas remain within +0.15: mild native +0.05097609686907134/full +0.050985739053221124; conditioned native +0.05547989836718159/full +0.05714204044629412.</p>
+<p>Fresh narrow runtime reproduction also passed for both candidates: all retained and mapped weighted/unweighted scores match exactly; H281, all 20 paths × 257 samples per gamut have maximum CV delta 0; all 121 nine-point sheet stencils per gamut match with maximum absolute value error 4.121147867408581e-13. This is a fresh bounded reproduction, not a second full multi-hue audit.</p>
+<p><code>comparison.json</code> status <code>no-eligible-candidate</code> is correct. Its <code>selectedCandidate: smooth-mild</code> chooses the displayed research comparison; it does not make mild eligible or replace Beta 1 as the default.</p>
+<p>Evidence: <code>review-runtime-round1-evidence.json</code>, preserved <code>review-runtime-round1-comparison.json</code>, <code>review-runtime-smooth-mild-narrow-evidence.json</code>, <code>review-runtime-smooth-conditioned-narrow-evidence.json</code>. Commands: <code>python review-runtime-candidates.py --candidate audit-mild.json --candidate audit-conditioned.json --comparison &lt;repo&gt;/v2/research/tonal-next/results/comparison.json --out review-runtime-round1-evidence.json</code>; <code>node review-runtime-candidate-narrow.mjs audit-mild.json smooth-mild</code>; <code>node review-runtime-candidate-narrow.mjs audit-conditioned.json smooth-conditioned</code>. All exited 0. Exact input paths are recorded in JSON and source scripts.</p>
+<p>This report preserves the negative first-round findings. Further targeted fits were not inspected and cannot retroactively change these outcomes.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

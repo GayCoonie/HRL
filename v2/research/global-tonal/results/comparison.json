@@ -1,0 +1,406 @@
+{
+  "schemaVersion": 1,
+  "status": "research-comparison",
+  "generatedAt": "2026-09-19T12:53:23.999Z",
+  "selectedCandidate": "uniform-tail-global",
+  "selectionNote": "Uniform-tail-global is the initial visual-inspection choice after a raw-sheet-tail refinement. All four candidates remain research options; there is no automatic promotion. Compare native/full benchmark, path, sheet mean and worst-hue tradeoffs against frozen Beta1 before choosing.",
+  "methods": {
+    "observer": "COMBVD training pairs; native retained3331/full3813/mapped-native3813 are distinct populations.",
+    "geometry": "Actual JavaScript inverse XYZ in frozen GenSpace;72 offset regular hues,257 points/path,20 paths/hue,121 sheet stencils/hue.",
+    "selection": "Default visual-inspection choice only; no blue-specific gate and no claim of universal dominance.",
+    "limits": [
+      "No new held-out or ColorBench result.",
+      "Synthetic geometry metrics are not new observer ratings.",
+      "Sampled contracts do not prove continuous-domain behavior."
+    ]
+  },
+  "audits": {
+    "beta1": {
+      "path": "results/beta1-audit.json.gz",
+      "sha256": "eed0c0b6a7ed65dccf6152c27061d8183bdd8b88b696ffcd82afc6e97c95a14c",
+      "decompressedSHA256": "aa112ab901268c65528d3ee62108680ac9af0e728ad2741b5563c31293b6d98f"
+    },
+    "metric-global": {
+      "path": "results/metric-global-audit.json.gz",
+      "sha256": "e321a94212d498a1d092a62be22281ebb993712c84a18d156b3028502aa6d507",
+      "decompressedSHA256": "9c44a0d31e1923b93b5eceefba109a244e7d61fdf1c9699b9aaceca14e45bff5"
+    },
+    "uniform-global": {
+      "path": "results/uniform-global-audit.json.gz",
+      "sha256": "529664abc8a31b8f9483be2b272321c2de032487a82c2119d2fe79486ce164a5",
+      "decompressedSHA256": "7f58f0fe0c056711a7a592e4c0b9f856ef5078d5d66054ca31d10634701bf4d5"
+    },
+    "fresh-global": {
+      "path": "results/fresh-global-audit.json.gz",
+      "sha256": "36e39c9ee46880f1ddc3284e4c4e3d38da637bcd8bc70ffd5b0f8a5f8833dc42",
+      "decompressedSHA256": "cd2859c5922f8be01711b71cda7374a0980f690bebd9dc9adf250dbbb43d5bfa"
+    },
+    "uniform-tail-global": {
+      "path": "results/uniform-tail-global-audit.json.gz",
+      "sha256": "7eb3cd9c6f428978b36ecf73bbfbfae4709749db349395aa693f9b9180571e89",
+      "decompressedSHA256": "5bf1a9a286aaa7019293733ca298317db87e0d6f7d58b7c36bc94b12846ca442"
+    }
+  },
+  "models": {
+    "beta1-srgb": {
+      "label": "beta1",
+      "gamut": "srgb",
+      "recordPath": "../boundary-tonal/results/metric.json",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "retained_combvd": {
+        "weighted": 29.107047807815334,
+        "unweighted": 30.712588175216553,
+        "pairs": 3331
+      },
+      "mappedAllInput": {
+        "weighted": 34.489196386295546,
+        "unweighted": 38.12633858568467,
+        "pairs": 3813,
+        "mappedPairs": 482
+      },
+      "tonal": {
+        "sheetMean": 0.46488733849017716,
+        "sheetRMS": 0.5295987254551243,
+        "sheetWorstHue": 1.295715543025383,
+        "blackCV": 0.22228767401880106,
+        "whiteCV": 0.1972656374059561,
+        "exchangeCV": 0.21131784625193886,
+        "reachCV": 0.3257046146716111
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 5.748942988326178e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 2.2932350740578755e-9,
+        "invalidInputsRejected": 4
+      }
+    },
+    "beta1-full": {
+      "label": "beta1",
+      "gamut": "full",
+      "recordPath": "../boundary-tonal/results/metric.json",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "retained_combvd": {
+        "weighted": 29.948554645320474,
+        "unweighted": 32.12787975161901,
+        "pairs": 3813
+      },
+      "tonal": {
+        "sheetMean": 0.7180555575361374,
+        "sheetRMS": 0.9591503757938107,
+        "sheetWorstHue": 4.811390212049415,
+        "blackCV": 0.26987119879461674,
+        "whiteCV": 0.3183927640300582,
+        "exchangeCV": 0.2596748558021401,
+        "reachCV": 0.37805973096262285
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 2.2052915049641797e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 1.2511397473602415e-8,
+        "invalidInputsRejected": 4
+      }
+    },
+    "metric-global-srgb": {
+      "label": "metric-global",
+      "gamut": "srgb",
+      "recordPath": "trials/metric-global.json",
+      "recordSHA256": "73da7bb38904720c541d651b9567265b0c0943305623674a0a02e73da18141f0",
+      "retained_combvd": {
+        "weighted": 27.48256555327922,
+        "unweighted": 29.02977355997279,
+        "pairs": 3331
+      },
+      "mappedAllInput": {
+        "weighted": 32.039068985838085,
+        "unweighted": 35.15455687974655,
+        "pairs": 3813,
+        "mappedPairs": 482
+      },
+      "tonal": {
+        "sheetMean": 0.5327025411205579,
+        "sheetRMS": 0.6608291780060291,
+        "sheetWorstHue": 2.046749628471638,
+        "blackCV": 0.2547279487141741,
+        "whiteCV": 0.2164810585009473,
+        "exchangeCV": 0.24637729822686033,
+        "reachCV": 0.35846140661966114
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 4.527156427514001e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 3.1699767810700052e-9,
+        "invalidInputsRejected": 4
+      }
+    },
+    "metric-global-full": {
+      "label": "metric-global",
+      "gamut": "full",
+      "recordPath": "trials/metric-global.json",
+      "recordSHA256": "73da7bb38904720c541d651b9567265b0c0943305623674a0a02e73da18141f0",
+      "retained_combvd": {
+        "weighted": 28.68947319584495,
+        "unweighted": 30.370192922825083,
+        "pairs": 3813
+      },
+      "tonal": {
+        "sheetMean": 0.7919291380093356,
+        "sheetRMS": 1.0261805716847388,
+        "sheetWorstHue": 3.3716394990111405,
+        "blackCV": 0.293424459849794,
+        "whiteCV": 0.3610780378288542,
+        "exchangeCV": 0.31262310930215703,
+        "reachCV": 0.4124890997139152
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 1.9959589536711064e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 1.2493421075454592e-8,
+        "invalidInputsRejected": 4
+      }
+    },
+    "uniform-global-srgb": {
+      "label": "uniform-global",
+      "gamut": "srgb",
+      "recordPath": "trials/uniform-global.json",
+      "recordSHA256": "8d7a06ec75c817f91a67284622a108f149effddc7a749c7ac90b744f4fa9f273",
+      "retained_combvd": {
+        "weighted": 29.86163106185723,
+        "unweighted": 31.34192379992249,
+        "pairs": 3331
+      },
+      "mappedAllInput": {
+        "weighted": 34.88258383056398,
+        "unweighted": 38.22281479105667,
+        "pairs": 3813,
+        "mappedPairs": 482
+      },
+      "tonal": {
+        "sheetMean": 0.44855272142709585,
+        "sheetRMS": 0.6008808774945932,
+        "sheetWorstHue": 2.6551157926650393,
+        "blackCV": 0.2127071162028029,
+        "whiteCV": 0.1814665966850007,
+        "exchangeCV": 0.18826281745552112,
+        "reachCV": 0.29954254647105993
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 6.813018899043399e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 2.7820279413504068e-9,
+        "invalidInputsRejected": 4
+      }
+    },
+    "uniform-global-full": {
+      "label": "uniform-global",
+      "gamut": "full",
+      "recordPath": "trials/uniform-global.json",
+      "recordSHA256": "8d7a06ec75c817f91a67284622a108f149effddc7a749c7ac90b744f4fa9f273",
+      "retained_combvd": {
+        "weighted": 30.346471550039066,
+        "unweighted": 32.491847674598105,
+        "pairs": 3813
+      },
+      "tonal": {
+        "sheetMean": 0.7501556772824332,
+        "sheetRMS": 1.1914754371626406,
+        "sheetWorstHue": 7.386266163295931,
+        "blackCV": 0.25532010486014806,
+        "whiteCV": 0.29420240524564556,
+        "exchangeCV": 0.23416837685248568,
+        "reachCV": 0.36160674359343875
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 2.7809421432323234e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 1.2484744515983692e-8,
+        "invalidInputsRejected": 4
+      }
+    },
+    "fresh-global-srgb": {
+      "label": "fresh-global",
+      "gamut": "srgb",
+      "recordPath": "trials/fresh-global.json",
+      "recordSHA256": "35cdf02c3ab29b2a0a2bb8242bcaf15d8674b6df93778d7d7b32d4a7d61d7557",
+      "retained_combvd": {
+        "weighted": 35.30717786339334,
+        "unweighted": 34.94272395594535,
+        "pairs": 3331
+      },
+      "mappedAllInput": {
+        "weighted": 38.0906500840067,
+        "unweighted": 39.41423751324615,
+        "pairs": 3813,
+        "mappedPairs": 482
+      },
+      "tonal": {
+        "sheetMean": 0.2669732731360488,
+        "sheetRMS": 0.5057124724574037,
+        "sheetWorstHue": 3.106033041516501,
+        "blackCV": 0.17776829582206413,
+        "whiteCV": 0.17266883443165912,
+        "exchangeCV": 0.13788160094553217,
+        "reachCV": 0.32399999819329667
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 3.3690550349518844e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 2.2669929544694156e-9,
+        "invalidInputsRejected": 4
+      }
+    },
+    "fresh-global-full": {
+      "label": "fresh-global",
+      "gamut": "full",
+      "recordPath": "trials/fresh-global.json",
+      "recordSHA256": "35cdf02c3ab29b2a0a2bb8242bcaf15d8674b6df93778d7d7b32d4a7d61d7557",
+      "retained_combvd": {
+        "weighted": 39.2086861291001,
+        "unweighted": 40.191072189849706,
+        "pairs": 3813
+      },
+      "tonal": {
+        "sheetMean": 0.4848117321896353,
+        "sheetRMS": 0.7927274717917313,
+        "sheetWorstHue": 3.0074212587445195,
+        "blackCV": 0.21130614661538402,
+        "whiteCV": 0.33601288797299406,
+        "exchangeCV": 0.23589611906316277,
+        "reachCV": 0.40648797312745727
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 4.4237322138762636e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 1.2145465355661855e-8,
+        "invalidInputsRejected": 4
+      }
+    },
+    "uniform-tail-global-srgb": {
+      "label": "uniform-tail-global",
+      "gamut": "srgb",
+      "recordPath": "trials/uniform-tail-global.json",
+      "recordSHA256": "5fdda084722ed644ea023bb6672c2123d2db5476213206384d1256de159128fb",
+      "retained_combvd": {
+        "weighted": 29.840087162975635,
+        "unweighted": 31.343474251637378,
+        "pairs": 3331
+      },
+      "mappedAllInput": {
+        "weighted": 35.01259501179505,
+        "unweighted": 38.23295427629097,
+        "pairs": 3813,
+        "mappedPairs": 482
+      },
+      "tonal": {
+        "sheetMean": 0.34750371839176736,
+        "sheetRMS": 0.41321417650917125,
+        "sheetWorstHue": 1.0974844646016437,
+        "blackCV": 0.22526680279244876,
+        "whiteCV": 0.1864155441830658,
+        "exchangeCV": 0.20284067374241915,
+        "reachCV": 0.3199317360701973
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 5.8736487895671985e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 2.88557100436293e-9,
+        "invalidInputsRejected": 4
+      }
+    },
+    "uniform-tail-global-full": {
+      "label": "uniform-tail-global",
+      "gamut": "full",
+      "recordPath": "trials/uniform-tail-global.json",
+      "recordSHA256": "5fdda084722ed644ea023bb6672c2123d2db5476213206384d1256de159128fb",
+      "retained_combvd": {
+        "weighted": 30.036361247664882,
+        "unweighted": 32.06621748998781,
+        "pairs": 3813
+      },
+      "tonal": {
+        "sheetMean": 0.5219090729798241,
+        "sheetRMS": 0.6712693089839847,
+        "sheetWorstHue": 2.380571191951692,
+        "blackCV": 0.26422379059725076,
+        "whiteCV": 0.305764048533643,
+        "exchangeCV": 0.2483923295060079,
+        "reachCV": 0.3948385050106284
+      },
+      "contracts": {
+        "seed": 170917,
+        "roundtripSamples": 1024,
+        "nearBlackSamples": 64,
+        "maxEmbeddingError": 2.2568613644580182e-12,
+        "neutralSamples": 129,
+        "maxNeutralDifference": 0,
+        "vividSamples": 79,
+        "maxVividDifference": 0,
+        "seamSamples": 128,
+        "maxSeamXYZDifference": 1.2500551260785642e-8,
+        "invalidInputsRejected": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bounded review: sheet candidates&#x27; common-map conditioning · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-conditioning-sheet-candidates.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#numerical-agreement">Numerical agreement</a></li><li><a href="#provenance-and-scope">Provenance and scope</a></li></ol></details><h1 id="bounded-review-sheet-candidates-common-map-conditioning">Bounded review: sheet candidates' common-map conditioning</h1>
+<p><strong>Confirmed for the declared same-point grid.</strong> Both candidates retain severe fixed-H common-map anisotropy, with small but numerically resolved reductions in the maximum versus metric/Beta1. No material derivative disagreement or provenance mismatch was found.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Maximum condition</th>
+  <th>Location H, R, L</th>
+  <th style="text-align:right">Maximum reduction versus metric/Beta1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>metric / Beta1</td>
+  <td style="text-align:right">113447.181723</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">Baseline</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">112526.691904</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">0.811382%</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">112617.042579</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">0.731741%</td>
+</tr>
+</tbody>
+</table></div>
+<p>All maxima occur at the identical source point, so these are both sampled-maximum and same-point comparisons. At the other historical extreme, H216/R=.04995/L=.05, conditions are 65063.390173 for metric, 64620.695179 for sheet-raw, and 64657.785248 for sheet-robust.</p>
+<p>The improvements are not uniform. Relative to metric over 325 points, sheet-raw improves 207 and worsens 118; sheet-robust improves 225 and worsens 100. The largest pointwise increases are 5.83% for raw at H216/R=.24975/L=.25 and 11.47% for robust at H285/R=.000999/L=.001.</p>
+<h2 id="numerical-agreement">Numerical agreement</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Worst JS relative condition error, factor 1e-3</th>
+  <th style="text-align:right">Worst error, factor 1e-4</th>
+  <th style="text-align:right">Factor 1e-4 error at maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">1.2636e-5</td>
+  <td style="text-align:right">2.9663e-6</td>
+  <td style="text-align:right">7.15e-8</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">1.2600e-5</td>
+  <td style="text-align:right">1.9510e-6</td>
+  <td style="text-align:right">3.89e-7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Factors multiply <code>min(R,L-R,1-L)</code>. Thus the approximately 0.7–0.8% reductions are much larger than the stable-step disagreements. At factor 1e-6 the maximum errors rise to 2.1290e-4 and 3.3577e-4 respectively, consistent with the established small-step noise limitation.</p>
+<p>Candidate forward Python/JS differences are at most 2.232e-14. Analytic/autograd scaled matrix differences are below 9.845e-11; log-condition differences are below 1.852e-10. All sampled analytic determinants are positive, with minima .1013691 and .1017912. All recorded implementation checks pass.</p>
+<p>I independently recomputed the SVD condition from every candidate's saved raw R/L numerical Jacobian after the equilateral basis transformation. All 3,250 numerical conditions reproduced their stored values exactly in this runtime, and recomputed worst-error summaries matched. The commands exited 0. This was a receipt-integrity and agreement check, not a new forward evaluation of the full grid. No new high-precision run was needed because there was no material disagreement; the earlier independent high-precision review of the unchanged audit pathways remains applicable to their implementation.</p>
+<h2 id="provenance-and-scope">Provenance and scope</h2>
+<p>All seven source hashes and all five model hashes match current files. Every model has exactly the same 325 source points and ordering. The parent, balanced and metric model blocks are exactly equal to the original audit's control blocks. Receipt SHA-256: <code>f7eaf942d56d15d86149a4c342816a7d9c215e9fac9361692f9eda334f90843a</code>.</p>
+<p>Model SHA-256 values:</p>
+<ul>
+<li>sheet-raw: <code>00ac61139a31515280d005d2fdac45c5dd218f6b76ca4549c7f91f6cae408e8f</code></li>
+<li>sheet-robust: <code>374a16778b6bc192273a0e4821ca20eaf87caa66f4893a7a7221cdc539812e3c</code></li>
+</ul>
+<p>The result concerns the fixed-H 2-by-2 common-coordinate map, with source and destination both expressed as <code>x=sqrt(3)R/2, z=L-R/2</code>. It is not a global bound, full H/R/L or XYZ Jacobian, visual bending measurement, perceptual metric or observer result. It neither establishes nor rules out improvement in native-space geometry. Candidate publication still requires the consolidated review of all six candidates and their separate acceptance criteria.</p>
+<p>Only this scratch review report was written. No repository files or model records were changed.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

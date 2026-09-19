@@ -1,0 +1,32 @@
+{
+  "schema": "hrl-global-runtime-parity-receipt-v1",
+  "fixture_sha256": "33a2ebbeb93424a837a20d635f4f78f4bc790fa0815b532413655f829145d66e",
+  "status": "passed",
+  "tolerance": 1e-9,
+  "models": [
+    {
+      "id": "metric-global",
+      "sha256": "73da7bb38904720c541d651b9567265b0c0943305623674a0a02e73da18141f0",
+      "maxError": 5.684341886080802e-14,
+      "pointsPerDirection": 133
+    },
+    {
+      "id": "uniform-global",
+      "sha256": "8d7a06ec75c817f91a67284622a108f149effddc7a749c7ac90b744f4fa9f273",
+      "maxError": 5.684341886080802e-14,
+      "pointsPerDirection": 133
+    },
+    {
+      "id": "fresh-global",
+      "sha256": "35cdf02c3ab29b2a0a2bb8242bcaf15d8674b6df93778d7d7b32d4a7d61d7557",
+      "maxError": 5.684341886080802e-14,
+      "pointsPerDirection": 133
+    },
+    {
+      "id": "uniform-tail-global",
+      "sha256": "5fdda084722ed644ea023bb6672c2123d2db5476213206384d1256de159128fb",
+      "maxError": 5.684341886080802e-14,
+      "pointsPerDirection": 133
+    }
+  ]
+}

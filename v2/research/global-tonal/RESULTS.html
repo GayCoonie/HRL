@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Whole-solid shared HRL fit: results — 2026-09-19 · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="RESULTS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#main-tradeoff">Main tradeoff</a></li><li><a href="#observer-populations">Observer populations</a></li><li><a href="#whole-triangle-geometry">Whole-triangle geometry</a></li><li><a href="#separate-very-dark-panel">Separate very-dark panel</a></li><li><a href="#numerical-and-identity-checks">Numerical and identity checks</a></li><li><a href="#search-budget-and-provenance">Search budget and provenance</a></li></ol></details><h1 id="whole-solid-shared-hrl-fit-results--2026-09-19">Whole-solid shared HRL fit: results — 2026-09-19</h1>
+<p>The raw-tail candidate substantially improves measured triangle-sheet mean, RMS and worst hue in both modes, with a modest COMBVD accuracy cost. The metric candidate improves all three reported observer pipelines but worsens most geometry. Both remain research options; frozen Beta1 is unchanged.</p>
+<p>The first three all-hue trials were followed by one bounded fourth trial after exact runtime evaluation exposed a worse sheet tail. The fourth directly penalized raw bending mean/RMS. There is no blue-specific objective or acceptance gate, coefficient tether, baseline metric guard, good-hue regret or dark-edge envelope. One shared 8-layer/8-harmonic bank drives both modes. The exact neutral shift, vivid hue spacing and pseudo-RGB carrier remain fixed. Retaining inherited source hue sheets and the coupling family is this wave’s experimental choice, not a permanent requirement.</p>
+<h2 id="main-tradeoff">Main tradeoff</h2>
+<ul>
+<li><strong>Native sRGB:</strong> tail sheet mean improves 25.25%, RMS 21.98%, worst hue 15.30%. Weighted retained STRESS changes 29.107048 → 29.840087.</li>
+<li><strong>Full:</strong> tail sheet mean improves 27.32%, RMS 30.01%, worst hue 50.52%. Weighted retained STRESS changes 29.948555 → 30.036361.</li>
+</ul>
+<p>Six of eight mode-by-family mean path CVs improve. Native black-path CV rises 1.34%; full reach-path CV rises 4.44%. The separate Level=0.02 panel improves in mean/RMS for both modes, while native worst-hue bending rises 12.95%. These are remaining tradeoffs, not a universally better geometry.</p>
+<h2 id="observer-populations">Observer populations</h2>
+<p>Actual JavaScript COMBVD training-pair STRESS is reported below; lower is better. Native retained 3331, full 3813 and mapped-native all-input 3813 are distinct populations. The mapped native pipeline clips 482 pairs; its score must not be substituted for retained native. No new held-out or ColorBench result is claimed.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native weighted / unweighted (3331)</th>
+  <th style="text-align:right">Full weighted / unweighted (3813)</th>
+  <th style="text-align:right">Mapped native weighted / unweighted (3813)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>beta1</td>
+  <td style="text-align:right">29.107048 / 30.712588</td>
+  <td style="text-align:right">29.948555 / 32.127880</td>
+  <td style="text-align:right">34.489196 / 38.126339</td>
+</tr>
+<tr>
+  <td>metric-global</td>
+  <td style="text-align:right">27.482566 / 29.029774</td>
+  <td style="text-align:right">28.689473 / 30.370193</td>
+  <td style="text-align:right">32.039069 / 35.154557</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td style="text-align:right">29.861631 / 31.341924</td>
+  <td style="text-align:right">30.346472 / 32.491848</td>
+  <td style="text-align:right">34.882584 / 38.222815</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td style="text-align:right">35.307178 / 34.942724</td>
+  <td style="text-align:right">39.208686 / 40.191072</td>
+  <td style="text-align:right">38.090650 / 39.414238</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td style="text-align:right">29.840087 / 31.343474</td>
+  <td style="text-align:right">30.036361 / 32.066217</td>
+  <td style="text-align:right">35.012595 / 38.232954</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="whole-triangle-geometry">Whole-triangle geometry</h2>
+<p>Actual inverse XYZ is evaluated in frozen HelmLab 1.0.0 GenSpace, without display clipping or the fitting grid. These synthetic measures are not new observer evidence. The primary panel uses 72 offset regular hues (1, 6, …, 356°), 257 points per path, 20 paths per hue and 121 nine-point equilateral sheet stencils. Lower is better. Sheet RMS is RMS across each hue’s mean bending, not a robust-log fitted score.</p>
+<h3 id="native-srgb">Native sRGB</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Black CV</th>
+  <th style="text-align:right">White CV</th>
+  <th style="text-align:right">Exchange CV</th>
+  <th style="text-align:right">Reach CV</th>
+  <th style="text-align:right">Sheet mean</th>
+  <th style="text-align:right">Sheet RMS</th>
+  <th style="text-align:right">Worst hue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>beta1</td>
+  <td style="text-align:right">0.222288</td>
+  <td style="text-align:right">0.197266</td>
+  <td style="text-align:right">0.211318</td>
+  <td style="text-align:right">0.325705</td>
+  <td style="text-align:right">0.464887</td>
+  <td style="text-align:right">0.529599</td>
+  <td style="text-align:right">1.295716</td>
+</tr>
+<tr>
+  <td>metric-global</td>
+  <td style="text-align:right">0.254728</td>
+  <td style="text-align:right">0.216481</td>
+  <td style="text-align:right">0.246377</td>
+  <td style="text-align:right">0.358461</td>
+  <td style="text-align:right">0.532703</td>
+  <td style="text-align:right">0.660829</td>
+  <td style="text-align:right">2.046750</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td style="text-align:right">0.212707</td>
+  <td style="text-align:right">0.181467</td>
+  <td style="text-align:right">0.188263</td>
+  <td style="text-align:right">0.299543</td>
+  <td style="text-align:right">0.448553</td>
+  <td style="text-align:right">0.600881</td>
+  <td style="text-align:right">2.655116</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td style="text-align:right">0.177768</td>
+  <td style="text-align:right">0.172669</td>
+  <td style="text-align:right">0.137882</td>
+  <td style="text-align:right">0.324000</td>
+  <td style="text-align:right">0.266973</td>
+  <td style="text-align:right">0.505712</td>
+  <td style="text-align:right">3.106033</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td style="text-align:right">0.225267</td>
+  <td style="text-align:right">0.186416</td>
+  <td style="text-align:right">0.202841</td>
+  <td style="text-align:right">0.319932</td>
+  <td style="text-align:right">0.347504</td>
+  <td style="text-align:right">0.413214</td>
+  <td style="text-align:right">1.097484</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="full">Full</h3>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Black CV</th>
+  <th style="text-align:right">White CV</th>
+  <th style="text-align:right">Exchange CV</th>
+  <th style="text-align:right">Reach CV</th>
+  <th style="text-align:right">Sheet mean</th>
+  <th style="text-align:right">Sheet RMS</th>
+  <th style="text-align:right">Worst hue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>beta1</td>
+  <td style="text-align:right">0.269871</td>
+  <td style="text-align:right">0.318393</td>
+  <td style="text-align:right">0.259675</td>
+  <td style="text-align:right">0.378060</td>
+  <td style="text-align:right">0.718056</td>
+  <td style="text-align:right">0.959150</td>
+  <td style="text-align:right">4.811390</td>
+</tr>
+<tr>
+  <td>metric-global</td>
+  <td style="text-align:right">0.293424</td>
+  <td style="text-align:right">0.361078</td>
+  <td style="text-align:right">0.312623</td>
+  <td style="text-align:right">0.412489</td>
+  <td style="text-align:right">0.791929</td>
+  <td style="text-align:right">1.026181</td>
+  <td style="text-align:right">3.371639</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td style="text-align:right">0.255320</td>
+  <td style="text-align:right">0.294202</td>
+  <td style="text-align:right">0.234168</td>
+  <td style="text-align:right">0.361607</td>
+  <td style="text-align:right">0.750156</td>
+  <td style="text-align:right">1.191475</td>
+  <td style="text-align:right">7.386266</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td style="text-align:right">0.211306</td>
+  <td style="text-align:right">0.336013</td>
+  <td style="text-align:right">0.235896</td>
+  <td style="text-align:right">0.406488</td>
+  <td style="text-align:right">0.484812</td>
+  <td style="text-align:right">0.792727</td>
+  <td style="text-align:right">3.007421</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td style="text-align:right">0.264224</td>
+  <td style="text-align:right">0.305764</td>
+  <td style="text-align:right">0.248392</td>
+  <td style="text-align:right">0.394839</td>
+  <td style="text-align:right">0.521909</td>
+  <td style="text-align:right">0.671269</td>
+  <td style="text-align:right">2.380571</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="separate-very-dark-panel">Separate very-dark panel</h2>
+<p>The raw-tail refinement used historical 121 stencils instead of the initial 125-stencil training panel. All candidates were also audited at the four additional Level=0.02 stencils at the same 72 offset hues, exposing any consequences. Their high curvature stays separate from the historical score.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native mean / RMS / worst hue</th>
+  <th style="text-align:right">Full mean / RMS / worst hue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>beta1</td>
+  <td style="text-align:right">44.464670 / 51.441561 / 134.049119</td>
+  <td style="text-align:right">54.324303 / 64.237091 / 168.350011</td>
+</tr>
+<tr>
+  <td>metric-global</td>
+  <td style="text-align:right">52.473581 / 93.554058 / 645.574837</td>
+  <td style="text-align:right">59.071172 / 74.496701 / 255.986033</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td style="text-align:right">48.908896 / 72.658749 / 431.056249</td>
+  <td style="text-align:right">53.617931 / 64.709755 / 185.377788</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td style="text-align:right">31.816710 / 80.851095 / 568.295576</td>
+  <td style="text-align:right">47.680117 / 137.567611 / 1079.602115</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td style="text-align:right">35.299025 / 43.059100 / 151.412993</td>
+  <td style="text-align:right">43.789717 / 51.974169 / 133.227949</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="numerical-and-identity-checks">Numerical and identity checks</h2>
+<p>All five main audit runs completed. Each checked 148 frozen source hashes with zero mismatches. Each candidate passed 1024 sampled embedding roundtrips per mode, including 64 near-black samples; 129 neutral and 79 vivid samples have exactly zero XYZ difference from Beta1. Audits also check seam continuity, invalid-input rejection and 256 exact shared-bank identity samples between modes. Finite tests do not prove continuous-domain numerical behavior.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native max embedding error</th>
+  <th style="text-align:right">Full max embedding error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>beta1</td>
+  <td style="text-align:right">5.749e-12</td>
+  <td style="text-align:right">2.205e-12</td>
+</tr>
+<tr>
+  <td>metric-global</td>
+  <td style="text-align:right">4.527e-12</td>
+  <td style="text-align:right">1.996e-12</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td style="text-align:right">6.813e-12</td>
+  <td style="text-align:right">2.781e-12</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td style="text-align:right">3.369e-12</td>
+  <td style="text-align:right">4.424e-12</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td style="text-align:right">5.874e-12</td>
+  <td style="text-align:right">2.257e-12</td>
+</tr>
+</tbody>
+</table></div>
+<p>Python and JavaScript shared maps agree within 5.685e-14 on 133 points in each direction for all four finalized records. Source/record/trace hashes, evaluation counts, selected objective rows and audit identities passed the producer-side cross-check. Independent review is separate. Sampled conditioning tails remain large; accurate roundtrips do not imply a uniformly well-conditioned map.</p>
+<h2 id="search-budget-and-provenance">Search budget and provenance</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th>Start</th>
+  <th style="text-align:right">Iteration budget</th>
+  <th style="text-align:right">Objective evaluations</th>
+  <th style="text-align:right">Best evaluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>metric-global</td>
+  <td>beta1</td>
+  <td style="text-align:right">240</td>
+  <td style="text-align:right">242</td>
+  <td style="text-align:right">242</td>
+</tr>
+<tr>
+  <td>uniform-global</td>
+  <td>beta1</td>
+  <td style="text-align:right">240</td>
+  <td style="text-align:right">242</td>
+  <td style="text-align:right">242</td>
+</tr>
+<tr>
+  <td>fresh-global</td>
+  <td>fresh</td>
+  <td style="text-align:right">320</td>
+  <td style="text-align:right">351</td>
+  <td style="text-align:right">351</td>
+</tr>
+<tr>
+  <td>uniform-tail-global</td>
+  <td>uniform</td>
+  <td style="text-align:right">240</td>
+  <td style="text-align:right">244</td>
+  <td style="text-align:right">244</td>
+</tr>
+</tbody>
+</table></div>
+<p>Training uses equal weights for 48 hues and four path families, with native/full profile weights 0.5/0.5. Every closure, including rejected line-search evaluations, is retained. The fresh start reaches a materially different basin but has a large accuracy penalty; it is retained as evidence. The fourth trial addresses a measured tail regression and completes the finite wave.</p>
+<p>The first three records identify fit.py; the fourth identifies fit-tail.py. Exact source SHA256, initialization, dependency and grid identities are embedded in each record. Large audits/traces use deterministic gzip (mtime=0), with stored/decompressed identities in results/compressed-payloads.json. The compact comparison’s initial visual-inspection choice is uniform-tail-global, without automatic promotion. EXECUTION.md records commands and exits.</p>
+<p>No global optimum, guaranteed visual preference or superiority of the retained source hue geometry is claimed. The result is a concrete whole-solid research frontier with both modes in step.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

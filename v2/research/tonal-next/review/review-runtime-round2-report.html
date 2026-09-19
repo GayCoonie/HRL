@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent second-round candidate receipt review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-runtime-round2-report.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#supplemental-review-completed">Supplemental review completed</a></li></ol></details><h1 id="independent-second-round-candidate-receipt-review">Independent second-round candidate receipt review</h1>
+<p>UTC: 2026-09-19T10:37:21.987324+00:00</p>
+<p>Core contract verification: confirmed. Candidate eligibility: both rejected under the unchanged 5% native-blue improvement requirement. Core quality: no blocking evidence-integrity contradiction found.</p>
+<p>The completed <code>audit-sheet-raw.json</code> and <code>audit-sheet-robust.json</code> receipts match baseline schema, every recorded source/input/cache/ruler hash, sampling, and population contracts. All 148 current frozen files match the manifest. Candidate record files match receipt SHA256 values. Inverse/anchor/seam/input-rejection contracts and shared-bank identity checks pass. Reaggregation of all raw regular/critical/control path and sheet summaries matches each receipt. The repository comparison still contained first-round results at review time, so the actual reducer generated the isolated <code>review-runtime-round2-comparison.json</code>; an independent review script confirmed every reduced metric and gate.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native blue improvement</th>
+  <th style="text-align:right">Native weighted STRESS delta</th>
+  <th style="text-align:right">Full weighted STRESS delta</th>
+  <th>Eight path guards</th>
+  <th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">0.7445759802%</td>
+  <td style="text-align:right">+0.037102089560125506</td>
+  <td style="text-align:right">+0.00020872860943654814</td>
+  <td>All pass</td>
+  <td>Ineligible: below 5% improvement</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">0.3654938244%</td>
+  <td style="text-align:right">+0.02592296054997334</td>
+  <td style="text-align:right">-0.0013182373343738618</td>
+  <td>All pass</td>
+  <td>Ineligible: below 5% improvement</td>
+</tr>
+</tbody>
+</table></div>
+<p>Every weighted STRESS delta is &lt;=0.15 and every per-gamut family CV ratio is &lt;=1.03. Largest CV ratios are full reach: 1.0008418029968746 for raw and 1.0006385473002322 for robust. No failed guard was omitted, averaged away, or replaced with a critical-angle, edge, conditioning, mapped-input, or unweighted metric.</p>
+<p>Fresh bounded actual-runtime reproduction (<code>review-runtime-candidate-narrow.mjs</code>) also passed for each: all retained/mapped scores reproduced exactly; H281 all 20 paths at 257 samples in each gamut had CV delta 0; 121 nine-point sheet stencil values per gamut reproduced within 2.2737367544323206e-13. This does not represent a second full multi-hue audit.</p>
+<p>Evidence: <code>review-runtime-round2-evidence.json</code>, <code>review-runtime-round2-comparison.json</code>, <code>review-runtime-sheet-raw-narrow-evidence.json</code>, <code>review-runtime-sheet-robust-narrow-evidence.json</code>. All review commands exited 0. Main receipt hashes and candidate record hashes are recorded in the evidence file.</p>
+<p>Supplemental edge and conditioning integrity findings will be appended after the separate read-only review. Further planned warm-start/critical-source fits and their outcomes were not inspected.</p>
+<h2 id="supplemental-review-completed">Supplemental review completed</h2>
+<p>The separate supplemental review confirmed receipt identity and saved arithmetic: 186 recorded source/model/frozen hash comparisons, 316 edge rows containing 6,320 stencil values, and 1,625 conditioning rows with 11,375 matrices. All 35 recorded implementation booleans reaggregate; no contradiction was found. Full details and hashes are in <code>review-runtime-round2-supplemental-report.md</code> and <code>review-runtime-round2-supplemental-evidence.json</code>.</p>
+<p>The supplemental grid has 20 centres disjoint from the historical 121 centres, and all stencil points are legal. Its values remain separate from eligibility. Conditioning maxima remain 112526.69190396069 (raw) and 112617.04257873626 (robust), both at H269, R0.000999, L0.001. These are fixed-H coordinate Jacobian conditions, not XYZ/perceptual conditions. Numerical comparisons at five step factors are recorded diagnostics, not Boolean acceptance gates.</p>
+<p>Supplemental verification recomputed saved edge summaries and conditioning matrix arithmetic; it did not regenerate edge inverse XYZ/GenSpace vectors or rerun analytic/autograd/JavaScript derivatives. This limitation is separate from the fresh main-audit H281 and population-score reproduction reported above.</p>
+<p>The current reducer changed only the failure-note wording from “Neither research candidate” to “No research candidate.” Its current SHA256 is <code>d4dbec95546c4d252a8143768e15a576437b72319f88cb791b7057a75a9ce8f4</code>. All 15 threshold/schema tests were rerun successfully against that version; refreshed evidence is <code>review-runtime-gate-evidence.json</code>. Selection equations and eligibility rules are unchanged.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

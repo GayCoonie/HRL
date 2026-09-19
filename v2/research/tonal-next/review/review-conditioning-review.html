@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent conditioning review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-conditioning-review.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#fresh-independent-reproduction">Fresh independent reproduction</a></li><li><a href="#nonblocking-limitation-in-the-reusable-validator">Nonblocking limitation in the reusable validator</a></li><li><a href="#scope-and-provenance">Scope and provenance</a></li></ol></details><h1 id="independent-conditioning-review">Independent conditioning review</h1>
+<p><strong>Verdict: confirmed for the sampled common-coordinate map. No blocking defect found.</strong> Severe existing anisotropy at the reported points is real; the old tiny finite-difference step does not explain it. This verdict does not extend to a full physical XYZ or perceptual Jacobian.</p>
+<p>Contract: confirmed. I reviewed the two new audit programs, their inherited analytic/autograd and JavaScript implementations, the raw receipt and handoff, and freshly reproduced four decisive model/point combinations. No repository files were changed. Only the requested review artifacts were written outside the repository.</p>
+<p>Quality: confirmed for this conclusion, with one nonblocking validation-gate limitation below. The analytic chain rule, equilateral basis transformation and SVD condition definition are consistent. Actual-JavaScript central stencils remain inside the legal domain and compare derivatives at the same source point. Analytic and autograd are correctly identified as sharing the existing implicit inverse derivative; they are not three fully independent pathways.</p>
+<h2 id="fresh-independent-reproduction">Fresh independent reproduction</h2>
+<p>Command, exit <strong>0</strong>:</p>
+<pre><code class="language-sh">/workspace/scratch/20abb8fd27ac/hrl-opt-env/bin/python /workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-reproduce.py &gt; /workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-result.json
+</code></pre>
+<p>The reproducer implements the scalar forward map independently in mpmath 1.3.0 at 80 decimal digits. It solves the final scalar inverse with high-precision Newton iterations and a checked residual below 1e-65; it does not import either repository derivative implementation. Central R/L differences use boundary-distance factors 1e-20 and 1e-25. Their condition estimates agree within 1.51e-40 relatively across the four cases. Conditions are computed from the larger Gram eigenvalue divided by the positive determinant, avoiding subtraction to recover a small singular value. The actual JavaScript numeric runner was also executed afresh, exit <strong>0</strong>.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th>H, R, L</th>
+  <th style="text-align:right">Independent condition</th>
+  <th style="text-align:right">Stored analytic relative error</th>
+  <th style="text-align:right">Worst fresh JS relative error, factors 1e-3 and 1e-4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Parent</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">122403.7478915268</td>
+  <td style="text-align:right">2.63e-11</td>
+  <td style="text-align:right">3.97e-7</td>
+</tr>
+<tr>
+  <td>Metric</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">113447.1817229929</td>
+  <td style="text-align:right">3.13e-12</td>
+  <td style="text-align:right">8.96e-7</td>
+</tr>
+<tr>
+  <td>Balanced</td>
+  <td>216, .04995, .05</td>
+  <td style="text-align:right">25197.9516308581</td>
+  <td style="text-align:right">1.26e-12</td>
+  <td style="text-align:right">5.68e-7</td>
+</tr>
+<tr>
+  <td>Balanced, relocated-tail control</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">714.7464294894</td>
+  <td style="text-align:right">1.49e-10</td>
+  <td style="text-align:right">1.47e-6</td>
+</tr>
+</tbody>
+</table></div>
+<p>At the three model maxima, the stored analytic equilateral matrices agree with the independent matrices to at most 2.64e-12 under the audit's scaled maximum-entry error. Independent determinants remain positive: about 14.3903, 10.9818 and .998609 respectively. This distinguishes a very large singular-value ratio from a singular or orientation-reversing map at those points.</p>
+<p>The whole stored 325-point grid per model shows actual-JavaScript condition errors at factor 1e-4 no larger than 1.702e-6 (parent), 4.606e-6 (balanced) and 3.833e-6 (metric), consistent with the fresh subset. I inspected these full-grid receipts; I did not freshly rerun all 975 analytic/autograd evaluations. Error increasing again at the smallest factors is consistent with cancellation and finite inverse-solver precision. It does not erase the stable severe condition values.</p>
+<h2 id="nonblocking-limitation-in-the-reusable-validator">Nonblocking limitation in the reusable validator</h2>
+<p>Quality / coverage, low severity, high confidence: <code>conditioning-audit.py:171</code> builds success checks for forward parity and analytic/autograd agreement, but does not gate on any actual-JavaScript derivative error. Numerical discrepancies are recorded at line 153. Consequently exit 0 alone does not establish independent numerical derivative agreement for a future candidate. The present conclusion is supported by inspected numeric evidence and the fresh reproduction. A future automated acceptance gate should explicitly enforce a predeclared stable-step agreement criterion or require its review.</p>
+<h2 id="scope-and-provenance">Scope and provenance</h2>
+<ul>
+<li>The measured quantity is the spectral condition of the fixed-H 2-by-2 source-to-destination common-coordinate Jacobian, with both bases <code>x=sqrt(3)R/2, z=L-R/2</code>. It is not the physical source/XYZ map, a full H/R/L Jacobian, or a perceptual metric. No visual bending, hue fidelity or observer-performance claim follows directly.</li>
+<li>These are finite interior samples. This review establishes the severe conditions at the reproduced points, not a global maximum, a bound over all hues and boundaries, or the historical grid's distributional quantiles.</li>
+<li>Positive determinants at sampled points establish local orientation preservation there; this audit alone is not a global no-fold proof.</li>
+<li>Stable finite differences still have truncation, floating-point and inverse-solver errors. Their nominal 2h denominators and tiniest steps need the stated qualification. The independent high-precision result removes those concerns as an explanation of the severe values at the decisive points.</li>
+<li>All seven source hashes and all three model hashes in the raw receipt matched current files. Reviewed receipt SHA-256: <code>ec6d73c94b7beabe6461103ad6044667d5575007b33a7f2114ae4cc466c0f7f6</code>. The verdict is bound to that receipt and its recorded source/model state.</li>
+<li>Reproduction source: <code>review-conditioning-reproduce.py</code>. Fresh machine-readable evidence: <code>review-conditioning-result.json</code>. Both are in <code>/workspace/scratch/20abb8fd27ac/hrl-optimization/</code>.</li>
+</ul>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

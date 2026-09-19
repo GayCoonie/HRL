@@ -1,0 +1,50 @@
+{
+  "schema": "hrl-global-record-verification-v1",
+  "status": "passed",
+  "createdUTC": "2026-09-19T12:53:24.232Z",
+  "models": [
+    {
+      "id": "metric-global",
+      "recordSHA256": "73da7bb38904720c541d651b9567265b0c0943305623674a0a02e73da18141f0",
+      "codeSHA256": "ca9cec4fa8430b51f9a053f2fa0ac294b6135d2be42ae8f0e880f775b48afd77",
+      "traceSHA256": "d9506e9d6eda01f2f435510b219a4ee9ba23e37f08d1d6643dba61677d39a4b3",
+      "decompressedTraceSHA256": "434e10c7fc39245e30f2ebca4f5be38f3e86eec6fab6b40af9970bcfeca0f0e6",
+      "evaluations": 242,
+      "bestEvaluation": 242,
+      "bestLoss": 0.1215998667652634
+    },
+    {
+      "id": "uniform-global",
+      "recordSHA256": "8d7a06ec75c817f91a67284622a108f149effddc7a749c7ac90b744f4fa9f273",
+      "codeSHA256": "ca9cec4fa8430b51f9a053f2fa0ac294b6135d2be42ae8f0e880f775b48afd77",
+      "traceSHA256": "0bcbeabd8e1da5b1f9c9b30c1c54fdd51086791bf53245260b927911d8626b9e",
+      "decompressedTraceSHA256": "6f617d5564338b614b949d25e1a4cd4301b6ee80571f3000404bd52f760a225c",
+      "evaluations": 242,
+      "bestEvaluation": 242,
+      "bestLoss": 0.2668958822590627
+    },
+    {
+      "id": "fresh-global",
+      "recordSHA256": "35cdf02c3ab29b2a0a2bb8242bcaf15d8674b6df93778d7d7b32d4a7d61d7557",
+      "codeSHA256": "ca9cec4fa8430b51f9a053f2fa0ac294b6135d2be42ae8f0e880f775b48afd77",
+      "traceSHA256": "c8c3fedda159dd60627ca38549c0f98a32c2d4bf2caf634b41dda7fe0c4b20a1",
+      "decompressedTraceSHA256": "1fde13777b705f3de42e49ca9a5a8dff7f5e2f8364848ca9b1099ad6cfd2be12",
+      "evaluations": 351,
+      "bestEvaluation": 351,
+      "bestLoss": 0.26066053281574
+    },
+    {
+      "id": "uniform-tail-global",
+      "recordSHA256": "5fdda084722ed644ea023bb6672c2123d2db5476213206384d1256de159128fb",
+      "codeSHA256": "9a93450177108da8547fe207d9ae68f624212e26e1b401800a436feda96da20a",
+      "traceSHA256": "0b721baafa7abaf0f39751b11bca7d920c73cb3444175b356182e7114e44a142",
+      "decompressedTraceSHA256": "f2466513c7f6eee3577c4186d1a03480cec85e594034b6a6083192bc680fe1e4",
+      "evaluations": 244,
+      "bestEvaluation": 244,
+      "bestLoss": 0.20229605249370186
+    }
+  ],
+  "audits": 5,
+  "parityModels": 4,
+  "scope": "Producer-side cross-check only; independent review remains separate."
+}

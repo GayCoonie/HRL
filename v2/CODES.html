@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL v2 canonical numbers and short codes · HRL</title><link rel="stylesheet" href="../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="index.html">v2 Beta 1</a><a href="beta1.html">Picker</a><a href="beta1-notes.html">Definition</a><a href="benchmarks.html">Benchmarks</a><a href="../index.html">Release 1</a><a href="archive.html">Archive</a><a href="../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="CODES.md" download>Download original Markdown</a> · <a href="../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#hue-addresses">Hue addresses</a></li><li><a href="#api">API</a></li><li><a href="#snapshot-and-gamut-context">Snapshot and gamut context</a></li></ol></details><h1 id="hrl-v2-canonical-numbers-and-short-codes">HRL v2 canonical numbers and short codes</h1>
+<p>The post–Release 1 project decisions restore different numeric scales for native
+sRGB and the full physical domain. The underlying floating model continues to use
+<code>0 &lt;= R &lt;= L &lt;= 1</code>. No fit, grayscale, vivid anchor, carrier or hue spacing changes
+when these coordinates are displayed or serialized.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Mode</th>
+  <th>Payload</th>
+  <th style="text-align:right">R/L integer range</th>
+  <th style="text-align:right">Canonical R/L range</th>
+  <th style="text-align:right">Normalization divisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Native sRGB</td>
+  <td><code>HHHRRRLLL</code></td>
+  <td style="text-align:right">0–17,575</td>
+  <td style="text-align:right">0–175.75</td>
+  <td style="text-align:right">17,575</td>
+</tr>
+<tr>
+  <td>Full</td>
+  <td><code>HHHHRRRRLLLL</code></td>
+  <td style="text-align:right">0–456,975</td>
+  <td style="text-align:right">0–4569.75</td>
+  <td style="text-align:right">456,975</td>
+</tr>
+</tbody>
+</table></div>
+<p>Each R/L field is unsigned uppercase base 26, with <code>A=0</code> through <code>Z=25</code>.
+Canonical numbers are the integer divided by 100. Both endpoints are exact:
+native <code>ZZZ</code> and full <code>ZZZZ</code> mean normalized <code>1</code>, not a value one slot below it.
+Independent fields must satisfy <code>R &lt;= L</code>; invalid payloads are rejected.</p>
+<p>These allocations come from the user's post–Release 1 design discussion in
+<code>chattest.pdf</code>, pages 22–32. They are a new explicit v2 serialization contract;
+an older release's payload must retain that release's interpretation.</p>
+<h2 id="hue-addresses">Hue addresses</h2>
+<p>Native sRGB's first two hue characters use base 36, <code>0–9A–Z</code>. The third is <code>0–4</code>.
+Together they encode 6,480 addresses:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Range</th>
+  <th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>000</code>–<code>XZ4</code></td>
+  <td>6,120 ordinary hue addresses: four per existing RGB8 vivid anchor</td>
+</tr>
+<tr>
+  <td><code>Y00</code>–<code>ZZ4</code></td>
+  <td>Integer degree aliases 0°–359°</td>
+</tr>
+</tbody>
+</table></div>
+<p>The 1,530 exact vivid anchors retain their recorded Release 1 H values and their
+RGB edge order: red → yellow → green → cyan → blue → magenta → red. Anchor <code>i</code>
+occupies hue address <code>4*i</code>. Consequently <code>000</code> identifies RGB red's existing
+H (about 20.935° in the frozen ring), not 0°. Three intermediate addresses divide
+the existing angular interval into quarters. This subdivision is the codec's
+documented interpolation rule; it does not respace the anchors or the model.
+The final interval wraps back to red. Default encoding chooses the nearest
+ordinary address by circular angular distance. Integer degree aliases are emitted
+only with <code>{degreeAlias:true}</code> and decode to their named H exactly. Re-encoding a
+degree alias with the default options may choose an ordinary address instead.</p>
+<p>Full hue fields use four uppercase base-26 letters. Addresses 0–393,209 enumerate
+the <code>6*(65536-1)</code> vivid edges of the <strong>actual current pseudo-RGB16 carrier</strong>, in
+the same six-edge channel order. For example the first point is <code>[65535,0,0]</code>,
+the next <code>[65535,1,0]</code>, and the last <code>[65535,0,1]</code>. The codec converts that
+carrier point through the current physical model to obtain H. It does not replace
+this nonlinear mapping with equal angular spacing or the obsolete carrier field.
+The inverse uses the current vivid point's carrier position and compares nearby
+addresses by circular angular distance. A small cache avoids constructing a
+393,210-entry table. The 63,766 remaining hue identifiers are <strong>unassigned and
+rejected</strong>. No full-mode degree alias meaning has been invented.</p>
+<p>Exact angular ties use the lower numeric address. Achromatic coordinates preserve
+their requested hue identity, although H has no effect on their XYZ.</p>
+<h2 id="api">API</h2>
+<pre><code class="language-js">import {createHRLv2} from './index.mjs';
+import {createShortCodeCodec, canonicalScale} from './codes.mjs';
+
+const model = await createHRLv2({gamut:'srgb'});
+const codec = await createShortCodeCodec(model);
+const normalized = codec.fromCanonical({H:42, R:48.25, L:120.50});
+const result = codec.quantize(normalized);
+// {code, coordinates:{H,R,L}, canonical:{H,R,L}, error:{...}}
+const xyz = model.toXYZ(codec.decode(result.code));
+const envelope = codec.serialize(normalized);
+const restored = codec.deserialize(envelope);
+
+canonicalScale('full').maximum; // 4569.75
+</code></pre>
+<p><code>SHORT_CODE_SCALES.srgb</code> and <code>.full</code> are lightweight frozen metadata, available
+before a model loads. Each contains <code>gamut</code>, <code>pattern</code>, <code>payloadLength</code>,
+<code>fieldWidth</code>, <code>integerMax</code>, <code>maximum</code>, <code>step</code>, <code>hueSlots</code> and <code>degreeAliases</code>.
+<code>canonicalScale(gamut)</code> returns the corresponding object or rejects an unsupported
+mode. <code>SHORT_CODE_VERSION</code> identifies this serialization contract.</p>
+<p><code>toCanonical(q)</code> and <code>fromCanonical(q)</code> perform <strong>continuous</strong> scaling and validate
+the triangle. They do not quantize. The <code>step:0.01</code> metadata describes serialized
+precision. <code>encode(q)</code> rounds each normalized R/L coordinate to its nearest integer
+address and returns the payload string. <code>decode(payload)</code> returns normalized
+coordinates. Syntax is strict uppercase without whitespace or a prefix.
+<code>quantize(q)</code> also returns the actual decoded coordinates, centi-unit canonical
+numbers and signed errors: <code>hueDegrees</code> is circular angular error;
+<code>reachNormalized</code> and <code>levelNormalized</code> are normalized coordinate errors. These
+are coordinate errors, not a perceptual loss score. R/L rounding errors are at
+most half an integer step. Hue error depends on the local vivid-ring spacing.</p>
+<h2 id="snapshot-and-gamut-context">Snapshot and gamut context</h2>
+<p>A short payload alone does not identify a model version. Constructing a codec
+requires a loaded, versioned model and checkpoint. The codec's frozen <code>context</code>
+binds the model version, checkpoint, gamut and reference white to SHA-256 hashes
+of the loaded tonal definition, physical boundary, fixed hue ring, carrier
+landmarks, source atlas and source hue-field data. These hashes use canonical JSON
+and therefore need not equal the byte hash of a JSON artifact on disk. The
+model-version and codec-version identifiers also matter: data hashes alone do not
+identify every implementation detail.</p>
+<p><code>serialize(q)</code> returns <code>{code,context}</code>. <code>deserialize(envelope)</code> rejects a context
+mismatch, including the other gamut or a different fitted record. Bare <code>decode</code>
+is appropriate when the caller already supplies the selected model context.
+Keep the model immutable during a codec's lifetime; construct another codec after
+changing its definition. The factory also accepts current
+<code>createSpectralTonalHRL(...)</code> research models and fingerprints their actual record.</p>
+<p>Converting a code between gamuts requires decoding it with the <strong>source</strong> codec,
+converting its XYZ through the destination model's explicit import policy, and
+encoding with the destination codec. Preserve and display any import/clipping
+events. Identical normalized H/R/L in the two gamuts does not mean identical XYZ.
+A full payload remains full-domain data even when its display preview is clipped
+to sRGB. Rec. 2020 code allocation is outside this implemented two-mode API.</p>
+<p>RGB import here uses the existing continuous model conversion followed by ordinary
+code quantization. This implementation makes no claim to find a special exact
+matching address for every possible RGB8 input, nor to implement an exhaustive
+“most vibrant, then simplest hue” search among all matching codes. The 1,530
+native vivid RGB8 anchors themselves are directly addressed and tested.</p>
+<p>Run <code>node v2/test-codes.mjs</code> for address, scale, model-context and XYZ checks.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../site/preservation.json">Preservation audit</a></footer></main></body></html>

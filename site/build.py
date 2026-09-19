@@ -107,6 +107,7 @@ def headings(html):
     return html,toc
 
 RESEARCH=[
+ ('v2/global.html','Global optimization · 19 September 2026','All-hue shared fits, canonical scales, and compact codes.','v2/research/global-tonal/RESULTS.md'),
  ('v2/tonal-next.html','Tonal continuation · 19 September 2026','Six shared-bank research candidates, frozen Beta 1 comparison, and measured trade-offs.','v2/research/tonal-next/RESULTS.md'),
  ('v2/boundary-tonal.html','0.13 · Boundary and shared tonal comparison','Current release source: parent, geometry-only control, balanced, and metric-leaning.', 'v2/research/boundary-tonal/results/REPORT.md'),
  ('v2/research/mapped-012/index.html','0.12 · Mapped-input audit','Import policy and all-input benchmark evidence, distinct from retained-pair scores.','v2/research/mapped-012/README.md'),
@@ -134,7 +135,7 @@ def all_files():
         dirs[:]=[d for d in dirs if d not in {'.git','node_modules','__pycache__','.venv'}]
         for name in names:
             p=Path(base)/name;path=p.relative_to(ROOT).as_posix()
-            if name.endswith(('.pyc','.log')) and path.startswith('site/'):continue
+            if path=='.git' or (name.endswith(('.pyc','.log')) and path.startswith('site/')):continue
             out.append(path)
     if (ROOT/'.git').exists():
         tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','-z',BASE if has_baseline() else 'HEAD'],cwd=ROOT).decode().split('\0')
@@ -156,7 +157,7 @@ def main():
 <article class="hrl-card"><div class="hrl-eyebrow">Evidence</div><h2>Know what was measured</h2><p>Retained native pairs and mapped all-input ColorBench remain separate. Full reports, raw JSON, control comparisons, and limitations stay attached.</p><a href="benchmarks.html">Browse the benchmarks</a></article></div>
 <h2>Same geometry. Explicit tradeoffs.</h2><div class="hrl-kpis"><div><strong>29.107048</strong><span>Native weighted STRESS · 3,331 retained pairs</span></div><div><strong>29.948555</strong><span>Full weighted STRESS · 3,813 retained pairs</span></div></div>
 <p>These are fitted development scores on different retained populations, not a universal accuracy rating. The <a href="research/boundary-tonal/results/REPORT.html">original report</a> also preserves mapped-input scores, path diagnostics, and difficult conditioning tails.</p>
-<h2>Continue the research</h2><p>Explore six new tonal continuations beside the frozen release, with the same coordinates and explicit measurements.</p><div class="hrl-actions"><a class="hrl-button" href="tonal-next.html">Compare the tonal candidates</a><a class="hrl-button" href="research/tonal-next/RESULTS.html">Read the optimization findings</a></div>
+<h2>Continue the research</h2><p>Compare the whole-solid optimization, with equal all-hue objectives and one shared fit across sRGB and full. Canonical Reach/Level and short codes are restored.</p><div class="hrl-actions"><a class="hrl-button hrl-primary" href="global.html">Explore the global fits</a><a class="hrl-button" href="CODES.html">Short codes and canonical units</a></div><p>The earlier six bounded continuations remain available.</p><div class="hrl-actions"><a class="hrl-button" href="tonal-next.html">Compare the tonal candidates</a><a class="hrl-button" href="research/tonal-next/RESULTS.html">Read the optimization findings</a></div>
 <h2>Use the named release</h2><pre><code>import {createHRLv2} from './v2/index.mjs';
 const hrl = await createHRLv2(); // native sRGB, metric-b2
 const q = hrl.fromRGB([0.2, 0.5, 0.8]);
@@ -182,7 +183,8 @@ const full = await createHRLv2({gamut:'full'});</code></pre>
     beta=beta.replace('<section class="evidence">','</div><section class="evidence">',1)
     beta=beta.replace('<section class="selection">','<section class="selection" aria-label="Selected color"><h2 class="selection-title">Selected color</h2>',1)
     beta=beta.replace('<pre id="readout"', '<pre aria-live="polite" id="readout"',1)
-    beta=beta.replace('Export color JSON</button>', 'Export color JSON</button>',1)
+    beta=beta.replace('min="0" max="1" step=".001" value=".15"','min="0" max="175.75" step=".01" value="26.36"').replace('min="0" max="1" step=".001" value=".3"','min="0" max="175.75" step=".01" value="52.73"')
+    beta=beta.replace('<pre aria-live="polite" id="readout"', '<div class="actions hrl-code-controls"><label for="shortCode">Short code<input id="shortCode" type="text" maxlength="12" autocomplete="off" spellcheck="false" aria-describedby="codeContext"></label><button id="importCode" type="button">Load code</button><span id="codeContext"></span></div><p id="codeMessage" role="status"></p><p class="hint">Codes use the active checkpoint. Exported colors include its identity. <a href="CODES.html">Code format</a> · <a href="global.html">Global optimization comparison</a></p><pre aria-live="polite" id="readout"',1)
     write('v2/beta1.html',beta)
     # Archive is curated; the complete catalogue below additionally includes every raw file.
     cards=[]
@@ -236,7 +238,7 @@ const full = await createHRLv2({gamut:'full'});</code></pre>
         write(target,shell(target,title,links+toc_html+body,document=True))
     # Add shared navigation to actual retained viewers, not source templates whose relative depth changes on generation.
     for path in all_files():
-        if path.endswith('.html') and '/source/' not in path and not path.endswith('-template.html'):
+        if path.endswith('.html') and '/source/' not in path and not path.endswith('-template.html') and path not in {'v2/tonal-next.html','v2/global.html'}:
             attach_navigation(path)
     manifest={'sourceCommit':BASE,'readingEditions':editions,'curatedPages':['v2/index.html','v2/beta1.html','v2/beta1-notes.html','v2/archive.html','v2/benchmarks.html','library.html']}
     write('site/build-manifest.json',json.dumps(manifest,indent=2)+'\n')

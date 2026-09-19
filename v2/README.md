@@ -31,3 +31,18 @@ Weighted retained COMBVD: **29.107048** / 3,331 native pairs; **29.948555** / 3,
 The [original four-way comparison](boundary-tonal.html) preserves the 0.12 parent, boundary-only control, refined balanced, and metric-leaning candidates. All earlier experiments and JSON/Markdown evidence remain at their original paths. `lib/index.mjs` retains its older BASR/linear semantics; `../src/index.mjs` and the root picker remain R15-D Release 1.
 
 For local browser use, serve the repository root with `python3 -m http.server 8000` and open `/v2/`. Keep the module/data directories together. Node usage requires Node 18 or later. See the [root README](../README.md) for the full setup and verification commands.
+
+## Canonical numbers and compact codes
+
+The picker uses **0–175.75** Reach/Level in sRGB and **0–4569.75** in full, with hundredth-unit serialization. The calculation API keeps normalized 0–1 coordinates. [The code specification](CODES.md) records the post-Release1 nine-character sRGB and twelve-letter full formats, vivid-anchor ordering, degree aliases, quantization, and model identity.
+
+```js
+import {createHRLv2, createShortCodeCodec} from './v2/index.mjs';
+const model = await createHRLv2({gamut:'full'});
+const codes = await createShortCodeCodec(model);
+const envelope = codes.serialize({H:30,R:.3,L:.6});
+const q = codes.deserialize(envelope);
+const canonical = codes.toCanonical(q);
+```
+
+[Explore the global fit comparison](global.html). The short-code payload must travel with its model context to preserve its interpretation across different fits; an exported color includes both.

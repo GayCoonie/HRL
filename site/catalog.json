@@ -37,6 +37,11 @@
       "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-gen-tonal.yml"
     },
     {
+      "path": ".github/workflows/hrl-global.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-global.yml"
+    },
+    {
       "path": ".github/workflows/hrl-hue-fair-finish.yml",
       "kind": "source",
       "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-hue-fair-finish.yml"
@@ -110,6 +115,11 @@
       "path": ".github/workflows/hrl-shared-rl.yml",
       "kind": "source",
       "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-shared-rl.yml"
+    },
+    {
+      "path": ".github/workflows/hrl-tonal-next.yml",
+      "kind": "source",
+      "url": "https://github.com/GayCoonie/HRL/blob/main/.github/workflows/hrl-tonal-next.yml"
     },
     {
       "path": ".github/workflows/hrl-tonal-publish.yml",
@@ -237,6 +247,21 @@
       "path": "site/test-beta1.mjs",
       "kind": "source",
       "url": "site/test-beta1.mjs"
+    },
+    {
+      "path": "site/test-codes-browser.py",
+      "kind": "source",
+      "url": "site/test-codes-browser.py"
+    },
+    {
+      "path": "site/test-codes-ui.mjs",
+      "kind": "source",
+      "url": "site/test-codes-ui.mjs"
+    },
+    {
+      "path": "site/test-global-browser.py",
+      "kind": "source",
+      "url": "site/test-global-browser.py"
     },
     {
       "path": "src/base/appearance-runtime.mjs",
@@ -419,6 +444,17 @@
       "url": "tools/integrate-refits.py"
     },
     {
+      "path": "v2/CODES.html",
+      "kind": "html",
+      "url": "v2/CODES.html"
+    },
+    {
+      "path": "v2/CODES.md",
+      "kind": "markdown",
+      "url": "v2/CODES.md",
+      "readingEdition": "v2/CODES.html"
+    },
+    {
       "path": "v2/HRL_v2_Beta_1.md",
       "kind": "markdown",
       "url": "v2/HRL_v2_Beta_1.md",
@@ -578,6 +614,11 @@
       "url": "v2/build.mjs"
     },
     {
+      "path": "v2/codes.mjs",
+      "kind": "source",
+      "url": "v2/codes.mjs"
+    },
+    {
       "path": "v2/data/appearance-readouts.json",
       "kind": "json",
       "url": "v2/data/appearance-readouts.json"
@@ -662,6 +703,16 @@
       "path": "v2/gen-tonal.html",
       "kind": "html",
       "url": "v2/gen-tonal.html"
+    },
+    {
+      "path": "v2/global.html",
+      "kind": "html",
+      "url": "v2/global.html"
+    },
+    {
+      "path": "v2/global.mjs",
+      "kind": "source",
+      "url": "v2/global.mjs"
     },
     {
       "path": "v2/history.html",
@@ -2253,6 +2304,189 @@
       "path": "v2/research/gen-tonal-fit/verify.mjs",
       "kind": "source",
       "url": "v2/research/gen-tonal-fit/verify.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/EXECUTION.html",
+      "kind": "html",
+      "url": "v2/research/global-tonal/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/global-tonal/EXECUTION.md",
+      "kind": "markdown",
+      "url": "v2/research/global-tonal/EXECUTION.md",
+      "readingEdition": "v2/research/global-tonal/EXECUTION.html"
+    },
+    {
+      "path": "v2/research/global-tonal/README.html",
+      "kind": "html",
+      "url": "v2/research/global-tonal/README.html"
+    },
+    {
+      "path": "v2/research/global-tonal/README.md",
+      "kind": "markdown",
+      "url": "v2/research/global-tonal/README.md",
+      "readingEdition": "v2/research/global-tonal/README.html"
+    },
+    {
+      "path": "v2/research/global-tonal/RESULTS.html",
+      "kind": "html",
+      "url": "v2/research/global-tonal/RESULTS.html"
+    },
+    {
+      "path": "v2/research/global-tonal/RESULTS.md",
+      "kind": "markdown",
+      "url": "v2/research/global-tonal/RESULTS.md",
+      "readingEdition": "v2/research/global-tonal/RESULTS.html"
+    },
+    {
+      "path": "v2/research/global-tonal/audit.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/audit.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/cache-grid.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/cache-grid.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/compare.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/compare.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/compress.py",
+      "kind": "source",
+      "url": "v2/research/global-tonal/compress.py"
+    },
+    {
+      "path": "v2/research/global-tonal/edge-audit.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/edge-audit.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/fit-tail.py",
+      "kind": "source",
+      "url": "v2/research/global-tonal/fit-tail.py"
+    },
+    {
+      "path": "v2/research/global-tonal/fit.py",
+      "kind": "source",
+      "url": "v2/research/global-tonal/fit.py"
+    },
+    {
+      "path": "v2/research/global-tonal/parity.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/parity.mjs"
+    },
+    {
+      "path": "v2/research/global-tonal/parity.py",
+      "kind": "source",
+      "url": "v2/research/global-tonal/parity.py"
+    },
+    {
+      "path": "v2/research/global-tonal/results/beta1-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/beta1-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/comparison.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/results/comparison.json"
+    },
+    {
+      "path": "v2/research/global-tonal/results/compressed-payloads.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/results/compressed-payloads.json"
+    },
+    {
+      "path": "v2/research/global-tonal/results/fresh-global-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/fresh-global-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/grid.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/results/grid.json"
+    },
+    {
+      "path": "v2/research/global-tonal/results/metric-global-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/metric-global-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/near-black-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/near-black-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/record-verification.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/results/record-verification.json"
+    },
+    {
+      "path": "v2/research/global-tonal/results/runtime-parity-final-fixture.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/runtime-parity-final-fixture.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/runtime-parity-final-receipt.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/results/runtime-parity-final-receipt.json"
+    },
+    {
+      "path": "v2/research/global-tonal/results/uniform-global-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/uniform-global-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/results/uniform-tail-global-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/results/uniform-tail-global-audit.json.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/fresh-global.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/trials/fresh-global.json"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/fresh-global.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/trials/fresh-global.jsonl.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/metric-global.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/trials/metric-global.json"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/metric-global.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/trials/metric-global.jsonl.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/uniform-global.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/trials/uniform-global.json"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/uniform-global.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/trials/uniform-global.jsonl.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/uniform-tail-global.json",
+      "kind": "json",
+      "url": "v2/research/global-tonal/trials/uniform-tail-global.json"
+    },
+    {
+      "path": "v2/research/global-tonal/trials/uniform-tail-global.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/global-tonal/trials/uniform-tail-global.jsonl.gz"
+    },
+    {
+      "path": "v2/research/global-tonal/verify-records.mjs",
+      "kind": "source",
+      "url": "v2/research/global-tonal/verify-records.mjs"
     },
     {
       "path": "v2/research/hue-fair-refine/EVIDENCE.html",
@@ -3923,6 +4157,560 @@
       "url": "v2/research/shared-rl/visual.mjs"
     },
     {
+      "path": "v2/research/tonal-next/README.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/README.html"
+    },
+    {
+      "path": "v2/research/tonal-next/README.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/README.md",
+      "readingEdition": "v2/research/tonal-next/README.html"
+    },
+    {
+      "path": "v2/research/tonal-next/RESEARCH.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/RESEARCH.html"
+    },
+    {
+      "path": "v2/research/tonal-next/RESEARCH.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/RESEARCH.md",
+      "readingEdition": "v2/research/tonal-next/RESEARCH.html"
+    },
+    {
+      "path": "v2/research/tonal-next/RESULTS.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/RESULTS.html"
+    },
+    {
+      "path": "v2/research/tonal-next/RESULTS.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/RESULTS.md",
+      "readingEdition": "v2/research/tonal-next/RESULTS.html"
+    },
+    {
+      "path": "v2/research/tonal-next/audit.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-next/audit.mjs"
+    },
+    {
+      "path": "v2/research/tonal-next/browser-check.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/browser-check.py"
+    },
+    {
+      "path": "v2/research/tonal-next/cache-grid-extra.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-next/cache-grid-extra.mjs"
+    },
+    {
+      "path": "v2/research/tonal-next/conditioning-audit.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/conditioning-audit.py"
+    },
+    {
+      "path": "v2/research/tonal-next/conditioning-numeric.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-next/conditioning-numeric.mjs"
+    },
+    {
+      "path": "v2/research/tonal-next/edge-audit.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-next/edge-audit.mjs"
+    },
+    {
+      "path": "v2/research/tonal-next/fit-first-round.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/fit-first-round.py"
+    },
+    {
+      "path": "v2/research/tonal-next/fit-sheet-round.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/fit-sheet-round.py"
+    },
+    {
+      "path": "v2/research/tonal-next/fit.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/fit.py"
+    },
+    {
+      "path": "v2/research/tonal-next/make-comparison.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/make-comparison.py"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-baseline.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-baseline.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-blue-raw.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-blue-raw.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-blue-robust.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-blue-robust.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-conditioned.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-conditioned.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-edge-baseline.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-edge-baseline.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-edge-blue-candidates.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-edge-blue-candidates.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-edge-candidates.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-edge-candidates.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-edge-sheet-raw.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-edge-sheet-raw.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-edge-sheet-robust.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-edge-sheet-robust.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-mild.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-mild.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-sheet-raw.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-sheet-raw.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/audit-sheet-robust.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/audit-sheet-robust.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/browser-initial.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/results/browser-initial.json"
+    },
+    {
+      "path": "v2/research/tonal-next/results/comparison.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/results/comparison.json"
+    },
+    {
+      "path": "v2/research/tonal-next/results/conditioning-audit.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/conditioning-audit.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/conditioning-blue-candidates.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/conditioning-blue-candidates.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/conditioning-candidates.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/conditioning-candidates.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/conditioning-sheet-candidates.json.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/results/conditioning-sheet-candidates.json.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/results/grid-critical.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/results/grid-critical.json"
+    },
+    {
+      "path": "v2/research/tonal-next/results/grid-initial.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/results/grid-initial.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/conditioning-all-six-fresh.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/conditioning-all-six-fresh.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/conditioning-fresh.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/conditioning-fresh.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/conditioning-review.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/conditioning-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/conditioning-review.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/conditioning-review.md",
+      "readingEdition": "v2/research/tonal-next/review/conditioning-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/final-evidence-review.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/final-evidence-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/final-evidence-review.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/final-evidence-review.md",
+      "readingEdition": "v2/research/tonal-next/review/final-evidence-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/final-reaggregation.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/final-reaggregation.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/frozen-population-check.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/frozen-population-check.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/grid-extra-method.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/grid-extra-method.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/grid-extra-method.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/grid-extra-method.md",
+      "readingEdition": "v2/research/tonal-next/review/grid-extra-method.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/integrity-check.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/integrity-check.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/integrity-fresh.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/integrity-fresh.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/prepare-runtime.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/prepare-runtime.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/rerun-supplemental.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/rerun-supplemental.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-candidates-reproduce.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/review-conditioning-candidates-reproduce.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-candidates-result.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-conditioning-candidates-result.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-candidates.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-conditioning-candidates.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-candidates.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-conditioning-candidates.md",
+      "readingEdition": "v2/research/tonal-next/review/review-conditioning-candidates.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-reproduce.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/review-conditioning-reproduce.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-result.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-conditioning-result.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-review.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-conditioning-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-review.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-conditioning-review.md",
+      "readingEdition": "v2/research/tonal-next/review/review-conditioning-review.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-sheet-candidates.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-conditioning-sheet-candidates.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-conditioning-sheet-candidates.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-conditioning-sheet-candidates.md",
+      "readingEdition": "v2/research/tonal-next/review/review-conditioning-sheet-candidates.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-gate-evidence.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-gate-evidence.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-gates.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/review-runtime-gates.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-report.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-runtime-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-report.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-runtime-report.md",
+      "readingEdition": "v2/research/tonal-next/review/review-runtime-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round1-comparison.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-round1-comparison.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round1-evidence.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-round1-evidence.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round1-report.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-runtime-round1-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round1-report.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-runtime-round1-report.md",
+      "readingEdition": "v2/research/tonal-next/review/review-runtime-round1-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-comparison.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-comparison.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-evidence.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-evidence.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-report.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-report.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-report.md",
+      "readingEdition": "v2/research/tonal-next/review/review-runtime-round2-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-supplemental-check.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-supplemental-check.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-supplemental-evidence.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-supplemental-evidence.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-supplemental-report.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-supplemental-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-runtime-round2-supplemental-report.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-runtime-round2-supplemental-report.md",
+      "readingEdition": "v2/research/tonal-next/review/review-runtime-round2-supplemental-report.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-ui.html",
+      "kind": "html",
+      "url": "v2/research/tonal-next/review/review-ui.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/review-ui.md",
+      "kind": "markdown",
+      "url": "v2/research/tonal-next/review/review-ui.md",
+      "readingEdition": "v2/research/tonal-next/review/review-ui.html"
+    },
+    {
+      "path": "v2/research/tonal-next/review/runtime-fresh.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/runtime-fresh.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/runtime-fresh.log",
+      "kind": "other",
+      "url": "v2/research/tonal-next/review/runtime-fresh.log"
+    },
+    {
+      "path": "v2/research/tonal-next/review/runtime-fresh.mjs",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/runtime-fresh.mjs"
+    },
+    {
+      "path": "v2/research/tonal-next/review/selector-c5cfd3-reconstructed.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/review/selector-c5cfd3-reconstructed.py"
+    },
+    {
+      "path": "v2/research/tonal-next/review/selector-current-output.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/selector-current-output.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/selector-previous-output.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/selector-previous-output.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/selector-resolution.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/selector-resolution.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/selector-source.diff",
+      "kind": "other",
+      "url": "v2/research/tonal-next/review/selector-source.diff"
+    },
+    {
+      "path": "v2/research/tonal-next/review/supplemental-fresh.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/supplemental-fresh.json"
+    },
+    {
+      "path": "v2/research/tonal-next/review/supplemental-fresh.log",
+      "kind": "other",
+      "url": "v2/research/tonal-next/review/supplemental-fresh.log"
+    },
+    {
+      "path": "v2/research/tonal-next/review/trace-source-integrity.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/review/trace-source-integrity.json"
+    },
+    {
+      "path": "v2/research/tonal-next/test_guard_reference.py",
+      "kind": "source",
+      "url": "v2/research/tonal-next/test_guard_reference.py"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-raw.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/blue-raw.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-raw.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/blue-raw.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-raw.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/blue-raw.jsonl.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-robust.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/blue-robust.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-robust.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/blue-robust.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/blue-robust.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/blue-robust.jsonl.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-raw.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/sheet-raw.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-raw.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/sheet-raw.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-raw.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/sheet-raw.jsonl.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-robust.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/sheet-robust.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-robust.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/sheet-robust.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/sheet-robust.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/sheet-robust.jsonl.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-conditioned.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/smooth-conditioned.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-conditioned.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/smooth-conditioned.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-conditioned.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/smooth-conditioned.jsonl.gz"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-mild.json",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/smooth-mild.json"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-mild.jsonl",
+      "kind": "json",
+      "url": "v2/research/tonal-next/trials/smooth-mild.jsonl"
+    },
+    {
+      "path": "v2/research/tonal-next/trials/smooth-mild.jsonl.gz",
+      "kind": "other",
+      "url": "v2/research/tonal-next/trials/smooth-mild.jsonl.gz"
+    },
+    {
       "path": "v2/research/tonal-semantics/DEFINITIONS.html",
       "kind": "html",
       "url": "v2/research/tonal-semantics/DEFINITIONS.html"
@@ -4184,6 +4972,11 @@
       "url": "v2/source/opal-template.html"
     },
     {
+      "path": "v2/test-codes.mjs",
+      "kind": "source",
+      "url": "v2/test-codes.mjs"
+    },
+    {
       "path": "v2/test/browser.py",
       "kind": "source",
       "url": "v2/test/browser.py"
@@ -4192,6 +4985,21 @@
       "path": "v2/test/test.mjs",
       "kind": "source",
       "url": "v2/test/test.mjs"
+    },
+    {
+      "path": "v2/tonal-next.css",
+      "kind": "source",
+      "url": "v2/tonal-next.css"
+    },
+    {
+      "path": "v2/tonal-next.html",
+      "kind": "html",
+      "url": "v2/tonal-next.html"
+    },
+    {
+      "path": "v2/tonal-next.mjs",
+      "kind": "source",
+      "url": "v2/tonal-next.mjs"
     }
   ]
 }

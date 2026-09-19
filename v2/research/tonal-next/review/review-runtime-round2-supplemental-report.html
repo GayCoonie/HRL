@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Second-round supplemental receipt review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-runtime-round2-supplemental-report.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#identity-and-populations">Identity and populations</a></li><li><a href="#supplemental-edge-values">Supplemental edge values</a></li><li><a href="#conditioning-values">Conditioning values</a></li><li><a href="#receipt-hashes">Receipt hashes</a></li></ol></details><h1 id="second-round-supplemental-receipt-review">Second-round supplemental receipt review</h1>
+<p><strong>Contract: confirmed within the requested read-only scope. Quality: confirmed for receipt identity and saved arithmetic; runtime regeneration was outside scope.</strong> No integrity contradiction found.</p>
+<p>Reviewed only completed <code>audit-edge-sheet-raw.json</code>, <code>audit-edge-sheet-robust.json</code>, and <code>conditioning-sheet-candidates.json</code>; main candidate audits supplied record identity only. No repository edits, new/running fit outputs, Sites, GitHub, full audit runs, or autograd reruns.</p>
+<p>Evidence: <code>review-runtime-round2-supplemental-check.py</code> produced <code>review-runtime-round2-supplemental-evidence.json</code>: <strong>267,740 assertions, zero failures</strong>, including 186 source/record/frozen-manifest hash comparisons. The largest normalized arithmetic residual was 6.03e-16.</p>
+<h2 id="identity-and-populations">Identity and populations</h2>
+<ul>
+<li>Both supplemental candidate hashes match current record bytes and the corresponding main-audit and conditioning model hashes. All 148 current frozen manifest entries match. Edge receipts are explicitly <code>completed</code>; conditioning has no schema/status field, but contains the expected full payload, command/version metadata, Node exit 0, and all expected rows/checks.</li>
+<li>Edge: 316 rows and 6,320 stencil values across two candidates and two gamuts. Each gamut has 79 unique hues (72 regular plus 8 critical with H=281 shared), 20 distinct supplemental centres, and 1,580 stencil values. The centres are disjoint from the historical 121; all stencil points are legal.</li>
+<li>Conditioning: five models × 325 shared points = 1,625 rows; all analytic/autograd matrices plus five numerical matrices per point are present (11,375 matrices, including 8,125 numerical). Point identities, labels, factor order, step sizes, transformed matrices, SVD quantities, determinants, error comparisons, summary extrema, and all 35 implementation booleans reaggregate.</li>
+</ul>
+<h2 id="supplemental-edge-values">Supplemental edge values</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th>Gamut</th>
+  <th style="text-align:right">Regular mean</th>
+  <th style="text-align:right">Critical mean</th>
+  <th style="text-align:right">Largest stencil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>sheet-raw</td>
+  <td>srgb</td>
+  <td style="text-align:right">2209.889474</td>
+  <td style="text-align:right">2634.923501</td>
+  <td style="text-align:right">1037426.198201</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td>full</td>
+  <td style="text-align:right">2830.931330</td>
+  <td style="text-align:right">1129.760572</td>
+  <td style="text-align:right">885339.950034</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td>srgb</td>
+  <td style="text-align:right">2160.408452</td>
+  <td style="text-align:right">2592.482371</td>
+  <td style="text-align:right">967423.229928</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td>full</td>
+  <td style="text-align:right">2770.919450</td>
+  <td style="text-align:right">1127.403440</td>
+  <td style="text-align:right">819407.175340</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>edge-audit.mjs</code> lines 26–40 define the supplemental grid, exact nine-point normalized bending equation, and independent regular/critical summaries. Its formula matches <code>boundary-tonal/sheet-audit.mjs</code> lines 14–16. The receipt does not contain the raw XYZ/GenSpace stencil vectors; reaggregation verifies saved bending values, not fresh inverse evaluations.</p>
+<p><code>make-comparison.py</code> lines 12–21 uses the main audit’s native historical <code>sheet.globalRegular.blueMean</code>, retained weighted STRESS, and four path CV guards in both gamuts. It does not consume supplemental edge or conditioning fields. Edge results therefore remain diagnostic and cannot alter eligibility.</p>
+<h2 id="conditioning-values">Conditioning values</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Maximum condition</th>
+  <th style="text-align:right">Minimum propagated determinant</th>
+  <th style="text-align:right">Max analytic/autograd scaled Jacobian error</th>
+  <th style="text-align:right">Max numerical scaled Jacobian error, factor 1e-4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">112526.691904</td>
+  <td style="text-align:right">0.101369063730</td>
+  <td style="text-align:right">9.844e-11</td>
+  <td style="text-align:right">1.685e-06</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">112617.042579</td>
+  <td style="text-align:right">0.101791242604</td>
+  <td style="text-align:right">4.010e-11</td>
+  <td style="text-align:right">1.760e-06</td>
+</tr>
+</tbody>
+</table></div>
+<p>Both candidate condition maxima occur at H=269, R=0.000999, L=0.001. All seven recorded implementation gates pass for each of the five models. The numerical comparisons are fully recorded at all five factors, but are <strong>not acceptance gates</strong> in <code>conditioning-audit.py</code> lines 171–178. The candidate worst numerical scaled Jacobian errors rise to 6.418e-5 (raw) and 3.399e-4 (robust) at factor 1e-6.</p>
+<p>The conditioning quantity is a fixed-H source-to-destination coordinate Jacobian in equilateral bases, not XYZ/perceptual conditioning. Analytic and autograd share the existing implicit dark-inverse derivative; only the recorded JavaScript finite differences avoid that derivative. These were arithmetic and source-identity checks of saved evidence, not fresh execution of those three derivative paths. Finite samples do not prove continuous-domain regularity or observer preference. No candidate eligibility verdict is made here.</p>
+<h2 id="receipt-hashes">Receipt hashes</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Receipt</th>
+  <th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>audit-edge-sheet-raw.json</td>
+  <td><code>b12093a9041191bc517adfde61f68a9fc95b8889cf897cfaab928344f9968199</code></td>
+</tr>
+<tr>
+  <td>audit-sheet-raw.json</td>
+  <td><code>063496f6196660df68e6e4c5bb3bd7c4142e18572a0920cdeca430905c4345e1</code></td>
+</tr>
+<tr>
+  <td>audit-edge-sheet-robust.json</td>
+  <td><code>259277b5523cdc9b91cc9601eb1958de9ee0a3a814c5ac45294486db3527b103</code></td>
+</tr>
+<tr>
+  <td>audit-sheet-robust.json</td>
+  <td><code>7dfa5383adaa1f77007ae0e97dd26d0a46f54b462473826aa168d634ae2fefa0</code></td>
+</tr>
+<tr>
+  <td>conditioning-sheet-candidates.json</td>
+  <td><code>f7eaf942d56d15d86149a4c342816a7d9c215e9fac9361692f9eda334f90843a</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>Current reviewed selector SHA-256: <code>d4dbec95546c4d252a8143768e15a576437b72319f88cb791b7057a75a9ce8f4</code>. Full source and record hash evidence is retained in the JSON. Changes to these source/receipt bytes make this review stale.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

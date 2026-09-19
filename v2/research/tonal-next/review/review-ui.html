@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent comparison UI review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-ui.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#resolved-finding">Resolved finding</a></li><li><a href="#source-findings">Source findings</a></li><li><a href="#evidence-and-limits">Evidence and limits</a></li></ol></details><h1 id="independent-comparison-ui-review">Independent comparison UI review</h1>
+<p>Reviewed 2026-09-19. Scope: <code>v2/tonal-next.html</code>, <code>.css</code>, <code>.mjs</code>, their explicit-record runtime links, and the current two-candidate <code>comparison.json</code>. No UI source edits by this reviewer.</p>
+<p><strong>Contract: confirmed at source level; browser behavior remains inconclusive. Quality: no open material source findings after the bounded correction below.</strong> This is not a browser, visual, real Worker, deployment, or end-to-end approval.</p>
+<h2 id="resolved-finding">Resolved finding</h2>
+<p><strong>Contract / reliability; medium severity, high confidence — stale pixels after engine failure.</strong> In the reviewed intermediate module (<code>394d7b0112433a459ebca2f7500a2d7bc20c21f452ddddb2d896d812b79d2d0e</code>), <code>render()</code> changed the candidate title and profile description before returning on <code>engineFailure</code> (lines 166–175), while <code>failure()</code> left existing <code>.ready</code> sheets visible. A worker error after a sheet was ready followed by candidate/profile selection could label old pixels with the new model/profile.</p>
+<p>The author corrected <code>failure()</code> to remove both <code>.ready</code> classes, hide both cursors, and set both clipping readings unavailable (<code>tonal-next.mjs:186–193</code>). Reinspection confirms the CSS visibility gate then hides old canvases (<code>tonal-next.css:91</code>). The separate UI reviewer's same Node-VM harness first reproduced the defect and then passed the corrected case: <code>candidateSheetReady: false</code>, <code>cursorHidden: true</code>. Current <code>ui-review.json</code> records 20 passes, zero failures, and matches the final module/receipt hashes below. Its synthetic colors test request and visibility logic only; table assertions use the actual receipt.</p>
+<h2 id="source-findings">Source findings</h2>
+<ul>
+<li>Worker/model construction supplies the fetched exact record to <code>createSpectralTonalHRL</code>; the factory's fallback runs only without a record (<code>tonal-next.mjs:51–63</code>; <code>research/boundary-tonal/index.mjs:43–45</code>). Rendering and samples use the actual <code>toXYZ</code> output.</li>
+<li>Pending rendering coalesces requests; page request IDs reject old sheets/samples, including during hue debounce. Retry replaces the worker. An independent subordinate source pass found no additional worker-ordering issue.</li>
+<li>Triangle sampling, pointer inversion and cursor mapping agree: <code>x=R</code>, <code>y=1-L+R/2</code>; inputs enforce <code>0 &lt;= R &lt;= L &lt;= 1</code>. Equal 241×279 rasters retain their aspect ratio through CSS. Quarter-degree hue quantization keeps number/range values aligned. Arrow and pointer paths preserve legal coordinates.</li>
+<li>Display conversion clips linear sRGB channels before encoding; XYZ readouts remain unclipped. Full-solid screen limitations and optional triangle clipping marks are explicit.</li>
+<li>The table binds selected gamut/candidate keys and computes candidate-minus-baseline. It displays only <code>retained_combvd</code> STRESS; separate <code>mappedAllInput</code> values are not substituted. Current rejection and training/synthetic limits are stated. Candidate IDs are discovered from receipt keys, with safe record paths, so additional compatible trial IDs need no selector-code change.</li>
+<li><code>git diff --name-only</code> produced no tracked-file changes during final review; these additive UI files do not alter frozen APIs or coefficient records.</li>
+</ul>
+<h2 id="evidence-and-limits">Evidence and limits</h2>
+<p>Fresh command from <code>hrl-v2-next</code>: <code>node --check v2/tonal-next.mjs</code> exited 0 with no output. All three new UI files were read; final error-path changes were reread. <code>sha256sum</code> and the inspected VM receipt bind this review to:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>File</th>
+  <th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>v2/tonal-next.html</code></td>
+  <td><code>6b1c2404ffc12de4b04df14bea9fc251d49ca2255eca685c03de2c8ca11c49d7</code></td>
+</tr>
+<tr>
+  <td><code>v2/tonal-next.css</code></td>
+  <td><code>3ed0afe70a57e98e01ddcb458db046a1e135df4ee6d4aa0d0ce11c8d2a1bfc83</code></td>
+</tr>
+<tr>
+  <td><code>v2/tonal-next.mjs</code></td>
+  <td><code>083d33aba97bf369cba87c95232e1b882248103a5cb5d586572d3359fda5e7a7</code></td>
+</tr>
+<tr>
+  <td><code>v2/research/tonal-next/results/comparison.json</code></td>
+  <td><code>87074c676d1bba83373fa2ab18653e25e042709e5dcf4523a2569b8f3f2adac0</code></td>
+</tr>
+</tbody>
+</table></div>
+<p>No browser was available to this review. Responsive layout, actual module-worker loading, pointer capture, keyboard focus, and screen-reader behavior remain unverified. Smallest remaining check: run the existing browser checks at the declared desktop/intermediate/mobile widths, including load failures/retry and a candidate/profile change after worker failure. Four-candidate receipt behavior is supported by source inspection; the current real receipt contains two trials only.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

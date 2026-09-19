@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL v2 tonal continuation: six rejected candidates · HRL</title><link rel="stylesheet" href="../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../index.html">v2 Beta 1</a><a href="../../beta1.html">Picker</a><a href="../../beta1-notes.html">Definition</a><a href="../../benchmarks.html">Benchmarks</a><a href="../../../index.html">Release 1</a><a href="../../archive.html">Archive</a><a href="../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="RESULTS.md" download>Download original Markdown</a> · <a href="../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#scope-and-decision-rule">Scope and decision rule</a></li><li><a href="#executed-trials-and-eligibility">Executed trials and eligibility</a></li><li><a href="#observer-score-populations-remain-separate">Observer-score populations remain separate</a></li><li><a href="#whole-sheet-critical-angle-and-edge-qualifications">Whole-sheet, critical-angle and edge qualifications</a></li><li><a href="#conditioning-a-real-issue-an-insufficient-objective">Conditioning: a real issue, an insufficient objective</a></li><li><a href="#validation-and-reproducibility">Validation and reproducibility</a></li><li><a href="#what-this-pass-contributes-and-the-next-question">What this pass contributes, and the next question</a></li></ol></details><h1 id="hrl-v2-tonal-continuation-six-rejected-candidates">HRL v2 tonal continuation: six rejected candidates</h1>
+<p><strong>No candidate met the declared eligibility rule. Beta 1 remains the default.</strong> The largest native regular-blue sheet improvement was <strong>0.744576%</strong>, from <code>sheet-raw</code>, against a required <strong>5%</strong>. The experiment established that the severe sampled common-coordinate anisotropy is real, and that reducing it can make the native blue sheets worse. The six records are retained as research evidence, with no release promotion.</p>
+<p>The final <a href="results/comparison.json">comparison receipt</a> has <code>status: no-eligible-candidate</code>. Its <code>selectedCandidate: sheet-raw</code> identifies the comparison displayed for inspection; it does not mean that candidate was accepted. This report closes the bounded pass recorded in <a href="RESEARCH.html">RESEARCH.md</a>. The earlier “No experiment results yet” line in that append-only record belongs to its initial state.</p>
+<h2 id="scope-and-decision-rule">Scope and decision rule</h2>
+<p>This pass continued the existing seven-layer shared tonal map. It kept the source charts, physical boundary, hue family, neutral progression, anchors and single coefficient bank shared between native sRGB and the full realization. COMBVD was reused development/training data. GenSpace paths, sheet bending and coordinate conditioning are synthetic diagnostics; none supplies new observer evidence or a held-out result. No fresh upstream ColorBench run was performed.</p>
+<p>Before candidate outcomes, the protocol fixed eligibility to all of:</p>
+<ol>
+<li>At least 5% lower <strong>native sRGB regular-blue mean bending</strong>, using the historical 121-centre sheet diagnostic.</li>
+<li>Retained weighted COMBVD STRESS no more than <strong>+0.15 points</strong> above Beta 1, separately for native sRGB and full.</li>
+<li>Each global regular path-family mean CV no more than <strong>1.03 times</strong> its own baseline, for black, white, exchange and reach in each gamut: eight separate guards.</li>
+</ol>
+<p>The first criterion uses the eight regular hues H256, 261, 266, 271, 276, 281, 286 and 291. Exact critical hues H263, 269, 273, 275, 277, 281, 285 and 293 are reported separately. The initially mentioned alternative “worst path risk” branch was explicitly excluded before outcomes, so it cannot rescue a rejected candidate. The <a href="make-comparison.py">reducer</a> and <a href="review/review-runtime-report.html">gate review</a> document this interpretation.</p>
+<p>All reported decisions use actual JavaScript evaluation of the frozen candidate records, including inverse <code>toXYZ</code> followed by the frozen GenSpace ruler for paths and sheets. They do not use the fitter's interpolated surrogate scores. The audit covers 72 regular hues plus seven additional unique critical hues, 20 paths of 257 samples per hue, and 121 nine-point sheet stencils per hue, in each gamut. The two control hues are already in the regular set. See <a href="audit.mjs">audit.mjs</a>.</p>
+<h2 id="executed-trials-and-eligibility">Executed trials and eligibility</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Native regular-blue bending</th>
+  <th style="text-align:right">Improvement from Beta 1</th>
+  <th style="text-align:right">Native weighted STRESS delta</th>
+  <th style="text-align:right">Full weighted STRESS delta</th>
+  <th>Eight path guards</th>
+  <th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">0.506681904</td>
+  <td style="text-align:right">—</td>
+  <td style="text-align:right">—</td>
+  <td style="text-align:right">—</td>
+  <td>Reference</td>
+  <td>Retain</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">0.513698660</td>
+  <td style="text-align:right">−1.384844%</td>
+  <td style="text-align:right">+0.050976</td>
+  <td style="text-align:right">+0.050986</td>
+  <td>All pass</td>
+  <td>Reject: blue worsens</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">0.738419882</td>
+  <td style="text-align:right">−45.736383%</td>
+  <td style="text-align:right">+0.055480</td>
+  <td style="text-align:right">+0.057142</td>
+  <td>Four fail</td>
+  <td>Reject: blue and path guards</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">0.502909272</td>
+  <td style="text-align:right">+0.744576%</td>
+  <td style="text-align:right">+0.037102</td>
+  <td style="text-align:right">+0.000209</td>
+  <td>All pass</td>
+  <td>Reject: below 5%</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">0.504830013</td>
+  <td style="text-align:right">+0.365494%</td>
+  <td style="text-align:right">+0.025923</td>
+  <td style="text-align:right">−0.001318</td>
+  <td>All pass</td>
+  <td>Reject: below 5%</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">0.505563466</td>
+  <td style="text-align:right">+0.220738%</td>
+  <td style="text-align:right">+0.047845</td>
+  <td style="text-align:right">−0.018854</td>
+  <td>All pass</td>
+  <td>Reject: below 5%</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">0.504677943</td>
+  <td style="text-align:right">+0.395507%</td>
+  <td style="text-align:right">+0.037339</td>
+  <td style="text-align:right">−0.011674</td>
+  <td>All pass</td>
+  <td>Reject: below 5%</td>
+</tr>
+</tbody>
+</table></div>
+<p>Positive improvement means lower bending. Every candidate passes both retained weighted STRESS guards. <code>smooth-conditioned</code> fails native white and exchange CV, at ratios <strong>1.048675</strong> and <strong>1.063120</strong>, and full white and exchange CV, at <strong>1.043410</strong> and <strong>1.052985</strong>. The largest of the eight ratios for the other candidates is 1.008100 for <code>smooth-mild</code>, 1.000842 for <code>sheet-raw</code>, 1.000639 for <code>sheet-robust</code>, 1.002299 for <code>blue-raw</code>, and 1.000961 for <code>blue-robust</code>. All are below 1.03.</p>
+<p>The sequence was exploratory, with each pivot declared before its own results:</p>
+<ul>
+<li><strong>Trials 1–2:</strong> <code>smooth-mild</code> and <code>smooth-conditioned</code> started from Beta 1, each with a 450-step LBFGS limit. Their settings differed only in conditioning weight, 0.003 versus 0.015. Both reduced sampled maximum condition substantially; both worsened native blue bending.</li>
+<li><strong>Trials 3–4:</strong> <code>sheet-raw</code> and <code>sheet-robust</code> restarted from Beta 1 with 450-step limits. Inspection had found that the inherited training sheet objective pooled 141 centres while the historical direct audit used 121. These trials aligned the core objective with the historical 121 and separately penalized regressions at the additional 20 edge centres. Raw versus <code>log1p</code> core bending was the ablation. The best native gain was under 1%.</li>
+<li><strong>Trials 5–6:</strong> <code>blue-raw</code> and <code>blue-robust</code> warm-started <code>sheet-raw</code>, with 600-step limits and stronger blue, accuracy, path and edge weights. Accuracy/path/edge references remained Beta 1. Seven exact critical-angle slices were appended to the 96-slice source cache, preserving its original prefix bytes; the fitting hue set grew from 48 to 55. The final pair did not beat <code>sheet-raw</code> on the declared native-blue criterion.</li>
+</ul>
+<p>These six fits close this pass. No seventh or eighth trial was run. LBFGS closure evaluation counts can exceed the iteration limit because of line searches; the records retain both the requested step limit and evaluation counts. Exact settings, source identities, coefficients and objective statistics are in the six <a href="trials/">trial records</a>, with the corresponding <a href="fit-first-round.py">first-round</a>, <a href="fit-sheet-round.py">second-round</a> and <a href="fit.py">final</a> fitters. The <a href="results/grid-initial.json">initial</a> and <a href="results/grid-critical.json">augmented</a> grid receipts preserve cache provenance.</p>
+<h2 id="observer-score-populations-remain-separate">Observer-score populations remain separate</h2>
+<p>Lower STRESS is better. “Weighted” uses the recorded COMBVD weights; “unweighted” is shown for context and does not replace the weighted guard.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native retained 3,331: weighted</th>
+  <th style="text-align:right">Native retained: unweighted</th>
+  <th style="text-align:right">Full retained 3,813: weighted</th>
+  <th style="text-align:right">Full retained: unweighted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">29.107048</td>
+  <td style="text-align:right">30.712588</td>
+  <td style="text-align:right">29.948555</td>
+  <td style="text-align:right">32.127880</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">29.158024</td>
+  <td style="text-align:right">30.871648</td>
+  <td style="text-align:right">29.999540</td>
+  <td style="text-align:right">32.211298</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">29.162528</td>
+  <td style="text-align:right">30.866300</td>
+  <td style="text-align:right">30.005697</td>
+  <td style="text-align:right">32.273768</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">29.144150</td>
+  <td style="text-align:right">30.755614</td>
+  <td style="text-align:right">29.948763</td>
+  <td style="text-align:right">32.127928</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">29.132971</td>
+  <td style="text-align:right">30.732744</td>
+  <td style="text-align:right">29.947236</td>
+  <td style="text-align:right">32.121424</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">29.154893</td>
+  <td style="text-align:right">30.756988</td>
+  <td style="text-align:right">29.929700</td>
+  <td style="text-align:right">32.102562</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">29.144386</td>
+  <td style="text-align:right">30.751174</td>
+  <td style="text-align:right">29.936881</td>
+  <td style="text-align:right">32.116575</td>
+</tr>
+</tbody>
+</table></div>
+<p>The native all-input import pipeline below evaluates <strong>3,813 pairs</strong>, of which <strong>482</strong> have a mapping event in at least one endpoint. It is a separate pipeline result, with a different population and import treatment from native retained 3,331. It is not an additional full-gamut result and does not enter eligibility.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native mapped/all-input: weighted</th>
+  <th style="text-align:right">Native mapped/all-input: unweighted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">34.489196</td>
+  <td style="text-align:right">38.126339</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">34.674289</td>
+  <td style="text-align:right">38.452574</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">34.719747</td>
+  <td style="text-align:right">38.509227</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">34.523231</td>
+  <td style="text-align:right">38.165220</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">34.509019</td>
+  <td style="text-align:right">38.138869</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">34.527619</td>
+  <td style="text-align:right">38.160666</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">34.521151</td>
+  <td style="text-align:right">38.157898</td>
+</tr>
+</tbody>
+</table></div>
+<p>The comparison receipt stores unrounded values and all seven source audit hashes. Raw receipts are <a href="results/audit-baseline.json.gz">baseline</a>, <a href="results/audit-mild.json.gz">mild</a>, <a href="results/audit-conditioned.json.gz">conditioned</a>, <a href="results/audit-sheet-raw.json.gz">sheet-raw</a>, <a href="results/audit-sheet-robust.json.gz">sheet-robust</a>, <a href="results/audit-blue-raw.json.gz">blue-raw</a> and <a href="results/audit-blue-robust.json.gz">blue-robust</a>. Hashes in <code>comparison.json</code> identify the decompressed JSON bytes, not the gzip containers.</p>
+<h2 id="whole-sheet-critical-angle-and-edge-qualifications">Whole-sheet, critical-angle and edge qualifications</h2>
+<p>The regular-blue acceptance measure describes one region. Broader or more targeted summaries can move differently:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native whole-sheet mean</th>
+  <th style="text-align:right">Full whole-sheet mean</th>
+  <th style="text-align:right">Native exact-critical mean</th>
+  <th style="text-align:right">Full exact-critical mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">0.464887</td>
+  <td style="text-align:right">0.718056</td>
+  <td style="text-align:right">0.571187</td>
+  <td style="text-align:right">0.287537</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">0.468591</td>
+  <td style="text-align:right">0.691466</td>
+  <td style="text-align:right">0.579535</td>
+  <td style="text-align:right">0.297606</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">0.535850</td>
+  <td style="text-align:right">0.725669</td>
+  <td style="text-align:right">1.058624</td>
+  <td style="text-align:right">0.295171</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">0.463680</td>
+  <td style="text-align:right">0.698026</td>
+  <td style="text-align:right">0.569503</td>
+  <td style="text-align:right">0.287358</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">0.463940</td>
+  <td style="text-align:right">0.716898</td>
+  <td style="text-align:right">0.569737</td>
+  <td style="text-align:right">0.287049</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">0.463937</td>
+  <td style="text-align:right">0.700629</td>
+  <td style="text-align:right">0.562190</td>
+  <td style="text-align:right">0.287069</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">0.464584</td>
+  <td style="text-align:right">0.705254</td>
+  <td style="text-align:right">0.571680</td>
+  <td style="text-align:right">0.286888</td>
+</tr>
+</tbody>
+</table></div>
+<p>Here whole-sheet means are over the 72 regular hues and historical 121 centres; exact-critical means use the separate eight critical angles. <code>blue-raw</code> improves its native critical mean more than <code>sheet-raw</code>, but its native regular-blue mean improves less. This is a measured sampling distinction, not grounds to replace the preregistered criterion after seeing outcomes.</p>
+<p>The 20 additional edge centres are disjoint from the historical 121. Their separate <a href="edge-audit.mjs">edge audit</a> uses the same normalized bending equation and preserves regular/critical summaries. These values are large and uneven, so they must not be folded into the historical means or used to claim general dark-edge smoothness.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Native edge regular mean</th>
+  <th style="text-align:right">Native edge critical mean</th>
+  <th style="text-align:right">Full edge regular mean</th>
+  <th style="text-align:right">Full edge critical mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">2167.141867</td>
+  <td style="text-align:right">2577.107711</td>
+  <td style="text-align:right">2776.137374</td>
+  <td style="text-align:right">1125.704574</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">2140.086819</td>
+  <td style="text-align:right">3406.592221</td>
+  <td style="text-align:right">2595.223012</td>
+  <td style="text-align:right">1135.912271</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">3060.163205</td>
+  <td style="text-align:right">10453.105748</td>
+  <td style="text-align:right">3527.219821</td>
+  <td style="text-align:right">2936.025382</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">2209.889474</td>
+  <td style="text-align:right">2634.923501</td>
+  <td style="text-align:right">2830.931330</td>
+  <td style="text-align:right">1129.760572</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">2160.408452</td>
+  <td style="text-align:right">2592.482371</td>
+  <td style="text-align:right">2770.919450</td>
+  <td style="text-align:right">1127.403440</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">2147.783051</td>
+  <td style="text-align:right">2589.924747</td>
+  <td style="text-align:right">2777.514402</td>
+  <td style="text-align:right">1115.924288</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">2146.662814</td>
+  <td style="text-align:right">2576.266954</td>
+  <td style="text-align:right">2761.525302</td>
+  <td style="text-align:right">1123.207534</td>
+</tr>
+</tbody>
+</table></div>
+<p><code>sheet-raw</code>, the displayed comparison, worsens all four edge means. Its largest regular edge stencil rises from 982,593.047 to 1,037,426.198 in native sRGB and from 833,777.882 to 885,339.950 in full. Soft training penalties do not guarantee pointwise nonregression. <code>blue-robust</code> lowers all four edge means, but that does not make it eligible or establish improvement at every point. Edge receipts: <a href="results/audit-edge-baseline.json.gz">baseline</a>, <a href="results/audit-edge-candidates.json.gz">first pair</a>, <a href="results/audit-edge-sheet-raw.json.gz">sheet-raw</a>, <a href="results/audit-edge-sheet-robust.json.gz">sheet-robust</a>, <a href="results/audit-edge-blue-candidates.json.gz">final pair</a>.</p>
+<p>Passing mean-CV guards also does not bound worst path behavior. For example, <code>sheet-raw</code>'s largest full regular-path retreat fraction rises from 0.182719 to 0.187657, while <code>blue-raw</code>'s largest native regular-path step jump rises from 1.402489 to 1.405772. The raw path summaries retain these tails and the separate critical/control diagnostics.</p>
+<h2 id="conditioning-a-real-issue-an-insufficient-objective">Conditioning: a real issue, an insufficient objective</h2>
+<p>The conditioning audit measures the spectral condition of a <strong>fixed-H, 2×2 common-coordinate source-to-destination Jacobian</strong>. Both source and destination use the equilateral basis <code>x = sqrt(3) R / 2</code>, <code>z = L − R / 2</code>. It is neither the source-to-XYZ Jacobian nor a full three-dimensional H/R/L or perceptual Jacobian.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Maximum condition over the same 325 points</th>
+  <th style="text-align:right">Reduction from Beta 1</th>
+  <th>Location H, R, L</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Beta 1</td>
+  <td style="text-align:right">113447.181723</td>
+  <td style="text-align:right">—</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">60097.315771</td>
+  <td style="text-align:right">+47.026171%</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">21738.547222</td>
+  <td style="text-align:right">+80.838178%</td>
+  <td>216, 0.04995, 0.05</td>
+</tr>
+<tr>
+  <td>sheet-raw</td>
+  <td style="text-align:right">112526.691904</td>
+  <td style="text-align:right">+0.811382%</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+<tr>
+  <td>sheet-robust</td>
+  <td style="text-align:right">112617.042579</td>
+  <td style="text-align:right">+0.731741%</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+<tr>
+  <td>blue-raw</td>
+  <td style="text-align:right">114567.439794</td>
+  <td style="text-align:right">−0.987471%</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+<tr>
+  <td>blue-robust</td>
+  <td style="text-align:right">113643.042801</td>
+  <td style="text-align:right">−0.172645%</td>
+  <td>269, 0.000999, 0.001</td>
+</tr>
+</tbody>
+</table></div>
+<p>Independent 80-digit calculations and stable actual-JavaScript finite differences reproduce the decisive baseline and first-pair extrema. The severe baseline values survive the change of method and step size: they are not explained by the old tiny finite-difference step. See the <a href="review/review-conditioning-review.html">baseline review</a>, <a href="review/review-conditioning-candidates.html">candidate review</a>, and <a href="review/review-conditioning-sheet-candidates.html">sheet-pair review</a>. The saved full-grid derivative receipts are <a href="results/conditioning-audit.json.gz">baseline</a>, <a href="results/conditioning-candidates.json.gz">first pair</a>, <a href="results/conditioning-sheet-candidates.json.gz">sheet pair</a>, and <a href="results/conditioning-blue-candidates.json.gz">final pair</a>.</p>
+<p>For the final pair, the saved maximum relative condition disagreement between analytic and actual-JavaScript numerical derivatives at boundary-distance factor <code>1e-4</code> is 5.316326e-6 for <code>blue-raw</code> and 2.910789e-6 for <code>blue-robust</code>. These are much smaller than their measured increases in maximum condition. Smaller steps can become noisier; convergence is assessed across steps rather than by choosing the smallest one.</p>
+<p>Several limits matter. Analytic and autograd pathways share the implicit dark-inverse derivative; the numerical JavaScript pathway does not. The audit's exit status gates forward parity and analytic/autograd agreement, but does <strong>not</strong> gate numerical derivative agreement, so the numerical rows require explicit review. All sampled analytic determinants are positive; that establishes orientation at those points, not a global no-fold proof. Sampled maxima are not global bounds, and reductions are not uniform across points. In particular, the large condition reduction in <code>smooth-conditioned</code> coexists with a 45.736383% native blue-bending regression and four failed path guards.</p>
+<h2 id="validation-and-reproducibility">Validation and reproducibility</h2>
+<p>The completed main receipts record the unchanged 148-file frozen manifest, exact source/input/ruler hashes, candidate record hashes, retained populations, legal-domain/inverse checks, neutral and vivid anchors, hue seam, invalid-input rejection and 256 shared-bank identity samples. The original report preparation completed <strong>499 receipt/hash/arithmetic checks, exit 0</strong>: all seven main receipts matched the comparison hashes and then-current source/model bytes; score populations, regular path CV means and regular/critical/control sheet means reaggregated; all selection values and decisions agreed; conditioning maxima and positive sampled determinants matched raw rows. These checks verified the recorded evidence, rather than running a new fit or a second full runtime audit. They precede reconstruction of this report and are not a claim that the reconstructed text has the same bytes as the earlier draft.</p>
+<p>Independent <a href="review/review-runtime-round1-report.html">first-round</a> and <a href="review/review-runtime-round2-report.html">second-round</a> reviews also freshly reproduced every retained/mapped score and a bounded H281 path/sheet sample from the actual runtime. The <a href="review/review-runtime-round2-supplemental-report.html">second-round supplemental review</a> checked edge and conditioning identity/arithmetic without rerunning their complete forward or derivative evaluations. Those scopes should not be inflated into a fresh complete audit of every hue or every trial.</p>
+<p>The <a href="review/final-evidence-review.html">final evidence review</a> freshly evaluated Beta 1, <code>sheet-raw</code>, <code>blue-raw</code> and <code>blue-robust</code> in both gamuts. All retained/mapped scores matched; H281 path CVs across 20 paths × 257 samples matched exactly; the 121 sheet-stencil values differed by at most 2.274e-13. It also checked 120 finite geometry cases per profile, an exported H275 grid, and exact identity between the public Beta 1 factory and its explicit record. The <a href="review/conditioning-review.html">final conditioning review</a> confirmed the final pair's maxima with fresh high-precision calculations and checked saved conditioning arithmetic for all six candidates. These remain bounded reproductions, not exhaustive continuous-domain tests.</p>
+<p>A historical third-round supplemental checker recorded one failure, <code>selector_unchanged</code>, because it expected the older selector hash beginning <code>c5cfd3</code> while the already reviewed selector began <code>d4dbec</code>. The final review reconstructed the older bytes and found that the sole change was rejection-message prose, “Neither” to “No”; numerical and eligibility outputs of both versions matched. This resolves the stale identity expectation without changing the original failure record, selection equations or rejected-candidate outcomes.</p>
+<p>For a new actual-runtime receipt, run from the repository root with a fresh absolute output filename, for example:</p>
+<pre><code class="language-sh">node v2/research/tonal-next/audit.mjs \
+  --out /tmp/hrl-sheet-raw-audit.json \
+  sheet-raw=v2/research/tonal-next/trials/sheet-raw.json
+
+python v2/research/tonal-next/conditioning-audit.py \
+  --output /tmp/hrl-sheet-raw-conditioning.json \
+  --record sheet-raw=v2/research/tonal-next/trials/sheet-raw.json
+</code></pre>
+<p>Use an unused output path to preserve earlier receipts. The runtime audit reads the frozen training inputs/cache and historical checks already in the repository. Fitting additionally needs the separate binary source grids and the versioned Python environment described in <a href="README.html">README.md</a>; a report reproduction does not require fitting. To reproduce the final selection from the packaged raw evidence, decompress the seven main receipt files into a temporary directory, then run <code>make-comparison.py</code> with the baseline and all six candidates:</p>
+<pre><code class="language-sh">python v2/research/tonal-next/make-comparison.py \
+  --baseline /tmp/hrl-receipts/audit-baseline.json \
+  --candidate /tmp/hrl-receipts/audit-mild.json \
+  --candidate /tmp/hrl-receipts/audit-conditioned.json \
+  --candidate /tmp/hrl-receipts/audit-sheet-raw.json \
+  --candidate /tmp/hrl-receipts/audit-sheet-robust.json \
+  --candidate /tmp/hrl-receipts/audit-blue-raw.json \
+  --candidate /tmp/hrl-receipts/audit-blue-robust.json \
+  --out /tmp/hrl-comparison-reproduced.json
+</code></pre>
+<p>The generated timestamp will differ; model metrics, gates, selection and input hashes should agree. A reducer success alone does not verify source identity or raw receipt integrity; those checks precede interpretation.</p>
+<h2 id="what-this-pass-contributes-and-the-next-question">What this pass contributes, and the next question</h2>
+<p><strong>H1 is supported at the sampled points:</strong> severe common-coordinate derivative anisotropy is numerically real. <strong>H2 is rejected for these six executed candidates under the fixed rule:</strong> none supplies the required native-blue improvement while meeting the other gates. This does not prove that every possible continuation must fail. <strong>H3 is supported within the sampled contract checks:</strong> the trials preserve the shared-bank and geometric/input contracts checked by the audit; continuous-domain behavior is not proved by finite sampling.</p>
+<p>The useful contributions are the verified derivative diagnosis, a candidate-aware actual-runtime audit, explicit population separation, corrected Beta 1 guard reference, an identified 121-versus-141 sheet-objective mismatch, separate extreme-edge diagnostics, and exact critical-angle cache coverage. The failed conditioning ablation also rules out using a smaller common-map condition maximum as sufficient evidence of a better displayed blue sheet.</p>
+<p>The next research question is whether the remaining blue behavior is dominated by the shared tonal map, the source/XYZ transformation, or their composition, and how accurately the cached fitting surrogate predicts direct-runtime derivatives and bending in that region. A useful next pass would first compare those components at matched legal points and stencils, with exact critical angles and edge cases kept explicit. That diagnosis can distinguish an objective/sampling limitation from a limitation in the map family before another optimization run. Revising the three-dimensional hue/source field remains a separate empirical change requiring its own protocol. No such revision, new observer dataset or additional fit is claimed here.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../site/preservation.json">Preservation audit</a></footer></main></body></html>

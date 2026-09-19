@@ -1,0 +1,5 @@
+import fs from 'node:fs';import{gunzipSync}from'node:zlib';import assert from 'node:assert/strict';import crypto from 'node:crypto';
+import {sharedCoordinates} from '../shared-rl/core.mjs';
+const input=process.argv[2],out=process.argv[3];assert(input&&out);assert(!fs.existsSync(out));const stored=fs.readFileSync(input),raw=input.endsWith('.gz')?gunzipSync(stored):stored,data=JSON.parse(raw),models=[];
+for(const x of data.models){let maxError=0;for(let i=0;i<data.points.length;i++){const[H,R,L]=data.points[i];for(const inverse of[false,true]){const q=sharedCoordinates({H,R,L},x.record,inverse),expected=x[inverse?'toSource':'fromSource'][i];for(const[j,k]of['H','R','L'].entries())maxError=Math.max(maxError,Math.abs(q[k]-expected[j]));}}assert(maxError<1e-9,x.record.variant+' parity '+maxError);models.push({id:x.record.variant,sha256:x.sha256,maxError,pointsPerDirection:data.points.length});}
+const receipt={schema:'hrl-global-runtime-parity-receipt-v1',fixture_sha256:crypto.createHash('sha256').update(raw).digest('hex'),status:'passed',tolerance:1e-9,models};fs.writeFileSync(out,JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));

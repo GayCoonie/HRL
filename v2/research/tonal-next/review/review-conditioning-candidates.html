@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Independent candidate conditioning review · HRL</title><link rel="stylesheet" href="../../../../site/site.css"></head>
+<body class="hrl-shell"><a class="hrl-skip" href="#hrl-main">Skip to content</a><!-- HRL SITE NAV BETA1 --><nav class="hrl-site-nav" aria-label="HRL site"><a class="hrl-brand" href="../../../index.html">HRL<small>Hue · Reach · Level</small></a><div class="hrl-nav-links"><a href="../../../index.html">v2 Beta 1</a><a href="../../../beta1.html">Picker</a><a href="../../../beta1-notes.html">Definition</a><a href="../../../benchmarks.html">Benchmarks</a><a href="../../../../index.html">Release 1</a><a href="../../../archive.html">Archive</a><a href="../../../../library.html">All files</a></div></nav>
+<main id="hrl-main" class="hrl-page hrl-document"><div class="hrl-eyebrow">Documentation · reading edition</div><p><a href="review-conditioning-candidates.md" download>Download original Markdown</a> · <a href="../../../../library.html">All documents and data</a></p><details class="hrl-toc"><summary>Contents</summary><ol><li><a href="#same-grid-maxima-with-metricbeta1-as-the-baseline">Same-grid maxima, with metric/Beta1 as the baseline</a></li><li><a href="#numerical-verification">Numerical verification</a></li><li><a href="#provenance-and-limitations">Provenance and limitations</a></li></ol></details><h1 id="independent-candidate-conditioning-review">Independent candidate conditioning review</h1>
+<p><strong>Confirmed: on the same 325 source points, smooth-mild reduces the maximum fixed-H common-map condition by 47.03%, and smooth-conditioned by 80.84%, relative to metric/Beta1.</strong> Stable actual-JavaScript differences and fresh independent 80-digit calculations support both candidate maxima. No blocker to this bounded conditioning claim was found. This does not establish improved XYZ geometry, native-space bending or perceptual performance.</p>
+<h2 id="same-grid-maxima-with-metricbeta1-as-the-baseline">Same-grid maxima, with metric/Beta1 as the baseline</h2>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Model</th>
+  <th style="text-align:right">Maximum analytic condition</th>
+  <th>Location H, R, L</th>
+  <th style="text-align:right">Maximum reduction versus metric/Beta1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>metric / Beta1</td>
+  <td style="text-align:right">113447.181723</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">Baseline</td>
+</tr>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">60097.315771</td>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">47.0262%</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">21738.547222</td>
+  <td>216, .04995, .05</td>
+  <td style="text-align:right">80.8382%</td>
+</tr>
+</tbody>
+</table></div>
+<p>The metric baseline and mild candidate share a maximum location; the conditioned candidate's maximum moves to H216. Comparing the exact historical extreme points makes that shift explicit:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Source point H, R, L</th>
+  <th style="text-align:right">Metric / Beta1</th>
+  <th style="text-align:right">Smooth-mild</th>
+  <th style="text-align:right">Smooth-conditioned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>269, .000999, .001</td>
+  <td style="text-align:right">113447.181723</td>
+  <td style="text-align:right">60097.315771</td>
+  <td style="text-align:right">413.742245</td>
+</tr>
+<tr>
+  <td>216, .04995, .05</td>
+  <td style="text-align:right">65063.390173</td>
+  <td style="text-align:right">57894.392865</td>
+  <td style="text-align:right">21738.547222</td>
+</tr>
+</tbody>
+</table></div>
+<p>At H269 the conditioned candidate reduces condition by 99.6353% versus metric; at H216 it reduces it by 66.5887%. These are pointwise statements; the 80.8382% figure compares maxima over the identical declared grid.</p>
+<p>For secondary context, parent and balanced have sampled maxima 122403.747895 at H269 and 25197.951631 at H216. Mild's maximum is 50.9024% below parent but 138.5008% above balanced; conditioned is 82.2403% below parent and 13.7289% below balanced.</p>
+<p><strong>The reduction is not uniform.</strong> Against metric/Beta1, mild improves 164 of 325 points and worsens 161; conditioned improves 197 and worsens 128. Thus neither candidate dominates the baseline pointwise, and a smaller sampled maximum must not be described as improvement everywhere.</p>
+<h2 id="numerical-verification">Numerical verification</h2>
+<p>Across all 325 points, the largest actual-JavaScript relative condition errors versus analytic are:</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate</th>
+  <th style="text-align:right">Step factor 1e-3</th>
+  <th style="text-align:right">Step factor 1e-4</th>
+  <th style="text-align:right">Step factor 1e-6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">1.2885e-5</td>
+  <td style="text-align:right">2.0096e-6</td>
+  <td style="text-align:right">1.6561e-4</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">1.7095e-5</td>
+  <td style="text-align:right">1.4961e-6</td>
+  <td style="text-align:right">3.8201e-4</td>
+</tr>
+</tbody>
+</table></div>
+<p>Factors multiply <code>min(R,L-R,1-L)</code>. The stable range agrees tightly; the smallest steps are noisier. Candidate forward Python/JS differences remain below 6.06e-15, analytic/autograd scaled matrix differences below 2.93e-10, and analytic determinants are positive at every sampled point. All recorded implementation checks pass. As in the first review, program exit 0 alone does not gate independent JS derivative agreement; the numeric rows were inspected explicitly here.</p>
+<p>The two candidate maxima were independently reproduced with the separate 80-digit scalar-forward implementation from the first review, using central steps at boundary-distance factors 1e-20 and 1e-25. The two step estimates agree within 7.58e-41 relatively.</p>
+<div class="hrl-table-wrap"><table>
+<thead>
+<tr>
+  <th>Candidate maximum</th>
+  <th style="text-align:right">Independent condition</th>
+  <th style="text-align:right">Stored analytic relative error</th>
+  <th style="text-align:right">Largest fresh JS relative error at factors 1e-3 and 1e-4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>smooth-mild</td>
+  <td style="text-align:right">60097.3157706828</td>
+  <td style="text-align:right">9.72e-12</td>
+  <td style="text-align:right">2.13e-7</td>
+</tr>
+<tr>
+  <td>smooth-conditioned</td>
+  <td style="text-align:right">21738.5472219003</td>
+  <td style="text-align:right">3.57e-12</td>
+  <td style="text-align:right">6.85e-7</td>
+</tr>
+</tbody>
+</table></div>
+<p>Reproduction command, exit <strong>0</strong>; nested actual-JavaScript execution also exited <strong>0</strong>:</p>
+<pre><code class="language-sh">/workspace/scratch/20abb8fd27ac/hrl-opt-env/bin/python /workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-candidates-reproduce.py &gt; /workspace/scratch/20abb8fd27ac/hrl-optimization/review-conditioning-candidates-result.json
+</code></pre>
+<h2 id="provenance-and-limitations">Provenance and limitations</h2>
+<p>All seven recorded source hashes and all five model hashes match current files. All models use exactly the same 325 point coordinates and ordering. The three frozen-control model blocks are exactly equal to those in the original <code>conditioning-audit.json</code>, including raw rows and summaries. Reviewed candidate receipt SHA-256: <code>50941a634fc16fd318073598a747ea02de4c45290d2aa6bce851a51a4b2fc91f</code>.</p>
+<p>The reviewed quantity is the spectral condition of the fixed-H 2-by-2 common-coordinate source-to-destination Jacobian in equilateral coordinates, on finite interior samples. It is not a global bound, full 3D H/R/L Jacobian, source-to-XYZ Jacobian, perceptual metric, visual assessment or observer result. The review freshly reproduces the two maxima, not all analytic/autograd grid evaluations. A separate native-space bending regression would not contradict these verified common-map condition reductions; candidate acceptance must retain the independent geometry and appearance criteria.</p>
+<p>Only scratch review artifacts were written. No repository files or model records were changed.</p>
+<footer class="hrl-footer">HRL · Coonie / Adam · Every earlier model, page, raw Markdown document, and JSON record remains available.<br><a href="../../../../library.html">Complete file catalogue</a> · <a href="https://github.com/GayCoonie/HRL">GitHub source</a> · <a href="../../../../site/preservation.json">Preservation audit</a></footer></main></body></html>
