@@ -184,10 +184,12 @@ function startPage() {
     sampleRequest++;
     clearSamples();
     for (const slot of ['beta1', 'candidate']) {
+      $('sheet-' + slot).classList.remove('ready');
+      $('cursor-' + slot).hidden = true;
       $('hex-' + slot).textContent = 'Sample unavailable';
       $('xyz-' + slot).textContent = 'Retry the color models to calculate XYZ.';
       $('swatch-' + slot).setAttribute('aria-label', `${slot === 'beta1' ? 'Beta 1' : nameOf(state.candidate)} sample unavailable`);
-      if (!$('sheet-' + slot).classList.contains('ready')) $('clip-' + slot).textContent = 'Hue sheet unavailable. Retry the color models.';
+      $('clip-' + slot).textContent = 'Hue sheet unavailable. Retry the color models.';
     }
     sheets.setAttribute('aria-busy', 'false');
     sheets.dataset.ready = 'false';
@@ -321,7 +323,7 @@ function startPage() {
       const response = await fetch(new URL('./research/tonal-next/results/comparison.json', import.meta.url), { cache: 'no-cache' });
       if (!response.ok) throw Error(`HTTP ${response.status}`);
       const result = await response.json();
-      if (result.schemaVersion !== 1 || !result.models || typeof result.models !== 'object' || !['eligible', 'no-eligible-candidate'].includes(result.status) || typeof result.selectionNote !== 'string') throw Error('unrecognized comparison record');
+      if (result.schemaVersion !== 1 || !result.models || typeof result.models !== 'object' || !safeCandidate(result.selectedCandidate) || !['eligible', 'no-eligible-candidate'].includes(result.status) || typeof result.selectionNote !== 'string') throw Error('unrecognized comparison record');
       if (request !== resultsRequest) return;
       const candidates = [...new Set(Object.keys(result.models).filter(key => key.endsWith('-srgb')).map(key => key.slice(0, -5)).filter(safeCandidate))];
       if (!candidates.length) throw Error('no research candidates in the comparison record');

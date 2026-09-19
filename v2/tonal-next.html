@@ -21,8 +21,8 @@
     </header>
 
     <section class="controls" aria-label="Comparison controls">
-      <label for="profile">Realization<select id="profile"><option value="srgb">Native sRGB</option><option value="full">Full physical reference solid</option></select></label>
-      <label for="candidate">Research candidate<select id="candidate"><option value="smooth-mild">Smooth mild</option><option value="smooth-conditioned">Smooth conditioned</option></select></label>
+      <label for="profile">Realization<select id="profile" aria-label="Realization"><option value="srgb">Native sRGB</option><option value="full">Full physical reference solid</option></select></label>
+      <label for="candidate">Research candidate<select id="candidate" aria-label="Research candidate"><option value="smooth-mild">Smooth mild</option><option value="smooth-conditioned">Smooth conditioned</option></select></label>
       <div class="hue-control"><label for="hue">Hue</label><div class="hue-inputs"><input id="hue" type="range" min="0" max="359.75" step=".25" value="275"><label class="number-label" for="hue-number"><span class="sr-only">Hue in degrees</span><input id="hue-number" type="number" min="0" max="360" step=".25" value="275"><span aria-hidden="true">°</span></label></div></div>
     </section>
     <div class="quick-hues" aria-label="Critical blue hues"><span>Blue neighbours</span><div id="quick-hues"></div></div>
