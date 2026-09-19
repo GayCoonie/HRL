@@ -2,7 +2,7 @@
   "baselineCommit": "bd1d9039d3c4390197099dcb53967baac2896505",
   "originalFilesRetained": 744,
   "deletedOriginalFiles": 0,
-  "unchangedNonHTMLArtifacts": 716,
+  "unchangedNonHTMLArtifacts": 714,
   "originalJSONFilesRetainedByteForByte": 260,
   "originalMarkdownFilesRetained": 54,
   "changedReadmesHaveExactArchives": true,
@@ -10,7 +10,7 @@
   "embeddedLegacyScriptsUnchanged": true,
   "release1SourceAndDataUnchanged": true,
   "numericalV2DefinitionsUnchanged": true,
-  "newSurfaceLinksChecked": 1086,
+  "newSurfaceLinksChecked": 1083,
   "catalogueCoversEveryOriginalFile": true,
   "readingEditions": 57,
   "errors": []
