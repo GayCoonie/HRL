@@ -17,11 +17,18 @@ def write(path,text):
     p.write_text(text,encoding='utf-8');GENERATED.append(path)
 
 def original(path):
-    if (ROOT/'.git').exists():
+    if has_baseline():
         return subprocess.check_output(['git','show',f'{BASE}:{path}'],cwd=ROOT).decode()
-    # Small local previews may use the source snapshot next to this checkout.
-    p=ROOT.parent/'hrl-beta-original'/path
-    return p.read_text() if p.exists() else (ROOT/path).read_text()
+    # Release ZIPs include the preserved landing, but do not include Git history.
+    p=ROOT/('v2/history.html' if path=='v2/index.html' else path)
+    text=p.read_text()
+    text=re.sub(re.escape(MARK)+r'<nav class="hrl-site-nav"[\s\S]*?</nav>','',text)
+    text=re.sub(r'<div class="hrl-local-links">[\s\S]*?</div>','',text)
+    text=re.sub(r'<details class="hrl-local-links"><summary>Page-specific links and sources</summary>(<nav[\s\S]*?</nav>)</details>',r'\1',text)
+    return re.sub(r'<link rel="stylesheet" href="[^"]*site/site.css">','',text)
+
+def has_baseline():
+    return (ROOT/'.git').exists() and subprocess.run(['git','cat-file','-e',BASE+'^{commit}'],cwd=ROOT,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0
 
 def rel(target,page):
     return posixpath.relpath(target,posixpath.dirname(page) or '.')
@@ -129,7 +136,7 @@ def all_files():
             if name.endswith(('.pyc','.log')) and path.startswith('site/'):continue
             out.append(path)
     if (ROOT/'.git').exists():
-        tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','-z',BASE],cwd=ROOT).decode().split('\0')
+        tracked=subprocess.check_output(['git','ls-tree','-r','--name-only','-z',BASE if has_baseline() else 'HEAD'],cwd=ROOT).decode().split('\0')
         out.extend(p for p in tracked if p and (ROOT/p).is_file())
     return sorted(set(out))
 
@@ -162,12 +169,18 @@ const full = await createHRLv2({gamut:'full'});</code></pre>
     beta=re.sub(r'<h1[^>]*>.*?</h1>','<h1>HRL v2 Beta 1</h1>',beta,count=1,flags=re.S)
     beta=beta.replace('</head>','<link rel="stylesheet" href="../site/beta1.css"></head>',1)
     if '../site/beta1.css' not in beta:beta=beta.replace('<main>','<link rel="stylesheet" href="../site/beta1.css"><main>',1)
-    callout='''<div class="hrl-release-callout"><strong>Default: the frozen metric-leaning checkpoint, metric-b2.</strong> This is HRL v2 Beta 1, not a new fit. <a href="beta1-notes.html">Full definition</a> · <a href="benchmarks.html">Benchmarks</a> · <a href="default.json">Manifest</a>.<br>The optional other checkpoints retain their research identities; only metric-leaning is Beta 1.</div><label class="hrl-compare-toggle"><input type="checkbox" id="compareProfiles"> Show all four comparison panels</label>'''
+    callout='''<p class="hrl-release-callout">Hue · Reach · Level <span>metric-b2 · frozen release</span></p><label class="hrl-compare-toggle"><input type="checkbox" id="compareProfiles"> Compare all four checkpoints</label>'''
     beta=re.sub(r'(</h1>)',r'\1'+callout,beta,count=1)
     beta=beta.replace('<option value="balanced" selected>', '<option value="balanced">').replace('<option value="metric">', '<option value="metric" selected>')
     beta=beta.replace('HRL 0.13 · spectral boundary + shared tonal fit','HRL v2 Beta 1 · metric-b2')
-    beta=re.sub(r'<p class="intro">.*?</p>', '<p class="intro">The selected metric-leaning model, in native sRGB or full physical-reference form. Its coefficients are unchanged. Reveal the preserved controls when you want a direct comparison.</p>', beta, count=1, flags=re.S)
+    beta=re.sub(r'<p class="intro">.*?</p>', '', beta, count=1, flags=re.S)
     beta=beta.replace('These are review candidates, not a changed Release 1 default.', 'Metric-leaning is HRL v2 Beta 1. Other checkpoints keep their research identities; Release 1 remains unchanged.')
+    beta=beta.replace('<main>', '<main id="hrl-main">',1)
+    beta=beta.replace('<div class="panels" id="panels">','<div class="hrl-workspace"><div class="panels" id="panels">',1)
+    beta=beta.replace('<section class="evidence">','</div><section class="evidence">',1)
+    beta=beta.replace('<section class="selection">','<section class="selection" aria-label="Selected color"><h2 class="selection-title">Selected color</h2>',1)
+    beta=beta.replace('<pre id="readout"', '<pre aria-live="polite" id="readout"',1)
+    beta=beta.replace('Export color JSON</button>', 'Export color JSON</button>',1)
     write('v2/beta1.html',beta)
     # Archive is curated; the complete catalogue below additionally includes every raw file.
     cards=[]
@@ -206,8 +219,12 @@ const full = await createHRLv2({gamut:'full'});</code></pre>
         def reading_link(m):
             href=unescape(m.group(1));path,sep,fragment=href.partition('#')
             if not path or '://' in path or path.startswith(('/', 'mailto:')):return m.group()
-            absolute=posixpath.normpath(posixpath.join(posixpath.dirname(source),path))
+            source_dir=posixpath.dirname(source)
+            if source=='v2/research/hue-fair-refine/recovery/interrupted-README.md':
+                source_dir=posixpath.dirname(source_dir)
+            absolute=posixpath.normpath(posixpath.join(source_dir,path))
             if absolute in editions:return 'href="'+escape(rel(editions[absolute],target)+(sep+fragment if sep else ''),quote=True)+'"'
+            if source_dir!=posixpath.dirname(source):return 'href="'+escape(rel(absolute,target)+(sep+fragment if sep else ''),quote=True)+'"'
             return m.group()
         body=re.sub(r'href="([^"]+)"',reading_link,body)
         body=body.replace('<table>','<div class="hrl-table-wrap"><table>').replace('</table>','</table></div>')

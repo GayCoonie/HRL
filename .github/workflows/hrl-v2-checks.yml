@@ -13,8 +13,20 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - name: Install the existing site document renderer
+        run: python -m pip install mistune==3.2.0
       - name: Check prototype and rebuild standalone pages
         run: |
           node v2/test/test.mjs --quick
           node v2/build.mjs
+          python - <<'PY'
+          import sys
+          sys.path.insert(0, 'site')
+          from build import attach_navigation
+          for page in ['v2/basr.html', 'v2/native-0.2.html', 'v2/hue-field-0.1.html']:
+              attach_navigation(page)
+          PY
           git diff --exit-code -- v2/basr.html v2/native-0.2.html v2/hue-field-0.1.html

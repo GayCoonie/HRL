@@ -5,5 +5,6 @@
   "preservationFixes": [
     "Add navigation to bodyless historical inspector",
     "Include explicitly tracked historical cache artifact in catalogue"
-  ]
+  ],
+  "siteRevision": "2026-09-19-audit-polish"
 }

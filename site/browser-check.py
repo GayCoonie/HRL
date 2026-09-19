@@ -34,6 +34,11 @@ with sync_playwright() as pw:
     assert page.locator('#panel-metric').is_visible()
     assert '29.1070' in page.locator('#score-metric').inner_text()
     page.screenshot(path=str(out/'beta1-native.png'),full_page=True)
+    page.locator('#hexInput').fill(' #ffffff ');page.locator('#hexInput').press('Enter')
+    page.wait_for_function("document.querySelector('#hexValue').textContent==='#FFFFFF'",timeout=180000);ready()
+    assert page.locator('#swatch').evaluate("e=>getComputedStyle(e).color")=='rgb(17, 17, 17)'
+    page.locator('#tri-metric').focus();page.locator('#tri-metric').press('ArrowRight')
+    page.wait_for_function("Number(document.querySelector('#reach').value)>0")
     page.locator('#hexInput').fill('#8055cc');page.locator('#importHex').click()
     page.wait_for_function("document.querySelector('#hexValue').textContent==='#8055CC'",timeout=180000);ready()
     with page.expect_download() as dl:page.locator('#exportColor').click()
@@ -44,6 +49,7 @@ with sync_playwright() as pw:
     assert not color['displayClipped']
     page.locator('#share').click();page.wait_for_function("document.querySelector('#status').textContent.includes('copied')")
     shared=page.evaluate('navigator.clipboard.readText()');assert '#g=srgb' in shared and 'c=metric' in shared
+    assert 'compare=0' in shared and 'mask=0' in shared and 'neutral=0' in shared
     page.goto(shared,wait_until='domcontentloaded');page.reload(wait_until='domcontentloaded');ready()
     page.wait_for_function("document.querySelector('#hexValue').textContent==='#8055CC'",timeout=30000)
     page.locator('#compareProfiles').check();assert page.locator('#panels > .panel:visible').count()==4

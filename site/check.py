@@ -23,7 +23,7 @@ for row in git('ls-tree','-r','-z',BASE).split(b'\0'):
     if not row:continue
     meta,path=row.split(b'\t',1);mode,kind,sha=meta.decode().split()
     if kind=='blob':entries[path.decode()]=sha
-allowed={'README.md','v2/README.md','v2/boundary-tonal-ui/app.mjs'}
+allowed={'README.md','v2/README.md','v2/boundary-tonal-ui/app.mjs','v2/boundary-tonal-ui/worker.mjs','.github/workflows/hrl-v2-checks.yml'}
 unchanged=0;json_count=0;markdown_count=0;html_count=0;errors=[]
 for path,sha in entries.items():
     p=ROOT/path
