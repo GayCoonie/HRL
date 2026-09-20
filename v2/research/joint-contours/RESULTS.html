@@ -1,0 +1,179 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HRL · Joint visual and observer results</title><link rel="stylesheet" href="../../tonal-next.css"><style>main{max-width:1100px}table{display:block;overflow:auto;border-collapse:collapse}th,td{padding:10px;border:1px solid var(--line)}h2{margin-top:36px}p{margin:16px 0}pre{overflow:auto}code{overflow-wrap:anywhere}</style></head><body><main><h1>HRL joint visual and observer fit — 20 September 2026</h1>
+<p>The expanded shared model improves retained-pair COMBVD in both realizations while strongly reducing the near-gray ridges. The saved selection is <strong>joint-spacing</strong>. These are directly evaluated runtime results, not interpolated fitting statistics. Beta 1 remains the named release.</p>
+<p><a href="../../joint.html">Interactive comparison</a> · <a href="METHOD.md">Model and objective</a> · <a href="REPRODUCE.md">Reproduction</a> · <a href="INDEPENDENT_REVIEW.md">Independent review</a></p>
+<h2>Observer results</h2>
+<p>COMBVD weighted STRESS, lower is better. The native retained population is reported separately from the all-input mapped population.</p>
+<table>
+<thead>
+<tr>
+  <th>Population</th>
+  <th style="text-align:right">Beta 1</th>
+  <th style="text-align:right">Joint fit</th>
+  <th style="text-align:right">Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Native sRGB, <strong>3,331 retained</strong></td>
+  <td style="text-align:right">29.107048</td>
+  <td style="text-align:right">26.795161</td>
+  <td style="text-align:right">7.94% lower</td>
+</tr>
+<tr>
+  <td>Full, <strong>3,813 retained</strong></td>
+  <td style="text-align:right">29.948555</td>
+  <td style="text-align:right">26.902322</td>
+  <td style="text-align:right">10.17% lower</td>
+</tr>
+<tr>
+  <td>Native sRGB, 3,813 mapped inputs</td>
+  <td style="text-align:right">34.489196</td>
+  <td style="text-align:right">33.358237</td>
+  <td style="text-align:right">3.28% lower</td>
+</tr>
+</tbody>
+</table>
+<p>Unweighted retained STRESS: native 30.712588 → <strong>28.474658</strong>; full 32.127880 → <strong>28.783792</strong>. The observer pairs are training data. No held-out accuracy or fresh ColorBench run is claimed.</p>
+<h2>Direct visual measurements</h2>
+<p>The primary near-gray audit uses 72 offset hues × seven dark Levels × 257 samples across U=R/L from 0 to .25. Mean J backtracking falls <strong>97.17% in sRGB</strong> and <strong>97.19% in full</strong>. Whole-contour checks use 360 paths with 129 points; fixed-Reach checks use 504 paths with 65 points. Each comparison uses identical sample sets for both models.</p>
+<table>
+<thead>
+<tr>
+  <th>Diagnostic</th>
+  <th style="text-align:right">sRGB Beta 1</th>
+  <th style="text-align:right">sRGB joint</th>
+  <th style="text-align:right">Full Beta 1</th>
+  <th style="text-align:right">Full joint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Mean near-gray J backtracking</td>
+  <td style="text-align:right">0.003737</td>
+  <td style="text-align:right">0.000106</td>
+  <td style="text-align:right">0.002827</td>
+  <td style="text-align:right">0.000079</td>
+</tr>
+<tr>
+  <td>Worst near-gray J backtracking</td>
+  <td style="text-align:right">0.038373</td>
+  <td style="text-align:right">0.002116</td>
+  <td style="text-align:right">0.036060</td>
+  <td style="text-align:right">0.001598</td>
+</tr>
+<tr>
+  <td>Paths exceeding .001 J, out of 504</td>
+  <td style="text-align:right">238</td>
+  <td style="text-align:right">17</td>
+  <td style="text-align:right">205</td>
+  <td style="text-align:right">12</td>
+</tr>
+<tr>
+  <td>Near-gray vector-gradient variation</td>
+  <td style="text-align:right">0.113623</td>
+  <td style="text-align:right">0.001923</td>
+  <td style="text-align:right">0.069086</td>
+  <td style="text-align:right">0.001301</td>
+</tr>
+<tr>
+  <td>Mean whole-contour J backtracking</td>
+  <td style="text-align:right">0.019283</td>
+  <td style="text-align:right">0.002799</td>
+  <td style="text-align:right">0.037135</td>
+  <td style="text-align:right">0.005521</td>
+</tr>
+<tr>
+  <td>Mean whole-contour color-step CV</td>
+  <td style="text-align:right">0.521777</td>
+  <td style="text-align:right">0.396269</td>
+  <td style="text-align:right">0.541732</td>
+  <td style="text-align:right">0.425832</td>
+</tr>
+<tr>
+  <td>Worst relative adjacent color-step jump</td>
+  <td style="text-align:right">1.880102</td>
+  <td style="text-align:right">1.928245</td>
+  <td style="text-align:right">1.887456</td>
+  <td style="text-align:right">1.952093</td>
+</tr>
+<tr>
+  <td>Worst fixed-Reach adjacent J drop</td>
+  <td style="text-align:right">0.010297</td>
+  <td style="text-align:right">0.005103</td>
+  <td style="text-align:right">0.032952</td>
+  <td style="text-align:right">0.003537</td>
+</tr>
+<tr>
+  <td>Mean total fixed-Reach J retreat</td>
+  <td style="text-align:right">0.000183</td>
+  <td style="text-align:right">0.000065</td>
+  <td style="text-align:right">0.003129</td>
+  <td style="text-align:right">0.000133</td>
+</tr>
+<tr>
+  <td>Worst total fixed-Reach J retreat</td>
+  <td style="text-align:right">0.019691</td>
+  <td style="text-align:right">0.005103</td>
+  <td style="text-align:right">0.252049</td>
+  <td style="text-align:right">0.012698</td>
+</tr>
+<tr>
+  <td>Negative fixed-Reach J steps</td>
+  <td style="text-align:right">44</td>
+  <td style="text-align:right">31</td>
+  <td style="text-align:right">613</td>
+  <td style="text-align:right">85</td>
+</tr>
+<tr>
+  <td>Worst fixed-Reach adjacent Y drop</td>
+  <td style="text-align:right">0.017989</td>
+  <td style="text-align:right">0.005557</td>
+  <td style="text-align:right">0.039143</td>
+  <td style="text-align:right">0.006617</td>
+</tr>
+</tbody>
+</table>
+<p>J diagnoses tonal travel that reverses direction; it does not define Level. Level remains absence of blackness. Vector-gradient variation examines changes in all three GenSpace components. Color-step CV measures uneven spacing along entire contours. Integrated retreat avoids the misleading improvement that can occur when a bad descent is merely split into smaller adjacent steps. Scalar diagnostics complement actual hue-sheet and gradient inspection.</p>
+<h2>Additional geometry coverage</h2>
+<p>The extra audit changes hue offsets to 1.25° plus multiples of 5°, uses seven different near-gray Levels and seven different fixed-Reach values. These geometry paths were absent from the optimization grid. This is additional synthetic coverage, not held-out observer evidence.</p>
+<table>
+<thead>
+<tr>
+  <th>Offset geometry check</th>
+  <th style="text-align:right">Native sRGB</th>
+  <th style="text-align:right">Full</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Near-gray mean reduction</td>
+  <td style="text-align:right">97.34%</td>
+  <td style="text-align:right">97.35%</td>
+</tr>
+<tr>
+  <td>Worst Level-step J drop: Beta 1 → joint</td>
+  <td style="text-align:right">0.006327 → 0.004258</td>
+  <td style="text-align:right">0.043612 → 0.028449</td>
+</tr>
+<tr>
+  <td>Worst total J retreat: Beta 1 → joint</td>
+  <td style="text-align:right">0.018199 → 0.006086</td>
+  <td style="text-align:right">0.270639 → 0.054406</td>
+</tr>
+<tr>
+  <td>Worst Level-step Y drop: Beta 1 → joint</td>
+  <td style="text-align:right">0.004969 → 0.003782</td>
+  <td style="text-align:right">0.035768 → 0.018809</td>
+</tr>
+</tbody>
+</table>
+<p>A concrete residual is full H=171.25°, R=.35, L=.35→.36015625: the selected fit loses .028449 J while Beta 1 rises .004230 J at the same coordinates. Aggregate gains therefore coexist with a new local reversal. The worst relative adjacent color-step jump also remains a limitation despite improved mean CV. The raw audits record exact worst locations, all path rows and physical-Y measurements. Remaining negative steps, uneven spacing or counterexamples must remain visible; the result is not a proof of perfect ordering or a universal perceptual preference. Full-domain image pixels are clipped to an sRGB display, while curves are evaluated before clipping.</p>
+<h2>Why the earlier apparent tradeoff was avoidable</h2>
+<p>The previous raw-contour family discarded deterministic own-anchor normalization and could not reproduce Beta 1's interior geometry. This experiment restores that scaffold and expands the invertible mapping around it: finite-endpoint positive powers, richer Level/Reach coupling, interior circle maps and a learnable shared gray calibration. The expanded seed exactly reproduces Beta 1. One coefficient bank serves both realizations; gamut identity never enters the learned mapping.</p>
+<p>Only vivid-ring angles and the general bicone/pseudoRGB architecture were treated as fixed. Interior hue, gray calibration, tonal shapes, coefficients and the optimization method were open. The sampled vivid XYZ difference is exactly zero. Shared gray values at the same numerical Level change by up to 0.026760 in an XYZ component in the declared gray probe; this is an intended open degree of freedom.</p>
+<p>Initial sparse fits obtained better COMBVD but missed sharp reversals between training hues. Independent diagnosis showed that public-hue coverage and a partition-dependent ordering statistic were the main causes. The corrected fit covers the entire hue circle every 2.5°, weights angular means by interval size, penalizes integrated negative travel, and uses a finer physical lookup. An Adam warm-up/alternative avoids relying solely on a stalled line search. All provisional records and their fitting-code versions are retained with honest failure scopes.</p>
+<p>The earlier <strong>joint-dense</strong> is also inspectable: it scores 25.944051/26.472243 on retained sRGB/full and has strong contour gains, but whole-contour spacing remains less uniform than Beta 1. It is useful evidence that joint observer/contour gains were attainable before the later spacing refinement.</p>
+<h2>Identity and verification</h2>
+<p>Selected record SHA256: <code>4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5</code>. The <code>joint.json</code> alias is byte-identical to its originating checkpoint; no coefficient averaging or unrecorded refit occurs. Runtime inversion, fixed ring, shared bank, Python/JS coordinate parity and finite-difference gradients are checked separately from visual measurements. Direct audits bind the selected record hash. Finite samples do not prove uniform numerical conditioning.</p>
+<p>Use the interactive page to inspect fixed-Level Reach paths, fixed-Reach Level paths, full hue sheets and display-clipping marks. Source grids and fit statistics are approximate; the saved direct audits and actual rendering remain authoritative. The next research question is the residual structure visible in these exact records, not whether the earlier restricted family established an unavoidable tradeoff.</p>
+</main></body></html>

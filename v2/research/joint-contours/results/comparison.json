@@ -1,0 +1,375 @@
+{
+  "schema": "hrl-joint-comparison-v1",
+  "selected": "joint-spacing",
+  "selectedSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+  "trainingOnly": true,
+  "models": {
+    "beta1": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 29.107047807815427,
+          "unweighted": 30.71258817521673,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 34.489196386295546,
+            "unweighted": 38.12633858568467
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 238,
+          "meanTurn": 0.003736951199659089,
+          "worstTurn": 0.038373150979860854,
+          "meanGradientVariation": 0.11362345913303468
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.01928337707987999,
+          "meanStepCV": 0.521776854911938,
+          "worstRelativeStepJump": 1.880102276726832
+        },
+        "levelOrdering": {
+          "negativeSteps": 44,
+          "worstDrop": 0.010296633702262525,
+          "worstLocation": {
+            "H": 182.5,
+            "R": 0.8,
+            "L": 0.8,
+            "L2": 0.8031250000000001
+          },
+          "yNegative": 51,
+          "worstYDrop": 0.017989064402323618,
+          "meanTotalRetreat": 0.00018327687056237188,
+          "worstTotalRetreat": 0.01969113160257563,
+          "meanTotalYRetreat": 0.000310444147122985,
+          "worstTotalYRetreat": 0.03523712331636042
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 296,
+            "drop": -0.022699938683936882,
+            "YDrop": -0.0023675155940318503
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0,
+        "roundtripEmbedding": 6.801198683254059e-12,
+        "analyticRoundtrip": 0
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 29.948554645320506,
+          "unweighted": 32.127879751619034
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 205,
+          "meanTurn": 0.0028265812955384165,
+          "worstTurn": 0.036060445201951175,
+          "meanGradientVariation": 0.06908563672188449
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.03713545807439059,
+          "meanStepCV": 0.5417320048311983,
+          "worstRelativeStepJump": 1.8874562604618996
+        },
+        "levelOrdering": {
+          "negativeSteps": 613,
+          "worstDrop": 0.032952195763887304,
+          "worstLocation": {
+            "H": 167.5,
+            "R": 0.5,
+            "L": 0.546875,
+            "L2": 0.5546875
+          },
+          "yNegative": 340,
+          "worstYDrop": 0.03914260076304843,
+          "meanTotalRetreat": 0.003128687885291947,
+          "worstTotalRetreat": 0.2520486706307378,
+          "meanTotalYRetreat": 0.0032880852950012696,
+          "worstTotalYRetreat": 0.27001828496513397
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 290.8,
+            "drop": 0.02595180171092837,
+            "YDrop": -0.007221457170041743
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0,
+        "roundtripEmbedding": 2.7731768201837626e-12,
+        "analyticRoundtrip": 0
+      }
+    },
+    "joint": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 26.795160959086584,
+          "unweighted": 28.474657914108953,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 33.358236894987584,
+            "unweighted": 36.43119169860002
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 17,
+          "meanTurn": 0.00010577795881249919,
+          "worstTurn": 0.0021159891781682705,
+          "meanGradientVariation": 0.0019226745328393706
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.0027988063048193395,
+          "meanStepCV": 0.39626936807519786,
+          "worstRelativeStepJump": 1.9282450788252365
+        },
+        "levelOrdering": {
+          "negativeSteps": 31,
+          "worstDrop": 0.00510268600234165,
+          "worstLocation": {
+            "H": 227.5,
+            "R": 0.8,
+            "L": 0.8,
+            "L2": 0.8031250000000001
+          },
+          "yNegative": 41,
+          "worstYDrop": 0.005556880014057741,
+          "meanTotalRetreat": 6.497286486772015e-05,
+          "worstTotalRetreat": 0.00510268600234165,
+          "meanTotalYRetreat": 0.00011161233890948467,
+          "worstTotalYRetreat": 0.00877017929834678
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 288,
+            "drop": -0.011474304152026207,
+            "YDrop": -0.00105740062939262
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0.026760278163409396,
+        "roundtripEmbedding": 6.477941327856703e-12,
+        "analyticRoundtrip": 4.732352177046206e-13,
+        "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 26.902322208336287,
+          "unweighted": 28.783791842378754
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 12,
+          "meanTurn": 7.929984754646458e-05,
+          "worstTurn": 0.0015984032491874502,
+          "meanGradientVariation": 0.0013005543534556875
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.005520893469971615,
+          "meanStepCV": 0.4258317308094098,
+          "worstRelativeStepJump": 1.9520928909843314
+        },
+        "levelOrdering": {
+          "negativeSteps": 85,
+          "worstDrop": 0.0035373386886097258,
+          "worstLocation": {
+            "H": 257.5,
+            "R": 0.8,
+            "L": 0.8,
+            "L2": 0.8031250000000001
+          },
+          "yNegative": 30,
+          "worstYDrop": 0.006616953592909203,
+          "meanTotalRetreat": 0.000132665850186611,
+          "worstTotalRetreat": 0.012698367724875537,
+          "meanTotalYRetreat": 8.966994405959847e-05,
+          "worstTotalYRetreat": 0.01575146159818841
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 291.1,
+            "drop": 0.002017388221644406,
+            "YDrop": -0.002133623712969419
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0.026760278163409396,
+        "roundtripEmbedding": 5.876248743103165e-12,
+        "analyticRoundtrip": 1.8087686777278937e-12,
+        "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5"
+      }
+    },
+    "joint-dense": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 25.944051276191253,
+          "unweighted": 27.829064227121947,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 33.85040406226557,
+            "unweighted": 37.26980511673405
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 17,
+          "meanTurn": 9.16841125755845e-05,
+          "worstTurn": 0.002617688552565167,
+          "meanGradientVariation": 0.011497585470067356
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.0032992051171424125,
+          "meanStepCV": 0.6496135801961176,
+          "worstRelativeStepJump": 1.8943682824656165
+        },
+        "levelOrdering": {
+          "negativeSteps": 52,
+          "worstDrop": 0.008596356211615613,
+          "worstLocation": {
+            "H": 227.5,
+            "R": 0.5,
+            "L": 0.515625,
+            "L2": 0.5234375
+          },
+          "yNegative": 86,
+          "worstYDrop": 0.008613605982567774,
+          "meanTotalRetreat": 0.0001547405272185785,
+          "worstTotalRetreat": 0.009517411763045658,
+          "meanTotalYRetreat": 0.00028628528822019825,
+          "worstTotalYRetreat": 0.01890862446822822
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 288,
+            "drop": -0.02539229957778224,
+            "YDrop": -0.0023985721447014434
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0.027343347914732946,
+        "roundtripEmbedding": 5.888406270081709e-12,
+        "analyticRoundtrip": 1.962921118609837e-12,
+        "recordSHA256": "610bbfa0c91305e8f529ddccaea8f977c564f37bccb9f1a8f4d6a4e77bca7c29"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 26.47224292117371,
+          "unweighted": 28.35109799173234
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 8,
+          "meanTurn": 8.193823829398811e-05,
+          "worstTurn": 0.0019727487972978075,
+          "meanGradientVariation": 0.009026572872765757
+        },
+        "wholeContour": {
+          "paths": 360,
+          "meanTurn": 0.006937239619802871,
+          "meanStepCV": 0.7194045473016667,
+          "worstRelativeStepJump": 1.9178261879362495
+        },
+        "levelOrdering": {
+          "negativeSteps": 154,
+          "worstDrop": 0.008421585302224144,
+          "worstLocation": {
+            "H": 172.5,
+            "R": 0.5,
+            "L": 0.5234375,
+            "L2": 0.53125
+          },
+          "yNegative": 50,
+          "worstYDrop": 0.011267037289122206,
+          "meanTotalRetreat": 0.00047772638500753154,
+          "worstTotalRetreat": 0.03616874621127142,
+          "meanTotalYRetreat": 0.00026345311350958327,
+          "worstTotalYRetreat": 0.046612313383852355
+        },
+        "criticalViolet": {
+          "scope": "H288\u2013296 every.1\u00b0, fixed R.2, L.2\u2192.2125",
+          "worst": {
+            "H": 290.5,
+            "drop": -0.03047348828217472,
+            "YDrop": -0.005451447158052377
+          }
+        },
+        "vividError": 0,
+        "grayXYZChange": 0.027343347914732946,
+        "roundtripEmbedding": 2.4272458312948525e-11,
+        "analyticRoundtrip": 2.4169383287128784e-12,
+        "recordSHA256": "610bbfa0c91305e8f529ddccaea8f977c564f37bccb9f1a8f4d6a4e77bca7c29"
+      }
+    },
+    "strict": {
+      "srgb": {
+        "score": {
+          "pairs": 3331,
+          "weighted": 33.91052741655323,
+          "unweighted": 33.29235654290444,
+          "mappedAll": {
+            "pairs": 3813,
+            "weighted": 36.2762641870527
+          }
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 4,
+          "meanTurn": 2.5602370082989844e-05,
+          "worstTurn": 0.0011871119156645835
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 2.942706008774808e-12,
+        "analyticRoundtrip": 4.685680459230494e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 0,
+          "worstDrop": 0,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a"
+      },
+      "full": {
+        "score": {
+          "pairs": 3813,
+          "weighted": 34.13267562401147,
+          "unweighted": 35.013740338448876
+        },
+        "nearGray": {
+          "paths": 504,
+          "overThreshold": 0,
+          "meanTurn": 1.0379512086284894e-05,
+          "worstTurn": 0.00036473067559783523
+        },
+        "grayError": 0,
+        "vividError": 0,
+        "roundtripEmbeddingError": 1.0373871963384324e-12,
+        "analyticRoundtrip": 7.853221736595769e-16,
+        "pairCoordinateParity": 0,
+        "levelOrdering": {
+          "negativeSteps": 833,
+          "worstDrop": 0.3049395372101208,
+          "scope": "72 offset hues, 7 fixed Reach values, 65 Levels per path"
+        },
+        "recordSHA256": "8bcdc399cbead8a1a2763bce50215804458141734cc487e23d63f672ec81956a"
+      }
+    }
+  }
+}

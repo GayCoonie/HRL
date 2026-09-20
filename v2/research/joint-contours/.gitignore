@@ -1,0 +1,4 @@
+results/**/*.f64
+results/*.f64
+results/visual-*.json*
+__pycache__/

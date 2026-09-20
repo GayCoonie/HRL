@@ -1,0 +1,6 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import {createHRLv2} from '../../index.mjs';import {createJointHRL,coordinates} from './index.mjs';
+const name=process.argv[2]||'seed',r=JSON.parse(fs.readFileSync(new URL(`results/${name}.json`,import.meta.url)));let rand=260920;const random=()=>((rand=(1664525*rand+1013904223)>>>0)/4294967296);const qs=[];for(let i=0;i<600;i++){const L=.0001+.9998*random();qs.push({H:random()*360,R:L*(.0001+.9998*random()),L});}
+const samples=qs.map(q=>({q:[q.H,q.R,q.L],forward:Object.values(coordinates(q,r)),inverse:Object.values(coordinates(q,r,true))}));
+for(const g of ['srgb','full']){const m=await createJointHRL({gamut:g,record:r}),b=await createHRLv2({gamut:g});let inverse=0,vivid=0,baseline=0;for(let i=0;i<qs.length;i++){const q=qs[i],xyz=m.toXYZ(q),q2=m.fromXYZ(xyz);inverse=Math.max(inverse,m.distance(q,q2));if(name==='seed')baseline=Math.max(baseline,...xyz.map((v,j)=>Math.abs(v-b.toXYZ(q)[j])));if(i<360)vivid=Math.max(vivid,...m.vivid(i).map((v,j)=>Math.abs(v-b.vivid(i)[j])));}
+ assert(inverse<1e-6&&vivid<1e-12);if(name==='seed')assert(baseline<1e-10);console.log('PASS',name,g,JSON.stringify({inverse,vivid,baseline}));}
+fs.writeFileSync(new URL(`results/parity-${name}.json`,import.meta.url),JSON.stringify({name,samples})+'\n');
