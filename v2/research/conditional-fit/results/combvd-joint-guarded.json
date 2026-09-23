@@ -1,0 +1,191 @@
+{
+  "schema": "hrl-fresh-field-combvd-v2",
+  "scope": "COMBVD development scores; no independent observer holdout",
+  "method": "D65 relative XYZ, mapped import, actual HRL bicone distance; fitted residual STRESS with traditional per-row weights",
+  "referenceWhiteNits": 300,
+  "source": {
+    "hrlCommit": "8c731adee6c6a7474f5d8aa3bc00f70d5f10ce59",
+    "colorbenchCommit": "12b2de215cc5020682e3d245a8c78bce5f0ebbc9",
+    "poolCommit": "8641f4e8ebd9d85a34dc0fedc116fa0e58493190",
+    "beta1DefinitionSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+    "jointDefinitionSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+    "preparedInputsSHA256": "bbe219aab839f67f70459f262177066c31eff580331a8db5724eba915f1cf569",
+    "labelRowsSHA256": "0fff038480cc169c26e7709225d3251d1cd598c86ea27c2d28cb86fc627a0074",
+    "sourceNPZSHA256": "a04f0986100a2131fe9930d745bc2323f1e3089d6d8ff8fb74b3b6bdf9e659a9",
+    "nativeMaskSHA256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251",
+    "familyCounts": {
+      "BFD-P(D65)": 2028,
+      "BFD-P( C )": 200,
+      "BFD-P(M)": 548,
+      "LEEDS": 307,
+      "RIT-DuPont": 312,
+      "WITT": 418
+    }
+  },
+  "candidate": {
+    "module": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/index.mjs",
+    "model": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/model.mjs",
+    "record": "/workspace/scratch/f91573918531/capacity-source/v2/research/conditional-fit/results/conditional-joint-guarded-v0.json",
+    "moduleSHA256": "c6d4da23756a1a7dda132869b74750ec59ae27bf912e4b799ee51f415cfe496f",
+    "modelSHA256": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+    "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff",
+    "export": "createConditionalFieldHRL"
+  },
+  "models": {
+    "conditional-guarded": {
+      "srgb": {
+        "gamut": "srgb",
+        "retained": {
+          "pairs": 3331,
+          "weighted": 37.86864486967094,
+          "unweighted": 35.92274536070056,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 1828,
+              "weighted": 32.65465069041717,
+              "unweighted": 32.65465069041717,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 139,
+              "weighted": 45.51693685572258,
+              "unweighted": 45.51693685572258,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 357,
+              "weighted": 39.73897322840959,
+              "unweighted": 39.73897322840959,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 32.70481260899935,
+              "unweighted": 32.704812608999376,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 284,
+              "weighted": 39.33178852171093,
+              "unweighted": 39.33178852171092,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 416,
+              "weighted": 41.01111223368664,
+              "unweighted": 41.01111223368666,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": {
+          "pairs": 3813,
+          "weighted": 40.53766658444177,
+          "unweighted": 39.907147485185476,
+          "mappedPairs": 482,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 36.843492120358654,
+              "unweighted": 36.843492120358654,
+              "mappedPairs": 200
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 47.83069731081776,
+              "unweighted": 47.83069731081776,
+              "mappedPairs": 61
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 42.9393974749143,
+              "unweighted": 42.9393974749143,
+              "mappedPairs": 191
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 32.70481260899935,
+              "unweighted": 32.704812608999376,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 44.995401974193236,
+              "unweighted": 44.9954019741933,
+              "mappedPairs": 28
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 41.280633751406945,
+              "unweighted": 41.28063375140695,
+              "mappedPairs": 2
+            }
+          }
+        },
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 898,
+          "mappedPairs": 482,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      },
+      "full": {
+        "gamut": "full",
+        "retained": {
+          "pairs": 3813,
+          "weighted": 34.80936019305452,
+          "unweighted": 35.932311565638415,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 36.99031937607601,
+              "unweighted": 36.99031937607601,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 43.49937232258724,
+              "unweighted": 43.49937232258724,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 34.99871926020056,
+              "unweighted": 34.99871926020056,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 32.66913056121718,
+              "unweighted": 32.669130561217194,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 28.517939139235104,
+              "unweighted": 28.517939139235143,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 33.88942825668733,
+              "unweighted": 33.88942825668732,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": null,
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 0,
+          "mappedPairs": 0,
+          "eventCounts": {}
+        }
+      }
+    }
+  }
+}

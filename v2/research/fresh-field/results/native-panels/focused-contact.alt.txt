@@ -1,0 +1,5 @@
+Alternative text for focused-contact.png (native sRGB hue sheets).
+Five columns, left to right: Beta 1, frozen joint research baseline, fresh seed calibration, visual-neutral (FAILED COMBVD), joint-graded (FAILED Beta 1).
+Three rows at matched public hue, Reach and Level coordinates: H 120° yellow, H 182.5° green/cyan, H 273° blue/violet. Each triangle runs white at top left, black at bottom left, vivid at right.
+At yellow, frozen joint reaches a brighter mid-triangle yellow; at green/cyan, frozen joint shifts much of the upper region toward greener cyan; at blue, the frozen joint interior is violet-pale while the two closed fits have a flatter bluish area and the joint-graded fit has an abrupt saturated blue tip.
+All 15 native sRGB panels have zero display-clipped pixels in this sampling; appearance remains a visual judgement and the failed fits do not satisfy COMBVD or all full-domain path checks.

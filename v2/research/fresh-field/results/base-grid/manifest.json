@@ -1,0 +1,13 @@
+{
+  "schema": "hrl-fresh-base-inputs-v1",
+  "oldPairCacheSHA256": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+  "generatingCodeSHA256": "9d9ba3345ea81fcf11c07e8a29b16add4ded6cdc90541dc0832325c1984f2765",
+  "grids": {
+    "srgb": "37490460fd0a6679b6a8ac5486d1f859959c485514692374590a2ee8c2dcb81d",
+    "full": "8168027046e4ee470543d0627fd081e39be2f412a7bbe29c0b4abc5a0d54b2af"
+  },
+  "basePairs": {
+    "srgb": "6762e759bdc8df9cafbd89573c0309531cfdc6fdef6c2f7b9eb02a61663a0e77",
+    "full": "9e4b2ffdea82b5560ac2c82abdd32859ec22a6eb409d0e9ed5a3214821a094bf"
+  }
+}

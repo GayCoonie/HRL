@@ -1,0 +1,564 @@
+{
+  "schema": "hrl-conditional-hue-v4",
+  "description": "Unfitted conditional field with zero interior hue flow; exactly recovers v3.",
+  "harmonics": 2,
+  "knots": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "reach_logits": [
+    [
+      2.3694652452025915,
+      0.2632715054306107,
+      -0.25376109293282295,
+      -0.10149412384566825,
+      0.00421009776901839
+    ],
+    [
+      1.7252545564118107,
+      0.5201548813643567,
+      0.31640182181275195,
+      -0.031140955359502495,
+      -0.010901340764576477
+    ],
+    [
+      1.838238156954208,
+      0.14362957792206782,
+      0.2672502419874087,
+      0.23287996070427278,
+      0.03465350890372289
+    ],
+    [
+      1.4592441678267574,
+      0.22229766972974585,
+      0.3823298868191709,
+      0.6746394784800677,
+      0.20026318241208793
+    ],
+    [
+      -2.541395059639,
+      0.45689834775234406,
+      0.2957060232190992,
+      1.6590574291128,
+      -4.0
+    ]
+  ],
+  "reach_level_logits": [
+    [
+      -2.9937222574082307,
+      -1.3474805785973643,
+      1.7516389051908134,
+      -0.5796143421185754,
+      0.01018576258836835
+    ],
+    [
+      2.181846078915265,
+      -0.7614361388067244,
+      -0.6424710800777966,
+      0.32963587037081554,
+      0.3676572153559244
+    ],
+    [
+      1.8929146135013282,
+      -0.0035611796486029147,
+      0.41640975115123585,
+      -0.16501579324724713,
+      -1.1311503156840454
+    ],
+    [
+      2.369026967483919,
+      -1.2063037365873968,
+      -0.7798851964879618,
+      -0.04256529557056427,
+      0.973108241093994
+    ],
+    [
+      1.1247359450747394,
+      2.284093585387961,
+      0.03331476922474711,
+      2.4341634048918652,
+      -2.318613145378018
+    ]
+  ],
+  "level_logits": [
+    [
+      1.527702796447312,
+      0.0449296500295739,
+      -0.1190455100818335,
+      2.162410139268542,
+      -0.1835505470926492
+    ],
+    [
+      1.554274494562258,
+      0.45927673231325883,
+      -0.6934307263110936,
+      1.76047143875104,
+      -0.1301259808317705
+    ],
+    [
+      1.0544668363662377,
+      -0.4450261062452939,
+      0.33705137083141995,
+      1.280936990898118,
+      0.08559155789937976
+    ],
+    [
+      1.6982615326435575,
+      1.1824173658853236,
+      -0.17671223496925634,
+      2.1675954025237694,
+      -0.7538739341445687
+    ],
+    [
+      0.494980742615223,
+      -2.573032212130497,
+      1.0917074104564926,
+      3.650455500318763,
+      3.096330804032467
+    ]
+  ],
+  "neutral_shift": 0.02686567756674324,
+  "log_density_cap": 4,
+  "hue_shift_cap": 25,
+  "hue_coefficients": [
+    4.451829188486887,
+    3.1163197171295085,
+    -2.7783003431999944,
+    1.5794317422014563,
+    -4.914173241832094
+  ],
+  "variant": "hue-only-from-guarded-v0",
+  "research": {
+    "status": "experimental unvalidated fit; do not promote",
+    "trainPopulation": {
+      "srgb": 2915,
+      "full": 3395
+    },
+    "holdoutPopulation": {
+      "srgb": 416,
+      "full": 418
+    },
+    "holdoutMethod": "multiplicity w=7 excluded from pair loss and held as development check",
+    "freshStarts": "neutral",
+    "ablation": "hue-only",
+    "objectiveStage": "joint",
+    "startRecordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff",
+    "trainingHues": [
+      0,
+      30,
+      55,
+      60,
+      65,
+      90,
+      120,
+      140,
+      150,
+      180,
+      210,
+      230,
+      240,
+      270,
+      289.5,
+      295,
+      300,
+      320,
+      330
+    ],
+    "pairCacheSHA256": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+    "sourceGridSHA256": {
+      "srgb": "37490460fd0a6679b6a8ac5486d1f859959c485514692374590a2ee8c2dcb81d",
+      "full": "8168027046e4ee470543d0627fd081e39be2f412a7bbe29c0b4abc5a0d54b2af"
+    },
+    "basePairSHA256": {
+      "srgb": "6762e759bdc8df9cafbd89573c0309531cfdc6fdef6c2f7b9eb02a61663a0e77",
+      "full": "9e4b2ffdea82b5560ac2c82abdd32859ec22a6eb409d0e9ed5a3214821a094bf"
+    },
+    "baseInputManifestSHA256": "e4b23000726fa34bdd5bf0a4a3c5e3444347cf5be689b0c38c5c02eab105e1a3",
+    "gridMetadataSHA256": {
+      "srgb": "deb61b9e0c00a26fb8f1372dcdc4d2a18db1617df29a26e65979f4f6e3a83eb4",
+      "full": "c38edabc5081aa7c4ddf1ddaddc5a63312212b6d89776e7a0c1c8ff6157d4579"
+    },
+    "physicalSourceDefinition": {
+      "srgb": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result",
+      "full": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result"
+    },
+    "fitCodeSHA256": "5d22e5183d5ca7bc55f9b932ddd6912686a379c6e918ce68d19449d70736bf33",
+    "coreCodeSHA256": "2b0662e6fb0cc6d62cc997d5c1fa00d949ec0072dc6b6cec2c65185fe99e3efb",
+    "seedSHA256": "000b5c2ad424164afeac8da234fb76dfb6e742e4f7de9e6f1c82a5f6fb8864e0",
+    "neutralSeedMetrics": {
+      "srgb": {
+        "levelTurnMean": 0.00021462041187461265,
+        "levelTurnWorst": 0.00400328609278322,
+        "fixedReachRetreatMean": 3.356690272175983e-05,
+        "fixedReachRetreatWorst": 0.0018260673937262606,
+        "fixedReachYRetreatMean": 7.031512634451462e-05,
+        "sheetSpeedCV": 0.3566871952302807,
+        "whiteEdgeCV": 0.22229947962044325,
+        "nearNeutralOccupancyPenalty": 0.0017316698419720406,
+        "weightedSTRESS100": 35.606797412764,
+        "unweightedSTRESS100": 35.27032342631085,
+        "heldoutWeightSevenSTRESS100": 41.0111122336866
+      },
+      "full": {
+        "levelTurnMean": 0.00039496707703176576,
+        "levelTurnWorst": 0.004645052478081557,
+        "fixedReachRetreatMean": 0.0015480997679161175,
+        "fixedReachRetreatWorst": 0.06466983069734566,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.32676741188645037,
+        "whiteEdgeCV": 0.2327181682351167,
+        "nearNeutralOccupancyPenalty": 0.0007014429266134836,
+        "weightedSTRESS100": 34.85789018110039,
+        "unweightedSTRESS100": 35.987103209784145,
+        "heldoutWeightSevenSTRESS100": 33.88942825668732
+      }
+    },
+    "finalTrainingMetrics": {
+      "srgb": {
+        "levelTurnMean": 0.00022519360209505017,
+        "levelTurnWorst": 0.0033370785728901176,
+        "fixedReachRetreatMean": 1.8706895684061086e-05,
+        "fixedReachRetreatWorst": 0.0013270610215668777,
+        "fixedReachYRetreatMean": 5.037796877990879e-05,
+        "sheetSpeedCV": 0.35467985774477884,
+        "whiteEdgeCV": 0.2169635633900697,
+        "nearNeutralOccupancyPenalty": 0.0017656533609155978,
+        "weightedSTRESS100": 35.303908852147664,
+        "unweightedSTRESS100": 34.85277375663098,
+        "heldoutWeightSevenSTRESS100": 41.052610729472725
+      },
+      "full": {
+        "levelTurnMean": 0.0004611430533260989,
+        "levelTurnWorst": 0.004675037244982971,
+        "fixedReachRetreatMean": 0.0010876077371661814,
+        "fixedReachRetreatWorst": 0.06434498840042865,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.32235696847922346,
+        "whiteEdgeCV": 0.22233502395922608,
+        "nearNeutralOccupancyPenalty": 0.0006619214150279981,
+        "weightedSTRESS100": 34.58908061440668,
+        "unweightedSTRESS100": 35.68866962142528,
+        "heldoutWeightSevenSTRESS100": 33.863588427902506
+      }
+    },
+    "baselineLoss": 0.16091030735481943,
+    "finalLoss": 0.15717887650315246,
+    "trace": [
+      {
+        "call": 1,
+        "seconds": 1.1855445270048222,
+        "loss": 0.16091030735481943,
+        "gradientNorm": 0.0020067150311253524
+      },
+      {
+        "call": 2,
+        "seconds": 1.9280115790024865,
+        "loss": 0.16090914296588385,
+        "gradientNorm": 0.002006578327708907
+      },
+      {
+        "call": 3,
+        "seconds": 2.5277087569993455,
+        "loss": 0.15859685628503958,
+        "gradientNorm": 0.005901062318585435
+      },
+      {
+        "call": 4,
+        "seconds": 3.2375699280019035,
+        "loss": 0.15748944274547713,
+        "gradientNorm": 0.006786704458464481
+      },
+      {
+        "call": 5,
+        "seconds": 3.9877288520001457,
+        "loss": 0.15748157048970896,
+        "gradientNorm": 0.007140821776551554
+      },
+      {
+        "call": 6,
+        "seconds": 4.56640738400165,
+        "loss": 0.15745474653262792,
+        "gradientNorm": 0.008191185187490827
+      },
+      {
+        "call": 7,
+        "seconds": 5.322679654003878,
+        "loss": 0.15724341154265456,
+        "gradientNorm": 0.008764528863139255
+      },
+      {
+        "call": 8,
+        "seconds": 6.037630459002685,
+        "loss": 0.15722693682042316,
+        "gradientNorm": 0.008724845704995139
+      },
+      {
+        "call": 9,
+        "seconds": 6.78682735899929,
+        "loss": 0.15722048238663283,
+        "gradientNorm": 0.00910678478023737
+      },
+      {
+        "call": 10,
+        "seconds": 7.624810512003023,
+        "loss": 0.1572219668138966,
+        "gradientNorm": 0.008185064833994752
+      },
+      {
+        "call": 11,
+        "seconds": 8.37135094000405,
+        "loss": 0.1572200428122456,
+        "gradientNorm": 0.008298263976435055
+      },
+      {
+        "call": 12,
+        "seconds": 9.18566431000363,
+        "loss": 0.1572198604203418,
+        "gradientNorm": 0.008328991302789251
+      },
+      {
+        "call": 13,
+        "seconds": 9.958633947004273,
+        "loss": 0.15721979022091007,
+        "gradientNorm": 0.009121933911935718
+      },
+      {
+        "call": 14,
+        "seconds": 10.813109984999755,
+        "loss": 0.15721851356542102,
+        "gradientNorm": 0.009110550735615258
+      },
+      {
+        "call": 15,
+        "seconds": 11.694466804001422,
+        "loss": 0.15720953567647647,
+        "gradientNorm": 0.009090345723862976
+      },
+      {
+        "call": 16,
+        "seconds": 12.39489579500514,
+        "loss": 0.157196138025179,
+        "gradientNorm": 0.008352158469688438
+      },
+      {
+        "call": 17,
+        "seconds": 13.31548749400099,
+        "loss": 0.15739257748977026,
+        "gradientNorm": 0.009581885095172583
+      },
+      {
+        "call": 18,
+        "seconds": 14.12998843400419,
+        "loss": 0.15718060609041173,
+        "gradientNorm": 0.008666944511444901
+      },
+      {
+        "call": 19,
+        "seconds": 14.747791216999758,
+        "loss": 0.15717944797184424,
+        "gradientNorm": 0.00870977307145568
+      },
+      {
+        "call": 20,
+        "seconds": 15.498690118001832,
+        "loss": 0.15718829716414814,
+        "gradientNorm": 0.009634082654785242
+      },
+      {
+        "call": 21,
+        "seconds": 16.209685446003277,
+        "loss": 0.15717939144923626,
+        "gradientNorm": 0.009498620214107299
+      },
+      {
+        "call": 22,
+        "seconds": 16.85072059799859,
+        "loss": 0.15717914172992808,
+        "gradientNorm": 0.009502740646843288
+      },
+      {
+        "call": 23,
+        "seconds": 17.59312641499855,
+        "loss": 0.15717914299464966,
+        "gradientNorm": 0.008758982182933838
+      },
+      {
+        "call": 24,
+        "seconds": 18.26514583500102,
+        "loss": 0.15717902224007302,
+        "gradientNorm": 0.008755591160651402
+      },
+      {
+        "call": 25,
+        "seconds": 18.954792725002335,
+        "loss": 0.1571789368516997,
+        "gradientNorm": 0.009510752949192966
+      },
+      {
+        "call": 26,
+        "seconds": 19.591646811000828,
+        "loss": 0.1571789745944087,
+        "gradientNorm": 0.008757115857950018
+      },
+      {
+        "call": 27,
+        "seconds": 20.2644317650047,
+        "loss": 0.15717889342202154,
+        "gradientNorm": 0.008759863015691925
+      },
+      {
+        "call": 28,
+        "seconds": 20.940743083003326,
+        "loss": 0.15717888397100685,
+        "gradientNorm": 0.008760196533676259
+      },
+      {
+        "call": 29,
+        "seconds": 21.670199002001027,
+        "loss": 0.157183547435706,
+        "gradientNorm": 0.009506480114414908
+      },
+      {
+        "call": 30,
+        "seconds": 22.501890330000606,
+        "loss": 0.15717916193495912,
+        "gradientNorm": 0.009511823583922677
+      },
+      {
+        "call": 31,
+        "seconds": 23.17796499399992,
+        "loss": 0.1571788805436457,
+        "gradientNorm": 0.00951118519077071
+      },
+      {
+        "call": 32,
+        "seconds": 23.793393616004323,
+        "loss": 0.15717888154059959,
+        "gradientNorm": 0.008760328270809623
+      },
+      {
+        "call": 33,
+        "seconds": 24.52237773500383,
+        "loss": 0.15717887733497493,
+        "gradientNorm": 0.00876055664089485
+      },
+      {
+        "call": 34,
+        "seconds": 25.19699321799999,
+        "loss": 0.15717887670590053,
+        "gradientNorm": 0.008760590845125484
+      },
+      {
+        "call": 35,
+        "seconds": 25.908694805002597,
+        "loss": 0.1571788789802176,
+        "gradientNorm": 0.009511181637021053
+      },
+      {
+        "call": 36,
+        "seconds": 26.58054509700014,
+        "loss": 0.15717887659423088,
+        "gradientNorm": 0.008760596918081983
+      },
+      {
+        "call": 37,
+        "seconds": 27.201749184001528,
+        "loss": 0.1571788780510732,
+        "gradientNorm": 0.009511179524992325
+      },
+      {
+        "call": 38,
+        "seconds": 27.890970095999364,
+        "loss": 0.15717887659423088,
+        "gradientNorm": 0.008760596918081983
+      },
+      {
+        "call": 39,
+        "seconds": 28.488563664002868,
+        "loss": 0.15718524047345633,
+        "gradientNorm": 0.009521158071308888
+      },
+      {
+        "call": 40,
+        "seconds": 29.187451234000036,
+        "loss": 0.15717930012624623,
+        "gradientNorm": 0.009513624970554076
+      },
+      {
+        "call": 41,
+        "seconds": 29.88613725900359,
+        "loss": 0.1571789069181591,
+        "gradientNorm": 0.009511353391050931
+      },
+      {
+        "call": 42,
+        "seconds": 30.499438680999447,
+        "loss": 0.15717887850887058,
+        "gradientNorm": 0.009511188550594933
+      },
+      {
+        "call": 43,
+        "seconds": 31.174410648003686,
+        "loss": 0.15717887651856818,
+        "gradientNorm": 0.008760601712977826
+      },
+      {
+        "call": 44,
+        "seconds": 31.805675846000668,
+        "loss": 0.1571788778076902,
+        "gradientNorm": 0.009511184480867548
+      },
+      {
+        "call": 45,
+        "seconds": 32.511742202004825,
+        "loss": 0.1571788765520274,
+        "gradientNorm": 0.009511177192714732
+      },
+      {
+        "call": 46,
+        "seconds": 33.09327525499975,
+        "loss": 0.15717887650778956,
+        "gradientNorm": 0.008760602396026907
+      },
+      {
+        "call": 47,
+        "seconds": 33.75975547700364,
+        "loss": 0.15717887652582863,
+        "gradientNorm": 0.009511177040649951
+      },
+      {
+        "call": 48,
+        "seconds": 34.53869295900222,
+        "loss": 0.15717887650315246,
+        "gradientNorm": 0.008760602689893591
+      },
+      {
+        "call": 49,
+        "seconds": 35.12674984500336,
+        "loss": 0.15717887651268622,
+        "gradientNorm": 0.00951117696436658
+      },
+      {
+        "call": 50,
+        "seconds": 35.84822245599935,
+        "loss": 0.15717887650315246,
+        "gradientNorm": 0.008760602689893591
+      }
+    ],
+    "optimizer": {
+      "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+      "iterations": 22,
+      "calls": 50,
+      "seconds": 35.96337196500099
+    },
+    "limits": [
+      "COMBVD pairs are training population, not held out",
+      "GenSpace values are interpolated source grids, not direct runtime",
+      "Full-domain numeric appearance cannot be displayed on sRGB directly",
+      "Direct JS runtime, independent benchmark and human visual gates are still required"
+    ]
+  }
+}

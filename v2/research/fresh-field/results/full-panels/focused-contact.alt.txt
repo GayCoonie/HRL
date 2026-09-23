@@ -1,0 +1,8 @@
+Alternative text for focused-contact.png (full-gamut model output displayed after clipping to sRGB).
+Five columns, left to right: Beta 1, frozen joint research baseline, fresh seed calibration, visual-neutral (FAILED COMBVD), joint-graded (FAILED Beta 1).
+Three rows at matched public hue, Reach and Level coordinates: H 120° yellow, H 182.5° green/cyan, H 273° blue/violet. Each triangle runs white at top left, black at bottom left, vivid at right.
+Every panel labels display-clipped pixels out of 8,481 valid triangle pixels; clipping alters the visual appearance of full-gamut results.
+H 120°: Beta 1: 1,718/8,481 clipped; Frozen joint: 2,423/8,481 clipped; Fresh seed (calibration): 1,620/8,481 clipped; Visual-neutral FAILED COMBVD: 1,989/8,481 clipped; Joint-graded FAILED Beta 1: 2,618/8,481 clipped.
+H 182.5°: Beta 1: 4,788/8,481 clipped; Frozen joint: 4,844/8,481 clipped; Fresh seed (calibration): 5,873/8,481 clipped; Visual-neutral FAILED COMBVD: 5,723/8,481 clipped; Joint-graded FAILED Beta 1: 5,126/8,481 clipped.
+H 273°: Beta 1: 6,309/8,481 clipped; Frozen joint: 5,625/8,481 clipped; Fresh seed (calibration): 5,479/8,481 clipped; Visual-neutral FAILED COMBVD: 6,643/8,481 clipped; Joint-graded FAILED Beta 1: 5,635/8,481 clipped.
+Use unclipped XYZ audit receipts for metric and full-domain claims; a visually smoother sRGB panel is not evidence of a passing COMBVD fit.

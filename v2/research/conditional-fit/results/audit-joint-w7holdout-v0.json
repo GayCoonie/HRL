@@ -1,0 +1,461 @@
+{
+  "schema": "hrl-conditional-direct-fixed-reach-v1",
+  "recordPath": "/workspace/scratch/f91573918531/capacity-source/v2/research/conditional-fit/results/conditional-joint-w7holdout-v0.json",
+  "recordSHA256": "9a1ca2bfa81fd204993be1ea3eb7f61f31fab3e133fa02fc3ba09c79b6d7eae8",
+  "entryPath": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/index.mjs",
+  "entrySHA256": "c6d4da23756a1a7dda132869b74750ec59ae27bf912e4b799ee51f415cfe496f",
+  "factory": "createConditionalFieldHRL",
+  "method": "Actual JS XYZ; direct HelmLab GenSpace J for 65 points per fixed-public-Reach path. No RGB display clipping.",
+  "grids": {
+    "regular": {
+      "hues": [
+        0,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        35,
+        40,
+        45,
+        50,
+        55,
+        60,
+        65,
+        70,
+        75,
+        80,
+        85,
+        90,
+        95,
+        100,
+        105,
+        110,
+        115,
+        120,
+        125,
+        130,
+        135,
+        140,
+        145,
+        150,
+        155,
+        160,
+        165,
+        170,
+        175,
+        180,
+        185,
+        190,
+        195,
+        200,
+        205,
+        210,
+        215,
+        220,
+        225,
+        230,
+        235,
+        240,
+        245,
+        250,
+        255,
+        260,
+        265,
+        270,
+        275,
+        280,
+        285,
+        290,
+        295,
+        300,
+        305,
+        310,
+        315,
+        320,
+        325,
+        330,
+        335,
+        340,
+        345,
+        350,
+        355
+      ],
+      "reaches": [
+        0.0001,
+        0.001,
+        0.01,
+        0.05,
+        0.2,
+        0.5,
+        0.8
+      ],
+      "pointsPerPath": 65
+    },
+    "shifted": {
+      "hues": [
+        2.5,
+        7.5,
+        12.5,
+        17.5,
+        22.5,
+        27.5,
+        32.5,
+        37.5,
+        42.5,
+        47.5,
+        52.5,
+        57.5,
+        62.5,
+        67.5,
+        72.5,
+        77.5,
+        82.5,
+        87.5,
+        92.5,
+        97.5,
+        102.5,
+        107.5,
+        112.5,
+        117.5,
+        122.5,
+        127.5,
+        132.5,
+        137.5,
+        142.5,
+        147.5,
+        152.5,
+        157.5,
+        162.5,
+        167.5,
+        172.5,
+        177.5,
+        182.5,
+        187.5,
+        192.5,
+        197.5,
+        202.5,
+        207.5,
+        212.5,
+        217.5,
+        222.5,
+        227.5,
+        232.5,
+        237.5,
+        242.5,
+        247.5,
+        252.5,
+        257.5,
+        262.5,
+        267.5,
+        272.5,
+        277.5,
+        282.5,
+        287.5,
+        292.5,
+        297.5,
+        302.5,
+        307.5,
+        312.5,
+        317.5,
+        322.5,
+        327.5,
+        332.5,
+        337.5,
+        342.5,
+        347.5,
+        352.5,
+        357.5
+      ],
+      "reaches": [
+        0.0001,
+        0.001,
+        0.01,
+        0.05,
+        0.2,
+        0.5,
+        0.8
+      ],
+      "pointsPerPath": 65
+    }
+  },
+  "gamuts": {
+    "srgb": {
+      "regular": {
+        "paths": 504,
+        "meanTotalRetreat": 0.00011894560530162114,
+        "worstTotalRetreat": 0.007106869625637002,
+        "worstPath": {
+          "H": 300,
+          "R": 0.2
+        },
+        "worstStepDrop": 0.003875051495996873,
+        "worstLocation": {
+          "H": 305,
+          "R": 0.2,
+          "Lprevious": 0.9875,
+          "L": 1,
+          "Jprevious": 0.8080197102612171,
+          "J": 0.8041446587652202
+        },
+        "negativeJSteps": 45,
+        "meanTotalYRetreat": 0.00025052094097397225,
+        "worstYDrop": 0.007393093804400674,
+        "negativeYSteps": 49
+      },
+      "shifted": {
+        "paths": 504,
+        "meanTotalRetreat": 0.00012055618377832771,
+        "worstTotalRetreat": 0.007182231539838213,
+        "worstPath": {
+          "H": 302.5,
+          "R": 0.2
+        },
+        "worstStepDrop": 0.003867242982250496,
+        "worstLocation": {
+          "H": 307.5,
+          "R": 0.2,
+          "Lprevious": 0.9875,
+          "L": 1,
+          "Jprevious": 0.8135433220282156,
+          "J": 0.8096760790459651
+        },
+        "negativeJSteps": 44,
+        "meanTotalYRetreat": 0.0002527670363885705,
+        "worstYDrop": 0.007365692415548075,
+        "negativeYSteps": 49
+      },
+      "yellowBlueProbe": [
+        {
+          "H": 60,
+          "R": 0.1,
+          "L": 0.5,
+          "physicalHue": 60,
+          "a": 0.1734237975958404,
+          "s": 0.16505187428431742,
+          "normalizedGrayDifference": -0.0063271842558288716
+        },
+        {
+          "H": 60,
+          "R": 0.1,
+          "L": 0.9,
+          "physicalHue": 60,
+          "a": 0.7540509276915689,
+          "s": 0.1260339644433165,
+          "normalizedGrayDifference": -0.015344044963833802
+        },
+        {
+          "H": 60,
+          "R": 0.2,
+          "L": 0.35,
+          "physicalHue": 60,
+          "a": 0.07189302048125865,
+          "s": 0.5722147694578823,
+          "normalizedGrayDifference": -0.010984572655975196
+        },
+        {
+          "H": 60,
+          "R": 0.2,
+          "L": 0.9,
+          "physicalHue": 60,
+          "a": 0.7503482756824911,
+          "s": 0.25105946797317674,
+          "normalizedGrayDifference": -0.03062959018953811
+        },
+        {
+          "H": 60,
+          "R": 0.5,
+          "L": 1,
+          "physicalHue": 60,
+          "a": 1,
+          "s": 0.661164325106999,
+          "normalizedGrayDifference": null
+        },
+        {
+          "H": 273,
+          "R": 0.1,
+          "L": 0.5,
+          "physicalHue": 273,
+          "a": 0.20767215918569495,
+          "s": 0.16485560387749157,
+          "normalizedGrayDifference": 0.0353689802161818
+        },
+        {
+          "H": 273,
+          "R": 0.1,
+          "L": 0.9,
+          "physicalHue": 273,
+          "a": 0.8316693966922505,
+          "s": 0.26140569285197013,
+          "normalizedGrayDifference": 0.30508591047109224
+        },
+        {
+          "H": 273,
+          "R": 0.2,
+          "L": 0.35,
+          "physicalHue": 273,
+          "a": 0.11040121034906944,
+          "s": 0.5409817905978307,
+          "normalizedGrayDifference": 0.03096230064245765
+        },
+        {
+          "H": 273,
+          "R": 0.2,
+          "L": 0.9,
+          "physicalHue": 273,
+          "a": 0.8616001187293313,
+          "s": 0.41127287494069176,
+          "normalizedGrayDifference": 0.4286479962987932
+        },
+        {
+          "H": 273,
+          "R": 0.5,
+          "L": 1,
+          "physicalHue": 273,
+          "a": 1,
+          "s": 0.7497756795300503,
+          "normalizedGrayDifference": null
+        }
+      ]
+    },
+    "full": {
+      "regular": {
+        "paths": 504,
+        "meanTotalRetreat": 0.0014326332397892685,
+        "worstTotalRetreat": 0.19011330981439478,
+        "worstPath": {
+          "H": 290,
+          "R": 0.5
+        },
+        "worstStepDrop": 0.08496263933935783,
+        "worstLocation": {
+          "H": 290,
+          "R": 0.05,
+          "Lprevious": 0.05,
+          "L": 0.06484375,
+          "Jprevious": 0.18957527234784052,
+          "J": 0.1046126330084827
+        },
+        "negativeJSteps": 114,
+        "meanTotalYRetreat": 0,
+        "worstYDrop": 0,
+        "negativeYSteps": 0
+      },
+      "shifted": {
+        "paths": 504,
+        "meanTotalRetreat": 0.0008979069928371361,
+        "worstTotalRetreat": 0.10652356687810598,
+        "worstPath": {
+          "H": 287.5,
+          "R": 0.05
+        },
+        "worstStepDrop": 0.1015228091842228,
+        "worstLocation": {
+          "H": 287.5,
+          "R": 0.05,
+          "Lprevious": 0.05,
+          "L": 0.06484375,
+          "Jprevious": 0.20387878659756634,
+          "J": 0.10235597741334354
+        },
+        "negativeJSteps": 77,
+        "meanTotalYRetreat": 0,
+        "worstYDrop": 0,
+        "negativeYSteps": 0
+      },
+      "yellowBlueProbe": [
+        {
+          "H": 60,
+          "R": 0.1,
+          "L": 0.5,
+          "physicalHue": 60,
+          "a": 0.1734237975958404,
+          "s": 0.16505187428431742,
+          "normalizedGrayDifference": -0.0063271842558288716
+        },
+        {
+          "H": 60,
+          "R": 0.1,
+          "L": 0.9,
+          "physicalHue": 60,
+          "a": 0.7540509276915689,
+          "s": 0.1260339644433165,
+          "normalizedGrayDifference": -0.015344044963833802
+        },
+        {
+          "H": 60,
+          "R": 0.2,
+          "L": 0.35,
+          "physicalHue": 60,
+          "a": 0.07189302048125865,
+          "s": 0.5722147694578823,
+          "normalizedGrayDifference": -0.010984572655975196
+        },
+        {
+          "H": 60,
+          "R": 0.2,
+          "L": 0.9,
+          "physicalHue": 60,
+          "a": 0.7503482756824911,
+          "s": 0.25105946797317674,
+          "normalizedGrayDifference": -0.03062959018953811
+        },
+        {
+          "H": 60,
+          "R": 0.5,
+          "L": 1,
+          "physicalHue": 60,
+          "a": 1,
+          "s": 0.661164325106999,
+          "normalizedGrayDifference": null
+        },
+        {
+          "H": 273,
+          "R": 0.1,
+          "L": 0.5,
+          "physicalHue": 273,
+          "a": 0.20767215918569495,
+          "s": 0.16485560387749157,
+          "normalizedGrayDifference": 0.0353689802161818
+        },
+        {
+          "H": 273,
+          "R": 0.1,
+          "L": 0.9,
+          "physicalHue": 273,
+          "a": 0.8316693966922505,
+          "s": 0.26140569285197013,
+          "normalizedGrayDifference": 0.30508591047109224
+        },
+        {
+          "H": 273,
+          "R": 0.2,
+          "L": 0.35,
+          "physicalHue": 273,
+          "a": 0.11040121034906944,
+          "s": 0.5409817905978307,
+          "normalizedGrayDifference": 0.03096230064245765
+        },
+        {
+          "H": 273,
+          "R": 0.2,
+          "L": 0.9,
+          "physicalHue": 273,
+          "a": 0.8616001187293313,
+          "s": 0.41127287494069176,
+          "normalizedGrayDifference": 0.4286479962987932
+        },
+        {
+          "H": 273,
+          "R": 0.5,
+          "L": 1,
+          "physicalHue": 273,
+          "a": 1,
+          "s": 0.7497756795300503,
+          "normalizedGrayDifference": null
+        }
+      ]
+    }
+  }
+}

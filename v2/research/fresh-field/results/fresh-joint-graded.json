@@ -1,0 +1,475 @@
+{
+  "schema": "hrl-fresh-field-v1",
+  "description": "Unfitted physical-field seed. Both density CDFs are identity; no Beta 1 or joint tonal coefficients are inherited.",
+  "harmonics": 2,
+  "knots": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "reach_logits": [
+    [
+      0.20311121869152013,
+      0.1742403213275826,
+      -0.12716112402201596,
+      -0.5176951092540444,
+      -0.4522578857471797
+    ],
+    [
+      1.059020880879452,
+      0.302770772398955,
+      -0.04471424475503765,
+      -0.2565188845731052,
+      -0.6996398455494944
+    ],
+    [
+      0.9242921133269831,
+      0.05056736326268566,
+      -0.44879816302092757,
+      0.03974564293415157,
+      -0.4763654064977784
+    ],
+    [
+      -2.1606380086201873,
+      0.6435883695711193,
+      0.5968486807368499,
+      -0.04005025714409784,
+      0.8835914497508712
+    ],
+    [
+      -0.21438819354340946,
+      -1.1586770054264592,
+      0.3520182462735515,
+      0.09686122145728515,
+      0.0912862272785806
+    ]
+  ],
+  "lift_logits": [
+    [
+      -2.85348081915475,
+      -0.24404019077450695,
+      0.39595899079143126,
+      0.435798732827103,
+      -0.13429851209131163
+    ],
+    [
+      -1.6194319493027267,
+      -0.3635428972271269,
+      -0.9985112929954303,
+      -2.4992451112552208,
+      -0.5535591494046841
+    ],
+    [
+      1.9443865322337737,
+      0.4201957384405137,
+      -0.03582813618762884,
+      1.4394505517405678,
+      -0.9688850096232919
+    ],
+    [
+      1.3791167600167464,
+      0.2790832426622225,
+      0.48764614006696655,
+      0.4104874245379642,
+      0.9561091191091726
+    ],
+    [
+      1.0637040803568931,
+      0.15200239839792232,
+      0.3406503129852255,
+      0.3819937614619321,
+      0.20826786956635585
+    ]
+  ],
+  "gain_logits": [
+    -4.0,
+    -1.1930076057294958,
+    -1.2732923157665461,
+    -2.4883772314083306,
+    0.2587531976726247
+  ],
+  "neutral_shift": 0.02686567756674324,
+  "max_gain": 0.95,
+  "log_density_cap": 4,
+  "variant": "fresh-joint-graded",
+  "research": {
+    "status": "experimental unvalidated fit; do not promote",
+    "trainPopulation": {
+      "srgb": 3331,
+      "full": 3813
+    },
+    "freshStarts": "graded",
+    "ablation": "shared",
+    "objectiveStage": "joint",
+    "trainingHues": [
+      0,
+      15,
+      30,
+      45,
+      55,
+      60,
+      65,
+      75,
+      90,
+      105,
+      120,
+      135,
+      140,
+      150,
+      165,
+      180,
+      195,
+      210,
+      225,
+      230,
+      240,
+      255,
+      270,
+      285,
+      289.5,
+      295,
+      300,
+      315,
+      320,
+      330,
+      345
+    ],
+    "pairCacheSHA256": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+    "sourceGridSHA256": {
+      "srgb": "37490460fd0a6679b6a8ac5486d1f859959c485514692374590a2ee8c2dcb81d",
+      "full": "8168027046e4ee470543d0627fd081e39be2f412a7bbe29c0b4abc5a0d54b2af"
+    },
+    "basePairSHA256": {
+      "srgb": "6762e759bdc8df9cafbd89573c0309531cfdc6fdef6c2f7b9eb02a61663a0e77",
+      "full": "9e4b2ffdea82b5560ac2c82abdd32859ec22a6eb409d0e9ed5a3214821a094bf"
+    },
+    "baseInputManifestSHA256": "e4b23000726fa34bdd5bf0a4a3c5e3444347cf5be689b0c38c5c02eab105e1a3",
+    "gridMetadataSHA256": {
+      "srgb": "deb61b9e0c00a26fb8f1372dcdc4d2a18db1617df29a26e65979f4f6e3a83eb4",
+      "full": "c38edabc5081aa7c4ddf1ddaddc5a63312212b6d89776e7a0c1c8ff6157d4579"
+    },
+    "physicalSourceDefinition": {
+      "srgb": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result",
+      "full": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result"
+    },
+    "fitCodeSHA256": "9d9ba3345ea81fcf11c07e8a29b16add4ded6cdc90541dc0832325c1984f2765",
+    "coreCodeSHA256": "6cf8c09ffd072e238a006a8a1f24c1db8e9beb6d79df0f2869ab29b1aef392c9",
+    "seedSHA256": "cb93d7cfab2fc4d47a8bba640362265a4a1ea5b3f55338b750dc7b6ee4380bfa",
+    "neutralSeedMetrics": {
+      "srgb": {
+        "levelTurnMean": 0.0014633668324573565,
+        "levelTurnWorst": 0.016268011162226037,
+        "fixedReachRetreatMean": 0.0,
+        "fixedReachRetreatWorst": 0.0,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.28976826610721307,
+        "whiteEdgeCV": 0.08814903267518474,
+        "nearNeutralOccupancyPenalty": 0.0016511790695635945,
+        "weightedSTRESS100": 44.420145302688844,
+        "unweightedSTRESS100": 41.61602225742671
+      },
+      "full": {
+        "levelTurnMean": 0.0004355791714867593,
+        "levelTurnWorst": 0.018184468586214253,
+        "fixedReachRetreatMean": 0.006971585570165208,
+        "fixedReachRetreatWorst": 0.2769682402590954,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.1961886911511672,
+        "whiteEdgeCV": 0.20245944097995705,
+        "nearNeutralOccupancyPenalty": 0.0009059874565184992,
+        "weightedSTRESS100": 47.304047468762725,
+        "unweightedSTRESS100": 48.036319331249146
+      }
+    },
+    "finalTrainingMetrics": {
+      "srgb": {
+        "levelTurnMean": 0.0012888539768238284,
+        "levelTurnWorst": 0.056501935229545,
+        "fixedReachRetreatMean": 0.0,
+        "fixedReachRetreatWorst": 0.0,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.37350511685471427,
+        "whiteEdgeCV": 0.4515950828028313,
+        "nearNeutralOccupancyPenalty": 0.005039258004384619,
+        "weightedSTRESS100": 36.17661373985655,
+        "unweightedSTRESS100": 34.81099071677463
+      },
+      "full": {
+        "levelTurnMean": 0.0004028137351840625,
+        "levelTurnWorst": 0.012084044670196636,
+        "fixedReachRetreatMean": 0.006428008518695773,
+        "fixedReachRetreatWorst": 0.3150877959439733,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.2901996961052456,
+        "whiteEdgeCV": 0.503899188551122,
+        "nearNeutralOccupancyPenalty": 0.002835579794810907,
+        "weightedSTRESS100": 36.6776576050268,
+        "unweightedSTRESS100": 39.01002029220104
+      }
+    },
+    "baselineLoss": 0.2441681174189593,
+    "finalLoss": 0.15904124277278017,
+    "trace": [
+      {
+        "call": 1,
+        "seconds": 6.659518970998761,
+        "loss": 0.2441681174189593,
+        "gradientNorm": 0.1173057515348821
+      },
+      {
+        "call": 2,
+        "seconds": 10.336979159998009,
+        "loss": 0.23107271462478376,
+        "gradientNorm": 0.10566302635500127
+      },
+      {
+        "call": 3,
+        "seconds": 13.535645811003633,
+        "loss": 0.20489034539088624,
+        "gradientNorm": 0.11585113237988881
+      },
+      {
+        "call": 4,
+        "seconds": 17.2953763359983,
+        "loss": 0.1776925237713699,
+        "gradientNorm": 0.02229708310582865
+      },
+      {
+        "call": 5,
+        "seconds": 20.135540405004576,
+        "loss": 0.17567430497918887,
+        "gradientNorm": 0.015540496649432245
+      },
+      {
+        "call": 6,
+        "seconds": 23.44935572599934,
+        "loss": 0.17287283745592538,
+        "gradientNorm": 0.011022490635534865
+      },
+      {
+        "call": 7,
+        "seconds": 26.436081302003004,
+        "loss": 0.1718456506457046,
+        "gradientNorm": 0.008006200468953563
+      },
+      {
+        "call": 8,
+        "seconds": 29.322531316000095,
+        "loss": 0.17121955569944525,
+        "gradientNorm": 0.006590208748820409
+      },
+      {
+        "call": 9,
+        "seconds": 32.757487645001675,
+        "loss": 0.168348659019058,
+        "gradientNorm": 0.011371331730663679
+      },
+      {
+        "call": 10,
+        "seconds": 36.213053120998666,
+        "loss": 0.18282593678290296,
+        "gradientNorm": 0.06372628169993688
+      },
+      {
+        "call": 11,
+        "seconds": 39.498067066997464,
+        "loss": 0.16695044939626297,
+        "gradientNorm": 0.013776063764382271
+      },
+      {
+        "call": 12,
+        "seconds": 43.023179367999546,
+        "loss": 0.17509577172785498,
+        "gradientNorm": 0.04478963423558864
+      },
+      {
+        "call": 13,
+        "seconds": 46.85440923800343,
+        "loss": 0.16614595922813896,
+        "gradientNorm": 0.012296419719668933
+      },
+      {
+        "call": 14,
+        "seconds": 50.064546237998,
+        "loss": 0.1651099503887273,
+        "gradientNorm": 0.0066582921598575245
+      },
+      {
+        "call": 15,
+        "seconds": 53.694235130999004,
+        "loss": 0.1647221236807622,
+        "gradientNorm": 0.004274769237384525
+      },
+      {
+        "call": 16,
+        "seconds": 56.59546809200401,
+        "loss": 0.16449967947515542,
+        "gradientNorm": 0.003647082364201797
+      },
+      {
+        "call": 17,
+        "seconds": 59.748380650999025,
+        "loss": 0.16416836473505642,
+        "gradientNorm": 0.004334477073615151
+      },
+      {
+        "call": 18,
+        "seconds": 62.780487067997456,
+        "loss": 0.16344758161128625,
+        "gradientNorm": 0.008296097284977079
+      },
+      {
+        "call": 19,
+        "seconds": 65.64160908600024,
+        "loss": 0.16527825330181292,
+        "gradientNorm": 0.01899034485031435
+      },
+      {
+        "call": 20,
+        "seconds": 68.37805583899899,
+        "loss": 0.16301619842256795,
+        "gradientNorm": 0.009031064287554838
+      },
+      {
+        "call": 21,
+        "seconds": 71.60304996900231,
+        "loss": 0.16226129875428463,
+        "gradientNorm": 0.011789934475341702
+      },
+      {
+        "call": 22,
+        "seconds": 74.31651082600001,
+        "loss": 0.16093803281109412,
+        "gradientNorm": 0.007304211416227168
+      },
+      {
+        "call": 23,
+        "seconds": 76.84969109600206,
+        "loss": 0.16030559347663081,
+        "gradientNorm": 0.003578138404290856
+      },
+      {
+        "call": 24,
+        "seconds": 79.48148313700221,
+        "loss": 0.16036607114275497,
+        "gradientNorm": 0.008307655571164042
+      },
+      {
+        "call": 25,
+        "seconds": 82.17731633400399,
+        "loss": 0.16024550753417255,
+        "gradientNorm": 0.004875211812044899
+      },
+      {
+        "call": 26,
+        "seconds": 84.90119018300175,
+        "loss": 0.16004064556818826,
+        "gradientNorm": 0.0028191720339432124
+      },
+      {
+        "call": 27,
+        "seconds": 87.93746272600401,
+        "loss": 0.15989023843682926,
+        "gradientNorm": 0.0020572725760033255
+      },
+      {
+        "call": 28,
+        "seconds": 90.46892225299962,
+        "loss": 0.15978148019286942,
+        "gradientNorm": 0.0032980539041400996
+      },
+      {
+        "call": 29,
+        "seconds": 92.95451971299917,
+        "loss": 0.15974167869543746,
+        "gradientNorm": 0.003030604737661727
+      },
+      {
+        "call": 30,
+        "seconds": 95.91863934400317,
+        "loss": 0.15969902405814745,
+        "gradientNorm": 0.0014134263935678248
+      },
+      {
+        "call": 31,
+        "seconds": 98.62221950000094,
+        "loss": 0.15966567686138664,
+        "gradientNorm": 0.0014274793755210105
+      },
+      {
+        "call": 32,
+        "seconds": 101.47096376400441,
+        "loss": 0.1595853503015988,
+        "gradientNorm": 0.0023575744726413352
+      },
+      {
+        "call": 33,
+        "seconds": 104.25968552300037,
+        "loss": 0.15946948213230167,
+        "gradientNorm": 0.0029983577615014076
+      },
+      {
+        "call": 34,
+        "seconds": 107.17492665899772,
+        "loss": 0.1593419842225762,
+        "gradientNorm": 0.0034555811568076707
+      },
+      {
+        "call": 35,
+        "seconds": 109.65754681699764,
+        "loss": 0.15936769278906393,
+        "gradientNorm": 0.005556537397067927
+      },
+      {
+        "call": 36,
+        "seconds": 112.46205281500443,
+        "loss": 0.15929586038615143,
+        "gradientNorm": 0.0029039443808730405
+      },
+      {
+        "call": 37,
+        "seconds": 115.1427581099997,
+        "loss": 0.1592346265030541,
+        "gradientNorm": 0.00143291376406824
+      },
+      {
+        "call": 38,
+        "seconds": 118.1640392019981,
+        "loss": 0.15920405035589094,
+        "gradientNorm": 0.0010630597549369828
+      },
+      {
+        "call": 39,
+        "seconds": 120.92447584000183,
+        "loss": 0.15917445781087192,
+        "gradientNorm": 0.001757277721964887
+      },
+      {
+        "call": 40,
+        "seconds": 124.230375318999,
+        "loss": 0.1591275728959037,
+        "gradientNorm": 0.002270417769403291
+      },
+      {
+        "call": 41,
+        "seconds": 127.28740439800458,
+        "loss": 0.15904124277278017,
+        "gradientNorm": 0.0031353291401956447
+      }
+    ],
+    "optimizer": {
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 35,
+      "calls": 41,
+      "seconds": 127.6323196029989
+    },
+    "limits": [
+      "COMBVD pairs are training population, not held out",
+      "GenSpace values are interpolated source grids, not direct runtime",
+      "Full-domain numeric appearance cannot be displayed on sRGB directly",
+      "Direct JS runtime, independent benchmark and human visual gates are still required"
+    ]
+  }
+}

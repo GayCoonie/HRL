@@ -1,0 +1,738 @@
+{
+  "schema": "hrl-fresh-field-combvd-v2",
+  "scope": "COMBVD development scores; no independent observer holdout",
+  "method": "D65 relative XYZ, mapped import, actual HRL bicone distance; fitted residual STRESS with traditional per-row weights",
+  "referenceWhiteNits": 300,
+  "source": {
+    "hrlCommit": "d3c870631b0cb68175ad3c0e55c9d5053051e3f0",
+    "colorbenchCommit": "12b2de215cc5020682e3d245a8c78bce5f0ebbc9",
+    "poolCommit": "8641f4e8ebd9d85a34dc0fedc116fa0e58493190",
+    "beta1DefinitionSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+    "jointDefinitionSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+    "preparedInputsSHA256": "bbe219aab839f67f70459f262177066c31eff580331a8db5724eba915f1cf569",
+    "labelRowsSHA256": "0fff038480cc169c26e7709225d3251d1cd598c86ea27c2d28cb86fc627a0074",
+    "sourceNPZSHA256": "a04f0986100a2131fe9930d745bc2323f1e3089d6d8ff8fb74b3b6bdf9e659a9",
+    "nativeMaskSHA256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251",
+    "familyCounts": {
+      "BFD-P(D65)": 2028,
+      "BFD-P( C )": 200,
+      "BFD-P(M)": 548,
+      "LEEDS": 307,
+      "RIT-DuPont": 312,
+      "WITT": 418
+    }
+  },
+  "candidate": {
+    "module": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/index.mjs",
+    "model": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/model.mjs",
+    "record": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/results/conditional-hue-blue-yellow-contact-v0.json",
+    "moduleSHA256": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+    "modelSHA256": "8164861ec50eb6be55a969206a549227416697368386162a29cefdd81d9f400c",
+    "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+    "dependencies": [
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/index.mjs",
+        "sha256": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/source-readout.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+        "sha256": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/source-readout.mjs",
+        "sha256": "c00f6d08ead8fe7af85d835cf7aede1bd96e47c3c6f9d14918810d6fa7d17b77",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs",
+        "sha256": "48b7d661c1e552755899220db61b9b63f629bff440d1a09f4d207f9e1e8bca49",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/lib/hue-field.mjs",
+        "sha256": "9594fe6a4ef0127a151096b87da8fc341472fd96e3c38e41817cd69d3bc6e0c3",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/lib/index.mjs",
+        "sha256": "d8ac2a3b3b910b5097f85405b8f22aaaa55f2babd7707f3587f25b8030ef2017",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/lib/research.mjs",
+        "sha256": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs",
+        "sha256": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/hue-field.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/boundary-tonal/index.mjs",
+        "sha256": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/shared-rl/core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/shared-rl/source.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/tonal-semantics/operations.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-field/index.mjs",
+        "sha256": "c6d4da23756a1a7dda132869b74750ec59ae27bf912e4b799ee51f415cfe496f",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-field/model.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/fresh-field/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-field/model.mjs",
+        "sha256": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/index.mjs",
+        "sha256": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-field/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-hue/model.mjs",
+        "sha256": "8164861ec50eb6be55a969206a549227416697368386162a29cefdd81d9f400c",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/conditional-field/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/fresh-field/index.mjs",
+        "sha256": "0d14a7aa92457f9dfe1ea198d5b88d9dca96298158719580f26ed6fb23de8940",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/fresh-field/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/fresh-field/model.mjs",
+        "sha256": "ee40a6aff5805c50c5805ba64f800306104d83d001fd0343e3f865d8f6bf4329",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/base.mjs",
+        "sha256": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/context.mjs",
+        "sha256": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/geometry.mjs",
+        "sha256": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/index.mjs",
+        "sha256": "0992f0086e6352e06da7d769dfcfc0449d9acaa3c0ef33764ffa6b2d3a94aabb",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/base.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/context.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/geometry.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/atlas.mjs",
+        "sha256": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/index.mjs",
+        "sha256": "f4b2cb6f6df14d99506cf13ee08c8673472a481083dc672ddc07e95d31d0be21",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/atlas.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/shared-rl/core.mjs",
+        "sha256": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/rl-core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/shared-rl/source.mjs",
+        "sha256": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+        "imports": [
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/site-owner/github/v2/research/shared-rl/core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/tonal-semantics/operations.mjs",
+        "sha256": "182edbef7f08c312ec2bdeab85545b38226349a9ab90fb1602066f5585d01f0e",
+        "imports": []
+      }
+    ],
+    "dependencyManifestSHA256": "2d48cf399e781c29711c8d5152b1b813f183a547717fcbbb6cde4a97e3b267c7",
+    "runtimeResources": [
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/definitions.json",
+        "sha256": "4ff31208cfa8ef88a370248bd6be30c40a947b736f0607071abe6063e5dd6e31"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/source-full.json",
+        "sha256": "ae3da2b76af61b2aaba72054f6694f304ad6d14c03566054ebf98cad0545403c"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/a-smooth/source-srgb.json",
+        "sha256": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/data/appearance-readouts.json",
+        "sha256": "97a2c8459fed67b8aee6277c388d85cee81581c9475fb9e108beffac26de11c9"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/data/hue-field-0.6.json",
+        "sha256": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/data/release1-angles.json",
+        "sha256": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/boundary-tonal/boundary-1nm.json",
+        "sha256": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/boundary-tonal/results/metric.json",
+        "sha256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/relative-domain/results/source-full.json",
+        "sha256": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/site-owner/github/v2/research/rl-c1/candidate.json",
+        "sha256": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c"
+      }
+    ],
+    "resourceManifestSHA256": "e66609d7792226fe47d024ba5fe4655fa490ab15ef0097406bb0a44035c9812e",
+    "export": "createConditionalHueHRL"
+  },
+  "models": {
+    "beta1": {
+      "srgb": {
+        "gamut": "srgb",
+        "retained": {
+          "pairs": 3331,
+          "weighted": 29.107047807813437,
+          "unweighted": 30.712588175217213,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 1828,
+              "weighted": 29.97672305245949,
+              "unweighted": 29.97672305245949,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 139,
+              "weighted": 41.472588510189134,
+              "unweighted": 41.472588510189134,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 357,
+              "weighted": 33.39581157969283,
+              "unweighted": 33.39581157969283,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 27.455547455732066,
+              "unweighted": 27.455547455732106,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 284,
+              "weighted": 31.60891863042271,
+              "unweighted": 31.6089186304227,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 416,
+              "weighted": 23.567931089755067,
+              "unweighted": 23.56793108975507,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": {
+          "pairs": 3813,
+          "weighted": 34.489196386294026,
+          "unweighted": 38.12633858568555,
+          "mappedPairs": 482,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 33.57613769025411,
+              "unweighted": 33.57613769025411,
+              "mappedPairs": 200
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 44.46033292634719,
+              "unweighted": 44.46033292634719,
+              "mappedPairs": 61
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 45.20539978152382,
+              "unweighted": 45.20539978152382,
+              "mappedPairs": 191
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 27.455547455732066,
+              "unweighted": 27.455547455732106,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 34.036015914174556,
+              "unweighted": 34.036015914174634,
+              "mappedPairs": 28
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 24.099002481418317,
+              "unweighted": 24.099002481418317,
+              "mappedPairs": 2
+            }
+          }
+        },
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 898,
+          "mappedPairs": 482,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      },
+      "full": {
+        "gamut": "full",
+        "retained": {
+          "pairs": 3813,
+          "weighted": 29.948554645319014,
+          "unweighted": 32.12787975161925,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 33.733664512162704,
+              "unweighted": 33.733664512162704,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 47.61270847899478,
+              "unweighted": 47.61270847899478,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 30.956840737362985,
+              "unweighted": 30.956840737362985,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 26.939913505739614,
+              "unweighted": 26.93991350573964,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 29.717937786536286,
+              "unweighted": 29.717937786536343,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 22.630294001193647,
+              "unweighted": 22.630294001193647,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": null,
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 0,
+          "mappedPairs": 0,
+          "eventCounts": {}
+        }
+      }
+    },
+    "joint": {
+      "srgb": {
+        "gamut": "srgb",
+        "retained": {
+          "pairs": 3331,
+          "weighted": 26.79516095908466,
+          "unweighted": 28.474657914110246,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 1828,
+              "weighted": 28.806182909397133,
+              "unweighted": 28.806182909397133,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 139,
+              "weighted": 38.390068986365854,
+              "unweighted": 38.390068986365854,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 357,
+              "weighted": 29.259659702472884,
+              "unweighted": 29.259659702472884,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 24.75267824534152,
+              "unweighted": 24.752678245341524,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 284,
+              "weighted": 28.915041489439126,
+              "unweighted": 28.91504148943911,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 416,
+              "weighted": 21.149112512753074,
+              "unweighted": 21.14911251275308,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": {
+          "pairs": 3813,
+          "weighted": 33.35823689498577,
+          "unweighted": 36.43119169860092,
+          "mappedPairs": 482,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 33.77327803881426,
+              "unweighted": 33.77327803881426,
+              "mappedPairs": 200
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 47.11934677947355,
+              "unweighted": 47.11934677947355,
+              "mappedPairs": 61
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 41.15792935918719,
+              "unweighted": 41.15792935918719,
+              "mappedPairs": 191
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 24.75267824534152,
+              "unweighted": 24.752678245341524,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 37.71602555087904,
+              "unweighted": 37.71602555087909,
+              "mappedPairs": 28
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 21.719566902279364,
+              "unweighted": 21.719566902279368,
+              "mappedPairs": 2
+            }
+          }
+        },
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 898,
+          "mappedPairs": 482,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      },
+      "full": {
+        "gamut": "full",
+        "retained": {
+          "pairs": 3813,
+          "weighted": 26.902322208333274,
+          "unweighted": 28.783791842379326,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 29.915979154312073,
+              "unweighted": 29.915979154312073,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 50.00191025160804,
+              "unweighted": 50.00191025160804,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 27.940315804503115,
+              "unweighted": 27.940315804503115,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 24.51714688440252,
+              "unweighted": 24.517146884402532,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 26.722041634649525,
+              "unweighted": 26.722041634649575,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 20.33966046975531,
+              "unweighted": 20.3396604697553,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": null,
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 0,
+          "mappedPairs": 0,
+          "eventCounts": {}
+        }
+      }
+    },
+    "conditional-v4-contact": {
+      "srgb": {
+        "gamut": "srgb",
+        "retained": {
+          "pairs": 3331,
+          "weighted": 38.71512155215453,
+          "unweighted": 36.83877715730692,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 1828,
+              "weighted": 32.4359062620512,
+              "unweighted": 32.4359062620512,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 139,
+              "weighted": 40.7211884259862,
+              "unweighted": 40.7211884259862,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 357,
+              "weighted": 42.67281862035938,
+              "unweighted": 42.67281862035938,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 35.51092318634152,
+              "unweighted": 35.51092318634153,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 284,
+              "weighted": 40.71941516011501,
+              "unweighted": 40.719415160115005,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 416,
+              "weighted": 42.04938083015614,
+              "unweighted": 42.04938083015615,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": {
+          "pairs": 3813,
+          "weighted": 41.339157104829034,
+          "unweighted": 40.88869426280666,
+          "mappedPairs": 482,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 36.87477645394376,
+              "unweighted": 36.87477645394376,
+              "mappedPairs": 200
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 43.80965370952578,
+              "unweighted": 43.80965370952578,
+              "mappedPairs": 61
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 45.24497590792844,
+              "unweighted": 45.24497590792844,
+              "mappedPairs": 191
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 35.51092318634152,
+              "unweighted": 35.51092318634153,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 45.02746178938627,
+              "unweighted": 45.02746178938632,
+              "mappedPairs": 28
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 42.2882641987167,
+              "unweighted": 42.28826419871671,
+              "mappedPairs": 2
+            }
+          }
+        },
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 898,
+          "mappedPairs": 482,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      },
+      "full": {
+        "gamut": "full",
+        "retained": {
+          "pairs": 3813,
+          "weighted": 35.77391632587747,
+          "unweighted": 37.41019151325799,
+          "mappedPairs": 0,
+          "perFamily": {
+            "BFD-P(D65)": {
+              "pairs": 2028,
+              "weighted": 37.51137493999108,
+              "unweighted": 37.51137493999108,
+              "mappedPairs": 0
+            },
+            "BFD-P( C )": {
+              "pairs": 200,
+              "weighted": 45.76288437606029,
+              "unweighted": 45.76288437606029,
+              "mappedPairs": 0
+            },
+            "BFD-P(M)": {
+              "pairs": 548,
+              "weighted": 38.060335953996955,
+              "unweighted": 38.060335953996955,
+              "mappedPairs": 0
+            },
+            "LEEDS": {
+              "pairs": 307,
+              "weighted": 33.90446756280968,
+              "unweighted": 33.90446756280971,
+              "mappedPairs": 0
+            },
+            "RIT-DuPont": {
+              "pairs": 312,
+              "weighted": 28.693923842396284,
+              "unweighted": 28.693923842396334,
+              "mappedPairs": 0
+            },
+            "WITT": {
+              "pairs": 418,
+              "weighted": 33.63848095250414,
+              "unweighted": 33.63848095250412,
+              "mappedPairs": 0
+            }
+          }
+        },
+        "mappedAll": null,
+        "imports": {
+          "endpoints": 7626,
+          "mappedEndpoints": 0,
+          "mappedPairs": 0,
+          "eventCounts": {}
+        }
+      }
+    }
+  }
+}

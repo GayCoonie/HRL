@@ -1,0 +1,9 @@
+Alternative text for contact-focus.png: full direct-runtime HRL triangle montage.
+Five columns: Beta 1, frozen joint, V3 guarded, V4 coupled guarded, and V4 contact (FAILED COMBVD).
+3 rows at matched public H, Reach and Level: 120°, 182.5°, 273°.
+Each triangle has white at top left, black at bottom left, vivid hue at right. Each panel displays its clipped-pixel count.
+For each row, left to right:
+H 120°: Beta 1 1,718/8,481; Frozen joint 2,423/8,481; V3 guarded 3,024/8,481; V4 coupled guarded 3,061/8,481; V4 contact FAILED COMBVD 2,977/8,481 clipped.
+H 182.5°: Beta 1 4,788/8,481; Frozen joint 4,844/8,481; V3 guarded 5,251/8,481; V4 coupled guarded 5,225/8,481; V4 contact FAILED COMBVD 5,276/8,481 clipped.
+H 273°: Beta 1 6,309/8,481; Frozen joint 5,625/8,481; V3 guarded 6,034/8,481; V4 coupled guarded 6,369/8,481; V4 contact FAILED COMBVD 6,819/8,481 clipped.
+Full-domain out-of-sRGB colors are visually clamped, so use actual XYZ numerical probes for claims about the full domain. Contact fit fails COMBVD.

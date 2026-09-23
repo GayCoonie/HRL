@@ -1,0 +1,11 @@
+{
+  "schema": "hrl-conditional-field-v3",
+  "description": "Unfitted independent conditional Reach/Level seed, with physical gray and identity purity.",
+  "harmonics": 2,
+  "knots": [0, 0.25, 0.5, 0.75, 1],
+  "reach_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "reach_level_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "level_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "neutral_shift": 0.02686567756674324,
+  "log_density_cap": 4
+}

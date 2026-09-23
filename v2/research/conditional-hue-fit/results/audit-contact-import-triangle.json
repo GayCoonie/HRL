@@ -1,0 +1,49 @@
+{
+  "schema": "hrl-conditional-import-triangle-v1",
+  "candidateSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+  "benchmarkSHA256": "2aba1ef869bf97ce1884e5c0aa68a890fbf80dcb3aef5e7d8ea2a0aa8592c2c4",
+  "factorySHA256": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+  "inputIdentity": {
+    "preparedInputsSHA256": "bbe219aab839f67f70459f262177066c31eff580331a8db5724eba915f1cf569",
+    "labelRowsSHA256": "0fff038480cc169c26e7709225d3251d1cd598c86ea27c2d28cb86fc627a0074",
+    "sourceNPZSHA256": "a04f0986100a2131fe9930d745bc2323f1e3089d6d8ff8fb74b3b6bdf9e659a9",
+    "nativeMaskSHA256": "c95b0a38cd038fff9163f0d38ed4924addb95b1156283cf4a2ed65909efa2251",
+    "familyCounts": {
+      "BFD-P(D65)": 2028,
+      "BFD-P( C )": 200,
+      "BFD-P(M)": 548,
+      "LEEDS": 307,
+      "RIT-DuPont": 312,
+      "WITT": 418
+    }
+  },
+  "method": "Exact JS importXYZ of both endpoints of all pinned COMBVD pairs; tolerance=0, inclusive terminal boundaries",
+  "gamuts": {
+    "srgb": {
+      "endpoints": 7626,
+      "mappedEndpoints": 898,
+      "minH": 0.10023803488871863,
+      "maxH": 359.99734007519965,
+      "minR": 0.0014374473773446346,
+      "maxR": 1,
+      "minL": 0.013582921887270845,
+      "maxL": 1,
+      "closestReachLevel": 0,
+      "nearNeutral": 0,
+      "nearVivid": 898
+    },
+    "full": {
+      "endpoints": 7626,
+      "mappedEndpoints": 0,
+      "minH": 0.15007897681937266,
+      "maxH": 359.92416918282106,
+      "minR": 0.00032428648127023814,
+      "maxR": 0.6946414170501842,
+      "minL": 0.009334345713393278,
+      "maxL": 0.9308965496943392,
+      "closestReachLevel": 0.00792047283026875,
+      "nearNeutral": 0,
+      "nearVivid": 0
+    }
+  }
+}
