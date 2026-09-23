@@ -1,0 +1,336 @@
+{
+  "schema": "hrl-conditional-field-v3",
+  "description": "Fresh conditional positive CDF transport seed; no inherited tonal atlas coefficients",
+  "harmonics": 2,
+  "knots": [
+    0,
+    0.25,
+    0.5,
+    0.75,
+    1
+  ],
+  "reach_logits": [
+    [
+      0.49643081882884066,
+      0.06622703905101134,
+      -0.3119254794437844,
+      -0.3096320817598211,
+      -0.08004144231479633
+    ],
+    [
+      0.29163359315424736,
+      0.01090190589302629,
+      -0.26056959017765835,
+      -0.3133833569430242,
+      0.004970772596305353
+    ],
+    [
+      0.15480151036271173,
+      0.06841911382409309,
+      -0.11050397188835243,
+      -0.0692572231308327,
+      -0.04415946522753813
+    ],
+    [
+      -0.14108134602425282,
+      0.0714185852101241,
+      0.0997273487022404,
+      0.19385261303648332,
+      -0.13159593040294554
+    ],
+    [
+      -0.7765451792629318,
+      -0.20844874754298018,
+      0.5606782774658658,
+      0.4817515451534328,
+      0.23578118802820808
+    ]
+  ],
+  "reach_level_logits": [
+    [
+      0.10150093579354622,
+      0.020903767797340815,
+      -0.1005845544407388,
+      -0.08605173299243596,
+      -0.03683030963916719
+    ],
+    [
+      0.06522753166620693,
+      0.027931246475016522,
+      -0.1481257794301074,
+      -0.13160650427786805,
+      -0.06382863852124926
+    ],
+    [
+      0.10213262577615176,
+      0.05160836594261083,
+      -0.0741388489222181,
+      -0.050161969618262484,
+      -0.05662280248969856
+    ],
+    [
+      -0.07123596931008011,
+      -0.029898913523113774,
+      0.1423396440110133,
+      0.12380072218198644,
+      0.05602009958529593
+    ],
+    [
+      -0.19086437867286607,
+      -0.06805880387318958,
+      0.17473273786726481,
+      0.1403464738466001,
+      0.09718751089410158
+    ]
+  ],
+  "level_logits": [
+    [
+      0.0026934750363218143,
+      0.041478258812015716,
+      0.03312643657708815,
+      0.008466656699692314,
+      0.1726656942681163
+    ],
+    [
+      0.012876434958200626,
+      -0.010596717183419134,
+      -0.13994436505688354,
+      -0.1702165048947195,
+      -0.031969257039430626
+    ],
+    [
+      -0.20600649550802072,
+      -0.009538653099080044,
+      0.14199678518591988,
+      0.10382410539201885,
+      -0.04092353228527659
+    ],
+    [
+      0.23147022587504115,
+      0.00946382193100936,
+      -0.12192036916876638,
+      -0.04431428684146555,
+      -0.11771587899437665
+    ],
+    [
+      -0.042736398563577555,
+      -0.031993635520440655,
+      0.08842152709337169,
+      0.10409846929307401,
+      0.020272374970900696
+    ]
+  ],
+  "neutral_shift": 0.02686567756674324,
+  "log_density_cap": 4,
+  "variant": "conditional-visual-v0",
+  "research": {
+    "status": "experimental unvalidated fit; do not promote",
+    "trainPopulation": {
+      "srgb": 3331,
+      "full": 3813
+    },
+    "freshStarts": "neutral",
+    "ablation": "shared",
+    "objectiveStage": "visual",
+    "trainingHues": [
+      0,
+      30,
+      55,
+      60,
+      65,
+      90,
+      120,
+      140,
+      150,
+      180,
+      210,
+      230,
+      240,
+      270,
+      289.5,
+      295,
+      300,
+      320,
+      330
+    ],
+    "pairCacheSHA256": "a6379b1004fbd7b7f00894453dcf7072365d0bf6d595e9c53a08fc45d786762a",
+    "sourceGridSHA256": {
+      "srgb": "37490460fd0a6679b6a8ac5486d1f859959c485514692374590a2ee8c2dcb81d",
+      "full": "8168027046e4ee470543d0627fd081e39be2f412a7bbe29c0b4abc5a0d54b2af"
+    },
+    "basePairSHA256": {
+      "srgb": "6762e759bdc8df9cafbd89573c0309531cfdc6fdef6c2f7b9eb02a61663a0e77",
+      "full": "9e4b2ffdea82b5560ac2c82abdd32859ec22a6eb409d0e9ed5a3214821a094bf"
+    },
+    "baseInputManifestSHA256": "e4b23000726fa34bdd5bf0a4a3c5e3444347cf5be689b0c38c5c02eab105e1a3",
+    "gridMetadataSHA256": {
+      "srgb": "deb61b9e0c00a26fb8f1372dcdc4d2a18db1617df29a26e65979f4f6e3a83eb4",
+      "full": "c38edabc5081aa7c4ddf1ddaddc5a63312212b6d89776e7a0c1c8ff6157d4579"
+    },
+    "physicalSourceDefinition": {
+      "srgb": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result",
+      "full": "getBoundarySource(g).base.toXYZ; full source.fromLegacyXYZ; genRuler on result"
+    },
+    "fitCodeSHA256": "c83b5364fc6942e6ead6661324e5c6dbc081ea8c7e39413786abb2c39fb33db1",
+    "coreCodeSHA256": "360de9c3e69e9f70564a3d80c967026546259c4f39a18e5e694cedb82b66e07d",
+    "seedSHA256": "5568f7f5a1dea976ed098d2caa381f6a0d4d01b75b1cdac1707de9e40a80465d",
+    "neutralSeedMetrics": {
+      "srgb": {
+        "levelTurnMean": 7.5266836188401414e-06,
+        "levelTurnWorst": 0.0003668626319182078,
+        "fixedReachRetreatMean": 0.0,
+        "fixedReachRetreatWorst": 0.0,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.24971719249724336,
+        "whiteEdgeCV": 0.27924799253943583,
+        "nearNeutralOccupancyPenalty": 0.0014833407343477702,
+        "weightedSTRESS100": 43.46734427992264,
+        "unweightedSTRESS100": 40.84360283636981
+      },
+      "full": {
+        "levelTurnMean": 0.00016245313377378457,
+        "levelTurnWorst": 0.0060890841300789145,
+        "fixedReachRetreatMean": 0.007609913299342793,
+        "fixedReachRetreatWorst": 0.335519614653933,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.19180704997434803,
+        "whiteEdgeCV": 0.21472662879784027,
+        "nearNeutralOccupancyPenalty": 0.0011429027788377856,
+        "weightedSTRESS100": 45.507142275129475,
+        "unweightedSTRESS100": 45.949710239474065
+      }
+    },
+    "finalTrainingMetrics": {
+      "srgb": {
+        "levelTurnMean": 3.1042420096427075e-19,
+        "levelTurnWorst": 1.3877787807814457e-17,
+        "fixedReachRetreatMean": 0.0,
+        "fixedReachRetreatWorst": 0.0,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.20424513233270192,
+        "whiteEdgeCV": 0.16462884217236037,
+        "nearNeutralOccupancyPenalty": 4.305987667188963e-05,
+        "weightedSTRESS100": 49.3426663688259,
+        "unweightedSTRESS100": 45.582611099178685
+      },
+      "full": {
+        "levelTurnMean": 0.00022922723145208746,
+        "levelTurnWorst": 0.006319846011723973,
+        "fixedReachRetreatMean": 0.000912824796760858,
+        "fixedReachRetreatWorst": 0.0438384673579352,
+        "fixedReachYRetreatMean": 0.0,
+        "sheetSpeedCV": 0.20515795667499356,
+        "whiteEdgeCV": 0.151959914035713,
+        "nearNeutralOccupancyPenalty": 0.0,
+        "weightedSTRESS100": 49.01499959180203,
+        "unweightedSTRESS100": 50.042118634801014
+      }
+    },
+    "baselineLoss": 0.004343734472376006,
+    "finalLoss": 0.0003779964106155279,
+    "trace": [
+      {
+        "call": 1,
+        "seconds": 0.27201564999995753,
+        "loss": 0.004343734472376006,
+        "gradientNorm": 0.007674392839081547
+      },
+      {
+        "call": 2,
+        "seconds": 0.3617888149965438,
+        "loss": 0.004284056623389832,
+        "gradientNorm": 0.007768567882504135
+      },
+      {
+        "call": 3,
+        "seconds": 0.455341431996203,
+        "loss": 0.004224168599917412,
+        "gradientNorm": 0.007648873730403071
+      },
+      {
+        "call": 4,
+        "seconds": 0.550501613994129,
+        "loss": 0.003998653567938884,
+        "gradientNorm": 0.00720839614889739
+      },
+      {
+        "call": 5,
+        "seconds": 0.6401829559981707,
+        "loss": 0.0032041425365261214,
+        "gradientNorm": 0.005467442281590156
+      },
+      {
+        "call": 6,
+        "seconds": 0.7446197629978997,
+        "loss": 0.0015454197829255487,
+        "gradientNorm": 0.006476300281627382
+      },
+      {
+        "call": 7,
+        "seconds": 0.8746359379947535,
+        "loss": 0.0007434143473053553,
+        "gradientNorm": 0.002002955066152814
+      },
+      {
+        "call": 8,
+        "seconds": 1.0218126899999334,
+        "loss": 0.0006188315942561269,
+        "gradientNorm": 0.0018374780161120013
+      },
+      {
+        "call": 9,
+        "seconds": 1.1147170809999807,
+        "loss": 0.0005494765392580489,
+        "gradientNorm": 0.0007516666568195971
+      },
+      {
+        "call": 10,
+        "seconds": 1.2164823739949497,
+        "loss": 0.0005278096955234457,
+        "gradientNorm": 0.0006558318730227997
+      },
+      {
+        "call": 11,
+        "seconds": 1.3350571959963418,
+        "loss": 0.0004543076371100763,
+        "gradientNorm": 0.0005015651083955771
+      },
+      {
+        "call": 12,
+        "seconds": 1.471391617997142,
+        "loss": 0.0004268676270656976,
+        "gradientNorm": 0.0004887424629715538
+      },
+      {
+        "call": 13,
+        "seconds": 1.600522626999009,
+        "loss": 0.00040907596336045294,
+        "gradientNorm": 0.0003381116596118867
+      },
+      {
+        "call": 14,
+        "seconds": 1.7050243799967575,
+        "loss": 0.0003964354988825244,
+        "gradientNorm": 0.0002258765975363266
+      },
+      {
+        "call": 15,
+        "seconds": 1.8162220109952614,
+        "loss": 0.0003779964106155279,
+        "gradientNorm": 0.00014919075653921216
+      }
+    ],
+    "optimizer": {
+      "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+      "iterations": 12,
+      "calls": 15,
+      "seconds": 1.8805350359980366
+    },
+    "limits": [
+      "COMBVD pairs are training population, not held out",
+      "GenSpace values are interpolated source grids, not direct runtime",
+      "Full-domain numeric appearance cannot be displayed on sRGB directly",
+      "Direct JS runtime, independent benchmark and human visual gates are still required"
+    ]
+  }
+}

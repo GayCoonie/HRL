@@ -1,0 +1,180 @@
+{
+  "schema": "hrl-fresh-field-visual-panels-v1",
+  "createdUTC": "2026-09-23T07:10:59.963Z",
+  "gamut": "srgb",
+  "width": 121,
+  "height": 141,
+  "hues": [
+    120,
+    182.5,
+    273
+  ],
+  "display": "actual XYZ converted to sRGB; panel pixel clipping is display-only",
+  "panels": [
+    {
+      "requestedH": 120,
+      "label": "Beta 1",
+      "renderedH": 120,
+      "file": "h120-beta-1.png",
+      "sha256": "75380a38186fcbc81246a1d81ab6e91ca9b4bb6bf7f202fb12d293ce95d4b4bc",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Frozen joint",
+      "renderedH": 120,
+      "file": "h120-frozen-joint.png",
+      "sha256": "54999570d258b7a81b746f1e59eea5e305aa0a73f5047aee0e3b90e454e318cb",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Fresh seed (calibration)",
+      "renderedH": 120,
+      "file": "h120-fresh-seed-calibration-.png",
+      "sha256": "f5e67ddb5d275476d84087a0a35781571cd5de9ba621cbac23db6cd24b6ddc8f",
+      "recordSHA256": "cb93d7cfab2fc4d47a8bba640362265a4a1ea5b3f55338b750dc7b6ee4380bfa",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Visual-neutral: FAILED COMBVD",
+      "renderedH": 120,
+      "file": "h120-visual-neutral-failed-combvd.png",
+      "sha256": "c0fa4e7ee1a0e3658aa59e18f9a81f1a67212ae004f08c4a1aab0964e2600130",
+      "recordSHA256": "8b1115ccaeba0c2d1b5688e26a34b717fca026c2def56c5f39c2a4c42ed13626",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Joint-graded: FAILED Beta 1",
+      "renderedH": 120,
+      "file": "h120-joint-graded-failed-beta-1.png",
+      "sha256": "b523da854d5d92c40593fd29b96a3eba9e9b4ec4f9cd17c60f94ecd33e25adfb",
+      "recordSHA256": "b7ce6f464f4ca09263ba0b8299bbe96129f23f286d8605405dcab3d70b4bfb90",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Beta 1",
+      "renderedH": 182.5,
+      "file": "h182p5-beta-1.png",
+      "sha256": "670699fd61889665a67e3bbc1fbfa4846053d6c18ad1f8959d6bd27673cccad2",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Frozen joint",
+      "renderedH": 182.5,
+      "file": "h182p5-frozen-joint.png",
+      "sha256": "8fc89a95bcc7637f50cd101dfc9581e4c0f7140c3f32b48e87bccfe844ef6c13",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Fresh seed (calibration)",
+      "renderedH": 182.5,
+      "file": "h182p5-fresh-seed-calibration-.png",
+      "sha256": "90927185d2cf5aab996547abdb4cea59fb33ab9cccb038a270557270f561d81b",
+      "recordSHA256": "cb93d7cfab2fc4d47a8bba640362265a4a1ea5b3f55338b750dc7b6ee4380bfa",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Visual-neutral: FAILED COMBVD",
+      "renderedH": 182.5,
+      "file": "h182p5-visual-neutral-failed-combvd.png",
+      "sha256": "0ac47c255ad79cb5e81965fa9e0a4c59732afd8ba73d5368b2af333ca1eb8651",
+      "recordSHA256": "8b1115ccaeba0c2d1b5688e26a34b717fca026c2def56c5f39c2a4c42ed13626",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Joint-graded: FAILED Beta 1",
+      "renderedH": 182.5,
+      "file": "h182p5-joint-graded-failed-beta-1.png",
+      "sha256": "3ec379b32c447694dd363e20efff1edcd62055f499ed8f899c58c2b23ed1ef01",
+      "recordSHA256": "b7ce6f464f4ca09263ba0b8299bbe96129f23f286d8605405dcab3d70b4bfb90",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Beta 1",
+      "renderedH": 273,
+      "file": "h273-beta-1.png",
+      "sha256": "08d3f1a0c2f44c37e6361723bd9a3312e25b6301ea165f67d803f3156deef335",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Frozen joint",
+      "renderedH": 273,
+      "file": "h273-frozen-joint.png",
+      "sha256": "6cf6d0bd8e34eb7884dee32f1d6bf04c4386ba77c910fabc08c3a59b0d8e3bf9",
+      "recordSHA256": null,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Fresh seed (calibration)",
+      "renderedH": 273,
+      "file": "h273-fresh-seed-calibration-.png",
+      "sha256": "f191a1eb980d0db768e5554b853bcd947cc1c906afcdeb18000cc26308345310",
+      "recordSHA256": "cb93d7cfab2fc4d47a8bba640362265a4a1ea5b3f55338b750dc7b6ee4380bfa",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Visual-neutral: FAILED COMBVD",
+      "renderedH": 273,
+      "file": "h273-visual-neutral-failed-combvd.png",
+      "sha256": "920273923066875faf43301ab24283111545846e5fa4515ed7d9f148884f026b",
+      "recordSHA256": "8b1115ccaeba0c2d1b5688e26a34b717fca026c2def56c5f39c2a4c42ed13626",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Joint-graded: FAILED Beta 1",
+      "renderedH": 273,
+      "file": "h273-joint-graded-failed-beta-1.png",
+      "sha256": "8cf8597c464e1f8b976a8422b1ea8321c7ec42225d7b5a7110f2735979c43a20",
+      "recordSHA256": "b7ce6f464f4ca09263ba0b8299bbe96129f23f286d8605405dcab3d70b4bfb90",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    }
+  ]
+}

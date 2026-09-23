@@ -1,0 +1,11 @@
+Alternative text for contact-shifted.png: full direct-runtime HRL triangle montage.
+Five columns: Beta 1, frozen joint, V3 guarded, V4 coupled guarded, and V4 contact (FAILED COMBVD).
+5 rows at matched public H, Reach and Level: 117.5°, 122.5°, 270°, 275°, 280°.
+Each triangle has white at top left, black at bottom left, vivid hue at right. Each panel displays its clipped-pixel count.
+For each row, left to right:
+H 117.5°: Beta 1 1,750/8,481; Frozen joint 2,563/8,481; V3 guarded 3,077/8,481; V4 coupled guarded 3,115/8,481; V4 contact FAILED COMBVD 3,040/8,481 clipped.
+H 122.5°: Beta 1 1,691/8,481; Frozen joint 2,269/8,481; V3 guarded 2,962/8,481; V4 coupled guarded 3,003/8,481; V4 contact FAILED COMBVD 2,906/8,481 clipped.
+H 270°: Beta 1 6,167/8,481; Frozen joint 5,377/8,481; V3 guarded 5,959/8,481; V4 coupled guarded 6,258/8,481; V4 contact FAILED COMBVD 6,708/8,481 clipped.
+H 275°: Beta 1 6,427/8,481; Frozen joint 5,767/8,481; V3 guarded 6,086/8,481; V4 coupled guarded 6,434/8,481; V4 contact FAILED COMBVD 6,879/8,481 clipped.
+H 280°: Beta 1 6,645/8,481; Frozen joint 6,016/8,481; V3 guarded 6,215/8,481; V4 coupled guarded 6,564/8,481; V4 contact FAILED COMBVD 6,985/8,481 clipped.
+Full-domain out-of-sRGB colors are visually clamped, so use actual XYZ numerical probes for claims about the full domain. Contact fit fails COMBVD.

@@ -1,0 +1,35 @@
+candidate srgb hung_berns 3.731616825742521 mapped 78
+candidate srgb ebner_fairchild 2.242648846820769 mapped 70
+candidate srgb munsell 4.116543479352507 mapped 1232
+candidate srgb xiao_unique_hues 1.742565970982957 mapped 0
+candidate srgb osa_ucs_1974 0.24694811331574673 mapped 19
+candidate srgb macadam1942 0.2935381474828785 mapped 300
+candidate srgb luo_rigg_ellipses 0.23977320300350244 mapped 605
+candidate srgb alder1982 0.2484692163019793 mapped 364
+candidate srgb regan_1994_cvd_ellipses 0.1772222768273114 mapped 8
+candidate srgb koenderink_2026_3d_metric_field 0.2821573008714577 mapped 0
+candidate srgb brown_1957_12obs_ellipsoids 0.4665799996781165 mapped 396
+candidate srgb wyszecki_fielder_1971_ellipsoids 0.2792024358170994 mapped 278
+candidate srgb brown_macadam_1949_ellipsoids 0.4515125593498547 mapped 1045
+candidate srgb huang_2012_cielab_ellipses 0.3294460634990016 mapped 34
+candidate srgb berns_1991_rit_dupont_tolerance_vectors 0.3497644914179107 mapped 16
+candidate srgb hong_2025_ellipsoids 0.17800812650778305 mapped 0
+DONE candidate srgb {'weighted': 39.2745940543546, 'unweighted': 40.14168182816218, 'pairs': 3813, 'mappedPairs': 482, 'audit': {'points': 7626, 'mapped': 898, 'rejected': 0, 'eventCounts': {'srgb-gamut-clipped': 898}}} beta max delta None
+candidate full hung_berns 3.398766912630057 mapped 5
+candidate full ebner_fairchild 2.24144463533966 mapped 0
+candidate full munsell 3.8147608941303788 mapped 0
+candidate full xiao_unique_hues 1.7411979551585641 mapped 0
+candidate full osa_ucs_1974 0.22351067024249105 mapped 0
+candidate full macadam1942 0.2752219518887887 mapped 0
+candidate full luo_rigg_ellipses 0.1993976568728436 mapped 0
+candidate full alder1982 0.22084089317538794 mapped 0
+candidate full regan_1994_cvd_ellipses 0.1945244743177113 mapped 0
+candidate full koenderink_2026_3d_metric_field 0.28367050390810417 mapped 0
+candidate full brown_1957_12obs_ellipsoids 0.3483914388043347 mapped 191
+candidate full wyszecki_fielder_1971_ellipsoids 0.24382574277899285 mapped 41
+candidate full brown_macadam_1949_ellipsoids 0.3299385267631083 mapped 378
+candidate full huang_2012_cielab_ellipses 0.2827679196969107 mapped 0
+candidate full berns_1991_rit_dupont_tolerance_vectors 0.3427347898623122 mapped 0
+candidate full hong_2025_ellipsoids 0.21714411757200827 mapped 0
+DONE candidate full {'weighted': 36.67765760502666, 'unweighted': 39.01002029220105, 'pairs': 3813, 'mappedPairs': 0, 'audit': {'points': 7626, 'mapped': 0, 'rejected': 0, 'eventCounts': {}}} beta max delta None
+COMPLETE 42 original scored cells: /tmp/hrl-v1-graded-board-final.json

@@ -1,0 +1,247 @@
+{
+  "schema": "hrl-benchmark-conditional-v3-source-manifest-v1",
+  "sourceCheckout": "/workspace/scratch/f91573918531/conditional-source",
+  "sourceGitCommit": "83530ddb1fd8eb8795a8a2669ffb86619f626765",
+  "trackedV2TreeClean": true,
+  "benchmarkCheckout": "/workspace/scratch/f91573918531/bench-source",
+  "benchmarkGitCommit": "1b2f8ac52124919aa4d4cd8a633a4252318d6393",
+  "candidateIdentity": {
+    "module": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/index.mjs",
+    "model": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/model.mjs",
+    "record": "/workspace/scratch/f91573918531/capacity-source/v2/research/conditional-fit/results/conditional-joint-guarded-v0.json",
+    "moduleSHA256": "c6d4da23756a1a7dda132869b74750ec59ae27bf912e4b799ee51f415cfe496f",
+    "modelSHA256": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+    "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff",
+    "dependencies": [
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/index.mjs",
+        "sha256": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/source-readout.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+        "sha256": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/source-readout.mjs",
+        "sha256": "c00f6d08ead8fe7af85d835cf7aede1bd96e47c3c6f9d14918810d6fa7d17b77",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs",
+        "sha256": "48b7d661c1e552755899220db61b9b63f629bff440d1a09f4d207f9e1e8bca49",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/lib/hue-field.mjs",
+        "sha256": "9594fe6a4ef0127a151096b87da8fc341472fd96e3c38e41817cd69d3bc6e0c3",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/lib/index.mjs",
+        "sha256": "d8ac2a3b3b910b5097f85405b8f22aaaa55f2babd7707f3587f25b8030ef2017",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/lib/research.mjs",
+        "sha256": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs",
+        "sha256": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/hue-field.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/boundary-tonal/index.mjs",
+        "sha256": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/shared-rl/core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/shared-rl/source.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/tonal-semantics/operations.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/index.mjs",
+        "sha256": "c6d4da23756a1a7dda132869b74750ec59ae27bf912e4b799ee51f415cfe496f",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/model.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/fresh-field/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/conditional-field/model.mjs",
+        "sha256": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/fresh-field/index.mjs",
+        "sha256": "0d14a7aa92457f9dfe1ea198d5b88d9dca96298158719580f26ed6fb23de8940",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/fresh-field/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/fresh-field/model.mjs",
+        "sha256": "5e20d900963ac00209a2aa770d4f7744fa7579864a65cac705b0df94f01de59f",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/base.mjs",
+        "sha256": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/context.mjs",
+        "sha256": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/geometry.mjs",
+        "sha256": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/index.mjs",
+        "sha256": "0992f0086e6352e06da7d769dfcfc0449d9acaa3c0ef33764ffa6b2d3a94aabb",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/base.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/context.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/geometry.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/atlas.mjs",
+        "sha256": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/index.mjs",
+        "sha256": "f4b2cb6f6df14d99506cf13ee08c8673472a481083dc672ddc07e95d31d0be21",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/atlas.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/shared-rl/core.mjs",
+        "sha256": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/rl-core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/shared-rl/source.mjs",
+        "sha256": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+        "imports": [
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/conditional-source/v2/research/shared-rl/core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/tonal-semantics/operations.mjs",
+        "sha256": "182edbef7f08c312ec2bdeab85545b38226349a9ab90fb1602066f5585d01f0e",
+        "imports": []
+      }
+    ],
+    "dependencyManifestSHA256": "2439fd73f366f722e13b3b5be33d78769ef48cac7f017c6d1122ae79cd183fa3",
+    "runtimeResources": [
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/definitions.json",
+        "sha256": "4ff31208cfa8ef88a370248bd6be30c40a947b736f0607071abe6063e5dd6e31"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/source-full.json",
+        "sha256": "ae3da2b76af61b2aaba72054f6694f304ad6d14c03566054ebf98cad0545403c"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/a-smooth/source-srgb.json",
+        "sha256": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/data/appearance-readouts.json",
+        "sha256": "97a2c8459fed67b8aee6277c388d85cee81581c9475fb9e108beffac26de11c9"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/data/hue-field-0.6.json",
+        "sha256": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/data/release1-angles.json",
+        "sha256": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/boundary-tonal/boundary-1nm.json",
+        "sha256": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/boundary-tonal/results/metric.json",
+        "sha256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/relative-domain/results/source-full.json",
+        "sha256": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/conditional-source/v2/research/rl-c1/candidate.json",
+        "sha256": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c"
+      }
+    ],
+    "resourceManifestSHA256": "75b89e37f1225b7743c4dea53ad09d2d28f5aad3dab5063231e89ce3c1e02370"
+  },
+  "scorerCodeSHA256": "15adb617a9f3a9b4038a3f5f4af01179364bdedc88543ec495805726803b42b8",
+  "bridgeSHA256": "8043173ad3eb66dcc5e2bb51c2b14fc5f25ff4ae3312dd5c5b90d9072989a62b",
+  "sourceIdentityToolSHA256": "1d6513b8a4f4fadf64fd6cade0e39806392aee677a6924fb32e8184f659c8241",
+  "upstream": {
+    "colorbenchGitCommit": "12b2de215cc5020682e3d245a8c78bce5f0ebbc9",
+    "poolGitCommit": "8641f4e8ebd9d85a34dc0fedc116fa0e58493190",
+    "workbookSHA256": "ddc24cccc42b9120a29064da15521def2355972719c8c8e7ee94531ed264cc9e"
+  },
+  "scoringScope": "Original 21 scored ColorBench columns per native/full gamut; direct COMBVD three populations; development observations, not release qualification"
+}

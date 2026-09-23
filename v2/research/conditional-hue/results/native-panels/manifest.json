@@ -1,0 +1,469 @@
+{
+  "schema": "hrl-v4-contact-five-model-direct-runtime-v1",
+  "gamut": "srgb",
+  "width": 121,
+  "height": 141,
+  "hues": [
+    117.5,
+    120,
+    122.5,
+    182.5,
+    270,
+    273,
+    275,
+    280
+  ],
+  "display": "XYZ to sRGB, out-of-range channels clamped only for display",
+  "sourceSHA256": {
+    "beta1": "da3f2e29f7cecba7f0016aed3e1a2dfec46e390d3f1e013c596e628aca4eeac3",
+    "joint": "62a06047808f38baaf79ba83bf0d35eae8c50141f509883c6ceb5113f2a65a1f",
+    "conditionalFieldFactory": "41002125b6d190533979c86feb431319c523cacbf64d7a9eb5135b3ecbf5b4e6",
+    "conditionalFieldModel": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+    "conditionalHueFactory": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+    "conditionalHueModel": "8164861ec50eb6be55a969206a549227416697368386162a29cefdd81d9f400c",
+    "renderer": "c90840a67c41f10b36a68d004df21af3537569ff0790c936d06f127d1c76ca7c"
+  },
+  "recordSHA256": {
+    "beta": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+    "joint": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+    "v3": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff",
+    "coupled": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+    "contact": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51"
+  },
+  "panels": [
+    {
+      "requestedH": 117.5,
+      "label": "Beta 1",
+      "renderedH": 117.5,
+      "file": "h117p5-beta-1.png",
+      "sha256": "b03adc4772b0477e0fe7a22fc42959d2f0e1089b31c33d161811ac60fe9c2270",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 117.5,
+      "label": "Frozen joint",
+      "renderedH": 117.5,
+      "file": "h117p5-frozen-joint.png",
+      "sha256": "343b699e8d08a9bb868fb254930300e0b14a21801936ed3ebf8cef55d5acae05",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 117.5,
+      "label": "V3 guarded",
+      "renderedH": 117.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h117p5-v3-guarded.png",
+      "sha256": "25ebbe5673827a0ebbfe2e83bcb009b57104ddd6ac71527b662d3371e7d9d690",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 117.5,
+      "label": "V4 coupled guarded",
+      "renderedH": 117.5,
+      "file": "h117p5-v4-coupled-guarded.png",
+      "sha256": "ed03cfd32dd75d3de4e674e7b5a07c3764f962b2cae0cce1c11a68b8dca812e4",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 117.5,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 117.5,
+      "file": "h117p5-v4-contact-failed-combvd.png",
+      "sha256": "a0151ad04db5ec10154fbf255eaaf96eff358871995fbf604e8b8e48edbe8352",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Beta 1",
+      "renderedH": 120,
+      "file": "h120-beta-1.png",
+      "sha256": "75380a38186fcbc81246a1d81ab6e91ca9b4bb6bf7f202fb12d293ce95d4b4bc",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "Frozen joint",
+      "renderedH": 120,
+      "file": "h120-frozen-joint.png",
+      "sha256": "54999570d258b7a81b746f1e59eea5e305aa0a73f5047aee0e3b90e454e318cb",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "V3 guarded",
+      "renderedH": 120,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h120-v3-guarded.png",
+      "sha256": "f8ff362bcd476f193ec6038cdce0bc233bd81bb1cf320b445179d19ce5e469cb",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 120,
+      "label": "V4 coupled guarded",
+      "renderedH": 120,
+      "file": "h120-v4-coupled-guarded.png",
+      "sha256": "8276c2e352f6b01ec7e59cae26b2875767e6d81f9474d7a84e7c815373c0b9b9",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 120,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 120,
+      "file": "h120-v4-contact-failed-combvd.png",
+      "sha256": "a5523bb29fa4761e0a00f210cc914a952be291cd837ec9e5780bda4fc4d6f60d",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 122.5,
+      "label": "Beta 1",
+      "renderedH": 122.5,
+      "file": "h122p5-beta-1.png",
+      "sha256": "70302a81082f041679585151957b3771411191cec95a69f9c3bd8851072d7a88",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 122.5,
+      "label": "Frozen joint",
+      "renderedH": 122.5,
+      "file": "h122p5-frozen-joint.png",
+      "sha256": "c258ef8362dd8387ff7204d453559741334f34778239a3b59dbd711482c2f127",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 122.5,
+      "label": "V3 guarded",
+      "renderedH": 122.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h122p5-v3-guarded.png",
+      "sha256": "28ca96f81ad108d0c6ec3371f6156526a7386b708d6893309378c10a29fe5ec5",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 122.5,
+      "label": "V4 coupled guarded",
+      "renderedH": 122.5,
+      "file": "h122p5-v4-coupled-guarded.png",
+      "sha256": "f9b76544c47ecc347b61f5568be8546c19cb290515c6aea1bb09de2782d3da95",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 122.5,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 122.5,
+      "file": "h122p5-v4-contact-failed-combvd.png",
+      "sha256": "ba0b1fa83c98801a4857ac78f6d14addc6e98e1b541d0a2236b0c97f84bf04aa",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Beta 1",
+      "renderedH": 182.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h182p5-beta-1.png",
+      "sha256": "670699fd61889665a67e3bbc1fbfa4846053d6c18ad1f8959d6bd27673cccad2",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72"
+    },
+    {
+      "requestedH": 182.5,
+      "label": "Frozen joint",
+      "renderedH": 182.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h182p5-frozen-joint.png",
+      "sha256": "8fc89a95bcc7637f50cd101dfc9581e4c0f7140c3f32b48e87bccfe844ef6c13",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5"
+    },
+    {
+      "requestedH": 182.5,
+      "label": "V3 guarded",
+      "renderedH": 182.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h182p5-v3-guarded.png",
+      "sha256": "8d717f11ef200720e089a511aea9946062dacbd7bbc819f12a5279a333926e72",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 182.5,
+      "label": "V4 coupled guarded",
+      "renderedH": 182.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h182p5-v4-coupled-guarded.png",
+      "sha256": "c5b64135e2b4b245970880a152b936e1f72e2059fce211e98e2bd1c9744280b4",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c"
+    },
+    {
+      "requestedH": 182.5,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 182.5,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h182p5-v4-contact-failed-combvd.png",
+      "sha256": "6fb14250f5f9ce1cb07c8c38421b00ed1952d6eb9408f2bbf4a97982703c60ca",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51"
+    },
+    {
+      "requestedH": 270,
+      "label": "Beta 1",
+      "renderedH": 270,
+      "file": "h270-beta-1.png",
+      "sha256": "8640db77ed6d3b7ca7a7b2483220d53dc634c64a85de75059f862af1a4ddb6f6",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 270,
+      "label": "Frozen joint",
+      "renderedH": 270,
+      "file": "h270-frozen-joint.png",
+      "sha256": "cc89f9618ca463e7e5f20dae9e5c6aa9fa44062784a17c2ba495c452d07c6791",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 270,
+      "label": "V3 guarded",
+      "renderedH": 270,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h270-v3-guarded.png",
+      "sha256": "e7f6f174dff841c0eacc9ec877a8a6f9b190d6189e15751937aa19fb8e4921ef",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 270,
+      "label": "V4 coupled guarded",
+      "renderedH": 270,
+      "file": "h270-v4-coupled-guarded.png",
+      "sha256": "1ec30e827009432bd89ea14c0ec58cb5ddff4ec0a999a2c3b0633f7e8de56bd0",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 270,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 270,
+      "file": "h270-v4-contact-failed-combvd.png",
+      "sha256": "efea5f587a31b3ab2786050be2bc8e15b38845c4b6c7b44a1c61fb2e473c9962",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Beta 1",
+      "renderedH": 273,
+      "file": "h273-beta-1.png",
+      "sha256": "08d3f1a0c2f44c37e6361723bd9a3312e25b6301ea165f67d803f3156deef335",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "Frozen joint",
+      "renderedH": 273,
+      "file": "h273-frozen-joint.png",
+      "sha256": "6cf6d0bd8e34eb7884dee32f1d6bf04c4386ba77c910fabc08c3a59b0d8e3bf9",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "V3 guarded",
+      "renderedH": 273,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h273-v3-guarded.png",
+      "sha256": "a41d754dab7da07ccb05a08fcf241e2c68be3f03b1c13cb7e6686a5e5f1cf5e5",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 273,
+      "label": "V4 coupled guarded",
+      "renderedH": 273,
+      "file": "h273-v4-coupled-guarded.png",
+      "sha256": "0975a3844a52c741aa5852e5c22d5890fa6a0ea1c93585ad5a321f7435759b9d",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 273,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 273,
+      "file": "h273-v4-contact-failed-combvd.png",
+      "sha256": "bbf2cb141328502d37e5d45cc5158a1890aa838db245b38255305cc38d90a67b",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 275,
+      "label": "Beta 1",
+      "renderedH": 275,
+      "file": "h275-beta-1.png",
+      "sha256": "43f33b13647798a554bb3626d613db44cc25917c1460e6e691886d5d998319e4",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 275,
+      "label": "Frozen joint",
+      "renderedH": 275,
+      "file": "h275-frozen-joint.png",
+      "sha256": "2bc5d6c3cb5ee7f05d20b342d354f530103f34cd05c90fca18bd64ad174990dd",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 275,
+      "label": "V3 guarded",
+      "renderedH": 275,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h275-v3-guarded.png",
+      "sha256": "2229f122d9a49282f35e644067db7f8d9ed26423a4462665cd4f9f53e7c8ddba",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 275,
+      "label": "V4 coupled guarded",
+      "renderedH": 275,
+      "file": "h275-v4-coupled-guarded.png",
+      "sha256": "bf6a6bf1a7ee135236a899e923f27922c5676ee7d11a77a6bbd0411f760be838",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 275,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 275,
+      "file": "h275-v4-contact-failed-combvd.png",
+      "sha256": "3046cd7e0804f723be3f22e720deced6df17d47ac240ea9860628f096936973b",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 280,
+      "label": "Beta 1",
+      "renderedH": 280,
+      "file": "h280-beta-1.png",
+      "sha256": "f72f5c42c77e1c703023b68ad9cb900daaa6e6c380075b2ab353146537a56316",
+      "recordSHA256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 280,
+      "label": "Frozen joint",
+      "renderedH": 280,
+      "file": "h280-frozen-joint.png",
+      "sha256": "aefe767a8dafd9f41c23cccbb99f7a2d9149fd57424193030deb7d5facab7209",
+      "recordSHA256": "4dd69df0a18cc62b3b6b1b3a2a115609059d645cb4dec498512d6779842677a5",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 280,
+      "label": "V3 guarded",
+      "renderedH": 280,
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "file": "h280-v3-guarded.png",
+      "sha256": "59f2d621658648b79510c2fea882fcf3b90e5b8636c2c8fb42fa2c9dfe3bcf01",
+      "recordSHA256": "e1ccedbbe177b4cc2325a701e0abada269654754effd1b0cf7cd65f2c11476ff"
+    },
+    {
+      "requestedH": 280,
+      "label": "V4 coupled guarded",
+      "renderedH": 280,
+      "file": "h280-v4-coupled-guarded.png",
+      "sha256": "a986f8b929e5e49791ac95ebb75a06506569bce209b2c66173487e4982c5629c",
+      "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    },
+    {
+      "requestedH": 280,
+      "label": "V4 contact FAILED COMBVD",
+      "renderedH": 280,
+      "file": "h280-v4-contact-failed-combvd.png",
+      "sha256": "a94c30da90f5a9bd247487a75648f69167d75bdc2ced248e6413756776c42617",
+      "recordSHA256": "7bc1152def66706089e0a07c8ea8a6957a72654b84c897327d168381cc888e51",
+      "validPixels": 8481,
+      "displayClippedPixels": 0,
+      "anchorCorrespondence": null
+    }
+  ],
+  "referenceWhiteNits": 300,
+  "sourceGitCommit": {
+    "visual-source": "3d44152c2276cd05374b393f3b7dbaf48ea757bd",
+    "model-source": "069bc01df0aed664d9913cd23840f31b66aec1b0",
+    "capacity-source": "6feb8e484901959c76661beb8bd5218f6c0898ce"
+  }
+}

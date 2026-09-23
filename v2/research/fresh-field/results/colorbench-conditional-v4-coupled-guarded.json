@@ -1,0 +1,772 @@
+{
+  "schema": "hrl-fresh-field-colorbench-v2",
+  "scope": "Original five scored generation and sixteen scored measurement columns; no fresh unexposed observer datasets",
+  "methodology": "2026-07-08",
+  "colorbench_commit": "12b2de215cc5020682e3d245a8c78bce5f0ebbc9",
+  "pool_commit": "8641f4e8ebd9d85a34dc0fedc116fa0e58493190",
+  "upstream_hashes": {
+    "core/human_pool.py": "4d60242026e7384765ac4b84d1133cee1eac3f4ee7f0b9f034bcd2b3a15be578",
+    "core/metric_eval.py": "018aa8b8c208047242d83e3aa6d99f8e852ad0c856755ce6c410fc34f3fd3835",
+    "research/leaderboard.py": "f690e5a475902c8870723a3bff20144caa5f792511c3fd4970717ea5daf3ada1"
+  },
+  "workbook_sha256": "ddc24cccc42b9120a29064da15521def2355972719c8c8e7ee94531ed264cc9e",
+  "code_sha256": "15adb617a9f3a9b4038a3f5f4af01179364bdedc88543ec495805726803b42b8",
+  "bridge_sha256": "8043173ad3eb66dcc5e2bb51c2b14fc5f25ff4ae3312dd5c5b90d9072989a62b",
+  "source_identity_sha256": "1d6513b8a4f4fadf64fd6cade0e39806392aee677a6924fb32e8184f659c8241",
+  "candidate_identity": {
+    "module": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-hue/index.mjs",
+    "model": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-hue/model.mjs",
+    "record": "/workspace/scratch/f91573918531/capacity-source/v2/research/conditional-hue-fit/results/conditional-hue-coupled-guarded-v0.json",
+    "moduleSHA256": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+    "modelSHA256": "8164861ec50eb6be55a969206a549227416697368386162a29cefdd81d9f400c",
+    "recordSHA256": "35838487659b664d363bd1e01bf154221126577889bc561828bd2b1607d3e85c",
+    "dependencies": [
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/index.mjs",
+        "sha256": "eff483f9fbbc99e8b97d7f8d0ceb644f76b9cc08d6edddefbbd97abf496cd81f",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/source-readout.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+        "sha256": "5ea69805b5b43106697e7f9193299ab034fd8f3ffb8791dd13025076a0669e1e",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/source-readout.mjs",
+        "sha256": "c00f6d08ead8fe7af85d835cf7aede1bd96e47c3c6f9d14918810d6fa7d17b77",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/research.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs",
+        "sha256": "48b7d661c1e552755899220db61b9b63f629bff440d1a09f4d207f9e1e8bca49",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/lib/hue-field.mjs",
+        "sha256": "9594fe6a4ef0127a151096b87da8fc341472fd96e3c38e41817cd69d3bc6e0c3",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/lib/index.mjs",
+        "sha256": "d8ac2a3b3b910b5097f85405b8f22aaaa55f2babd7707f3587f25b8030ef2017",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/lib/research.mjs",
+        "sha256": "a4d2c22b5295dc72c185a81a15b5a315c8d45abe3cf1d0458d5116af1b2deaed",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/hue-field.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs",
+        "sha256": "2723ab559e9d20821028849b70d74bc9dbfe97416ac78a59547f732c87e578f1",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/hue-field.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/boundary-tonal/index.mjs",
+        "sha256": "e5ddba19f1a752041f0781b2a21a1f449def0f3a8a37167f56da294a4306499d",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/shared-rl/core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/shared-rl/source.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/tonal-semantics/operations.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-field/index.mjs",
+        "sha256": "41002125b6d190533979c86feb431319c523cacbf64d7a9eb5135b3ecbf5b4e6",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/conditional-field/model.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/fresh-field/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-field/model.mjs",
+        "sha256": "2e934f5b31f5f86cdb12f0f32d0987fa6fb4a593f6a4390fd3366384c73fd585",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-hue/index.mjs",
+        "sha256": "a42dfc8ea2c0d9ebe02f386ca64a80089a58c1347a5bf3c7b7759e572214616c",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/research/conditional-field/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/conditional-hue/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/conditional-hue/model.mjs",
+        "sha256": "8164861ec50eb6be55a969206a549227416697368386162a29cefdd81d9f400c",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/research/conditional-field/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/fresh-field/index.mjs",
+        "sha256": "0d14a7aa92457f9dfe1ea198d5b88d9dca96298158719580f26ed6fb23de8940",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/boundary-tonal/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/fresh-field/model.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/fresh-field/model.mjs",
+        "sha256": "7061b1f45d4258a78811713050df3ae70ed5064c0baa7cbf9f44259c073fb6da",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/base.mjs",
+        "sha256": "bcd71e4270d6fdea13ef8342513f95cff66e282876a805a04a6ce259c09eb87c",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/context.mjs",
+        "sha256": "7342db5a73f64b4594276e6cbf75958b865f218e982b23277397b66830dc5f75",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/geometry.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/geometry.mjs",
+        "sha256": "99c127db858cfa715f1d661ee80c35392cdbe0b635535b495bf4b34be17b3732",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/index.mjs",
+        "sha256": "0992f0086e6352e06da7d769dfcfc0449d9acaa3c0ef33764ffa6b2d3a94aabb",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/base.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/context.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/geometry.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/index.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/atlas.mjs",
+        "sha256": "8e34069d774f1990ba85cbdeac37eb8b9cb23c7ffd35b777b3bc2b3866fc06b9",
+        "imports": []
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/index.mjs",
+        "sha256": "f4b2cb6f6df14d99506cf13ee08c8673472a481083dc672ddc07e95d31d0be21",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/atlas.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/shared-rl/core.mjs",
+        "sha256": "293fb0994bd460283ab28467ea5d71b7c350766a8272a78e90349db1d056d1e4",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/a-smooth/rl-core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/shared-rl/source.mjs",
+        "sha256": "f3ffcf056869b1941d39294893752d6bd87bb40fe48240899f9fe291fdd170dd",
+        "imports": [
+          "/workspace/scratch/f91573918531/model-source/v2/lib/basr.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/research.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/lib/srgb-triangles.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/index.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/atlas.mjs",
+          "/workspace/scratch/f91573918531/model-source/v2/research/shared-rl/core.mjs"
+        ]
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/tonal-semantics/operations.mjs",
+        "sha256": "182edbef7f08c312ec2bdeab85545b38226349a9ab90fb1602066f5585d01f0e",
+        "imports": []
+      }
+    ],
+    "dependencyManifestSHA256": "3a94d274dc43698ca119777791a43bc0f8804de9f85594a28bc37a357671ad04",
+    "runtimeResources": [
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/definitions.json",
+        "sha256": "4ff31208cfa8ef88a370248bd6be30c40a947b736f0607071abe6063e5dd6e31"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/source-full.json",
+        "sha256": "ae3da2b76af61b2aaba72054f6694f304ad6d14c03566054ebf98cad0545403c"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/a-smooth/source-srgb.json",
+        "sha256": "81448484a8b732e4a7f961dff470398e689f221645f3d5bdd1e03edd5cc928e5"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/data/appearance-readouts.json",
+        "sha256": "97a2c8459fed67b8aee6277c388d85cee81581c9475fb9e108beffac26de11c9"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/data/hue-field-0.6.json",
+        "sha256": "59c7d006a8c3f4e99a234d6667931ad7d5971097e54aad437128d77c684a6c2b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/data/release1-angles.json",
+        "sha256": "358e69ed66615231563c7fcfab87a1aca7c20a1399318a2a4adc3a8b33b16b1b"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/boundary-tonal/boundary-1nm.json",
+        "sha256": "20542ab516a311a68ba8ab4131542254ee899b6cccaef7c89baf9f2c4dd79e67"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/boundary-tonal/results/metric.json",
+        "sha256": "92aa2f9647b406239dd52cd22feed61794f3d6ed74a1c33ba9361516cff3bb72"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/relative-domain/results/source-full.json",
+        "sha256": "ea3f22332ef2d36a9b6c99e433070e5f35df96da173d1a25d55c5fe22fe1598a"
+      },
+      {
+        "path": "/workspace/scratch/f91573918531/model-source/v2/research/rl-c1/candidate.json",
+        "sha256": "e11f7d09537f153d49325984d26786c8c7f64da7dc42f5f570e53ce1c1d4208c"
+      }
+    ],
+    "resourceManifestSHA256": "954794a4080c5b6e1aca9acd77826e3b97fc8500d048f18aa93f341bfb47ddce"
+  },
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "node": "v24.19.0",
+    "numpy": "2.3.5",
+    "colour": "0.4.7"
+  },
+  "original_forward_helper_unchanged": true,
+  "models": {
+    "candidate-srgb": {
+      "generation": {
+        "hung_berns": {
+          "score": 4.237047222026062,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 78,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 78,
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.6691569649992744
+        },
+        "ebner_fairchild": {
+          "score": 2.503193793522958,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 70,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 70
+            }
+          },
+          "seconds": 0.09939442500035511
+        },
+        "munsell": {
+          "score": 3.978892246770916,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 1232,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1232
+            }
+          },
+          "seconds": 0.6722822000010638
+        },
+        "xiao_unique_hues": {
+          "score": 1.945702575658065,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.1355182719998993
+        },
+        "osa_ucs_1974": {
+          "score": 0.23535559547597534,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 19,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 19
+            }
+          },
+          "seconds": 0.5072290070020244
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.2972692067572065,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 300,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 300
+            }
+          },
+          "seconds": 0.17189176800457062
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.24471902404553061,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 605,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 605
+            }
+          },
+          "seconds": 0.6164687119962764
+        },
+        "alder1982": {
+          "score": 0.2651372072021628,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 364,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 364
+            }
+          },
+          "seconds": 0.4478612000020803
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.23452672495588958,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 8,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 8
+            }
+          },
+          "seconds": 0.05018246699910378
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.2971819825164327,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.13539245299762115
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.47118850616620056,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 396,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "srgb-gamut-clipped": 396,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.061314162994676735
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.2947869652007179,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 278,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 278,
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.23466683799779275
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.45684238514199865,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 1045,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1045,
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.19555156699789222
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.34824076745759486,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 34,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 34
+            }
+          },
+          "seconds": 0.04654578099871287
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.389977555187795,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 16,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 16
+            }
+          },
+          "seconds": 0.02353674799815053
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.18829711198723809,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 3.986134819999279
+        },
+        "bfd": {
+          "score": 39.82649779004902,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 452
+        },
+        "leeds": {
+          "score": 34.768532230749045,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 42.07422584509856,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 2
+        },
+        "rit": {
+          "score": 44.768007037291085,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 28
+        },
+        "macadam": {
+          "score": 26.298558651054492,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 3,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 3
+            }
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 40.80967711032199,
+        "unweighted": 40.08643327876183,
+        "pairs": 3813,
+        "mappedPairs": 482,
+        "audit": {
+          "points": 7626,
+          "mapped": 898,
+          "rejected": 0,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      }
+    },
+    "candidate-full": {
+      "generation": {
+        "hung_berns": {
+          "score": 3.5691026544221036,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 5,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.982628764002584
+        },
+        "ebner_fairchild": {
+          "score": 2.325023993316208,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.07808968700555852
+        },
+        "munsell": {
+          "score": 3.772835197014816,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.7478972829994746
+        },
+        "xiao_unique_hues": {
+          "score": 1.7351269763539412,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.17595319799875142
+        },
+        "osa_ucs_1974": {
+          "score": 0.2128725515354204,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.6052300709998235
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.29480821387563155,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.17189374600275187
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.2057430005561947,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.8860668560009799
+        },
+        "alder1982": {
+          "score": 0.23377233000206707,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.5627989279964822
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.22553287894191507,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.05479913899762323
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.27446020902665946,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.14629353400232503
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.3556092112147769,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 191,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.11064640300173778
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.27114918652070447,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 41,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.3744000029982999
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.34358168113756193,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 378,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.27905782599555096
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.2761836921622052,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.07429334399785148
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.338571272594135,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.05042528400372248
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.24597353470064712,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 4.693295715995191
+        },
+        "bfd": {
+          "score": 36.75845007576783,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 0
+        },
+        "leeds": {
+          "score": 33.564591386566455,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 33.82808243668946,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 0
+        },
+        "rit": {
+          "score": 28.255728259810187,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 0
+        },
+        "macadam": {
+          "score": 28.903942417941387,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 35.17437040976959,
+        "unweighted": 36.45439761817053,
+        "pairs": 3813,
+        "mappedPairs": 0,
+        "audit": {
+          "points": 7626,
+          "mapped": 0,
+          "rejected": 0,
+          "eventCounts": {}
+        }
+      }
+    }
+  }
+}

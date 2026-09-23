@@ -685,6 +685,11 @@
       "url": "v2/equal-span.html"
     },
     {
+      "path": "v2/fresh-field.html",
+      "kind": "html",
+      "url": "v2/fresh-field.html"
+    },
+    {
       "path": "v2/gen-tonal-ui/app.mjs",
       "kind": "source",
       "url": "v2/gen-tonal-ui/app.mjs"
@@ -1800,6 +1805,881 @@
       "url": "v2/research/colorbench-0.8a/xlsx_rows.py"
     },
     {
+      "path": "v2/research/conditional-field/README.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-field/README.md"
+    },
+    {
+      "path": "v2/research/conditional-field/RESULTS.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-field/RESULTS.md"
+    },
+    {
+      "path": "v2/research/conditional-field/index.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-field/index.mjs"
+    },
+    {
+      "path": "v2/research/conditional-field/model.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-field/model.mjs"
+    },
+    {
+      "path": "v2/research/conditional-field/records/seed.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/records/seed.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/audit-joint-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/audit-joint-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/audit-joint-w7holdout-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/audit-joint-w7holdout-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/base-grid-full.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/base-grid-full.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/base-grid-srgb.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/base-grid-srgb.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/base-input-manifest.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/base-input-manifest.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/conditional-joint-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/conditional-joint-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/conditional-joint-w7holdout-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/conditional-joint-w7holdout-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/conditional-visual-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/conditional-visual-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/joint-guarded-combvd.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/joint-guarded-combvd.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/joint-w7holdout-combvd.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/joint-w7holdout-combvd.json"
+    },
+    {
+      "path": "v2/research/conditional-field/results/seed-combvd.json",
+      "kind": "json",
+      "url": "v2/research/conditional-field/results/seed-combvd.json"
+    },
+    {
+      "path": "v2/research/conditional-field/tests/test-model.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-field/tests/test-model.mjs"
+    },
+    {
+      "path": "v2/research/conditional-fit/audit-baselines-fixed-reach.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/audit-baselines-fixed-reach.mjs"
+    },
+    {
+      "path": "v2/research/conditional-fit/audit-fixed-reach.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/audit-fixed-reach.mjs"
+    },
+    {
+      "path": "v2/research/conditional-fit/core.py",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/core.py"
+    },
+    {
+      "path": "v2/research/conditional-fit/fit.py",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/fit.py"
+    },
+    {
+      "path": "v2/research/conditional-fit/history/core-visual.py",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/history/core-visual.py"
+    },
+    {
+      "path": "v2/research/conditional-fit/history/fit-first-joint.py",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/history/fit-first-joint.py"
+    },
+    {
+      "path": "v2/research/conditional-fit/history/fit-visual.py",
+      "kind": "source",
+      "url": "v2/research/conditional-fit/history/fit-visual.py"
+    },
+    {
+      "path": "v2/research/conditional-fit/records/seed.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/records/seed.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/audit-beta1-matched.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/audit-beta1-matched.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/audit-joint-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/audit-joint-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/audit-joint-matched.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/audit-joint-matched.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/audit-joint-w7holdout-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/audit-joint-w7holdout-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/combvd-joint-guarded.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/combvd-joint-guarded.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/combvd-joint-w7holdout.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/combvd-joint-w7holdout.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/conditional-joint-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/conditional-joint-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/conditional-joint-w7holdout-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/conditional-joint-w7holdout-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/conditional-visual-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-fit/results/conditional-visual-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/joint-guarded-v0.log",
+      "kind": "other",
+      "url": "v2/research/conditional-fit/results/joint-guarded-v0.log"
+    },
+    {
+      "path": "v2/research/conditional-fit/results/joint-v0.log",
+      "kind": "other",
+      "url": "v2/research/conditional-fit/results/joint-v0.log"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/RESULTS.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-hue-fit/RESULTS.md"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/audit-contact.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/audit-contact.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/audit-import-triangle.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/audit-import-triangle.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/core.py",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/core.py"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/grid-full.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/grid-full.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/grid-srgb.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/grid-srgb.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/manifest.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/manifest.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/pairs-full.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/pairs-full.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/pairs-srgb.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/pairs-srgb.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/source-full.f64",
+      "kind": "other",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/source-full.f64"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/data/base-grid/source-srgb.f64",
+      "kind": "other",
+      "url": "v2/research/conditional-hue-fit/data/base-grid/source-srgb.f64"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/fit-contact.py",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/fit-contact.py"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/fit.py",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/fit.py"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/history/fit-hue-only.py",
+      "kind": "source",
+      "url": "v2/research/conditional-hue-fit/history/fit-hue-only.py"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/records/seed.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/records/seed.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/audit-blue-yellow-contact-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/audit-blue-yellow-contact-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/audit-contact-import-triangle.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/audit-contact-import-triangle.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/audit-contact-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/audit-contact-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/audit-coupled-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/audit-coupled-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/blue-yellow-contact-v0.log",
+      "kind": "other",
+      "url": "v2/research/conditional-hue-fit/results/blue-yellow-contact-v0.log"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/combvd-beta1-joint.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/combvd-beta1-joint.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/combvd-blue-yellow-contact.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/combvd-blue-yellow-contact.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/combvd-coupled-guarded.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/combvd-coupled-guarded.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/combvd-hue-only.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/combvd-hue-only.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/conditional-hue-blue-yellow-contact-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/conditional-hue-blue-yellow-contact-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/conditional-hue-coupled-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/conditional-hue-coupled-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/contact-site-runtime-combvd.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/contact-site-runtime-combvd.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/coupled-guarded-v0.log",
+      "kind": "other",
+      "url": "v2/research/conditional-hue-fit/results/coupled-guarded-v0.log"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/hue-only-from-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue-fit/results/hue-only-from-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue-fit/results/hue-only-v0.log",
+      "kind": "other",
+      "url": "v2/research/conditional-hue-fit/results/hue-only-v0.log"
+    },
+    {
+      "path": "v2/research/conditional-hue/CONTACT-AUDIT.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-hue/CONTACT-AUDIT.md"
+    },
+    {
+      "path": "v2/research/conditional-hue/README.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-hue/README.md"
+    },
+    {
+      "path": "v2/research/conditional-hue/RESULTS_VISUAL.md",
+      "kind": "markdown",
+      "url": "v2/research/conditional-hue/RESULTS_VISUAL.md"
+    },
+    {
+      "path": "v2/research/conditional-hue/contact-montage.py",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/contact-montage.py"
+    },
+    {
+      "path": "v2/research/conditional-hue/contact-panels.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/contact-panels.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue/contact-probes.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/contact-probes.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue/index.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/index.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue/model.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/model.mjs"
+    },
+    {
+      "path": "v2/research/conditional-hue/records/seed.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/records/seed.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/conditional-hue-blue-yellow-contact-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/results/conditional-hue-blue-yellow-contact-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/conditional-hue-coupled-guarded-v0.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/results/conditional-hue-coupled-guarded-v0.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-contact-display-clipped.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-contact-display-clipped.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/contact-focus.alt.txt",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/contact-focus.alt.txt"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/contact-focus.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/contact-focus.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/contact-shifted.alt.txt",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/contact-shifted.alt.txt"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/contact-shifted.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/contact-shifted.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h117p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h117p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h117p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h117p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h117p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h117p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h117p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h117p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h117p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h117p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h120-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h120-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h120-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h120-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h120-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h120-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h120-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h120-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h120-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h120-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h122p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h122p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h122p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h122p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h122p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h122p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h122p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h122p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h122p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h122p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h182p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h182p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h182p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h182p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h182p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h182p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h182p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h182p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h182p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h182p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h270-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h270-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h270-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h270-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h270-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h270-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h270-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h270-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h270-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h270-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h273-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h273-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h273-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h273-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h273-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h273-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h273-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h273-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h273-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h273-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h275-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h275-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h275-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h275-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h275-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h275-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h275-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h275-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h275-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h275-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h280-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h280-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h280-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h280-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h280-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h280-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h280-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h280-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/h280-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/full-panels/h280-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/index.html",
+      "kind": "html",
+      "url": "v2/research/conditional-hue/results/full-panels/index.html"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/manifest.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/results/full-panels/manifest.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/full-panels/method.html",
+      "kind": "html",
+      "url": "v2/research/conditional-hue/results/full-panels/method.html"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-contact-comparison.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-contact-comparison.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/contact-focus.alt.txt",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/contact-focus.alt.txt"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/contact-focus.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/contact-focus.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/contact-shifted.alt.txt",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/contact-shifted.alt.txt"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/contact-shifted.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/contact-shifted.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h117p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h117p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h117p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h117p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h117p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h117p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h117p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h117p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h117p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h117p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h120-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h120-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h120-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h120-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h120-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h120-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h120-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h120-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h120-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h120-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h122p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h122p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h122p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h122p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h122p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h122p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h122p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h122p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h122p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h122p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h182p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h182p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h182p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h182p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h182p5-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h182p5-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h182p5-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h182p5-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h182p5-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h182p5-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h270-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h270-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h270-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h270-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h270-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h270-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h270-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h270-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h270-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h270-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h273-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h273-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h273-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h273-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h273-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h273-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h273-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h273-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h273-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h273-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h275-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h275-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h275-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h275-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h275-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h275-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h275-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h275-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h275-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h275-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h280-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h280-beta-1.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h280-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h280-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h280-v3-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h280-v3-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h280-v4-contact-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h280-v4-contact-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/h280-v4-coupled-guarded.png",
+      "kind": "other",
+      "url": "v2/research/conditional-hue/results/native-panels/h280-v4-coupled-guarded.png"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/index.html",
+      "kind": "html",
+      "url": "v2/research/conditional-hue/results/native-panels/index.html"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/manifest.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/results/native-panels/manifest.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/native-panels/method.html",
+      "kind": "html",
+      "url": "v2/research/conditional-hue/results/native-panels/method.html"
+    },
+    {
+      "path": "v2/research/conditional-hue/results/visual-contact-probes.json",
+      "kind": "json",
+      "url": "v2/research/conditional-hue/results/visual-contact-probes.json"
+    },
+    {
+      "path": "v2/research/conditional-hue/tests/test-model.mjs",
+      "kind": "source",
+      "url": "v2/research/conditional-hue/tests/test-model.mjs"
+    },
+    {
       "path": "v2/research/equal-span/BENCHMARKS.html",
       "kind": "html",
       "url": "v2/research/equal-span/BENCHMARKS.html"
@@ -2000,6 +2880,501 @@
       "path": "v2/research/equal-span/sources/public-manifest.json",
       "kind": "json",
       "url": "v2/research/equal-span/sources/public-manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/BENCHMARK.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/BENCHMARK.md"
+    },
+    {
+      "path": "v2/research/fresh-field/README.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/README.md"
+    },
+    {
+      "path": "v2/research/fresh-field/RESULTS.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/RESULTS.md"
+    },
+    {
+      "path": "v2/research/fresh-field/VISUAL_AUDIT.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/VISUAL_AUDIT.md"
+    },
+    {
+      "path": "v2/research/fresh-field/audit.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/audit.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/audit.test.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/audit.test.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/benchmark.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/benchmark.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/benchmark.py",
+      "kind": "source",
+      "url": "v2/research/fresh-field/benchmark.py"
+    },
+    {
+      "path": "v2/research/fresh-field/benchmark.test.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/benchmark.test.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/bridge.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/bridge.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/core.py",
+      "kind": "source",
+      "url": "v2/research/fresh-field/core.py"
+    },
+    {
+      "path": "v2/research/fresh-field/fit.py",
+      "kind": "source",
+      "url": "v2/research/fresh-field/fit.py"
+    },
+    {
+      "path": "v2/research/fresh-field/index.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/index.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/model.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/model.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/records/seed.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/records/seed.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/CONDITIONAL_V3_COLORBENCH.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/results/CONDITIONAL_V3_COLORBENCH.md"
+    },
+    {
+      "path": "v2/research/fresh-field/results/CONDITIONAL_V4_BLUE_YELLOW_CONTACT_COLORBENCH.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/results/CONDITIONAL_V4_BLUE_YELLOW_CONTACT_COLORBENCH.md"
+    },
+    {
+      "path": "v2/research/fresh-field/results/CONDITIONAL_V4_COLORBENCH.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/results/CONDITIONAL_V4_COLORBENCH.md"
+    },
+    {
+      "path": "v2/research/fresh-field/results/FRESH_V1_COLORBENCH.md",
+      "kind": "markdown",
+      "url": "v2/research/fresh-field/results/FRESH_V1_COLORBENCH.md"
+    },
+    {
+      "path": "v2/research/fresh-field/results/base-grid/grid-full.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/base-grid/grid-full.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/base-grid/grid-srgb.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/base-grid/grid-srgb.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/base-grid/manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/base-grid/manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-beta1-joint.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-beta1-joint.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-beta1-joint.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-beta1-joint.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v3-guarded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v3-guarded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v3-guarded.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v3-guarded.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v4-blue-yellow-contact.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v4-blue-yellow-contact.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v4-blue-yellow-contact.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v4-blue-yellow-contact.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v4-coupled-guarded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v4-coupled-guarded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-conditional-v4-coupled-guarded.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-conditional-v4-coupled-guarded.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-fresh-joint-graded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-fresh-joint-graded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-fresh-joint-graded.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-fresh-joint-graded.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-fresh-visual-neutral.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/colorbench-fresh-visual-neutral.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/colorbench-fresh-visual-neutral.log",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/colorbench-fresh-visual-neutral.log"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-beta1-joint.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-beta1-joint.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-conditional-v3-guarded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-conditional-v3-guarded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-conditional-v4-blue-yellow-contact.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-conditional-v4-blue-yellow-contact.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-conditional-v4-coupled-guarded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-conditional-v4-coupled-guarded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-fresh-joint-graded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-fresh-joint-graded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/combvd-fresh-visual-neutral.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/combvd-fresh-visual-neutral.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/conditional-v3-source-manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/conditional-v3-source-manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/conditional-v4-blue-yellow-contact-source-manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/conditional-v4-blue-yellow-contact-source-manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/conditional-v4-source-manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/conditional-v4-source-manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/fresh-joint-graded.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/fresh-joint-graded.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/fresh-visual-neutral.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/fresh-visual-neutral.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-comparison-display-clipped.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-comparison-display-clipped.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/focused-contact.alt.txt",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/focused-contact.alt.txt"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/focused-contact.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/focused-contact.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h120-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h120-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h120-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h120-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h120-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h120-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h120-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h120-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h120-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h120-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h182p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h182p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h182p5-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h182p5-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h182p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h182p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h182p5-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h182p5-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h182p5-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h182p5-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h273-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h273-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h273-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h273-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h273-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h273-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h273-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h273-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/h273-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/full-panels/h273-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/index.html",
+      "kind": "html",
+      "url": "v2/research/fresh-field/results/full-panels/index.html"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/full-panels/manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/full-panels/methods.html",
+      "kind": "html",
+      "url": "v2/research/fresh-field/results/full-panels/methods.html"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-comparison.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-comparison.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/focused-contact.alt.txt",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/focused-contact.alt.txt"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/focused-contact.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/focused-contact.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h120-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h120-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h120-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h120-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h120-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h120-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h120-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h120-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h120-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h120-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h182p5-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h182p5-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h182p5-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h182p5-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h182p5-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h182p5-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h182p5-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h182p5-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h182p5-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h182p5-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h273-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h273-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h273-fresh-seed-calibration-.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h273-fresh-seed-calibration-.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h273-frozen-joint.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h273-frozen-joint.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h273-joint-graded-failed-beta-1.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h273-joint-graded-failed-beta-1.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/h273-visual-neutral-failed-combvd.png",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/native-panels/h273-visual-neutral-failed-combvd.png"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/index.html",
+      "kind": "html",
+      "url": "v2/research/fresh-field/results/native-panels/index.html"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/manifest.json",
+      "kind": "json",
+      "url": "v2/research/fresh-field/results/native-panels/manifest.json"
+    },
+    {
+      "path": "v2/research/fresh-field/results/native-panels/methods.html",
+      "kind": "html",
+      "url": "v2/research/fresh-field/results/native-panels/methods.html"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-failed-full.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-failed-full.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-failed-srgb.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-failed-srgb.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-joint-graded-full.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-joint-graded-full.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-joint-graded-srgb.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-joint-graded-srgb.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-seed-full.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-seed-full.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/results/visual-seed-srgb.json.gz",
+      "kind": "other",
+      "url": "v2/research/fresh-field/results/visual-seed-srgb.json.gz"
+    },
+    {
+      "path": "v2/research/fresh-field/source-identity.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/source-identity.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/test_core.py",
+      "kind": "source",
+      "url": "v2/research/fresh-field/test_core.py"
+    },
+    {
+      "path": "v2/research/fresh-field/test_fit.py",
+      "kind": "source",
+      "url": "v2/research/fresh-field/test_fit.py"
+    },
+    {
+      "path": "v2/research/fresh-field/tests/test-model.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/tests/test-model.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/visuals.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/visuals.mjs"
+    },
+    {
+      "path": "v2/research/fresh-field/visuals.test.mjs",
+      "kind": "source",
+      "url": "v2/research/fresh-field/visuals.test.mjs"
     },
     {
       "path": "v2/research/gen-tonal-fit/FINDINGS.html",

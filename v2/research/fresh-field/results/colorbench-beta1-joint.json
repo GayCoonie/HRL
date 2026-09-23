@@ -1,0 +1,1031 @@
+{
+  "schema": "hrl-fresh-field-colorbench-v2",
+  "scope": "Original five scored generation and sixteen scored measurement columns; no fresh unexposed observer datasets",
+  "methodology": "2026-07-08",
+  "colorbench_commit": "12b2de215cc5020682e3d245a8c78bce5f0ebbc9",
+  "pool_commit": "8641f4e8ebd9d85a34dc0fedc116fa0e58493190",
+  "upstream_hashes": {
+    "core/human_pool.py": "4d60242026e7384765ac4b84d1133cee1eac3f4ee7f0b9f034bcd2b3a15be578",
+    "core/metric_eval.py": "018aa8b8c208047242d83e3aa6d99f8e852ad0c856755ce6c410fc34f3fd3835",
+    "research/leaderboard.py": "f690e5a475902c8870723a3bff20144caa5f792511c3fd4970717ea5daf3ada1"
+  },
+  "workbook_sha256": "ddc24cccc42b9120a29064da15521def2355972719c8c8e7ee94531ed264cc9e",
+  "code_sha256": "44a113acc57dd284342f033466ab456e4de6d12c2537d78319fbab6f511c5cd3",
+  "bridge_sha256": "32c12be47a81f1828039e3f6a6bc6922cb19df800979b5fec50b7275136ea17c",
+  "candidate_identity": null,
+  "versions": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "node": "v24.19.0",
+    "numpy": "2.3.5",
+    "colour": "0.4.7"
+  },
+  "original_forward_helper_unchanged": true,
+  "models": {
+    "beta1-srgb": {
+      "generation": {
+        "hung_berns": {
+          "score": 3.7316168257425204,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 78,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 78,
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.0667011570039904
+        },
+        "ebner_fairchild": {
+          "score": 2.242648846820769,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 70,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 70
+            }
+          },
+          "seconds": 0.07909246400231495
+        },
+        "munsell": {
+          "score": 4.116543479352507,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 1232,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1232
+            }
+          },
+          "seconds": 0.7122641500027385
+        },
+        "xiao_unique_hues": {
+          "score": 1.7425659709829575,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.12265775299601955
+        },
+        "osa_ucs_1974": {
+          "score": 0.27803146263987544,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 19,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 19
+            }
+          },
+          "seconds": 0.5179261250013951
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.328945970840066,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 300,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 300
+            }
+          },
+          "seconds": 0.1356198610010324
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.30415255910722566,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 605,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 605
+            }
+          },
+          "seconds": 0.68996580500243
+        },
+        "alder1982": {
+          "score": 0.3218361816888989,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 364,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 364
+            }
+          },
+          "seconds": 0.37582750400179066
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.21523926579385397,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 8,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 8
+            }
+          },
+          "seconds": 0.03634804399916902
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.3212866469159495,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.1637458080003853
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.48185184635974937,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 396,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "srgb-gamut-clipped": 396,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.11576985200372292
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.33348661197395835,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 278,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 278,
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.23885057299776236
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.4701292137977791,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 1045,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1045,
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.18557508000230882
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.33399577046055734,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 34,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 34
+            }
+          },
+          "seconds": 0.03694836700015003
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.36063425945468264,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 16,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 16
+            }
+          },
+          "seconds": 0.029059060994768515
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.26298327664240484,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 4.195191250000789
+        },
+        "bfd": {
+          "score": 39.06001452656142,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 452
+        },
+        "leeds": {
+          "score": 27.4555474557325,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 24.099002481419497,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 2
+        },
+        "rit": {
+          "score": 34.03601591417454,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 28
+        },
+        "macadam": {
+          "score": 28.1608353639203,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 3,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 3
+            }
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 34.48919638629439,
+        "unweighted": 38.12633858568552,
+        "pairs": 3813,
+        "mappedPairs": 482,
+        "audit": {
+          "points": 7626,
+          "mapped": 898,
+          "rejected": 0,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      },
+      "archivedBetaMaxDifference": 2.2737367544323206e-13
+    },
+    "beta1-full": {
+      "generation": {
+        "hung_berns": {
+          "score": 3.398766912630057,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 5,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.3738428539945744
+        },
+        "ebner_fairchild": {
+          "score": 2.24144463533966,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.07766570999956457
+        },
+        "munsell": {
+          "score": 3.8147608941303788,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.5960036689939443
+        },
+        "xiao_unique_hues": {
+          "score": 1.7411979551585648,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.1653520479958388
+        },
+        "osa_ucs_1974": {
+          "score": 0.289961576741052,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.49432249699748354
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.3428478536149986,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.13520444300229428
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.3248605220264468,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.877892491997045
+        },
+        "alder1982": {
+          "score": 0.3277628590532519,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.3972880889996304
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.23193183786184385,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.05610934100695886
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.388212945467096,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.4932333429969731
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.35636493982155976,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 191,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.12887265199969988
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.3245000791265936,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 41,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.33784972799912794
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.3451575029599042,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 378,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.2293120850008563
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.3110745620585442,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.055640544997004326
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.33734874434893247,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.03872751800372498
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.30016515363522384,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 5.432556737003324
+        },
+        "bfd": {
+          "score": 32.70717982022328,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 0
+        },
+        "leeds": {
+          "score": 26.9399135057392,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 22.63029400119403,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 0
+        },
+        "rit": {
+          "score": 29.717937786537096,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 0
+        },
+        "macadam": {
+          "score": 32.56363388477004,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 29.9485546453193,
+        "unweighted": 32.12787975161929,
+        "pairs": 3813,
+        "mappedPairs": 0,
+        "audit": {
+          "points": 7626,
+          "mapped": 0,
+          "rejected": 0,
+          "eventCounts": {}
+        }
+      },
+      "archivedBetaMaxDifference": 1.7053025658242404e-13
+    },
+    "joint-srgb": {
+      "generation": {
+        "hung_berns": {
+          "score": 4.74300635484086,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 78,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 78,
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.0125807969961897
+        },
+        "ebner_fairchild": {
+          "score": 2.7868594810937437,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 70,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 70
+            }
+          },
+          "seconds": 0.08442907100106822
+        },
+        "munsell": {
+          "score": 4.372803218845682,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 1232,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1232
+            }
+          },
+          "seconds": 0.6942495480034268
+        },
+        "xiao_unique_hues": {
+          "score": 1.7168100092889484,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.11407157199573703
+        },
+        "osa_ucs_1974": {
+          "score": 0.27377221816186254,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 19,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 19
+            }
+          },
+          "seconds": 0.7318734910004423
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.3644766587114704,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 300,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 300
+            }
+          },
+          "seconds": 0.2883630220021587
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.3193493663875441,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 605,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 605
+            }
+          },
+          "seconds": 1.1376998889973038
+        },
+        "alder1982": {
+          "score": 0.33008332713831334,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 364,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 364
+            }
+          },
+          "seconds": 0.3755919020040892
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.27922159621983833,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 8,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 8
+            }
+          },
+          "seconds": 0.041414432002056856
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.3448473302926538,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.12346718800108647
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.5079980193128787,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 396,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "srgb-gamut-clipped": 396,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.06375429200124927
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.32823488271999013,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 278,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 278,
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.3468392729992047
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.4685579464948387,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 1045,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 1045,
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.25876458099810407
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.33702748517938286,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 34,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 34
+            }
+          },
+          "seconds": 0.043949695995252114
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.3663146051649016,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 16,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 16
+            }
+          },
+          "seconds": 0.040513505999115296
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.3347462534251566,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 4.474427270004526
+        },
+        "bfd": {
+          "score": 37.238793162413046,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 452
+        },
+        "leeds": {
+          "score": 24.7526782453437,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 21.719566902279638,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 2
+        },
+        "rit": {
+          "score": 37.71602555087967,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 28
+        },
+        "macadam": {
+          "score": 29.260218914168135,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 3,
+            "rejected": 0,
+            "eventCounts": {
+              "srgb-gamut-clipped": 3
+            }
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 33.3582368949848,
+        "unweighted": 36.43119169859876,
+        "pairs": 3813,
+        "mappedPairs": 482,
+        "audit": {
+          "points": 7626,
+          "mapped": 898,
+          "rejected": 0,
+          "eventCounts": {
+            "srgb-gamut-clipped": 898
+          }
+        }
+      }
+    },
+    "joint-full": {
+      "generation": {
+        "hung_berns": {
+          "score": 3.518030075812988,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 156,
+            "mapped": 5,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 5
+            }
+          },
+          "seconds": 1.4576807159974123
+        },
+        "ebner_fairchild": {
+          "score": 2.2432483693814578,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 306,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.12377073300012853
+        },
+        "munsell": {
+          "score": 3.621148880066859,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 2734,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.5998546060000081
+        },
+        "xiao_unique_hues": {
+          "score": 1.7204678170120187,
+          "scoreKey": "mean_mad_deg",
+          "audit": {
+            "points": 36,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.08191831599833677
+        },
+        "osa_ucs_1974": {
+          "score": 0.29354694244574187,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 558,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.6288738809962524
+        }
+      },
+      "measurement": {
+        "macadam1942": {
+          "score": 0.3227479169527649,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 625,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.1326025349990232
+        },
+        "luo_rigg_ellipses": {
+          "score": 0.30896691908639073,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 3300,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.9677209489964298
+        },
+        "alder1982": {
+          "score": 0.29506534469381984,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2025,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.45253957100067055
+        },
+        "regan_1994_cvd_ellipses": {
+          "score": 0.24684519035610322,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 375,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.043245692999335006
+        },
+        "koenderink_2026_3d_metric_field": {
+          "score": 0.3891376038107651,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 945,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.18689686799916672
+        },
+        "brown_1957_12obs_ellipsoids": {
+          "score": 0.38061474499229797,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 567,
+            "mapped": 191,
+            "rejected": 0,
+            "eventCounts": {
+              "luminance-clipped": 71,
+              "chromaticity-clipped": 133
+            }
+          },
+          "seconds": 0.14866625599825056
+        },
+        "wyszecki_fielder_1971_ellipsoids": {
+          "score": 0.31622493291069736,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 2268,
+            "mapped": 41,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 41
+            }
+          },
+          "seconds": 0.4484135559978313
+        },
+        "brown_macadam_1949_ellipsoids": {
+          "score": 0.35595549920751074,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 1836,
+            "mapped": 378,
+            "rejected": 0,
+            "eventCounts": {
+              "chromaticity-clipped": 359,
+              "luminance-clipped": 25
+            }
+          },
+          "seconds": 0.2776921289987513
+        },
+        "huang_2012_cielab_ellipses": {
+          "score": 0.3002018133764609,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 459,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.047929362997820135
+        },
+        "berns_1991_rit_dupont_tolerance_vectors": {
+          "score": 0.31504516140742134,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 175,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 0.04546393999771681
+        },
+        "hong_2025_ellipsoids": {
+          "score": 0.343185199010244,
+          "scoreKey": "mean_cv",
+          "audit": {
+            "points": 11037,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          },
+          "seconds": 4.612196996997227
+        },
+        "bfd": {
+          "score": 29.291189226666397,
+          "scoreKey": "STRESS",
+          "pairs": 2776,
+          "mappedPairs": 0
+        },
+        "leeds": {
+          "score": 24.51714688440297,
+          "scoreKey": "STRESS",
+          "pairs": 307,
+          "mappedPairs": 0
+        },
+        "witt": {
+          "score": 20.3396604697557,
+          "scoreKey": "STRESS",
+          "pairs": 418,
+          "mappedPairs": 0
+        },
+        "rit": {
+          "score": 26.722041634649536,
+          "scoreKey": "STRESS",
+          "pairs": 312,
+          "mappedPairs": 0
+        },
+        "macadam": {
+          "score": 31.61770096840036,
+          "scoreKey": "STRESS",
+          "audit": {
+            "points": 256,
+            "mapped": 0,
+            "rejected": 0,
+            "eventCounts": {}
+          }
+        }
+      },
+      "combvd": {
+        "weighted": 26.902322208333768,
+        "unweighted": 28.783791842379706,
+        "pairs": 3813,
+        "mappedPairs": 0,
+        "audit": {
+          "points": 7626,
+          "mapped": 0,
+          "rejected": 0,
+          "eventCounts": {}
+        }
+      }
+    }
+  }
+}

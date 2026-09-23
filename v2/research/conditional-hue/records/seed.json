@@ -1,0 +1,13 @@
+{
+  "schema": "hrl-conditional-hue-v4",
+  "description": "Unfitted conditional field with zero interior hue flow; exactly recovers v3.",
+  "harmonics": 2,
+  "knots": [0, 0.25, 0.5, 0.75, 1],
+  "reach_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "reach_level_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "level_logits": [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]],
+  "neutral_shift": 0.02686567756674324,
+  "log_density_cap": 4,
+  "hue_shift_cap": 25,
+  "hue_coefficients": [0,0,0,0,0]
+}
